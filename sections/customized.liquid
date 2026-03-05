@@ -1,0 +1,188 @@
+<section data-section-id="{{ section.id }}">
+    <div class="container">
+        <div class="inner">
+
+            {% if section.settings.title != blank %}<div class="customized_title h3">{{ section.settings.title | newline_to_br }}</div>{% endif %}
+            
+            <div class="pc">
+              <div class="customized_items">
+                  {% for block in section.blocks %}
+                        <div class="customized_item">
+                          {% if block.settings.image != blank %}
+                            <div class="img">
+                              <img src="{{ block.settings.image | image_url: width: block.settings.image.width }}" width="{{ block.settings.image.width }}" height="{{ block.settings.image.height }}" />
+                            </div>
+                          {% endif %}
+                          <div class="title h4">{{ block.settings.title | newline_to_br }}</div>
+                          <div class="text body-large">{{ block.settings.text | newline_to_br }}</div>
+                        </div>
+                  {% endfor %}
+              </div>
+            </div>
+
+            <div class="mb">
+              <div class="customized_items">
+                  {% for block in section.blocks %}
+                        <div class="customized_item">
+                          {% if block.settings.image != blank %}
+                            <div class="img">
+                              <img src="{{ block.settings.image | image_url: width: block.settings.image.width }}" width="{{ block.settings.image.width }}" height="{{ block.settings.image.height }}" />
+                            </div>
+                          {% endif %}
+                        </div>
+                  {% endfor %}
+              </div>
+              <div class="customized_items-info">
+                  {% for block in section.blocks %}
+                        <div class="customized-info_item">
+                          <div class="title h4">{{ block.settings.title | newline_to_br }}</div>
+                          <div class="text body-large">{{ block.settings.text | newline_to_br }}</div>
+                        </div>
+                  {% endfor %}
+              </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+[data-section-id="{{ section.id }}"] .container {
+    padding-top:{{ section.settings.pc_padding_top }}px;
+	padding-bottom:{{ section.settings.pc_padding_bottom }}px;
+}
+@media screen and (max-width: 767px) {
+    [data-section-id="{{ section.id }}"] .container {
+        padding-top:{{ section.settings.mb_padding_top }}px;
+		padding-bottom:{{ section.settings.mb_padding_bottom }}px;
+    }
+}
+[data-section-id="{{ section.id }}"] img {
+    max-width: 100%;
+    height: auto;
+    display: table;
+}
+
+.customized_items img {
+  border-radius:15px;
+}
+.customized_items {
+    display: flex;
+    gap: 30px;
+}
+.customized_item {
+    flex: 0 0 calc(20% - calc(4 / 5 * 30px));
+    max-width: calc(20% - calc(4 / 5 * 30px));
+}
+.customized_item .title {
+    text-align: center;
+    margin-top: 20px;
+    /* font-weight: bold; */
+    /* font-size: 26px; */
+    line-height: 1.2;
+}
+.customized_item .text {
+    text-align: center;
+    margin-top: 10px;
+    /* font-size: 24px; */
+    line-height: 1.2;
+    color: #555;
+}
+.customized_title {
+    /* font-size: 38px;
+    font-weight: bold; */
+    margin-bottom: 50px;
+    text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .customized_title {
+      /* font-size: 30px; */
+      margin-bottom: 30px;
+  }
+  .customized_items img {
+      border-radius: 5px;
+  }
+  .customized_items {
+      display: flex;
+      gap: 10px;
+  }
+  .customized_item {
+      flex: 0 0 calc(20% - calc(4 / 5 * 10px));
+      max-width: calc(20% - calc(4 / 5 * 10px));
+  }
+
+  .customized-info_item .title {
+      text-align: center;
+      /* font-weight: bold; */
+      /* font-size: 26px; */
+      line-height: 1.2;
+  }
+  .customized-info_item .text {
+      text-align: center;
+      margin-top: 5px;
+      /* font-size: 24px; */
+      line-height: 1.2;
+      color: #555;
+  }
+  .customized-info_item {
+      padding: 20px 0;
+      position:relative;
+  }
+
+  .customized-info_item:after {
+      content: '';
+      height: 2px;
+      width: 100%;
+      background: linear-gradient(to right, transparent 0%, #dddcdc 50%, transparent 100%);
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+  }
+  .customized-info_item:last-child:after {
+      display: none;
+  }
+}
+
+</style>
+
+<script>
+    window.addEventListener("DOMContentLoaded", function () {
+
+    });                       
+</script>
+
+
+{% schema %}
+    {
+        "name": "Customized",
+        "class":"customized",
+        "settings": [
+              { "type": "textarea", "id":"title", "label":"Title"},
+          
+              { "type": "header","content":"PC"},
+              { "type": "range", "id": "pc_padding_top", "label": "Top Space", "min": 0, "max": 100, "step": 1, "unit": "px", "default": 0 },
+              { "type": "range", "id": "pc_padding_bottom", "label": "Bottom Space", "min": 0, "max": 100, "step": 1, "unit": "px", "default": 0 },
+              { "type": "header","content":"Mobile"},
+              { "type": "range", "id": "mb_padding_top", "label": "Top Space", "min": 0, "max": 100, "step": 1, "unit": "px", "default": 0 },
+              { "type": "range", "id": "mb_padding_bottom", "label": "Bottom Space", "min": 0, "max": 100, "step": 1, "unit": "px", "default": 0 }
+        ],
+        "max_blocks": 5,
+        "blocks": [
+          {
+            "type": "item",
+            "name": "Item",
+            "settings": [
+              { "type": "image_picker", "id": "image", "label": "Image", "info": "图片" },
+              { "type": "textarea", "id":"title", "label":"Title"},
+              { "type": "textarea", "id":"text", "label":"Text"},
+            ]
+          }
+        ],
+        "presets": [
+            {
+                "name": "Customized",
+                "category":"Custom"
+            }
+        ]
+    }
+{% endschema %}

@@ -1,0 +1,483 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": "no-indent",
+        "padding_bottom": "m"
+      }
+    },
+    "firstbarnnimg_QtwDrz": {
+      "type": "Firstbarnnimg",
+      "custom_css": [
+        ".Firstbarnnimg_link {background-color: #ff4f00; border-radius: 32px;}"
+      ],
+      "settings": {
+        "bg_color": "#ffffff",
+        "bg_color_a": "#ffffff",
+        "show_pagination": false,
+        "show_paginationa": false,
+        "width_mic": 100,
+        "text_Alignmentmethod": "flex",
+        "text_align": "center",
+        "text_alignment": "center",
+        "text_alignment1": "center",
+        "text_alignmentmic": "center",
+        "text_alignment1mic": "center",
+        "top_one": 22,
+        "bottom_one": 0,
+        "top_one_mic": 0,
+        "bottom_one_mic": 0,
+        "image": "shopify://shop_images/2_0322b2a5-56d9-4b35-99b1-ccaab26f341c.jpg",
+        "imagemic": "shopify://shop_images/2_0322b2a5-56d9-4b35-99b1-ccaab26f341c.jpg",
+        "slogan": "",
+        "heading": "FAQ",
+        "text": "Answering all your queries about our products and services",
+        "Policy_Information": "",
+        "color": "#ffffff",
+        "Discount_information": "",
+        "Discount_code": "",
+        "Discountbg_color": "#f83313",
+        "Discountzi_color": "#ffffff",
+        "show_view_all": true,
+        "title_btn": "Find the Right Hearing Aid for You",
+        "image_btn_link": "shopify://collections/hearing-products",
+        "image_btn_link1": "",
+        "link": "",
+        "link_text": ""
+      }
+    },
+    "collapsible_content_RXk6pT": {
+      "type": "collapsible-content",
+      "blocks": {
+        "accordion_pAK77h": {
+          "type": "accordion",
+          "settings": {
+            "question": "What are the most common symptoms of hearing loss?",
+            "answer": "<p>Hearing loss is often a gradual process, and many individuals may not initially recognize its onset. Some signs that you may be experiencing hearing loss include:<br/><br/>• Frequently asking others to repeat themselves.<br/>• Difficulty following conversations, particularly in noisy environments or over the phone.<br/>• Perceiving others' speech as mumbling.<br/>• Inability to hear certain high-pitched sounds, such as birds singing.<br/>• Needing to increase the volume on electronic devices like televisions or computers.<br/>• Experiencing tinnitus, or ringing in the ears.<br/>• Experiencing earaches or discomfort.<br/>• Sensation of pressure or fluid in the ears.<br/>• Experiencing balance issues or dizziness.</p>",
+            "opened": false
+          }
+        },
+        "accordion_QNXM7z": {
+          "type": "accordion",
+          "settings": {
+            "question": "Will wearing hearing aids make my hearing loss better?",
+            "answer": "<p>Wearing hearing aids can help manage hearing loss by amplifying sounds and improving your ability to hear and communicate. However, hearing aids do not cure or reverse hearing loss. They enhance your remaining hearing ability and make speech and other sounds clearer and more audible.</p>",
+            "opened": false
+          }
+        },
+        "accordion_F6JPR8": {
+          "type": "accordion",
+          "settings": {
+            "question": "How do I know what degree of hearing loss do I have?",
+            "answer": "<p>Age-related hearing loss is progressive and your hearing slowly gets worse over time, so it's easy to overestimate your hearing abilities. Ceretone offers free hearing test you can take online so you can quickly and accurately understand your current degree of hearing loss.</p>",
+            "opened": false
+          }
+        },
+        "accordion_cdPBGJ": {
+          "type": "accordion",
+          "settings": {
+            "question": "Will these hearing aids work for severe hearing loss?",
+            "answer": "<p>Ceretone OTC hearing aids are designed specifically for mild to moderate hearing loss. For severe hearing loss, we recommend consulting with a hearing healthcare professional for hearing aid options.</p>",
+            "opened": false
+          }
+        }
+      },
+      "block_order": [
+        "accordion_pAK77h",
+        "accordion_QNXM7z",
+        "accordion_F6JPR8",
+        "accordion_cdPBGJ"
+      ],
+      "settings": {
+        "layout": "background",
+        "color_scheme": "",
+        "enable_border": false,
+        "border_full": false,
+        "subheading": "",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "General Question",
+        "heading_size": "h2",
+        "heading_line": "simple",
+        "line_color": "#1566e0",
+        "word_break": false,
+        "heading_animation": "none",
+        "word_break_an": false,
+        "text": "",
+        "text_align": "center",
+        "row_color_scheme": "",
+        "padding_top": "l",
+        "padding_bottom": "l",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "collapsible_content_pgAMzg": {
+      "type": "collapsible-content",
+      "blocks": {
+        "accordion_A9wXLL": {
+          "type": "accordion",
+          "settings": {
+            "question": "What makes these devices so affordable?",
+            "answer": "<p>We are committed to providing cost-effective hearing solutions for individuals with hearing loss. Our direct-to-consumer approach online allows us to ensure competitive pricing without compromising on quality or service. As a result, our hearing aids are priced significantly  lower than traditional hearing aids.</p>",
+            "opened": false
+          }
+        },
+        "accordion_gXbLPt": {
+          "type": "accordion",
+          "settings": {
+            "question": "How does Ceretone hearing aids compare to hearing aids from a clinic?",
+            "answer": "<p>Ceretone Core One series are professional hearing aids registered with FDA and subject to FDA over-the-counter regulation.Ceretone is committed to bringing the latest technology to Ameicans at the lowest possible price and helping as many people as possible get better hearing.<br/><br/>Ceretone hearing aids are generally more affordable than clinic hearing aids because they don't require additional clinic fees or service fees. Additionally, Ceretone offers ongoing support anytime.</p>",
+            "opened": false
+          }
+        },
+        "accordion_6RU3YW": {
+          "type": "accordion",
+          "settings": {
+            "question": "Are Ceretone hearing aids right for me?",
+            "answer": "<p>Ceretone hearing aids are for adults with mild to moderate hearing loss. You must be 18+ and live within the United States.However, if you have terrible hearing loss, sudden hearing loss, pain or other medical issues, please consult an audiologist or hearing professional.<br/><br/>You can find out if Ceretone hearing aids may be right for you with our free hearing test.</p>",
+            "opened": false
+          }
+        },
+        "accordion_gg4Qrk": {
+          "type": "accordion",
+          "settings": {
+            "question": "How do I know which type of Ceretone hearing aids will work for me?",
+            "answer": "<p>Ceretone offers two styles of hearing aids: Invisible-in-canal (IIC) and  Behind-the-ear (BTE). Core One is an IIC hearing aid, which is the smallest custom hearing aids available and are designed and molded to fit perfectly inside your ear canal. Beacon is a BTE hearing aid, which sits behind the ear and is connected to an earmold that fits inside the ear canal.<br/><br/>We include different sizes of domes in your Ceretone box, ensuring that most individuals can find a comfortable fit.Note: You might need a different sized dome for each ear. If you feel discomfort, please try changing the dome.</p>",
+            "opened": false
+          }
+        },
+        "accordion_jNY3FG": {
+          "type": "accordion",
+          "settings": {
+            "question": "Are Ceretone devices amplifiers or hearing aids?",
+            "answer": "<p>Ceretone devices are hearing aids. They are exempt medical devices registered with the FDA and are subject to FDA regulations concerning standards for performance.<br/><br/>While hearing aids and PSAPs both amplify sound for the user, the devices have different intended uses. Hearing aids are intended to make up for impaired hearing. PSAPs, in contrast, are intended for people with normal hearing to amplify sounds in certain situations. Because such PSAPs are regulated as consumer electronics and not medical devices, they may be more variable in terms of product quality compared to hearing aids. </p>",
+            "opened": false
+          }
+        },
+        "accordion_6gcUcx": {
+          "type": "accordion",
+          "settings": {
+            "question": "Do I need a hearing test to order Ceretone hearing aids?",
+            "answer": "<p>If you have never had your hearing tested before and are wondering if you need hearing aids, the Ceretone online hearing test can provide recommendations and let you know if Ceretone hearing aids can help improve your current hearing loss. You can use the results to obtain a customized hearing solution through Ceretone hearing aids.</p>",
+            "opened": false
+          }
+        },
+        "accordion_rCrKPV": {
+          "type": "accordion",
+          "settings": {
+            "question": "Do Ceretone hearing aids have Bluetooth functionality?",
+            "answer": "<p>Ceretone currently has two models of hearing aids. Core One does not have Bluetooth functionality. Beacon can easily connect to Android and iOS smartphones via Bluetooth for calls, music, and media streaming.</p>",
+            "opened": false
+          }
+        },
+        "accordion_Amjf8A": {
+          "type": "accordion",
+          "settings": {
+            "question": "Is Ceretone covered by my insurance ？",
+            "answer": "<p>The coverage of hearing aids by insurance in the United States can vary depending on the specific insurance plan and state regulations. Some insurance plans may cover a portion of the cost of hearing aids, while others may not cover them at all.<br/><br/>Additionally, Medicare does not typically cover hearing aids, although it may cover diagnostic hearing evaluations if they are ordered by a doctor. Some state Medicaid programs may cover hearing aids for eligible individuals.<br/><br/>It's important to check with your insurance provider directly to understand what hearing-related services are covered by your plan, and if there are any limitations or requirements for coverage.</p>",
+            "opened": false
+          }
+        },
+        "accordion_tD6BrP": {
+          "type": "accordion",
+          "settings": {
+            "question": "Do l need a smartphone to use Ceretone hearing aids?",
+            "answer": "<p>Yes - Ceretone hearing aids require app on a phone to do volume adjustment and program switching.</p>",
+            "opened": false
+          }
+        },
+        "accordion_LktLdj": {
+          "type": "accordion",
+          "settings": {
+            "question": "How do I download the Ceretone app?",
+            "answer": "<p>Ceretone offers two models of hearing aids, each requiring a specific companion application. <br/>The Core One hearing aid corresponds to the \"Ceretone\" app.<br/>The Beacon hearing aid corresponds to the \"Ceretone Hearing\" app. <br/>The app can be downloaded from the App Store for Apple devices and from Google Play for Android devices.</p>",
+            "opened": false
+          }
+        }
+      },
+      "block_order": [
+        "accordion_A9wXLL",
+        "accordion_gXbLPt",
+        "accordion_6RU3YW",
+        "accordion_gg4Qrk",
+        "accordion_jNY3FG",
+        "accordion_6gcUcx",
+        "accordion_rCrKPV",
+        "accordion_Amjf8A",
+        "accordion_tD6BrP",
+        "accordion_LktLdj"
+      ],
+      "settings": {
+        "layout": "background",
+        "color_scheme": "",
+        "enable_border": false,
+        "border_full": false,
+        "subheading": "",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "Ceretone Hearing Aids",
+        "heading_size": "h2",
+        "heading_line": "simple",
+        "line_color": "#1566e0",
+        "word_break": false,
+        "heading_animation": "none",
+        "word_break_an": false,
+        "text": "",
+        "text_align": "center",
+        "row_color_scheme": "",
+        "padding_top": "l",
+        "padding_bottom": "l",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "collapsible_content_UWH7yy": {
+      "type": "collapsible-content",
+      "blocks": {
+        "accordion_XicV7P": {
+          "type": "accordion",
+          "settings": {
+            "question": "Are there any tips for getting used to wearing hearing aids?",
+            "answer": "<p>If you’re a first-time wearer, there are some tips that can help you adjust to wearing hearing aids more quickly.<br/><br/>•  Wear your hearing aid at home to begin with<br/>•  Don't get discouraged if it feels strange at first <br/>•  Start by only wearing your hearing aid a few hours a day<br/>•  Begin in a quiet room<br/>•  Don't adjust the volume level too high<br/>•  Use your hearing aid while watching TV<br/>•  Try having a conversation with one person<br/>•  Try using your hearing aids in a loud setting</p>",
+            "opened": false
+          }
+        },
+        "accordion_pcQMxd": {
+          "type": "accordion",
+          "settings": {
+            "question": "How to care for these devices?",
+            "answer": "<p>Please follow the advice below for the best user experienceand to prolong the life of your devices.<br/>•  Do not use sharp tools to dislodge earwax. Sticking household items into your devices can seriously damage them.<br/>•  Keep your devices away from high-temperature and/orhigh-humidity atmosphere.<br/>•  Do not swim, shower or sauna while wearing the hearing aids.<br/>•  Always remove your hearing amplifiers when using haicare products. The hearing aids can become clogged and cease to function properly.<br/>•  Store your devices in a clean and dry location.<br/>•  Do not use the electronic dryer to store the rechargeable hearing aids.<br/>•  Inspect the hearing amplifiers,eartips,and charging case regularly. Remove earwax and debris from your devices •  byusing enclosed cleaning tools.<br/>•  Clean the charging contacts of the rechargeable hearing aids with cleaning cloth regularly to ensure the normal charging.<br/>•  Eartips should be replaced every 3-6 months or when they become stiff, brittle, or discolored.</p>",
+            "opened": false
+          }
+        },
+        "accordion_P7Gdmq": {
+          "type": "accordion",
+          "settings": {
+            "question": "What causes my hearing aids to whistle and what can I do about it?",
+            "answer": "<p>A number of things can cause your hearing aids to whistle. Here are the most common reasons for feedback and how to resolve them.<br/>1. A poor fit: Whistling can happen if the device is not fitting correctly.Remove the device and try a larger dome size.<br/>Make sure they are sitting nice and tight in your ear. <br/>2.Too high volume:  If the feedback is too loud, consider reducing the volume level of your phone as well, to a more comfortable level.<br/>3. Too much earwax: Prioritize clean ears by ensuring they are free from wax or debris, as this can affect the effectiveness of the hearing aid.</p>",
+            "opened": false
+          }
+        },
+        "accordion_AafR9W": {
+          "type": "accordion",
+          "settings": {
+            "question": "What happens if these devices break?",
+            "answer": "<p>Call our customer service hotline at +1(866)283-4262, and our product experts will provide you with solutions.</p>",
+            "opened": false
+          }
+        }
+      },
+      "block_order": [
+        "accordion_XicV7P",
+        "accordion_pcQMxd",
+        "accordion_P7Gdmq",
+        "accordion_AafR9W"
+      ],
+      "settings": {
+        "layout": "background",
+        "color_scheme": "",
+        "enable_border": false,
+        "border_full": false,
+        "subheading": "",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "Care & Maintenance",
+        "heading_size": "h2",
+        "heading_line": "simple",
+        "line_color": "#1566e0",
+        "word_break": false,
+        "heading_animation": "none",
+        "word_break_an": false,
+        "text": "",
+        "text_align": "center",
+        "row_color_scheme": "",
+        "padding_top": "l",
+        "padding_bottom": "l",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "collapsible_content_cq9RG8": {
+      "type": "collapsible-content",
+      "blocks": {
+        "accordion_4pRDYH": {
+          "type": "accordion",
+          "settings": {
+            "question": "Is the Ceretone hearing aid shipped for free?",
+            "answer": "<p>Free shipping on all orders within the United States and Canada. There is no additional charge for shipping.</p>",
+            "opened": false
+          }
+        },
+        "accordion_7nrpwi": {
+          "type": "accordion",
+          "settings": {
+            "question": "How long does shipping take?",
+            "answer": "<p>After placing an order, it will be shipped within 2 business days and is estimated to arrive at the destination within 3-5days. Please keep in mind that the actual delivery time may vary depending on your location and the shipping speed of the courier company.</p>",
+            "opened": false
+          }
+        },
+        "accordion_rYr7XK": {
+          "type": "accordion",
+          "settings": {
+            "question": "Is there any regional restriction for shipping?",
+            "answer": "<p>Currently, we only offer shipping within the United States and Canada. We apologize for any inconvenience caused and hope to expand our shipping options in the future.</p>",
+            "opened": false
+          }
+        },
+        "accordion_dDtRDC": {
+          "type": "accordion",
+          "settings": {
+            "question": "Where was the package shipped from?",
+            "answer": "<p>We mainly ship from local logistics centers.</p>",
+            "opened": false
+          }
+        },
+        "accordion_izDEyn": {
+          "type": "accordion",
+          "settings": {
+            "question": "How I track my order?",
+            "answer": "<p>Once your order is shipped, you will receive an email notification with a tracking number. You could use this tracking number to monitor the status of your shipment.</p>",
+            "opened": false
+          }
+        }
+      },
+      "block_order": [
+        "accordion_4pRDYH",
+        "accordion_7nrpwi",
+        "accordion_rYr7XK",
+        "accordion_dDtRDC",
+        "accordion_izDEyn"
+      ],
+      "settings": {
+        "layout": "background",
+        "color_scheme": "",
+        "enable_border": false,
+        "border_full": false,
+        "subheading": "",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "Shipping",
+        "heading_size": "h2",
+        "heading_line": "simple",
+        "line_color": "#1566e0",
+        "word_break": false,
+        "heading_animation": "none",
+        "word_break_an": false,
+        "text": "",
+        "text_align": "center",
+        "row_color_scheme": "",
+        "padding_top": "l",
+        "padding_bottom": "l",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "collapsible_content_J6p97K": {
+      "type": "collapsible-content",
+      "blocks": {
+        "accordion_xGWzC7": {
+          "type": "accordion",
+          "settings": {
+            "question": "Can I request a return if I’m not completely satisfied with the hearing aid?",
+            "answer": "<p>At Ceretone, our utmost priority is to ensure your complete satisfaction with your Ceretone hearing aids. If for any reason you are not satisfied with your Ceretone hearing aid within 60 days of purchase,you may return it for a full refund. See our <a href=\"/pages/warranty\" title=\"Ceretone Warranty and Return Policy\">Warranty and Return Policy</a>.</p>",
+            "opened": false
+          }
+        },
+        "accordion_cNeMat": {
+          "type": "accordion",
+          "settings": {
+            "question": "How do I start a return process?",
+            "answer": "<p>To initiate a return, please contact our customer service team by emailing support@ceretone.com or calling +1(228)288-9888 to request a return authorization.</p>",
+            "opened": false
+          }
+        },
+        "accordion_cDQt44": {
+          "type": "accordion",
+          "settings": {
+            "question": "How can I receive a refund?",
+            "answer": "<p>Once we receive the returned item and accessories and verify their condition, we will notify you of the approval status for the refund. Upon successful verification, the refund will be issued back to your original payment account.</p>",
+            "opened": false
+          }
+        },
+        "accordion_yLL8dH": {
+          "type": "accordion",
+          "settings": {
+            "question": "Does Ceretone offer a warranty?",
+            "answer": "<p>All Ceretone hearing aids come with a 1-year warranty from the date of purchase. This warranty covers defects in materials and workmanship, and includes repairs or replacements.</p>",
+            "opened": false
+          }
+        }
+      },
+      "block_order": [
+        "accordion_xGWzC7",
+        "accordion_cNeMat",
+        "accordion_cDQt44",
+        "accordion_yLL8dH"
+      ],
+      "settings": {
+        "layout": "background",
+        "color_scheme": "",
+        "enable_border": false,
+        "border_full": false,
+        "subheading": "",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "Returns",
+        "heading_size": "h2",
+        "heading_line": "simple",
+        "line_color": "#1566e0",
+        "word_break": false,
+        "heading_animation": "none",
+        "word_break_an": false,
+        "text": "",
+        "text_align": "center",
+        "row_color_scheme": "",
+        "padding_top": "l",
+        "padding_bottom": "l",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "newsletter_GxTmaw": {
+      "type": "newsletter",
+      "settings": {
+        "align_content": "left",
+        "subheading": "",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "Need More Help?",
+        "heading_size": "h1",
+        "heading_line": "simple",
+        "line_color": "#1566e0",
+        "word_break": false,
+        "text": "Extensive Support Options to Assist You Further",
+        "newsletter_text": "",
+        "button_style": "secondary",
+        "padding_top": "no-indent",
+        "padding_bottom": "xs"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "firstbarnnimg_QtwDrz",
+    "collapsible_content_RXk6pT",
+    "collapsible_content_pgAMzg",
+    "collapsible_content_UWH7yy",
+    "collapsible_content_cq9RG8",
+    "collapsible_content_J6p97K",
+    "newsletter_GxTmaw"
+  ]
+}

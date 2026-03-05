@@ -1,0 +1,88 @@
+{% schema %}
+{
+  "name": "Custom Mutli Number",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "title",
+      "label": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "custom_class",
+      "label": "Custom Class"
+    }
+  ],
+
+  "blocks": [
+    {
+      "type": "number",
+      "name": "Number",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "display",
+          "label": "展示标题"
+        },
+        {
+          "type": "textarea",
+          "id": "title",
+          "label": "标题"
+        },
+        {
+          "type": "textarea",
+          "id": "info",
+          "label": "内容"
+        }
+      ]
+    }
+  ],
+
+  "presets": [
+    {
+      "name": "Custom Mutli Number",
+      "category": "custom"
+    }
+  ]
+}
+{% endschema %}
+
+<link rel="stylesheet" href="{{ 'custom-mutli-number.css' | asset_url }}" media="all" >
+
+<div class="custom-mutli-number {{ section.settings.custom_class }}" data-section-id="{{ section.id }}">
+  <div class="safe-container">
+    {% if section.settings.title != blank %}
+      <div class="heading-box">
+        <div class="title">
+          <h2>{{ section.settings.title }}</h2>
+        </div>
+      </div>
+    {% endif %}
+
+    <div class="mutli-number-layout">
+      <div class="mutli-number_items">
+        {%- for block in section.blocks -%}
+          <div class="mutli-number_item">
+            {%- if block.settings.display != blank -%}
+              <div class="item-display">
+                <span>{{ block.settings.display }}</span>
+              </div>
+            {%- endif -%}
+
+            {%- if block.settings.title != blank -%}
+              <div class="item-title">
+                <h3>{{ block.settings.title }}</h3>
+              </div>
+            {%- endif -%}
+
+            {%- if block.settings.info != blank -%}
+              <div class="item-info">
+                <p>{{ block.settings.info }}</p>
+              </div>
+            {%- endif -%}
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</div>

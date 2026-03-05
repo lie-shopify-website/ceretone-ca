@@ -1,0 +1,431 @@
+<style>
+  [data-section-id="{{ section.id }}"] {
+    background-color: {{ section.settings.bg_color }};
+    padding-top: {{ section.settings.padding_top | append: 'px' }};
+    padding-bottom: {{ section.settings.padding_bottom | append: 'px' }};
+  }
+  [data-section-id="{{ section.id }}"] .Comparison_h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: {{ section.settings.title_color }};
+    font-size: {{ section.settings.title_size |  append: 'px' }};
+  }
+  .Comparison_flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .Comparison_flex_boxA {
+    padding: 2rem 0 0;
+    width: 30%;
+    display: flex;
+    flex-flow: column;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    align-items: center;
+    border-radius: 24px;
+    overflow: hidden;
+  }
+  .Comparison_flex_boxB {
+    padding: 4rem 0 0;
+    width: 40%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 24px;
+    overflow: hidden;
+  }
+  .Comparison_flex_boxB .Comparison_flex_box {
+    background-color: #F4FCFE;
+    width: 100%;
+    padding-bottom: 4rem;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .Comparison_flex_boxB .Comparison_flex_box div p {
+    color: #166BEB;
+  }
+  .Comparison_flex_box {
+    padding-bottom: 2rem;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .Comparison_flex_box div {
+    height: 8rem;
+    line-height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .Comparison_flex_box div p {
+    margin: 0;
+    line-height: 22px;
+    text-align: center;
+  }
+  .Comparison_flex h4 {
+    height: 5rem;
+    margin: 0 0 3rem;
+    line-height: 5rem;
+    height: 5rem;
+    display: block;
+  }
+  .ComparisonM {
+    display: none;
+  }
+  @media(max-width: 768px) {
+    [data-section-id="{{ section.id }}"] {
+      padding-top: {{ section.settings.padding_top_M |  append: 'px' }};
+      padding-bottom: {{ section.settings.padding_bottom_M |  append: 'px' }};
+    }
+    [data-section-id="{{ section.id }}"] .Comparison_h2 {
+      text-align: center;
+      color: {{ section.settings.title_color }};
+      font-size: {{ section.settings.title_size_M |  append: 'px' }};
+    }
+    .ComparisonM {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+    .Comparisonpc {
+      display: none;
+    }
+    .ComparisonM_left {
+      width: 60%;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      border-radius: 24px;
+      overflow: hidden;
+      background-color: #F4FCFE;
+      border: 1px solid #166BEB;
+    }
+    .ComparisonM_left_box {
+      width: 100%;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+    }
+    .ComparisonM_right_box {
+      width: 100%;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+    }
+    .ComparisonM_right_box {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    .ComparisonM_left_box div {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      width: 100%;
+      height: 5rem;
+    }
+    .ComparisonM_right_box div {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      width: 100%;
+      height: 5rem;
+    }
+    .Comparison_flex_box_img {
+      width: 2rem;
+      display: block;
+    }
+    .ComparisonM_left_box p {
+      color: #166BEB;
+      width: 80%;
+    }
+    .ComparisonM_right {
+      width: 40%;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+</style>
+<div data-section-id="{{ section.id }}" class="Comparison">
+  <div class="container">
+    {% if section.settings.header != blank %}
+      <h2 class="Comparison_h2">{{ section.settings.header }}</h2>
+    {% endif %}
+    <div class="Comparison_flex Comparisonpc">
+      <div class="Comparison_flex_boxA">
+        <h4>{{ section.settings.header1 }}</h4>
+        <p style="color: #166BEB;height: 2rem;display: block;"></p>
+        <div class="Comparison_flex_box">
+          {% for block in section.blocks %}
+            <div>
+              {% if block.settings.image1 != blank %}
+                <img
+                  class="lazyloaded Comparison_flex_box_img"
+                  src="{{ block.settings.image1 | img_url: '200x' }}"
+                  alt=""
+                >
+              {% endif %}
+              {% if block.settings.text1 != blank %}
+                <p>{{ block.settings.text1 | newline_to_br }}</p>
+              {% endif %}
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="Comparison_flex_boxB">
+        <h4>{{ section.settings.header2 }}</h4>
+        <p style="color: #166BEB;height: 2rem;">{{ section.settings.price }}</p>
+        <div class="Comparison_flex_box">
+          {% for block in section.blocks %}
+            <div>
+              {% if block.settings.image2 != blank %}
+                <img
+                  class="lazyloaded Comparison_flex_box_img"
+                  src="{{ block.settings.image2 | img_url: '200x' }}"
+                  alt=""
+                >
+              {% endif %}
+              {% if block.settings.text2 != blank %}
+                <p>{{ block.settings.text2 | newline_to_br }}</p>
+              {% endif %}
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="Comparison_flex_boxA">
+        <h4>{{ section.settings.header3 }}</h4>
+        <p style="color: #166BEB;height: 2rem;">{{ section.settings.price1 }}</p>
+        <div class="Comparison_flex_box">
+          {% for block in section.blocks %}
+            <div>
+              {% if block.settings.image3 != blank %}
+                <img
+                  class="lazyloaded Comparison_flex_box_img"
+                  src="{{ block.settings.image3 | img_url: '200x' }}"
+                  alt=""
+                >
+              {% endif %}
+              {% if block.settings.text3 != blank %}
+                <p>{{ block.settings.text3 | newline_to_br }}</p>
+              {% endif %}
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <div class="ComparisonM">
+      <div class="ComparisonM_left">
+        <h4>{{ section.settings.header2 }}</h4>
+        <p style="color: #166BEB;height: 2rem;display: block;">{{ section.settings.price }}</p>
+        <div class="ComparisonM_left_box">
+          {% for block in section.blocks %}
+            <div>
+              {% if block.settings.Mimage1 != blank %}
+                <img
+                  class="lazyloaded Comparison_flex_box_img"
+                  src="{{ block.settings.Mimage1 | img_url: '200x' }}"
+                  alt=""
+                >
+              {% endif %}
+              {% if block.settings.Mtext1 != blank %}
+                <p>{{ block.settings.Mtext1 | newline_to_br }}</p>
+              {% endif %}
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="ComparisonM_right">
+        <h4>{{ section.settings.header3 }}</h4>
+        <p style="color: #166BEB;height: 2rem;display: block;">{{ section.settings.price1 }}</p>
+        <div class="ComparisonM_right_box">
+          {% for block in section.blocks %}
+            <div>
+              {% if block.settings.Mimage2 != blank %}
+                <img
+                  class="lazyloaded Comparison_flex_box_img"
+                  src="{{ block.settings.Mimage2 | img_url: '200x' }}"
+                  alt=""
+                >
+              {% endif %}
+              {% if block.settings.Mtext2 != blank %}
+                <p>{{ block.settings.Mtext2 | newline_to_br }}</p>
+              {% endif %}
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "参数对比",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "上边距",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "下边距",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_top_M",
+      "label": "移动端上边距",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_M",
+      "label": "移动端下边距",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "default": 0
+    }, {
+      "type": "color",
+      "id": "bg_color",
+      "label": "背景颜色",
+      "default": "#fff"
+    }, {
+      "type": "text",
+      "id": "header",
+      "label": "标题"
+    }, {
+      "type": "range",
+      "id": "title_size",
+      "label": "标题字号",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 36
+    }, {
+      "type": "range",
+      "id": "title_size_M",
+      "label": "M端标题字号",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 24
+    }, {
+      "type": "color",
+      "id": "title_color",
+      "label": "标题字色",
+      "default": "#0C0C0C"
+    }, {
+      "type": "text",
+      "id": "header1",
+      "label": "标题1"
+    }, {
+      "type": "text",
+      "id": "header2",
+      "label": "标题2"
+    }, {
+      "type": "text",
+      "id": "header3",
+      "label": "标题3"
+    }, {
+      "type": "text",
+      "id": "price",
+      "label": "M端价格左"
+    }, {
+      "type": "text",
+      "id": "price1",
+      "label": "M端价格右"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "添加内容",
+      "limit": 50,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image1",
+          "label": "第一个图片"
+        },
+        {
+          "type": "textarea",
+          "id": "text1",
+          "label": "第一个文本"
+        },
+        {
+          "type": "image_picker",
+          "id": "image2",
+          "label": "第二个图片"
+        },
+        {
+          "type": "textarea",
+          "id": "text2",
+          "label": "第二个文本"
+        }, {
+          "type": "image_picker",
+          "id": "image3",
+          "label": "第三个图片"
+        }, {
+          "type": "textarea",
+          "id": "text3",
+          "label": "第三个文本"
+        }, {
+          "type": "image_picker",
+          "id": "Mimage1",
+          "label": "M端第一个图片"
+        }, {
+          "type": "textarea",
+          "id": "Mtext1",
+          "label": "M端第一个文本"
+        }, {
+          "type": "image_picker",
+          "id": "Mimage2",
+          "label": "M端第二个图片"
+        }, {
+          "type": "textarea",
+          "id": "Mtext2",
+          "label": "M端第二个文本"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "参数对比"
+    }
+  ]
+}
+{% endschema %}

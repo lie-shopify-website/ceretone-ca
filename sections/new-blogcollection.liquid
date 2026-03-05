@@ -1,0 +1,401 @@
+{% schema %}
+{
+  "name": "Blog Collection",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Blog Categories"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_author",
+      "label": "Show Author",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "all_text",
+      "label": "All Blogs Text",
+      "default": "All"
+    },
+    {
+      "type": "text",
+      "id": "search_placeholder",
+      "label": "Search Placeholder",
+      "default": "Search"
+    },
+    {
+      "type": "text",
+      "id": "load_more_text",
+      "label": "Load More Button Text",
+      "default": "Load more"
+    },
+    {
+      "type": "range",
+      "id": "posts_per_page",
+      "min": 3,
+      "max": 24,
+      "step": 3,
+      "default": 6,
+      "label": "Posts per page"
+    },
+    {
+      "type": "text",
+      "id": "read_time_text",
+      "label": "Default Read Time", 
+      "default": "5 min read"
+    },
+    {
+      "type": "range",
+      "id": "excerpt_length",
+      "label": "Excerpt Length (Words)",
+      "min": 0,
+      "max": 200,
+      "step": 5,
+      "default": 30
+    },
+    {
+      "type": "header",
+      "content": "Load More Button Colors"
+    },
+    {
+      "type": "color",
+      "id": "load_more_bg_color",
+      "label": "Background Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "load_more_text_color",
+      "label": "Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "load_more_border_color",
+      "label": "Border Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "load_more_hover_bg_color",
+      "label": "Hover Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "load_more_hover_text_color",
+      "label": "Hover Text Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "load_more_hover_border_color",
+      "label": "Hover Border Color",
+      "default": "#000000"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Category",
+      "type": "category",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Category Display Name",
+          "default": "Product reviews"
+        },
+        {
+          "type": "text",
+          "id": "tag",
+          "label": "Tag Name",
+          "info": "Blog tag to filter by"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Blog Collection",
+      "category": "Blog"
+    }
+  ]
+}
+{% endschema %}
+
+<div class="blog__collection">
+  <div class="container">
+    <div class="outer__blog">
+      {% if section.blocks.size > 0 %}
+        <div class="blog__switcher">
+          <ul>
+            <li><a href="{{ blog.url }}" class="{% if current_tags == blank %}current{% endif %}">{{ section.settings.all_text }}</a></li>
+            {% for block in section.blocks %}
+              {% if block.type == 'category' %}
+                {% assign tag_handle = block.settings.tag | handle | join: "+" %}
+                {% assign filter_url = blog.url | append: '/tagged/' | append: tag_handle %}
+                <li {{ block.shopify_attributes }}><a href="{{ filter_url }}" class="{% if current_tags contains block.settings.tag %}current{% endif %}">{{ block.settings.title }}</a></li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+      {% endif %}
+      
+      <div class="blog__search">
+        <form action="/search" method="get" id="blog-search-form">
+          <input type="hidden" name="type" value="article">
+          <input type="text" name="q" id="blog-search-input" placeholder="{{ section.settings.search_placeholder }}">
+          <button type="submit">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M21 21L16.65 16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </form>
+      </div>
+      
+      {% paginate blog.articles by section.settings.posts_per_page %}
+        <div class="blog__list">
+          {% for article in blog.articles %}
+            <div class="elem">
+              <a href="{{ article.url }}" class="media">
+                {% if article.image %}
+                  <img src="{{ article.image | image_url: width: 400  }}" alt="{{ article.title }}" width="400" height="300" loading="lazy">
+                {% else %}
+                  {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                {% endif %}
+              </a>
+              <div class="desc">
+                <div class="top">
+                  {% if article.tags.size > 0 %}
+                    <a href="{{ blog.url }}/tagged/{{ article.tags.first | handle }}">{{ article.tags.first }}</a>
+                  {% endif %}
+                  <span>{{ article.content | strip_html | size | divided_by: 1000 | plus: 1 }} min read</span>
+                </div>
+                <a href="{{ article.url }}">{{ article.title }}</a>
+                <p>{{ article.excerpt_or_content | strip_html | truncatewords: section.settings.excerpt_length }}</p>
+                
+                <div class="author">
+                  {% if section.settings.show_author %}
+                  {% if article.author %}
+                    <a href="{{ blog.url }}?author={{ article.author | handle }}">{{ article.author }}</a>
+                  {% endif %}
+                  {% endif %}
+                  <p>{{ article.published_at | date: "%b %d, %Y" }}</p>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+
+        {% if paginate.next %}
+<style>
+  :root {
+    --load-more-btn-bg: {{ section.settings.load_more_bg_color }};
+    --load-more-btn-color: {{ section.settings.load_more_text_color }};
+    --load-more-btn-border: 1px solid {{ section.settings.load_more_border_color }};
+    --load-more-btn-hover-bg: {{ section.settings.load_more_hover_bg_color }};
+    --load-more-btn-hover-color: {{ section.settings.load_more_hover_text_color }};
+    --load-more-btn-hover-border: 1px solid {{ section.settings.load_more_hover_border_color }};
+  }
+
+  .blog__collection .outer__blog .load__more>a.regular-btn {
+    background: var(--load-more-btn-bg);
+    color: var(--load-more-btn-color);
+    border: var(--load-more-btn-border);
+    transition: all 0.3s ease;
+  }
+
+  .blog__collection .outer__blog .load__more>a.regular-btn:hover {
+    background: var(--load-more-btn-hover-bg);
+    color: var(--load-more-btn-hover-color);
+    border: var(--load-more-btn-hover-border);
+  }
+
+  .blog__collection .outer__blog .load__more>a.regular-btn.loading {
+    opacity: 0.7;
+    pointer-events: none;
+  }
+</style>
+
+<div class="load__more">
+  <a href="{{ paginate.next.url }}" class="regular-btn" id="load-more-btn">{{ section.settings.load_more_text }}</a>
+</div>
+        {% endif %}
+      {% endpaginate %}
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Load more posts functionality
+    const loadMoreBtn = document.querySelector('.load__more .regular-btn');
+    
+    if (loadMoreBtn) {
+      loadMoreBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        const nextPageUrl = this.getAttribute('href');
+        if (!nextPageUrl) return;
+
+        const originalBtnText = this.textContent;
+        this.textContent = 'Loading...';
+        this.classList.add('loading');
+
+        fetch(nextPageUrl)
+          .then(response => response.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(html, 'text/html');
+            const articleList = document.querySelector('.blog__list');
+            
+            // Extract articles from paginated content
+            const newArticles = doc.querySelector('.blog__list').innerHTML;
+            articleList.insertAdjacentHTML('beforeend', newArticles);
+
+            // Update pagination state
+            const newPaginateNext = doc.querySelector('.load__more a');
+            if (newPaginateNext) {
+              loadMoreBtn.setAttribute('href', newPaginateNext.getAttribute('href'));
+            } else {
+              document.querySelector('.load__more').remove();
+            }
+          })
+          .catch(error => {
+            console.error('Error:', error);
+            loadMoreBtn.textContent = originalBtnText;
+          })
+          .finally(() => {
+            this.classList.remove('loading');
+            this.textContent = originalBtnText;
+          });
+      });
+    }
+    
+    // AJAX search functionality
+    const searchForm = document.getElementById('blog-search-form');
+    const blogList = document.querySelector('.blog__list');
+    const loadMoreContainer = document.querySelector('.load__more');
+    const originalBlogContent = blogList.innerHTML;
+    
+    if (searchForm) {
+      searchForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const searchInput = document.getElementById('blog-search-input');
+        const searchTerm = searchInput.value.trim();
+        
+        // If search term is empty, restore original blog content
+        if (!searchTerm) {
+          blogList.innerHTML = originalBlogContent;
+          if (loadMoreContainer) loadMoreContainer.style.display = '';
+          return;
+        }
+        
+        // Show loading state
+        blogList.innerHTML = '<div class="loading-container">Searching...</div>';
+        
+        // Build the search URL for articles
+        const formAction = this.getAttribute('action');
+        const searchUrl = `${formAction}?type=article&q=${encodeURIComponent(searchTerm)}`;
+        
+        fetch(searchUrl)
+          .then(response => response.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(html, 'text/html');
+            
+            console.log('Search results found');
+            
+            // Find all links in search results that point to blog articles
+            const allLinks = Array.from(doc.querySelectorAll('a[href*="/blogs/"]'));
+            
+            // Track unique article URLs to prevent duplicates
+            const uniqueUrls = new Set();
+            const uniqueContainers = [];
+            
+            allLinks.forEach(link => {
+              const href = link.getAttribute('href');
+              if (href && !uniqueUrls.has(href)) {
+                uniqueUrls.add(href);
+                let container = link;
+                while (container && 
+                      !['ARTICLE', 'LI', 'DIV'].includes(container.tagName) && 
+                      !container.classList.contains('article-card') &&
+                      !container.classList.contains('grid__item') &&
+                      container !== doc.body) {
+                  container = container.parentElement;
+                }
+                if (container) {
+                  uniqueContainers.push(container);
+                }
+              }
+            });
+            
+            console.log(`Found ${uniqueContainers.length} article results`);
+            
+            if (uniqueContainers.length > 0) {
+              blogList.innerHTML = '';
+              
+              uniqueContainers.forEach(container => {
+                // Try to extract article information with more robust selectors
+                const articleLinks = container.querySelectorAll('a');
+                const articleLink = articleLinks[0].getAttribute('href');
+                
+                // Try different ways to get title
+                let articleTitle = '';
+                const titleElem = container.querySelector('h2, h3, h4, .card__title, .article-card__title');
+                if (titleElem) {
+                  articleTitle = titleElem.textContent.trim();
+                } else {
+                  articleTitle = articleLinks[0].textContent.trim();
+                }
+                
+                // Try to find image
+                const articleImage = container.querySelector('img') ? 
+                                    container.querySelector('img').getAttribute('src') : 
+                                    '';
+                
+                // Try to find content/excerpt
+                let articleContent = '';
+                const contentElem = container.querySelector('p, .article-card__excerpt, .card__excerpt');
+                if (contentElem) {
+                  articleContent = contentElem.textContent.trim();
+                }
+                
+                // Create an article element that matches our blog structure
+                const articleHtml = `
+                  <div class="elem">
+                    <a href="${articleLink}" class="media">
+                      ${articleImage ? 
+                        `<img src="${articleImage}" alt="${articleTitle}" width="400" height="300" loading="lazy">` : 
+                        '{{ "image" | placeholder_svg_tag: "placeholder-svg" }}'}
+                    </a>
+                    <div class="desc">
+                      <div class="top">
+                        <a href="#">Search Result</a>
+                        <span>{{ section.settings.read_time_text }}</span>
+                      </div>
+                      <a href="${articleLink}">${articleTitle}</a>
+                      <p>${articleContent || 'No description available.'}</p>
+                    </div>
+                  </div>
+                `;
+                
+                blogList.insertAdjacentHTML('beforeend', articleHtml);
+              });
+            } else {
+              blogList.innerHTML = '<div class="no-results">No articles found matching your search. Try different keywords.</div>';
+            }
+            
+            // Hide load more button during search results
+            if (loadMoreContainer) loadMoreContainer.style.display = 'none';
+          })
+          .catch(error => {
+            console.error('Error:', error);
+            blogList.innerHTML = '<div class="error">An error occurred while searching. Please try again.</div>';
+          });
+      });
+    }
+  });
+</script>

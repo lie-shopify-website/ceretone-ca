@@ -1,0 +1,196 @@
+<!doctype html>
+<html class="h-full no-js" lang="{{ request.locale.iso_code }}" dir="{{ lang_dir }}">
+<head>
+
+  <meta name="google-site-verification" content="TcTOu_r3hLR3VAgHGBtIITuxmnFVyJHqubDhBjnAHZs" />
+  
+  {%- render 'doc-head-core' -%}
+  {%- render 'doc-head-social' -%}
+
+  {%- style %}
+    {{ settings.body_font | font_face: font_display: 'swap' -}}
+    {{ body_font_bold | font_face: font_display: 'swap' -}}
+    {{ body_font_italic | font_face: font_display: 'swap' -}}
+    {{ body_font_bold_italic | font_face: font_display: 'swap' -}}
+    {{ settings.heading_font | font_face: font_display: 'swap' -}}
+
+    {% render 'doc-head-styles' %}
+  {%- endstyle -%}
+
+  {% if template.name contains 'index' or template.name contains 'collection' %}
+  {% comment %} <link rel="stylesheet" href="{{ 'main.css' | asset_url }}"> {% endcomment %}
+  {% endif %}
+  <link rel="stylesheet" href="{{ 'style.css' | asset_url }}">
+  <link rel="stylesheet" href="{{ 'stylev2.css' | asset_url }}">
+  <link rel="stylesheet" href="{{ 'stylev3.css' | asset_url }}">
+  {% if template.name contains 'product' %}
+  <link rel="stylesheet" href="{{ 'variant-styles.css' | asset_url }}">
+  {% endif %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&family=Lora:ital@1&display=swap" rel="stylesheet">
+
+  {% if template.name contains 'product' %}
+  <link rel="prefetch" href="{{ product.featured_image | img_url: "master" }}" />
+  {% endif %}
+  
+  <!-- <link rel="prefetch" href="https://ceretone.com/cdn/shop/files/5_transparent_700pxv2_1.png?v=1742499673" /> -->
+  <link rel="prefetch" href="https://ceretone.com/cdn/shop/files/5_transparent_700pxv2_1.webp?v=1743807177" />
+
+  <link rel="prefetch" href="https://ceretone.com/cdn/shop/files/1200px_main_home_page.webp?v=1743807199" />
+  
+	<link rel="prefetch" href="https://ceretone.com/cdn/shop/files/t1.svg?v=1740752047" />
+	<link rel="prefetch" href="https://ceretone.com/cdn/shop/files/t2.svg?v=1740752047" />
+	<link rel="prefetch" href="https://ceretone.com/cdn/shop/files/t3.svg?v=1740752047" />
+
+	<link rel="prefetch" href="https://ceretone.com/cdn/shop/files/arrleft.png?v=1740752047" />
+	<link rel="prefetch" href="https://ceretone.com/cdn/shop/files/arrright.png?v=1740752047" />
+
+  {%- if request.page_type contains 'customers' -%}
+    <link rel="stylesheet" href="{{ 'customer.css' | asset_url }}">
+  {%- endif -%}
+  <script>
+// Store scripts to delay
+let delayedScriptNodes = [];
+
+// Track loading state
+let hasStartedLoading = false;
+
+// Terms to identify scripts to delay
+const delayTerms = ['klaviyo', 'smile', 'zendesk', 'zdassets', 'shopifypreview', 'googletagmanager', 'luckyorange', 'hotjar', 'facebook','sytecycle', 'shopify'];
+
+// Override head.appendChild to catch and delay scripts
+const originalAppendChild = document.head.appendChild;
+document.head.appendChild = function(node) {
+  if (node.nodeName === 'SCRIPT' && node.src && 
+      delayTerms.some(term => node.src.toLowerCase().includes(term))) {
+    console.log('Delaying script:', node.src);
+    // Store the actual node
+    delayedScriptNodes.push(node.cloneNode(true));
+    return node;
+  }
+  return originalAppendChild.call(this, node);
+};
+
+// Load scripts with proper error handling
+async function loadDelayedScripts() {
+  if (hasStartedLoading) return;
+  hasStartedLoading = true;
+  
+  console.log('Starting delayed script loading:', delayedScriptNodes.map(node => node.src));
+
+  for (const node of delayedScriptNodes) {
+    try {
+      await new Promise((resolve, reject) => {
+        const script = node.cloneNode(true);
+        script.onload = resolve;
+        script.onerror = reject;
+        originalAppendChild.call(document.head, script);
+      });
+      console.log('Loaded:', node.src);
+      // Wait between scripts
+      await new Promise(resolve => setTimeout(resolve, 200));
+    } catch (error) {
+      console.error('Error loading script:', node.src, error);
+    }
+  }
+
+  // Restore original appendChild
+  document.head.appendChild = originalAppendChild;
+  console.log('All delayed scripts loaded');
+}
+
+// Track user activity
+let activityTimeout;
+function resetActivityTimer() {
+  clearTimeout(activityTimeout);
+  activityTimeout = setTimeout(loadDelayedScripts, 4000);
+}
+
+// Start monitoring after page load
+window.addEventListener('load', () => {
+  // Monitor user interaction
+  ['mousemove', 'mousedown', 'keydown', 'scroll', 'touchstart'].forEach(event => {
+    document.addEventListener(event, () => {
+      if (!hasStartedLoading) {
+        loadDelayedScripts();
+      }
+    }, { once: true });
+  });
+
+  // Start inactivity timer
+  resetActivityTimer();
+});
+</script>
+
+
+  {{ content_for_header }}
+
+</head>
+
+<body class="{% if settings.bg_color != settings.card_bg_color and settings.card_bg_color.alpha != 0 %}pad-card-info{% endif %}{% if settings.animations_enabled %} cc-animate-enabled{% endif %}{% if settings.content_boundary_style != blank %} content-boundary-enabled{% endif %}">
+  {%- section 'new-header' -%}
+{% section 'new-cart-drawer' %}
+
+  <main class="relative" id="main-content">
+    {%- if template.name == 'article' -%}
+      <article>
+    {%- endif -%}
+
+    <div class="main-content">
+      {{ content_for_layout }}
+    </div>
+
+    {%- if template.name == 'article' -%}
+      </article>
+    {%- endif -%}
+  </main>
+  {%- section 'new-footer' -%}
+
+<script defer>
+function loadStylesheet(url) {
+  if (!url) {
+      console.error('URL стиля не указан');
+      return;
+  }		    
+  if (document.querySelector(`link[href="${url}"]`)) {
+      console.log('Стиль уже загружен');
+      return;
+  }
+  const link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.href = url;		    
+  document.head.appendChild(link);
+  link.onload = () => {
+      console.log('Стиль успешно загружен:', url);
+  };
+  link.onerror = () => {
+      console.error('Ошибка при загрузке стиля:', url);
+  };
+}
+
+loadStylesheet('{{ 'slick.css' | asset_url }}');
+loadStylesheet('{{ 'slick-theme.css' | asset_url }}');
+</script>
+  <script>
+    // Динамическая подгрузка jQuery
+    var script1 = document.createElement('script');
+    script1.src = 'https://code.jquery.com/jquery-3.7.1.min.js';
+    script1.integrity = 'sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=';
+    script1.crossOrigin = 'anonymous';
+    script1.onload = function() {
+      // После загрузки jQuery загружаем slick.min.js
+      var script2 = document.createElement('script');
+      script2.src = '{{ 'slick.min.js' | asset_url }}';
+      script2.onload = function() {
+        // После загрузки slick.min.js загружаем script.js
+        var script3 = document.createElement('script');
+        script3.src = '{{ 'script.js' | asset_url }}';
+        document.body.appendChild(script3);
+      };
+      document.body.appendChild(script2);
+    };
+    document.body.appendChild(script1);
+  </script>
+</body>
+</html>

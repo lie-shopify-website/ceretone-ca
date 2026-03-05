@@ -1,0 +1,234 @@
+<style>
+  [data-section-id="{{ section.id }}"] {
+    background-color: {{ section.settings.bg_color }};
+    padding-top: {{ section.settings.top_one |  append: 'rem' }};
+    padding-bottom: {{ section.settings.bottom_one |  append: 'rem' }};
+  }
+  .IconFB_flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .IconFB_flex_box {
+    flex: 1 1 calc({{ section.settings.Copywriting_align }}% - 1rem);
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  .IconFB_flex_box_img {
+    width: 50%;
+    margin: 0 auto;
+    height: auto;
+    display: block;
+  }
+  .IconFB_flex_box_h4 {
+    font-size: 1.6rem;
+    text-align: center;
+    color: {{ section.settings.color }};
+  }
+  @media(max-width: 1200px) {
+    .IconFB_flex_box_h4 {
+      font-size: 1.4rem;
+    }
+  }
+  @media(max-width: 1000px) {
+    .IconFB_flex_box {
+      flex: 1 1 calc({{ section.settings.Copywriting_align_mic }}% - 1rem);
+    }
+  }
+</style>
+
+<div data-section-id="{{ section.id }}" class="IconFB">
+  {% if section.settings.title != blank %}
+    <h2 class="h2">
+      {{ section.settings.title | newline_to_br }}
+    </h2>
+  {% endif %}
+  <div class="container IconFB_flex">
+    {% for block in section.blocks %}
+      <div class="IconFB_flex_box">
+        {% if block.settings.image != blank %}
+          {{
+            block.settings.image
+            | image_url: width: block.settings.image.width
+            | image_tag:
+              loading: 'lazy',
+              widths: '2200, 2400, 2600, 2800, 3000, 3264, 3400, 3584, 3800, 4000, 4200, 4400, 4600, 4800, 5000, 5200, 5400, 5600',
+              sizes: sizes,
+              class: 'IconFB_flex_box_img'
+          }}
+        {% endif %}
+        {% if block.settings.title != blank %}
+          <h4 class="IconFB_flex_box_h4">
+            {{ block.settings.title | newline_to_br }}
+          </h4>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Icon小图标",
+  "settings": [
+    {
+      "type": "range",
+      "id": "top_one",
+      "label": "上边距",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "rem",
+      "default": 5
+    },
+    {
+      "type": "range",
+      "id": "bottom_one",
+      "label": "下边距",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "rem",
+      "default": 5
+    },
+    {
+      "type": "range",
+      "id": "top_one_mic",
+      "label": "移动端上边距",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "rem",
+      "default": 2
+    },
+    {
+      "type": "range",
+      "id": "bottom_one_mic",
+      "label": "移动端下边距",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "rem",
+      "default": 2
+    }, {
+      "type": "select",
+      "id": "Copywriting_align",
+      "label": "盒子占位数额",
+      "options": [
+        {
+          "value": "100",
+          "label": "每行均分一"
+        },
+        {
+          "value": "50",
+          "label": "每行均分二"
+        },
+        {
+          "value": "33.33",
+          "label": "每行均分三"
+        },
+        {
+          "value": "25",
+          "label": "每行均分四"
+        }, {
+          "value": "20",
+          "label": "每行均分五"
+        }, {
+          "value": "16.66",
+          "label": "每行均分六"
+        }, {
+          "value": "14.28",
+          "label": "每行均分七"
+        }, {
+          "value": "12.5",
+          "label": "每行均分八"
+        }
+      ],
+      "default": "12.5"
+    }, {
+      "type": "select",
+      "id": "Copywriting_align_mic",
+      "label": "盒子占位数额",
+      "options": [
+        {
+          "value": "100",
+          "label": "每行均分一"
+        },
+        {
+          "value": "50",
+          "label": "每行均分二"
+        },
+        {
+          "value": "33.33",
+          "label": "每行均分三"
+        },
+        {
+          "value": "25",
+          "label": "每行均分四"
+        }, {
+          "value": "20",
+          "label": "每行均分五"
+        }, {
+          "value": "16.66",
+          "label": "每行均分六"
+        }, {
+          "value": "14.28",
+          "label": "每行均分七"
+        }, {
+          "value": "12.5",
+          "label": "每行均分八"
+        }
+      ],
+      "default": "50"
+    }, {
+      "type": "color",
+      "id": "bg_color",
+      "label": "背景颜色",
+      "default": "#fff"
+    }, {
+      "type": "textarea",
+      "id": "title",
+      "label": "标题"
+    }, {
+      "type": "color",
+      "id": "color",
+      "label": "字体颜色",
+      "default": "#011624"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "添加产品",
+      "limit": 50,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "图片"
+        }, {
+          "type": "textarea",
+          "id": "title",
+          "label": "文本"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Icon小图标",
+      "blocks": [
+        {
+          "type": "slide"
+        }, {
+          "type": "slide"
+        }, {
+          "type": "slide"
+        }, {
+          "type": "slide"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

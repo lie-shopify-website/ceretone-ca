@@ -1,0 +1,130 @@
+<section data-section-id="{{ section.id }}">
+    <div class="container">
+        <div class="inner">
+            {% if section.settings.title != blank %}<div class="text-image-custom-1__title h3">{{ section.settings.title | newline_to_br }}</div>{% endif %}
+            
+            <div class="image-box">
+              <div class="left-side">
+                <div class="image">
+                  {% if section.settings.left_image != blank %}
+                      <img src="{{ section.settings.left_image | image_url: width: section.settings.left_image.width }}" width="{{  section.settings.left_image.width }}" height="{{  section.settings.left_image.height }}" />
+                  {% endif %}
+                </div>
+              </div>
+              <div class="right-side">
+                <div class="line-item">
+                  {% if section.settings.right_image_1 != blank %}
+                      <img src="{{ section.settings.right_image_1 | image_url: width: section.settings.right_image_1.width }}" width="{{  section.settings.right_image_1.width }}" height="{{  section.settings.right_image_1.height }}" />
+                  {% endif %}
+                     <div class="right_image-text body-large">{{ section.settings.right_image_text_1 }}</div>
+                </div>
+                <div class="line-item">
+                  {% if section.settings.right_image_2 != blank %}
+                      <img src="{{ section.settings.right_image_2 | image_url: width: section.settings.right_image_2.width }}" width="{{  section.settings.right_image_2.width }}" height="{{  section.settings.right_image_2.height }}" />
+                  {% endif %}
+                     <div class="right_image-text body-large">{{ section.settings.right_image_text_2 }}</div>
+                </div>
+                <div class="line-item">
+                  {% if section.settings.right_image_3 != blank %}
+                      <img src="{{ section.settings.right_image_3 | image_url: width: section.settings.right_image_3.width }}" width="{{  section.settings.right_image_3.width }}" height="{{  section.settings.right_image_3.height }}" />
+                  {% endif %}
+                     <div class="right_image-text body-large">{{ section.settings.right_image_text_3 }}</div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+[data-section-id="{{ section.id }}"] .container {
+    padding-top:{{ section.settings.pc_padding_top }}px;
+	padding-bottom:{{ section.settings.pc_padding_bottom }}px;
+}
+@media screen and (max-width: 767px) {
+    [data-section-id="{{ section.id }}"] .container {
+        padding-top:{{ section.settings.mb_padding_top }}px;
+		padding-bottom:{{ section.settings.mb_padding_bottom }}px;
+    }
+}
+[data-section-id="{{ section.id }}"] img {
+    max-width: 100%;
+    height: auto;
+    display: table;
+    border-radius: 15px;
+}
+.text-image-custom-1__title {
+    text-align: center;
+    /* font-size: 38px; */
+    /* font-weight: bold; */
+    margin-bottom: 50px;
+}
+.text-image-custom-1__title span {
+    background: #ffbea2;
+    padding: 2px 10px;
+}
+
+.text-image-custom-1 .image-box {
+    display: flex;
+    gap: 40px;
+}
+.text-image-custom-1 .right_image-text {
+    /* font-size: 19px; */
+    line-height: 1.2;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    /* font-weight: bold; */
+}
+@media screen and (max-width: 767px) {
+  .text-image-custom-1__title {
+      /* font-size: 30px; */
+      margin-bottom: 30px;
+  }
+  .text-image-custom-1 .image-box {
+      flex-direction: column;
+  }
+  .text-image-custom-1 .right_image-text {
+      /* font-size: 16px; */
+  }
+}
+
+</style>
+
+<script>
+    window.addEventListener("DOMContentLoaded", function () {
+
+    });                       
+</script>
+
+
+{% schema %}
+    {
+        "name": "Text Image Custom 1",
+        "class":"text-image-custom-1",
+        "settings": [
+                { "type": "textarea", "id":"title", "label":"Title"},
+                { "type": "header","content":"左边"},
+                { "type": "image_picker", "id": "left_image", "label": "Image", "info": "大图" },
+                { "type": "header","content":"右边"},
+                { "type": "image_picker", "id": "right_image_1", "label": "Image 1", "info": "图片" },
+                { "type": "textarea", "id":"right_image_text_1", "label":"Title 1"},
+                { "type": "image_picker", "id": "right_image_2", "label": "Image 2", "info": "图片" },
+                { "type": "textarea", "id":"right_image_text_2", "label":"Title 2"},
+                { "type": "image_picker", "id": "right_image_3", "label": "Image 3", "info": "图片" },
+                { "type": "textarea", "id":"right_image_text_3", "label":"Title 3"},
+          
+                { "type": "header","content":"PC"},
+                { "type": "range", "id": "pc_padding_top", "label": "Top Space", "min": 0, "max": 100, "step": 1, "unit": "px", "default": 0 },
+                { "type": "range", "id": "pc_padding_bottom", "label": "Bottom Space", "min": 0, "max": 100, "step": 1, "unit": "px", "default": 0 },
+                { "type": "header","content":"Mobile"},
+                { "type": "range", "id": "mb_padding_top", "label": "Top Space", "min": 0, "max": 100, "step": 1, "unit": "px", "default": 0 },
+                { "type": "range", "id": "mb_padding_bottom", "label": "Bottom Space", "min": 0, "max": 100, "step": 1, "unit": "px", "default": 0 }
+        ],
+        "presets": [
+            {
+                "name": "Text Image Custom 1",
+                "category":"Custom"
+            }
+        ]
+    }
+{% endschema %}

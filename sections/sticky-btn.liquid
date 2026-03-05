@@ -1,0 +1,91 @@
+
+{% schema %}
+    {
+        "name": "Sticky Btn",
+        "settings": [
+            { "type": "text", "id": "custom_class", "label": "自定义class" },
+            { "type": "color", "id": "section_bg_color", "label": "模块背景", "default": "#fff" },
+            { "type": "color", "id": "bg_color", "label": "按钮背景", "default": "#000000" },
+            { "type": "color", "id": "color", "label": "按钮文字颜色", "default": "#ffffff" },
+            { "type": "liquid", "id": "btn_label", "label": "按钮名称" },
+            { "type": "url", "id": "btn_link", "label": "按钮链接" },
+            { "type": "range", "id": "btn_max_width", "label": "按钮宽度", "min": 5, "max": 500, "step": 5, "unit": "px", "default": 240 },
+            { "type": "range", "id": "btn_max_width_mb", "label": "按钮宽度(手机端)", "min": 5, "max": 500, "step": 5, "unit": "px", "default": 240 },
+            { "type": "liquid", "id": "liquid", "label": "附加内容(选填)" },
+        ],
+        "presets": [
+            {
+                "name": "Sticky Btn",
+                "category": "Custom"
+            }
+        ]
+    }
+{% endschema %}
+
+<style>
+[data-section-id="{{ section.id }}"] {
+    --sb-bg_color: {{ section.settings.bg_color }};
+    --sb-font_color: {{ section.settings.color }};
+    --section_bg_color:{{ section.settings.section_bg_color }};
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index:1000;
+    background: var(--section_bg_color);
+    padding:10px 0;
+}
+[data-section-id="{{ section.id }}"] .btn_link {
+    width: 100%;
+    display: flex;
+    max-width: {{ section.settings.btn_max_width }}px;
+    background: var(--sb-bg_color);
+    color: var(--sb-font_color);
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    min-height: 50px;
+    margin: auto;
+    border-radius: 10px;
+}
+[data-section-id="{{ section.id }}"] span.arrow {
+    display: flex;
+    margin-left: 10px;
+}
+@media screen and (max-width: 767px) {
+    [data-section-id="{{ section.id }}"] {
+        bottom: 0;
+        padding:10px 0;
+    }
+    [data-section-id="{{ section.id }}"] .btn_link {
+        max-width:  {{ section.settings.btn_max_width_mb }}px;
+    }
+}
+</style>
+
+<div class="sticky-btn {{ section.settings.custom_class }}" data-section-id="{{ section.id }}">
+    <a class="btn_link" href="{{ section.settings.btn_link }}">
+        <span class="btn_label">{{ section.settings.btn_label }}</span>
+        <span class="arrow">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false" role="presentation" class="icon icon-arrow" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.451 4.24896C13.1191 3.91701 12.5809 3.91701 12.249 4.24896C11.917 4.5809 11.917 5.1191 12.249 5.45104L17.7977 10.9998L3.85 10.9998C3.38056 10.9998 3 11.3803 3 11.8498C3 12.3192 3.38056 12.6998 3.85 12.6998L17.7982 12.6998L12.249 18.249C11.917 18.5809 11.917 19.1191 12.249 19.451C12.5809 19.783 13.1191 19.783 13.451 19.451L20.451 12.451C20.5003 12.4018 20.5429 12.3471 20.5782 12.2885C20.6501 12.1691 20.692 12.033 20.699 11.8921C20.6996 11.8781 20.7 11.8641 20.7 11.85C20.7 11.8499 20.7 11.8498 20.7 11.8498C20.7 11.6089 20.5998 11.3914 20.4388 11.2367L13.451 4.24896Z" fill="currentColor"></path>
+            </svg>
+        </span>
+    </a>
+</div>
+{{ section.settings.liquid }}
+<script>
+    ;(function() {
+        const oSection = document.querySelector('[data-section-id="{{ section.id }}"]');
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const currentUrl = window.location.href;
+            if(currentUrl.indexOf('aaa') != -1){
+                oSection.style.display = 'block';
+            }
+        });
+
+    })();
+</script>
+

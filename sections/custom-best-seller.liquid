@@ -1,0 +1,145 @@
+{% schema %}
+{
+    "name": "Custom Best Seller",
+    "settings": [
+        { "type": "header", "content": "标题" },
+        { "type": "liquid", "id": "title", "label": "标题" },
+
+        { "type": "header", "content": "配置" },
+        { "type": "text", "id": "custom_class", "label": "自定义class" }
+    ],
+    "blocks": [
+        {
+            "type": "slide",
+            "name": "Product",
+            "settings": [
+                { "type": "checkbox", "id": "hot_label", "label": "显示 Hot 角标", "default":false },
+                { "type": "product", "id": "product", "label": "产品" },
+                { "type": "image_picker", "id": "image", "label": "产品图片" },
+                { "type": "text", "id": "short_desc", "label": "短描述" },
+                { "type": "image_picker", "id": "short_desc_icon", "label": "短描述图标" },
+                { "type": "text", "id": "title", "label": "产品标题" },
+
+                { "type": "header", "content": "配置" },
+                { "type": "text", "id": "learn_more", "label": "查看更多", "default":"Learn more" }
+            ]
+        }
+    ],
+
+    "presets": [
+        {
+        "name": "Custom Best Seller",
+        "category": "custom"
+        }
+    ]
+}
+{% endschema %}
+
+
+<link rel="stylesheet" href="{{ 'custom-best-seller.css' | asset_url }}" media="all" >
+
+<div class="custom-best-seller" data-section-id="{{ section.id }}">
+    <div class="best-seller-inner safe-container">
+        {% if section.settings.title != blank %}
+            <div class="section-title"><h2>{{ section.settings.title }}</h2></div>
+        {% endif %}
+        <div class="best-seller-swiper">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    {% for block in section.blocks %}
+                        {% if block.settings.product %}
+                        {%  assign best_product = block.settings.product %}
+                        <div class="swiper-slide">
+                            <div class="item">
+                                {% if block.settings.image != blank %}
+                                    <div class="product-image">
+                                        <a href="{{ best_product.url }}"></a>
+                                        {% if block.settings.hot_label %}<span class="hot-label">Best Seller</span>{% endif %}
+                                        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lzsrc="{{ block.settings.image | image_url: width: 767 }}" class="js-lazy" width="auto" height="auto" />
+                                    </div>
+                                {% endif %}
+
+                                <div class="product-content">
+                                    {% if block.settings.short_desc != blank %}
+                                        <div class="product-short_desc">
+                                            {% if block.settings.short_desc_icon != blank %}<img src="{{ block.settings.short_desc_icon |  image_url: width: 50 }}" width="auto" height="auto" />{% endif %}
+                                            <span>{{ block.settings.short_desc }}</span>
+                                        </div>
+                                    {% endif %}
+
+                                    {% if block.settings.title != blank %}
+                                        <div class="product-title">
+                                            <h3>{{ block.settings.title }}</h3>
+                                        </div>
+                                    {% endif %}
+
+                                    <div class="product-ctr">
+                                        <div class="product-price-box">
+                                            <div class="p-price">{{ best_product.price | money }}</div>
+                                            <div class="p-price-line">/</div>
+                                            <div class="p-price-unit">pair</div>
+                                        </div>
+
+                                        <div class="product-link">
+                                            <a href="{{ best_product.url }}"><span>{{ block.settings.learn_more }}</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                
+                                
+                            </div>
+                            
+                        </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</div>
+<script>
+; (function () {
+    const oSection = document.querySelector('[data-section-id="{{ section.id }}"]');
+
+    function initSwiper(){
+        const mainSwiperEle = oSection.querySelector('.swiper');
+        
+        if(mainSwiperEle) {
+            const mainSwiper = new Swiper(mainSwiperEle, {
+                spaceBetween: 20,
+                slidesPerView: 1,
+                pagination: {
+                    el: oSection.querySelector('.swiper-pagination'),
+                    clickable: true
+                },
+                breakpoints: {
+                    230: {
+                        slidesPerView: 1.15,
+                        spaceBetween: 20,
+                    },
+                    768: {
+                        slidesPerView: 3,
+                        spaceBetween: 20,
+                    },
+                    1024: {
+                        slidesPerView: 3,
+                        spaceBetween: 40,
+                    },
+                    1521: {
+                        slidesPerView: 3,
+                        spaceBetween: 55,
+                    },
+                },
+            });
+        }
+    }
+    
+    window.addEventListener('DOMContentLoaded', function() {
+        initSwiper();
+    });
+
+})();
+</script>

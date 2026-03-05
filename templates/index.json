@@ -1,0 +1,494 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "17344218541b2ca9bf": {
+      "type": "apps",
+      "blocks": {
+        "klaviyo_email_marketing_sms_form_embed_block_E8Tkj9": {
+          "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/form-embed-block/2632fe16-c075-4321-a88b-50b567f42507",
+          "settings": {
+            "formId": "SjpLqw"
+          }
+        }
+      },
+      "block_order": [
+        "klaviyo_email_marketing_sms_form_embed_block_E8Tkj9"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "custom_slideshow_UKnMwc": {
+      "type": "custom-slideshow",
+      "blocks": {
+        "slide_LxcEyr": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/1920-630_4.png",
+            "image_mb": "shopify://shop_images/750-1120_4.png",
+            "title": "",
+            "content": "",
+            "button_label": "",
+            "button_link": "shopify://pages/world-hearing-day"
+          }
+        },
+        "slide_Rq3yac": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/banner_1_2x_2.png",
+            "image_mb": "shopify://shop_images/banner_1_2d11a759-572d-48ee-a190-48bc99776582.png",
+            "title": "",
+            "content": "",
+            "button_label": "",
+            "button_link": "shopify://products/core-one-pro-otc-hearing-aids"
+          }
+        }
+      },
+      "block_order": [
+        "slide_LxcEyr",
+        "slide_Rq3yac"
+      ],
+      "name": "Custom Slideshow",
+      "settings": {
+        "custom_class": "",
+        "auto_loop": true,
+        "auto_loop_speed": 3
+      }
+    },
+    "custom_our_service_XaYr4A": {
+      "type": "custom-our-service",
+      "blocks": {
+        "item_yNxAmj": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/2x_68f9b6ce-c018-40de-a69a-825191e6f292.png",
+            "title": "Affordable",
+            "info": "No more $4,000+ prices."
+          }
+        },
+        "item_BGJkFb": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/2_2x_0cd7f59c-539e-43de-8cc5-548e626585de.png",
+            "title": "Accessible",
+            "info": "Bypass clinic, home delivery."
+          }
+        },
+        "item_MaHdJU": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/2x_805e1b67-047e-48b6-bd06-5a01bb80e6f8.png",
+            "title": "Unnoticeable",
+            "info": "Discreet design, barely seen."
+          }
+        },
+        "item_GVddJq": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/1_2x_faa54478-906c-45b6-b1ee-484528cc0608.png",
+            "title": "Reliable",
+            "info": "FDA registered. Proven tech."
+          }
+        }
+      },
+      "block_order": [
+        "item_yNxAmj",
+        "item_BGJkFb",
+        "item_MaHdJU",
+        "item_GVddJq"
+      ],
+      "name": "Custom Our Service",
+      "settings": {
+        "title": "Breaking barriers for better hearing",
+        "custom_class": ""
+      }
+    },
+    "custom_best_seller_KxrWR6": {
+      "type": "custom-best-seller",
+      "blocks": {
+        "slide_RgN7dU": {
+          "type": "slide",
+          "settings": {
+            "hot_label": true,
+            "product": "core-one-pro-otc-hearing-aids",
+            "image": "shopify://shop_images/best-seller-01.png",
+            "short_desc": "Most Comfort & Invisible",
+            "short_desc_icon": "shopify://shop_images/icon-001.png",
+            "title": "Core One Pro",
+            "learn_more": "Learn more"
+          }
+        },
+        "slide_pdPCAk": {
+          "type": "slide",
+          "settings": {
+            "hot_label": false,
+            "product": "beacon-otc-hearing-aids",
+            "image": "shopify://shop_images/best-seller-02.png",
+            "short_desc": "Smart & Connected",
+            "short_desc_icon": "shopify://shop_images/icon-002.png",
+            "title": "Beacon",
+            "learn_more": "Learn more"
+          }
+        },
+        "slide_iJLzDt": {
+          "type": "slide",
+          "settings": {
+            "hot_label": false,
+            "product": "torch-otc-hearing-aids",
+            "image": "shopify://shop_images/best-seller-03.png",
+            "short_desc": "Powerful & Reliable",
+            "short_desc_icon": "shopify://shop_images/icon-003.png",
+            "title": "Torch",
+            "learn_more": "Learn more"
+          }
+        }
+      },
+      "block_order": [
+        "slide_RgN7dU",
+        "slide_pdPCAk",
+        "slide_iJLzDt"
+      ],
+      "name": "Custom Best Seller",
+      "settings": {
+        "title": "Meet Our Best Hearing Solutions",
+        "custom_class": ""
+      }
+    },
+    "custom_customer_review_naVffy": {
+      "type": "custom-customer-review",
+      "blocks": {
+        "slide_pRtNVT": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/review-01.png",
+            "content": "Compact, powerful and barely noticeable."
+          }
+        },
+        "slide_7nNcxR": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/wir.png",
+            "content": "Affordable. Very Small And Lightweight. Compact Case, \nFeaturing Volume-Level LEDs."
+          }
+        },
+        "slide_6C8NxB": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/HR-Logo_2x_b4234700-53a1-4f38-abd7-9b3329e51637.png",
+            "content": "Ceretone’s Core One, possibly the world’s smallest over-the-counter (OTC) hearing aid."
+          }
+        },
+        "slide_RqAKRW": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/gadgeteer_2x_50c29227-117d-486b-857d-3b14798bef22.png",
+            "content": "Cretetone does an exceptional job of combining tiny, comfortable, over-the-counter hearing aids at a price far less than prescription models."
+          }
+        },
+        "slide_wnVU98": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/new_atlas_2x_26126100-9363-4c38-84cf-b92349e85287.png",
+            "content": "They are touted as “virtually invisible,” and I would agree with that."
+          }
+        },
+        "slide_Yc3nVB": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Fort_worth_star_PC_2x_483b7a74-2670-4c19-b5de-a3647aad0104.png",
+            "content": "The Core One Pros are prescription-free and could help restore clarity, confidence and connection in everyday life."
+          }
+        }
+      },
+      "block_order": [
+        "slide_pRtNVT",
+        "slide_7nNcxR",
+        "slide_6C8NxB",
+        "slide_RqAKRW",
+        "slide_wnVU98",
+        "slide_Yc3nVB"
+      ],
+      "name": "Custom Customer Review",
+      "settings": {
+        "title": "As Seen On",
+        "custom_class": "",
+        "auto_loop": false,
+        "auto_loop_speed": 5
+      }
+    },
+    "custom_honors_received_8dindE": {
+      "type": "custom-honors-received",
+      "blocks": {
+        "slide_pXJ34H1": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/honors-received-pc01.png"
+          }
+        },
+        "slide_bAHaQA": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/honors-received-2.png"
+          }
+        },
+        "slide_LxBCc9": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/honors-received-3.png"
+          }
+        },
+        "slide_Ek8AWw": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/honors-received-pc04.png"
+          }
+        },
+        "slide_CPW8c7": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/lQLPJwLR_MAmx1vMtM0BErCWJBeRaKlepgkBaNszTdYA_274_180.png"
+          }
+        }
+      },
+      "block_order": [
+        "slide_pXJ34H1",
+        "slide_bAHaQA",
+        "slide_LxBCc9",
+        "slide_Ek8AWw",
+        "slide_CPW8c7"
+      ],
+      "name": "Custom Honors Received",
+      "settings": {
+        "title": "Honors Received",
+        "speed": 25,
+        "speed_mb": 18,
+        "custom_class": ""
+      }
+    },
+    "custom_key_features_GR6p8k": {
+      "type": "custom-key-features",
+      "name": "Custom Key Features",
+      "settings": {
+        "bg": "shopify://shop_images/key-features-bg.jpg",
+        "bg_mb": "shopify://shop_images/key-features-bg-mb.jpg",
+        "title": "Hear More Clearly with Industry-Leading Audio Technology",
+        "short_desc": "Your hearing quality comes down to two parts: the chip that processes the sound and the speaker that plays it.",
+        "video": "shopify://files/videos/9月19日.mp4",
+        "image": "shopify://shop_images/pc_2x_ef09b942-b3ce-491a-a71c-3d20dd2f9d00.png",
+        "key_title1": "Intricon® Chipset",
+        "key_info1_1": "40+ Years of Hearing Innovation",
+        "key_info1_2": "Prescription-grade sound, now available over the counter.",
+        "key_title2": "Knowles® Hi-Fi Speaker",
+        "key_info2_1": "70+ Years of Audio Innovation",
+        "key_info2_2": "Engineered for human voice clarity.",
+        "custom_class": ""
+      }
+    },
+    "custom_our_service_XaYr4A1": {
+      "type": "custom-our-service-v2",
+      "blocks": {
+        "item_yNxAmj": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/FDA_2x_416b9da6-661b-4f1d-9df5-d4394af6b568.png",
+            "title": "FDA-Registered, Crystal-Clear Sound",
+            "info": "Isolates voices from background noise so you hear what matters most."
+          }
+        },
+        "item_BGJkFb": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/2x_d44fd5c0-fea0-4582-8abb-7585a822d06a.png",
+            "title": "Professional Quality, Accessible Price",
+            "info": "Proven technology refined over 40 years without the traditional $4,000+ clinic costs."
+          }
+        },
+        "item_MaHdJU": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/2x_4323e407-afb9-4eff-adb6-afab1a3a3f5f.png",
+            "title": "Easy Setup, Ready To Use",
+            "info": "No clinic visits, no complicated setups - just open and start hearing better."
+          }
+        },
+        "item_GVddJq": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/2x_981d4c56-09f6-4b9e-9435-f94efdb8bab4.png",
+            "title": "60-Day Trial, Lifelong Support",
+            "info": "Full money-back guarantee with free shipping both ways, plus 12-month warranty."
+          }
+        }
+      },
+      "block_order": [
+        "item_yNxAmj",
+        "item_BGJkFb",
+        "item_MaHdJU",
+        "item_GVddJq"
+      ],
+      "name": "Custom Our Service V2",
+      "settings": {
+        "title": "The Ceretone Advantage",
+        "custom_class": ""
+      }
+    },
+    "custom_customer_video_ignfhp": {
+      "type": "custom-customer-video",
+      "blocks": {
+        "video_TADRXV": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/Version 2.2.mp4",
+            "video_image": "shopify://shop_images/pc_2x_1.png",
+            "product": "core-one-pro-otc-hearing-aids",
+            "image": "shopify://shop_images/video-image-1.png",
+            "title": "Core One Pro",
+            "customer_name": "Dr. Bill K",
+            "verified_text": "Verified Customer"
+          }
+        },
+        "video_iA7cjC": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/11月24日.mp4",
+            "video_image": "shopify://shop_images/3pc_2x_ff1c3de5-8e3f-4a19-bd28-fffd712a8ceb.png",
+            "product": "core-one-pro-otc-hearing-aids",
+            "image": "shopify://shop_images/video-image-1.png",
+            "title": "Core One Pro",
+            "customer_name": "911 Studios",
+            "verified_text": "Verified Reviewer"
+          }
+        },
+        "video_tUgWBe": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/7月21日 (9).mp4",
+            "video_image": "shopify://shop_images/2pc_2x_eaadc9e6-8b6f-4c6e-9f7d-36b8f4faf68b.png",
+            "product": "torch-otc-hearing-aids",
+            "image": "shopify://shop_images/torch1_1.png",
+            "title": "Torch",
+            "customer_name": "Shelley",
+            "verified_text": "Verified Customer"
+          }
+        }
+      },
+      "block_order": [
+        "video_TADRXV",
+        "video_iA7cjC",
+        "video_tUgWBe"
+      ],
+      "name": "Custom Customer Video",
+      "settings": {
+        "title": "Over 1,000,000+ Happy Customers",
+        "custom_class": ""
+      }
+    },
+    "custom_collapsible_image_Da9JXt": {
+      "type": "custom-collapsible-image",
+      "blocks": {
+        "accordion_6Xb3tV": {
+          "type": "accordion",
+          "settings": {
+            "question": "Start Your Risk-Free 60-Day Trial",
+            "answer": "Pick the hearing aid that fits your needs—expert-designed, comfortable, and powered by advanced technology. No appointments, no pressure.",
+            "opened": false
+          }
+        },
+        "accordion_nbT7eH": {
+          "type": "accordion",
+          "settings": {
+            "question": "Delivered Straight to Your Door",
+            "answer": "Your complete hearing kit arrives ready to use, with everything you need inside. Just open the box, follow the simple steps, and start hearing better.",
+            "opened": false
+          }
+        },
+        "accordion_EiThGM": {
+          "type": "accordion",
+          "settings": {
+            "question": "Support That Stays With You",
+            "answer": "You’re never on your own. Whether it’s a phone call, text, email, chat, or video session, our hearing care team is always just one message away.",
+            "opened": false
+          }
+        }
+      },
+      "block_order": [
+        "accordion_6Xb3tV",
+        "accordion_nbT7eH",
+        "accordion_EiThGM"
+      ],
+      "name": "Custom Collapsible Image",
+      "settings": {
+        "title": "How it works",
+        "big_image": "shopify://shop_images/image111.png"
+      }
+    },
+    "custom_faq_jaMpLP": {
+      "type": "custom-faq",
+      "blocks": {
+        "accordion_pRH6Wf": {
+          "type": "accordion",
+          "settings": {
+            "question": "How do I know what degree of hearing loss I have?",
+            "answer": "<p>Age-related hearing loss is progressive, and your hearing slowly gets worse over time, so it's easy to overestimate your hearing abilities. Ceretone offers a free online hearing test, allowing you to quickly and accurately assess your current degree of hearing loss.</p>",
+            "opened": true
+          }
+        },
+        "accordion_fzGb4W": {
+          "type": "accordion",
+          "settings": {
+            "question": "What makes these devices so affordable?",
+            "answer": "<p>We are committed to providing cost-effective hearing solutions for individuals with hearing loss. Our direct-to-consumer online approach allows us to offer competitive pricing without compromising quality or service. As a result, our hearing aids are priced significantly lower than traditional hearing aids.</p>",
+            "opened": false
+          }
+        },
+        "accordion_N7zeXC": {
+          "type": "accordion",
+          "settings": {
+            "question": "How do Ceretone hearing aids compare to hearing aids from a clinic?",
+            "answer": "<p>The Ceretone Core One series are professional hearing aids registered with the FDA and subject to FDA over-the-counter regulations. Ceretone is dedicated to bringing the latest technology to Americans at the lowest possible price, helping as many people as possible improve their hearing.<br>Ceretone hearing aids are generally more affordable than clinic hearing aids because they don’t require additional clinic or service fees. Additionally, Ceretone offers ongoing support anytime.</p>",
+            "opened": false
+          }
+        },
+        "accordion_4QAT9d": {
+          "type": "accordion",
+          "settings": {
+            "question": "Can I request a return if I’m not completely satisfied with Ceretone hearing aids?",
+            "answer": "<p>At Ceretone, our utmost priority is your complete satisfaction. If for any reason you’re not satisfied with your Ceretone hearing aids within 60 days of purchase, you may return them for a full refund. See our full Warranty and Return Policy for details.</p>",
+            "opened": false
+          }
+        }
+      },
+      "block_order": [
+        "accordion_pRH6Wf",
+        "accordion_fzGb4W",
+        "accordion_N7zeXC",
+        "accordion_4QAT9d"
+      ],
+      "name": "Custom Faq",
+      "settings": {
+        "title": "Your Questions, Answered"
+      }
+    }
+  },
+  "order": [
+    "17344218541b2ca9bf",
+    "custom_slideshow_UKnMwc",
+    "custom_our_service_XaYr4A",
+    "custom_best_seller_KxrWR6",
+    "custom_customer_review_naVffy",
+    "custom_honors_received_8dindE",
+    "custom_key_features_GR6p8k",
+    "custom_our_service_XaYr4A1",
+    "custom_customer_video_ignfhp",
+    "custom_collapsible_image_Da9JXt",
+    "custom_faq_jaMpLP"
+  ]
+}

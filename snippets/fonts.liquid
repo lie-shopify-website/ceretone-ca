@@ -1,0 +1,63 @@
+<link rel="preload" as="font" href="{{ 'Helvetica-Bold.otf' | asset_url }}" type="font/otf" crossorigin="anonymous" />
+<link rel="preload" as="font" href="{{ 'Helvetica-Regular.otf' | asset_url }}" type="font/otf" crossorigin="anonymous" />
+
+{% style %}
+    @font-face {
+        font-family: 'Helvetica';
+        src: url('{{ 'Helvetica-Regular.otf' | asset_url }}') format('opentype');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+    }
+    @font-face {
+        font-family: 'Helvetica';
+        src: url('{{ 'Helvetica-Bold.otf' | asset_url }}') format('opentype'); 
+        font-weight: bold;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    @media (min-width: 768px) {
+        :root {
+            --safe-width: 728px;
+        }
+    }
+
+    @media (min-width: 1280px) {
+        :root {
+            --safe-width: 1200px;
+        }
+    }
+
+    @media (min-width: 1440px) {
+        :root {
+            --safe-width: 1360px;
+        }
+    }
+
+    @media (min-width: 1520px) {
+        :root {
+            --safe-width: 1400px;
+        }
+    }
+
+
+    .safe-container {
+        width: 100%;
+        max-width: var(--safe-width);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @media (min-width: 768px) {
+        .mbbr {
+            display:none;
+        }
+    }
+    @media (max-width: 767px) {
+        .pcbr {
+            display:none;
+        }
+    }
+
+{% endstyle %}

@@ -1,0 +1,507 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h3"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "description": ""
+          }
+        },
+        "tags": {
+          "type": "tags",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "inventory": {
+          "type": "inventory",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_quantity": true,
+            "show_gift_card_recipient": false
+          }
+        },
+        "pickup_availability": {
+          "type": "pickup_availability",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "description",
+        "tags",
+        "variant_picker",
+        "inventory",
+        "buy_buttons",
+        "pickup_availability"
+      ],
+      "settings": {
+        "desktop_alignment": "right",
+        "mobile_alignment": "before",
+        "gallery_type": "slider_previews",
+        "aspect_ratio": "adapt",
+        "image_fit": "cover",
+        "image_fit_modal": "contain",
+        "padding_bottom": "l"
+      }
+    },
+    "576dad4a-7ffe-4bdd-9a60-a4572834977d": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--15231063359549__576dad4a-7ffe-4bdd-9a60-a4572834977d-column-1": {
+          "type": "column",
+          "settings": {
+            "icon": "none",
+            "icon_color_scheme": "",
+            "icon_fill_type": "gradient",
+            "image": "shopify://shop_images/A61_20240716_1.png",
+            "heading": "FDA & OTC",
+            "text": "FDA-Registered and Over-the-Counter",
+            "show_button": false,
+            "button_label": "Label",
+            "button_link": "",
+            "button_style": "simple"
+          }
+        },
+        "column_9d3DnN": {
+          "type": "column",
+          "settings": {
+            "icon": "none",
+            "icon_color_scheme": "",
+            "icon_fill_type": "gradient",
+            "image": "shopify://shop_images/A61_20240716_1.png",
+            "heading": "Premium Sound",
+            "text": "High-Quality Audio for Crystal Clear Conversations",
+            "show_button": false,
+            "button_label": "Label",
+            "button_link": "",
+            "button_style": "simple"
+          }
+        },
+        "column_Fnzmxw": {
+          "type": "column",
+          "settings": {
+            "icon": "none",
+            "icon_color_scheme": "background-1",
+            "icon_fill_type": "gradient",
+            "image": "shopify://shop_images/A61_20240716_1.png",
+            "heading": "Advanced Noise Reduction",
+            "text": "Minimizes Background Noise for Enhanced Hearing",
+            "show_button": false,
+            "button_label": "Label",
+            "button_link": "",
+            "button_style": "simple"
+          }
+        },
+        "column_GiTEXW": {
+          "type": "column",
+          "settings": {
+            "icon": "none",
+            "icon_color_scheme": "",
+            "icon_fill_type": "gradient",
+            "image": "shopify://shop_images/A61_20240716_1.png",
+            "heading": "4 Hearing Modes",
+            "text": "Equipped with Standard/Restaurant/Outdoor/Music Settings",
+            "show_button": false,
+            "button_label": "Label",
+            "button_link": "",
+            "button_style": "simple"
+          }
+        },
+        "column_UNCDzw": {
+          "type": "column",
+          "settings": {
+            "icon": "none",
+            "icon_color_scheme": "",
+            "icon_fill_type": "gradient",
+            "image": "shopify://shop_images/A61_20240716_1.png",
+            "heading": "Long Battery Life",
+            "text": "Fast 2-hour Charging, up to 100 Hours Total with the Case",
+            "show_button": false,
+            "button_label": "Label",
+            "button_link": "",
+            "button_style": "simple"
+          }
+        },
+        "column_FzVbFn": {
+          "type": "column",
+          "settings": {
+            "icon": "none",
+            "icon_color_scheme": "",
+            "icon_fill_type": "gradient",
+            "image": "shopify://shop_images/A61_20240716_1.png",
+            "heading": "Discreet In-the-Ear Design",
+            "text": "Crafted to Resemble Earbuds for a Subtle Appearance",
+            "show_button": false,
+            "button_label": "Label",
+            "button_link": "",
+            "button_style": "simple"
+          }
+        }
+      },
+      "block_order": [
+        "template--15231063359549__576dad4a-7ffe-4bdd-9a60-a4572834977d-column-1",
+        "column_9d3DnN",
+        "column_Fnzmxw",
+        "column_GiTEXW",
+        "column_UNCDzw",
+        "column_FzVbFn"
+      ],
+      "custom_css": [],
+      "settings": {
+        "section_type": "solid",
+        "color_scheme": "background-1",
+        "enable_border": false,
+        "border_full": false,
+        "multicolumn_to_show": 3,
+        "gap": "small",
+        "subheading": "",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "",
+        "heading_size": "h3",
+        "heading_line": "simple",
+        "line_color": "#1566e0",
+        "word_break": false,
+        "heading_animation": "none",
+        "word_break_an": false,
+        "text": "",
+        "text_align": "center",
+        "icon_size": "recommended",
+        "box_shadow": true,
+        "icon_style": "colored",
+        "image_width": "small",
+        "image_ratio": "square",
+        "object_fit": "cover",
+        "card_heading_size": "h4",
+        "padding_top": "no-indent",
+        "padding_bottom": "m",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "hero_izGT8Q": {
+      "type": "hero",
+      "blocks": {
+        "title_BrJAdD": {
+          "type": "title",
+          "settings": {
+            "heading": "Discover Fusion",
+            "heading_size": "h3",
+            "heading_line": "simple",
+            "line_color": "#1566E0",
+            "word_break": false,
+            "heading_animation": "none",
+            "word_break_an": false
+          }
+        },
+        "description_g8arae": {
+          "type": "description",
+          "settings": {
+            "description": "Compact, Clear, and Long-Lasting Next-Gen Hearing Innovation"
+          }
+        }
+      },
+      "block_order": [
+        "title_BrJAdD",
+        "description_g8arae"
+      ],
+      "settings": {
+        "layout": "vertical",
+        "header_overlay": false,
+        "header_transparent": false,
+        "block_type": "subtle",
+        "color_scheme": "",
+        "full_screen": false,
+        "image": "shopify://shop_images/Ceretone_Core_One_25a8e816-c37b-4e24-bfce-e8a864d11015.png",
+        "show_video": false,
+        "overlay_opacity": 0,
+        "image_ratio": "adapt",
+        "object_fit": "cover",
+        "desktop_image_position": "after",
+        "mobile_image_position": "after",
+        "mobile_image_overlay": "overlay",
+        "horizontal_alignment": "center",
+        "vertical_alignment": "bottom",
+        "padding_top": "no-indent",
+        "padding_bottom": "m"
+      }
+    },
+    "hero_tzbMTX": {
+      "type": "hero",
+      "blocks": {
+        "title_cmMcY9": {
+          "type": "title",
+          "settings": {
+            "heading": "Accessible and Reliable",
+            "heading_size": "h3",
+            "heading_line": "simple",
+            "line_color": "#1566E0",
+            "word_break": false,
+            "heading_animation": "none",
+            "word_break_an": false
+          }
+        },
+        "description_Jj8YaC": {
+          "type": "description",
+          "settings": {
+            "description": "Fusion ITE hearing aids are FDA registered, ensuring they meet strict safety and effectiveness standards. Experience reliable, user-friendly hearing aids that deliver exceptional performance and peace of mind."
+          }
+        }
+      },
+      "block_order": [
+        "title_cmMcY9",
+        "description_Jj8YaC"
+      ],
+      "settings": {
+        "layout": "horizontal",
+        "header_overlay": false,
+        "header_transparent": false,
+        "block_type": "plain",
+        "color_scheme": "",
+        "full_screen": false,
+        "image": "shopify://shop_images/Ceretone_Core_One_25a8e816-c37b-4e24-bfce-e8a864d11015.png",
+        "show_video": false,
+        "overlay_opacity": 0,
+        "image_ratio": "adapt",
+        "object_fit": "cover",
+        "desktop_image_position": "after",
+        "mobile_image_position": "after",
+        "mobile_image_overlay": "overlay",
+        "horizontal_alignment": "center",
+        "vertical_alignment": "middle",
+        "padding_top": "no-indent",
+        "padding_bottom": "m"
+      }
+    },
+    "hero_WXYczW": {
+      "type": "hero",
+      "blocks": {
+        "title_47RT6G": {
+          "type": "title",
+          "settings": {
+            "heading": "Compact Comfort",
+            "heading_size": "h3",
+            "heading_line": "simple",
+            "line_color": "#1566E0",
+            "word_break": false,
+            "heading_animation": "none",
+            "word_break_an": false
+          }
+        },
+        "description_XJyyyM": {
+          "type": "description",
+          "settings": {
+            "description": "Small Size, ITE (In-the-ear) Design. Designed to fit snugly within the ear canal, these hearing aids provide exceptional sound quality without drawing attention."
+          }
+        }
+      },
+      "block_order": [
+        "title_47RT6G",
+        "description_XJyyyM"
+      ],
+      "settings": {
+        "layout": "horizontal",
+        "header_overlay": false,
+        "header_transparent": false,
+        "block_type": "plain",
+        "color_scheme": "",
+        "full_screen": false,
+        "image": "shopify://shop_images/Ceretone_Core_One_25a8e816-c37b-4e24-bfce-e8a864d11015.png",
+        "show_video": false,
+        "overlay_opacity": 0,
+        "image_ratio": "adapt",
+        "object_fit": "cover",
+        "desktop_image_position": "before",
+        "mobile_image_position": "after",
+        "mobile_image_overlay": "overlay",
+        "horizontal_alignment": "center",
+        "vertical_alignment": "middle",
+        "padding_top": "no-indent",
+        "padding_bottom": "m"
+      }
+    },
+    "hero_FtrYDM": {
+      "type": "hero",
+      "blocks": {
+        "title_CQ6CeG": {
+          "type": "title",
+          "settings": {
+            "heading": "Premium Sound with Knowles®",
+            "heading_size": "h3",
+            "heading_line": "simple",
+            "line_color": "#1566E0",
+            "word_break": false,
+            "heading_animation": "none",
+            "word_break_an": false
+          }
+        },
+        "description_XFHwiF": {
+          "type": "description",
+          "settings": {
+            "description": "Experience superior audio clarity with enhanced by noise reduction, adaptive feedback cancelling, and WDRC (Wide Dynamic Range Compression)."
+          }
+        }
+      },
+      "block_order": [
+        "title_CQ6CeG",
+        "description_XFHwiF"
+      ],
+      "settings": {
+        "layout": "horizontal",
+        "header_overlay": false,
+        "header_transparent": false,
+        "block_type": "plain",
+        "color_scheme": "",
+        "full_screen": false,
+        "image": "shopify://shop_images/Ceretone_Core_One_25a8e816-c37b-4e24-bfce-e8a864d11015.png",
+        "show_video": false,
+        "overlay_opacity": 0,
+        "image_ratio": "adapt",
+        "object_fit": "cover",
+        "desktop_image_position": "after",
+        "mobile_image_position": "after",
+        "mobile_image_overlay": "overlay",
+        "horizontal_alignment": "center",
+        "vertical_alignment": "middle",
+        "padding_top": "no-indent",
+        "padding_bottom": "m"
+      }
+    },
+    "steps_h9rGkd": {
+      "type": "steps",
+      "blocks": {
+        "step_kR7Ajb": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/Ceretone_Core_One_25a8e816-c37b-4e24-bfce-e8a864d11015.png",
+            "number": "",
+            "heading": "25Hours",
+            "text": "of battery life with a single charge",
+            "show_button": false,
+            "button_style": "simple",
+            "button_label": "Know More",
+            "button_link": ""
+          }
+        },
+        "step_T7NqgE": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/Ceretone_Core_One_25a8e816-c37b-4e24-bfce-e8a864d11015.png",
+            "number": "",
+            "heading": "25Hours",
+            "text": "of battery life with a single charge",
+            "show_button": false,
+            "button_style": "simple",
+            "button_label": "Know More",
+            "button_link": ""
+          }
+        },
+        "step_aYwqY8": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/Ceretone_Core_One_25a8e816-c37b-4e24-bfce-e8a864d11015.png",
+            "number": "",
+            "heading": "25Hours",
+            "text": "of battery life with a single charge",
+            "show_button": false,
+            "button_style": "simple",
+            "button_label": "Know More",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "step_kR7Ajb",
+        "step_T7NqgE",
+        "step_aYwqY8"
+      ],
+      "settings": {
+        "layout": "collapsible",
+        "color_scheme": "",
+        "subheading": "",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "",
+        "heading_size": "h3",
+        "heading_line": "simple",
+        "line_color": "#1566E0",
+        "word_break": false,
+        "heading_animation": "none",
+        "word_break_an": false,
+        "text": "",
+        "text_align": "center",
+        "columns_to_show": 3,
+        "image_ratio": "landscape",
+        "number_size": "recommended",
+        "step_heading_size": "recommended",
+        "text_size": "recommended",
+        "padding_top": "no-indent",
+        "padding_bottom": "m",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "background-1",
+        "subheading": "Subheading",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "You May Also Like",
+        "heading_size": "h2",
+        "text": "Some description",
+        "products_limit": 6,
+        "image_ratio": "5/4",
+        "image_fit": "cover",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_desc": true,
+        "padding_top": "l",
+        "padding_bottom": "l"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "576dad4a-7ffe-4bdd-9a60-a4572834977d",
+    "hero_izGT8Q",
+    "hero_tzbMTX",
+    "hero_WXYczW",
+    "hero_FtrYDM",
+    "steps_h9rGkd",
+    "product-recommendations"
+  ]
+}

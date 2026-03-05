@@ -1,0 +1,29 @@
+{% capture handle_list %}{{ settings.handle_list | newline_to_br }}{% endcapture %}
+{% assign handle_array = handle_list | split: '<br />' %}
+
+{% assign current_handle = '' %}
+{% case template.name %}
+    {% when 'product' %}
+    {% assign current_handle = product.handle %}
+    {% when 'collection' %}
+    {% assign current_handle = collection.handle %}
+    {% when 'page' %}
+    {% assign current_handle = page.handle %}
+    {% when 'blog' %}
+    {% assign current_handle = blog.handle %}
+    {% when 'article' %}
+    {% assign current_handle = article.handle %}
+    {% when 'cart' %}
+    {% assign current_handle = 'cart' %}
+    {% else %}
+    {% assign current_handle = 'other' %}
+{% endcase %}
+{% for handle_key in handle_array %}
+    {% assign handle_key_strip = handle_key | strip_newlines %}
+    {% if handle_key_strip ==  current_handle %}
+    <style>#launcher {display:none !important;}</style>
+    {% endif %}
+{% endfor %}
+{% if template.name == 'blog' or template.name == 'article' %}
+    <style>#launcher {display:none !important;}</style>
+{% endif %}

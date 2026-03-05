@@ -1,0 +1,56 @@
+{% schema %}
+    {
+        "name": "Custom Honors Received",
+        "settings": [
+            { "type": "header", "content": "标题" },
+            { "type": "liquid", "id": "title", "label": "标题" },
+    
+            { "type": "header", "content": "配置" },
+            { "type": "number", "id": "speed", "label": "播放速度", "default":25 },
+            { "type": "number", "id": "speed_mb", "label": "播放速度(手机端)", "default":10 },
+            { "type": "text", "id": "custom_class", "label": "自定义class" }
+        ],
+        "blocks": [
+            {
+                "type": "slide",
+                "name": "Slide",
+                "settings": [
+                    { "type": "image_picker", "id": "image", "label": "图片" }
+                ]
+            }
+        ],
+    
+        "presets": [
+            {
+            "name": "Custom Honors Received",
+            "category": "custom"
+            }
+        ]
+    }
+    {% endschema %}
+    
+    
+    <link rel="stylesheet" href="{{ 'custom-honors-received.css' | asset_url }}" media="all"  >
+    
+    <div class="custom-honors-received" data-section-id="{{ section.id }}" style="--marquee-time:{{ section.settings.speed }}s;--marquee-time-mb:{{ section.settings.speed_mb }}s;">
+        <div class="review-inner safe-container">
+            {% if section.settings.title != blank %}
+                <div class="section-title"><h2>{{ section.settings.title }}</h2></div>
+            {% endif %}
+
+            <div class="marquee-container">
+                <div class="marquee-row marquee-left">
+                    {% for block in section.blocks %}
+                        {% if block.settings.image != blank %}
+                            <div class="marquee-item"><img src="{{ block.settings.image | image_url: width: 767 }}" class="js-lazy" width="auto" height="auto" /></div>
+                        {% endif %}
+                    {% endfor %}
+                    {% for block in section.blocks %}
+                        {% if block.settings.image != blank %}
+                            <div class="marquee-item"><img src="{{ block.settings.image | image_url: width: 767 }}" class="js-lazy" width="auto" height="auto" /></div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>

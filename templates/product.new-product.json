@@ -1,0 +1,890 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "judge_me_reviews_preview_badge_xGfRmW": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
+        "short_info_7n8hQi": {
+          "type": "short_info",
+          "disabled": true,
+          "settings": {
+            "text": "<span style=\"font-weight: bold; color: \t#1566E0; font-size: 100%;\">\n The Most Compact And Powerful OTC Hearing Aid\n</span>"
+          }
+        },
+        "tags": {
+          "type": "tags",
+          "disabled": true,
+          "settings": {
+            "color": "#e7590d",
+            "bg_color": "#fef0e5"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h3"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "product_featured_info_idAPRj": {
+          "type": "product_featured_info",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "disabled": true,
+          "settings": {
+            "description": "Engineered for all-day comfort, near-invisible wear, and crystal-clear sound—right where life happens."
+          }
+        },
+        "gift_box_jeBHPq": {
+          "type": "Gift_Box",
+          "disabled": true,
+          "settings": {
+            "gift_item_checked": "2",
+            "heading": "Black Friday Offer",
+            "siez_color": "#000000",
+            "bg_color": "#000000"
+          }
+        },
+        "limited_time_gift_jeBHPq": {
+          "type": "limited_time_gift",
+          "settings": {
+            "heading": "Limited-Time Gift"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "image"
+          }
+        },
+        "custom_liquid_jnDkip": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"coupon-bar\">\n  10% Off Code: HEARBETTER\n</div>\n\n<style>\n.coupon-bar {\n  display: block;\n  color: red;\n  font-size: 20px;\n  font-weight: bold;\n  background: transparent;\n  border: none;\n  border-radius: 0;\n}\n@media screen and (max-width: 768px){\n  .coupon-bar {\n    font-size: 14px;\n    text-align:center;\n  }\n}\n</style>"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "color": "#ffffff",
+            "bg_color": "#e7590d",
+            "buy_text": "Buy Now",
+            "show_amazon_btn": false,
+            "amazon_btn_label": "BUY ON AMAZON",
+            "show_dynamic_checkout": false,
+            "show_quantity": false,
+            "show_gift_card_recipient": false
+          }
+        },
+        "service_icon_Rt3ANF": {
+          "type": "service_icon",
+          "settings": {
+            "text1": "60-Day Risk-Free Trial",
+            "service_icon1": "shopify://shop_images/ser-icon01.png",
+            "text2": "100% Money-Back Guarantee",
+            "service_icon2": "shopify://shop_images/ser-icon02.png",
+            "text3": "Lifetime Support",
+            "service_icon3": "shopify://shop_images/ser-icon03.png"
+          }
+        },
+        "text_with_icon_MibE3M": {
+          "type": "text_with_icon",
+          "disabled": true,
+          "settings": {
+            "show_text_with_icon_1": true,
+            "icon_1": "check-4",
+            "text_1": "60-Day Risk-Free Trial",
+            "show_text_with_icon_2": true,
+            "icon_2": "check-4",
+            "text_2": "100% Money-Back Guarantee",
+            "show_text_with_icon_3": true,
+            "icon_3": "check-4",
+            "text_3": "Free Shipping & Return",
+            "show_text_with_icon_4": true,
+            "icon_4": "check-4",
+            "text_4": "Lifetime Support",
+            "box_shadow": false,
+            "icon_style": "contrast",
+            "icon_fill_type": "solid"
+          }
+        },
+        "custom_liquid_ke6QEp": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<div style=\"font-weight: bold; font-size: 14px; color: #d32f2f; display: flex; align-items: center;\">\n  <span style=\"margin-right: 6px;\">⏰</span>\n  Hurry! Only a few left — Deal ends soon!\n</div>"
+          }
+        },
+        "payment_enable_RzX7CJ": {
+          "type": "payment_enable",
+          "settings": {
+            "payment_enable": true,
+            "payment_label": ""
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_preview_badge_xGfRmW",
+        "short_info_7n8hQi",
+        "tags",
+        "title",
+        "price",
+        "product_featured_info_idAPRj",
+        "description",
+        "gift_box_jeBHPq",
+        "limited_time_gift_jeBHPq",
+        "variant_picker",
+        "custom_liquid_jnDkip",
+        "buy_buttons",
+        "service_icon_Rt3ANF",
+        "text_with_icon_MibE3M",
+        "custom_liquid_ke6QEp",
+        "payment_enable_RzX7CJ"
+      ],
+      "settings": {
+        "render_css_file": "",
+        "show_addtocart_btn": true,
+        "enable_new_media_section": true,
+        "desktop_alignment": "right",
+        "mobile_alignment": "before",
+        "gallery_type": "slider_previews",
+        "aspect_ratio": "1/1",
+        "image_fit": "cover",
+        "image_fit_modal": "contain",
+        "padding_bottom": "no-indent"
+      }
+    },
+    "service_icon_xkwX46": {
+      "type": "service-icon",
+      "blocks": {
+        "item_emtbkz": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/FDA_2x_fea2e52a-c473-42ab-9e24-f322e954de38.png",
+            "text": "FDA & OTC Certified"
+          }
+        },
+        "item_dNKkcx": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/service-icon1.png",
+            "text": "60-Day Free Trail"
+          }
+        },
+        "item_V6pMem": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/service-icon4.png",
+            "text": "Free US Ship/Return"
+          }
+        },
+        "item_gN6Yag": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/service-icon2.png",
+            "text": "Local Call Center"
+          }
+        }
+      },
+      "block_order": [
+        "item_emtbkz",
+        "item_dNKkcx",
+        "item_V6pMem",
+        "item_gN6Yag"
+      ],
+      "disabled": true,
+      "name": "Service Icon",
+      "settings": {
+        "pc_padding_top": 50,
+        "pc_padding_bottom": 50,
+        "mb_padding_top": 20,
+        "mb_padding_bottom": 20
+      }
+    },
+    "text_custom1_edeKFg": {
+      "type": "text-custom1",
+      "disabled": true,
+      "name": "Text Custom 1",
+      "settings": {
+        "title": "3650",
+        "info": "“The average time from first awareness of hearing difficulty to hearing aid adoption is approximately ten years.” — NIDCD",
+        "info1": "Hearing loss steals decades of sound—get them back.",
+        "pc_padding_top": 50,
+        "pc_padding_bottom": 50,
+        "mb_padding_top": 20,
+        "mb_padding_bottom": 20
+      }
+    },
+    "rich_text_aRdedQ": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_Xwpw8q": {
+          "type": "heading",
+          "settings": {
+            "heading": "Torch in 60s – Hear the Proof",
+            "heading_size": "medium"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Xwpw8q"
+      ],
+      "custom_css": [
+        "h2 {font-size: 32.5px;}",
+        "@media (max-width: 768px) {h2 {font-size: 25px; }}"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "color_scheme": "",
+        "full_width": true,
+        "alignment": "center",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "s",
+        "padding_bottom": "no-indent"
+      }
+    },
+    "video_wgTHcW": {
+      "type": "video",
+      "custom_css": [
+        "@media screen and (min-width: 1024px) {.h3 {font-size: 60px; } .video-section {width: 90%; max-width: 1000px; margin: 0 auto; }}"
+      ],
+      "name": "t:sections.video.presets.name",
+      "settings": {
+        "color_scheme": "",
+        "full_width": false,
+        "height": "16/9",
+        "video_fit": "contain",
+        "subheading": "",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "",
+        "heading_size": "h3",
+        "cover_image": "shopify://shop_images/1440-706.png",
+        "opacity_overlay": 0.3,
+        "video": "shopify://files/videos/0708 修改03 火炬助听器.mp4",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "video_autoplay": false,
+        "video_loop": false,
+        "video_muted": false,
+        "video_controls": true,
+        "description": "",
+        "margin_top": "m",
+        "margin_bottom": "m"
+      }
+    },
+    "text_custom2_nwFxbH": {
+      "type": "text-custom2",
+      "disabled": true,
+      "name": "Text Custom 2",
+      "settings": {
+        "title": "The Power of a Hearing Aid Lies in Its Advanced Technology",
+        "info": "",
+        "icon1": "shopify://shop_images/icon2.png",
+        "icon_title1": "Intricon® Chipset",
+        "icon_info1": "· Built by a US micromedical pioneer since 1977<br>\n· Prescription-grade sound, now available Over the Counter<br>\n· Used in millions of prescription devices<br>",
+        "icon2": "shopify://shop_images/icon1.png",
+        "icon_title2": "Knowles® Speakers",
+        "icon_info2": "· Global leader in hearing technology<br>\n· Used in millions of prescription devices<br>\n· Delivers richness and clarity of the human voice<br>",
+        "pc_padding_top": 50,
+        "pc_padding_bottom": 20,
+        "mb_padding_top": 20,
+        "mb_padding_bottom": 10
+      }
+    },
+    "explosion_picture_A66VBG": {
+      "type": "explosion-picture",
+      "name": "Explosion Picture",
+      "settings": {
+        "title": "Hear $2000 sound for less than $300",
+        "image": "shopify://shop_images/5_62efa72e-37bc-4145-8260-a889a54ff4a5.png",
+        "image_mb": "shopify://shop_images/lQLPKc6yFBvJsK3NAy3NAp6weWV6JUzHzkQIYGE5Kl1PAA_670_813.png",
+        "title1": "Intricon® A16 Chip",
+        "sub_title1": "",
+        "info1": "Powered by a US micromedical pioneer since 1977. Prescription-grade sound, now available over-the-counter.",
+        "title2": "Knowles® Hi-Fi Speaker",
+        "sub_title2": "",
+        "info2": "Renowned for precision and detail, these speakers deliver speech with lifelike clarity—bringing you fully back into every conversation."
+      }
+    },
+    "audio_switch_KzqyAb": {
+      "type": "audio-switch",
+      "blocks": {
+        "audio_fF4A4e": {
+          "type": "audio",
+          "settings": {
+            "title": "Environmental Noise Cancellation",
+            "audio_before": "https://cdn.shopify.com/s/files/1/0517/0436/5244/files/audio1.wav?v=1750905402",
+            "audio_after": "https://cdn.shopify.com/s/files/1/0517/0436/5244/files/audio2.wav?v=1750905402"
+          }
+        },
+        "audio_DBdFRH": {
+          "type": "audio",
+          "settings": {
+            "title": "Wind Noise Suppression",
+            "audio_before": "https://cdn.shopify.com/s/files/1/0517/0436/5244/files/2_200mv_1_1.wav?v=1750919521",
+            "audio_after": "https://cdn.shopify.com/s/files/1/0517/0436/5244/files/1_200mv_1_1.wav?v=1750919518"
+          }
+        }
+      },
+      "block_order": [
+        "audio_fF4A4e",
+        "audio_DBdFRH"
+      ],
+      "custom_css": [
+        "h3 {text-align: left;}"
+      ],
+      "name": "Audio Switch",
+      "settings": {
+        "bg_color": "#f7f9f8",
+        "title": "Hear the difference",
+        "pc_padding_top": 10,
+        "pc_padding_bottom": 50,
+        "mb_padding_top": 10,
+        "mb_padding_bottom": 20
+      }
+    },
+    "popup_blog_jARmne": {
+      "type": "popup-blog",
+      "disabled": true,
+      "name": "Popup Blog",
+      "settings": {
+        "bg_color": "#f7f9f8",
+        "article": "cblog/audien-atom-pro-hearing-aid-reviews-and-comparison",
+        "title": "Audien Atom Pro Hearing Aid Reviews and Comparison",
+        "pc_padding_top": 18,
+        "pc_padding_bottom": 18,
+        "mb_padding_top": 18,
+        "mb_padding_bottom": 18
+      }
+    },
+    "collapsible_image_4nFQYE": {
+      "type": "collapsible-image",
+      "blocks": {
+        "accordion_mtCNrU": {
+          "type": "accordion",
+          "settings": {
+            "image": "shopify://shop_images/tic-img2.png",
+            "question": "Naturally Curved for You",
+            "answer": "Its precise 143° bend mirrors your ear canal, delivering a secure, seamless fit that feels custom-made.",
+            "opened": true
+          }
+        },
+        "accordion_6DNaxd": {
+          "type": "accordion",
+          "settings": {
+            "image": "shopify://shop_images/tic-img1.png",
+            "question": "Zero Pressure, All-Day Comfort",
+            "answer": "The gently tapered tip eases in comfortably, eliminating pressure for lasting, barely-there wear you can forget you're wearing.",
+            "opened": false
+          }
+        },
+        "accordion_DWcfNP": {
+          "type": "accordion",
+          "settings": {
+            "image": "shopify://shop_images/tic-img4.png",
+            "question": "Snug Fit for Every Unique Ear",
+            "answer": "Four sizes of soft silicone tips conform perfectly to your ear shape, ensuring stable, all-day comfort tailored just for you.",
+            "opened": false
+          }
+        }
+      },
+      "block_order": [
+        "accordion_mtCNrU",
+        "accordion_6DNaxd",
+        "accordion_DWcfNP"
+      ],
+      "name": "Collapsible Image",
+      "settings": {
+        "title": "Revolutionary Comfort — Perfected with Data from 1,000+ Ears",
+        "big_image": "shopify://shop_images/tic-left1.png",
+        "pc_padding_top": 100,
+        "pc_padding_bottom": 100,
+        "mb_padding_top": 50,
+        "mb_padding_bottom": 50
+      }
+    },
+    "text_image_custom1_EBpXKz": {
+      "type": "text-image-custom1",
+      "disabled": true,
+      "name": "Text Image Custom 1",
+      "settings": {
+        "title": "Revolutionary Comfort — Perfected with Data from 1,000+ Ears",
+        "left_image": "shopify://shop_images/tic-left1.png",
+        "right_image_1": "shopify://shop_images/tic-img2.png",
+        "right_image_text_1": "The 143.2° bend follows the natural curve of your ear canal, making it feel more like a part of you.",
+        "right_image_2": "shopify://shop_images/tic-img1.png",
+        "right_image_text_2": "The tapered tip gradually adapts to your ear canal, reducing internal pressure for lasting comfort.",
+        "right_image_3": "shopify://shop_images/tic-img4.png",
+        "right_image_text_3": "Soft silicone tips in three sizes ensure a perfect fit for all-day comfort.",
+        "pc_padding_top": 50,
+        "pc_padding_bottom": 50,
+        "mb_padding_top": 20,
+        "mb_padding_bottom": 20
+      }
+    },
+    "text_image_custom2_bfVrpj": {
+      "type": "text-image-custom2",
+      "name": "Text Image Custom 2",
+      "settings": {
+        "left_image1": "shopify://shop_images/itc-02.png",
+        "title1": "Drop It. Charge It. Keep Hearing",
+        "icon1_img1": "shopify://shop_images/itc-icon2.png",
+        "icon1_title1": "Up to 100 hours",
+        "icon1_info1": "of total power with the charging case",
+        "icon1_img2": "shopify://shop_images/itc-icon1.png",
+        "icon1_title2": "Up to 25 hours",
+        "icon1_info2": "on a single full charge",
+        "left_image2": "shopify://shop_images/itc-01.png",
+        "title2": "Smart Sound, Simple Controls",
+        "icon2_img1": "shopify://shop_images/itc-icon3.png",
+        "icon2_title1": "1s press",
+        "icon2_info1": "6 volume levels",
+        "icon2_img2": "shopify://shop_images/itc-icon4.png",
+        "icon2_title2": "3s hold",
+        "icon2_info2": "5 preset programs",
+        "pc_padding_top": 50,
+        "pc_padding_bottom": 50,
+        "mb_padding_top": 20,
+        "mb_padding_bottom": 20
+      }
+    },
+    "steps_3exNta": {
+      "type": "steps",
+      "blocks": {
+        "step_meJFhr": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/1200-628_1.jpg",
+            "number": "1",
+            "heading": "Normal",
+            "text": "",
+            "show_button": false,
+            "button_style": "simple",
+            "button_label": "Know More",
+            "button_link": ""
+          }
+        },
+        "step_4dt4pm": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/1200-628_2.jpg",
+            "number": "2",
+            "heading": "Restaurant",
+            "text": "",
+            "show_button": false,
+            "button_style": "simple",
+            "button_label": "Know More",
+            "button_link": ""
+          }
+        },
+        "step_8XaTHV": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/1200-628_3.jpg",
+            "number": "3",
+            "heading": "Outdoor",
+            "text": "",
+            "show_button": false,
+            "button_style": "simple",
+            "button_label": "Know More",
+            "button_link": ""
+          }
+        },
+        "step_4aaPm6": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/music_mode.jpg",
+            "number": "4",
+            "heading": "Music",
+            "text": "",
+            "show_button": false,
+            "button_style": "simple",
+            "button_label": "Know More",
+            "button_link": ""
+          }
+        },
+        "step_8fbc8p": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/1200-628_5.jpg",
+            "number": "5",
+            "heading": "Tinnitus Masking",
+            "text": "",
+            "show_button": false,
+            "button_style": "simple",
+            "button_label": "Know More",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "step_meJFhr",
+        "step_4dt4pm",
+        "step_8XaTHV",
+        "step_4aaPm6",
+        "step_8fbc8p"
+      ],
+      "name": "t:sections.steps.name",
+      "settings": {
+        "layout": "collapsible",
+        "color_scheme": "scheme-da522d8c-d8ea-43a1-8f89-75b1a671124a",
+        "subheading": "",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "Ready for Every Situation",
+        "heading_size": "h3",
+        "heading_line": "simple",
+        "line_color": "#1566e0",
+        "word_break": false,
+        "heading_animation": "none",
+        "word_break_an": false,
+        "text": "",
+        "text_align": "center",
+        "columns_to_show": 3,
+        "image_ratio": "landscape",
+        "number_size": "recommended",
+        "step_heading_size": "recommended",
+        "text_size": "recommended",
+        "padding_top": "l",
+        "padding_bottom": "l",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "customized_4GtTgG": {
+      "type": "customized",
+      "blocks": {
+        "item_nCXMzJ": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Normal.jpg",
+            "title": "Normal Mode",
+            "text": ""
+          }
+        },
+        "item_yV3xpJ": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Restaurant.jpg",
+            "title": "Restaurant Mode",
+            "text": ""
+          }
+        },
+        "item_xViqzR": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Outdoor.jpg",
+            "title": "Outdoor Mode",
+            "text": ""
+          }
+        },
+        "item_YcpGxh": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Music.jpg",
+            "title": "Music Mode",
+            "text": ""
+          }
+        },
+        "item_MhN4xF": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Tinnitus-Masking.jpg",
+            "title": "Tinnitus Masking",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_nCXMzJ",
+        "item_yV3xpJ",
+        "item_xViqzR",
+        "item_YcpGxh",
+        "item_MhN4xF"
+      ],
+      "disabled": true,
+      "name": "Customized",
+      "settings": {
+        "title": "Ready for Every Situation",
+        "pc_padding_top": 50,
+        "pc_padding_bottom": 50,
+        "mb_padding_top": 20,
+        "mb_padding_bottom": 50
+      }
+    },
+    "tiktok_video_grid_Rhyf9H": {
+      "type": "tiktok-video-grid",
+      "blocks": {
+        "video_wPUgJx": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/7月21日 (2).mp4",
+            "video_poster": "shopify://shop_images/7_16_1_1.png"
+          }
+        },
+        "video_EHqmJJ": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/7月21日 (9).mp4",
+            "video_poster": "shopify://shop_images/8_b05a09c8-bb4d-4899-bc30-bc66d30d658f.png"
+          }
+        },
+        "video_gbNHjJ": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/7月21日 (6).mp4",
+            "video_poster": "shopify://shop_images/7_35ac9712-0df4-4557-aff6-691858c56faf.png"
+          }
+        },
+        "video_bYXJz6": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/7月21日.mp4",
+            "video_poster": "shopify://shop_images/2_44c4572a-c657-42ba-8c0f-bfec3d554db0.png"
+          }
+        },
+        "video_NdcUNi": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/8月13日(1).mp4",
+            "video_poster": "shopify://shop_images/4_8b889c18-154c-4bb2-88da-f6cc358601a4.png"
+          }
+        },
+        "video_appT7K": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/7月21日 (5).mp4",
+            "video_poster": "shopify://shop_images/6_1ba8c3d8-f0eb-467e-acdb-4b82bacd2202.png"
+          }
+        },
+        "video_PWCVdX": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/7月21日 (1).mp4",
+            "video_poster": "shopify://shop_images/3_21acf3db-cad8-4dfd-8db6-bfb13ac5aea1.png"
+          }
+        },
+        "video_eJHKjP": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/7月21日 (8).mp4",
+            "video_poster": "shopify://shop_images/1_dbc9e0d6-b2c7-4ddd-8f9e-677f9317f717.png"
+          }
+        },
+        "video_eQdd8n": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/7月21日 (7)_78116fc3-8384-4cdd-b11c-464de7cfa214.mp4",
+            "video_poster": "shopify://shop_images/7_8_2.png"
+          }
+        },
+        "video_ACVyVh": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/7月21日 (4).mp4",
+            "video_poster": "shopify://shop_images/5_5d69786c-4c92-4906-bc01-49a1fd4f96cc.png"
+          }
+        }
+      },
+      "block_order": [
+        "video_wPUgJx",
+        "video_EHqmJJ",
+        "video_gbNHjJ",
+        "video_bYXJz6",
+        "video_NdcUNi",
+        "video_appT7K",
+        "video_PWCVdX",
+        "video_eJHKjP",
+        "video_eQdd8n",
+        "video_ACVyVh"
+      ],
+      "name": "Tiktok Video Grid",
+      "settings": {
+        "bg_color": "#f5f5f5",
+        "page_color": "#000000",
+        "title": "Real Reviews",
+        "sub_title": "",
+        "pc_padding_top": 50,
+        "pc_padding_bottom": 50,
+        "mb_padding_top": 30,
+        "mb_padding_bottom": 30
+      }
+    },
+    "1716789454317b181f": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_CXAyyU": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_CXAyyU"
+      ],
+      "custom_css": [
+        "h2 {font-size: 32.5px;}",
+        "@media (max-width: 768px) {h2 {font-size: 25px; }}"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "collapsible_content_6dMNK6": {
+      "type": "collapsible-content",
+      "blocks": {
+        "accordion_gE4RKh": {
+          "type": "accordion",
+          "settings": {
+            "question": "Is this hearing aid FDA-approved?",
+            "answer": "<p>Yes — our device is registered with the FDA as an OTC (Over-The-Counter) hearing aid. This means it meets U.S. federal safety, labeling, and performance standards for use without a prescription. You can feel confident you're using a device that’s both safe and regulated.</p>",
+            "opened": true
+          }
+        },
+        "accordion_Y9bikM": {
+          "type": "accordion",
+          "settings": {
+            "question": "What if it doesn’t work for me?",
+            "answer": "<p>We offer a 60-day risk-free trial. If you’re not fully satisfied, simply contact us for a return and full refund — no questions asked. We want you to feel confident in your purchase and your hearing experience.</p>",
+            "opened": false
+          }
+        },
+        "accordion_qt9Xzy": {
+          "type": "accordion",
+          "settings": {
+            "question": "How long does shipping take?",
+            "answer": "<p>We typically ship within 1 business day. Delivery usually takes 3–5 business days depending on your location within the U.S. Tracking information will be provided once your order ships.</p>",
+            "opened": false
+          }
+        },
+        "accordion_aiHchD": {
+          "type": "accordion",
+          "settings": {
+            "question": "Does it help with tinnitus?",
+            "answer": "<p>Yes — our hearing aids include a built-in tinnitus masking function. By amplifying ambient sound and introducing low-level white noise, it can help distract from the internal ringing or buzzing that many people experience with tinnitus.</p>",
+            "opened": false
+          }
+        },
+        "accordion_RPWFLx": {
+          "type": "accordion",
+          "settings": {
+            "question": "What are the size and dimensions / other specifications?",
+            "answer": "<p>Device weight: 2.1g<br/>Case weight: 44.2g<br/>Device size: 0.57\"L x 0.79\"W x 0.83\"H<br/>Battery life: 25 hours per charge<br/>Max output: 108dB<br/>Frequency bandwidth: 200-5500Hz</p>",
+            "opened": false
+          }
+        },
+        "accordion_XjpatW": {
+          "type": "accordion",
+          "settings": {
+            "question": "Do you offer a warranty?",
+            "answer": "<p>Yes. All devices come with a 1-year limited warranty covering manufacturing defects. If anything goes wrong that's not related to physical damage or misuse, we’ll replace or repair your device at no cost.</p>",
+            "opened": false
+          }
+        },
+        "accordion_9kdkem": {
+          "type": "accordion",
+          "settings": {
+            "question": "I have more questions — how can I reach you?",
+            "answer": "<p>We’re here to help! You can reach our support team via email, phone, or live chat. Check our support center for up-to-date hours and contact details. We’re happy to assist you before and after your purchase.</p>",
+            "opened": false
+          }
+        }
+      },
+      "block_order": [
+        "accordion_gE4RKh",
+        "accordion_Y9bikM",
+        "accordion_qt9Xzy",
+        "accordion_aiHchD",
+        "accordion_RPWFLx",
+        "accordion_XjpatW",
+        "accordion_9kdkem"
+      ],
+      "settings": {
+        "layout": "background",
+        "color_scheme": "",
+        "enable_border": false,
+        "border_full": false,
+        "subheading": "",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "Clear All Doubts Before You Buy",
+        "heading_size": "h3",
+        "heading_line": "simple",
+        "line_color": "#1566e0",
+        "word_break": false,
+        "heading_animation": "none",
+        "word_break_an": false,
+        "text": "",
+        "text_align": "center",
+        "row_color_scheme": "",
+        "padding_top": "m",
+        "padding_bottom": "no-indent",
+        "margin_top": "no-indent",
+        "margin_bottom": "m"
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "background-1",
+        "subheading": "Subheading",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "You May Also Like",
+        "heading_size": "h2",
+        "text": "Some description",
+        "products_limit": 6,
+        "image_ratio": "5/4",
+        "image_fit": "cover",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_desc": true,
+        "padding_top": "l",
+        "padding_bottom": "l"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "service_icon_xkwX46",
+    "text_custom1_edeKFg",
+    "rich_text_aRdedQ",
+    "video_wgTHcW",
+    "text_custom2_nwFxbH",
+    "explosion_picture_A66VBG",
+    "audio_switch_KzqyAb",
+    "popup_blog_jARmne",
+    "collapsible_image_4nFQYE",
+    "text_image_custom1_EBpXKz",
+    "text_image_custom2_bfVrpj",
+    "steps_3exNta",
+    "customized_4GtTgG",
+    "tiktok_video_grid_Rhyf9H",
+    "1716789454317b181f",
+    "collapsible_content_6dMNK6",
+    "product-recommendations"
+  ]
+}

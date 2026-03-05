@@ -1,0 +1,479 @@
+<style>
+  .custom-image-content {
+    padding: 30px 0;
+    background-color: {{ section.settings.bg_color }};
+  }
+  .custom-image-content__grid {
+    display: flex;
+    gap: 20px;
+  }
+  .custom-image-content__left {
+    flex: 1 1 50%;
+    position: relative;
+    overflow: hidden;
+    border-radius: {{ section.settings.main_image_radius }}px;
+  }
+  .custom-image-content__main-image {
+    width: 100%;
+    height: {{ section.settings.main_image_height }}px;
+    object-fit: {{ section.settings.image_fit }};
+    object-position: {{ section.settings.image_position | replace: '_', ' ' }};
+    border-radius: {{ section.settings.main_image_radius }}px;
+  }
+  .main-image-content {
+    position: absolute;
+    {% assign position = section.settings.text_position | replace: '_', ' ' %}
+    {% if position == 'top:50% left:50%' %}
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    {% else %}
+      {{ position | replace: ' ', '; ' }};
+    {% endif %}
+    padding: 20px;
+    color: {{ section.settings.text_color }};
+    max-width: 80%;
+    background: {{ section.settings.text_bg }};
+    border-radius: 8px;
+  }
+  .main-image-content h2 {
+    margin: 0 0 10px;
+    color: inherit;
+  }
+  .custom-image-content__right {
+    flex: 1 1 calc(50% - 20px);
+    display: flex;
+    flex-direction: column;
+    gap: {{ section.settings.spacing | divided_by: 2 }}px;
+  }
+  .content-group {
+    gap: 10px;
+    margin-bottom: 0 !important;
+  }
+  .content-group__images {
+    display: flex;
+    gap: 10px;
+  }
+  .content-group__image-wrapper {
+    flex: 1;
+    min-height: 80px;
+    border-radius: {{ section.settings.small_image_radius }}px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .content-group__image {
+    width: 100%;
+    height: 100%;
+    object-fit: {{ section.settings.small_image_fit }};
+    object-position: {{ section.settings.small_image_position | replace: '_', ' ' }};
+    border-radius: {{ section.settings.small_image_radius }}px;
+    transition: transform 0.3s ease;
+  }
+  .content-group__image-wrapper:hover .content-group__image {
+    transform: scale(1.03);
+  }
+  .content-group__title {
+    margin: 5px 0;
+    font-size: 16px;
+  }
+  /* 灯箱样式 */
+  .image-lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+  }
+  .lightbox-content {
+    max-width: 90%;
+    max-height: 90%;
+  }
+  .lightbox-content img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 90vh;
+    border-radius: 8px;
+  }
+  .close-lightbox {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  @media (max-width: 749px) {
+    .custom-image-content__grid {
+      flex-direction: column;
+      gap: 15px;
+    }
+    .custom-image-content__right {
+      gap: 15px;
+    }
+    .custom-image-content__main-image {
+      height: auto;
+      max-height: {{ section.settings.main_image_height_mobile }}px;
+    }
+    .main-image-content {
+      position: relative;
+      max-width: 100%;
+      margin-top: 15px;
+    }
+  }
+</style>
+
+<!-- 灯箱HTML -->
+<div id="imageLightbox" class="image-lightbox">
+  <span class="close-lightbox">&times;</span>
+  <div class="lightbox-content">
+    <img id="lightboxImage" src="" alt="">
+  </div>
+</div>
+
+<div class="custom-image-content">
+  <div class="page-width">
+    <div class="custom-image-content__grid">
+      <!-- 左侧大图 -->
+      <div class="custom-image-content__left">
+        {%- if section.settings.left_image_link != blank -%}
+          <a href="{{ section.settings.left_image_link }}">
+        {%- endif -%}
+        
+        {%- if section.settings.left_image != blank -%}
+          <img class="custom-image-content__main-image"
+               src="{{ section.settings.left_image | img_url: '1200x' }}"
+               alt="{{ section.settings.left_image.alt | escape }}"
+               loading="lazy"
+               width="{{ section.settings.left_image.width }}"
+               height="{{ section.settings.left_image.height }}">
+        {%- else -%}
+          {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+        {%- endif -%}
+        
+        {%- if section.settings.left_image_link != blank -%}
+          </a>
+        {%- endif -%}
+        
+        {%- if section.settings.show_text_overlay -%}
+          <div class="main-image-content">
+            {%- if section.settings.main_title != blank -%}
+              <h2>{{ section.settings.main_title }}</h2>
+            {%- endif -%}
+            {%- if section.settings.main_text != blank -%}
+              <div class="rte">{{ section.settings.main_text }}</div>
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+      </div>
+      
+      <!-- 右侧内容组 -->
+      <div class="custom-image-content__right">
+        {%- for block in section.blocks -%}
+          <div class="content-group" style="color: {{ block.settings.text_color }};">
+            <div class="content-group__images">
+              {%- if block.settings.image_1 != blank -%}
+                <div class="content-group__image-wrapper" onclick="openLightbox('{{ block.settings.image_1 | img_url: '2000x' }}')">
+                  <img class="content-group__image"
+                       src="{{ block.settings.image_1 | img_url: '400x' }}"
+                       alt="{{ block.settings.image_1.alt | escape }}"
+                       loading="lazy"
+                       width="{{ block.settings.image_1.width }}"
+                       height="{{ block.settings.image_1.height }}">
+                </div>
+              {%- endif -%}
+              
+              {%- if block.settings.image_2 != blank -%}
+                <div class="content-group__image-wrapper" onclick="openLightbox('{{ block.settings.image_2 | img_url: '2000x' }}')">
+                  <img class="content-group__image"
+                       src="{{ block.settings.image_2 | img_url: '400x' }}"
+                       alt="{{ block.settings.image_2.alt | escape }}"
+                       loading="lazy"
+                       width="{{ block.settings.image_2.width }}"
+                       height="{{ block.settings.image_2.height }}">
+                </div>
+              {%- endif -%}
+            </div>
+            
+            {%- if block.settings.title != blank -%}
+              <h3 class="content-group__title">{{ block.settings.title }}</h3>
+            {%- endif -%}
+            
+            {%- if block.settings.text != blank -%}
+              <div class="rte">{{ block.settings.text }}</div>
+            {%- endif -%}
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // 灯箱功能
+  function openLightbox(imgSrc) {
+    const lightbox = document.getElementById('imageLightbox');
+    const lightboxImg = document.getElementById('lightboxImage');
+    lightboxImg.src = imgSrc;
+    lightbox.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+  
+  function closeLightbox() {
+    document.getElementById('imageLightbox').style.display = 'none';
+    document.body.style.overflow = 'auto';
+  }
+  
+  // 点击关闭灯箱
+  document.querySelector('.close-lightbox').addEventListener('click', closeLightbox);
+  
+  // 点击背景关闭
+  document.getElementById('imageLightbox').addEventListener('click', function(e) {
+    if (e.target === this) closeLightbox();
+  });
+</script>
+
+{% schema %}
+{
+  "name": "custom image with text",
+  "settings": [
+    {
+      "type": "header",
+      "content": "大图设置"
+    },
+    {
+      "type": "image_picker",
+      "id": "left_image",
+      "label": "左侧大图"
+    },
+    {
+      "type": "range",
+      "id": "main_image_height",
+      "label": "大图高度(px)",
+      "min": 300,
+      "max": 1000,
+      "step": 50,
+      "default": 500
+    },
+    {
+      "type": "range",
+      "id": "main_image_height_mobile",
+      "label": "移动端大图高度(px)",
+      "min": 200,
+      "max": 800,
+      "step": 50,
+      "default": 400
+    },
+    {
+      "type": "range",
+      "id": "main_image_radius",
+      "label": "大图圆角(px)",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "default": 8
+    },
+    {
+      "type": "url",
+      "id": "left_image_link",
+      "label": "大图链接"
+    },
+    {
+      "type": "select",
+      "id": "image_fit",
+      "label": "大图填充方式",
+      "options": [
+        { "value": "cover", "label": "裁剪填充" },
+        { "value": "contain", "label": "完整显示" }
+      ],
+      "default": "cover"
+    },
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": "大图焦点位置",
+      "options": [
+        { "value": "top_left", "label": "左上" },
+        { "value": "top_center", "label": "中上" },
+        { "value": "top_right", "label": "右上" },
+        { "value": "center_left", "label": "左中" },
+        { "value": "center_center", "label": "居中" },
+        { "value": "center_right", "label": "右中" },
+        { "value": "bottom_left", "label": "左下" },
+        { "value": "bottom_center", "label": "中下" },
+        { "value": "bottom_right", "label": "右下" }
+      ],
+      "default": "center_center"
+    },
+    {
+      "type": "header",
+      "content": "大图文案设置"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_text_overlay",
+      "label": "显示文案区域",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "main_title",
+      "label": "大图标题",
+      "default": "主标题文字"
+    },
+    {
+      "type": "richtext",
+      "id": "main_text",
+      "label": "大图描述",
+      "default": "<p>这里是大图的描述性文本内容</p>"
+    },
+    {
+      "type": "select",
+      "id": "text_position",
+      "label": "文案位置",
+      "options": [
+        { "value": "top:20px;left:20px", "label": "左上" },
+        { "value": "top:20px;right:20px", "label": "右上" },
+        { "value": "bottom:20px;left:20px", "label": "左下" },
+        { "value": "bottom:20px;right:20px", "label": "右下" },
+        { "value": "top:50%;left:50%", "label": "居中" }
+      ],
+      "default": "top:20px;left:20px"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "文案颜色",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color_background",
+      "id": "text_bg",
+      "label": "文案背景",
+      "default": "rgba(0,0,0,0.5)"
+    },
+    {
+      "type": "header",
+      "content": "小图设置"
+    },
+    {
+      "type": "range",
+      "id": "small_image_radius",
+      "label": "小图圆角(px)",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "default": 4
+    },
+    {
+      "type": "select",
+      "id": "small_image_fit",
+      "label": "小图填充方式",
+      "options": [
+        { "value": "cover", "label": "裁剪填充" },
+        { "value": "contain", "label": "完整显示" }
+      ],
+      "default": "cover"
+    },
+    {
+      "type": "select",
+      "id": "small_image_position",
+      "label": "小图焦点位置",
+      "options": [
+        { "value": "top_left", "label": "左上" },
+        { "value": "top_center", "label": "中上" },
+        { "value": "top_right", "label": "右上" },
+        { "value": "center_left", "label": "左中" },
+        { "value": "center_center", "label": "居中" },
+        { "value": "center_right", "label": "右中" },
+        { "value": "bottom_left", "label": "左下" },
+        { "value": "bottom_center", "label": "中下" },
+        { "value": "bottom_right", "label": "右下" }
+      ],
+      "default": "center_center"
+    },
+    {
+      "type": "header",
+      "content": "样式设置"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "背景颜色",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "spacing",
+      "label": "内容间距(px)",
+      "min": 10,
+      "max": 50,
+      "step": 2,
+      "default": 20
+    }
+  ],
+  "blocks": [
+    {
+      "type": "content_group",
+      "name": "内容组",
+      "settings": [
+        {
+          "type": "header",
+          "content": "图片设置"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_1",
+          "label": "图片1"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_2",
+          "label": "图片2"
+        },
+        {
+          "type": "header",
+          "content": "文本设置"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "标题",
+          "default": "内容标题"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "描述文本",
+          "default": "<p>这里是描述性文本内容</p>"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "文本颜色",
+          "default": "#000000"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "custom image with text",
+      "category": "自定义",
+      "blocks": [
+        {
+          "type": "content_group"
+        },
+        {
+          "type": "content_group"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

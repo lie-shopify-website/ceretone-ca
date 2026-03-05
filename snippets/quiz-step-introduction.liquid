@@ -1,0 +1,27 @@
+<div class="step current visible" style="display: block;" data-value="7" data-image="2">
+<div class="regular__block">
+  <h2>{{ section.settings.intro_heading }}</h2>
+  <div class="list">
+    <div class="elem">
+      {% if section.settings.intro_image_1 %}<span><img src="{{ section.settings.intro_image_1 | img_url: 'master' }}" alt="Icon 1 Image" width="60" height="auto"></span>{% endif %}
+      <p>{{ section.settings.intro_point_1 }}</p>
+    </div>
+
+    <div class="elem">
+      {% if section.settings.intro_image_2 %}<span><img src="{{ section.settings.intro_image_2 | img_url: 'master' }}" alt="Icon 1 Image" width="60" height="auto"></span>{% endif %}
+      <p>{{ section.settings.intro_point_2 }}</p>
+    </div>
+
+    <div class="elem">
+      {% if section.settings.intro_image_3 %}<span><img src="{{ section.settings.intro_image_3 | img_url: 'master' }}" alt="Icon 1 Image" width="60" height="auto"></span>{% endif %}
+      <p>{{ section.settings.intro_point_3 }}</p>
+    </div>
+  </div>
+  <div class="btn longer">
+    <a href="#" class="regular-btn">{{ section.settings.intro_button_text }} <span><svg ariahidden="false" focusable="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.4697 4.46967C11.7626 4.17678 12.2374 4.17678 12.5303 4.46967L19.5303 11.4697C19.8232 11.7626 19.8232 12.2374 19.5303 12.5303L12.5303 19.5303C12.2374 19.8232 11.7626 19.8232 11.4697 19.5303C11.1768 19.2374 11.1768 18.7626 11.4697 18.4697L17.1893 12.75H5C4.58579 12.75 4.25 12.4142 4.25 12C4.25 11.5858 4.58579 11.25 5 11.25H17.1893L11.4697 5.53033C11.1768 5.23744 11.1768 4.76256 11.4697 4.46967Z" fill="#0C0C0D"></path></svg></span></a>
+  </div>
+  <div class="disclaimer">
+    <p> {{ section.settings.intro_disclaimer }}</p>
+  </div>
+</div>
+</div>

@@ -1,0 +1,200 @@
+<div class="step" style="display:none;" data-value="100" data-image="1"> 
+  <div class="regular__block transparent">
+    <div class="question__box">
+      <span class="question">
+        100%
+      </span>
+      <h2>{{ section.settings.results_heading }}</h2>
+      <div class="md">
+        {{ section.settings.checkmark_complete_icon | img_url: 'master' | img_tag }}
+      </div>
+      <h2 style="font-weight: 400;">{{ section.settings.lower_volume_text }}</h2>
+      <div class="email">
+        <input type="text" placeholder="{{ section.settings.email_placeholder }}">
+      </div>
+    </div>
+    <div class="btn longer">
+      <a href="#" class="regular-btn disabled">{{ section.settings.submit_button_text }}</a>
+    </div>
+  </div>
+</div>
+
+<div class="step final" style="display: none;" data-value="100" data-image="2">
+  <div class="regular__block transparent">
+    <span class="result__title">
+      {{ section.settings.results_title }}
+    </span>
+    <h2><strong>{{ section.settings.results_email_sent }}</strong></h2>
+
+    <h2>{{ section.settings.good_hearing_text }}</h2>
+    <div class="results__link">
+      <a href="#" class="calculate__popup--btn">{{ section.settings.calculate_results_text }}</a>
+    </div>
+    <div class="btn longer" style="display: none" >
+      <a href="{{ section.settings.results_cta_link }}" class="regular-btn red-btn">{{ section.settings.results_cta }}</a>
+    </div>
+    <div class="ears__results">
+      <div class="elem">
+        <div class="top">
+          <p>Left Ear</p>
+          <span>May have <span>{{ section.settings.left_ear_result_good }}</span></span>
+        </div>
+        <div class="results__bar">
+          <div class="top__info">
+            <span>Significant Loss</span>
+            <span>Loss</span>
+            <span class="active">Good</span>
+          </div>
+          <div class="active__bar">
+            <span style="width:75%;" class="green"></span>
+          </div>
+        </div>
+        <div class="pointer">
+          <div class="inn" style="left: 75%;">
+            {% if section.settings.left_arrow_image %}
+              <img src="{{ section.settings.left_arrow_image | img_url: 'master' }}" alt="Left Arrow" width="24" height="24">
+            {% else %}
+              <img src="https://cdn.shopify.com/s/files/1/0517/0436/5244/files/arrleft.svg" alt="Left Arrow" width="24" height="24">
+            {% endif %}
+            <p>{{ section.settings.hearing_ability_text }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="elem">
+        <div class="top">
+          <p>Right Ear</p>
+          <span>May have <span>{{ section.settings.right_ear_result_loss }}</span></span>
+        </div>
+        <div class="results__bar">
+          <div class="top__info">
+            <span class="active">Significant Loss</span>
+            <span>Loss</span>
+            <span>Good</span>
+          </div>
+          <div class="active__bar">
+            <span style="width:29%;" class="red"></span>
+          </div>
+        </div>
+        <div class="pointer">
+          <div class="inn" style="left:29%;">
+            {% if section.settings.right_arrow_image %}
+              <img src="{{ section.settings.right_arrow_image | img_url: 'master' }}" alt="Right Arrow" width="24" height="24" style="transform:scaleX(-1)">
+            {% else %}
+              <img src="https://cdn.shopify.com/s/files/1/0517/0436/5244/files/arrright.svg" alt="Right Arrow" width="24" height="24" style="transform:scaleX(-1)">
+            {% endif %}
+            <p>{{ section.settings.hearing_ability_text }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="improve__box">
+      <h2>{{ section.settings.improve_hearing_heading }}</h2>
+      <div class="ears__results">
+        <div class="elem">
+          <div class="top">
+            <p>Left Ear</p>
+            <span>{{ section.settings.left_ear_improvement_text }}</span>
+          </div>
+          <div class="results__bar">
+            <div class="top__info">
+              <span>Significant Loss</span>
+              <span>Loss</span>
+              <span class="active">Good</span>
+            </div>
+            <div class="active__bar">
+              <span style="width:22%;" class="red"></span>
+              <span class="performance" style="width:90%"></span>
+            </div>
+          </div>
+          <div class="pointer">
+            <div class="inn" style="left: 22%;">
+              {% if section.settings.left_arrow_image %}
+                <img src="{{ section.settings.left_arrow_image | img_url: 'master' }}" alt="Left Arrow" width="24" height="24">
+              {% else %}
+                <img src="https://cdn.shopify.com/s/files/1/0517/0436/5244/files/arrleft.svg" alt="Left Arrow" width="24" height="24">
+              {% endif %}
+              <p>{{ section.settings.hearing_ability_text }}</p>
+            </div>
+
+            <div class="inn reverse" style="left: 90%;">
+              {% if section.settings.left_arrow_image %}
+                <img src="{{ section.settings.left_arrow_image | img_url: 'master' }}" alt="Left Arrow" width="24" height="24">
+              {% else %}
+                <img src="https://cdn.shopify.com/s/files/1/0517/0436/5244/files/arrleft.svg" alt="Left Arrow" width="24" height="24">
+              {% endif %}
+              <p>{{ section.settings.potential_improvement_text }}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="elem">
+          <div class="top">
+            <p>Right Ear</p>
+            <span>{{ section.settings.right_ear_improvement_text }}</span>
+          </div>
+          <div class="results__bar">
+            <div class="top__info">
+              <span>Significant Loss</span>
+              <span>Loss</span>
+              <span class="active">Good</span>
+            </div>
+            <div class="active__bar">
+              <span style="width:29%;" class="red"></span>
+              <span class="performance" style="width:90%"></span>
+            </div>
+          </div>
+          <div class="pointer">
+            <div class="inn" style="left:29%;">
+              {% if section.settings.right_arrow_image %}
+                <img src="{{ section.settings.right_arrow_image | img_url: 'master' }}" alt="Right Arrow" width="24" height="24" style="transform:scaleX(-1)">
+              {% else %}
+                <img src="https://cdn.shopify.com/s/files/1/0517/0436/5244/files/arrright.svg" alt="Right Arrow" width="24" height="24" style="transform:scaleX(-1)">
+              {% endif %}
+              <p>{{ section.settings.hearing_ability_text }}</p>
+            </div>
+            <div class="inn reverse" style="left: 90%;">
+              {% if section.settings.left_arrow_image %}
+                <img src="{{ section.settings.left_arrow_image | img_url: 'master' }}" alt="Left Arrow" width="24" height="24">
+              {% else %}
+                <img src="https://cdn.shopify.com/s/files/1/0517/0436/5244/files/arrleft.svg" alt="Left Arrow" width="24" height="24">
+              {% endif %}
+              <p>{{ section.settings.potential_improvement_text }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+        <div class="hearing__box">
+      <h2>{{ section.settings.perfect_hearing_heading }}</h2>
+      <h6>{{ section.settings.perfect_hearing_subtext }}</h6>
+      <div class="media">
+        {% if section.settings.model_image %}
+          <img src="{{ section.settings.model_image | img_url: 'master' }}" alt="Model" width="300" height="300">
+        {% else %}
+          <img src="https://cdn.shopify.com/s/files/1/0517/0436/5244/files/model.png" alt="Model" width="300" height="300">
+        {% endif %}
+      </div>
+<!-- style="display: none" -->
+      <div class="btn longer">
+        <a href="{{ section.settings.results_cta_link }}" class="regular-btn red-btn">{{ section.settings.results_cta }}</a>
+      </div>
+    </div>
+
+    <div class="hearing__box" style="display: none;">
+      <h2>{{ section.settings.significant_loss_heading }}</h2>
+      <h6>{{ section.settings.significant_loss_subtext }}</h6>
+      <div class="media">
+        {% if section.settings.loss_image %}
+          <img src="{{ section.settings.loss_image | img_url: 'master' }}" alt="Hearing Loss" width="300" height="300">
+        {% else %}
+          <img src="https://cdn.shopify.com/s/files/1/0517/0436/5244/files/loss.png" alt="Hearing Loss" width="300" height="300">
+        {% endif %}
+      </div>
+    </div>
+
+
+  </div>
+</div>

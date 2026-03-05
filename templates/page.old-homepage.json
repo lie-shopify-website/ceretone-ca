@@ -1,0 +1,1552 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "17344218541b2ca9bf": {
+      "type": "apps",
+      "blocks": {
+        "klaviyo_email_marketing_sms_form_embed_block_E8Tkj9": {
+          "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/form-embed-block/2632fe16-c075-4321-a88b-50b567f42507",
+          "settings": {
+            "formId": "SjpLqw"
+          }
+        }
+      },
+      "block_order": [
+        "klaviyo_email_marketing_sms_form_embed_block_E8Tkj9"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "hero_4JK3dM": {
+      "type": "hero",
+      "blocks": {
+        "subtitle_KFJXqC": {
+          "type": "subtitle",
+          "settings": {
+            "subheading": "Flash Sale on New Arrivals!",
+            "subheading_style": "subtitle",
+            "subheading_icon": "confetti"
+          }
+        },
+        "title_tyW9XL": {
+          "type": "title",
+          "settings": {
+            "heading": "The Most Compact & Powerful Hearing Aid",
+            "heading_size": "h3",
+            "heading_line": "rounded",
+            "line_color": "#1566e0",
+            "word_break": false,
+            "heading_animation": "none",
+            "word_break_an": false
+          }
+        },
+        "description_DBw7NL": {
+          "type": "description",
+          "settings": {
+            "description": "<strong>Finally, powerful OTC hearing aids so tiny and comfortable, you'll forget they're even there.</strong><br><br>\n✔️ Invisible Design: Beautifully discreet<br>\n✔️ All-Day Comfort: Forget they're there<br>\n✔️ Life-Like Sound: Hear with pure clarity<br>"
+          }
+        },
+        "captions_DEHc4M": {
+          "type": "captions",
+          "disabled": true,
+          "settings": {
+            "show_caption_1": true,
+            "caption_text_1": "60-Day Risk Free",
+            "caption_icon_1": "check-2",
+            "show_caption_2": true,
+            "caption_text_2": "Affordable Prices",
+            "caption_icon_2": "check-2",
+            "show_caption_3": true,
+            "caption_text_3": "Small & Comfortable",
+            "caption_icon_3": "check-2"
+          }
+        },
+        "buttons_DmRxW8": {
+          "type": "buttons",
+          "settings": {
+            "show_button_1": true,
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify://products/core-one-pro-otc-hearing-aids",
+            "button_style_1": "primary",
+            "show_button_2": false,
+            "button_label_2": "Label",
+            "button_link_2": "",
+            "button_style_2": "simple"
+          }
+        },
+        "users_dbcbPQ": {
+          "type": "users",
+          "disabled": true,
+          "settings": {
+            "user_image_1": "shopify://shop_images/home-review-customer1.png",
+            "user_image_2": "shopify://shop_images/home-review-customer3.png",
+            "user_image_3": "shopify://shop_images/home_review-customer2.png",
+            "user_image_4": "shopify://shop_images/Aboutus_20240913_06.png",
+            "user_text": "<a href=\"https://ceretone.com/pages/reviews\">Customer rate us 4.9/5</a>"
+          }
+        }
+      },
+      "block_order": [
+        "subtitle_KFJXqC",
+        "title_tyW9XL",
+        "description_DBw7NL",
+        "captions_DEHc4M",
+        "buttons_DmRxW8",
+        "users_dbcbPQ"
+      ],
+      "custom_css": [
+        "@media screen and (max-width: 768px) {{display: none; }}",
+        ".hero {position: relative; text-align: left;}",
+        ".hero__content {display: flex; flex-direction: column; align-items: flex-start; text-align: left; margin-left: 10; margin-right: auto;}",
+        "@media {.description {padding-box: 10px; }}"
+      ],
+      "settings": {
+        "layout": "overlay",
+        "header_overlay": false,
+        "header_transparent": false,
+        "block_type": "plain",
+        "color_scheme": "background-1",
+        "full_screen": true,
+        "image": "shopify://shop_images/1920-640_676f8aa8-5a1c-4fb8-b2bc-97ff281bb26e.jpg",
+        "link": "shopify://products/core-one-pro-otc-hearing-aids",
+        "show_video": false,
+        "overlay_opacity": 0,
+        "image_ratio": "adapt",
+        "object_fit": "contain",
+        "desktop_image_position": "after",
+        "mobile_image_position": "before",
+        "mobile_image_overlay": "before",
+        "horizontal_alignment": "left",
+        "vertical_alignment": "middle",
+        "padding_top": "no-indent",
+        "padding_bottom": "s"
+      }
+    },
+    "hero_qUgY4g": {
+      "type": "hero",
+      "blocks": {
+        "subtitle_LyEagX": {
+          "type": "subtitle",
+          "settings": {
+            "subheading": "Flash Sale on New Arrivals!",
+            "subheading_style": "subtitle",
+            "subheading_icon": "confetti"
+          }
+        },
+        "title_aDpfUW": {
+          "type": "title",
+          "settings": {
+            "heading": "The Most Compact and Powerful Hearing Aid",
+            "heading_size": "h3",
+            "heading_line": "rounded",
+            "line_color": "#1566e0",
+            "word_break": false,
+            "heading_animation": "none",
+            "word_break_an": false
+          }
+        },
+        "description_zx8QEk": {
+          "type": "description",
+          "settings": {
+            "description": "<strong>Finally, powerful OTC hearing aids so tiny and comfortable, you'll forget they're even there.</strong><br>"
+          }
+        },
+        "captions_zLD7fw": {
+          "type": "captions",
+          "settings": {
+            "show_caption_1": true,
+            "caption_text_1": "Invisible Design: Beautifully discreet",
+            "caption_icon_1": "check-2",
+            "show_caption_2": true,
+            "caption_text_2": "All-Day Comfort: Forget they're there",
+            "caption_icon_2": "check-2",
+            "show_caption_3": true,
+            "caption_text_3": "Life-Like Sound: Hear with pure clarity",
+            "caption_icon_3": "check-2"
+          }
+        },
+        "buttons_dYTfBA": {
+          "type": "buttons",
+          "settings": {
+            "show_button_1": true,
+            "button_label_1": "Shop now",
+            "button_link_1": "shopify://products/core-one-pro-otc-hearing-aids",
+            "button_style_1": "primary",
+            "show_button_2": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "simple"
+          }
+        }
+      },
+      "block_order": [
+        "subtitle_LyEagX",
+        "title_aDpfUW",
+        "description_zx8QEk",
+        "captions_zLD7fw",
+        "buttons_dYTfBA"
+      ],
+      "custom_css": [
+        "@media screen and (min-width: 768px) {{display: none; }}"
+      ],
+      "settings": {
+        "layout": "vertical",
+        "header_overlay": false,
+        "header_transparent": false,
+        "block_type": "subtle",
+        "color_scheme": "background-3",
+        "full_screen": true,
+        "image": "shopify://shop_images/1200-628.jpg",
+        "link": "shopify://products/core-one-pro-otc-hearing-aids",
+        "show_video": false,
+        "overlay_opacity": 0,
+        "image_ratio": "adapt",
+        "object_fit": "cover",
+        "desktop_image_position": "after",
+        "mobile_image_position": "before",
+        "mobile_image_overlay": "before",
+        "horizontal_alignment": "center",
+        "vertical_alignment": "bottom",
+        "padding_top": "no-indent",
+        "padding_bottom": "xs"
+      }
+    },
+    "rich_text_RNCAwh": {
+      "type": "rich-text",
+      "blocks": {
+        "button_7jcHtE": {
+          "type": "button",
+          "settings": {
+            "button_label": "shop now",
+            "button_link": "shopify://products/core-one-pro-otc-hearing-aids",
+            "button_style": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "button_7jcHtE"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".button {display: none;}",
+        "@media screen and (max-width: 768px) {.button {display: flex; justify-content: center; align-items: center; padding: 12px 24px; line-height: 1.5; text-align: center; vertical-align: middle; }}"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "color_scheme": "",
+        "full_width": true,
+        "alignment": "center",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "no-indent",
+        "padding_bottom": "no-indent"
+      }
+    },
+    "hero": {
+      "type": "hero",
+      "blocks": {
+        "block_1": {
+          "type": "subtitle",
+          "settings": {
+            "subheading": "Ceretone OTC Hearing Aids",
+            "subheading_style": "subtitle",
+            "subheading_icon": "star"
+          }
+        },
+        "block_2": {
+          "type": "title",
+          "settings": {
+            "heading": "Don't Just Hear Your World. Rediscover It.",
+            "heading_size": "h3",
+            "heading_line": "rounded",
+            "line_color": "#1566e0",
+            "word_break": false,
+            "heading_animation": "none",
+            "word_break_an": false
+          }
+        },
+        "description_gEVE98": {
+          "type": "description",
+          "settings": {
+            "description": "<strong>Finally, powerful OTC hearing aids so tiny and comfortable, you'll forget they're even there.</strong><br><br>\n✔️ 60-Day Risk Free Satisfaction Guarantee<br>\n✔️ Save Thousands, Not Hundreds, Compared to Clinic Aids<br>\n✔️ So Discreet, It's Our Little Secret<br>"
+          }
+        },
+        "captions_9tPPc6": {
+          "type": "captions",
+          "disabled": true,
+          "settings": {
+            "show_caption_1": true,
+            "caption_text_1": "60-Day Risk Free",
+            "caption_icon_1": "check-2",
+            "show_caption_2": true,
+            "caption_text_2": "Affordable Prices",
+            "caption_icon_2": "check-2",
+            "show_caption_3": true,
+            "caption_text_3": "Small & Comfortable",
+            "caption_icon_3": "check-2"
+          }
+        },
+        "block_4": {
+          "type": "buttons",
+          "settings": {
+            "show_button_1": true,
+            "button_label_1": "Explore The Models",
+            "button_link_1": "shopify://collections/hearing-products",
+            "button_style_1": "primary",
+            "show_button_2": false,
+            "button_label_2": "Label",
+            "button_link_2": "",
+            "button_style_2": "simple"
+          }
+        },
+        "users_jR8cDR": {
+          "type": "users",
+          "settings": {
+            "user_image_1": "shopify://shop_images/home-review-customer1.png",
+            "user_image_2": "shopify://shop_images/home-review-customer3.png",
+            "user_image_3": "shopify://shop_images/home_review-customer2.png",
+            "user_image_4": "shopify://shop_images/Aboutus_20240913_06.png",
+            "user_text": "<a href=\"https://ceretone.com/pages/reviews\">Customer rate us 4.9/5</a>"
+          }
+        }
+      },
+      "block_order": [
+        "block_1",
+        "block_2",
+        "description_gEVE98",
+        "captions_9tPPc6",
+        "block_4",
+        "users_jR8cDR"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "@media screen and (max-width: 768px) {{display: none; }}",
+        ".hero {position: relative; text-align: left;}",
+        ".hero__content {display: flex; flex-direction: column; align-items: flex-start; text-align: left; margin-left: 10; margin-right: auto;}",
+        "@media {.description {padding-box: 10px; }}"
+      ],
+      "settings": {
+        "layout": "overlay",
+        "header_overlay": false,
+        "header_transparent": false,
+        "block_type": "plain",
+        "color_scheme": "background-1",
+        "full_screen": true,
+        "image": "shopify://shop_images/2x_5e278f09-ca92-4423-8bd7-a53de7957f88.png",
+        "link": "",
+        "show_video": false,
+        "overlay_opacity": 0,
+        "image_ratio": "adapt",
+        "object_fit": "contain",
+        "desktop_image_position": "after",
+        "mobile_image_position": "before",
+        "mobile_image_overlay": "before",
+        "horizontal_alignment": "center",
+        "vertical_alignment": "middle",
+        "padding_top": "no-indent",
+        "padding_bottom": "xs"
+      }
+    },
+    "hero_wAeVYN": {
+      "type": "hero",
+      "blocks": {
+        "subtitle_pEjAzE": {
+          "type": "subtitle",
+          "settings": {
+            "subheading": "Ceretone OTC Hearing Aids",
+            "subheading_style": "subtitle",
+            "subheading_icon": "star"
+          }
+        },
+        "title_4PHbEg": {
+          "type": "title",
+          "settings": {
+            "heading": "Don't Just Hear Your World. Rediscover It.",
+            "heading_size": "h3",
+            "heading_line": "rounded",
+            "line_color": "#1566e0",
+            "word_break": false,
+            "heading_animation": "none",
+            "word_break_an": false
+          }
+        },
+        "description_rihbzM": {
+          "type": "description",
+          "settings": {
+            "description": "Finally, powerful OTC hearing aids so tiny and comfortable, you'll forget they're even there."
+          }
+        },
+        "captions_T77G3Y": {
+          "type": "captions",
+          "settings": {
+            "show_caption_1": true,
+            "caption_text_1": "60-Day Risk Free Satisfaction Guarantee",
+            "caption_icon_1": "check-2",
+            "show_caption_2": true,
+            "caption_text_2": "Save Thousands Compared to Clinic Aids",
+            "caption_icon_2": "check-2",
+            "show_caption_3": true,
+            "caption_text_3": "So Discreet, It's Our Little Secret",
+            "caption_icon_3": "check-2"
+          }
+        },
+        "buttons_amtxC4": {
+          "type": "buttons",
+          "settings": {
+            "show_button_1": true,
+            "button_label_1": "Explore The Models",
+            "button_link_1": "shopify://collections/hearing-products",
+            "button_style_1": "primary",
+            "show_button_2": false,
+            "button_label_2": "Label",
+            "button_link_2": "",
+            "button_style_2": "simple"
+          }
+        },
+        "users_rdi7zw": {
+          "type": "users",
+          "settings": {
+            "user_image_1": "shopify://shop_images/MWjMi9qmaQRZEZLE7SdTnQ.jpg",
+            "user_image_2": "shopify://shop_images/1_2x_aa4e622a-234d-49b9-936a-0a570f142c44.png",
+            "user_image_3": "shopify://shop_images/Aboutus_20240913_05.png",
+            "user_image_4": "shopify://shop_images/Aboutus_20240913_06.png",
+            "user_text": "<a href=\"https://ceretone.com/pages/reviews\">Customer rate us 4.9/5</a>"
+          }
+        }
+      },
+      "block_order": [
+        "subtitle_pEjAzE",
+        "title_4PHbEg",
+        "description_rihbzM",
+        "captions_T77G3Y",
+        "buttons_amtxC4",
+        "users_rdi7zw"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "@media screen and (min-width: 768px) {{display: none; }}"
+      ],
+      "settings": {
+        "layout": "vertical",
+        "header_overlay": false,
+        "header_transparent": false,
+        "block_type": "subtle",
+        "color_scheme": "background-3",
+        "full_screen": true,
+        "image": "shopify://shop_images/hearing_aids_2b7935c5-2825-48ed-952b-8fbc77eee14e.jpg",
+        "link": "",
+        "show_video": false,
+        "overlay_opacity": 0,
+        "image_ratio": "adapt",
+        "object_fit": "cover",
+        "desktop_image_position": "after",
+        "mobile_image_position": "before",
+        "mobile_image_overlay": "before",
+        "horizontal_alignment": "center",
+        "vertical_alignment": "bottom",
+        "padding_top": "no-indent",
+        "padding_bottom": "m"
+      }
+    },
+    "fcdccba2-3798-4f1f-9704-3387ec1b3ca2": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--15231063785533__fcdccba2-3798-4f1f-9704-3387ec1b3ca2-column-1": {
+          "type": "column",
+          "settings": {
+            "icon": "none",
+            "icon_color_scheme": "background-2",
+            "icon_fill_type": "gradient",
+            "image": "shopify://shop_images/home_20240920_01.png",
+            "heading": "All OTC Hearing Aids Are FSA/HSA Eligible!",
+            "text": "",
+            "show_button": false,
+            "button_label": "Label",
+            "button_link": "",
+            "button_style": "simple"
+          }
+        }
+      },
+      "block_order": [
+        "template--15231063785533__fcdccba2-3798-4f1f-9704-3387ec1b3ca2-column-1"
+      ],
+      "custom_css": [
+        ".multicolumn-card {align-items: center; text-align: center;}",
+        ".multicolumn-card__heading {max-width: 1200px;}"
+      ],
+      "settings": {
+        "section_type": "solid",
+        "color_scheme": "background-1",
+        "enable_border": true,
+        "border_full": false,
+        "multicolumn_to_show": 1,
+        "gap": "large",
+        "subheading": "",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "",
+        "heading_size": "h2",
+        "heading_line": "simple",
+        "line_color": "#1566e0",
+        "word_break": false,
+        "heading_animation": "none",
+        "word_break_an": false,
+        "text": "",
+        "text_align": "center",
+        "icon_size": "recommended",
+        "box_shadow": true,
+        "icon_style": "colored",
+        "image_width": "small",
+        "image_ratio": "square",
+        "object_fit": "cover",
+        "card_heading_size": "h4",
+        "padding_top": "no-indent",
+        "padding_bottom": "s",
+        "margin_top": "xs",
+        "margin_bottom": "xs"
+      }
+    },
+    "image_with_text_nWjAQB": {
+      "type": "image-with-text",
+      "custom_css": [
+        "@media screen and (min-width: 769px) {{display: none; }}"
+      ],
+      "settings": {
+        "layout": "image_center",
+        "color_scheme": "",
+        "subheading": "",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "Hear Clearly <span style=\"text-decoration:underline\">Without Breaking the Bank</span>",
+        "heading_size": "h3",
+        "heading_line": "background",
+        "line_color": "#e0f7fa",
+        "word_break": false,
+        "heading_animation": "none",
+        "word_break_an": false,
+        "text": "",
+        "text_align": "center",
+        "inner_subheading": "",
+        "inner_heading": "",
+        "inner_heading_line": "simple",
+        "inner_line_color": "#1566e0",
+        "inner_word_break": false,
+        "description": "",
+        "text_align_inner": "top",
+        "image": "shopify://shop_images/2_e6e3ae91-b99f-4798-97d3-c37f0d1f8841.png",
+        "height": "adapt",
+        "overlay_opacity": 0,
+        "logo_width": 75,
+        "add_text": "",
+        "author_color_scheme": "",
+        "icon_size": "recommended",
+        "box_shadow": false,
+        "icon_style": "colored",
+        "show_button": true,
+        "button_label": "Explore The Models",
+        "button_link": "shopify://collections/hearing-products",
+        "button_style": "primary",
+        "show_button_2": false,
+        "button_label_2": "",
+        "button_link_2": "",
+        "button_style_2": "simple",
+        "padding_top": "no-indent",
+        "padding_bottom": "m",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "image_with_text_Kgw9Jn": {
+      "type": "image-with-text",
+      "custom_css": [
+        "@media screen and (max-width: 768px) {{display: none; }}",
+        ".image-with-text__media {border-radius: 0;}",
+        ".image-with-text__grid {transform: scale(1.5);}",
+        ".image-with-text__title {margin-bottom: 80px;}",
+        ".image-with-text__button {margin-top: 50px;}"
+      ],
+      "settings": {
+        "layout": "image_center",
+        "color_scheme": "",
+        "subheading": "",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "Hear Clearly <span style=\"text-decoration:underline\">Without Breaking the Bank</span>",
+        "heading_size": "h3",
+        "heading_line": "background",
+        "line_color": "#f5f8ff",
+        "word_break": false,
+        "heading_animation": "none",
+        "word_break_an": false,
+        "text": "",
+        "text_align": "center",
+        "inner_subheading": "",
+        "inner_heading": "",
+        "inner_heading_line": "simple",
+        "inner_line_color": "#1566e0",
+        "inner_word_break": false,
+        "description": "",
+        "text_align_inner": "top",
+        "image": "shopify://shop_images/1_8e7f9657-db22-475c-8ac4-31e0c55b6113.png",
+        "height": "all-height",
+        "overlay_opacity": 0,
+        "logo_width": 50,
+        "add_text": "",
+        "author_color_scheme": "",
+        "icon_size": "recommended",
+        "box_shadow": false,
+        "icon_style": "colored",
+        "show_button": true,
+        "button_label": "Explore The Models",
+        "button_link": "shopify://collections/hearing-products",
+        "button_style": "primary",
+        "show_button_2": false,
+        "button_label_2": "",
+        "button_link_2": "",
+        "button_style_2": "simple",
+        "padding_top": "no-indent",
+        "padding_bottom": "s",
+        "margin_top": "xs",
+        "margin_bottom": "xs"
+      }
+    },
+    "slideshow_BERaEJ": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_ApRyV9": {
+          "type": "slide",
+          "settings": {
+            "color_scheme": "",
+            "icon": "none",
+            "image": "shopify://shop_images/2x_9b7b9520-258c-418b-9027-1a85506909ca.png",
+            "overlay_opacity": 0,
+            "show_video": false,
+            "loop_video": true,
+            "heading": "Simple, Effective, and Risk-Free",
+            "heading_size": "h3",
+            "description": "We believe getting help for your hearing shouldn’t be a complicated ordeal. That’s why we removed clinic visits, high costs, and the hassle — delivering clear hearing directly to you.",
+            "tab_heading": "",
+            "show_button": false,
+            "button_style": "simple_link",
+            "button_label": "Shop Now",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_ApRyV9"
+      ],
+      "custom_css": [],
+      "settings": {
+        "layout": "overlay",
+        "full_width": true,
+        "color_scheme": "background-1",
+        "enable_border": false,
+        "border_full": true,
+        "subheading": "",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "",
+        "heading_size": "h3",
+        "heading_line": "simple",
+        "line_color": "#1566e0",
+        "word_break": false,
+        "text": "",
+        "heading_animation": "none",
+        "word_break_an": false,
+        "text_align": "center",
+        "height": "adapt",
+        "text_align_content": "center",
+        "enable_autoplay": false,
+        "enable_parallax": false,
+        "enable_pagination": false,
+        "pagination_type": "bullets",
+        "pagination_color_scheme": "",
+        "pagination_width": "full",
+        "enable_navigation": false,
+        "navigation_color_scheme": "",
+        "slide_duration": 5,
+        "icon_size": "recommended",
+        "icon_style": "contrast",
+        "icon_fill_type": "solid",
+        "show_tab_icon": false,
+        "padding_top": "no-indent",
+        "padding_bottom": "s",
+        "margin_top": "xs",
+        "margin_bottom": "xs"
+      }
+    },
+    "product_xz_7JyAFK": {
+      "type": "Product_XZ",
+      "blocks": {
+        "slide_VH3RHN": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/2_de93e44a-c3a7-4826-8ff1-1e279f8b6fb6.jpg",
+            "ProductName": "Core One Pro",
+            "ProductB": "COMPACT & POWERFUL",
+            "Price": "$389.99",
+            "Price_H": "$699.99",
+            "Price_SM": "(per pair)",
+            "DiscountT": "<strong>$310</strong> OFF | HURRY! Sale Ends Soon",
+            "linktext": "Buy Now",
+            "link": "shopify://products/core-one-pro-otc-hearing-aids",
+            "icon": "shopify://shop_images/ICON_2x_93502304-522a-4470-8791-c094ed63a85f.png",
+            "heading": "",
+            "inticon1": "shopify://shop_images/fcfafb32b17db8b7f55704b81b9a76cd.png",
+            "introduce1": "Weightless all-day comfort",
+            "inticon2": "shopify://shop_images/1_d9df3ae0-833b-4a73-87c6-f6e1d42bcac5.png",
+            "introduce2": "Crystal-clear, natural sound",
+            "inticon3": "shopify://shop_images/cb064bb2894b2a989fd2885f64325560.png",
+            "introduce3": "Rechargeable with portable case"
+          }
+        },
+        "slide_9bFF9q": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Beacon_Ear_4.webp",
+            "ProductName": "Beacon",
+            "ProductB": "MOST ADVANCED",
+            "Price": "$599.99",
+            "Price_H": "$999.99",
+            "Price_SM": "(per pair)",
+            "DiscountT": "<strong>$400</strong> OFF | HURRY! Sale Ends Soon",
+            "linktext": "Buy Now",
+            "link": "shopify://products/beacon-otc-hearing-aids",
+            "icon": "shopify://shop_images/ICON_2x_93502304-522a-4470-8791-c094ed63a85f.png",
+            "heading": "",
+            "inticon1": "shopify://shop_images/1_7a51a1b2-4351-48ab-83e7-8a236e577c75.png",
+            "introduce1": "Self-fitting w/ Bluetooth connectivity",
+            "inticon2": "shopify://shop_images/f46e7382d3941fd483cb93d1a02af2e3.png",
+            "introduce2": "Enhanced clear sound quality",
+            "inticon3": "shopify://shop_images/cb064bb2894b2a989fd2885f64325560.png",
+            "introduce3": "Rechargeable with portable case"
+          }
+        },
+        "slide_cDnaax": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/torch_Ear_3.webp",
+            "ProductName": "Torch",
+            "ProductB": "NEW RELEASE",
+            "Price": "$249.99",
+            "Price_H": "$399.99",
+            "Price_SM": "(per pair)",
+            "DiscountT": "<strong>$150</strong> OFF | HURRY! Sale Ends Soon",
+            "linktext": "Buy Now",
+            "link": "shopify://products/torch-otc-hearing-aids",
+            "icon": "shopify://shop_images/ICON_2x_93502304-522a-4470-8791-c094ed63a85f.png",
+            "heading": "",
+            "inticon1": "shopify://shop_images/5c1c18adb65c7850c0e95c123d529df6.png",
+            "introduce1": "Discreet and stylish design",
+            "inticon2": "shopify://shop_images/c97fb19c3e789c3f61addc7c01b077c1.png",
+            "introduce2": "Clear crisp sound quality",
+            "inticon3": "shopify://shop_images/cb064bb2894b2a989fd2885f64325560.png",
+            "introduce3": "Rechargeable with portable case"
+          }
+        }
+      },
+      "block_order": [
+        "slide_VH3RHN",
+        "slide_9bFF9q",
+        "slide_cDnaax"
+      ],
+      "custom_css": [
+        "h2 {font-size: 37.5px;}",
+        "@media (max-width: 768px) {h2 {font-size: 32.5px; }}",
+        "h3 {font-size: 20px;}"
+      ],
+      "settings": {
+        "padding_top": 24,
+        "padding_bottom": 24,
+        "padding_top_M": 0,
+        "padding_bottom_M": 0,
+        "bg_color": "#ffffff",
+        "tilie": "Find Your Perfect Hearing Aid",
+        "Icon": "shopify://shop_images/icons8-check-96.png",
+        "tilie_left": "FDA-Registered",
+        "tilie_right": "FSA & HSA Eligible",
+        "linktext": "",
+        "link": ""
+      }
+    },
+    "rich_text_Vzmi4m": {
+      "type": "rich-text",
+      "blocks": {
+        "button_RBP6Jt": {
+          "type": "button",
+          "settings": {
+            "button_label": "Explore The Models",
+            "button_link": "shopify://collections/hearing-products",
+            "button_style": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "button_RBP6Jt"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "full_width": true,
+        "alignment": "center",
+        "margin_top": "no-indent",
+        "margin_bottom": "s",
+        "padding_top": "no-indent",
+        "padding_bottom": "no-indent"
+      }
+    },
+    "image_with_text_QQLD36": {
+      "type": "image-with-text",
+      "disabled": true,
+      "custom_css": [
+        "h2 {font-size: 37.5px;}",
+        "@media (max-width: 768px) {h2 {font-size: 32.5px; }}"
+      ],
+      "settings": {
+        "layout": "text_last",
+        "color_scheme": "",
+        "subheading": "",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "",
+        "heading_size": "h3",
+        "heading_line": "simple",
+        "line_color": "#1566e0",
+        "word_break": false,
+        "heading_animation": "none",
+        "word_break_an": false,
+        "text": "",
+        "text_align": "center",
+        "inner_subheading": "",
+        "inner_heading": "Get Ceretone Delivered to You",
+        "inner_heading_line": "simple",
+        "inner_line_color": "#1566e0",
+        "inner_word_break": false,
+        "description": "<p>Experience swift delivery, real-time tracking, eco-friendly practices, and exceptional customer support.</p><p>Everything you need for better hearing is delivered directly to your door, making it hassle-free.</p>",
+        "text_align_inner": "center",
+        "image": "shopify://shop_images/603_2x_f3406052-c31e-4873-98e4-fd5ab0a40a78.png",
+        "height": "adapt",
+        "overlay_opacity": 0,
+        "logo_width": 75,
+        "add_text": "",
+        "author_color_scheme": "",
+        "icon_size": "recommended",
+        "box_shadow": false,
+        "icon_style": "colored",
+        "show_button": false,
+        "button_label": "Button label",
+        "button_link": "",
+        "button_style": "primary",
+        "show_button_2": false,
+        "button_label_2": "Button label",
+        "button_link_2": "",
+        "button_style_2": "simple",
+        "padding_top": "no-indent",
+        "padding_bottom": "m",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "slideshow_wmQiXB": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_rNrf7p": {
+          "type": "slide",
+          "settings": {
+            "color_scheme": "",
+            "icon": "none",
+            "image": "shopify://shop_images/73_2x_cb62d24e-9845-4ac4-8359-1fd2ca68a6b2.png",
+            "overlay_opacity": 0,
+            "show_video": false,
+            "loop_video": true,
+            "heading": "60-Day Money-Back Guarantee",
+            "heading_size": "h3",
+            "description": "You don’t have to decide for good today.\nPut Ceretone to the test in your world — at home, at work, in noisy restaurants.\nIf you don’t absolutely love the difference within 60 days, send them back.\nWe’ll give you a full, no-hassle refund and even cover the return shipping.",
+            "tab_heading": "",
+            "show_button": false,
+            "button_style": "simple_link",
+            "button_label": "Shop Now",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_rNrf7p"
+      ],
+      "settings": {
+        "layout": "overlay",
+        "full_width": true,
+        "color_scheme": "background-1",
+        "enable_border": false,
+        "border_full": true,
+        "subheading": "",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "",
+        "heading_size": "h3",
+        "heading_line": "simple",
+        "line_color": "#1566e0",
+        "word_break": false,
+        "text": "",
+        "heading_animation": "none",
+        "word_break_an": false,
+        "text_align": "center",
+        "height": "adapt",
+        "text_align_content": "center",
+        "enable_autoplay": false,
+        "enable_parallax": false,
+        "enable_pagination": false,
+        "pagination_type": "bullets",
+        "pagination_color_scheme": "",
+        "pagination_width": "full",
+        "enable_navigation": false,
+        "navigation_color_scheme": "",
+        "slide_duration": 5,
+        "icon_size": "recommended",
+        "icon_style": "contrast",
+        "icon_fill_type": "solid",
+        "show_tab_icon": false,
+        "padding_top": "no-indent",
+        "padding_bottom": "s",
+        "margin_top": "xs",
+        "margin_bottom": "xs"
+      }
+    },
+    "multicolumn_qEDqFF": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_yEWzXB": {
+          "type": "column",
+          "settings": {
+            "icon": "none",
+            "icon_color_scheme": "",
+            "icon_fill_type": "gradient",
+            "image": "shopify://shop_images/home_20240904_01.png",
+            "heading": "Crystal-Clear Conversations",
+            "text": "Our FDA-registered aids isolate voices from background noise, so you can catch every word.",
+            "show_button": false,
+            "button_label": "Label",
+            "button_link": "",
+            "button_style": "simple"
+          }
+        },
+        "column_JwwBRU": {
+          "type": "column",
+          "settings": {
+            "icon": "none",
+            "icon_color_scheme": "",
+            "icon_fill_type": "gradient",
+            "image": "shopify://shop_images/icons8-check-96.png",
+            "heading": "Hear Better in 5 Minutes",
+            "text": "No appointments, no complicated setups. Your Ceretone aids work right out of the box, letting you enjoy clearer conversations instantly.",
+            "show_button": false,
+            "button_label": "Label",
+            "button_link": "",
+            "button_style": "simple"
+          }
+        },
+        "column_FryACx": {
+          "type": "column",
+          "settings": {
+            "icon": "none",
+            "icon_color_scheme": "",
+            "icon_fill_type": "gradient",
+            "image": "shopify://shop_images/home_20240904_03.png",
+            "heading": "Free & Fast to Your Door",
+            "text": "Get your hearing aids delivered quickly with no shipping fees. Returns and exchanges are always on us.",
+            "show_button": false,
+            "button_label": "Label",
+            "button_link": "",
+            "button_style": "simple"
+          }
+        },
+        "column_8kPTed": {
+          "type": "column",
+          "settings": {
+            "icon": "none",
+            "icon_color_scheme": "",
+            "icon_fill_type": "gradient",
+            "image": "shopify://shop_images/home_20240904_05.png",
+            "heading": "Lifetime Expert Support",
+            "text": "You’re never alone. Our hearing experts are here for you every step of the way, backed by a 12-month warranty.",
+            "show_button": false,
+            "button_label": "Label",
+            "button_link": "",
+            "button_style": "simple"
+          }
+        },
+        "column_gpEFkc": {
+          "type": "column",
+          "settings": {
+            "icon": "none",
+            "icon_color_scheme": "",
+            "icon_fill_type": "gradient",
+            "image": "shopify://shop_images/home_20240904_02.png",
+            "heading": "Clinic-Grade Quality, 90% Less",
+            "text": "By cutting out the middleman, we deliver premium, doctor-designed quality without the traditional $5,000 price tag.",
+            "show_button": false,
+            "button_label": "Label",
+            "button_link": "",
+            "button_style": "simple"
+          }
+        },
+        "column_Ag8tdR": {
+          "type": "column",
+          "settings": {
+            "icon": "none",
+            "icon_color_scheme": "",
+            "icon_fill_type": "gradient",
+            "image": "shopify://shop_images/home_20240904_06.png",
+            "heading": "Find Your Perfect Match at Home",
+            "text": "Our simple online hearing test provides a personalized recommendation in minutes. No clinic visit required.",
+            "show_button": false,
+            "button_label": "Label",
+            "button_link": "",
+            "button_style": "simple"
+          }
+        }
+      },
+      "block_order": [
+        "column_yEWzXB",
+        "column_JwwBRU",
+        "column_FryACx",
+        "column_8kPTed",
+        "column_gpEFkc",
+        "column_Ag8tdR"
+      ],
+      "custom_css": [
+        ".multicolumn-card {display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; margin: 0 auto;}",
+        ".multicolumn-card__heading {text-align: center; margin: 0 auto;}"
+      ],
+      "settings": {
+        "section_type": "separators",
+        "color_scheme": "background-1",
+        "enable_border": false,
+        "border_full": false,
+        "multicolumn_to_show": 3,
+        "gap": "large",
+        "subheading": "",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "The Ceretone Advantage",
+        "heading_size": "h3",
+        "heading_line": "simple",
+        "line_color": "#1566e0",
+        "word_break": false,
+        "heading_animation": "none",
+        "word_break_an": false,
+        "text": "",
+        "text_align": "center",
+        "icon_size": "recommended",
+        "box_shadow": true,
+        "icon_style": "colored",
+        "image_width": "small",
+        "image_ratio": "square",
+        "object_fit": "contain",
+        "card_heading_size": "h5",
+        "padding_top": "no-indent",
+        "padding_bottom": "no-indent",
+        "margin_top": "xs",
+        "margin_bottom": "xs"
+      }
+    },
+    "rich_text_qJB79r": {
+      "type": "rich-text",
+      "blocks": {
+        "button_VQUrJW": {
+          "type": "button",
+          "settings": {
+            "button_label": "Explore The Models",
+            "button_link": "shopify://collections/hearing-products",
+            "button_style": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "button_VQUrJW"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "full_width": true,
+        "alignment": "center",
+        "margin_top": "no-indent",
+        "margin_bottom": "s",
+        "padding_top": "no-indent",
+        "padding_bottom": "no-indent"
+      }
+    },
+    "case_studies_q8gMhx": {
+      "type": "case-studies",
+      "blocks": {
+        "case_slide_3Mbqhn": {
+          "type": "case_slide",
+          "settings": {
+            "image": "shopify://shop_images/10531275.jpg",
+            "overlay_opacity": 0,
+            "heading": "The Core One Pro is even better than the Core One",
+            "text": "The Core One Pro is even better than the Core One. The sound quality is amazing and the fit is so comfortable.",
+            "quote": "⭐⭐⭐⭐⭐",
+            "quote_size": "h4",
+            "author_image": "shopify://shop_images/2.jpg",
+            "author_name": "Beverly S.H.",
+            "author_position": "Aug. 18th",
+            "show_button": true,
+            "button_style": "simple",
+            "button_label": "Core One Pro Purchased",
+            "button_link": "shopify://products/core-one-pro-otc-hearing-aids",
+            "logo_width": 130
+          }
+        },
+        "case_slide_hTNrdt": {
+          "type": "case_slide",
+          "settings": {
+            "image": "shopify://shop_images/1753856213__1753856017309-mvimg_20250724_162050__original.avif",
+            "overlay_opacity": 0,
+            "heading": "They really are great!",
+            "text": "These was ready out of box and work just like I need! My husband was about to lose it cause I always turned TV up way too high and ads was LOUDER! I had some hearing lost from work years ago and can’t hear my youngest daugther well. Now with these I don’t got to say \"what?\" every 5 mins.",
+            "quote": "⭐⭐⭐⭐⭐",
+            "quote_size": "h4",
+            "author_image": "shopify://shop_images/home-review-customer1.png",
+            "author_name": "Margaret T.",
+            "author_position": "Jul. 10th",
+            "show_button": true,
+            "button_style": "simple",
+            "button_label": "Core One Pro Purchased",
+            "button_link": "shopify://products/core-one-pro-otc-hearing-aids",
+            "logo_width": 130
+          }
+        },
+        "case_slide_eJT6VW": {
+          "type": "case_slide",
+          "settings": {
+            "image": "shopify://shop_images/home-review-2.png",
+            "overlay_opacity": 0,
+            "heading": "Ceretone Beacon is awesome!",
+            "text": "I'm Brazilian and I came to the US for vacation. My hearing aids didn't work and while browsing the internet I found Beacon. Great service and great product. I can hear clearly now and Ceretone really helped me!",
+            "quote": "⭐⭐⭐⭐⭐",
+            "quote_size": "h4",
+            "author_image": "shopify://shop_images/home_review-customer2.png",
+            "author_name": "Carlos S.",
+            "author_position": "Jul. 11th",
+            "show_button": true,
+            "button_style": "simple",
+            "button_label": "Beacon Purchased",
+            "button_link": "shopify://products/beacon-otc-hearing-aids",
+            "logo_width": 130
+          }
+        },
+        "case_slide_rExaQy": {
+          "type": "case_slide",
+          "settings": {
+            "image": "shopify://shop_images/home-review-4.png",
+            "overlay_opacity": 0,
+            "heading": "Thank you for making my life better!",
+            "text": "These are my first hearing aids, and I love them. The app is excellent, and the Bluetooth connection is stable. I can answer calls and listen to music via Bluetooth. The quality and price are excellent compared to similar aids.",
+            "quote": "⭐⭐⭐⭐⭐",
+            "quote_size": "h4",
+            "author_image": "shopify://shop_images/home_review-customer4.png",
+            "author_name": "John H.",
+            "author_position": "Jun. 8th",
+            "show_button": true,
+            "button_style": "simple",
+            "button_label": "Beacon Purchased",
+            "button_link": "shopify://products/beacon-otc-hearing-aids",
+            "logo_width": 130
+          }
+        }
+      },
+      "block_order": [
+        "case_slide_3Mbqhn",
+        "case_slide_hTNrdt",
+        "case_slide_eJT6VW",
+        "case_slide_rExaQy"
+      ],
+      "custom_css": [
+        ".case-studies__column-heading {font-size: 25px;}",
+        ".case-studies__navigation--mobile-hidden {display: none;}"
+      ],
+      "settings": {
+        "layout": "tabs_bottom",
+        "color_scheme": "",
+        "subheading": "",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "<span style=\"text-decoration:underline\">Happy Customers</span>: [Amazing!|Life-Changing!|Comfortable!|Highly Recommend!]",
+        "heading_size": "h3",
+        "heading_line": "background",
+        "line_color": "#f5f8ff",
+        "word_break": false,
+        "heading_animation": "rolling",
+        "word_break_an": false,
+        "text": "",
+        "text_align": "center",
+        "image_ratio": "landscape",
+        "slide_color_scheme": "background-2",
+        "tabs_color_scheme": "background-1",
+        "enable_navigation": true,
+        "navigation_color_scheme": "background-1",
+        "padding_top": "no-indent",
+        "padding_bottom": "no-indent",
+        "margin_top": "xs",
+        "margin_bottom": "xs"
+      }
+    },
+    "rich_text_AHxNzc": {
+      "type": "rich-text",
+      "blocks": {
+        "button_LMQjnc": {
+          "type": "button",
+          "settings": {
+            "button_label": "Read More reviews",
+            "button_link": "shopify://pages/reviews",
+            "button_style": "secondary"
+          }
+        }
+      },
+      "block_order": [
+        "button_LMQjnc"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "full_width": true,
+        "alignment": "center",
+        "margin_top": "no-indent",
+        "margin_bottom": "s",
+        "padding_top": "no-indent",
+        "padding_bottom": "no-indent"
+      }
+    },
+    "case_studies_icaPnx": {
+      "type": "case-studies",
+      "blocks": {
+        "case_slide_pGffAJ": {
+          "type": "case_slide",
+          "settings": {
+            "overlay_opacity": 0,
+            "heading": "“",
+            "text": "The first thing you'll notice about the Core One is how small the hearing aids are. I weighed them at less than 0.04 oz (0.96 grams) each, including a small ear tip, which makes them perhaps the smallest aids I've tested to date.",
+            "quote": "",
+            "quote_size": "h4",
+            "author_name": "",
+            "author_position": "",
+            "show_button": false,
+            "button_style": "simple",
+            "button_label": "Link label",
+            "button_link": "",
+            "logo": "shopify://shop_images/home-wired-logo.png",
+            "logo_width": 110
+          }
+        },
+        "case_slide_YDKJrm": {
+          "type": "case_slide",
+          "settings": {
+            "overlay_opacity": 0,
+            "heading": "“",
+            "text": "The secure fit of the Core One is due to its unique layered umbrella-shaped tip, ensuring all-day stability without sacrificing comfort.",
+            "quote": "",
+            "quote_size": "h4",
+            "author_name": "",
+            "author_position": "",
+            "show_button": false,
+            "button_style": "simple",
+            "button_label": "Link label",
+            "button_link": "",
+            "logo": "shopify://shop_images/home-yahoo-logo.png",
+            "logo_width": 130
+          }
+        },
+        "case_slide_QTgLX7": {
+          "type": "case_slide",
+          "settings": {
+            "overlay_opacity": 0,
+            "heading": "“",
+            "text": "The device was crafted to conform to the ear for a perfect fit during extended periods of use.",
+            "quote": "",
+            "quote_size": "h4",
+            "author_name": "",
+            "author_position": "",
+            "show_button": false,
+            "button_style": "simple",
+            "button_label": "Link label",
+            "button_link": "",
+            "logo": "shopify://shop_images/home-seeking-alpha-logo.png",
+            "logo_width": 130
+          }
+        },
+        "case_slide_WAhxjz": {
+          "type": "case_slide",
+          "settings": {
+            "overlay_opacity": 0,
+            "heading": "“",
+            "text": "Weighing less than a gram, the Core One effortlessly fits into the ear canal, providing a discreet and unobtrusive hearing solution.",
+            "quote": "",
+            "quote_size": "h4",
+            "author_name": "",
+            "author_position": "",
+            "show_button": false,
+            "button_style": "simple",
+            "button_label": "Link label",
+            "button_link": "",
+            "logo": "shopify://shop_images/home-market-watch-logo.png",
+            "logo_width": 130
+          }
+        },
+        "case_slide_UyRNBm": {
+          "type": "case_slide",
+          "settings": {
+            "overlay_opacity": 0,
+            "heading": "“",
+            "text": "This unique design has already gained industry recognition, earning accolades such as the Red Dot Award, the 2023 French Design Award, and the Platinum Winner 2023 for the MUSE Design Awards.",
+            "quote": "",
+            "quote_size": "h4",
+            "author_name": "",
+            "author_position": "",
+            "show_button": false,
+            "button_style": "simple",
+            "button_label": "Link label",
+            "button_link": "",
+            "logo": "shopify://shop_images/home-benzinga-logo.png",
+            "logo_width": 130
+          }
+        }
+      },
+      "block_order": [
+        "case_slide_pGffAJ",
+        "case_slide_YDKJrm",
+        "case_slide_QTgLX7",
+        "case_slide_WAhxjz",
+        "case_slide_UyRNBm"
+      ],
+      "settings": {
+        "layout": "tabs_bottom",
+        "color_scheme": "background-1",
+        "subheading": "",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "As Seen In",
+        "heading_size": "h3",
+        "heading_line": "simple",
+        "line_color": "#f7f8f8",
+        "word_break": false,
+        "heading_animation": "none",
+        "word_break_an": true,
+        "text": "",
+        "text_align": "center",
+        "image_ratio": "square",
+        "slide_color_scheme": "",
+        "tabs_color_scheme": "",
+        "enable_navigation": true,
+        "navigation_color_scheme": "background-3",
+        "padding_top": "no-indent",
+        "padding_bottom": "s",
+        "margin_top": "xs",
+        "margin_bottom": "xs"
+      }
+    },
+    "video_wXBqwr": {
+      "type": "video",
+      "custom_css": [
+        "@media screen and (min-width: 1024px) {.video-section__play-button {transform: scale(1.5); transform-origin: center; } .video-section {width: 90%; max-width: 1000px; margin: 0 auto; }}"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "full_width": false,
+        "height": "adapt",
+        "video_fit": "cover",
+        "subheading": "",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "",
+        "heading_size": "h2",
+        "cover_image": "shopify://shop_images/web.jpg",
+        "opacity_overlay": 0,
+        "video": "shopify://files/videos/Core one video.mp4",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "video_autoplay": false,
+        "video_loop": false,
+        "video_muted": false,
+        "video_controls": true,
+        "description": "",
+        "margin_top": "no-indent",
+        "margin_bottom": "s"
+      }
+    },
+    "steps_QfWYJb": {
+      "type": "steps",
+      "blocks": {
+        "step_cPRJQP": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/3_1cc1dfe0-18d9-4902-b78e-f9601d5ceaed.png",
+            "number": "C",
+            "heading": "Technology That Serves You",
+            "text": "Our smart chip doesn’t just make sounds louder — it makes them clearer. It intelligently separates voices from background noise, so you can focus on the conversation, not the clatter.",
+            "show_button": false,
+            "button_style": "simple",
+            "button_label": "Know More",
+            "button_link": ""
+          }
+        },
+        "step_qaERhy": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/home-inovation2.png",
+            "number": "C",
+            "heading": "Designed for Human Connection",
+            "text": "From a grandchild’s whisper to laughter with old friends, our aids provide all-day comfort, ensuring you never miss a moment that truly matters.",
+            "show_button": false,
+            "button_style": "simple",
+            "button_label": "Know More",
+            "button_link": ""
+          }
+        },
+        "step_9RphKx": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/home-inovation3.png",
+            "number": "c",
+            "heading": "The Hassle-Free Future of Hearing",
+            "text": "We’ve redefined hearing by removing the obstacles. No appointments, no prescriptions, and no $5,000 bills — just clear, effortless sound delivered to your door.",
+            "show_button": false,
+            "button_style": "simple",
+            "button_label": "Know More",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "step_cPRJQP",
+        "step_qaERhy",
+        "step_9RphKx"
+      ],
+      "settings": {
+        "layout": "collapsible",
+        "color_scheme": "",
+        "subheading": "",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "Hearing Reimagined, For You.",
+        "heading_size": "h3",
+        "heading_line": "simple",
+        "line_color": "#1566e0",
+        "word_break": false,
+        "heading_animation": "none",
+        "word_break_an": false,
+        "text": "",
+        "text_align": "center",
+        "columns_to_show": 3,
+        "image_ratio": "landscape",
+        "number_size": "recommended",
+        "step_heading_size": "recommended",
+        "text_size": "recommended",
+        "padding_top": "no-indent",
+        "padding_bottom": "s",
+        "margin_top": "xs",
+        "margin_bottom": "xs"
+      }
+    },
+    "collapsible-content": {
+      "type": "collapsible-content",
+      "blocks": {
+        "block_1": {
+          "type": "accordion",
+          "settings": {
+            "question": "How do I know what degree of hearing loss I have?",
+            "answer": "<p>Age-related hearing loss is progressive, and your hearing slowly gets worse over time, so it's easy to overestimate your hearing abilities. Ceretone offers a <a href=\"https://ceretone.com/pages/hearing-test\" title=\"Hearing Test\">free </a><a href=\"https://ceretone.com/pages/hearing-test\" target=\"_blank\">online hearing test,</a> allowing you to quickly and accurately assess your current degree of hearing loss.</p>",
+            "opened": true
+          }
+        },
+        "block_2": {
+          "type": "accordion",
+          "settings": {
+            "question": "What makes these devices so affordable?",
+            "answer": "<p>We are committed to providing cost-effective hearing solutions for individuals with hearing loss. Our direct-to-consumer online approach allows us to offer competitive pricing without compromising quality or service. As a result, our hearing aids are priced significantly lower than traditional hearing aids.</p>",
+            "opened": false
+          }
+        },
+        "block_3": {
+          "type": "accordion",
+          "settings": {
+            "question": "How do Ceretone hearing aids compare to hearing aids from a clinic?",
+            "answer": "<p>The Ceretone Core One series are professional hearing aids registered with the FDA and subject to FDA over-the-counter regulations. Ceretone is dedicated to bringing the latest technology to Americans at the lowest possible price, helping as many people as possible improve their hearing.</p><p>Ceretone hearing aids are generally more affordable than clinic hearing aids because they don’t require additional clinic or service fees. Additionally, Ceretone offers ongoing support anytime.</p>",
+            "opened": false
+          }
+        },
+        "accordion_CHd3tc": {
+          "type": "accordion",
+          "settings": {
+            "question": "Can I request a return if I’m not completely satisfied with Ceretone hearing aids?",
+            "answer": "<p>At Ceretone, our utmost priority is your complete satisfaction. If for any reason you’re not satisfied with your Ceretone hearing aids within 60 days of purchase, you may return them for a full refund. See our full <a href=\"https://ceretone.com/pages/warranty\" title=\"Ceretone Warranty and Return Policy\">Warranty and Return Policy</a> for details.</p>",
+            "opened": false
+          }
+        }
+      },
+      "block_order": [
+        "block_1",
+        "block_2",
+        "block_3",
+        "accordion_CHd3tc"
+      ],
+      "custom_css": [
+        ".collapsible-content__content {max-width: 150%;}",
+        "@media (max-width: 768px) {.collapsible-content__content {max-width: 100%; }}"
+      ],
+      "settings": {
+        "layout": "background",
+        "color_scheme": "background-2",
+        "enable_border": false,
+        "border_full": false,
+        "subheading": "",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "Your Questions, <span style=\"text-decoration:underline\">Answered</span>",
+        "heading_size": "h3",
+        "heading_line": "background",
+        "line_color": "#f5f8ff",
+        "word_break": false,
+        "heading_animation": "none",
+        "word_break_an": false,
+        "text": "",
+        "text_align": "center",
+        "row_color_scheme": "background-1",
+        "padding_top": "no-indent",
+        "padding_bottom": "s",
+        "margin_top": "xs",
+        "margin_bottom": "xs"
+      }
+    }
+  },
+  "order": [
+    "17344218541b2ca9bf",
+    "hero_4JK3dM",
+    "hero_qUgY4g",
+    "rich_text_RNCAwh",
+    "hero",
+    "hero_wAeVYN",
+    "fcdccba2-3798-4f1f-9704-3387ec1b3ca2",
+    "image_with_text_nWjAQB",
+    "image_with_text_Kgw9Jn",
+    "slideshow_BERaEJ",
+    "product_xz_7JyAFK",
+    "rich_text_Vzmi4m",
+    "image_with_text_QQLD36",
+    "slideshow_wmQiXB",
+    "multicolumn_qEDqFF",
+    "rich_text_qJB79r",
+    "case_studies_q8gMhx",
+    "rich_text_AHxNzc",
+    "case_studies_icaPnx",
+    "video_wXBqwr",
+    "steps_QfWYJb",
+    "collapsible-content"
+  ]
+}

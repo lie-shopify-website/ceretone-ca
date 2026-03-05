@@ -1,0 +1,35 @@
+{% liquid 
+  assign media_image_width = image_width | default:"2000"
+%}
+
+<div class="media_type-item {{ class }}" data-media-id="{{ media.id }}" data-media-type="{{ media.media_type }}" data-index="{{ data_index }}">
+	<div class="media_type-image">
+		<span class="product__media-icon motion-reduce" aria-hidden="true"><svg class="icon icon-plus-zoom" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M15.9996 1.60001L15.9996 30.4M30.3996 16L1.59961 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+		</svg></span>
+		<div class="image">
+			{% if position == 1 %}
+				<picture>
+					<source srcset="{{ media | image_url: width: 768 }}" media="(max-width: 768px)" />
+					<source srcset="{{ media | image_url: width: media_image_width }}" media="(min-width: 769px)" />
+					<img
+						src="{{ media | image_url: width: 768 }}"
+						srcset="{{ media | image_url: width: 768 }} 768w, {{ media | image_url: width: media_image_width }} {{ media_image_width }}w"
+						sizes="100vw"
+						width="384"
+						height="384"
+						loading="eager"
+						fetchpriority="high"
+						decoding="async"
+					/>
+				</picture>
+			{% else %}
+				<picture>
+					<source data-srcset="{{ media | image_url: width: 768 }}" media="(max-width: 768px)" />
+					<source data-srcset="{{ media | image_url: width: media_image_width }}" media="(min-width: 769px)" />
+					<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lzsrc="{{ media | image_url: width: 768 }}" width="100%" height="auto" class="fit-cover js-lazy">
+				</picture>
+			{% endif %}
+		</div>
+	</div>
+</div>

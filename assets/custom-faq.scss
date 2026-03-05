@@ -1,0 +1,183 @@
+@import "tools";
+
+.custom-faq {
+
+    font-family: 'Helvetica';
+    font-weight: 400;
+    background: #FFFEFB;
+    padding-top:vm(40);
+    padding-bottom:vm(30);
+    @include media-min("spc") {
+        padding-top:vmpc(70);
+        padding-bottom:vmpc(70);
+    }
+
+    .hidden-mobile {
+        display: none !important;
+        @include media-min("spc") {
+            display: block !important;
+        }
+    }
+    .hidden-desktop {
+        display: block !important;
+        @include media-min("spc") {
+            display: none !important;
+        }
+    }
+
+    p {
+        margin: 0;
+    }
+    img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .safe-container {
+        position: relative;
+        height: 100%;
+        padding: 0 vm(20);
+
+        @include media-min("spc") {
+            padding: 0;
+        }
+    }
+
+
+    .section-title {
+        margin-bottom:vm(40);
+
+        @include media-min("spc") {
+            margin-bottom:vmpc(60);
+        }
+        
+        h2 {
+            font-family: 'Helvetica';
+            font-size: vm(32); 
+            line-height: vm(44);
+            font-weight: 700;
+            text-align: center;
+            margin: 0;
+
+            @include media-min("spc") {
+                font-size: vmpc(56); 
+                line-height: 1;
+            }
+        }
+    }
+
+    .collapsible-content__layout {
+
+        .collapsible-content__item {
+            margin-bottom: vm(10);
+            border: vm(1) solid #524842;
+            border-radius: vm(12);
+            background: #F6F1EA;
+
+            @include media-min("spc") {
+                margin-bottom: vmpc(20);
+                border: vmpc(1) solid #524842;
+                border-radius: vmpc(20);
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        button.collapsible-content__toggle {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: vm(10);
+            width: 100%;
+            padding: 0;
+            border-top-left-radius: vm(12);
+            border-top-right-radius: vm(12);
+            padding: vm(13) vm(10);
+
+            @include media-min("spc") {
+                gap: vmpc(20);
+                border-top-left-radius: vmpc(20);
+                border-top-right-radius: vmpc(20);
+                padding: vmpc(30) vmpc(20);
+            }
+
+            .collapsible-content__question {
+                font-size: vm(20);
+                line-height: vm(24);
+                text-align: left;
+                margin: 0;
+                font-weight: 400;
+                
+
+                @include media-min("spc") {
+                    font-size: vmpc(26);
+                    line-height: vmpc(26);
+                }
+            }
+            .collapsible-content__icon {
+                flex: 0 0 vm(25);
+                height: vm(25);
+                transition: transform 0.2s ease;
+
+                @include media-min("spc") {
+                    flex: 0 0 vmpc(35);
+                    height: vmpc(35);
+                }
+
+                svg {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            
+        }
+
+        .collapsible-content__answer {
+            .collapsible-content__answer-inner {
+                display: grid;
+                grid-template-rows: 0fr;
+                transition: all 0.3s ease;
+            }
+            .collapsible-content__answer-ov {
+                overflow: hidden;
+                min-height: 0;
+            }
+            .body-large {
+                color:#524842;
+                font-size: vm(18);
+                line-height: vm(24);
+                margin: vm(20) 0;
+                padding:0 vm(13);
+                @include media-min("spc") {
+                    font-size: vmpc(22);
+                    line-height: vmpc(26);
+                    margin: vmpc(20) 0;
+                    padding:0 vmpc(30);
+                }
+            }
+        }
+    }
+    
+    .collapsible-content__item.active button.collapsible-content__toggle {
+            background: #524842;
+
+            .collapsible-content__question {
+                color: #FFFEFB;
+            }
+        
+    }
+
+    .collapsible-content__item.active .collapsible-content__answer-inner {
+        grid-template-rows: 1fr;
+    }
+
+    .collapsible-content__item.active .collapsible-content__icon {
+        transform: rotate(180deg);
+    }
+    
+
+}

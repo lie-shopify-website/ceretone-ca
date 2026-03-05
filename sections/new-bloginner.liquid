@@ -1,0 +1,748 @@
+{% schema %}
+{
+  "name": "Blog Article",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "hide_menu_bar",
+      "label": "Hide header menu on mobile",
+      "default": false,
+    },
+    {
+      "type": "text",
+      "id": "toc_heading",
+      "label": "Table of Contents Heading",
+      "default": "TABLE OF CONTENTS"
+    },
+    {
+      "type": "text",
+      "id": "mobile_toc_text", 
+      "label": "Mobile Table of Contents Text",
+      "default": "Table of contents"
+    },
+    {
+      "type": "text",
+      "id": "blogs_link_text",
+      "label": "Blogs Link Text",
+      "default": "Blogs"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Header Background Color",
+      "default": "#FFB26E"
+    },
+    {
+      "type": "color",
+      "id": "article_link_color",
+      "label": "Inside Blog Links Color",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "link_color",
+      "label": "Link Color",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "link_hover_color",
+      "label": "Link Hover Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "progress_bar_color",
+      "label": "Progress Bar Color",
+      "default": "#FFB26E"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title Color",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "breadcrumb_color",
+      "label": "Breadcrumb Text Color",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "breadcrumb_link_color",
+      "label": "Breadcrumb Link Color",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "breadcrumb_link_hover_color",
+      "label": "Breadcrumb Link Hover Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "date_color",
+      "label": "Date Text Color",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "read_time_color",
+      "label": "Read Time Text Color",
+      "default": "#333333"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_breadcrumbs",
+      "label": "Show Breadcrumbs",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_author",
+      "label": "Show Author",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_date",
+      "label": "Show Date",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_reading_time",
+      "label": "Show Reading Time",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_featured_image",
+      "label": "Show Featured Image",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_social_sharing",
+      "label": "Show Social Sharing",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_tags",
+      "label": "Show Tags",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_table_of_contents",
+      "label": "Show Table of Contents",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "auto_table_of_contents",
+      "label": "Use Automatic Table of Contents",
+      "default": true,
+      "info": "Automatically generates table of contents from headings"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "table_of_contents_item",
+      "name": "Table of Contents Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Section Title"
+        },
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Blog Article",
+      "category": "Blog"
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+
+  {% if section.settings.hide_menu_bar %}
+  header .outer__header .mobile__btn{
+    display: none;
+  }
+
+  header .outer__header .right__part{
+    margin-right: 0;
+  }
+  {% endif %}
+  img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+  
+  .main__flow > h1.current,
+  .main__flow > h2.current {
+    position: relative;
+    padding-left: 20px;
+  }
+  
+  .main__flow > h1.current::before,
+  .main__flow > h2.current::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background-color: {{ section.settings.progress_bar_color }};
+    border-radius: 50%;
+    animation: pulse 1.5s infinite;
+  }
+  
+  @keyframes pulse {
+    0% { transform: translateY(-50%) scale(1); }
+    50% { transform: translateY(-50%) scale(1.2); }
+    100% { transform: translateY(-50%) scale(1); }
+  }
+
+  .blog__page .article-tags a {
+    display: inline-flex;
+    text-decoration: none;
+    margin-right: 20px;
+    background: #ffffff42;
+    padding: 5px 20px;
+    border-radius: 5px;
+}
+  
+  figure {
+    margin: 0;
+    padding: 0px;
+  }
+  
+  /* Semrush style for blog meta information */
+  .bottom__info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: {{ section.settings.date_color }};
+  }
+
+  .blog__page .outer__blog .main__flow a{
+    color: {{ section.settings.article_link_color }};
+  }
+  
+  .bottom__info .read-time {
+    color: {{ section.settings.read_time_color }};
+  }
+  
+  .bottom__info .author a {
+    color: {{ section.settings.link_color }};
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .bottom__info .author a:hover {
+    color: {{ section.settings.link_hover_color }};
+    text-decoration: underline;
+  }
+  
+  .bottom__info span {
+    margin-right: 15px;
+    position: relative;
+  }
+  
+  .bottom__info span:not(:last-child)::after {
+    content: "";
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: currentColor;
+    margin-left: 15px;
+    vertical-align: middle;
+    position: absolute;
+    top: 50%;
+    right: -12px;
+    transform: translateY(-50%);
+  }
+  
+  /* Breadcrumb styling to match Semrush */
+  .breadcrumbs {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 10px 0;
+    font-size: 12px;
+    color: {{ section.settings.breadcrumb_color }};
+  }
+  
+  .breadcrumbs li {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .blog__page .head .inn .desc>.breadcrumbs li.spacer{
+    color: {{ section.settings.breadcrumb_link_color }};
+  }
+  
+  .blog__page .head .inn .desc>.breadcrumbs li a {
+    color: {{ section.settings.breadcrumb_link_color }};
+    text-decoration: none;
+  }
+  
+  .blog__page .head .inn .desc>.breadcrumbs li a:hover {
+    color: {{ section.settings.breadcrumb_link_hover_color }};
+    text-decoration: underline;
+  }
+  
+  .breadcrumbs .spacer {
+    margin: 0 8px;
+  }
+  
+  .progress_blog .active {
+    background-color: {{ section.settings.progress_bar_color }};
+  }
+</style>
+
+<div class="progress_blog">
+  <div class="active"></div>
+</div>
+
+<div class="blog__page">
+  <div class="head" style="background-color:{{ section.settings.background_color }};">
+    <div class="container">
+      <div class="inn">
+        <div class="desc">
+          {% if section.settings.show_breadcrumbs %}
+            <ul class='breadcrumbs'>
+              <li><a href="/blogs/cblog/">{{ section.settings.blogs_link_text }}</a></li>
+              <li class="spacer">/</li>
+              <li><a href="{{ blog.url }}">{{ blog.title }}</a></li>
+              {% if article.tags.size > 0 %}
+                <li class="spacer">/</li>
+                {% assign short_title = article.title | split: ':' %}
+                <li><a href="{{ article.url }}">{{ short_title[0] }}</a></li>
+              {% endif %}
+            </ul>
+          {% endif %}
+
+          {% if section.settings.show_tags %}
+              <div class="article-tags">
+                  <div class="debug" style="display:none;"></div>
+                  {% for tag in article.tags %}
+                      {% assign tag_handle = tag | handle %}
+                      {% assign filter_url = blog.url | append: '/tagged/' | append: tag_handle %}
+                      <a href="{{ filter_url }}" style="color:{{ section.settings.title_color }}">{{ tag }}</a>
+                  {% endfor %}
+              </div>
+          {% endif %}
+            
+          <div class="article-header">
+              <h1 style="color: {{ section.settings.title_color }};">{{ article.title }}</h1>
+              {% if section.settings.show_featured_image and article.image %}
+                <div class="media">
+                  <img src="{{ article.image | image_url: width: 2000 }}" alt="{{ article.title | escape }}" width="2000" height="2000">
+                </div>
+              {% endif %}
+          </div>
+          <div class="bottom__info">
+            {% if section.settings.show_author and article.author %}
+              <span class="author"><a href="{{ blog.url }}?author={{ article.author | handle }}">{{ article.author }}</a></span>
+            {% endif %}
+            {% if section.settings.show_date %}
+              <span class="date" style="color: {{ section.settings.date_color }};">{{ article.published_at | date: "%b %d, %Y" }}</span>
+            {% endif %}
+
+            
+            {% if section.settings.show_reading_time %}
+              <span class="read-time" style="color: {{ section.settings.read_time_color }};">{{ article.content | strip_html | size | divided_by: 1000 | plus: 1 }} min read</span>
+            {% endif %}
+            {% if article.metafields.custom.contributors %}
+              <span class="contributors">Contributors: {{ article.metafields.custom.contributors }}</span>
+            {% endif %}
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="outer__blog">
+      {% if section.settings.show_table_of_contents or section.settings.show_social_sharing %}
+        <div class="side__desc">
+          <div class="inn">
+            {% if section.settings.show_social_sharing %}
+              <div class="share">
+                <p>Share</p>
+                <ul>
+                  <li><a href="https://www.linkedin.com/shareArticle?mini=true&url={{ shop.url | append: article.url }}&title={{ article.title | url_encode }}" target="_blank" rel="noopener">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M19 3H5C3.895 3 3 3.895 3 5V19C3 20.105 3.895 21 5 21H19C20.105 21 21 20.105 21 19V5C21 3.895 20.105 3 19 3Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M8 10V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M8 7V7.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M12 16V10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M16 16V12C16 11.4696 15.7893 10.9609 15.4142 10.5858C15.0391 10.2107 14.5304 10 14 10C13.4696 10 12.9609 10.2107 12.5858 10.5858C12.2107 10.9609 12 11.4696 12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </a></li>
+                  <li><a href="https://twitter.com/intent/tweet?text={{ article.title | url_encode }}&url={{ shop.url | append: article.url }}" target="_blank" rel="noopener">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M22 4.01C21 4.5 20.02 4.69 19 5C18.12 4.16 16.88 3.7 15.5 3.7C12.92 3.7 10.85 5.77 10.85 8.35C10.85 8.67 10.89 8.99 10.94 9.28C7.00004 9.09 3.52004 7.25 1.40004 4.49C1.06004 5.12 0.880043 5.87 0.880043 6.67C0.880043 8.19 1.63004 9.55 2.80004 10.35C2.01004 10.34 1.28004 10.09 0.640043 9.73V9.79C0.640043 12.05 2.20004 13.95 4.34004 14.32C4.01668 14.4153 3.67768 14.4611 3.34004 14.46C3.10004 14.46 2.86004 14.43 2.63004 14.39C3.11004 16.26 4.86004 17.65 6.91004 17.69C5.29004 18.98 3.28004 19.73 1.12004 19.73C0.800043 19.73 0.490043 19.71 0.190043 19.67C2.27004 21.04 4.73004 21.81 7.37004 21.81C15.5 21.81 19.96 15.06 19.96 9.13C19.96 8.94 19.95 8.76 19.94 8.58C20.94 7.84 21.79 6.9 22.46 5.82L22 4.01Z" fill="currentColor"/>
+                    </svg>
+                  </a></li>
+                  <li><a href="https://www.facebook.com/sharer.php?u={{ shop.url | append: article.url }}" target="_blank" rel="noopener">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M18 2H15C13.6739 2 12.4021 2.52678 11.4645 3.46447C10.5268 4.40215 10 5.67392 10 7V10H7V14H10V22H14V14H17L18 10H14V7C14 6.73478 14.1054 6.48043 14.2929 6.29289C14.4804 6.10536 14.7348 6 15 6H18V2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </a></li>
+                  <li><a href="mailto:?subject={{ article.title | url_encode }}&body={{ shop.url | append: article.url }}" target="_blank" rel="noopener">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M22 6L12 13L2 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </a></li>
+                </ul>
+              </div>
+            {% endif %}
+            
+            {% if section.settings.show_table_of_contents and section.blocks.size > 0 %}
+              <div class="table__">
+                <p>TABLE OF CONTENTS</p>
+                <ul>
+                  {% for block in section.blocks %}
+                    {% if block.type == 'table_of_contents_item' %}
+                      <li {{ block.shopify_attributes }}><a href="#" class="{% if forloop.first %}current{% endif %}" data-id="{{ forloop.index }}">{{ block.settings.title }}</a></li>
+                    {% endif %}
+                  {% endfor %}
+                </ul>
+              </div>
+            {% endif %}
+          </div>
+          
+          <div class="mob">
+            <a href="#" class="table-of-contents-trigger">{{ section.settings.mobile_toc_text }}</a>
+            <a href="#" class="share-trigger"><svg aria-hidden="true" tabindex="-1" disabled="" class="___SIcon_pchrv_gg_ sc-gslxeA buUKXX" data-ui-name="Share" width="16" height="16" viewBox="0 0 16 16" data-name="Share" data-group="m"><path d="M11.707 1.293a1 1 0 1 0-1.414 1.414L12.586 5H7a6 6 0 0 0-6 6v3a1 1 0 1 0 2 0v-3a4 4 0 0 1 4-4h5.586l-2.293 2.293a1 1 0 1 0 1.414 1.414l4-4a1 1 0 0 0 0-1.414l-4-4Z" shape-rendering="geometricPrecision"></path></svg> Share</a>
+          </div>
+        </div>
+      {% endif %}
+      
+      <div class="main__flow">
+        {{ article.content }}
+        
+        {% if section.settings.show_social_sharing %}
+          <div class="share">
+            <p>Share</p>
+            <ul>
+              <li><a href="https://www.linkedin.com/shareArticle?mini=true&url={{ shop.url | append: article.url }}&title={{ article.title | url_encode }}" target="_blank" rel="noopener">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M19 3H5C3.895 3 3 3.895 3 5V19C3 20.105 3.895 21 5 21H19C20.105 21 21 20.105 21 19V5C21 3.895 20.105 3 19 3Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M8 10V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M8 7V7.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M12 16V10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M16 16V12C16 11.4696 15.7893 10.9609 15.4142 10.5858C15.0391 10.2107 14.5304 10 14 10C13.4696 10 12.9609 10.2107 12.5858 10.5858C12.2107 10.9609 12 11.4696 12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a></li>
+              <li><a href="https://twitter.com/intent/tweet?text={{ article.title | url_encode }}&url={{ shop.url | append: article.url }}" target="_blank" rel="noopener">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M22 4.01C21 4.5 20.02 4.69 19 5C18.12 4.16 16.88 3.7 15.5 3.7C12.92 3.7 10.85 5.77 10.85 8.35C10.85 8.67 10.89 8.99 10.94 9.28C7.00004 9.09 3.52004 7.25 1.40004 4.49C1.06004 5.12 0.880043 5.87 0.880043 6.67C0.880043 8.19 1.63004 9.55 2.80004 10.35C2.01004 10.34 1.28004 10.09 0.640043 9.73V9.79C0.640043 12.05 2.20004 13.95 4.34004 14.32C4.01668 14.4153 3.67768 14.4611 3.34004 14.46C3.10004 14.46 2.86004 14.43 2.63004 14.39C3.11004 16.26 4.86004 17.65 6.91004 17.69C5.29004 18.98 3.28004 19.73 1.12004 19.73C0.800043 19.73 0.490043 19.71 0.190043 19.67C2.27004 21.04 4.73004 21.81 7.37004 21.81C15.5 21.81 19.96 15.06 19.96 9.13C19.96 8.94 19.95 8.76 19.94 8.58C20.94 7.84 21.79 6.9 22.46 5.82L22 4.01Z" fill="currentColor"/>
+                </svg>
+              </a></li>
+              <li><a href="https://www.facebook.com/sharer.php?u={{ shop.url | append: article.url }}" target="_blank" rel="noopener">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18 2H15C13.6739 2 12.4021 2.52678 11.4645 3.46447C10.5268 4.40215 10 5.67392 10 7V10H7V14H10V22H14V14H17L18 10H14V7C14 6.73478 14.1054 6.48043 14.2929 6.29289C14.4804 6.10536 14.7348 6 15 6H18V2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a></li>
+              <li><a href="mailto:?subject={{ article.title | url_encode }}&body={{ shop.url | append: article.url }}" target="_blank" rel="noopener">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M22 6L12 13L2 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a></li>
+            </ul>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mobile__double">
+  <a href="#" class="close-mobile-menu"><svg aria-hidden="true" tabindex="-1" disabled="" class="___SIcon_pchrv_gg_" data-ui-name="Close" width="24" height="24" viewBox="0 0 24 24" data-name="Close" data-group="l" title="Close"><path d="M20.707 4.707a1 1 0 0 0-1.414-1.414L12 10.586 4.707 3.293a1 1 0 0 0-1.414 1.414L10.586 12l-7.293 7.293a1 1 0 1 0 1.414 1.414L12 13.414l7.293 7.293a1 1 0 0 0 1.414-1.414L13.414 12l7.293-7.293Z" shape-rendering="geometricPrecision"></path></svg></a>
+  
+  {% if section.settings.show_table_of_contents and section.blocks.size > 0 %}
+    <div class="elem__table first">
+      <ul>
+        {% for block in section.blocks %}
+          {% if block.type == 'table_of_contents_item' %}
+            <li {{ block.shopify_attributes }}><a href="#" class="{% if forloop.first %}current{% endif %}" data-id="{{ forloop.index }}">{{ block.settings.title }}</a></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
+  
+  {% if section.settings.show_social_sharing %}
+    <div class="elem__table sec">
+      <div class="soc">
+        <ul>
+          <li><a href="https://www.facebook.com/sharer.php?u={{ shop.url | append: article.url }}" target="_blank" rel="noopener">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 2H15C13.6739 2 12.4021 2.52678 11.4645 3.46447C10.5268 4.40215 10 5.67392 10 7V10H7V14H10V22H14V14H17L18 10H14V7C14 6.73478 14.1054 6.48043 14.2929 6.29289C14.4804 6.10536 14.7348 6 15 6H18V2Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a></li>
+          <li><a href="https://twitter.com/intent/tweet?text={{ article.title | url_encode }}&url={{ shop.url | append: article.url }}" target="_blank" rel="noopener">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M22 4.01C21 4.5 20.02 4.69 19 5C18.12 4.16 16.88 3.7 15.5 3.7C12.92 3.7 10.85 5.77 10.85 8.35C10.85 8.67 10.89 8.99 10.94 9.28C7.00004 9.09 3.52004 7.25 1.40004 4.49C1.06004 5.12 0.880043 5.87 0.880043 6.67C0.880043 8.19 1.63004 9.55 2.80004 10.35C2.01004 10.34 1.28004 10.09 0.640043 9.73V9.79C0.640043 12.05 2.20004 13.95 4.34004 14.32C4.01668 14.4153 3.67768 14.4611 3.34004 14.46C3.10004 14.46 2.86004 14.43 2.63004 14.39C3.11004 16.26 4.86004 17.65 6.91004 17.69C5.29004 18.98 3.28004 19.73 1.12004 19.73C0.800043 19.73 0.490043 19.71 0.190043 19.67C2.27004 21.04 4.73004 21.81 7.37004 21.81C15.5 21.81 19.96 15.06 19.96 9.13C19.96 8.94 19.95 8.76 19.94 8.58C20.94 7.84 21.79 6.9 22.46 5.82L22 4.01Z" fill="white"/>
+            </svg>
+          </a></li>
+          <li><a href="https://www.linkedin.com/shareArticle?mini=true&url={{ shop.url | append: article.url }}&title={{ article.title | url_encode }}" target="_blank" rel="noopener">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 3H5C3.895 3 3 3.895 3 5V19C3 20.105 3.895 21 5 21H19C20.105 21 21 20.105 21 19V5C21 3.895 20.105 3 19 3Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M8 10V16" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M8 7V7.01" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 16V10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M16 16V12C16 11.4696 15.7893 10.9609 15.4142 10.5858C15.0391 10.2107 14.5304 10 14 10C13.4696 10 12.9609 10.2107 12.5858 10.5858C12.2107 10.9609 12 11.4696 12 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a></li>
+        </ul>
+      </div>
+    </div>
+  {% endif %}
+  
+  <div class="btns">
+    <a href="#" class="table__contents1">{{ section.settings.mobile_toc_text }}</a>
+    <a href="#" class="table__contents2"><svg aria-hidden="true" tabindex="-1" disabled="" class="___SIcon_pchrv_gg_ sc-gslxeA buUKXX" data-ui-name="Share" width="16" height="16" viewBox="0 0 16 16" data-name="Share" data-group="m"><path d="M11.707 1.293a1 1 0 1 0-1.414 1.414L12.586 5H7a6 6 0 0 0-6 6v3a1 1 0 1 0 2 0v-3a4 4 0 0 1 4-4h5.586l-2.293 2.293a1 1 0 1 0 1.414 1.414l4-4a1 1 0 0 0 0-1.414l-4-4Z" shape-rendering="geometricPrecision"></path></svg> Share</a>
+  </div>
+</div>
+
+<div class="mobile__controls">
+  <a href="#" class="btn1">{{ section.settings.mobile_toc_text }}</a>
+  <a href="#" class="btn2"><svg aria-hidden="true" tabindex="-1" disabled="" class="___SIcon_pchrv_gg_ sc-gslxeA buUKXX" data-ui-name="Share" width="16" height="16" viewBox="0 0 16 16" data-name="Share" data-group="m"><path d="M11.707 1.293a1 1 0 1 0-1.414 1.414L12.586 5H7a6 6 0 0 0-6 6v3a1 1 0 1 0 2 0v-3a4 4 0 0 1 4-4h5.586l-2.293 2.293a1 1 0 1 0 1.414 1.414l4-4a1 1 0 0 0 0-1.414l-4-4Z" shape-rendering="geometricPrecision"></path></svg> Share</a>
+</div>
+<script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+<script defer>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Make tables scrollable
+    document.querySelectorAll('.rte > table').forEach((table) => {
+      const wrapper = document.createElement('div');
+      wrapper.className = 'scrollable-table';
+      table.parentNode.insertBefore(wrapper, table);
+      wrapper.appendChild(table);
+    });
+    
+    // Get all the elements once
+    let mainFlow = document.querySelector('.main__flow');
+    let tocLinksDesktop = document.querySelectorAll('.blog__page .outer__blog .side__desc .inn>.table__>ul>li>a');
+    let tocLinksMobile = document.querySelectorAll('.mobile__double .elem__table>ul>li>a');
+    let progressBar = document.querySelector('.progress_blog .active');
+    
+    // Set the first TOC item as active if available
+    if (tocLinksDesktop.length > 0) {
+      tocLinksDesktop[0].classList.add('current');
+    }
+    if (tocLinksMobile.length > 0) {
+      tocLinksMobile[0].classList.add('current');
+    }
+    
+    // Generate TOC from headings when auto-TOC is enabled
+    if ({{ section.settings.auto_table_of_contents | json }}) {
+      // Find all headings in the content
+      const headings = mainFlow.querySelectorAll('h1, h2');
+      const tocContainerDesktop = document.querySelector('.blog__page .outer__blog .side__desc .inn>.table__>ul');
+      const tocContainerMobile = document.querySelector('.mobile__double .elem__table>ul');
+      
+      // Clear existing TOC
+      if (tocContainerDesktop) tocContainerDesktop.innerHTML = '';
+      if (tocContainerMobile) tocContainerMobile.innerHTML = '';
+      
+      // Create TOC links for each heading
+      headings.forEach((heading, index) => {
+        const headingId = 'heading-' + index;
+        heading.id = headingId;
+        
+        const listItem = document.createElement('li');
+        const link = document.createElement('a');
+        link.href = '#' + headingId;
+        link.textContent = heading.textContent;
+        link.dataset.headingId = headingId;
+        if (index === 0) link.classList.add('current');
+        
+        listItem.appendChild(link);
+        
+        // Add to desktop TOC
+        if (tocContainerDesktop) tocContainerDesktop.appendChild(listItem.cloneNode(true));
+        // Add to mobile TOC
+        if (tocContainerMobile) tocContainerMobile.appendChild(listItem);
+      });
+      
+      // Re-select TOC links after generation
+      tocLinksDesktop = document.querySelectorAll('.blog__page .outer__blog .side__desc .inn>.table__>ul>li>a');
+      tocLinksMobile = document.querySelectorAll('.mobile__double .elem__table>ul>li>a');
+    }
+    
+    // Get all TOC links
+    const allTocLinks = [...tocLinksDesktop, ...tocLinksMobile];
+    
+    // Find all headings in the content
+    const headings = Array.from(mainFlow.querySelectorAll('h1, h2'));
+    
+    // Handle TOC link clicks
+    allTocLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        // Remove 'current' class from all TOC links
+        allTocLinks.forEach(l => l.classList.remove('current'));
+        
+        // Add 'current' class to the clicked link
+        this.classList.add('current');
+        
+        // Find matching links in other TOC (desktop/mobile) and update them too
+        const headingId = this.getAttribute('href').substring(1);
+        allTocLinks.forEach(otherLink => {
+          if (otherLink !== this && otherLink.getAttribute('href') === '#' + headingId) {
+            otherLink.classList.add('current');
+          }
+        });
+        
+        // Scroll to the heading
+        const targetHeading = document.getElementById(headingId);
+        if (targetHeading) {
+          window.scrollTo({
+            top: targetHeading.offsetTop - 100,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+    
+    // Handle scroll events to update TOC
+    let lastScrollTop = 0;
+    let ticking = false;
+    
+    window.addEventListener('scroll', function() {
+      lastScrollTop = window.scrollY;
+      
+      if (!ticking) {
+        window.requestAnimationFrame(function() {
+          handleScroll(lastScrollTop);
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+    
+    // Update progress bar on scroll
+    function handleScroll(scrollTop) {
+      // Update progress bar
+      if (progressBar) {
+        const scrollHeight = document.documentElement.scrollHeight;
+        const clientHeight = document.documentElement.clientHeight;
+        const scrollPercentage = (scrollTop / (scrollHeight - clientHeight)) * 100;
+        progressBar.style.width = scrollPercentage + '%';
+      }
+      
+      // Find the current heading based on scroll position
+      updateCurrentTOCItem(scrollTop);
+    }
+    
+    // Function to update the current TOC item based on scroll position
+    function updateCurrentTOCItem(scrollTop) {
+      if (headings.length === 0 || allTocLinks.length === 0) return;
+      
+      // Find the current heading
+      let currentHeadingIndex = -1;
+      const offset = 200; // Offset to determine when a heading is "active"
+      
+      // Start from the end and find the first heading above the threshold
+      for (let i = headings.length - 1; i >= 0; i--) {
+        if (headings[i].getBoundingClientRect().top <= offset) {
+          currentHeadingIndex = i;
+          break;
+        }
+      }
+      
+      // If we're at the very top, use the first heading
+      if (currentHeadingIndex === -1 && scrollTop < 300) {
+        currentHeadingIndex = 0;
+      }
+      
+      // If we're at the very bottom, use the last heading
+      if (currentHeadingIndex === -1 && 
+          scrollTop + window.innerHeight >= document.documentElement.scrollHeight - 200) {
+        currentHeadingIndex = headings.length - 1;
+      }
+      
+      // Update the TOC links if we found a current heading
+      if (currentHeadingIndex >= 0) {
+        const currentHeadingId = headings[currentHeadingIndex].id;
+        
+        // Remove 'current' class from all TOC links
+        allTocLinks.forEach(link => link.classList.remove('current'));
+        
+        // Add 'current' class to the corresponding TOC links
+        allTocLinks.forEach(link => {
+          if (link.getAttribute('href') === '#' + currentHeadingId) {
+            link.classList.add('current');
+          }
+        });
+      }
+    }
+    
+    // Mobile menu toggles
+    const tableTriggers = document.querySelectorAll('.table-of-contents-trigger, .btn1, .table__contents1');
+    const shareTriggers = document.querySelectorAll('.share-trigger, .btn2, .table__contents2');
+    const closeBtn = document.querySelector('.close-mobile-menu');
+    const mobileMenu = document.querySelector('.mobile__double');
+    const tableContent = document.querySelector('.elem__table.first');
+    const shareContent = document.querySelector('.elem__table.sec');
+    
+    if (tableTriggers) {
+      tableTriggers.forEach(tableTrigger => {
+        tableTrigger.addEventListener('click', function(e) {
+          e.preventDefault();
+          mobileMenu.style.display = 'block';
+          mobileMenu.style.opacity = '1';
+          tableContent.style.display = 'block';
+          shareContent.style.display = 'none';
+        });
+      });
+    }
+
+    if (shareTriggers) {
+      shareTriggers.forEach(shareTrigger => {
+        shareTrigger.addEventListener('click', function(e) {
+            e.preventDefault();
+            mobileMenu.style.display = 'block';
+            mobileMenu.style.opacity = '1';
+            tableContent.style.display = 'none';
+            shareContent.style.display = 'block';
+        });
+      });
+    }
+    
+    if (closeBtn) {
+      closeBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        mobileMenu.style.display = 'none';
+      });
+    }
+    
+    // Initial update on page load
+    setTimeout(() => {
+      handleScroll(window.scrollY);
+    }, 100);
+  });
+</script>

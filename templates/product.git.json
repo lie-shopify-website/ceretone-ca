@@ -1,0 +1,124 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h3"
+          }
+        },
+        "judge_me_reviews_preview_badge_AR3dfA": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "disabled": true,
+          "settings": {}
+        },
+        "text_fiW8GT": {
+          "type": "text",
+          "settings": {
+            "text": "$0 USD",
+            "color": "#011624",
+            "font_size": 2
+          }
+        },
+        "price": {
+          "type": "price",
+          "disabled": true,
+          "settings": {}
+        },
+        "tags": {
+          "type": "tags",
+          "disabled": true,
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_quantity": true,
+            "show_gift_card_recipient": false
+          }
+        },
+        "pickup_availability": {
+          "type": "pickup_availability",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "disabled": true,
+          "settings": {
+            "description": "Enjoy free gift wrapping with your hearing aid purchase! Just select the \"Free Gift Wrapping\" option on the product page, and we’ll use a randomly selected wrapping paper design. Please note: gift wrapping is not available for individual purchase."
+          }
+        },
+        "custom_liquid_bag8Bf": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<p>Enjoy free gift wrapping with your hearing aid purchase! Just select the \"Free Gift Wrapping\" option on the hearing aids product page, and we’ll use a randomly selected wrapping paper design.</p>\n<p><span style=\"color: black;\">Please note:</span> <span style=\"color: red; font-style: italic;\">gift wrapping is not available for individual purchase.</span></p>"
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "judge_me_reviews_preview_badge_AR3dfA",
+        "text_fiW8GT",
+        "price",
+        "tags",
+        "variant_picker",
+        "buy_buttons",
+        "pickup_availability",
+        "description",
+        "custom_liquid_bag8Bf"
+      ],
+      "settings": {
+        "desktop_alignment": "right",
+        "mobile_alignment": "before",
+        "gallery_type": "slider_previews",
+        "aspect_ratio": "adapt",
+        "image_fit": "cover",
+        "image_fit_modal": "contain",
+        "padding_bottom": "l"
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "background-1",
+        "subheading": "Subheading",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "You May Also Like",
+        "heading_size": "h2",
+        "text": "Some description",
+        "products_limit": 6,
+        "image_ratio": "5/4",
+        "image_fit": "cover",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_desc": true,
+        "padding_top": "l",
+        "padding_bottom": "l"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "product-recommendations"
+  ]
+}

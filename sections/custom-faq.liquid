@@ -1,0 +1,131 @@
+
+{% schema %}
+  {
+    "name": "Custom Faq",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "title",
+        "label": "Heading"
+      }
+    ],
+    
+    "blocks": [
+      {
+        "type": "accordion",
+        "name": "Accordion",
+        "limit": 20,
+        "settings": [
+          {
+            "type": "text",
+            "id": "question",
+            "default": "Some title",
+            "label": "Auestion"
+          },
+          {
+            "type": "textarea",
+            "id": "answer",
+            "default": "<p>Some description</p>",
+            "label": "Answer"
+          }, 
+          {
+            "type": "checkbox",
+            "id": "opened",
+            "label": "opened",
+            "default": false
+          }
+        ]
+      }
+    ],
+    
+    "presets": [
+      {
+        "name": "Custom Faq",
+        "category": "custom"
+      }
+    ]
+  }
+{% endschema %}
+
+
+<link rel="stylesheet" href="{{ 'custom-faq.css' | asset_url }}" media="all" >
+
+<div class="custom-faq" data-section-id="{{ section.id }}">
+  <div class="safe-container">
+    {% if section.settings.title != blank %}
+      <div class="section-title"><h2>{{ section.settings.title }}</h2></div>
+    {% endif %}
+            
+    <div class="collapsible-content__layout {% if section.settings.big_image != blank %}has-image{% endif %}">
+
+      <div class="collapsible-content__items">
+      <div class="collapsible-content__items-inner">
+        {%- for block in section.blocks -%}
+          <div class="collapsible-content__item {% if block.settings.opened %} active {% endif %}" >
+            <button class="collapsible-content__toggle button--unstyled focus-inset">
+              <div class="collapsible-content__toggle-group">
+                {%- if block.settings.question != blank -%}
+                  <h3 class="collapsible-content__question h6">{{ block.settings.question | escape }}</h3>
+                {%- endif -%}
+              </div>
+              <div class="collapsible-content__icon">
+                <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="23.2" height="19.4" transform="matrix(1 0 0 -1 6.5 27.1001)" fill="#524842"/>
+                <path d="M17.543 17.543L17.457 17.457C17.4883 17.4844 17.5156 17.5117 17.543 17.543Z" fill="white"/>
+                <path d="M-7.64949e-07 17.5C-3.4252e-07 7.83594 7.83594 3.4252e-07 17.5 7.64949e-07C27.1641 1.18738e-06 35 7.83594 35 17.5C35 27.1641 27.1641 35 17.5 35C7.83594 35 -1.18738e-06 27.1641 -7.64949e-07 17.5ZM18.3437 22.1016L18.4297 22.0156L19.2695 21.1758L25.7422 14.7031C26.2266 14.2187 26.2266 13.4219 25.7422 12.9336C25.2578 12.4492 24.4609 12.4492 23.9727 12.9336L17.5 19.4102L11.0234 12.9375C10.5391 12.4531 9.74219 12.4531 9.2539 12.9375C8.76953 13.4219 8.76953 14.2187 9.25781 14.7031L15.7305 21.1758L16.582 22.0273L16.6523 22.0977C16.875 22.3047 17.1758 22.4297 17.5039 22.4258C17.8281 22.4258 18.1211 22.3047 18.3437 22.1016Z" fill="#FFFEFB"/>
+                </svg>
+
+              </div>
+            </button>
+
+            {%- if block.settings.answer != blank -%}
+              <div
+                class="collapsible-content__answer"
+                {% if block.settings.opened %} style="display: block;" {% endif %} >
+                <div class="collapsible-content__answer-inner">
+                  <div class="collapsible-content__answer-ov">
+                      <div class="body-large">{{ block.settings.answer }}</div>
+                  </div>
+                </div>
+              </div>
+            {%- endif -%}
+          </div>
+        {%- endfor -%}
+      </div>
+      </div>
+  
+    </div>
+  </div>
+</div>
+
+<script>
+; (function () {
+    const oSection = document.querySelector('[data-section-id="{{ section.id }}"]');
+
+    const initCollapsibleContent = () => {
+      oSection.querySelectorAll('.collapsible-content__toggle').forEach(toggle => {
+            toggle.addEventListener('click', function () {
+                const parent = this.parentElement;
+                const isActive = parent.classList.contains('active');
+
+                oSection.querySelectorAll('.collapsible-content__item.active').forEach(item => {
+                    if (item !== parent) {
+                        item.classList.remove('active');
+                    }
+                });
+
+                if (!isActive) {
+                    parent.classList.add('active');
+                } else {
+                    parent.classList.remove('active');
+                }
+            });
+        });
+    };
+    
+    window.addEventListener('DOMContentLoaded', function() {
+      initCollapsibleContent();
+    });
+
+})();
+</script>

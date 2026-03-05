@@ -1,0 +1,353 @@
+<style>
+    [data-section-id="{{ section.id }}"] {
+      background-color: {{ section.settings.color }};
+      padding-top: {{ section.settings.top_one |  append: 'px' }}
+       !important;
+      padding-bottom: {{ section.settings.bottom_one |  append: 'px' }}
+       !important;
+    }
+    [data-section-id="{{ section.id }}"] .UserGuide_header h2 {
+      margin: 20px 0;
+      text-align: center;
+      color: {{ section.settings.zi_color }};
+      font-weight: 700;
+    }
+    [data-section-id="{{ section.id }}"] .Imagetext_header_h4 {
+      margin: 20px 0;
+      text-align: center;
+      color: {{ section.settings.zi_color }};
+      font-size: 30px;
+      font-weight: 700;
+    }
+    .UserGuide_hr {
+      width: 100%;
+      height: 1px;
+      background-color: #ccc;
+      margin: 20px 0;
+    }
+    [data-section-id="{{ section.id }}"] .UserGuide_header p {
+      text-align: center;
+    }
+    .Videorecom {
+      display: flex;
+      flex-wrap: wrap;
+      row-gap: 40px;
+    }
+    .Videorecom_boxbig {
+      flex-basis: calc(50% - 160px);
+      margin: 10px 80px;
+      width: 350px;
+      padding: 20px;
+      box-shadow: rgb(0 0 0 / 50%) 0 5px 18px;
+      border-radius: 10px;
+    }
+    .Videorecom_box_text {
+      width: 90%;
+      margin: 20px auto 0;
+    }
+    .Videorecom_box {
+      cursor: pointer;
+      border-radius: 24px;
+      overflow: hidden;
+      position: relative;
+    }
+    .Videorecom_box img {
+      width: 100%;
+    }
+    .Videorecom_vider {
+      display: none;
+      height: 100vh;
+      width: 100vw;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.9);
+      z-index: 999;
+    }
+    .Videorecom_vider_box {
+      position: relative;
+      height: 100%;
+      width: 100%;
+    }
+    .Videorecom_vider_box_a {
+      width: 80%;
+      height: 80%;
+      max-width: 100%;
+      max-height: 100%;
+      visibility: visible;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+    }
+    .Videorecom_vider_box_aspan {
+      display: block;
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMjQuNTEyIDIyNC41MTIiIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIj48cGF0aCBkYXRhLW9yaWdpbmFsPSIjMDEwMDAyIiBjbGFzcz0iYWN0aXZlLXBhdGgiIGRhdGEtb2xkX2NvbG9yPSIjMDEwMDAyIiBmaWxsPSIjZmZmIiBkPSJNMjI0LjUwNyA2Ljk5N0wyMTcuNTIxIDAgMTEyLjI1NiAxMDUuMjU4IDYuOTk4IDAgLjAwNSA2Ljk5N2wxMDUuMjU4IDEwNS4yNTdMLjAwNSAyMTcuNTEybDYuOTkzIDdMMTEyLjI1NiAxMTkuMjRsMTA1LjI2NSAxMDUuMjcyIDYuOTg2LTctMTA1LjI1OC0xMDUuMjU4eiIvPjwvc3ZnPg==') no-repeat 50%/16px;
+      right: 0;
+      top: -24px;
+      pointer-events: none;
+      cursor: pointer;
+    }
+    .play-button {
+      width: 50px;
+      /* 播放按钮的宽度 */
+      height: 50px;
+      /* 播放按钮的高度 */
+      background-color: red;
+      /* 播放按钮的背景颜色 */
+      border: none;
+      /* 去除按钮的边框 */
+      border-radius: 50%;
+      /* 将按钮设置为圆形 */
+      position: relative;
+      /* 设置相对定位，以便绝对定位三角形 */
+      overflow: hidden;
+      /* 隐藏溢出部分 */
+    }
+
+    .triangle {
+      position: absolute;
+      top: 50%;
+      left: 57%;
+      transform: translate(-50%, -50%) rotate(90deg);
+      width: 0;
+      height: 0;
+      border-bottom: 15px solid white;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+    }
+    @media(max-width: 768px) {
+      .Videorecom{
+        display: block;
+      }
+      .Videorecom_boxbig {
+      width: 90%;
+      margin: 0 auto 50px;
+  }
+    }
+</style>
+<div data-section-id="{{ section.id }}" class="UserGuide">
+  <div class="container">
+    <div class="UserGuide_header">
+      {% if section.settings.heading != blank %}
+        <h2 class="Imagetext_header_h2 h2">
+          {{ section.settings.heading }}
+        </h2>
+      {% endif %}
+      {% if section.settings.text != blank %}
+        <p>{{ section.settings.text | newline_to_br }}</p>
+      {% endif %}
+      <hr class="UserGuide_hr">
+    </div>
+    <div class="Videorecom">
+      {% for block in section.blocks %}
+        <div class="Videorecom_boxbig">
+          <div class="Videorecom_box">
+            {% comment %} <img src="{{ block.settings.image | image_url: width: 3840 }}" alt=""> {% endcomment %}
+            <img
+              src="https://img.youtube.com/vi/{{ block.settings.video_url.id }}/maxresdefault.jpg"
+              alt="Video Thumbnail"
+            >
+            <div style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%)">
+              <button class="play-button">
+                <span class="triangle"></span>
+              </button>
+            </div>
+            <div class="Videorecom_vider">
+              <div class="Videorecom_vider_box">
+                <div class="Videorecom_vider_box_a">
+                  <span class="Videorecom_vider_box_aspan"></span>
+                  {%- if block.settings.video_url.type == 'youtube' -%}
+                    <iframe
+                      width="100%"
+                      height="100%"
+                      src="https://www.youtube.com/embed/{{ block.settings.video_url.id }}?enablejsapi=1"
+                      class="js-youtube"
+                      allow="autoplay; encrypted-media"
+                      allowfullscreen
+                      title="{{ block.settings.description | escape }}"
+                    ></iframe>
+                  {%- else -%}
+                    <iframe
+                      width="100%"
+                      height="100%"
+                      src="https://player.vimeo.com/video/{{ block.settings.video_url.id }}"
+                      class="js-vimeo"
+                      allow="autoplay; encrypted-media"
+                      allowfullscreen
+                      title="{{ block.settings.description | escape }}"
+                    ></iframe>
+                  {%- endif -%}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="Videorecom_box_text">
+            {% if block.settings.text != blank %}
+              <p style="font-weight: 700;">{{ block.settings.text }}</p>
+            {% endif %}
+            {% if block.settings.Seconds != blank %}
+              <p>{{ block.settings.Seconds }}</p>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<script>
+  const boxes = document.querySelectorAll('.Videorecom_box');
+  boxes.forEach(function(box) {
+    const subBox = box.querySelector('.Videorecom_vider');
+    const span = box.querySelector('.Videorecom_vider_box_aspan');
+
+    let isHidden = true; // 初始状态为隐藏
+
+    box.addEventListener('click', function() {
+      if (isHidden) {
+        subBox.style.display = 'block';
+        isHidden = false;
+      } else {
+        subBox.style.display = 'none';
+        isHidden = true;
+      }
+    });
+
+    span.addEventListener('click', function(event) {
+      event.stopPropagation();
+      subBox.style.display = 'none';
+      isHidden = true;
+    });
+  });
+  document.addEventListener("DOMContentLoaded", function () {
+    if ('{{ block.settings.video_url.type }}' === 'vimeo') {
+      var vimeoID = '{{ block.settings.video_url.id }}';
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET', 'https://vimeo.com/api/v2/video/' + vimeoID + '.json', true);
+      xhr.onload = function() {
+        if (this.status == 200) {
+          var response = JSON.parse(this.responseText);
+          var thumbnail = response[0].thumbnail_large;
+          document.getElementById('vimeo-thumbnail').src = thumbnail;
+        }
+      };
+      xhr.send();
+    }
+  });
+</script>
+{% schema %}
+{
+  "name": "使用教程",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "color",
+      "label": "背景颜色",
+      "default": "#f5f5f5"
+    },
+    {
+      "type": "range",
+      "id": "top_one",
+      "label": "上边距",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "bottom_one",
+      "label": "下边距",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "top_one_mic",
+      "label": "移动端上边距",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "default": 20
+    }, {
+      "type": "range",
+      "id": "bottom_one_mic",
+      "label": "移动端下边距",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "default": 20
+    }, {
+      "type": "text",
+      "id": "heading",
+      "default": "What Our Users Say",
+      "label": "标题"
+    }, {
+      "type": "color",
+      "id": "zi_color",
+      "label": "标题字体颜色",
+      "default": "#000"
+    }, {
+      "type": "textarea",
+      "id": "text",
+      "label": "文案"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "添加教程",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "视频封面图"
+        },{
+        "type": "video_url",
+        "id": "video_url",
+        "accept": [
+            "youtube", "vimeo"
+        ],
+        "default": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "label": "视频链接"
+        }, {
+          "type": "textarea",
+          "id": "text",
+          "label": "文案"
+        }, {
+          "type": "text",
+          "id": "Seconds",
+          "default": "21 sec",
+          "label": "秒数"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "使用教程",
+      "blocks": [
+        {
+          "type": "slide"
+        }, {
+          "type": "slide"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

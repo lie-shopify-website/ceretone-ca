@@ -1,0 +1,205 @@
+<style>
+  [data-section-id="{{ section.id }}"] {
+    background-color: {{ section.settings.bg_color }};
+    padding-top: {{ section.settings.top_one |  append: 'rem' }};
+    padding-bottom: {{ section.settings.bottom_one |  append: 'rem' }};
+  }
+  .ProductDetails_pc {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  .ProductDetails_px_box_img {
+    display: block;
+    width: 8rem;
+    height: auto;
+    margin: 0 0 1rem;
+  }
+
+  .ProductDetails_px_box {
+    width: calc((100% - 4rem) / 3);
+    padding: 5rem 2rem;
+    border-radius: 1.2rem;
+    box-sizing: border-box;
+  }
+  [data-section-id="{{ section.id }}"] .Characteristic_p {
+    margin: 0 0 1rem;
+    font-weight: 600;
+  }
+  [data-section-id="{{ section.id }}"] .Title_h4 {
+    margin: 0 0 1rem;
+  }
+  [data-section-id="{{ section.id }}"] .Text_p {
+    margin: 0 0 1rem;
+        word-wrap: break-word;
+  }
+  .ProductDetails_mobile {
+    display: none;
+  }
+  @media(max-width: 768px) {
+    [data-section-id="{{ section.id }}"] {
+      padding-top: {{ section.settings.top_one_mic |  append: 'rem' }};
+      padding-bottom: {{ section.settings.bottom_one_mic |  append: 'rem' }};
+    }
+    .ProductDetails_px_box {
+      width: 46%;
+      padding: 3rem 1rem 1rem;
+    }
+    .ProductDetails_px_box_img {
+      width: 4rem;
+    }
+  }
+</style>
+
+<div data-section-id="{{ section.id }}" class="ProductDetails">
+  <div class="container">
+    <div class="ProductDetails_pc">
+      {% for block in section.blocks %}
+        <div class="ProductDetails_px_box" style="background-color: {{ block.settings.box_bgcolor }};">
+          {% if block.settings.image != blank %}
+            {{
+              block.settings.image
+              | image_url: width: block.settings.image.width
+              | image_tag:
+                loading: 'lazy',
+                widths: '2200, 2400, 2600, 2800, 3000, 3264, 3400, 3584, 3800, 4000, 4200, 4400, 4600, 4800, 5000, 5200, 5400, 5600',
+                sizes: sizes,
+                class: 'ProductDetails_px_box_img'
+            }}
+          {% endif %}
+          {% if block.settings.Characteristic != blank %}
+            <p class="Characteristic_p" style="color: {{ block.settings.box_Tcolor }};">
+              {{ block.settings.Characteristic | newline_to_br }}
+            </p>
+          {% endif %}
+          {% if block.settings.title != blank %}
+            <h4 class="h4 Title_h4" style="color: {{ block.settings.box_Ticolor }};">
+              {{ block.settings.title | newline_to_br }}
+            </h4>
+          {% endif %}
+          {% if block.settings.text != blank %}
+            <p class="Text_p" style="color: {{ block.settings.box_Textcolor }};">
+              {{ block.settings.text | newline_to_br }}
+            </p>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "产品详情",
+  "settings": [
+    {
+      "type": "range",
+      "id": "top_one",
+      "label": "上边距",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "rem",
+      "default": 5
+    },
+    {
+      "type": "range",
+      "id": "bottom_one",
+      "label": "下边距",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "rem",
+      "default": 5
+    },
+    {
+      "type": "range",
+      "id": "top_one_mic",
+      "label": "移动端上边距",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "rem",
+      "default": 2
+    },
+    {
+      "type": "range",
+      "id": "bottom_one_mic",
+      "label": "移动端下边距",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "rem",
+      "default": 2
+    }, {
+      "type": "color",
+      "id": "bg_color",
+      "label": "背景颜色",
+      "default": "#fff"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "添加详情",
+      "limit": 50,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "图标"
+        },
+        {
+          "type": "textarea",
+          "id": "Characteristic",
+          "label": "特点"
+        },
+        {
+          "type": "textarea",
+          "id": "title",
+          "label": "标题"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "文案介绍"
+        }, {
+          "type": "color",
+          "id": "box_bgcolor",
+          "label": "盒子背景颜色",
+          "default": "#70c7f3"
+        }, {
+          "type": "color",
+          "id": "box_Tcolor",
+          "label": "特点字体颜色",
+          "default": "#f1a308"
+        }, {
+          "type": "color",
+          "id": "box_Ticolor",
+          "label": "标题字体颜色",
+          "default": "#000000"
+        }, {
+          "type": "color",
+          "id": "box_Textcolor",
+          "label": "文案字体颜色",
+          "default": "#222222"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "产品详情",
+      "blocks": [
+        {
+          "type": "slide"
+        }, {
+          "type": "slide"
+        }, {
+          "type": "slide"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

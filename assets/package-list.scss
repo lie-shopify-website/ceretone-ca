@@ -1,0 +1,198 @@
+@import 'tools';
+
+.package-list {
+    padding-top: vm(40);
+    padding-bottom: vm(30);
+    background-color: #F6F1EA;
+
+    @include media-min('spc') {
+        padding-top: vmpc(70);
+        padding-bottom: vmpc(70);
+    }
+
+    .container {
+        @include media('spc') {
+            padding-left: vmspc(20) !important;
+            padding-right: vmspc(20) !important;
+        }
+        @include media('pc') {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        display: table;
+        border-radius: vm(12);
+
+        @include media-min('spc') {
+            border-radius: vmpc(12);
+        }
+    }
+
+    .heading-title {
+        margin-bottom: vm(35);
+
+        @include media-min('spc') {
+            margin-bottom: vmpc(60);
+        }
+    }
+    .heading-title h2 {
+        color: #2D2D2D;
+        font-size: vm(32);
+        line-height: vm(34);
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+
+        @include media-min('spc') {
+            font-size: vmpc(56);
+            line-height: vmpc(58);
+        }
+    }
+
+
+    .swiper-slide {
+        height:auto;
+        background: #FFFEFB;
+        border-radius: vm(12);
+
+        @include media-min('spc') {
+            border-radius: vmpc(12);
+        }
+    }
+    
+    .package-bigimage {
+        position: relative;
+    }
+    .package-bigimage .item-layout {
+
+        .content {
+            padding: vm(10) vm(20) vm(20);
+
+            @include media-min('spc') {
+                padding: vmpc(10) vmpc(20) vmpc(20);
+            }
+        }
+
+        .text1 {
+            font-size: vm(18);
+            line-height: vm(22);
+            color: #2D2D2D;
+            margin-bottom: vm(10);
+    
+            @include media-min('spc') {
+                font-size: vmpc(22);
+                line-height: vmpc(28);
+                margin-bottom: vmpc(20);
+            }
+        }
+
+        .text2 {
+            font-size: vm(18);
+            line-height: vm(22);
+            color: #2D2D2D;
+    
+            @include media-min('spc') {
+                font-size: vmpc(22);
+                line-height: vmpc(28);
+            }
+        }
+        
+        img {
+            border-top-left-radius: vm(12);
+            border-top-right-radius: vm(12);
+
+            @include media-min('spc') {
+                border-top-left-radius: vmpc(12);
+                border-top-right-radius: vmpc(12);
+            }
+        }
+    }
+    
+    
+
+    .swiper-custom-navigation {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: vm(10);
+        margin-top: vm(40);
+
+        @include media-min("spc") {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: vmpc(30);
+            margin-top: vmpc(60);
+        }
+
+        .custom-button {
+            width: vm(25);
+            height: vm(25);
+            cursor: pointer;
+
+            @include media-min("spc") {
+                width: vmpc(50);
+                height: vmpc(50);
+            }
+
+            svg {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .swiper-pagination {
+            position: static;
+            width: auto;
+            gap: vm(5);
+    
+            @include media-min("spc") {
+                gap: vmpc(5);
+            }
+    
+            .swiper-pagination-bullet {
+                width: vm(5);
+                height: vm(5);
+                border-radius: vm(20);
+                background:#524842;
+                opacity: 1;
+                display: block;
+                margin: 0;
+                transition: 0.5s ease-in-out;
+    
+                @include media-min("spc") {
+                    width: vmpc(5);
+                    height: vmpc(5);
+                    border-radius: vmpc(20);
+                }
+            }
+            .swiper-pagination-bullet.swiper-pagination-bullet-active {
+                width: vm(30);
+                background: #FF4F00;
+                transition: 0.25s ease-in-out;
+    
+                @include media-min("spc") {
+                    width: vmpc(60);
+                }
+            }
+        }
+        
+
+        .swiper-button-disabled {
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+
+    .custom-button svg path.bg {
+        fill:#969694;
+    }
+    
+    .swiper-horizontal>.swiper-pagination-bullets {
+        margin: 0;
+    }
+
+}

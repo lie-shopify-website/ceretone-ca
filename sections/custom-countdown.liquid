@@ -1,0 +1,201 @@
+
+{% schema %}
+{
+    "name": "Custom Countdown",
+    "settings": [
+    {
+        "type": "text",
+        "id": "heading",
+        "label": "标题",
+        "default": "限时优惠倒计时"
+    },
+    {
+        "type": "text",
+        "id": "target_date",
+        "label": "结束日期和时间 (北京时间)",
+        "info": "格式: 2024-12-31T23:59:59, IOS系统不能判断00:00:00这种格式, 所以用23:59:59表示"
+    },
+    {
+        "type": "text",
+        "id": "days_label",
+        "label": "天数标签",
+        "default": "Day"
+    },
+    {
+        "type": "text",
+        "id": "hours_label",
+        "label": "小时标签",
+        "default": "Hrs"
+    },
+    {
+        "type": "text",
+        "id": "minutes_label",
+        "label": "分钟标签",
+        "default": "Min"
+    },
+    {
+        "type": "text",
+        "id": "seconds_label",
+        "label": "秒数标签",
+        "default": "Sec"
+    },
+    {
+        "type": "color",
+        "id": "background_color",
+        "label": "背景颜色",
+        "default": "#f8f8f8"
+    },
+    {
+        "type": "color",
+        "id": "text_color",
+        "label": "文本颜色",
+        "default": "#333333"
+    },
+    {
+        "type": "color",
+        "id": "heading_color",
+        "label": "标题颜色",
+        "default": "#ff0000"
+    },
+    {
+        "type": "color",
+        "id": "number_background",
+        "label": "数字背景颜色",
+        "default": "#333333"
+    },
+    {
+        "type": "color",
+        "id": "number_color",
+        "label": "数字颜色",
+        "default": "#ffffff"
+    }
+    ],
+    "presets": [
+    {
+        "name": "Custom Countdown",
+        "category": "custom"
+    }
+    ]
+}
+{% endschema %}
+
+<style>
+.countdown-timer-section {
+    --countdown-timer-background_color:{{ section.settings.background_color }};
+    --countdown-timer-text_color:{{ section.settings.text_color }};
+    --countdown-timer-heading_color:{{ section.settings.heading_color }};
+    --countdown-timer-number_background:{{ section.settings.number_background }};
+    --countdown-timer-number_color:{{ section.settings.number_color }};
+}
+</style>
+
+<link rel="stylesheet" href="{{ 'custom-countdown.css' | asset_url }}" media="all" >
+
+<div class="countdown-timer-section" data-section-id="{{ section.id }}" data-countdown-end="{{ section.settings.target_date }}" style="display: none;">
+    <div class="countdown-timer-layout">
+        <div class="countdown-container safe-container">
+            <div class="countdown-header">
+                <h2>{{ section.settings.heading }}</h2>
+            </div>
+            
+            <div class="countdown-box">
+                <div class="countdown-item">
+                    <span class="countdown-number countdown-days">00</span>
+                    <span class="countdown-label">{{ section.settings.days_label }}</span>
+                </div>
+                <div class="countdown-separator"></div>
+                <div class="countdown-item">
+                    <span class="countdown-number countdown-hours">00</span>
+                    <span class="countdown-label">{{ section.settings.hours_label }}</span>
+                </div>
+                <div class="countdown-separator"></div>
+                <div class="countdown-item">
+                    <span class="countdown-number countdown-minutes">00</span>
+                    <span class="countdown-label">{{ section.settings.minutes_label }}</span>
+                </div>
+                <div class="countdown-separator"></div>
+                <div class="countdown-item">
+                    <span class="countdown-number countdown-seconds">00</span>
+                    <span class="countdown-label">{{ section.settings.seconds_label }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+;(function() {
+    const oSection = document.querySelector('[data-section-id="{{ section.id }}"]');
+    const countdownMessage = oSection.querySelector('.countdown-message');
+    const countdownBox  = oSection.querySelector('.countdown-box');
+    const countdownDays = countdownBox.querySelector('.countdown-days');
+    const countdownHors = countdownBox.querySelector('.countdown-hours');
+    const countdownMins = countdownBox.querySelector('.countdown-minutes');
+    const countdownSecs = countdownBox.querySelector('.countdown-seconds');
+    const endTime = oSection.getAttribute('data-countdown-end');
+
+    document.addEventListener('DOMContentLoaded', function() {
+
+        function toBeijingTimestamp(date) {
+            if (typeof date === 'string') {
+                date = new Date(date);
+            }
+            return date.getTime() + (8 * 60 * 60 * 1000) - (date.getTimezoneOffset() * 60 * 1000);
+        }
+        
+        function getCurrentBeijingTime() {
+            return toBeijingTimestamp(new Date());
+        }
+        
+        if(!endTime) {
+            countdownBox.style.display = 'none';
+            countdownMessage.style.display = 'block';
+            return;
+        }
+        const targetDate = toBeijingTimestamp(endTime);
+        let animationFrameId;
+
+        function updateCountdown() {
+            const now = getCurrentBeijingTime();
+            const distance = targetDate - now;
+            
+            if (distance < 0) {
+                countdownDays.textContent = '00';
+                countdownHors.textContent = '00';
+                countdownMins.textContent = '00';
+                countdownSecs.textContent = '00';
+                
+                oSection.style.display = 'none';
+                
+                cancelAnimationFrame(animationFrameId);
+                return;
+            }
+            
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            countdownDays.textContent = days.toString().padStart(2, '0');
+            countdownHors.textContent = hours.toString().padStart(2, '0');
+            countdownMins.textContent = minutes.toString().padStart(2, '0');
+            countdownSecs.textContent = seconds.toString().padStart(2, '0');
+            
+            animationFrameId = requestAnimationFrame(updateCountdown);
+            oSection.style.display = 'block';
+        }
+
+        animationFrameId = requestAnimationFrame(updateCountdown);
+        
+        window.addEventListener('beforeunload', function() {
+            if (animationFrameId) {
+                cancelAnimationFrame(animationFrameId);
+            }
+        });
+    });
+
+
+})();
+</script>
+
+

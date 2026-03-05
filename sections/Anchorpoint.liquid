@@ -1,0 +1,36 @@
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+</style>
+
+<div
+  class="Anchorpoint"
+  style="background: {{ section.settings.color }};"
+  id="{{ section.settings.anchor }}"
+></div>
+
+{% schema %}
+{
+  "name": "锚点跳转 🐰🐰",
+  "settings": [
+    {
+      "type": "text",
+      "id": "anchor",
+      "label": "锚点名称",
+      "info": "英文状态下输入小写名称,当前输入new 则链接设置带 # 号的跳转链接, 例如: 页面链接#new"
+    }, {
+      "type": "color",
+      "id": "color",
+      "label": "背景颜色",
+      "default": "#000000"
+    }
+  ],
+  "presets": [
+    {
+      "name": "锚点跳转 🐰🐰",
+      "category": "ce"
+    }
+  ]
+}
+{% endschema %}

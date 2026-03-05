@@ -1,0 +1,160 @@
+<section data-section-id="{{ section.id }}">
+    <div class="container">
+        <div class="inner">
+            {% if section.settings.title != blank %}<div class="text-custom-2__title h3">{{ section.settings.title | newline_to_br }}</div>{% endif %}
+            {% if section.settings.info != blank %}<div class="text-custom-2__info body-large">{{ section.settings.info | newline_to_br }}</div>{% endif %}
+
+            <div class="icon-box">
+              <div class="icon_item">
+                <div class="icon_image">
+                  {% if section.settings.icon1 != blank %}
+                      <img src="{{ section.settings.icon1 | image_url: width: section.settings.icon1.width }}" width="{{  section.settings.icon1.width }}" height="{{  section.settings.icon1.height }}" />
+                  {% endif %}
+                </div>
+                <div class="icon_texts">
+                    <div class="icon_item__title h3">{{ section.settings.icon_title1 }}</div>
+                    <div class="icon_item__info body-large">{{ section.settings.icon_info1 }}</div>
+                </div>
+              </div>
+              <div class="icon_item">
+                <div class="icon_image">
+                  {% if section.settings.icon2 != blank %}
+                      <img src="{{ section.settings.icon2 | image_url: width: section.settings.icon2.width }}" width="{{  section.settings.icon2.width }}" height="{{  section.settings.icon2.height }}" />
+                  {% endif %}
+                </div>
+                <div class="icon_texts">
+                    <div class="icon_item__title h3">{{ section.settings.icon_title2 }}</div>
+                    <div class="icon_item__info body-large">{{ section.settings.icon_info2 }}</div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+[data-section-id="{{ section.id }}"] .container {
+    padding-top:{{ section.settings.pc_padding_top }}px;
+	padding-bottom:{{ section.settings.pc_padding_bottom }}px;
+}
+@media screen and (max-width: 767px) {
+    [data-section-id="{{ section.id }}"] .container {
+        padding-top:{{ section.settings.mb_padding_top }}px;
+		padding-bottom:{{ section.settings.mb_padding_bottom }}px;
+    }
+}
+[data-section-id="{{ section.id }}"] img {
+    max-width: 100%;
+    height: auto;
+    display: table;
+}
+.text-custom-2__title {
+    text-align: center;
+    /* font-size: 38px; */
+    /* font-weight: bold; */
+    margin-bottom: 50px;
+}
+.text-custom-2__title span {
+    background: #ffbea2;
+    padding: 2px 10px;
+}
+.text-custom-2__info {
+    text-align: center;
+    /* font-size: 26px; */
+    max-width: 1000px;
+    margin: 0 auto 50px;
+    line-height: 1.2;
+}
+.text-custom-2 .icon_image {
+    max-width: 100px;
+    flex: 0 0 100px;
+    margin-right: 30px;
+}
+.text-custom-2 .icon-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 30px;
+}
+.text-custom-2 .icon-box .icon_item {
+    flex: 0 0 45%;
+    max-width: 45%;
+    display: flex;
+    align-items: center;
+}
+.text-custom-2 .icon_item__title {
+    /* font-size: 32px; */
+    font-weight: bold;
+    color: #fb3a17;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+.text-custom-2 .icon_item__info {
+    /* font-size: 24px; */
+    line-height: 1.2;
+}
+@media screen and (max-width: 767px) {
+  .text-custom-2__title {
+      /* font-size: 30px; */
+      margin-bottom: 30px;
+  }
+  .text-custom-2__info {
+      /* font-size: 18px; */
+      margin: 0 auto 20px;
+  }
+  .text-custom-2 .icon-box .icon_item {
+      flex: 0 0 100%;
+      max-width: 100%;
+  }
+  .text-custom-2 .icon_item__title {
+      /* font-size: 20px; */
+  }
+  .text-custom-2 .icon_item__info {
+      /* font-size: 18px; */
+  }
+  .text-custom-2 .icon_image {
+      max-width: 70px;
+      flex: 0 0 70px;
+      margin-right: 20px;
+  }
+}
+
+</style>
+
+<script>
+    window.addEventListener("DOMContentLoaded", function () {
+
+    });                       
+</script>
+
+
+{% schema %}
+    {
+        "name": "Text Custom 2",
+        "class":"text-custom-2",
+        "settings": [
+                { "type": "textarea", "id":"title", "label":"Title"},
+                { "type": "textarea", "id":"info", "label":"Info"},
+                
+                { "type": "image_picker", "id": "icon1", "label": "Icon 1", "info": "图标" },
+                { "type": "textarea", "id":"icon_title1", "label":"Icon Title 1"},
+                { "type": "textarea", "id":"icon_info1", "label":"Icon Info 1"},
+                { "type": "image_picker", "id": "icon2", "label": "Icon 2", "info": "图标" },
+                { "type": "textarea", "id":"icon_title2", "label":"Icon Title 2"},
+                { "type": "textarea", "id":"icon_info2", "label":"Icon Info 2"},
+          
+                { "type": "header","content":"PC"},
+                { "type": "range", "id": "pc_padding_top", "label": "Top Space", "min": 0, "max": 100, "step": 1, "unit": "px", "default": 0 },
+                { "type": "range", "id": "pc_padding_bottom", "label": "Bottom Space", "min": 0, "max": 100, "step": 1, "unit": "px", "default": 0 },
+                { "type": "header","content":"Mobile"},
+                { "type": "range", "id": "mb_padding_top", "label": "Top Space", "min": 0, "max": 100, "step": 1, "unit": "px", "default": 0 },
+                { "type": "range", "id": "mb_padding_bottom", "label": "Bottom Space", "min": 0, "max": 100, "step": 1, "unit": "px", "default": 0 }
+        ],
+        "presets": [
+            {
+                "name": "Text Custom 2",
+                "category":"Custom"
+            }
+        ]
+    }
+{% endschema %}

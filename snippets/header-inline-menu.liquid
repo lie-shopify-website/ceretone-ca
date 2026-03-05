@@ -1,0 +1,152 @@
+<header-nav class="header-menu">
+  <div class="top-menu menu-level-1">
+    {%- for link in section.settings.menu.links -%}
+        
+        {% comment %} 判断是否为Mage菜单 {% endcomment %}
+        {% liquid
+            assign link_title_downcase = link.title | downcase
+            assign mega_menu = false
+            assign mega_menu_item_icon = false
+
+            for block in section.blocks
+            assign menu_item_downcase = block.settings.menu_item | strip | downcase
+            if menu_item_downcase == link_title_downcase
+                assign mega_menu = true
+
+                if block.settings.menu_item_icon != blank
+                    assign mega_menu_item_icon = block.settings.menu_item_icon
+                endif
+                break
+            endif
+            endfor
+        %}
+      
+        <div class="top-menu-item top-level {% if link.links != blank %} has-child js-expand-parent as-dropdown {% endif %} {% if mega_menu %} mega-menu-type {% endif %} {% if forloop.first %}mb-active{% endif %}">
+                <div class="link-title {% if link.links != blank or mega_menu %}js-expand-header{% endif %}">
+                    <a href="{{ link.url }}" title="{{ link.title | escape }}" class="menu__link top-level-link" >
+                        {% if mega_menu_item_icon %} <img class="menu-item-icon" src="{{ mega_menu_item_icon |  image_url: width: 50 }}" width="50" height="auto" /> {% endif %}
+                        <span class="top-level-title"> {{- link.title | escape -}}</span>
+                        {% if link.links != blank %}
+                            <svg version="1.1" class="child-arrow mb" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 66.91 122.88" style="enable-background:new 0 0 66.91 122.88" xml:space="preserve"><g><path d="M1.95,111.2c-2.65,2.72-2.59,7.08,0.14,9.73c2.72,2.65,7.08,2.59,9.73-0.14L64.94,66l-4.93-4.79l4.95,4.8 c2.65-2.74,2.59-7.11-0.15-9.76c-0.08-0.08-0.16-0.15-0.24-0.22L11.81,2.09c-2.65-2.73-7-2.79-9.73-0.14 C-0.64,4.6-0.7,8.95,1.95,11.68l48.46,49.55L1.95,111.2L1.95,111.2L1.95,111.2z" fill="#777777"></path></g></svg>
+                        {% endif %}
+                    </a>
+                </div>
+
+                {% comment %} Mage菜单 {% endcomment %}
+                {%  assign has_additional_link = false %}
+                {% if mega_menu %}
+                    <div class="mega-menu__container dropdown-area js-expand-content">
+                        <div class="tab-layout js-expand-content-overflow">
+                            <div class="tab-header">
+                                {% assign first_inx = true %}
+                                {% for block in section.blocks %}
+                                    {% assign menu_item_downcase = block.settings.menu_item | strip | downcase %}
+                                    {% if menu_item_downcase == link_title_downcase %}
+                                        <div class="item {% if first_inx %}active{% endif %}">
+                                            {% if block.settings.block_url != blank %}<a href="{{ block.settings.block_url }}">{% endif %}
+                                                <span class="th-title">{{ block.settings.block_text }}</span>
+                                                {% if block.settings.block_icon != blank %}<div class="block-icon"><img src="{{ block.settings.block_icon | image_url:width:50 }}" width="50" height="50" /></div>{% endif %}
+                                            {% if block.settings.block_url != blank %}</a>{% endif %}
+                                        </div>
+                                        {% assign first_inx = false %}
+                                    {% endif %}
+                                {% endfor %}
+
+                                
+
+                                {% capture additional_link %}
+                                    {% for i in (1..3) %}
+                                        {% capture btn_url %}url{{ i }}{% endcapture %}
+                                        {% capture btn_text %}text{{ i }}{% endcapture %}
+                                        {% capture btn_icon %}icon{{ i }}{% endcapture %}
+                                        
+                                        {% if section.settings[btn_url] != blank and section.settings[btn_text] != blank %}
+                                            {%  assign has_additional_link = true %}
+                                            <div class="additional-link {% if i == 1 %}first-link{% endif %}">
+                                                {% if section.settings[btn_icon] != blank %}
+                                                    <div class="addi-icon"><img src="{{ section.settings[btn_icon] | image_url:width:50 }}" width="50" height="50" /></div>
+                                                {% endif %}
+                                                <a href="{{ section.settings[btn_url] }}">
+                                                    <span class="th-title">{{ section.settings[btn_text] }}</span>
+                                                </a>
+                                                <svg version="1.1" class="icon icon-caret" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 66.91 122.88" style="enable-background:new 0 0 66.91 122.88" xml:space="preserve"><g><path d="M1.95,111.2c-2.65,2.72-2.59,7.08,0.14,9.73c2.72,2.65,7.08,2.59,9.73-0.14L64.94,66l-4.93-4.79l4.95,4.8 c2.65-2.74,2.59-7.11-0.15-9.76c-0.08-0.08-0.16-0.15-0.24-0.22L11.81,2.09c-2.65-2.73-7-2.79-9.73-0.14 C-0.64,4.6-0.7,8.95,1.95,11.68l48.46,49.55L1.95,111.2L1.95,111.2L1.95,111.2z" fill="#777777"></path></g></svg>
+                                            </div>
+                                        {% endif %}
+                                    {% endfor %}
+                                {% endcapture %}
+
+                                {% if has_additional_link %}
+                                    <div class="hr-line"></div>
+                                    {{ additional_link }}
+                                {% endif %}
+
+                                
+                            </div>
+
+                            <div class="tab-content p-left-8">
+                                {% assign first_inx = true %}
+                                {% for block in section.blocks %}
+
+                                    {% comment %} 
+                                        按需加载：只对第一版本的图片事先加载，其他的图片在鼠标经过一级分类时，才加载。手机端则是点击一级分类时加载。
+                                    {% endcomment %}
+                                    {% assign menu_item_downcase = block.settings.menu_item | strip | downcase %}
+                                    {% if menu_item_downcase == link_title_downcase %}
+                                        {% case block.type %}
+                                            {% when 'mega_menu_product_list' %}
+                                                {%  render 'header-menu-product-list', block:block, first_inx:first_inx %}
+                                        {% endcase %}
+                                        {% assign first_inx = false %}
+                                    {% endif %}
+                                {% endfor %}
+
+
+                                {% if has_additional_link %}
+                                    <div class="mb">
+                                        <div class="hr-line"></div>
+                                        {{ additional_link }}
+                                    </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                {% else %}
+                    {%- if link.links != blank -%}
+                    <div class="child-menu default-menu dropdown-area js-expand-content">
+                        <div class="child-menu-list menu-level-2 js-expand-content-overflow">
+                            <div class="child-menu-inner p-left-8">
+                                <div class="menu-item-list js-child-menu-items">
+                                {%- for childlink in link.links -%}
+                                <div class="{% if childlink.links != blank %} js-has-child{% endif %} child-menu-item item-line-pd level-2 js-expand-parent js-expand-single">
+                                    <a href="{{ childlink.url }}" class="menu__link sub-title js-expand-header {%- if childlink.links == blank -%} js_allow_redirect{% endif %}">
+                                    <span class="menu-child-title">{{ childlink.title | escape }}</span>
+                                    </a>
+                                    {%- if childlink.links != blank -%}
+                                        <div class="mm-child js-expand-content">
+                                            <div class="mm-child-inner js-expand-content-overflow js-scroll-container">
+                                                <div class="grand-menu-list menu-level-3 js-scroll-content">
+                                                    <div class="grand-menu-inner">
+                                                        {%- for grandchildlink in childlink.links -%}
+                                                        <div class="grand-menu-item level-3">
+                                                            <a href="{{ grandchildlink.url }}" class="menu__link" >
+                                                            <span class="grandchildlink-title"> {{ grandchildlink.title | escape }}</span>
+                                                            </a>
+                                                        </div>
+                                                        {%- endfor -%}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {%- endif -%}
+                                </div>
+                                {%- endfor -%}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                {% endif %}
+        </div>
+    {%- endfor -%}
+  </div>
+</header-nav>

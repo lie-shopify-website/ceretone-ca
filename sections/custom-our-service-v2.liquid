@@ -1,0 +1,58 @@
+{% schema %}
+{
+    "name": "Custom Our Service V2",
+    "settings": [
+        { "type": "header", "content": "标题" },
+        { "type": "liquid", "id": "title", "label": "标题" },
+
+        { "type": "header", "content": "配置" },
+        { "type": "text", "id": "custom_class", "label": "自定义class" }
+    ],
+    "blocks": [
+        {
+            "type": "item",
+            "name": "Item",
+            "settings": [
+                { "type": "image_picker", "id": "image", "label": "图片" },
+                { "type": "text", "id": "title", "label": "标题" },
+                { "type": "text", "id": "info", "label": "内容" }
+            ]
+        }
+    ],
+
+    "presets": [
+        {
+        "name": "Custom Our Service V2",
+        "category": "custom"
+        }
+    ]
+}
+{% endschema %}
+
+
+<link rel="stylesheet" href="{{ 'custom-our-service-v2.css' | asset_url }}" media="all" >
+
+<div class="custom-our-service-v2 {{ section.settings.custom_class }}" data-section-id="{{ section.id }}">
+    <div class="our-service-inner safe-container">
+        {% if section.settings.title != blank %}
+            <div class="section-title"><h2>{{ section.settings.title }}</h2></div>
+        {% endif %}
+        <div class="our-service-items">
+            {% for block in section.blocks %}
+                <div class="item">
+                    {% if block.settings.image != blank %}
+                        <div class="image">
+                            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lzsrc="{{ block.settings.image | image_url: width: 767 }}" class="js-lazy" width="auto" height="auto" />
+                        </div>
+                    {% endif %}
+                    {% if block.settings.title != blank %}
+                        <div class="title">{{ block.settings.title | newline_to_br }}</div>
+                    {% endif %}
+                    {% if block.settings.info != blank %}
+                        <div class="info">{{ block.settings.info | newline_to_br }}</div>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

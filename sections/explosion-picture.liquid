@@ -1,0 +1,68 @@
+{% schema %}
+    {
+        "name": "Explosion Picture",
+        "class":"explosion-picture",
+        "settings": [
+                { "type": "textarea", "id":"title", "label":"Title"},
+                
+                { "type": "image_picker", "id": "image", "label": "Image", "info": "大图" },
+                { "type": "image_picker", "id": "image_mb", "label": "Image (MB)", "info": "手机大图" },
+
+                { "type": "header","content":"文字1"},
+                { "type": "text", "id":"title1", "label":"Heading"},
+                { "type": "textarea", "id":"sub_title1", "label":"Sub Heading"},
+                { "type": "textarea", "id":"info1", "label":"Info"},
+          
+                { "type": "header","content":"文字2"},
+                { "type": "text", "id":"title2", "label":"Heading"},
+                { "type": "textarea", "id":"sub_title2", "label":"Sub Heading"},
+                { "type": "textarea", "id":"info2", "label":"Info"},
+        ],
+        "presets": [
+            {
+                "name": "Explosion Picture",
+                "category":"Custom"
+            }
+        ]
+    }
+{% endschema %}
+
+{{ 'explosion-picture.css' | asset_url | stylesheet_tag }}
+
+<section data-section-id="{{ section.id }}">
+    <div class="container">
+        <div class="inner">
+            {% if section.settings.title != blank %}<div class="title h3">{{ section.settings.title | newline_to_br }}</div>{% endif %}
+
+            <div class="pictrue-area">
+                <div class="image">
+                    <picture>
+                        <source data-srcset="{{ section.settings.image_mb | image_url: width: 767 }}"  media="(max-width: 767px)" />
+                        <source data-srcset="{{ section.settings.image | image_url: width: section.settings.image.width }}" media="(min-width: 768px)" />
+                        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lzsrc="{{ section.settings.image_mb | image_url: width: 767 }}" class="js-lazy" width="auto" height="auto" />
+                    </picture>
+                </div>
+                <div class="po-content content-text1">
+                    <div class="cont-heading h4">{{ section.settings.title1 }}</div>
+                    {% if section.settings.sub_title1 != blank %}
+                        <div class="cont-sub-heading">
+                            <img src="https://cdn.shopify.com/s/files/1/0517/0436/5244/files/us-flag.png?v=1767323732" width="auto" height="auto" />
+                            <p>{{ section.settings.sub_title1 }}</p>
+                        </div> 
+                    {% endif %}
+                    <div class="cont-info">{{ section.settings.info1 }}</div>
+                </div>
+                <div class="po-content content-text2">
+                    <div class="cont-heading h4">{{ section.settings.title2 }}</div>
+                    {% if section.settings.sub_title2 != blank %}
+                        <div class="cont-sub-heading">
+                            <img src="https://cdn.shopify.com/s/files/1/0517/0436/5244/files/us-flag.png?v=1767323732" width="auto" height="auto" />
+                            <p>{{ section.settings.sub_title2 }}</p>
+                        </div> 
+                    {% endif %}
+                  <div class="cont-info">{{ section.settings.info2 }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> 

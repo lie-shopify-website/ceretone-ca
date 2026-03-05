@@ -1,0 +1,722 @@
+<style>
+    .coupon-dialog{
+        display: none;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 1000;
+        background-color: rgba(0,0,0,0.5);
+    }
+    .coupon-dialog__flex {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .coupon-dialog__box {
+        display: flex;
+        align-self: center;
+        position: relative;
+        width: {{ section.settings.width | append: 'rem' }};
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 12px 27px 2px;
+        background: {{ section.settings.mask_background_color }};
+    }
+    .coupon-dialog__wraper{
+        height: 100%;
+        flex: 1;
+        padding: 4% 1%;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .coupon_dialog__wrape_h4{
+        text-align: center;
+        font-size: 30px;
+        margin: 0 0 15px 0;
+        font-weight: 700;
+        color: {{ section.settings.mask_txt_color }};
+    }
+    .coupon_dialog__wrape_p{
+        font-size: 24px;
+        text-align: center;
+        margin: 0 0 15px 0;
+        color: {{ section.settings.mask_txt_color }};
+    }
+    .coupon_dialog__wrape_text_p{
+      margin: 0 0 15px 0;
+      text-align: center;
+      color: {{ section.settings.mask_txt_color }};
+    }
+    .coupon_dialog__wrape_text_p span{
+      font-size: 20px;
+      font-weight: 700;
+      color: {{ section.settings.zkm_txt_color }};
+    }
+    .coupon_dialog__wrape_tiem{
+        margin: 0 0 15px 0;
+    }
+    .coupon_dialog__wrape_text{
+        text-align: center;
+        font-size: 18px;
+        font-weight: 400;
+        width: 80%;
+        margin: 0 auto 15px;
+        color: {{ section.settings.mask_txt_color }};
+    }
+    .coupon_dialog__wrape_text span{
+      margin: 0 5px;
+      background: {{ section.settings.border_color }};
+      color: #FFFFFF;
+      padding: 5px 20px;
+      border-radius: 8px;
+      font-weight: 600;
+    }
+    .coupon_dialog__wrape_link{
+        width: 100%;
+        margin: 0 0 15px 0;
+        text-align: center;
+    }
+    .coupon_dialog__wrape_linka{
+        padding: 10px 50px;
+        border-radius: 24px;
+        font-weight: 600;
+        cursor: pointer;
+        color: {{ section.settings.button_color }};
+        background-color: {{ section.settings.button_background_color }};
+    }
+    .coupon_dialog__wrape_linka:hover{
+        font-weight: 600;
+        color: {{ section.settings.button_color_in }};
+        background-color: {{ section.settings.button_background_color_in }};
+    }
+    .coupon_dialog_img{
+        height: 100%;
+        flex: 1;
+        position: relative;
+    }
+    .coupon_dialog_img_one{
+      position: absolute;
+      top: 67%;
+      left: 8%;
+      width: 22%;
+      height: 28%;
+    }
+    .coupon_dialog_img_two{
+      position: absolute;
+      top: 67%;
+      left: 39%;
+      width: 23%;
+      height: 28%;
+    }
+    .coupon_dialog_img_three{
+      position: absolute;
+      top: 67%;
+      left: 71%;
+      width: 23%;
+      height: 28%;
+    }
+    .coupon_dialog_img_link{
+      width: 100%;
+      height: 100%;
+      display: block!important;
+    }
+    .coupon_dialog_img img{
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+    }
+    .coupon-dialog__btn-close{
+        position: absolute;
+        top: -18px;
+        right: -18px;
+        width: 36px;
+        height: 36px;
+        cursor: pointer;
+        z-index: 118040;
+        background-position: 0 0;
+        font-size: 0;
+        background-color: transparent;
+        background-size: 44px 152px;
+    }
+    .coupon_dialog_img_mic{
+        display: none!important;
+    }
+    .coupon_from{
+      display: none;
+    }
+    .coupon_newcountdown{
+      display: flex;
+      justify-content: center;
+    }
+    .coupon_newcountdown p {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      margin: 0 5px;
+  }
+  .coupon_newcountdownspan {
+      background-color: #2879fe;
+      color: #ffffff;
+      font-weight: 500;
+      font-size: 20px;
+      padding: 10px;
+      border-radius: 10px;
+  }
+  .coupon_newcountdownspancolor {
+      color: {{ section.settings.mask_txt_color }};
+      margin-top: 5px;
+  }
+
+    @media(max-width: 768px) {
+        .coupon-dialog__box{
+          width: {{ section.settings.width_mic | append: '%' }};
+          flex-flow: column;
+        }
+        .coupon-dialog__wraper{
+            width: 100%;
+            height: 50%;
+            order: 2;
+        }
+        .coupon_dialog_img{
+            width: 100%;
+            height: 50%;
+            order: 1;
+        }
+        .coupon_dialog_img_pc{
+            display: none!important;
+        }
+        .coupon_dialog_img_mic{
+            display: block!important;
+        }
+        .coupon_dialog__wrape_h4{
+            margin: 0 0 10px 0;
+            font-size: 26px;
+        }
+        .coupon_dialog__wrape_text{
+            margin: 0 0 10px 0;
+            font-size: 16px;
+        }
+        .coupon_dialog__wrape_p{
+            margin: 0 0 5px 0;
+        }
+        .coupon_dialog__wrape_tiem{
+            margin: 0 0 5px 0;
+        }
+        .coupon_dialog__wrape_link {
+           margin: 0 0 5px 0;
+        }
+    }
+</style>
+
+{% if section.settings.masklayer_swtach %}
+  <!-- 优惠弹框 -->
+  <div class="coupon-dialog" id="couponDialog">
+    <div class="coupon-dialog__flex">
+      <div class="coupon-dialog__box">
+        {% if section.settings.masklayer_image %}
+          <div class="coupon-dialog__wraper">
+            {% if section.settings.masklayer_info != blank %}
+              <h4 class="coupon_dialog__wrape_h4">{{ section.settings.masklayer_info | newline_to_br }}</h4>
+            {% endif %}
+            {% if section.settings.masklayer_info_fu != blank %}
+              <p class="coupon_dialog__wrape_p">{{ section.settings.masklayer_info_fu | newline_to_br }}</p>
+            {% endif %}
+            {% if section.settings.text != blank %}
+              <p class="coupon_dialog__wrape_text">{{ section.settings.text | newline_to_br }}</p>
+            {% endif %}
+            {%- if section.settings.Discount != blank -%}
+              <div class="coupon_dialog__wrape_text_p">
+                <span>
+                  {{ section.settings.Discount }}
+                </span>
+                <p class="coupon_dialog__wrape_linka">{{ section.settings.Discountname }}</p>
+              </div>
+            {%- endif -%}
+            {% if section.settings.time != blank %}
+              <div class="coupon_dialog__wrape_tiem">
+                <div class="coupon_dialog__wrape_tiem_big">
+                  {% assign coupon_deadline = section.settings.time %}
+                  {% assign now = 'now' | date: '%s' %}
+                  {% assign end = coupon_deadline | date: '%s' %}
+                  {% assign coupon_remaining_seconds = end | minus: now %}
+                  {% assign remaining_days = coupon_remaining_seconds | divided_by: 86400 %}
+                  {% assign remaining_hours = coupon_remaining_seconds | divided_by: 3600 | modulo: 24 %}
+                  {% assign remaining_minutes = coupon_remaining_seconds | divided_by: 60 | modulo: 60 %}
+                  {% assign coupon_remaining_seconds = coupon_remaining_seconds | modulo: 60 %}
+
+                  {% comment %}显示倒计时{% endcomment %}
+
+                  {% if coupon_remaining_seconds >= 0 %}
+                    {%- if section.settings.time != blank -%}
+                      <div
+                        class="coupon_newcountdown"
+                        id="countdown"
+                      >
+                        <p style="margin-left: 0;">
+                          <span class="coupon_newcountdownspan" id="coupon_newdays"> {{ remaining_days }}</span>
+                          <span class="coupon_newcountdownspancolor">Days</span>
+                        </p>
+                        <p>
+                          <span class="coupon_newcountdownspan" id="coupon_newhours"> {{ remaining_hours }}</span>
+                          <span class="coupon_newcountdownspancolor">Hours</span>
+                        </p>
+                        <p>
+                          <span class="coupon_newcountdownspan" id="coupon_newminutes"> {{ remaining_minutes }}</span>
+                          <span class="coupon_newcountdownspancolor">Mins</span>
+                        </p>
+                        <p>
+                          <span class="coupon_newcountdownspan" id="coupon_newseconds">
+                            {{ coupon_remaining_seconds }}
+                          </span>
+                          <span class="coupon_newcountdownspancolor">Secs</span>
+                        </p>
+                      </div>
+                    {%- endif -%}
+                    <script>
+                      // 更新倒计时
+                      function updateCountdown() {
+                        var daysElement = document.getElementById('coupon_newdays');
+                        var hoursElement = document.getElementById('coupon_newhours');
+                        var minutesElement = document.getElementById('coupon_newminutes');
+                        var secondsElement = document.getElementById('coupon_newseconds');
+
+                        // 将元素的 innerHTML 转换为数字
+                        var days = parseInt(daysElement.innerHTML);
+                        var hours = parseInt(hoursElement.innerHTML);
+                        var minutes = parseInt(minutesElement.innerHTML);
+                        var seconds = parseInt(secondsElement.innerHTML);
+
+                        // 减少剩余时间
+                        if (days > 0 || hours > 0 || minutes > 0 || seconds > 0) {
+                          if (seconds > 0) {
+                            seconds--;
+                          } else {
+                            if (minutes > 0) {
+                              minutes--;
+                              seconds = 59;
+                            } else {
+                              if (hours > 0) {
+                                hours--;
+                                minutes = 59;
+                                seconds = 59;
+                              } else {
+                                if (days > 0) {
+                                  days--;
+                                  hours = 23;
+                                  minutes = 59;
+                                  seconds = 59;
+                                }
+                              }
+                            }
+                          }
+                        }
+                        daysElement.innerHTML = days < 10 ? '0' + days : days;
+                        hoursElement.innerHTML = hours < 10 ? '0' + hours : hours;
+                        minutesElement.innerHTML = minutes < 10 ? '0' + minutes : minutes;
+                        secondsElement.innerHTML = seconds < 10 ? '0' + seconds : seconds;
+                      }
+                      setInterval(updateCountdown, 1000);
+                    </script>
+                  {% endif %}
+                </div>
+              </div>
+            {% endif %}
+            {% if section.settings.link_info != blank %}
+              <div class="coupon_dialog__wrape_link">
+                <a
+                  class="coupon_dialog__wrape_linka blog__button button button--simple_secondary button--arrow focus-inset"
+                  href="{{ section.settings.link }}"
+                  target="_blank"
+                >
+                  <span>{{ section.settings.link_info }}</span>
+                  <svg class="icon icon-button-arrow" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.30644 5.5C6.89223 5.5 6.55644 5.83579 6.55644 6.25C6.55644 6.66421 6.89223 7 7.30644 7L12.5669 7L5.5976 13.9693C5.30471 14.2622 5.30471 14.7371 5.5976 15.0299C5.89049 15.3228 6.36537 15.3228 6.65826 15.0299L13.6275 8.06069V13.3211C13.6275 13.7353 13.9633 14.0711 14.3775 14.0711C14.7917 14.0711 15.1275 13.7353 15.1275 13.3211V6.25C15.1275 6.14102 15.1043 6.03747 15.0625 5.94404C15.034 5.88021 14.9961 5.81955 14.9489 5.76414C14.8817 5.68521 14.7985 5.62038 14.7042 5.5747C14.6055 5.52684 14.4946 5.5 14.3775 5.5H7.30644Z" fill="currentColor"></path>
+                  </svg>
+                </a>
+              </div>
+            {% endif %}
+            <form
+              class="coupon_from"
+              action="/contact#contact_form"
+              method="post"
+              id="contact_form"
+              accept-charset="UTF-8"
+            >
+              <input type="hidden" name="form_type" value="customer">
+              <input type="hidden" name="utf8" value="✓">
+              <div class="field">
+                <input
+                  type="email"
+                  name="contact[email]"
+                  id="ContactFormEmail"
+                  placeholder="Your email address"
+                  required
+                >
+              </div>
+              <div class="actions">
+                <input
+                  type="submit"
+                  name="commit"
+                  value="Subscribe"
+                  class="btn button button--primary"
+                >
+              </div>
+            </form>
+          </div>
+        {% endif %}
+        <div class="coupon_dialog_img">
+          {% if section.settings.image != blank %}
+            {{
+              section.settings.image
+              | image_url: width: section.settings.image.width
+              | image_tag:
+                loading: 'lazy',
+                widths: '360, 533, 720, 940, 1066, 1200, 1400, 1600, 1800, 2000, 2200, 2400, 2600, 2800, 3000, 3264, 3400, 3584, 3800, 4000, 4200, 4400, 4600, 4800, 5000, 5200, 5400, 5600',
+                sizes: sizes,
+                class: 'coupon_dialog_img_pc'
+            }}
+          {% endif %}
+          {% if section.settings.imagemic != blank %}
+            {{
+              section.settings.imagemic
+              | image_url: width: section.settings.image.width
+              | image_tag:
+                loading: 'lazy',
+                widths: '360, 533, 720, 940, 1066, 1200, 1400, 1600, 1800, 2000, 2200, 2400, 2600, 2800, 3000, 3264, 3400, 3584, 3800, 4000, 4200, 4400, 4600, 4800, 5000, 5200, 5400, 5600',
+                sizes: sizes,
+                class: 'coupon_dialog_img_mic'
+            }}
+          {% endif %}
+          <div class="coupon_dialog_img_one">
+            <a class="coupon_dialog_img_link" href="https://ceretone.com/products/beacon-otc-hearing-aids"></a>
+          </div>
+          <div class="coupon_dialog_img_two">
+            <a class="coupon_dialog_img_link" href="https://ceretone.com/products/core-one-otc-hearing-aids"></a>
+          </div>
+          <div class="coupon_dialog_img_three">
+            <a class="coupon_dialog_img_link" href="https://ceretone.com/products/fusion-otc-hearing-aids"></a>
+          </div>
+        </div>
+        <span class="coupon-dialog__btn-close coupon_dialog__btn_close">
+          <svg
+            t="1607667093846"
+            class="icon"
+            viewBox="0 0 1024 1024"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            p-id="4228"
+            width="30"
+            height="30"
+          >
+            <path d="M512 0a512 512 0 0 0-512 512 512 512 0 0 0 512 512 512 512 0 0 0 512-512 512 512 0 0 0-512-512z" fill="#000000" p-id="4229"></path><path d="M717.165714 306.176a35.986286 35.986286 0 0 0-50.834285 0.146286L512 461.019429 357.668571 306.322286a35.986286 35.986286 0 0 0-50.980571 50.761143L461.165714 512 306.688 666.916571a35.986286 35.986286 0 0 0 50.980571 50.761143L512 562.980571l154.331429 154.843429a35.693714 35.693714 0 0 0 50.834285 0.073143 35.986286 35.986286 0 0 0 0.146286-50.907429L562.834286 512l154.331428-154.916571a35.913143 35.913143 0 0 0 0-50.907429z" fill="#FFFFFF" p-id="4230"></path>
+          </svg>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const pElement = document.querySelector('.coupon_dialog__wrape_text_p');
+        const spanElement = document.querySelector('.coupon_dialog__wrape_text_p span');
+
+        // Check if pElement and spanElement exist before adding the event listener
+        if (pElement && spanElement) {
+            pElement.addEventListener('click', function() {
+                copyToClipboard(spanElement.innerText.trim());
+            });
+        }
+
+        function copyToClipboard(text) {
+            const input = document.createElement('textarea');
+            input.style.position = 'fixed';
+            input.style.opacity = 0;
+            input.value = text;
+            document.body.appendChild(input);
+            input.select();
+            document.execCommand('copy');
+            document.body.removeChild(input);
+
+            const successMessage = document.createElement('div');
+            successMessage.textContent = 'Coupon Code Copied, Page Loading...';
+            successMessage.style.position = 'fixed';
+            successMessage.style.top = '50%';
+            successMessage.style.left = '50%';
+            successMessage.style.transform = 'translate(-50%, -50%)';
+            successMessage.style.padding = '20px 35px';
+            successMessage.style.backgroundColor = '#1566e0';
+            successMessage.style.color = '#fff';
+            successMessage.style.borderRadius = '24px';
+            successMessage.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)';
+            successMessage.style.zIndex = 9999;
+
+            document.body.appendChild(successMessage);
+
+            setTimeout(function() {
+                document.body.removeChild(successMessage);
+                window.location.href = '{{ section.settings.link }}';
+            }, 2000);
+        }
+
+        var currentUrl = window.location.href;
+        var couponDialog = document.querySelector('.coupon-dialog');
+        var urlPrefix = 'https://ceretone.com/products/';
+
+        if (currentUrl.startsWith(urlPrefix) || currentUrl == 'https://ceretone.com/cart') {
+            if (couponDialog) {
+                couponDialog.style.display = 'none';
+            }
+        } else {
+            if (couponDialog) {
+                (function() {
+                    var close = document.getElementsByClassName('coupon_dialog__btn_close')[0];
+                    function setCookie(name, value, expires) {
+                        var _expires = "";
+                        if (expires) {
+                            _expires = new Date();
+                            _expires.setTime(_expires.getTime() + 864E5 * expires);
+                            _expires = "; expires=" + _expires.toUTCString();
+                        }
+                        document.cookie = name + "=" + value + _expires + "; path=/";
+                    }
+                    function getCookie(cname) {
+                        var name = cname + "=";
+                        var decodedCookie = decodeURIComponent(document.cookie);
+                        var ca = decodedCookie.split(';');
+                        for (var i = 0; i < ca.length; i++) {
+                            var c = ca[i];
+                            while (c.charAt(0) === ' ') {
+                                c = c.substring(1);
+                            }
+                            if (c.indexOf(name) === 0) {
+                                return c.substring(name.length, c.length);
+                            }
+                        }
+                        return "";
+                    };
+                    if (getCookie("coupondialog")) {
+                        couponDialog.style.display = "none";
+                    } else {
+                        couponDialog.style.display = "block";
+                        if (close) {
+                            close.onclick = function() {
+                                couponDialog.style.display = "none";
+                                setCookie("coupondialog", "coupon", 1);
+                            }
+                        }
+                    }
+                })();
+            }
+
+            var closeLink = document.getElementsByClassName('coupon_dialog__wrape_linka')[0];
+            if (couponDialog && closeLink) {
+                (function() {
+                    function setCookie(name, value, expires) {
+                        var _expires = "";
+                        if (expires) {
+                            _expires = new Date();
+                            _expires.setTime(_expires.getTime() + 864E5 * expires);
+                            _expires = "; expires=" + _expires.toUTCString();
+                        }
+                        document.cookie = name + "=" + value + _expires + "; path=/";
+                    }
+                    function getCookie(cname) {
+                        var name = cname + "=";
+                        var decodedCookie = decodeURIComponent(document.cookie);
+                        var ca = decodedCookie.split(';');
+                        for (var i = 0; i < ca.length; i++) {
+                            var c = ca[i];
+                            while (c.charAt(0) === ' ') {
+                                c = c.substring(1);
+                            }
+                            if (c.indexOf(name) === 0) {
+                                return c.substring(name.length, c.length);
+                            }
+                        }
+                        return "";
+                    };
+                    if (getCookie("coupondialog")) {
+                        couponDialog.style.display = "none";
+                    } else {
+                        couponDialog.style.display = "block";
+                        closeLink.onclick = function() {
+                            couponDialog.style.display = "none";
+                            setCookie("coupondialog", "coupon", 1);
+                        }
+                    }
+                })();
+            }
+
+            var contactForm = document.getElementById('contact_form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    var form = event.target;
+                    var xhr = new XMLHttpRequest();
+                    xhr.open('POST', form.action, true);
+                    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                    xhr.onload = function() {
+                        if (xhr.status === 200) {
+                            alert('Subscription successful!');
+                        } else {
+                            alert('Subscription failed. Please try again later.');
+                        }
+                    };
+                    xhr.send(new FormData(form));
+                });
+            }
+        }
+    });
+  </script>
+{% endif %}
+
+{% schema %}
+{
+  "name": "优惠弹框",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "您可以编辑促销的详细信息"
+    },
+    {
+        "type": "range",
+        "id": "width",
+        "label": "宽度",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "rem",
+        "default": 80
+      },
+      {
+        "type": "range",
+        "id": "width_mic",
+        "label": "移动端宽度",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "%",
+        "default": 80
+      },
+    {
+      "type": "checkbox",
+      "id": "masklayer_swtach",
+      "label": "启用优惠弹框",
+      "default": false
+    },
+        {
+      "type": "checkbox",
+      "id": "masklayer_image",
+      "label": "显示内容区(关闭仅显示图片)",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "图片"
+    },
+    {
+      "type": "image_picker",
+      "id": "imagemic",
+      "label": "移动端图片"
+    },
+    {
+      "type": "text",
+      "id": "masklayer_info",
+      "label": "标题",
+      "default": "Get $5 off your first order"
+    },
+    {
+      "type": "text",
+      "id": "masklayer_info_fu",
+      "label": "复数标题",
+      "default": "🍀 Mother's Day Giveaway 🍀"
+    },
+    {
+        "type": "textarea",
+        "id": "text",
+        "label": "文本",
+        "info": "注:若想要该文本标注折扣码有样式 可使用 <span></span> 标签包裹折扣码或重要信息"
+    },  {
+                    "type": "text",
+                    "id": "Discount",
+                    "default": "iCube50",
+                    "label": "折扣码"
+                }, {
+                    "type": "text",
+                    "id": "Discountname",
+                    "default": "Discountname",
+                    "label": "折扣码按钮文本"
+                },
+    {
+        "type": "text",
+        "id": "time",
+        "default": "2024-12-31T23:59:59",
+        "label": "倒计时时间",
+        "info": "格式规范为:2024-12-31T23:59:59"
+    },{
+      "type": "url",
+      "id": "link",
+      "label": "按钮链接"
+    },
+    {
+      "type": "text",
+      "id": "link_info",
+      "label": "按钮文本",
+      "default": "Shop Now"
+    },
+    {
+      "type": "color",
+      "id": "mask_txt_color",
+      "label": "文本颜色",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "mask_background_color",
+      "label": "背景颜色",
+      "default": "#F6B1C3"
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "折扣码字体颜色",
+      "default": "#A20D1E"
+    },
+    {
+      "type": "color",
+      "id": "button_background_color",
+      "label": "按钮背景色",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_color",
+      "label": "按钮字体色",
+      "default": "#DD1D1D"
+    },
+    {
+      "type": "color",
+      "id": "button_background_color_in",
+      "label": "鼠标移入按钮背景色",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_color_in",
+      "label": "鼠标移入按钮字体色",
+      "default": "#DD1D1D"
+    },
+    {
+      "type": "color",
+      "id": "zkm_txt_color",
+      "label": "折扣码字体色",
+      "default": "#DD1D1D"
+    }
+  ]
+}
+{% endschema %}

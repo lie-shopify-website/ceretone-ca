@@ -1,0 +1,586 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "custom_liquid_j7cYnx": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid_text": "",
+        "custom_liquid": "{{ 'world-hearing-day.css' | asset_url | stylesheet_tag }}"
+      }
+    },
+    "main": {
+      "type": "main-page-case-studies",
+      "blocks": {
+        "d842d823-0bb1-40fc-910f-d84239f73c84": {
+          "type": "person",
+          "settings": {
+            "heading": "Heading",
+            "name": "Person name",
+            "position": "Person position"
+          }
+        },
+        "68f9aeb7-8d3f-4313-8616-7e80c8a80d69": {
+          "type": "rich_text",
+          "settings": {
+            "heading": "Heading",
+            "text": "<h6>Heading</h6><p>Some description</p><h6>Heading</h6><p>Some description</p><h6>Heading</h6><p>Some description</p>"
+          }
+        },
+        "7b143122-f949-49ce-932e-97f051f86ce3": {
+          "type": "rich_text",
+          "settings": {
+            "heading": "Heading",
+            "text": "<h6>Heading</h6>"
+          }
+        },
+        "c96c0b46-3839-42ed-9562-9f1a288f8457": {
+          "type": "rich_text",
+          "settings": {
+            "heading": "Heading",
+            "text": "<h6>Heading</h6>"
+          }
+        },
+        "08e23850-43bf-48b5-8156-70753ac267a2": {
+          "type": "rich_text",
+          "settings": {
+            "heading": "Heading",
+            "text": "<h6>Heading</h6>"
+          }
+        },
+        "5e2bc811-d9c0-4e12-9ded-6aa1fb88d5b5": {
+          "type": "rich_text",
+          "settings": {
+            "heading": "Heading",
+            "text": "<h6>Heading</h6>"
+          }
+        }
+      },
+      "block_order": [
+        "d842d823-0bb1-40fc-910f-d84239f73c84",
+        "68f9aeb7-8d3f-4313-8616-7e80c8a80d69",
+        "7b143122-f949-49ce-932e-97f051f86ce3",
+        "c96c0b46-3839-42ed-9562-9f1a288f8457",
+        "08e23850-43bf-48b5-8156-70753ac267a2",
+        "5e2bc811-d9c0-4e12-9ded-6aa1fb88d5b5"
+      ],
+      "disabled": true,
+      "settings": {
+        "header_layout": "overlay",
+        "header_transparent": false,
+        "color_scheme": "",
+        "image_height": "medium",
+        "opacity_overlay": 0.6,
+        "subheading": "Subheading",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading_size": "h1",
+        "desc": "",
+        "features": "<h2>Feature heading</h2><p>Feature description</p><h2>Feature heading</h2><p>Feature description</p><h2>Feature heading</h2><p>Feature description</p>",
+        "show_form": true,
+        "color_scheme_form": "background-2",
+        "form_heading": "Contact form",
+        "form_text": "Some text for your contact form.",
+        "button_style": "primary",
+        "padding_top": "no-indent",
+        "padding_bottom": "l"
+      }
+    },
+    "custom_slideshow_ieGVmg": {
+      "type": "custom-slideshow",
+      "blocks": {
+        "slide_XWaznz": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/banner_2x_5e734d3b-f086-4508-95e9-012467b802d9.png",
+            "image_mb": "shopify://shop_images/banner_3x_28eefa51-be9d-4d06-8cfe-4ff49fad2227.png",
+            "title": "",
+            "content": "",
+            "button_label": "Shop Now",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_XWaznz"
+      ],
+      "name": "Banner",
+      "settings": {
+        "custom_class": "",
+        "auto_loop": false,
+        "auto_loop_speed": 5
+      }
+    },
+    "multicolumn_XkJJy4": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_PeQPdM": {
+          "type": "column",
+          "settings": {
+            "icon": "none",
+            "icon_color_scheme": "background-1",
+            "icon_fill_type": "gradient",
+            "heading": "",
+            "text": "Hearing loss affects far more adults than many expect — and it often begins quietly, long before retirement age.",
+            "show_button": false,
+            "button_label": "Label",
+            "button_link": "",
+            "button_style": "simple"
+          }
+        },
+        "column_V4RMyJ": {
+          "type": "column",
+          "settings": {
+            "icon": "none",
+            "icon_color_scheme": "background-1",
+            "icon_fill_type": "gradient",
+            "heading": "",
+            "text": "The World Health Organization (WHO) recognizes hearing loss as a growing global health concern, not only because it is so common, but because it so often goes unnoticed.",
+            "show_button": false,
+            "button_label": "Label",
+            "button_link": "",
+            "button_style": "simple"
+          }
+        },
+        "column_Hi8wXG": {
+          "type": "column",
+          "settings": {
+            "icon": "none",
+            "icon_color_scheme": "background-1",
+            "icon_fill_type": "gradient",
+            "heading": "",
+            "text": "Over time, even mild, untreated changes can begin to shape how we communicate, connect, and participate in daily life.",
+            "show_button": false,
+            "button_label": "Label",
+            "button_link": "",
+            "button_style": "simple"
+          }
+        },
+        "column_jxbrrC": {
+          "type": "column",
+          "settings": {
+            "icon": "none",
+            "icon_color_scheme": "background-1",
+            "icon_fill_type": "gradient",
+            "heading": "",
+            "text": "That’s why World Hearing Day exists: not to create fear — but to encourage earlier awareness, before small changes become lasting challenges.",
+            "show_button": false,
+            "button_label": "Label",
+            "button_link": "",
+            "button_style": "simple"
+          }
+        }
+      },
+      "block_order": [
+        "column_PeQPdM",
+        "column_V4RMyJ",
+        "column_Hi8wXG",
+        "column_jxbrrC"
+      ],
+      "name": "t:sections.multicolumn.name",
+      "settings": {
+        "custom_class": "",
+        "section_type": "transparent",
+        "color_scheme": "",
+        "enable_border": false,
+        "border_full": false,
+        "multicolumn_to_show": 1,
+        "gap": "small",
+        "subheading": "",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "Why This Matters More Than Most People Think",
+        "heading_size": "h3",
+        "heading_line": "simple",
+        "line_color": "#1566e0",
+        "word_break": false,
+        "heading_animation": "none",
+        "word_break_an": false,
+        "text": "",
+        "text_align": "center",
+        "icon_size": "recommended",
+        "box_shadow": true,
+        "icon_style": "colored",
+        "image_width": "medium",
+        "image_ratio": "square",
+        "object_fit": "cover",
+        "card_heading_size": "h4",
+        "padding_top": "s",
+        "padding_bottom": "m",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "multicolumn_AnjenT": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_KhKkCh": {
+          "type": "column",
+          "settings": {
+            "icon": "none",
+            "icon_color_scheme": "",
+            "icon_fill_type": "gradient",
+            "image": "shopify://shop_images/2x_4515670b-3753-47dd-a6d3-eb9f3d75dede.png",
+            "heading": "",
+            "text": "Family conversations become harder to follow. You hear the laughter, but miss the words behind it, and by the time you understand what was said, the moment has already passed.",
+            "show_button": false,
+            "button_label": "Label",
+            "button_link": "",
+            "button_style": "simple"
+          }
+        },
+        "column_CF9ATw": {
+          "type": "column",
+          "settings": {
+            "icon": "none",
+            "icon_color_scheme": "",
+            "icon_fill_type": "gradient",
+            "image": "shopify://shop_images/2x_e06b1710-d48c-46d2-8fc2-714504f184a8.png",
+            "heading": "",
+            "text": "Watching TV no longer feels effortless. The sound is there, but the dialogue isn’t clear, leaving you turning up the volume or guessing what was said.",
+            "show_button": false,
+            "button_label": "Label",
+            "button_link": "",
+            "button_style": "simple"
+          }
+        },
+        "column_DrhqWT": {
+          "type": "column",
+          "settings": {
+            "icon": "none",
+            "icon_color_scheme": "",
+            "icon_fill_type": "gradient",
+            "image": "shopify://shop_images/2x_6b14a2a1-5950-4108-a9f4-4a2111313ccd.png",
+            "heading": "",
+            "text": "In noisy environments, background sounds take over. Voices blur together, making even simple conversations tiring and hard to keep up with.",
+            "show_button": false,
+            "button_label": "Label",
+            "button_link": "",
+            "button_style": "simple"
+          }
+        }
+      },
+      "block_order": [
+        "column_KhKkCh",
+        "column_CF9ATw",
+        "column_DrhqWT"
+      ],
+      "name": "Multicolumn",
+      "settings": {
+        "custom_class": "whd-section2",
+        "section_type": "transparent",
+        "color_scheme": "scheme-da522d8c-d8ea-43a1-8f89-75b1a671124a",
+        "enable_border": false,
+        "border_full": false,
+        "multicolumn_to_show": 3,
+        "gap": "large",
+        "subheading": "",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "Hearing Loss Rarely Feels Sudden",
+        "heading_size": "h2",
+        "heading_line": "simple",
+        "line_color": "#1566e0",
+        "word_break": false,
+        "heading_animation": "none",
+        "word_break_an": false,
+        "text": "Hearing loss is usually gradual. It doesn’t arrive suddenly — it blends into daily life.",
+        "text_align": "center",
+        "icon_size": "recommended",
+        "box_shadow": true,
+        "icon_style": "colored",
+        "image_width": "full-width",
+        "image_ratio": "landscape",
+        "object_fit": "cover",
+        "card_heading_size": "h5",
+        "padding_top": "s",
+        "padding_bottom": "m",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "custom_collapsible_image_qYPzpL": {
+      "type": "custom-collapsible-image",
+      "blocks": {
+        "accordion_YmBhpj": {
+          "type": "accordion",
+          "settings": {
+            "question": "Hearing loss doesn’t only affect the ears — it affects the brain.",
+            "answer": "<p>New research from Johns Hopkins shows a clear connection between hearing and brain health.</p><p>\nWearing hearing aids has been linked to a reduced risk of dementia — by <strong>up to 61%</strong>.</p><p>\nAddressing hearing loss earlier may help lessen the strain hearing loss places on the brain.</p><p></p>",
+            "opened": false
+          }
+        },
+        "accordion_AkgLj6": {
+          "type": "accordion",
+          "settings": {
+            "question": "Hearing loss doesn’t arrive all at once — it builds over time.",
+            "answer": "<p>Hearing loss becomes more common with age — often without being noticed.\nIts prevalence is frequently described as <strong>doubling with each decade</strong> of life.</p><p>\nBecause these changes happen gradually, many people adapt without realizing their hearing has changed.</p>",
+            "opened": false
+          }
+        },
+        "accordion_cMxpac": {
+          "type": "accordion",
+          "settings": {
+            "question": "Hearing loss doesn’t stop at sound — it affects how we feel.",
+            "answer": "<p>Conversations become tiring. Social moments feel distant. Many people begin to withdraw — without realizing why.</p><p>\nIn adults with moderate or worse hearing loss, rates of depression are <strong>more than twice as high.</strong></p>",
+            "opened": false
+          }
+        }
+      },
+      "block_order": [
+        "accordion_YmBhpj",
+        "accordion_AkgLj6",
+        "accordion_cMxpac"
+      ],
+      "name": "Custom Collapsible Image",
+      "settings": {
+        "title": "When Hearing Loss Is Left Unnoticed",
+        "big_image": "shopify://shop_images/2x_0d9268e8-d183-4ab6-8c2a-93a17c9bbd0e.png"
+      }
+    },
+    "image_with_text_UfABGx": {
+      "type": "image-with-text",
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "layout": "image_last",
+        "color_scheme": "scheme-da522d8c-d8ea-43a1-8f89-75b1a671124a",
+        "subheading": "",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "",
+        "heading_size": "h2",
+        "heading_line": "simple",
+        "line_color": "#1566e0",
+        "word_break": false,
+        "heading_animation": "none",
+        "word_break_an": false,
+        "text": "",
+        "text_align": "left",
+        "inner_subheading": "",
+        "inner_heading": "Why Early Action Feels Easier",
+        "inner_heading_line": "simple",
+        "inner_line_color": "#1566e0",
+        "inner_word_break": false,
+        "description": "<p>Early attention often means:</p><ul><li>Adjusting before habits start to change</li><li>Staying engaged in conversations without extra effort</li><li>Avoiding the frustration of “catching up” later</li></ul><p>For many people, early action isn’t about fixing a problem.<br/>It’s simply about keeping everyday life feeling normal.</p>",
+        "text_align_inner": "top",
+        "image": "shopify://shop_images/2x_bedca0b0-a680-408e-8e17-d8408a4551f0.png",
+        "image_link": "",
+        "height": "adapt",
+        "overlay_opacity": 0,
+        "logo_width": 75,
+        "add_text": "",
+        "author_color_scheme": "",
+        "icon_size": "recommended",
+        "box_shadow": false,
+        "icon_style": "colored",
+        "show_button": false,
+        "button_label": "Button label",
+        "button_link": "",
+        "button_style": "primary",
+        "show_button_2": true,
+        "button_label_2": "A true story about winning him back",
+        "button_link_2": "shopify://blogs/cblog/my-dad-didn-t-stop-talking-he-stopped-being-heard",
+        "button_style_2": "simple",
+        "padding_top": "s",
+        "padding_bottom": "m",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "custom_our_service_v2_zwMGMP": {
+      "type": "custom-our-service-v2",
+      "blocks": {
+        "item_XrcX4P": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/2x_22769dcf-994c-471d-bafe-789b28446ac7.png",
+            "title": "Invisible in-ear canal hearing aid",
+            "info": "Core One Pro fits deep in the ear canal, making it barely noticeable — hear clearly without drawing attention, so you can wear it confidently without hesitation."
+          }
+        },
+        "item_wGzhgg": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/2x_e9bb3c99-95e6-43d8-ab76-7cb892106d01.png",
+            "title": "Prescription components, crystal-clear sound",
+            "info": "Core One Pro delivers sound the way it’s meant to be heard. From soft conversations to bustling environments, every word comes through clearly."
+          }
+        },
+        "item_KUNqtr": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/2x_d40d9cb3-d4b2-4834-9f1b-6f1900ca1261.png",
+            "title": "Ergonomic fit, all-day comfort",
+            "info": "Lightweight and contoured to your ear, Core One Pro stays comfortably in place from morning to night, letting you focus on life, not your hearing device."
+          }
+        }
+      },
+      "block_order": [
+        "item_XrcX4P",
+        "item_wGzhgg",
+        "item_KUNqtr"
+      ],
+      "name": "Custom Our Service V2",
+      "settings": {
+        "title": "What Modern day hearing looks like",
+        "custom_class": ""
+      }
+    },
+    "featured_product_KLyrd6": {
+      "type": "featured-product",
+      "blocks": {
+        "judge_me_reviews_preview_badge_homepage_mEU43P": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge_homepage/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "product": "core-one-pro-otc-hearing-aids"
+          }
+        },
+        "title_XAJUrq": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h3"
+          }
+        },
+        "price_UipeHC": {
+          "type": "price",
+          "settings": {}
+        },
+        "product_featured_info_Fkh483": {
+          "type": "product_featured_info",
+          "settings": {}
+        },
+        "variant_picker_JDYerG": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "image"
+          }
+        },
+        "limited_time_gift_Vfz7EP": {
+          "type": "limited_time_gift",
+          "settings": {
+            "heading": "World Hearing Day Offer"
+          }
+        },
+        "custom_liquid_mdV6GV": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"coupon-bar\">\n  Auto $90 Off – Grab Yours Today!\n</div>\n\n<style>\n.coupon-bar {\n  display: block;\n  color: red;\n  font-size: 20px;\n  font-weight: bold;\n  background: transparent;\n  border: none;\n  border-radius: 0;\n}\n@media screen and (max-width: 768px){\n  .coupon-bar {\n    font-size: 14px;\n    text-align:center;\n  }\n}\n</style>"
+          }
+        },
+        "buy_buttons_QfUrXX": {
+          "type": "buy_buttons",
+          "settings": {
+            "color": "#ffffff",
+            "bg_color": "#e7590d",
+            "buy_text": "Buy Now At $299",
+            "show_amazon_btn": false,
+            "amazon_btn_label": "BUY ON AMAZON",
+            "show_dynamic_checkout": false,
+            "show_quantity": false,
+            "show_gift_card_recipient": false
+          }
+        },
+        "service_icon_zmYmeT": {
+          "type": "service_icon",
+          "settings": {
+            "text1": "60-Day Risk-Free Trial",
+            "service_icon1": "shopify://shop_images/ser-icon01.png",
+            "text2": "100% Money-Back Guarantee",
+            "service_icon2": "shopify://shop_images/ser-icon02.png",
+            "text3": "Lifetime Support",
+            "service_icon3": "shopify://shop_images/ser-icon03.png"
+          }
+        },
+        "payment_enable_gcpFAF": {
+          "type": "payment_enable",
+          "settings": {
+            "payment_enable": true,
+            "payment_label": ""
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_preview_badge_homepage_mEU43P",
+        "title_XAJUrq",
+        "price_UipeHC",
+        "product_featured_info_Fkh483",
+        "variant_picker_JDYerG",
+        "limited_time_gift_Vfz7EP",
+        "custom_liquid_mdV6GV",
+        "buy_buttons_QfUrXX",
+        "service_icon_zmYmeT",
+        "payment_enable_gcpFAF"
+      ],
+      "name": "t:sections.featured-product.name",
+      "settings": {
+        "enable_new_media_section": true,
+        "subheading": "",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "",
+        "heading_size": "h2",
+        "heading_line": "simple",
+        "line_color": "#1566e0",
+        "word_break": false,
+        "heading_animation": "none",
+        "word_break_an": true,
+        "text": "",
+        "text_align": "left",
+        "product_item": "core-one-pro-otc-hearing-aids",
+        "show_details_link": false,
+        "color_scheme": "",
+        "desktop_alignment": "right",
+        "mobile_alignment": "before",
+        "aspect_ratio": "5/4",
+        "image_fit": "cover",
+        "padding_top": "m",
+        "padding_bottom": "m"
+      }
+    },
+    "custom_slideshow_6zTB3k": {
+      "type": "custom-slideshow",
+      "blocks": {
+        "slide_bUnCfV": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/2x_c9556b45-87e7-4e07-bc4c-e2808bbe3f72.png",
+            "image_mb": "shopify://shop_images/3x_67b0d6ed-f418-444f-9965-5e046a01d48a.png",
+            "title": "",
+            "content": "",
+            "button_label": "",
+            "button_link": "shopify://products/core-one-pro-otc-hearing-aids"
+          }
+        }
+      },
+      "block_order": [
+        "slide_bUnCfV"
+      ],
+      "name": "Custom Slideshow",
+      "settings": {
+        "custom_class": "",
+        "auto_loop": false,
+        "auto_loop_speed": 5
+      }
+    }
+  },
+  "order": [
+    "custom_liquid_j7cYnx",
+    "main",
+    "custom_slideshow_ieGVmg",
+    "multicolumn_XkJJy4",
+    "multicolumn_AnjenT",
+    "custom_collapsible_image_qYPzpL",
+    "image_with_text_UfABGx",
+    "custom_our_service_v2_zwMGMP",
+    "featured_product_KLyrd6",
+    "custom_slideshow_6zTB3k"
+  ]
+}

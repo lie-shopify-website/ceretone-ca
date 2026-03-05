@@ -1,0 +1,326 @@
+<style>
+    .table-properties {
+      width: 100%;
+    }
+
+    .table-properties .container {
+      width: 100%;
+      margin: {{ section.settings.padding_top | append: 'px' }}
+      auto{{ section.settings.padding_bottom | append: 'px' }};
+      box-sizing: border-box;
+    }
+
+    .table-properties .table-title {
+      text-align: center;
+      color: {{ section.settings.hedaer_color }};
+      font-size: {{ section.settings.header_pc | append: 'px' }};
+      padding-bottom: 25px;
+    }
+
+    .table-properties .table-main {
+      width: 100%;
+    }
+
+    .table-properties table tr td img {
+      width: 100%;
+      height: auto;
+    }
+
+    .table-properties table tr:first-child,
+    .table-properties table tr:last-child {
+      border-top: 1px solid #cccccc;
+    }
+
+    .table-properties table td:first-child {
+      width: 25rem;
+      display: {{ section.settings.Presentation }};
+    }
+
+    .table-properties table td:nth-child(2) {
+      background: #f5f5f7;
+    }
+
+    .table-properties table tr {
+      border-bottom: 1px solid #cccccc;
+    }
+
+    .table-properties table tr:nth-child(2) td {}
+
+  .table-properties table {
+    border-collapse: collapse;
+    margin: 0 auto;
+  }
+
+  .table-properties table td {
+    padding: 1rem;
+    width: 20rem;
+    height: 6.8rem;
+    text-align: center;
+    font-size: 1.8rem;
+    border: none;
+    white-space: normal !important;
+  }
+  .table-properties table td a {
+    text-decoration: none;
+  }
+
+  table:not([class]) {
+    box-shadow: inherit;
+  }
+  .table_arrow{
+      display: none;
+    }
+  @media (max-width: 1000px) {
+    .table-properties .container {
+      margin: {{ section.settings.padding_top_mic | append: 'px' }}
+      auto{{ section.settings.padding_bottom_mic | append: 'px' }};
+    }
+    .table-properties table td{
+      width: 18rem;
+    }
+    .table_arrow{
+      display: flex;
+        justify-content: flex-end;
+        font-size: 1.2rem;
+        opacity: 0.5;
+    }
+    .table-main{
+      position: relative;
+    }
+    .table-properties .table-main {
+      overflow: auto;
+    }
+    .table-properties table td:first-child {
+      width: 12rem;
+    }
+    .table-properties table td {
+      font-size: 1.4rem;
+    }
+    .table-properties table {
+      min-width: 500px;
+      position: relative;
+    }
+
+    .table-properties .table-title {
+      font-size: {{ section.settings.header_mic | append: 'px' }};
+      padding-bottom: 20px;
+    }
+
+    .table-properties table td:first-child {
+      position: sticky;
+      left: 0;
+      background: #f6f8f9;
+    }
+    .table-properties table td:nth-child(2) {
+      background: #f5f5f7;
+        position: sticky;
+        left: 11.3rem;
+    }
+  }
+</style>
+
+{% assign attribute_title = section.settings.attribute_title | split: ',' %}
+
+<section class="table-properties table_properties">
+  <div class="container">
+    <div class="table-title">{{ section.settings.section_title | newline_to_br }}</div>
+    <i class="table_arrow" style="">Swipe to compare.</i>
+    <div class="table-main">
+      <table style="border-bottom: 1px solid #cccccc;border-top: 1px solid #cccccc;">
+        {% comment %}第一行产品图{% endcomment %}
+        <tr>
+          <td></td>
+          {% for block in section.blocks %}
+            <td>
+              {% if block.settings.image != blank %}
+                {{
+                  block.settings.image
+                  | image_url: width: block.settings.image.width
+                  | image_tag:
+                    loading: 'lazy',
+                    widths: '360, 533, 720, 940, 1066, 1200, 1400, 1600, 1800, 2000, 2200, 2400, 2600, 2800, 3000, 3264, 3400, 3584, 3800, 4000, 4200, 4400, 4600, 4800, 5000, 5200, 5400, 5600',
+                    sizes: sizes,
+                    class: ''
+                }}
+              {% endif %}
+            </td>
+          {% endfor %}
+        </tr>
+        {% comment %}第二行产品名称{% endcomment %}
+        <tr>
+          <td></td>
+          {% for block in section.blocks %}
+            <td style="color: {{ section.settings.name_color }};">
+              {{ block.settings.title | newline_to_br }}
+            </td>
+          {% endfor %}
+        </tr>
+        {% for attribute in attribute_title %}
+          {% assign attribute_index = forloop.index0 %}
+          <tr>
+            <td style="color: {{ section.settings.parameter_color }};font-weight: {{ section.settings.parameter_weight }};">
+              {{ attribute | newline_to_br }}
+            </td>
+            {% for block in section.blocks %}
+              {% assign attribute_value = block.settings.content | split: '|' %}
+              <td style="color: {{ section.settings.details_color }};">
+                {{ attribute_value[attribute_index] | newline_to_br }}
+              </td>
+            {% endfor %}
+          </tr>
+        {% endfor %}
+      </table>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "表格属性",
+  "class": "section",
+  "settings": [
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "pc上内边距距离",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "pc下内边距距离",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mic",
+      "label": "mic上内边距距离",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mic",
+      "label": "mic下内边距距离",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "default": 50
+    }, {
+      "type": "text",
+      "id": "section_title",
+      "label": "标题",
+      "default": "Compare soundcore Headphones"
+    }, {
+      "type": "range",
+      "id": "header_pc",
+      "label": "标题字体大小",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 30
+    }, {
+      "type": "range",
+      "id": "header_mic",
+      "label": "移动端标题字体大小",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 18
+    }, {
+      "type": "textarea",
+      "id": "attribute_title",
+      "label": "属性标题",
+      "info": "使用 , 隔开每行属性标题"
+    }, {
+      "type": "color",
+      "id": "hedaer_color",
+      "label": "标题字体颜色",
+      "default": "#000000"
+    }, {
+      "type": "color",
+      "id": "name_color",
+      "label": "产品名称字体颜色",
+      "default": "#0795EF"
+    }, {
+      "type": "color",
+      "id": "parameter_color",
+      "label": "产品参数字体颜色",
+      "default": "#000000"
+    }, {
+      "type": "range",
+      "id": "parameter_weight",
+      "label": "产品参数加粗调整",
+      "min": 0,
+      "max": 900,
+      "step": 100,
+      "default": 400
+    }, {
+      "type": "color",
+      "id": "details_color",
+      "label": "产品详情字体颜色",
+      "default": "#505050"
+    }, {
+      "type": "select",
+      "id": "Presentation",
+      "options": [
+        {
+          "value": "black",
+          "label": "显示"
+        }, {
+          "value": "none",
+          "label": "隐藏"
+        }
+      ],
+      "default": "black",
+      "label": "标题是否显示"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "属性",
+      "limit": 5,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "产品图"
+        }, {
+          "type": "textarea",
+          "id": "title",
+          "label": "产品名称"
+        }, {
+          "type": "textarea",
+          "id": "content",
+          "label": "属性值",
+          "info": "使用 | 隔开每行属性值"
+        }, {
+          "type": "url",
+          "id": "url",
+          "label": "链接"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "表格属性"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,377 @@
+<script src="{{ 'homecomment.js' | asset_url }}" defer="defer"></script>
+
+<style>
+    [data-section-id="{{ section.id }}"] {
+      background-color: {{ section.settings.bg_color }};
+      padding-top: {{ section.settings.top_one |  append: 'px' }};
+      padding-bottom: {{ section.settings.bottom_one |  append: 'px' }};
+    }
+    .newpolicy_h2 {
+        text-align: center;
+      }
+    [data-section-id="{{ section.id }}"] .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      box-sizing: border-box;
+      padding: 20px;
+    }
+    .homecomment_swiper_slide_box_img{
+      width: 8rem;
+    }
+    .homecomment_swiper_slide_box_text{
+      margin-left: 1rem;
+      display: flex;
+      flex-flow: column;
+      align-items: flex-start
+    }
+    .homecomment_swiper_img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .homecomment_image{
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+    .homecomment_swiper_xin {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .homecomment_text{
+      margin-bottom: 2rem;
+    }
+    .homecomment_swiper_text {
+      color: #000000;
+      text-align: center;
+      margin: 1.5rem 0;
+      font-size: 1.8rem;
+    }
+    .homecomment_swiper_text_p{
+      font-size: 1.6rem;
+      font-weight: 400;
+    }
+    .homecomment_swiper_name {
+      font-size: 2rem;
+      color: #000000;
+      font-weight: 700;
+      margin: 0;
+      text-align: center;
+    }
+    .homecomment_swiper_time {
+      font-size: 1.8rem;
+      color: #000000;
+      margin: 10px 0 0;
+      text-align: center;
+    }
+    .homecomment_swiper_slide{
+      position: relative;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+      border-radius: 15px;
+      padding: 5px;
+    }
+    .homecommentSwiper{
+      padding: 10px;
+    }
+    .homecomment_swiper{
+      position: relative;
+      padding: 0 2%;
+    }
+    .homecomment_swiper_slide_box{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    [data-section-id="{{ section.id }}"] .homecomment_swiper_button_next{
+      position: absolute;
+      background-color: #1566E0;
+      right: -2%;
+    }
+    [data-section-id="{{ section.id }}"] .homecomment_swiper_button_prev{
+      position: absolute;
+      background-color: #1566E0;
+      left: -2%;
+    }
+    [data-section-id="{{ section.id }}"] .swiper-button-next svg, .swiper-button-prev svg {
+      width: 3rem;
+      height: 3rem;
+    }
+    .homecomment_link{
+      width: 100%;
+      text-align: center;
+    }
+    .homecomment_link a {
+      position: relative;
+      color: #000; /* Set your desired link color */
+    }
+
+    .homecomment_link a::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: -3px; /* Position the underline below the text */
+      width: 0;
+      height: 3px; /* Thickness of the underline */
+      background-color: #FFFFFF; /* Set the underline color */
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+
+    .homecomment_link a:hover::after {
+      width: 100%; /* Expand the underline to the full width of the text */
+      left: 0;
+      transform: translateX(0);
+    }
+
+    @media screen and (min-width: 990px) {
+      [data-section-id="{{ section.id }}"] .swiper-button-next svg, .swiper-button-prev svg {
+          width: 4rem;
+          height: 4rem;
+      }
+  }
+    @media(max-width: 768px) {
+
+      .homecommentSwiper {
+        padding: 10px;
+      }
+      .homecomment_swiper_slide {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      }
+      .homecomment_swiper_text_p {
+        font-size: 1.4rem;
+      }
+      .homecomment_swiper_time {
+          font-size: 1.4rem;
+          margin: 5px 0 0;
+      }
+      .homecomment_swiper_name {
+        font-size: 1.6rem;
+    }
+    .homecomment_link{
+      margin-bottom: 1.5rem;
+    }
+    .homecomment_image{
+      margin-bottom: 1.5rem;
+    }
+    .homecomment_text{
+      margin-bottom: 1.5rem;
+    }
+    }
+</style>
+
+<div data-section-id="{{ section.id }}" class="homecomment">
+  <div class="container">
+    {% if section.settings.title != blank %}
+      <h2 class="h2 newpolicy_h2">{{ section.settings.title }}</h2>
+    {% endif %}
+    <div class="homecomment_swiper">
+      <div class="swiper homecommentSwiper">
+        <div class="swiper-wrapper">
+          {% for block in section.blocks %}
+            <div class="swiper-slide homecomment_swiper_slide">
+              {% if block.settings.image_xin != blank %}
+                <div class="homecomment_image">
+                  {{
+                    block.settings.image_xin
+                    | image_url: width: section.settings.image.width
+                    | image_tag:
+                      loading: 'lazy',
+                      widths: '360, 533, 720, 940, 1066, 1200, 1400, 1600, 1800, 2000, 2200, 2400, 2600, 2800, 3000, 3264, 3400, 3584, 3800, 4000, 4200, 4400, 4600, 4800, 5000, 5200, 5400, 5600',
+                      sizes: sizes,
+                      class: 'homecomment_swiper_xin'
+                  }}
+                </div>
+              {% endif %}
+              {% if block.settings.link != blank %}
+                <div class="homecomment_link">
+                  <a class="" href="{{ block.settings.link }}">{{ block.settings.title_btn }}</a>
+                </div>
+              {% endif %}
+              <div class="homecomment_text">
+                {% if block.settings.title != blank %}
+                  <h4 class="h4 homecomment_swiper_text">{{ block.settings.title | newline_to_br }}</h4>
+                {% endif %}
+                {% if block.settings.text != blank %}
+                  <p class="homecomment_swiper_text homecomment_swiper_text_p">
+                    {{ block.settings.text | newline_to_br }}
+                  </p>
+                {% endif %}
+              </div>
+              <div class="homecomment_swiper_slide_box">
+                {% if block.settings.image != blank %}
+                  <div class="homecomment_swiper_slide_box_img">
+                    {{
+                      block.settings.image
+                      | image_url: width: section.settings.image.width
+                      | image_tag:
+                        loading: 'lazy',
+                        widths: '360, 533, 720, 940, 1066, 1200, 1400, 1600, 1800, 2000, 2200, 2400, 2600, 2800, 3000, 3264, 3400, 3584, 3800, 4000, 4200, 4400, 4600, 4800, 5000, 5200, 5400, 5600',
+                        sizes: sizes,
+                        class: 'homecomment_swiper_img'
+                    }}
+                  </div>
+                {% endif %}
+                <div class="homecomment_swiper_slide_box_text">
+                  {% if block.settings.title_name != blank %}
+                    <h4 class="homecomment_swiper_name">{{ block.settings.title_name | newline_to_br }}</h4>
+                  {% endif %}
+                  {% if block.settings.text != blank %}
+                    <p class="homecomment_swiper_time">{{ block.settings.title_time | newline_to_br }}</p>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="swiper-button-next homecomment_swiper_button_next">
+        <svg
+          t="1715156604391"
+          class="icon"
+          viewBox="0 0 1024 1024"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          p-id="4242"
+          width="200"
+          height="200"
+        >
+          <path d="M342.528 916.48c19.456 0 38.4-7.168 53.248-21.504l338.944-327.68c14.848-14.336 23.552-34.304 23.552-55.296s-8.192-40.96-23.552-55.296l-338.944-327.68c-30.72-29.696-79.36-28.672-108.544 2.048-29.696 30.72-28.672 79.36 2.048 108.544l281.6 272.384-281.6 272.384c-30.72 29.696-31.232 78.336-2.048 108.544 15.36 15.872 35.328 23.552 55.296 23.552z" fill="#FFFFFF" p-id="4243"></path>
+        </svg>
+      </div>
+      <div class="swiper-button-prev homecomment_swiper_button_prev">
+        <svg
+          t="1715158003913"
+          class="icon"
+          viewBox="0 0 1024 1024"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          p-id="2267"
+          width="200"
+          height="200"
+        >
+          <path d="M681.472 913.92c-19.456 0-38.4-7.168-53.248-21.504l-338.944-327.68c-14.848-14.336-23.552-34.304-23.552-55.296s8.192-40.96 23.552-55.296l338.944-327.68c30.72-29.696 79.36-28.672 108.544 2.048 29.696 30.72 28.672 79.36-2.048 108.544l-281.6 272.384 281.6 272.384c30.72 29.696 31.232 78.336 2.048 108.544-15.36 15.872-35.328 23.552-55.296 23.552z" fill="#FFFFFF" p-id="2268"></path>
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "评论",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "range",
+      "id": "top_one",
+      "label": "上边距",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "bottom_one",
+      "label": "下边距",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "top_one_mic",
+      "label": "移动端上边距",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "bottom_one_mic",
+      "label": "移动端下边距",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "default": 20
+    }, {
+      "type": "textarea",
+      "id": "title",
+      "label": "标题"
+    }, {
+      "type": "color",
+      "id": "bg_color",
+      "label": "背景颜色",
+      "default": "#fff"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "添加评论",
+      "limit": 50,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image_xin",
+          "label": "展示图片"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "头像"
+        },
+        {
+          "type": "textarea",
+          "id": "title",
+          "label": "标题"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "评语"
+        },
+        {
+          "type": "textarea",
+          "id": "title_name",
+          "label": "姓名"
+        }, {
+          "type": "textarea",
+          "id": "title_time",
+          "label": "日期"
+        }, {
+            "type": "textarea",
+            "id": "title_btn",
+            "label": "链接文本"
+          }, {
+            "type": "url",
+            "id": "link",
+            "label": "选择链接"
+          }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "评论",
+      "blocks": [
+        {
+          "type": "slide"
+        }, {
+          "type": "slide"
+        }, {
+          "type": "slide"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,268 @@
+@import "tools";
+
+.scroll-lock {
+    overflow:hidden;
+}
+
+.media-gallery.pc-sticky {
+    position: sticky;
+    top: 10px;
+}
+.media-gallery video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    width: 100%;
+    border-radius: 10px;
+}
+.media-gallery img,
+.media-gallery video
+.media-gallery iframe {
+    max-width:100%;
+    height:auto;
+}
+
+.media-gallery img {
+    border-radius: 10px;
+}
+.media-gallery .swiper-box {
+    position: relative;
+}
+
+.media-gallery .product__slider-nav:not(.product-media-modal__slider-nav) {
+    top: 50%;
+}
+.media-gallery .main-media-gallery .big-image-swiper .swiper-slide {
+    cursor: zoom-in;
+}
+
+.media-gallery .thumbs-slider .swiper-slide {
+    opacity: 1;
+}
+.media-gallery .thumbs-slider {
+    padding-right: 2px;
+    padding-bottom: 2px;
+    box-sizing: border-box;
+}
+
+.media-gallery .media-video {
+    position: relative;
+}
+
+.media-gallery .media-video .slide-video {
+    display:none;
+}
+.media-gallery .video-swiper-box {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.media-gallery .video-swiper-box .swiper-wrapper {
+    align-items: center;
+}
+
+.media-gallery .media-poster {
+    position: relative;
+}
+.media-gallery .big-image-swiper-list .media-poster_btn {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.media-gallery .thumbs-image-swiper-list {
+    margin-top: 20px;
+}
+
+.media-gallery .thumbs-slider span.media-poster_btn svg {
+    width: 10px;
+    height: 10px;
+}
+
+.media-gallery .thumbs-slider .swiper-slide .image img {
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+.media-gallery .thumbs-slider .swiper-slide .image img {
+    border: 1px solid rgba(45,45,45,.502);
+}
+
+.media-gallery .thumbs-slider .swiper-slide.swiper-slide-thumb-active .image img {
+    border-color: #ffa953
+}
+
+.media-gallery .ripple-box {
+    position: relative;
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+    --ripple-bg:238,96,4;
+}
+.media-gallery .thumbs-medai-video .ripple-box {
+    width:40px;
+    height:40px;
+}
+
+.media-gallery .ripple-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background:rgba(var(--ripple-bg), 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.media-gallery .ripple1 {
+    width: 100%;
+    padding-bottom: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(var(--ripple-bg), 0.8);
+    position: absolute;
+    border-radius: 50%;
+    animation: ripple-animation 1.1s linear infinite;
+}
+
+.media-gallery .ripple2 {
+    width: 120%;
+    padding-bottom: 120%;
+    left: -10%;
+    top: -10%;
+    background:rgba(var(--ripple-bg), 0.8);
+    position: absolute;
+    border-radius: 50%;
+    animation: ripple-animation 2s linear infinite;
+}
+
+@keyframes ripple-animation {
+    0%{transform: scale(1);opacity: 0.95;}
+    25%{transform: scale(1.2);opacity: 0.75;}
+    50%{transform: scale(1.4);opacity: 0.5;}
+    75%{transform: scale(1.6);opacity: 0.25;}
+    100%{transform: scale(2);opacity: 0.05;}
+}
+
+
+
+
+
+
+@media screen and (min-width: 1200px) {
+
+    .media-gallery .main-media-gallery {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+        flex-direction: row-reverse;
+        gap: var(--media-wrapper-gap);
+        max-height: vmpc(600);
+        --thumb-width: #{vmpc(90)};
+        --media-wrapper-gap: #{vmpc(50)};
+    }
+
+    .media-gallery .big-image-swiper-list {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 calc(100% - var(--media-wrapper-gap) - var(--thumb-width));
+        flex: 0 0 calc(100% - var(--media-wrapper-gap) - var(--thumb-width));
+        max-width: calc(100% - var(--media-wrapper-gap) - var(--thumb-width));
+    }
+    .media-gallery .thumbs-image-swiper-list {
+        margin-top: 0;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 var(--thumb-width);
+        flex: 0 0 var(--thumb-width);
+        max-width: var(--thumb-width);
+    }
+
+    .media-gallery .thumbs-image-swiper-list .thumbs-slider {
+        max-height: vmpc(600);
+    }
+}
+
+
+
+/* =========== popup-media-gallery ========== */
+
+.media-gallery .popup-media-gallery {
+    position: fixed;
+    z-index: 12;
+    inset: 0;
+    display: none;
+    background:#fff;
+}
+.media-gallery .popup-media-gallery .swiper-box {
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 1520px;
+}
+.media-gallery .popup-media-gallery .modal-close-button {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 10;
+}
+.media-gallery .popup-media-gallery img,
+.media-gallery .popup-media-gallery video
+.media-gallery .popup-media-gallery iframe {
+    height: 100vh;
+    width: auto;
+    max-width: 100%;
+    display: block;
+    margin: auto;
+    object-fit: contain !important;
+}
+.media-gallery .popup-media-gallery .product__slider-nav:not(.product-media-modal__slider-nav) {
+    top: 50%;
+}
+
+
+
+/* =========== popup-media-video ========== */
+
+.media-gallery .popup-media-video {
+    position: fixed;
+    z-index: 12;
+    inset: 0;
+    display: none;
+    background:#fff;
+}
+.media-gallery .popup-media-video .swiper-box {
+    max-height: 90vh;
+    width: 90vh;
+    max-width: 100%;
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.media-gallery .popup-media-video .modal-close-button {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+.media-gallery .popup-media-video img,
+.media-gallery .popup-media-video video
+.media-gallery .popup-media-video iframe {
+    max-width:100%;
+    height:auto;
+    display:block;
+    margin:auto;
+}
+.media-gallery .popup-media-video .product__slider-nav:not(.product-media-modal__slider-nav) {
+    top: 50%;
+}
+
+

@@ -1,0 +1,390 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h3"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "tags": {
+          "type": "tags",
+          "disabled": true,
+          "settings": {}
+        },
+        "variant_picker_jN8X7A": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_quantity": true,
+            "show_gift_card_recipient": false
+          }
+        },
+        "payment_enable_LVdGqP": {
+          "type": "payment_enable",
+          "settings": {
+            "payment_enable": false
+          }
+        },
+        "pickup_availability": {
+          "type": "pickup_availability",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "description": ""
+          }
+        },
+        "dropdown_information_6URzp7": {
+          "type": "dropdown_information",
+          "settings": {
+            "characteristics": false,
+            "heading": "Specifications",
+            "description": "{{ product.metafields.custom.productbrief | metafield_tag }}",
+            "button_show": false,
+            "button_label": "Button label",
+            "button_link": "",
+            "default_open": false
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "tags",
+        "variant_picker_jN8X7A",
+        "buy_buttons",
+        "payment_enable_LVdGqP",
+        "pickup_availability",
+        "description",
+        "dropdown_information_6URzp7"
+      ],
+      "settings": {
+        "desktop_alignment": "right",
+        "mobile_alignment": "before",
+        "gallery_type": "slider_previews",
+        "aspect_ratio": "adapt",
+        "image_fit": "cover",
+        "image_fit_modal": "contain",
+        "padding_bottom": "l"
+      }
+    },
+    "multicolumn_8WwHzr": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_VdWeFG": {
+          "type": "column",
+          "settings": {
+            "icon": "none",
+            "icon_color_scheme": "",
+            "icon_fill_type": "gradient",
+            "heading": "Input",
+            "text": "100-240V ~ 50/60Hz 0.25A Max",
+            "show_button": false,
+            "button_label": "Label",
+            "button_link": "",
+            "button_style": "simple"
+          }
+        },
+        "column_Dhgg6F": {
+          "type": "column",
+          "settings": {
+            "icon": "none",
+            "icon_color_scheme": "",
+            "icon_fill_type": "gradient",
+            "heading": "Output",
+            "text": "5V 1000 mA",
+            "show_button": false,
+            "button_label": "Label",
+            "button_link": "",
+            "button_style": "simple"
+          }
+        },
+        "column_g9ixkh": {
+          "type": "column",
+          "settings": {
+            "icon": "none",
+            "icon_color_scheme": "",
+            "icon_fill_type": "gradient",
+            "heading": "Plug specifications",
+            "text": "US plug",
+            "show_button": false,
+            "button_label": "Label",
+            "button_link": "",
+            "button_style": "simple"
+          }
+        },
+        "column_XCmULA": {
+          "type": "column",
+          "settings": {
+            "icon": "none",
+            "icon_color_scheme": "",
+            "icon_fill_type": "gradient",
+            "heading": "The adapters connector",
+            "text": "inside positive (+) . outside negative (-)",
+            "show_button": false,
+            "button_label": "Label",
+            "button_link": "",
+            "button_style": "simple"
+          }
+        }
+      },
+      "block_order": [
+        "column_VdWeFG",
+        "column_Dhgg6F",
+        "column_g9ixkh",
+        "column_XCmULA"
+      ],
+      "disabled": true,
+      "settings": {
+        "section_type": "transparent",
+        "color_scheme": "",
+        "enable_border": false,
+        "border_full": false,
+        "multicolumn_to_show": 4,
+        "gap": "large",
+        "subheading": "",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "Specifications",
+        "heading_size": "h2",
+        "heading_line": "simple",
+        "line_color": "#1566e0",
+        "word_break": false,
+        "heading_animation": "none",
+        "word_break_an": false,
+        "text": "",
+        "text_align": "center",
+        "icon_size": "recommended",
+        "box_shadow": true,
+        "icon_style": "colored",
+        "image_width": "medium",
+        "image_ratio": "square",
+        "object_fit": "cover",
+        "card_heading_size": "h5",
+        "padding_top": "no-indent",
+        "padding_bottom": "no-indent",
+        "margin_top": "no-indent",
+        "margin_bottom": "m"
+      }
+    },
+    "product_comparison_BmDPaX": {
+      "type": "ProductComparison",
+      "blocks": {
+        "slide_Qhx7YT": {
+          "type": "slide",
+          "settings": {
+            "identification": "",
+            "product_name": "",
+            "link_text": "Shop Now",
+            "sellingpoint": "SMALLEST",
+            "product_into": "core-one-otc-hearing-aids",
+            "image": "shopify://shop_images/otc.png",
+            "text": "<strong>OTC</strong>\nOver-the-counter",
+            "image_1": "shopify://shop_images/33a46981f02bf62c9c47bcfd2d9d9ec2.png",
+            "text_1": "<strong>Widely application</strong>\nMild to moderate hearing loss",
+            "image_2": "shopify://shop_images/f7a24d3c6d262fc395d245b6a310444f.png",
+            "text_2": "<strong>Nearly invisible</strong>\n<span style=\"font-weight: bold; color: #1566E0;\">Invisible-in-canal (IIC)</span>",
+            "image_3": "shopify://shop_images/sound_icons.png",
+            "text_3": "<strong>Advanced acoustics</strong>\nNoise Redution and feedback cancellation",
+            "text_4": "",
+            "image_5": "shopify://shop_images/APP.png",
+            "text_5": "<strong>App control</strong>\n<span style=\"font-weight: bold; color: #1566E0;\">2 Modes</span>",
+            "image_6": "shopify://shop_images/82130677ba6990549a642f2547d64f77.png",
+            "text_6": "<span style=\"font-weight: bold; color: #1566E0;\">13 hours </span>\n<span style=\"font-weight: bold; color: #1566E0;\">78 hours </span>with charging case",
+            "image_7": "shopify://shop_images/rechargeable_icons.png",
+            "text_7": "<strong>Rechargeable</strong>\nBatteries + charging case",
+            "image_8": "shopify://shop_images/07e7d50cfc079991c520aed349ba6b7a.png",
+            "text_8": "<span style=\"font-weight: bold; color: #1566E0;\">IP66</span>\nWater-resistant",
+            "image_9": "shopify://shop_images/5_4573d177-ce78-4826-87a6-551cfbb4cff0.png",
+            "text_9": "<strong>60 days</strong>\nRisk-free trial"
+          }
+        },
+        "slide_ba7DEd": {
+          "type": "slide",
+          "settings": {
+            "identification": "",
+            "product_name": "",
+            "link_text": "Shop Now",
+            "sellingpoint": "SELF-FITTING",
+            "product_into": "beacon-otc-hearing-aids",
+            "image": "shopify://shop_images/otc.png",
+            "text": "<strong>OTC</strong>\nOver-the-counter",
+            "image_1": "shopify://shop_images/33a46981f02bf62c9c47bcfd2d9d9ec2.png",
+            "text_1": "<strong>Widely application</strong>\nMild to moderate hearing loss",
+            "image_2": "shopify://shop_images/f7a24d3c6d262fc395d245b6a310444f.png",
+            "text_2": "<strong>Virtually invisible</strong>\n <span style=\"font-weight: bold; color: #1566E0;\">Receiver-in-canal (RIC)</span>",
+            "image_3": "shopify://shop_images/sound_icons.png",
+            "text_3": "<strong>Advanced acoustics</strong>\nNoise Redution and feedback cancellation",
+            "image_4": "shopify://shop_images/F.png",
+            "text_4": "<span style=\"font-weight: bold; color: #1566E0;\">Bluetooth 5.0</span>\nStream phone calls and music",
+            "image_5": "shopify://shop_images/APP.png",
+            "text_5": "<strong>Bluetooth app</strong>\n<span style=\"font-weight: bold; color: #1566E0;\">4 Modes</span>",
+            "image_6": "shopify://shop_images/82130677ba6990549a642f2547d64f77.png",
+            "text_6": "<span style=\"font-weight: bold; color: #1566E0;\">18 hours</span>\n<span style=\"font-weight: bold; color: #1566E0;\">72 hours</span> with charging case",
+            "image_7": "shopify://shop_images/rechargeable_icons.png",
+            "text_7": "<strong>Rechargeable</strong>\nBatteries + charging case",
+            "image_8": "shopify://shop_images/07e7d50cfc079991c520aed349ba6b7a.png",
+            "text_8": "<span style=\"font-weight: bold; color: #1566E0;\">IP65</span>\nWater-resistant",
+            "image_9": "shopify://shop_images/5_4573d177-ce78-4826-87a6-551cfbb4cff0.png",
+            "text_9": "<strong>60 days</strong>\nRisk-free trial"
+          }
+        }
+      },
+      "block_order": [
+        "slide_Qhx7YT",
+        "slide_ba7DEd"
+      ],
+      "disabled": true,
+      "settings": {
+        "Boxstatus": "none",
+        "top_one": 50,
+        "bottom_one": 50,
+        "top_one_mic": 20,
+        "bottom_one_mic": 20,
+        "text_align": "center",
+        "title": "Related Products",
+        "header_font_size": 45,
+        "header_font_size_mic": 30,
+        "slogan": "",
+        "slogan_font_size": 24,
+        "slogan_font_size_mic": 16,
+        "slogan_color": "#ffffff",
+        "bg_color": "#ffffff"
+      }
+    },
+    "multicolumn_dgHDJk": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_hmjALi": {
+          "type": "column",
+          "settings": {
+            "icon": "none",
+            "icon_color_scheme": "",
+            "icon_fill_type": "gradient",
+            "heading": "Talk to an expert",
+            "text": "Call us at 1-866-283-4262 and we're glad to help",
+            "show_button": true,
+            "button_label": "Call now",
+            "button_link": "tel:866-283-4262",
+            "button_style": "simple"
+          }
+        },
+        "column_eNPTez": {
+          "type": "column",
+          "settings": {
+            "icon": "none",
+            "icon_color_scheme": "",
+            "icon_fill_type": "gradient",
+            "heading": "Online hearing test",
+            "text": "Quickly assess your hearing ability from home",
+            "show_button": true,
+            "button_label": "Test now",
+            "button_link": "shopify://pages/hearing-tests",
+            "button_style": "simple"
+          }
+        },
+        "column_8waqQe": {
+          "type": "column",
+          "settings": {
+            "icon": "none",
+            "icon_color_scheme": "",
+            "icon_fill_type": "gradient",
+            "heading": "Where to buy",
+            "text": "Fina a pharmacy near you that sells Ceretone hearing aids",
+            "show_button": true,
+            "button_label": "Find local Ceretone",
+            "button_link": "shopify://pages/store-locator",
+            "button_style": "simple"
+          }
+        }
+      },
+      "block_order": [
+        "column_hmjALi",
+        "column_eNPTez",
+        "column_8waqQe"
+      ],
+      "settings": {
+        "section_type": "transparent",
+        "color_scheme": "",
+        "enable_border": false,
+        "border_full": false,
+        "multicolumn_to_show": 3,
+        "gap": "medium",
+        "subheading": "",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "Want to Find Out More？",
+        "heading_size": "h2",
+        "heading_line": "simple",
+        "line_color": "#1566e0",
+        "word_break": false,
+        "heading_animation": "none",
+        "word_break_an": false,
+        "text": "We're here to help",
+        "text_align": "center",
+        "icon_size": "recommended",
+        "box_shadow": true,
+        "icon_style": "colored",
+        "image_width": "medium",
+        "image_ratio": "square",
+        "object_fit": "cover",
+        "card_heading_size": "h4",
+        "padding_top": "no-indent",
+        "padding_bottom": "no-indent",
+        "margin_top": "no-indent",
+        "margin_bottom": "m"
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "background-1",
+        "subheading": "Subheading",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "You May Also Like",
+        "heading_size": "h2",
+        "text": "Some description",
+        "products_limit": 6,
+        "image_ratio": "5/4",
+        "image_fit": "cover",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_desc": true,
+        "padding_top": "l",
+        "padding_bottom": "l"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "multicolumn_8WwHzr",
+    "product_comparison_BmDPaX",
+    "multicolumn_dgHDJk",
+    "product-recommendations"
+  ]
+}

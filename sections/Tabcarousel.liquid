@@ -1,0 +1,403 @@
+<style>
+  [data-section-id="{{ section.id }}"] {
+    background-color: {{ section.settings.bg_color }};
+    padding-top: {{ section.settings.top_one |  append: 'px' }};
+    padding-bottom: {{ section.settings.bottom_one |  append: 'px' }};
+  }
+  .tab_list_title {
+    text-align: center;
+    font-size: 4rem;
+    margin: 0 0 2rem;
+  }
+  .tab_list_text {
+    text-align: center;
+    font-size: 2.8rem;
+    margin: 0 0 5rem;
+  }
+  .tab_list ul li {
+    list-style-type: none;
+  }
+  .tab_list {
+    padding: 0;
+    margin: 0;
+  }
+  .tab_list ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 0 5rem;
+  }
+  .tab_list li {
+    padding: 1rem 2rem;
+    font-size: 1.8rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    border-radius: 2.4rem;
+    transition: transform 0.5s ease;
+  }
+  .tab_list li:hover {
+    color: #1566E0;
+  }
+  .tab_list li.current {
+    background: #1566E0;
+    color: #fff;
+  }
+  .tab_con .item {
+    display: none;
+  }
+  .tab_con .item.active {
+    display: block;
+  }
+  .Tabcarousel_flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .Tabcarousel_flex_box {
+    width: 24%;
+    background-color: {{ section.settings.text_color }};
+    padding: 5rem 2rem;
+  }
+  .Tabcarousel_flex_box_img {
+    display: block;
+    width: 70%;
+    height: auto;
+    margin: 0 0 2rem;
+  }
+  .Tabcarousel_flex_box_content_title {
+    margin: 0 0 2rem;
+    font-size: 3rem;
+    color: {{ section.settings.size_color }};
+  }
+  .Tabcarousel_flex_box_content_text {
+    margin: 0 0 2rem;
+    color: {{ section.settings.size_color }};
+  }
+  .Tabcarousel_flex_box_content_link {
+    margin: 0 0 2rem;
+    display: inline-block;
+    text-decoration: none;
+    background: #1566E0;
+    color: #fff;
+    padding: 0.5rem 2rem;
+    border-radius: 2rem;
+    font-size: 1.6rem;
+  }
+  .Tabcarousel_flex_box_content_link:hover {
+    background-color: #fff;
+    color: #1566E0;
+  }
+  .Tabcarousel_flex_box_content_name {
+    margin: 0;
+    font-size: 2.4rem;
+    font-weight: 400;
+    color: {{ section.settings.size_color }};
+  }
+  .select_mobile {
+    display: none;
+  }
+  @media(max-width: 968px) {
+    .select_mobile {
+      display: block;
+      font-size: 1.6rem;
+      width: 60%;
+      margin: 0 auto 2rem;
+      padding: 1rem;
+      border-radius: 2.4rem;
+    }
+    .tab_list_title {
+      font-size: 3rem;
+    }
+    .tab_list_text {
+      font-size: 2rem;
+      margin: 0 0 2.5rem;
+    }
+    .tab_list ul {
+      display: none;
+    }
+    .Tabcarousel_flex_box {
+      width: 49%;
+      padding: 1rem;
+      margin-bottom: 2rem;
+    }
+    .Tabcarousel_flex_box_content_title {
+      font-size: 2rem;
+    }
+    .Tabcarousel_flex_box_content_name {
+      font-size: 1.8rem;
+    }
+  }
+</style>
+<div data-section-id="{{ section.id }}" class="Tabcarousel">
+  <div class="container">
+    <div class="tab_list">
+      {% if section.settings.title_text != blank %}
+        <h2 class="tab_list_title">{{ section.settings.title_text | newline_to_br }}</h2>
+      {% endif %}
+      {% if section.settings.text != blank %}
+        <p class="tab_list_text">{{ section.settings.text | newline_to_br }}</p>
+      {% endif %}
+      {% assign faqType = section.settings.type | split: '|' %}
+      <ul>
+        {% for type in faqType %}
+          {% if forloop.first %}
+            <li class="current">{{ type }}</li>
+          {% else %}
+            <li>{{ type }}</li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+      <select class="select_mobile" id="mobile-tab-selector">
+        {% for type in faqType %}
+          <option value="{{ forloop.counter }}">{{ type }}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <div class="tab_con">
+      {% for type in faqType %}
+        {% if forloop.first %}
+          <div class="item active">
+            <div class="Tabcarousel_flex">
+              {% for block in section.blocks %}
+                {% if block.settings.type == type %}
+                  <div class="Tabcarousel_flex_box">
+                    {% if block.settings.image != blank %}
+                      {{
+                        block.settings.image
+                        | image_url: width: section.settings.image.width
+                        | image_tag:
+                          loading: 'lazy',
+                          widths: '360, 533, 720, 940, 1066, 1200, 1400, 1600, 1800, 2000, 2200, 2400, 2600, 2800, 3000, 3264, 3400, 3584, 3800, 4000, 4200, 4400, 4600, 4800, 5000, 5200, 5400, 5600',
+                          sizes: sizes,
+                          class: 'Tabcarousel_flex_box_img'
+                      }}
+                    {% endif %}
+                    <div class="Tabcarousel_flex_box_content">
+                      {% if block.settings.title != blank %}
+                        <h4 class="Tabcarousel_flex_box_content_title">{{ block.settings.title | newline_to_br }}</h4>
+                      {% endif %}
+                      {% if block.settings.text != blank %}
+                        <p class="Tabcarousel_flex_box_content_text">{{ block.settings.text | newline_to_br }}</p>
+                      {% endif %}
+                      {% if block.settings.link != blank %}
+                        <a class="Tabcarousel_flex_box_content_link" href="{{ block.settings.link }}">
+                          {{- block.settings.link_text | newline_to_br -}}
+                        </a>
+                      {% endif %}
+                      {% if block.settings.name != blank %}
+                        <h4 class="Tabcarousel_flex_box_content_name">{{ block.settings.name | newline_to_br }}</h4>
+                      {% endif %}
+                    </div>
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+        {% else %}
+          <div class="item">
+            <div class="Tabcarousel_flex">
+              {% for block in section.blocks %}
+                {% if block.type == 'slide' %}
+                  {% if block.settings.type == type %}
+                    <div class="Tabcarousel_flex_box">
+                      {% if block.settings.image != blank %}
+                        {{
+                          block.settings.image
+                          | image_url: width: section.settings.image.width
+                          | image_tag:
+                            loading: 'lazy',
+                            widths: '360, 533, 720, 940, 1066, 1200, 1400, 1600, 1800, 2000, 2200, 2400, 2600, 2800, 3000, 3264, 3400, 3584, 3800, 4000, 4200, 4400, 4600, 4800, 5000, 5200, 5400, 5600',
+                            sizes: sizes,
+                            class: 'Tabcarousel_flex_box_img'
+                        }}
+                      {% endif %}
+                      <div class="Tabcarousel_flex_box_content">
+                        {% if block.settings.title != blank %}
+                          <h4 class="Tabcarousel_flex_box_content_title">{{ block.settings.title | newline_to_br }}</h4>
+                        {% endif %}
+                        {% if block.settings.text != blank %}
+                          <p class="Tabcarousel_flex_box_content_text">{{ block.settings.text | newline_to_br }}</p>
+                        {% endif %}
+                        {% if block.settings.link != blank %}
+                          <a class="Tabcarousel_flex_box_content_link" href="{{ block.settings.link }}">
+                            {{- block.settings.link_text | newline_to_br -}}
+                          </a>
+                        {% endif %}
+                        {% if block.settings.name != blank %}
+                          <h4 class="Tabcarousel_flex_box_content_name">{{ block.settings.name | newline_to_br }}</h4>
+                        {% endif %}
+                      </div>
+                    </div>
+                  {% endif %}
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<script>
+    // Function to switch tabs
+  function switchTab(index) {
+    // Remove 'current' and 'active' classes
+    document.querySelectorAll('.tab_list li').forEach(item => item.classList.remove('current'));
+    document.querySelectorAll('.tab_con .item').forEach(item => item.classList.remove('active'));
+
+    // Add 'current' class to the selected tab and 'active' class to the corresponding content
+    document.querySelectorAll('.tab_list li')[index].classList.add('current');
+    document.querySelectorAll('.tab_con .item')[index].classList.add('active');
+  }
+
+  // Add click event listeners to the tab list items
+  document.querySelectorAll('.tab_list li').forEach((tab, index) => {
+    tab.addEventListener('click', () => {
+      switchTab(index);
+    });
+  });
+
+  // Add change event listener to the select element
+  document.getElementById('mobile-tab-selector').addEventListener('change', function() {
+    const selectedIndex = this.selectedIndex;
+    switchTab(selectedIndex);
+  });
+
+  // Function to set uniform height for the slides
+  var slides = document.querySelectorAll('.Tabcarousel_flex_box');
+  var maxHeight = 0;
+  slides.forEach(function(slide) {
+    var slideHeight = slide.offsetHeight;
+    if (slideHeight > maxHeight) {
+      maxHeight = slideHeight;
+    }
+  });
+  slides.forEach(function(slide) {
+    slide.style.height = maxHeight + 'px';
+  });
+</script>
+
+{% schema %}
+{
+  "name": "tab轮播",
+  "class": "section",
+  "settings": [
+    {
+      "type": "range",
+      "id": "top_one",
+      "label": "上边距",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "bottom_one",
+      "label": "下边距",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "top_one_mic",
+      "label": "移动端上边距",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "bottom_one_mic",
+      "label": "移动端下边距",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "default": 20
+    }, {
+      "type": "textarea",
+      "id": "title_text",
+      "label": "标题"
+    }, {
+      "type": "textarea",
+      "id": "text",
+      "label": "内容"
+    }, {
+      "type": "color",
+      "id": "bg_color",
+      "label": "背景颜色选择",
+      "default": "#ffffff"
+    }, {
+      "type": "color",
+      "id": "text_color",
+      "label": "小盒子背景图片",
+      "default": "#fff"
+    }, {
+      "type": "color",
+      "id": "size_color",
+      "label": "字体颜色",
+      "default": "#000"
+    }, {
+      "type": "textarea",
+      "id": "type",
+      "label": "类型",
+      "info": "类型以 | 分割"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "属性",
+      "settings": [
+        {
+          "type": "text",
+          "id": "type",
+          "label": "标题",
+          "info": "对应类型名称"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "评论等级"
+        },
+        {
+          "type": "textarea",
+          "id": "title",
+          "label": "标题"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "内容"
+        }, {
+          "type": "textarea",
+          "id": "link_text",
+          "label": "链接文本"
+        }, {
+          "type": "url",
+          "id": "link",
+          "label": "链接"
+        }, {
+          "type": "textarea",
+          "id": "name",
+          "label": "姓名"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "tab轮播"
+    }
+  ]
+}
+{% endschema %}

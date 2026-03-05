@@ -1,0 +1,149 @@
+@import 'tools';
+
+.number-card {
+    padding-top: vm(40);
+    padding-bottom: vm(30);
+
+    @include media-min('spc') {
+        padding-top: vmpc(70);
+        padding-bottom: vmpc(70);
+    }
+
+
+    .container {
+        @include media('spc') {
+            padding-left: vmspc(20) !important;
+            padding-right: vmspc(20) !important;
+        }
+        @include media('pc') {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+    }
+
+    .title {
+        color: #2D2D2D;
+        font-size: vm(32);
+        line-height: vm(34);
+        font-weight: 700;
+        text-align: center;
+
+        @include media-min('spc') {
+            font-size: vmpc(56);
+            line-height: vmpc(58);
+        }
+    }
+  
+    .sub-title {
+        color: #2D2D2D;
+        font-size: vm(18);
+        line-height: vm(22);
+        font-weight: 400;
+        margin-top: vm(20);
+        text-align: center;
+
+        @include media-min('spc') {
+            font-size: vmpc(22);
+            line-height: vmpc(28);
+            margin-top: vmpc(30);
+        }
+    }
+  
+    .cards {
+      display: block;
+      --card-gap: #{vm(20)};
+      --card-height: #{vm(170)};
+      position: relative;
+      margin-top: vm(35);
+
+      @include media-min('spc') {
+            margin-top: vmpc(60);
+            display: flex;
+            --card-gap: #{vmpc(50)};
+            --card-height: #{vmpc(264)};
+            gap: var(--card-gap);
+        }   
+    }
+  
+    .card {
+        width: calc(50% - calc(var(--card-gap) / 2));
+        background: #F6F1EA;
+        padding: vm(10);
+        min-height: var(--card-height);
+        border-radius: vm(12);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        margin-bottom: var(--card-gap);
+
+        @include media-min('spc') {
+            justify-content: flex-start;
+            margin-bottom: 0; 
+            flex: 1;
+            width: auto;
+            padding: vmpc(40) vmpc(20) vmpc(20);
+            border-radius: vmpc(12);
+        } 
+  
+      svg {
+        width: 26px;
+        height: 22px;
+        margin-right: 5px;
+      }
+  
+      .card-title.h4 {
+        margin-bottom: vm(10);
+        font-size: vm(20);
+        line-height: vm(24);
+        font-weight: 700;
+        color: #FF4F00;
+        text-align: center;
+
+        @include media-min('spc') {
+            margin-bottom: vmpc(20);
+            font-size: vmpc(20);
+            line-height: vmpc(26);
+            text-align: left;
+        } 
+      }
+  
+      .card-text.body-large {
+        font-size: vm(18);
+        line-height: vm(22);
+        color: #524842;
+        text-align: center;
+
+        @include media-min('spc') {
+            font-size: vmpc(22);
+            line-height: vmpc(28);
+            text-align: left;
+        }
+      }
+  
+      &.card-2 {
+        position: absolute;
+        right: 0;
+        top: 0;
+        min-height: calc(var(--card-height) * 1.5);
+
+        @include media-min('spc') {
+            position: static;
+            min-height:0;
+        }
+      }
+  
+      &.card-5 {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        min-height: calc(var(--card-height) * 1.5 + var(--card-gap));
+        margin-bottom: 0;
+
+        @include media-min('spc') {
+            position: static;
+            min-height:0;
+        }
+      }
+    }
+  }

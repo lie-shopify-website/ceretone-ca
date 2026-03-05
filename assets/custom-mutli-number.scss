@@ -1,0 +1,117 @@
+@import "tools";
+
+.custom-mutli-number {
+    font-family: Helvetica;
+    font-weight: 400;
+    letter-spacing: 0;
+
+    h1,h2,h3,h4,h5,h6,p {
+        margin: 0;
+        font-family: Helvetica;
+    }
+
+    .safe-container {
+        padding: vm(40) vm(20) vm(30);
+
+        @include media-min('spc') {
+            padding: vmpc(70) 0;
+        }
+
+    }
+
+    .heading-box {
+        margin-bottom: vm(35);
+        @include media-min('spc') {
+            margin-bottom: vmpc(60);
+        }
+
+        .title h2 {
+            color:#2D2D2D;
+            font-size: vm(32);
+            line-height: vm(34);
+            font-weight: 700;
+            text-align: center;
+
+            @include media-min('spc') {
+                font-size: vmpc(56);
+                line-height: vmpc(58);
+            }
+        }
+    }
+
+    .mutli-number_items {
+        --number-items-gap:#{vm(30)};
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        gap:  vm(25) var(--number-items-gap);
+
+        @include media-min('spc') {
+            --number-items-gap:#{vmpc(50)};
+            gap: vmpc(30) var(--number-items-gap);
+        }
+
+        .mutli-number_item {
+            flex:0 0 calc(50% - 1/2*var(--number-items-gap));
+            max-width: calc(50% - 1/2*var(--number-items-gap));
+            text-align: center;
+
+            @include media-min('spc') {
+                flex:0 0 calc(100% / 4 - 3/4*var(--number-items-gap));
+                max-width: calc(100% / 4 - 3/4*var(--number-items-gap));
+                padding: vmpc(20);
+                text-align: left;
+            }
+        }
+
+        .item-display {
+            font-size: vm(32);
+            line-height: vm(34);
+            font-weight: 700;
+            color: #FF4F00;
+            margin-bottom: vm(20);
+
+            @include media-min('spc') {
+                font-size: vmpc(56);
+                line-height: vmpc(58);
+                margin-bottom: vmpc(20);
+            }
+        }
+
+        .item-title {
+            margin-bottom: vm(10);
+
+            @include media-min('spc') {
+                margin-bottom: vmpc(20);
+            }
+            
+
+            h3 {
+                font-size: vm(20);
+                line-height: vm(24);
+                font-weight: 700;
+                color: #2D2D2D;
+                text-transform: unset;
+
+                @include media-min('spc') {
+                    font-size: vmpc(22);
+                    line-height: vmpc(26);
+                }
+            }
+        }
+
+        .item-info p {
+            font-size: vm(18);
+            line-height: vm(24);
+            font-weight: 400;
+            color: #524842;
+            text-transform: unset;
+
+            @include media-min('spc') {
+                font-size: vmpc(22);
+                line-height: vmpc(28);
+            }
+        }
+    }
+}

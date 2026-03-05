@@ -1,0 +1,90 @@
+<section data-section-id="{{ section.id }}">
+    <div class="container">
+        <div class="inner">
+            {% if section.settings.title != blank %}<div class="text-custom-1__title">{{ section.settings.title | newline_to_br }}</div>{% endif %}
+            {% if section.settings.info != blank %}<div class="text-custom-1__info">{{ section.settings.info | newline_to_br }}</div>{% endif %}
+            {% if section.settings.info1 != blank %}<div class="text-custom-1__info1">{{ section.settings.info1 | newline_to_br }}</div>{% endif %}
+        </div>
+    </div>
+</section>
+
+<style>
+[data-section-id="{{ section.id }}"] .container {
+    padding-top:{{ section.settings.pc_padding_top }}px;
+	padding-bottom:{{ section.settings.pc_padding_bottom }}px;
+}
+@media screen and (max-width: 767px) {
+    [data-section-id="{{ section.id }}"] .container {
+        padding-top:{{ section.settings.mb_padding_top }}px;
+		padding-bottom:{{ section.settings.mb_padding_bottom }}px;
+    }
+}
+.text-custom-1 .inner {
+    text-align: center;
+}
+.text-custom-1 .text-custom-1__title {
+    font-size: 170px;
+    font-weight: 700;
+    color: #f54603;
+    line-height: 1.2;
+}
+.text-custom-1 .text-custom-1__info {
+    font-size: 30px;
+    max-width: 900px;
+    margin: auto;
+    font-style: italic;
+    color: #000;
+    line-height: 1.3;
+    margin-bottom: 30px;
+}
+.text-custom-1 .text-custom-1__info1 {
+    color: #f54603;
+    font-size: 32px;
+    font-weight: bold;
+}
+@media screen and (max-width: 767px) {
+  .text-custom-1 .text-custom-1__title {
+      font-size: 90px;
+  }
+  .text-custom-1 .text-custom-1__info {
+      font-size: 16px;
+      margin-bottom: 15px;
+  }
+  .text-custom-1 .text-custom-1__info1 {
+      font-size: 22px;
+  }
+}
+
+</style>
+
+<script>
+    window.addEventListener("DOMContentLoaded", function () {
+
+    });                       
+</script>
+
+
+{% schema %}
+    {
+        "name": "Text Custom 1",
+        "class":"text-custom-1",
+        "settings": [
+                { "type": "textarea", "id":"title", "label":"Title", "default":"3650"},
+                { "type": "textarea", "id":"info", "label":"Info", "default":"\"The average time from first awareness of hearing difficulty to hearing aid adoption is approximately tenyears.\"-NIDCDd"},
+                { "type": "textarea", "id":"info1", "label":"Info 1", "default":"Don't Miss the whole Decades"},
+          
+                { "type": "header","content":"PC"},
+                { "type": "range", "id": "pc_padding_top", "label": "Top Space", "min": 0, "max": 100, "step": 1, "unit": "px", "default": 0 },
+                { "type": "range", "id": "pc_padding_bottom", "label": "Bottom Space", "min": 0, "max": 100, "step": 1, "unit": "px", "default": 0 },
+                { "type": "header","content":"Mobile"},
+                { "type": "range", "id": "mb_padding_top", "label": "Top Space", "min": 0, "max": 100, "step": 1, "unit": "px", "default": 0 },
+                { "type": "range", "id": "mb_padding_bottom", "label": "Bottom Space", "min": 0, "max": 100, "step": 1, "unit": "px", "default": 0 }
+        ],
+        "presets": [
+            {
+                "name": "Text Custom 1",
+                "category":"Custom"
+            }
+        ]
+    }
+{% endschema %}

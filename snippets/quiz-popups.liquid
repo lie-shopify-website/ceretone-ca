@@ -1,0 +1,99 @@
+<div class="popup__adjust" style="display:none;"> 
+    <div class="inner">
+        <div class="box">
+            <h6>{{ section.settings.volume_popup_heading }}</h6>
+            <p>{{ section.settings.volume_popup_description }}</p>
+            <ul>
+                <li><a href="#" class="current" data-el="el1">{{ section.settings.windows_tab_text }}</a></li>
+                <li><a href="#" data-el="el2">{{ section.settings.mac_tab_text }}</a></li>
+                <li><a href="#" data-el="el3">{{ section.settings.mobile_tab_text }}</a></li>
+            </ul>
+            <div class="picked__box">
+                <div class="el" data-el="el1">
+          <div class="media">
+            {{ section.settings.windows_volume_icon | img_url: 'master' | img_tag }}
+          </div>
+                    <p>{{ section.settings.windows_volume_instructions }}</p>
+                </div>
+
+                <div class="el" data-el="el2" style="display:none;">
+                    <div class="media">
+                        {{ section.settings.mac_volume_icon | img_url: 'master' | img_tag }}
+                    </div>
+                    <p>{{ section.settings.mac_volume_instructions }}</p>
+                </div>
+
+                <div class="el" data-el="el3" style="display:none;">
+                    <div class="media">
+                        {{ section.settings.mobile_volume_icon | img_url: 'master' | img_tag }}
+                    </div>
+                    <p>{{ section.settings.mobile_volume_instructions }}</p>
+                </div>
+            </div>
+            <div class="btn">
+                <a href="#" class='regular-btn'>{{ section.settings.volume_popup_button_text }}</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="privacy__popup" style="display:none;">
+    <div class="inner">
+        <div class="box">
+            <div class="top__box">
+                <h6>{{ section.settings.privacy_popup_heading }}</h6>
+                <div class="info">
+                    <div id="modal-text" class="sc-FRqyn dCDwcl">{{ section.settings.privacy_statement }}</div>
+                </div>
+            </div>
+            <div class="btn">
+                <a href="#" class="regular-btn">{{ section.settings.privacy_popup_button_text }}</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="both__ears--popup" style="display:none;">
+    <div class="inner">
+        <div class="box">
+            <h2>{{ section.settings.both_ears_popup_heading }}</h2>
+            <p>{{ section.settings.both_ears_popup_description }}</p>
+            <div class="btn">
+                <a href="#" class="regular-btn featured restart">{{ section.settings.restart_button_text }}</a>
+
+                <a href="#" class="regular-btn continue">{{ section.settings.continue_button_text }}</a>
+
+                <a href="#" class="back">{{ section.settings.go_back_text }}</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="calculate__popup" style="display:none;">
+    <div class="inner">
+        <div class="box">
+            <h2>{{ section.settings.calculate_popup_heading }}</h2>
+            <p>{{ section.settings.calculate_popup_description_1 }}</p>
+            <p>{{ section.settings.calculate_popup_description_2 }}</p>
+            <p>{{ section.settings.calculate_popup_description_3 }}</p>
+            <div class="btn">
+                <a href="#" class="regular-btn">{{ section.settings.calculate_popup_button_text }}</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="dont__hear--popup" style="display:none;">
+    <div class="inner">
+        <div class="box">
+            <h2>{{ section.settings.dont_hear_popup_heading }}</h2>
+            <p>{{ section.settings.dont_hear_popup_description }}</p>
+            <div class="btn">
+                <a href="#" class="try__again regular-btn">{{ section.settings.try_again_button_text }}</a>
+            </div>
+        </div>
+    </div>
+</div>

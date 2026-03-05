@@ -1,0 +1,107 @@
+{% comment %} 
+    分为 main-media-gallery 和 popup-media-gallery 
+    main-media-gallery : 主媒体列表
+    popup-media-gallery : 弹框媒体列表 (在main-product.liquid引入)
+{% endcomment %}
+
+<div class="media-gallery pc-sticky">
+    {% render 'main-media-gallery', product: product, section:section %}
+</div>
+
+
+<style>
+  .big-image-swiper-list .big-image-swiper:not(.swiper-initialized) {
+    width: 384px;
+    height: 384px;
+  }
+</style>
+
+<script>
+var productVariants = {
+  {% for variant in product.variants %}
+    "{{ variant.option1 | remove: '"' }}{{ variant.option2 | remove: '"' }}{{ variant.option3 | remove: '"' }}" : "variant-id-{{ variant.id }}",
+  {% endfor %}
+};
+
+window.addEventListener('DOMContentLoaded', function() {
+    /* required JQury */
+
+    $('variant-radios label').on('click', function(){
+        showVariantMediaGallery();
+    });
+    function showVariantMediaGallery(){
+      setTimeout(() => {
+        var checkedOption = $('variant-radios input:checked');
+        var checkedOptionValue = '';
+        for(i=0; i< checkedOption.length; i++){
+          checkedOptionValue += $(checkedOption[i]).val().replaceAll('"', '');
+        }
+        
+        if(productVariants.hasOwnProperty(checkedOptionValue)){
+          let index = productVariants[checkedOptionValue];
+
+          /* 主媒体集 */
+          if($('.main-media-gallery .swiper-box[data-index="'+ index +'"]').length > 0){
+            $('.main-media-gallery .swiper-box').hide();
+            $('.main-media-gallery .swiper-box[data-index="'+ index +'"]').show();
+          }
+          
+          /* 弹框媒体集 */
+          if($('.popup-media-gallery .swiper-box[data-index="'+ index +'"]').length > 0){
+            $('.popup-media-gallery .swiper-box').hide();
+            $('.popup-media-gallery .swiper-box[data-index="'+ index +'"]').show();
+          }
+
+        }
+        
+      }, 100);
+    }
+
+
+    /* 点击图片，弹出 popup media */
+    $('.media-gallery .big-image-swiper-list .swiper-slide').on('click', function(){
+        let _this = $(this);
+        let position = _this.parents('.swiper-box').attr('data-position');
+
+        if(window['mainBigPcImageSwiper' + position]){
+          let slideIndex = window['mainBigPcImageSwiper' + position].activeIndex;
+
+          window['popupBigPcImageSwiper' + position].slideTo(slideIndex); /* 弹框媒体集同步index */
+
+          $('.media-gallery .popup-media-gallery').show();
+          $('body').addClass('scroll-lock'); /* 上锁 */
+        }
+    });
+    /* 点击Close，隐藏 model-media */
+    $('.media-gallery .popup-media-gallery .modal-close-button').on('click', function(){
+        $('.media-gallery .popup-media-gallery').hide();
+        $('body').removeClass('scroll-lock'); /* 解锁 */
+    });
+
+    /* 按esc，隐藏 model-media */
+    $(document).on('keydown', function(event) {
+          if (event.key === 'Escape' || event.keyCode === 27) {
+              $('.media-gallery .popup-media-gallery').hide();
+              $('body').removeClass('scroll-lock'); /* 解锁 */
+          }
+    });
+
+});
+
+
+
+
+
+function _pauseAllMedia(el = document) { /* 暂停视频，main-media-gallery.liquid引用 */
+  el.querySelectorAll('.js-youtube, .js-vimeo, video').forEach((video) => {
+    if (video.matches('.js-youtube')) {
+      video.contentWindow.postMessage('{ "event": "command", "func": "pauseVideo", "args": "" }', '*');
+    } else if (video.matches('.js-vimeo')) {
+      video.contentWindow.postMessage('{ "method": "pause" }', '*');
+    } else {
+      video.pause();
+    }
+  });
+}
+
+</script>

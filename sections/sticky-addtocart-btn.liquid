@@ -1,0 +1,273 @@
+
+{% schema %}
+    {
+        "name": "Sticky Addtocart Btn",
+        "settings": [
+            { "type": "product", "id": "custom_product", "label": "产品" },
+            { "type": "text", "id": "custom_class", "label": "自定义class" },
+            { "type": "color", "id": "section_bg_color", "label": "模块背景", "default": "#fff" },
+            { "type": "color", "id": "bg_color", "label": "按钮背景", "default": "#000000" },
+            { "type": "color", "id": "color", "label": "按钮文字颜色", "default": "#ffffff" },
+            { "type": "liquid", "id": "btn_label", "label": "按钮名称" },
+            { "type": "range", "id": "btn_max_width", "label": "按钮宽度", "min": 5, "max": 500, "step": 5, "unit": "px", "default": 240 },
+            { "type": "range", "id": "btn_max_width_mb", "label": "按钮宽度(手机端)", "min": 5, "max": 500, "step": 5, "unit": "px", "default": 240 },
+            { "type": "liquid", "id": "liquid", "label": "附加内容(选填)" },
+        ],
+        "presets": [
+            {
+                "name": "Sticky Addtocart Btn",
+                "category": "Custom"
+            }
+        ]
+    }
+{% endschema %}
+
+<style>
+    .add-to-cart-button{
+        position: fixed;
+        z-index: 11;
+        background: transparent;
+        width: 42rem;
+        right: 5rem;
+        background-color: #fff;
+        padding: 1rem;
+        box-shadow: 0 0 20px #000;
+        top: auto;
+        bottom: .8rem;
+        opacity: 1;
+        transition: opacity 0.3s ease-in-out;
+        visibility: visible;
+        pointer-events: auto;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        border-radius: 10px;
+        transform: translateY(0);
+        visibility: visible;
+      }
+      .add-to-cart-button.hidden {
+          opacity: 0;
+      }
+      .product_image{
+        width: 100px;
+        height: auto;
+        border-radius: 12px;
+        margin-right: 2%;
+      }
+      .product_name{
+        margin: 0 0 15px;
+        font-size: 20px;
+      }
+      .addtocart_box form{
+        display: flex;
+      }
+      .addtocart_box .product-form__submit{
+        min-height: 3.8rem;
+      }
+      .addtocart_box .quantity {
+        min-height: 3.8rem;
+        margin-right: 5px;
+      }
+      {% comment %} .add-to-cart-button .product-form__submit span{
+        font-size: 1.2rem;
+      } {% endcomment %}
+      @media(max-width: 768px) {
+        .add-to-cart-button{
+          right: 16px;
+          width: 60%;
+          transform: unset;
+          padding: 0;
+          background: transparent;
+          box-shadow: 0 0 0px #000;
+          justify-content: flex-end;
+          bottom: 10px !important;
+        }
+  
+        .addtocart_box .product-form__submit {
+          min-height: 45px;
+          min-width: 150px;
+        }
+        .product_name{
+          display: none;
+        }
+        .addtocart_box .quantity{
+          display: none;
+        }
+  
+        .add-to-cart-button .pii_wrapper {
+            --pii-width: 72px;
+            --pii-height: 72px;
+            border-radius: 50%;
+            background: #fff;
+            width: var(--pii-width);
+            height: var(--pii-height);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .add-to-cart-button .pii_wrapper_img {
+            border-radius: 50%;
+            background: #FF4F00;
+            width: calc(var(--pii-width) - 6px);
+            height: calc(var(--pii-height) - 6px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .add-to-cart-button .pii_wrapper_img img {
+          border-radius: 50%;
+          background: #fff;
+          width: calc(var(--pii-width) - 12px);
+          height: calc(var(--pii-height) - 12px);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 0;
+        }
+  
+        .add-to-cart-button .product_image_item {
+            position: relative;
+            right: -30px;
+            z-index: 4;
+        }
+        .add-to-cart-button .addtocart_box {
+            position: relative;
+            z-index: 3;
+        }
+      }
+</style>
+
+{%- assign curr_product = section.settings.custom_product -%}
+{% if curr_product %}
+    {%- assign product_form_id = 'product-form-' | append: section.id -%}
+
+    <div class="add-to-cart-button sticky-addtocart-btn sticky-btn js-addtocartBtn {% if curr_product.variants.size == 1 %}single-variant{% else %}muilt-variant{% endif %}" data-section-id="{{ section.id }}">
+        {% assign selected_variant = curr_product.selected_or_first_available_variant %}
+        {% assign selected_variant_id = selected_variant.id %}
+        {% if curr_product.variants.size == 1 %}
+            <div class="product_image_item">
+                <div class="pii_wrapper">
+                    <div class="pii_wrapper_img">
+                    <img
+                        src="{{ curr_product.featured_image | image_url:width:200 }}"
+                        alt="{{ curr_product.title }}"
+                        loading="lazy"
+                        class="product_image"
+                        width="200"
+                        height="auto"
+                    >
+                    </div>
+                </div>
+            </div>
+        {% else %}
+        {% for variant in curr_product.variants %}
+            <div class="product_image_item" 
+            data-variant-id="{{ variant.id }}"
+            {% unless variant.id == selected_variant_id %} style="display:none;" {% endunless %}>
+            <div class="pii_wrapper">
+                <div class="pii_wrapper_img">
+                <img
+                    src="{{ variant.featured_image | image_url:width:200 }}"
+                    alt="{{ variant.title }}"
+                    loading="lazy"
+                    class="product_image"
+                    width="200"
+                    height="auto"
+                >
+                </div>
+            </div>
+            </div>
+        {% endfor %}
+        {% endif %}
+    
+        <div class="addtocart_box">
+        <h3 class="product_name">{{ curr_product.title }}</h3>
+        <div class="product__buy-buttons">
+    
+            <product-form class="product-form">
+                {%- form 'product',
+                    curr_product,
+                    id: product_form_id,
+                    class: 'form sticky-addtocart-btn-form',
+                    novalidate: 'novalidate',
+                    data-type: 'sticky-addtocart-btn-form'
+                -%}
+                    <input
+                    type="hidden"
+                    name="id"
+                    value="{{ curr_product.selected_or_first_available_variant.id }}"
+                    {% if curr_product.selected_or_first_available_variant.available == false %}
+                        disabled
+                    {% endif %}
+                    >
+        
+                    <div class="product-form__buttons">
+                    <div class="product-form__buttons-row">
+                        <button
+                        type="submit"
+                        name="add"
+                        class="product-form__submit button button--primary"
+                        {% if curr_product.selected_or_first_available_variant.available == false %}
+                            disabled
+                        {% endif %}
+                        >
+                        {%- if curr_product.selected_or_first_available_variant.available -%}
+                            <span>
+                            {{ 'products.product.add_to_cart' | t }}
+                            {% comment %} {% render 'icon-cart' %} {% endcomment %}
+                            </span>
+                            <div class="loading-overlay__spinner hidden">
+                            {%- render 'icon-loading' -%}
+                            </div>
+                        {%- else -%}
+                            <span>
+                            {{ 'products.product.sold_out' | t }}
+                            </span>
+                        {%- endif -%}
+                        </button>
+                    </div>
+                    </div>
+                {%- endform -%}
+            </product-form>
+        </div>
+        </div>
+    </div>
+    <style>
+        .sticky-btn {display:none;}
+    </style>
+    <script>
+              // 页面加载完成后执行（确保 DOM 元素已渲染）
+              document.addEventListener('DOMContentLoaded', function() {
+                // 获取目标元素
+                const featuredProduct = document.querySelector('.featured-product');
+                const stickyBtn = document.querySelector('[data-section-id="{{ section.id }}"]');
+            
+                // 若页面没有 .featured-product 模块，直接终止逻辑
+                if (!featuredProduct || !stickyBtn) return;
+            
+                // 核心函数：判断是否滚动到模块底部，并控制按钮
+                function checkScrollToModuleBottom() {
+                  // 计算模块底部到页面顶部的距离（模块顶部距离 + 模块高度）
+                  const moduleBottom = featuredProduct.getBoundingClientRect().top + window.pageYOffset + featuredProduct.offsetHeight;
+                  // 计算当前页面滚动的总距离（文档滚动距离 + 窗口可视高度）
+                  const scrollBottom = window.scrollY + window.innerHeight;
+                 
+            
+                  // 当滚动到模块底部（允许 100px 误差，提升用户体验）
+                  if (scrollBottom >= moduleBottom + 20) {
+                    stickyBtn.style.display = 'flex';
+                  } else {
+                    stickyBtn.style.display = 'none';
+                  }
+                }
+                // 监听滚动事件：实时判断是否滚动到模块底部
+                window.addEventListener('scroll', checkScrollToModuleBottom);
+            
+                // 监听窗口大小变化：适配不同屏幕尺寸（如手机旋转后）
+                window.addEventListener('resize', checkScrollToModuleBottom);
+            
+                // 页面加载完成后，首次执行一次（处理初始滚动位置）
+                checkScrollToModuleBottom();
+              });
+    </script>
+{% endif %}    

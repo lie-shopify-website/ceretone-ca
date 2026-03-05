@@ -1,0 +1,139 @@
+<style>
+  [data-section-id="{{ section.id }}"] {
+    background-color: {{ section.settings.bg_color }};
+    {% if section.settings.bg_image != blank %}
+      background-image: url('{{ section.settings.bg_image | img_url: '1920x' }}');
+    {% endif %}
+    background-blend-mode: normal;
+    background-size: cover;
+    background-position: center;
+    padding-top: {{ section.settings.padding_top | append: 'px' }};
+    padding-bottom: {{ section.settings.padding_bottom | append: 'px' }};
+  }
+
+  .Anotice {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    text-align: center;
+  }
+  .Anotice h4 {
+    margin: 1rem 0 1.8rem;
+  }
+  .Anotice p {
+    margin: 0;
+  }
+  @media(max-width: 768px) {
+    [data-section-id="{{ section.id }}"] {
+      {% if section.settings.bg_image_M != blank %}
+        background-image: url('{{ section.settings.bg_image_M | img_url: '480x' }}');
+      {% endif %}
+      padding-top: {{ section.settings.padding_top_M | append: 'px' }};
+      padding-bottom: {{ section.settings.padding_bottom_M | append: 'px' }};
+    }
+  }
+</style>
+
+<div data-section-id="{{ section.id }}" class="Anotice">
+  {% if section.settings.icon_image != blank %}
+    {{
+      section.settings.icon_image
+      | image_url: width: section.settings.image.width
+      | image_tag:
+        loading: 'lazy',
+        widths: '360, 533, 720, 940, 1066, 1200, 1400, 1600, 1800, 2000, 2200, 2400, 2600, 2800, 3000, 3264, 3400, 3584, 3800, 4000, 4200, 4400, 4600, 4800, 5000, 5200, 5400, 5600',
+        sizes: sizes,
+        class: 'Anotice_icon'
+    }}
+  {% endif %}
+  {% if section.settings.tilie != blank %}
+    <h4 class="container" style="color: {{ section.settings.size_color }};">{{ section.settings.tilie }}</h4>
+  {% endif %}
+  {% if section.settings.text != blank %}
+    <p class="container" style="color: {{ section.settings.size_color }};">{{ section.settings.text }}</p>
+  {% endif %}
+</div>
+
+{% schema %}
+{
+  "name": "介绍",
+  "settings": [
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "上边距",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "下边距",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_top_M",
+      "label": "移动端上边距",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_M",
+      "label": "移动端下边距",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "default": 0
+    }, {
+      "type": "color",
+      "id": "bg_color",
+      "label": "背景颜色",
+      "default": "#fff"
+    }, {
+      "type": "color",
+      "id": "size_color",
+      "label": "字体颜色",
+      "default": "#fff"
+    }, {
+      "type": "image_picker",
+      "id": "bg_image",
+      "label": "背景图片"
+    }, {
+      "type": "image_picker",
+      "id": "bg_image_M",
+      "label": "移动端背景图片"
+    }, {
+      "type": "image_picker",
+      "id": "icon_image",
+      "label": "图标"
+    }, {
+      "type": "textarea",
+      "id": "tilie",
+      "label": "标题"
+    }, {
+      "type": "textarea",
+      "id": "text",
+      "label": "文案"
+    }
+  ],
+  "presets": [
+    {
+      "name": "介绍"
+    }
+  ]
+}
+{% endschema %}

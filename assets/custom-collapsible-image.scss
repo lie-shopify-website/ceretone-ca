@@ -1,0 +1,196 @@
+@import "tools";
+
+.custom-collapsible-image {
+
+    font-family: 'Helvetica';
+    font-weight: 400;
+    background: #f6f1ea;
+    padding-top:vm(40);
+    padding-bottom:vm(30);
+    @include media-min("spc") {
+        padding-top:vmpc(70);
+        padding-bottom:vmpc(70);
+    }
+
+    .hidden-mobile {
+        display: none !important;
+        @include media-min("spc") {
+            display: block !important;
+        }
+    }
+    .hidden-desktop {
+        display: block !important;
+        @include media-min("spc") {
+            display: none !important;
+        }
+    }
+
+    p {
+        margin: 0;
+    }
+    img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .safe-container {
+        position: relative;
+        height: 100%;
+        padding: 0 vm(20);
+
+        @include media-min("spc") {
+            padding: 0;
+        }
+    }
+
+
+    .section-title {
+        margin-bottom:vm(40);
+
+        @include media-min("spc") {
+            margin-bottom:vmpc(60);
+        }
+        
+        h2 {
+            font-family: 'Helvetica';
+            font-size: vm(32); 
+            line-height: vm(44);
+            font-weight: 700;
+            text-align: center;
+            margin: 0;
+
+            @include media-min("spc") {
+                font-size: vmpc(56); 
+                line-height: 1;
+                text-align: left;
+            }
+        }
+    }
+
+    .collapsible-content__layout {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: vm(40);
+
+        @include media-min("spc") {
+            flex-direction: row;
+            align-items: center;
+            gap: vmpc(55);
+            position: relative;
+        }
+
+        .collapsible-content__items {
+            @include media-min("spc") {
+                flex:0 0 vmpc(663);
+                max-width: vmpc(663);
+            }
+
+            .collapsible-content__items-inner {
+
+                @include media-min("spc") {
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    width: 100%;
+                    transform: translateY(-50%);
+                    max-width: vmpc(663);
+                }
+            }
+        }
+
+        .collapsible-content__item {
+            margin-bottom: vm(25);
+            padding-bottom: vm(25);
+            border-bottom: vm(1) solid rgb(0 0 0 / 50%);
+
+            @include media-min("spc") {
+                margin-bottom: vmpc(30);
+                padding-bottom: vmpc(30);
+                border-bottom: vmpc(1) solid rgb(0 0 0 / 50%);
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+                padding-bottom: 0;
+                border-bottom:none;
+            }
+        }
+
+        button.collapsible-content__toggle {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: vm(10);
+            width: 100%;
+            padding: 0;
+
+            @include media-min("spc") {
+                gap: vmpc(20);
+            }
+
+            .collapsible-content__question {
+                font-size: vm(22);
+                line-height: vm(26);
+                font-weight: 700;
+                text-align: left;
+                margin: 0;
+
+                @include media-min("spc") {
+                    font-size: vmpc(32);
+                    line-height: vmpc(32);
+                }
+            }
+            .collapsible-content__icon {
+                flex: 0 0 vm(25);
+                height: vm(25);
+                transition: transform 0.2s ease;
+
+                @include media-min("spc") {
+                    flex: 0 0 vmpc(35);
+                    height: vmpc(35);
+                }
+
+                svg {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            
+        }
+
+        .collapsible-content__answer {
+            .collapsible-content__answer-inner {
+                display: grid;
+                grid-template-rows: 0fr;
+                transition: all 0.3s ease;
+            }
+            .collapsible-content__answer-ov {
+                overflow: hidden;
+                min-height: 0;
+            }
+            .body-large {
+                color:#524842;
+                font-size: vm(18);
+                line-height: vm(24);
+                margin-top: vm(20);
+                @include media-min("spc") {
+                    margin-top: vmpc(30);
+                    font-size: vmpc(22);
+                    line-height: vmpc(26);
+                }
+            }
+        }
+    }
+    
+    .collapsible-content__item.active .collapsible-content__answer-inner {
+        grid-template-rows: 1fr;
+    }
+
+    .collapsible-content__item.active .collapsible-content__icon {
+        transform: rotate(180deg);
+    }
+    
+
+}

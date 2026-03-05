@@ -1,0 +1,435 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_banner_axgPUw": {
+      "type": "image-banner",
+      "settings": {
+        "full_width": false,
+        "color_scheme": "background-3",
+        "image": "shopify://shop_images/AFF.png",
+        "image_ratio": "adapt",
+        "opacity_overlay": 0,
+        "icon": "none",
+        "icon_color_scheme": "",
+        "icon_size": "large",
+        "icon_style": "colored",
+        "icon_fill_type": "gradient",
+        "box_shadow": false,
+        "subheading": "",
+        "subheading_style": "subtitle",
+        "heading": "Make money with Ceretone",
+        "heading_size": "h2",
+        "text_information": "<p>Earn ongoing monthly income by joining the Ceretone affiliate program.</p>",
+        "text_align": "left",
+        "text_width": "large",
+        "show_view_all": false,
+        "button_label": "Join now",
+        "button_style": "primary",
+        "button_link": "",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "hero_XiQYDN": {
+      "type": "hero",
+      "blocks": {
+        "title_VmYjjb": {
+          "type": "title",
+          "settings": {
+            "heading": "Awin Member",
+            "heading_size": "h1",
+            "heading_line": "simple",
+            "line_color": "#1566e0",
+            "word_break": false,
+            "heading_animation": "none",
+            "word_break_an": false
+          }
+        },
+        "description_epmWmp": {
+          "type": "description",
+          "settings": {
+            "description": "Click the link below to join now. Easily promote our products and start increasing your income!"
+          }
+        },
+        "buttons_iKgm79": {
+          "type": "buttons",
+          "settings": {
+            "show_button_1": true,
+            "button_label_1": "Join Now",
+            "button_link_1": "https://ui.awin.com/express-signup/us/awin/81525/051d1570-0d3b-41ef-9238-4009a903bf03?t=kFT0wQ6bh7FBzUNIJqmoS6HUr9IfofZNUv24kCtV8vU",
+            "button_style_1": "primary",
+            "show_button_2": false,
+            "button_label_2": "Label",
+            "button_link_2": "",
+            "button_style_2": "simple"
+          }
+        }
+      },
+      "block_order": [
+        "title_VmYjjb",
+        "description_epmWmp",
+        "buttons_iKgm79"
+      ],
+      "custom_css": [
+        ".button {background-color: #ff4f00;}"
+      ],
+      "settings": {
+        "layout": "horizontal",
+        "header_overlay": false,
+        "header_transparent": false,
+        "block_type": "subtle",
+        "color_scheme": "background-3",
+        "full_screen": false,
+        "image": "shopify://shop_images/C61D1512-D1DD-46B7-9747-CF3ADD3B080C.png",
+        "link": "https://ui.awin.com/express-signup/us/awin/81525/051d1570-0d3b-41ef-9238-4009a903bf03?t=kFT0wQ6bh7FBzUNIJqmoS6HUr9IfofZNUv24kCtV8vU",
+        "show_video": false,
+        "overlay_opacity": 0,
+        "image_ratio": "4/3",
+        "object_fit": "contain",
+        "desktop_image_position": "after",
+        "mobile_image_position": "after",
+        "mobile_image_overlay": "overlay",
+        "horizontal_alignment": "center",
+        "vertical_alignment": "bottom",
+        "padding_top": "xs",
+        "padding_bottom": "m"
+      }
+    },
+    "hero_KKXbNB": {
+      "type": "hero",
+      "blocks": {
+        "title_Y9GMPP": {
+          "type": "title",
+          "settings": {
+            "heading": "GOAFFPRO Member",
+            "heading_size": "h1",
+            "heading_line": "simple",
+            "line_color": "#1566e0",
+            "word_break": false,
+            "heading_animation": "none",
+            "word_break_an": false
+          }
+        },
+        "description_CyVbT7": {
+          "type": "description",
+          "settings": {
+            "description": "Click the link below to join now. Easily promote our products and start increasing your income!"
+          }
+        },
+        "buttons_njdVWy": {
+          "type": "buttons",
+          "settings": {
+            "show_button_1": true,
+            "button_label_1": "Join Now",
+            "button_link_1": "https://ceretone.goaffpro.com/login",
+            "button_style_1": "primary",
+            "show_button_2": true,
+            "button_label_2": "Sign Up Now",
+            "button_link_2": "https://ceretone.goaffpro.com/create-account",
+            "button_style_2": "simple"
+          }
+        }
+      },
+      "block_order": [
+        "title_Y9GMPP",
+        "description_CyVbT7",
+        "buttons_njdVWy"
+      ],
+      "disabled": true,
+      "settings": {
+        "layout": "horizontal",
+        "header_overlay": false,
+        "header_transparent": false,
+        "block_type": "subtle",
+        "color_scheme": "background-2",
+        "full_screen": false,
+        "image": "shopify://shop_images/goaffpro_logo.png",
+        "link": "",
+        "show_video": false,
+        "overlay_opacity": 0,
+        "image_ratio": "adapt",
+        "object_fit": "contain",
+        "desktop_image_position": "after",
+        "mobile_image_position": "after",
+        "mobile_image_overlay": "overlay",
+        "horizontal_alignment": "center",
+        "vertical_alignment": "bottom",
+        "padding_top": "xs",
+        "padding_bottom": "m"
+      }
+    },
+    "rich_text_DDBM8V": {
+      "type": "rich-text",
+      "blocks": {
+        "subheading_q8nWad": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "AFFILIATE PROGRAM"
+          }
+        },
+        "heading_EMQ4kb": {
+          "type": "heading",
+          "settings": {
+            "heading": "Partner with Ceretone",
+            "heading_size": "medium"
+          }
+        },
+        "text_BLEHY6": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We are excited to invite you to become a part of Ceretone's affiliate program. By promoting our high-quality products, you not only help more people improve their quality of life but also earn generous commission rewards.</p>"
+          }
+        },
+        "button_jyHyxJ": {
+          "type": "button",
+          "settings": {
+            "button_label": "Follow These Steps",
+            "button_link": "",
+            "button_style": "secondary"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_q8nWad",
+        "heading_EMQ4kb",
+        "text_BLEHY6",
+        "button_jyHyxJ"
+      ],
+      "settings": {
+        "color_scheme": "background-3",
+        "full_width": true,
+        "alignment": "center",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "m",
+        "padding_bottom": "m"
+      }
+    },
+    "steps_3WG9wF": {
+      "type": "steps",
+      "blocks": {
+        "step_XkQVFH": {
+          "type": "step",
+          "settings": {
+            "number": "",
+            "heading": "Join the program",
+            "text": "Simply use the link above to apply for being our affiliate partners via <a href=\"https://ui.awin.com/express-signup/us/awin/81525/051d1570-0d3b-41ef-9238-4009a903bf03?t=kFT0wQ6bh7FBzUNIJqmoS6HUr9IfofZNUv24kCtV8vU\">Awin</a>.",
+            "show_button": false,
+            "button_style": "simple",
+            "button_label": "Know More",
+            "button_link": ""
+          }
+        },
+        "step_6Xeqfx": {
+          "type": "step",
+          "settings": {
+            "number": "",
+            "heading": "Promote the product",
+            "text": "Once accepted, you will get direct access to a product catalog, seasonal promotions, and specially-designed banners and text links for promotions.",
+            "show_button": false,
+            "button_style": "simple",
+            "button_label": "Know More",
+            "button_link": ""
+          }
+        },
+        "step_hVMdrH": {
+          "type": "step",
+          "settings": {
+            "number": "",
+            "heading": "Start earning",
+            "text": "Earn 15-25% commissions for every sale you refer to Ceretone. Quick & safe payment. Contact <a href=\"mailto:affiliate@ceretone.com\">affiliate@ceretone.com</a>\n to help grow your business.",
+            "show_button": false,
+            "button_style": "simple",
+            "button_label": "Know More",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "step_XkQVFH",
+        "step_6Xeqfx",
+        "step_hVMdrH"
+      ],
+      "settings": {
+        "layout": "columns",
+        "color_scheme": "background-3",
+        "subheading": "",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "",
+        "heading_size": "h2",
+        "heading_line": "simple",
+        "line_color": "#1566e0",
+        "word_break": false,
+        "heading_animation": "none",
+        "word_break_an": false,
+        "text": "",
+        "text_align": "center",
+        "columns_to_show": 3,
+        "image_ratio": "landscape",
+        "number_size": "recommended",
+        "step_heading_size": "recommended",
+        "text_size": "recommended",
+        "padding_top": "l",
+        "padding_bottom": "l",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "case_studies_XAcdfR": {
+      "type": "case-studies",
+      "blocks": {
+        "case_slide_MtGdep": {
+          "type": "case_slide",
+          "settings": {
+            "overlay_opacity": 0,
+            "heading": "High Commission Rates",
+            "text": "",
+            "quote": "Earn generous commissions for every successful sale.",
+            "quote_size": "recommended",
+            "author_name": "",
+            "author_position": "",
+            "show_button": false,
+            "button_style": "simple",
+            "button_label": "Link label",
+            "button_link": "",
+            "logo_width": 130
+          }
+        },
+        "case_slide_g8pPjc": {
+          "type": "case_slide",
+          "settings": {
+            "overlay_opacity": 0,
+            "heading": "Premium Quality Products",
+            "text": "",
+            "quote": "Ceretone offers top-tier products trusted by countless customers.",
+            "quote_size": "recommended",
+            "author_name": "",
+            "author_position": "",
+            "show_button": false,
+            "button_style": "simple",
+            "button_label": "Link label",
+            "button_link": "",
+            "logo_width": 130
+          }
+        },
+        "case_slide_XzHRU3": {
+          "type": "case_slide",
+          "settings": {
+            "overlay_opacity": 0,
+            "heading": "Dedicated Support",
+            "text": "",
+            "quote": "Our team provides comprehensive marketing materials and technical assistance to bolster your efforts.",
+            "quote_size": "recommended",
+            "author_name": "",
+            "author_position": "",
+            "show_button": false,
+            "button_style": "simple",
+            "button_label": "Link label",
+            "button_link": "",
+            "logo_width": 130
+          }
+        },
+        "case_slide_DPcar9": {
+          "type": "case_slide",
+          "settings": {
+            "overlay_opacity": 0,
+            "heading": "Regular Incentives",
+            "text": "",
+            "quote": "Take advantage of our frequent promotions and bonuses to maximize your earnings potential.",
+            "quote_size": "recommended",
+            "author_name": "",
+            "author_position": "",
+            "show_button": false,
+            "button_style": "simple",
+            "button_label": "Link label",
+            "button_link": "",
+            "logo_width": 130
+          }
+        }
+      },
+      "block_order": [
+        "case_slide_MtGdep",
+        "case_slide_g8pPjc",
+        "case_slide_XzHRU3",
+        "case_slide_DPcar9"
+      ],
+      "settings": {
+        "layout": "tabs_left",
+        "color_scheme": "",
+        "subheading": "",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "Why Choose Ceretone Affiliate Program?",
+        "heading_size": "h2",
+        "heading_line": "simple",
+        "line_color": "#1566e0",
+        "word_break": false,
+        "heading_animation": "none",
+        "word_break_an": false,
+        "text": "",
+        "text_align": "left",
+        "image_ratio": "square",
+        "slide_color_scheme": "scheme-da522d8c-d8ea-43a1-8f89-75b1a671124a",
+        "tabs_color_scheme": "scheme-da522d8c-d8ea-43a1-8f89-75b1a671124a",
+        "enable_navigation": true,
+        "navigation_color_scheme": "",
+        "padding_top": "l",
+        "padding_bottom": "l",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "rich_text_HbCCQc": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_YLhyB3": {
+          "type": "heading",
+          "settings": {
+            "heading": "Have questions? Email us now afiliate@ceretone.com",
+            "heading_size": "medium"
+          }
+        }
+      },
+      "block_order": [
+        "heading_YLhyB3"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": "background-2",
+        "full_width": true,
+        "alignment": "center",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "m",
+        "padding_bottom": "m"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": "no-indent",
+        "padding_bottom": "m"
+      }
+    }
+  },
+  "order": [
+    "image_banner_axgPUw",
+    "hero_XiQYDN",
+    "hero_KKXbNB",
+    "rich_text_DDBM8V",
+    "steps_3WG9wF",
+    "case_studies_XAcdfR",
+    "rich_text_HbCCQc",
+    "main"
+  ]
+}

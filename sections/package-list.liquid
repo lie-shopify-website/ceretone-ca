@@ -1,0 +1,146 @@
+{% schema %}
+{
+  "name": "Package List",
+  "class": "package-list",
+  "settings": [
+        { "type": "color", "id": "bg_color", "label": "Background", "default": "#ffffff" },
+    
+        { "type": "header","content":"Heading Title"},
+        { "type": "textarea","id": "title", "label": "Heading Title" },
+        { "type": "textarea","id": "sub_title", "label": "Sub Title" },
+    
+        { "type": "header","content":"PC"},
+        { "type": "range", "id": "pc_padding_top", "label": "Top Space", "min": 0, "max": 100, "step": 1, "unit": "px", "default": 0 },
+        { "type": "range", "id": "pc_padding_bottom", "label": "Bottom Space", "min": 0, "max": 100, "step": 1, "unit": "px", "default": 0 },
+        { "type": "header","content":"Mobile"},
+        { "type": "range", "id": "mb_padding_top", "label": "Top Space", "min": 0, "max": 100, "step": 1, "unit": "px", "default": 0 },
+        { "type": "range", "id": "mb_padding_bottom", "label": "Bottom Space", "min": 0, "max": 100, "step": 1, "unit": "px", "default": 0 }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Item",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "图片" },
+        { "type": "textarea","id": "text1", "label": "Text1" },
+        { "type": "textarea","id": "text2", "label": "Text2" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "category": "Custom",
+      "name": "Package List",
+    }
+  ]
+}
+{% endschema %}
+
+
+
+{{ 'package-list.css' | asset_url | stylesheet_tag }}
+
+<section data-section-id="{{ section.id }}" style="display:block;">
+  <div class="container">
+     {%- if section.settings.title != blank or section.settings.sub_title != blank -%}
+        <div class="title-box">
+            {% if section.settings.title != blank %}
+                <div class="heading-title"><h2>{{ section.settings.title }}</h2></div>
+            {% endif %}
+            {% if section.settings.sub_title != blank %}
+                <div class="sub-title">{{ section.settings.sub_title }}</div>
+            {% endif %}
+        </div>
+      {% endif %}
+
+      <div class="package-list-container">
+        <div class="package-bigimage">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    {% for block in section.blocks %}
+                          <div class="swiper-slide">
+                              <div class="item-layout">
+
+
+                                    <div class="image">
+                                        <picture>
+                                            <source data-srcset="{{ block.settings.image | image_url: width: 400 }}"  media="(max-width: 767px)" />
+                                            <source data-srcset="{{ block.settings.image | image_url: width: 400 }}" media="(min-width: 768px)" />
+                                            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lzsrc="{{ block.settings.image | image_url: width: 400 }}" class="js-lazy" width="auto" height="auto" />
+                                        </picture>
+                                    </div>
+
+                                    {% if block.settings.text1 != blank or block.settings.text2 != blank %}
+                                        <div class="content">
+                                            {% if block.settings.text1 != blank %}<div class="text1">{{ block.settings.text1 }}</div>{% endif %}
+                                            {% if block.settings.text2 != blank %}<div class="text2">{{ block.settings.text2 }}</div>{% endif %}
+                                        </div>
+                                    {% endif %}
+                              </div>
+                          </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="swiper-custom-navigation">
+                <div class="custom-button-prev custom-button">
+                    <svg width="50" height="50" style="transform:rotate(-180deg);" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="33.1429" height="27.7143" transform="matrix(-4.37114e-08 -1 -1 4.37114e-08 38.7145 40.7143)" fill="#FFFEFB"/>
+                        <path d="M25.0614 24.9387L24.9387 25.0615C24.9777 25.0168 25.0168 24.9777 25.0614 24.9387Z" fill="white"/>
+                        <path class="bg" d="M25.0001 50.0001C11.1942 50.0001 4.41472e-05 38.8059 4.41472e-05 25.0001C4.41472e-05 11.1942 11.1942 3.05176e-05 25.0001 3.05176e-05C38.8059 3.05176e-05 50.0001 11.1942 50.0001 25.0001C50.0001 38.8059 38.8059 50.0001 25.0001 50.0001ZM31.5737 23.7947L31.451 23.6719L30.2512 22.4722L21.0045 13.2255C20.3126 12.5335 19.1742 12.5335 18.4766 13.2255C17.7847 13.9175 17.7847 15.0559 18.4766 15.7534L27.7289 25.0001L18.4822 34.2523C17.7902 34.9443 17.7902 36.0827 18.4822 36.7802C19.1742 37.4722 20.3126 37.4722 21.0045 36.7746L30.2512 27.528L31.4677 26.3114L31.5681 26.211C31.8639 25.8929 32.0425 25.4632 32.0369 24.9945C32.0369 24.5313 31.8639 24.1128 31.5737 23.7947Z" fill="#FF4F00"/>
+                    </svg>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="custom-button-next custom-button">
+                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="33.1429" height="27.7143" transform="matrix(-4.37114e-08 -1 -1 4.37114e-08 38.7145 40.7143)" fill="#FFFEFB"/>
+                        <path d="M25.0614 24.9387L24.9387 25.0615C24.9777 25.0168 25.0168 24.9777 25.0614 24.9387Z" fill="white"/>
+                        <path class="bg" d="M25.0001 50.0001C11.1942 50.0001 4.41472e-05 38.8059 4.41472e-05 25.0001C4.41472e-05 11.1942 11.1942 3.05176e-05 25.0001 3.05176e-05C38.8059 3.05176e-05 50.0001 11.1942 50.0001 25.0001C50.0001 38.8059 38.8059 50.0001 25.0001 50.0001ZM31.5737 23.7947L31.451 23.6719L30.2512 22.4722L21.0045 13.2255C20.3126 12.5335 19.1742 12.5335 18.4766 13.2255C17.7847 13.9175 17.7847 15.0559 18.4766 15.7534L27.7289 25.0001L18.4822 34.2523C17.7902 34.9443 17.7902 36.0827 18.4822 36.7802C19.1742 37.4722 20.3126 37.4722 21.0045 36.7746L30.2512 27.528L31.4677 26.3114L31.5681 26.211C31.8639 25.8929 32.0425 25.4632 32.0369 24.9945C32.0369 24.5313 31.8639 24.1128 31.5737 23.7947Z" fill="#FF4F00"/>
+                    </svg>
+                </div>
+                
+            </div>
+
+        </div>
+      </div>
+    
+  </div>
+</section>
+
+
+<script>
+;(function() {
+window.addEventListener('DOMContentLoaded', function() {
+
+    let bigPcImageSwiper = new Swiper('[data-section-id="{{section.id}}"] .package-bigimage .swiper', {
+        spaceBetween: 24,
+        pagination: {
+            el: '[data-section-id="{{section.id}}"] .swiper-pagination',
+        },
+        navigation: {
+            nextEl: '[data-section-id="{{section.id}}"] .custom-button-next',
+            prevEl: '[data-section-id="{{section.id}}"] .custom-button-prev',
+        },
+
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+            },
+            768: {
+                slidesPerView: 2,
+            },
+            1080: {
+                slidesPerView: 4,
+            },
+            1440: {
+                slidesPerView: 4,
+            },
+        },
+
+    });
+
+    
+});
+})();
+</script>

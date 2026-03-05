@@ -1,0 +1,59 @@
+{% if article.metafields.custom.bbfaq %}
+  {{ 'section-collapsible-content.css' | asset_url | stylesheet_tag }}
+
+  <script src="{{ 'collapsible-content.js' | asset_url }}" defer="defer"></script>
+
+  {%- style -%}
+    {% render 'section-padding' %}
+    {% render 'section-margin' %}
+  {%- endstyle -%}
+  <div
+    class="
+      collapsible-content section-{{ section.id }}-padding
+      {% if section.settings.enable_border %} section-border {% if section.settings.border_full %} section-border-full {% endif %} {% endif %}
+    "
+  >
+    <div class="container">
+      {% render 'section-text',
+        section: section,
+        class: 'collapsible-content',
+        text_align: section.settings.text_align
+      %}
+
+      <div class="collapsible-content__content collapsible-content__content--{{ section.settings.layout }} content">
+        <div class="collapsible-content__items">
+          {% assign faqs = article.metafields.custom.bbfaq.value %}
+          {% for faq in faqs %}
+            <div
+              class="
+                collapsible-content__item {% if block.settings.opened %} active {% endif %}
+                {% if section.settings.layout == 'background' %}
+                  color-{{ section.settings.row_color_scheme }}
+                {% endif %}
+              "
+              {{ block.shopify_attributes }}
+            >
+              <button class="collapsible-content__toggle button--unstyled focus-inset">
+                <div class="collapsible-content__toggle-group">
+                  <h3 class="collapsible-content__question h6">{{ faq.header | newline_to_br }}</h3>
+                </div>
+                <div class="collapsible-content__icon">
+                  {% render 'icon-arrow' %}
+                </div>
+              </button>
+
+              <div
+                class="collapsible-content__answer"
+                {% if block.settings.opened %}
+                  style="display: block;"
+                {% endif %}
+              >
+                <p class="collapsible-content__answer-inner">{{ faq.text | newline_to_br }}</p>
+              </div>
+            </div>
+          {%- endfor -%}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endif %}

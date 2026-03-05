@@ -1,0 +1,67 @@
+
+{% schema %}
+    {
+        "name": "Number Card",
+        "class":"number-card",
+        "settings": [
+                { "type": "textarea", "id":"title", "label":"Title"},
+                { "type": "textarea", "id":"sub_title", "label":"Sub Title"}
+        ],
+        "max_blocks": 5,
+        "blocks": [
+          {
+            "type": "card",
+            "name": "Card",
+            "settings": [
+              {
+                "type": "select",
+                "id": "arrow",
+                "options": [
+                  { "value": "0", "label": "无" },
+                  { "value": "1", "label": "上升箭头" },
+                  { "value": "2", "label": "下降箭头" }
+                ],
+                "default": "0",
+                "label": "显示箭头"
+              },
+              { "type": "text", "id":"title", "label":"Title"},
+              { "type": "textarea", "id":"info", "label":"Info"},
+            ]
+          }
+        ],
+        "presets": [
+            {
+                "name": "Number Card",
+                "category":"Custom"
+            }
+        ]
+    }
+{% endschema %}
+
+{{ 'number-card.css' | asset_url | stylesheet_tag }}
+
+<section data-section-id="{{ section.id }}">
+    <div class="container">
+        <div class="inner">
+            {% if section.settings.title != blank %}<div class="title h3">{{ section.settings.title | newline_to_br }}</div>{% endif %}
+            {% if section.settings.sub_title != blank %}<div class="sub-title body-large">{{ section.settings.sub_title | newline_to_br }}</div>{% endif %}
+
+            <div class="cards">
+              {%- for block in section.blocks -%}
+                {% assign arrow = '' %}
+                {% if block.settings.arrow == '1' %}
+                    {% capture arrow %}<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="122.433px" height="122.88px" viewBox="0 0 122.433 122.88" enable-background="new 0 0 122.433 122.88" xml:space="preserve"><g><polygon fill-rule="evenodd" clip-rule="evenodd" points="61.216,0 0,63.673 39.403,63.673 39.403,122.88 83.033,122.88 83.033,63.673 122.433,63.673 61.216,0"/></g></svg>{% endcapture %}
+                {% elsif block.settings.arrow == '2' %}
+                    {% capture arrow %}<svg version="1.1" style="transform: rotate(180deg);" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="122.433px" height="122.88px" viewBox="0 0 122.433 122.88" enable-background="new 0 0 122.433 122.88" xml:space="preserve"><g><polygon fill-rule="evenodd" clip-rule="evenodd" points="61.216,0 0,63.673 39.403,63.673 39.403,122.88 83.033,122.88 83.033,63.673 122.433,63.673 61.216,0"/></g></svg>{% endcapture %}
+                {% endif %}
+              
+                <div class="card card-{{ forloop.index }}">
+                  <div class="card-title h4">{{ arrow }}{{ block.settings.title }}</div>
+                  <div class="card-text body-large">{{ block.settings.info }}</div>
+                </div>
+              {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+

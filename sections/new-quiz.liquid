@@ -1,0 +1,688 @@
+{% schema %} 
+{
+  "name": "Hearing Quiz",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "quiz_description",
+      "label": "Quiz Description",
+      "default": "<p>Complete our 3-minute hearing test to get personalized results.</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "product_image_1",
+      "label": "Product Image 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "product_image_2",
+      "label": "Product Image 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "product_image_3",
+      "label": "Product Image 3"
+    },
+    {
+      "type": "header",
+      "content": "Introduction Settings"
+    },
+    {
+      "type": "image_picker",
+      "id": "intro_image_1",
+      "label": "Introduction Icon 1"
+    },
+    {
+      "type": "text",
+      "id": "intro_heading",
+      "label": "Introduction Heading",
+      "default": "How it Works"
+    },
+    {
+      "type": "text",
+      "id": "intro_point_1",
+      "label": "Introduction Point 1",
+      "default": "3 minutes test"
+    },
+    {
+      "type": "image_picker",
+      "id": "intro_image_2",
+      "label": "Introduction Icon 2"
+    },
+    {
+      "type": "text",
+      "id": "intro_point_2",
+      "label": "Introduction Point 2",
+      "default": "Headphones required"
+    },
+    {
+      "type": "image_picker",
+      "id": "intro_image_3",
+      "label": "Introduction Icon 3"
+    },
+    {
+      "type": "text",
+      "id": "intro_point_3",
+      "label": "Introduction Point 3",
+      "default": "See your results right away"
+    },
+    {
+      "type": "text",
+      "id": "intro_button_text",
+      "label": "Start Test Button Text",
+      "default": "Start test"
+    },
+    {
+      "type": "richtext",
+      "id": "intro_disclaimer",
+      "label": "Disclaimer Text",
+      "default": "<p>*SHOEBOX Online is not a diagnostic hearing test or medical assessment. It is designed to give you general information about your hearing.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Questions Settings"
+    },
+    {
+      "type": "text",
+      "id": "continue_text",
+      "label": "Continue Button Text",
+      "default": "Continue"
+    },
+    {
+      "type": "text",
+      "id": "find_place_title",
+      "label": "Find a quiet place Title",
+      "default": "Find a quiet place"
+    },
+    {
+      "type": "text",
+      "id": "find_place_description",
+      "label": "Find a quiet place Description",
+      "default": "Background noise—people talking, street traffic, or loud fans—can affect results."
+    },
+    {
+      "type": "image_picker",
+      "id": "find_place_icon",
+      "label": "Find a quiet place icon"
+    },
+    {
+      "type": "text",
+      "id": "find_place_btn_text",
+      "label": "Find a quiet place button text",
+      "default": "I'm in a quiet place!"
+    },
+    {
+      "type": "text",
+      "id": "connect_headphone_title",
+      "label": "Connect your headphones Title",
+      "default": "Connect your headphones and set your device volume to 100%"
+    },
+    {
+      "type": "text",
+      "id": "connect_headphone_description",
+      "label": "Connect your headphones Description",
+      "default": "How do I set my device volume?"
+    },
+    {
+      "type": "image_picker",
+      "id": "connect_headphone_icon",
+      "label": "Connect your headphones icon"
+    },
+    {
+      "type": "text",
+      "id": "connect_headphone_btn_text",
+      "label": "Connect your headphones button text",
+      "default": "I have adjusted my volume! "
+    },
+    {
+      "type": "header",
+      "content": "Ear Test Settings"
+    },
+    {
+      "type": "url",
+      "id": "audio_file_right_1",
+      "label": "Right Ear Audio Test 1",
+      "info": "Audio file for first right ear test"
+    },
+    {
+      "type": "url", 
+      "id": "audio_file_right_2",
+      "label": "Right Ear Audio Test 2",
+      "info": "Audio file for second right ear test"
+    },
+    {
+      "type": "url",
+      "id": "audio_file_right_3",
+      "label": "Right Ear Audio Test 3",
+      "info": "Audio file for third right ear test"
+    },
+    {
+      "type": "url",
+      "id": "audio_file_right_4",
+      "label": "Right Ear Audio Test 4",
+      "info": "Audio file for fourth right ear test"
+    },
+    {
+      "type": "url",
+      "id": "audio_file_right_5",
+      "label": "Right Ear Audio Test 5",
+      "info": "Audio file for fifth right ear test"
+    },
+    {
+      "type": "url",
+      "id": "audio_file_right_6",
+      "label": "Right Ear Audio Test 6",
+      "info": "Audio file for sixth right ear test"
+    },
+    {
+      "type": "url",
+      "id": "audio_file_left_1",
+      "label": "Left Ear Audio Test 1",
+      "info": "Audio file for first left ear test"
+    },
+    {
+      "type": "url",
+      "id": "audio_file_left_2",
+      "label": "Left Ear Audio Test 2",
+      "info": "Audio file for second left ear test"
+    },
+    {
+      "type": "url",
+      "id": "audio_file_left_3",
+      "label": "Left Ear Audio Test 3",
+      "info": "Audio file for third left ear test"
+    },
+    {
+      "type": "url",
+      "id": "audio_file_left_4",
+      "label": "Left Ear Audio Test 4",
+      "info": "Audio file for fourth left ear test"
+    },
+    {
+      "type": "url",
+      "id": "audio_file_left_5",
+      "label": "Left Ear Audio Test 5",
+      "info": "Audio file for fifth left ear test"
+    },
+    {
+      "type": "url",
+      "id": "audio_file_left_6",
+      "label": "Left Ear Audio Test 6",
+      "info": "Audio file for sixth left ear test"
+    },
+    {
+      "type": "image_picker",
+      "id": "speech_loud_icon",
+      "label": "Speech Loud Icon"
+    },
+    {
+      "type": "image_picker",
+      "id": "wave_sound_1000hz_icon",
+      "label": "1000Hz Wave Sound Icon"
+    },
+    {
+      "type": "image_picker",
+      "id": "wave_sound_2000hz_icon",
+      "label": "2000Hz Wave Sound Icon"
+    },
+    {
+      "type": "image_picker",
+      "id": "wave_sound_4000hz_icon",
+      "label": "4000Hz Wave Sound Icon"
+    },
+    {
+      "type": "image_picker",
+      "id": "wave_sound_6000hz_icon",
+      "label": "6000Hz Wave Sound Icon"
+    },
+    {
+      "type": "image_picker",
+      "id": "check_left_ear_icon",
+      "label": "Check Left Ear Icon"
+    },
+    {
+      "type": "image_picker",
+      "id": "volume_mute_icon",
+      "label": "Volume Mute Icon"
+    },
+    {
+      "type": "image_picker",
+      "id": "volume_up_icon",
+      "label": "Volume Up Icon"
+    },
+    {
+      "type": "text",
+      "id": "right_ear_heading",
+      "label": "Right Ear Heading",
+      "default": "Right ear test"
+    },
+    {
+      "type": "text",
+      "id": "left_ear_heading",
+      "label": "Left Ear Heading",
+      "default": "Left ear test"
+    },
+    {
+      "type": "richtext",
+      "id": "loudest_level_instruction",
+      "label": "Loudest Level Instruction",
+      "default": "<p>Click the +/- buttons to reach the LOUDEST level you can listen to without discomfort (e.g. you could listen to it for 15 minutes)</p>"
+    },
+    {
+      "type": "richtext",
+      "id": "understand_level_instruction",
+      "label": "Understanding Level Instruction",
+      "default": "<p>Click the +/- buttons until the person is speaking just loud enough to understand.</p>"
+    },
+    {
+      "type": "richtext",
+      "id": "barely_hear_instruction",
+      "label": "Barely Hear Instruction",
+      "default": "<p>Click the +/- buttons until you can barely hear the sound.</p>"
+    },
+    {
+      "type": "text",
+      "id": "quiet_place_heading",
+      "label": "Quiet Place Heading",
+      "default": "Find a quiet place"
+    },
+    {
+      "type": "text",
+      "id": "headphones_heading",
+      "label": "Headphones Instruction Heading",
+      "default": "Connect your headphones and set your device volume to 100%"
+    },
+    {
+      "type": "text",
+      "id": "switch_to_left_ear_text",
+      "label": "Switch to Left Ear Text",
+      "default": "Now let's test your left ear. Please switch your headphones to your left ear."
+    },
+    {
+      "type": "text",
+      "id": "next_button_text",
+      "label": "Next Button Text",
+      "default": "Next"
+    },
+    {
+      "type": "text",
+      "id": "start_left_ear_button_text",
+      "label": "Start Left Ear Button Text",
+      "default": "Start left ear"
+    },
+    {
+      "type": "header",
+      "content": "Results Settings"
+    },
+    {
+      "type": "text",
+      "id": "results_heading",
+      "label": "Results Heading",
+      "default": "Hearing check complete!"
+    },
+    {
+      "type": "url",
+      "id": "results_cta_link",
+      "label": "Results Call to Action Button Link"
+    },
+    {
+      "type": "text",
+      "id": "results_cta",
+      "label": "Results Call to Action Button",
+      "default": "Select Your Hearing Aid Now!"
+    },
+    {
+      "type": "text",
+      "id": "email_placeholder",
+      "label": "Email Input Placeholder",
+      "default": "Email address"
+    },
+    {
+      "type": "text",
+      "id": "submit_button_text",
+      "label": "Submit Results Button Text",
+      "default": "Get my results"
+    },
+    {
+      "type": "text",
+      "id": "results_title",
+      "label": "Results Title",
+      "default": "RESULTS"
+    },
+    {
+      "type": "text",
+      "id": "results_email_sent",
+      "label": "Results Email Sent Text",
+      "default": "A copy was sent to your email"
+    },
+    {
+      "type": "text",
+      "id": "good_hearing_text",
+      "label": "Good Hearing Text",
+      "default": "You likely have good hearing"
+    },
+    {
+      "type": "text",
+      "id": "calculate_results_text",
+      "label": "Calculate Results Button Text",
+      "default": "How do you calculate my results?"
+    },
+    {
+      "type": "text",
+      "id": "left_ear_result_good",
+      "label": "Left Ear Good Result Text",
+      "default": "May have good hearing."
+    },
+    {
+      "type": "text",
+      "id": "right_ear_result_loss",
+      "label": "Right Ear Loss Result Text",
+      "default": "May have significant hearing loss."
+    },
+    {
+      "type": "image_picker",
+      "id": "left_arrow_image",
+      "label": "Left Arrow Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "right_arrow_image",
+      "label": "Right Arrow Image"
+    },
+    {
+      "type": "text",
+      "id": "hearing_ability_text",
+      "label": "Hearing Ability Text",
+      "default": "Your hearing ability"
+    },
+    {
+      "type": "text",
+      "id": "perfect_hearing_heading",
+      "label": "Perfect Hearing Heading",
+      "default": "Perfect hearing for perfect moments."
+    },
+    {
+      "type": "text",
+      "id": "perfect_hearing_subtext",
+      "label": "Perfect Hearing Subtext",
+      "default": "Enjoy uninterrupted family time with nearly invisible Ceretone hearing aids."
+    },
+    {
+      "type": "image_picker",
+      "id": "model_image",
+      "label": "Model Image"
+    },
+    {
+      "type": "text",
+      "id": "significant_loss_heading",
+      "label": "Significant Loss Heading",
+      "default": "Significant Hearing Loss Detected"
+    },
+    {
+      "type": "text",
+      "id": "significant_loss_subtext",
+      "label": "Significant Loss Subtext",
+      "default": "Immediate action can help you regain your hearing abilities and improve your daily interactions."
+    },
+    {
+      "type": "image_picker",
+      "id": "loss_image",
+      "label": "Loss Image"
+    },
+    {
+      "type": "text",
+      "id": "improve_hearing_heading",
+      "label": "Improve Hearing Heading",
+      "default": "How can getting help improve my hearing?"
+    },
+    {
+      "type": "text",
+      "id": "potential_improvement_text",
+      "label": "Potential Improvement Text",
+      "default": "Potential improvement with a hearing device*"
+    },
+    {
+      "type": "image_picker",
+      "id": "checkmark_complete_icon",
+      "label": "Checkmark Complete Icon"
+    },
+    {
+      "type": "text",
+      "id": "lower_volume_text",
+      "label": "Lower Volume Text",
+      "default": "Please lower your device volume now."
+    },
+    {
+      "type": "text",
+      "id": "left_ear_improvement_text",
+      "label": "Left Ear Improvement Text",
+      "default": "This is how your hearing in your left ear could improve with help from a hearing device*."
+    },
+    {
+      "type": "text",
+      "id": "right_ear_improvement_text",
+      "label": "Right Ear Improvement Text",
+      "default": "This is how your hearing in your right ear could improve with help from a hearing device*."
+    },
+    {
+      "type": "header",
+      "content": "Popup Settings"
+    },
+    {
+      "type": "text",
+      "id": "volume_popup_heading",
+      "label": "Volume Popup Heading",
+      "default": "How do I set my device volume?"
+    },
+    {
+      "type": "text",
+      "id": "volume_popup_description",
+      "label": "Volume Popup Description",
+      "default": "Select your device type below to learn how to set the volume to 100%."
+    },
+    {
+      "type": "text",
+      "id": "windows_tab_text",
+      "label": "Windows Tab Text",
+      "default": "Windows PC"
+    },
+    {
+      "type": "text",
+      "id": "mac_tab_text",
+      "label": "Mac Tab Text",
+      "default": "Apple Mac"
+    },
+    {
+      "type": "text",
+      "id": "mobile_tab_text",
+      "label": "Mobile Tab Text",
+      "default": "Mobile"
+    },
+    {
+      "type": "image_picker",
+      "id": "windows_volume_icon",
+      "label": "Windows Volume Icon"
+    },
+    {
+      "type": "text",
+      "id": "windows_volume_instructions",
+      "label": "Windows Volume Instructions",
+      "default": "Click the speaker icon on the bottom-right corner of the taskbar to open Volume Control. Slide the bar to the right until it reaches the end."
+    },
+    {
+      "type": "image_picker",
+      "id": "mac_volume_icon",
+      "label": "Mac Volume Icon"
+    },
+    {
+      "type": "text",
+      "id": "mac_volume_instructions",
+      "label": "Mac Volume Instructions",
+      "default": "Use the F11 and F12 keys on the keyboard to adjust the volume. Stop when the volume bar is full."
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_volume_icon",
+      "label": "Mobile Volume Icon"
+    },
+    {
+      "type": "text",
+      "id": "mobile_volume_instructions",
+      "label": "Mobile Volume Instructions",
+      "default": "Use the F11 and F12 keys on the keyboard to adjust the volume. Stop when the volume bar is full."
+    },
+    {
+      "type": "text",
+      "id": "volume_popup_button_text",
+      "label": "Volume Popup Button Text",
+      "default": "OK!"
+    },
+    {
+      "type": "text",
+      "id": "privacy_popup_heading",
+      "label": "Privacy Popup Heading",
+      "default": "Privacy Statement"
+    },
+    {
+      "type": "richtext",
+      "id": "privacy_statement",
+      "label": "Privacy Statement",
+      "default": "<p>Your privacy statement goes here.</p>"
+    },
+    {
+      "type": "text",
+      "id": "privacy_popup_button_text",
+      "label": "Privacy Popup Button Text",
+      "default": "Close"
+    },
+    {
+      "type": "text",
+      "id": "both_ears_popup_heading",
+      "label": "Both Ears Popup Heading",
+      "default": "Hearing sound in both ears?"
+    },
+    {
+      "type": "text",
+      "id": "both_ears_popup_description",
+      "label": "Both Ears Popup Description",
+      "default": "We recommend starting again with another pair of headphones and/or using a different device. Continuing the hearing screener with your current headphones and device will likely impact the quality of your results."
+    },
+    {
+      "type": "text",
+      "id": "restart_button_text",
+      "label": "Restart Button Text",
+      "default": "Start again with another pair of headphones"
+    },
+    {
+      "type": "text",
+      "id": "continue_button_text",
+      "label": "Continue Button Text",
+      "default": "Continue with current headphones and device"
+    },
+    {
+      "type": "text",
+      "id": "go_back_text",
+      "label": "Go Back Text",
+      "default": "or go back"
+    },
+    {
+      "type": "text",
+      "id": "calculate_popup_heading",
+      "label": "Calculate Popup Heading",
+      "default": "How do you calculate my results?"
+    },
+    {
+      "type": "text",
+      "id": "calculate_popup_description_1",
+      "label": "Calculate Popup Description 1",
+      "default": "We calculate your results by combining your answers to our questions with your hearing check."
+    },
+    {
+      "type": "text",
+      "id": "calculate_popup_description_2",
+      "label": "Calculate Popup Description 2",
+      "default": "Your answers to our questions help us understand where you struggle most. This helps us estimate both the likelihood of hearing loss, and the hearing difficulties you might encounter."
+    },
+    {
+      "type": "text",
+      "id": "calculate_popup_description_3",
+      "label": "Calculate Popup Description 3",
+      "default": "The hearing check helps us get a more specific assessment of your hearing."
+    },
+    {
+      "type": "text",
+      "id": "calculate_popup_button_text",
+      "label": "Calculate Popup Button Text",
+      "default": "OK!"
+    },
+    {
+      "type": "text",
+      "id": "dont_hear_popup_heading",
+      "label": "Don't Hear Popup Heading",
+      "default": "Don't hear anything?"
+    },
+    {
+      "type": "text",
+      "id": "dont_hear_popup_description",
+      "label": "Don't Hear Popup Description",
+      "default": "First, let's check your setup: make sure your headphones are connected and your device volume is not muted."
+    },
+    {
+      "type": "text",
+      "id": "try_again_button_text",
+      "label": "Try Again Button Text",
+      "default": "Try again"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hearing Quiz",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+<link rel="stylesheet" href="{{ 'style.css' | asset_url }}">
+<link rel="stylesheet" href="{{ 'quiz-style.css' | asset_url }}" />
+<div class="main__form" style="opacity: 0">
+  <div class="container">
+    <div class="quiz_description">{{ section.settings.quiz_description }}</div>
+    
+    {% if section.settings.product_image_1 %}
+      <img src="{{ section.settings.product_image_1 | img_url: 'master' }}" alt="Product Image" class="top__l" width="300" height="300">
+    {% endif %}
+    {% if section.settings.product_image_2 %}
+      <img src="{{ section.settings.product_image_2 | img_url: 'master' }}" alt="Product Image" class="top__r" width="300" height="300">
+    {% endif %}
+    {% if section.settings.product_image_3 %}
+      <img src="{{ section.settings.product_image_3 | img_url: 'master' }}" alt="Product Image" class="top__r2" width="300" height="300">
+    {% endif %}
+    
+    <form action="">
+      <div class="inner">
+        <div class="top__part">
+          <a href="#"><span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 40"><defs><style>.cls-1{fill:#0b0b0b;}</style></defs><path id="Primary_Up_Chevron" data-name="Primary Up Chevron" class="cls-1" d="M22,2a2,2,0,0,1-.6,1.4L4.8,20,21.4,36.6a2,2,0,0,1-2.8,2.8l-18-18a1.9,1.9,0,0,1,0-2.8l18-18a1.9,1.9,0,0,1,2.8,0A2,2,0,0,1,22,2Z"></path></svg></span>Back</a>
+          <div class="bar">
+            <div class="active" style="width:3%;"></div>
+          </div>
+        </div>
+        <div class="main__steps">
+          {% render 'quiz-step-introduction' %}
+          {% render 'quiz-step-questions' %}
+          {% render 'quiz-step-ear-test' %}
+          {% render 'quiz-step-results' %}
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+{% render 'quiz-popups' %}
+
+<script
+  src="https://code.jquery.com/jquery-3.7.1.js"
+  integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+  crossorigin="anonymous"
+  defer></script>
+
+<script src="{{ 'quiz-js.js' | asset_url }}" defer></script>

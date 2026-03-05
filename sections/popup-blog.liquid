@@ -1,0 +1,191 @@
+<section data-section-id="{{ section.id }}">
+    <div class="container">
+        <div class="title">
+            <span>{{ section.settings.title }}</span>
+            <span class="svg-arrow">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false" role="presentation" class="icon icon-arrow" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.451 4.24896C13.1191 3.91701 12.5809 3.91701 12.249 4.24896C11.917 4.5809 11.917 5.1191 12.249 5.45104L17.7977 10.9998L3.85 10.9998C3.38056 10.9998 3 11.3803 3 11.8498C3 12.3192 3.38056 12.6998 3.85 12.6998L17.7982 12.6998L12.249 18.249C11.917 18.5809 11.917 19.1191 12.249 19.451C12.5809 19.783 13.1191 19.783 13.451 19.451L20.451 12.451C20.5003 12.4018 20.5429 12.3471 20.5782 12.2885C20.6501 12.1691 20.692 12.033 20.699 11.8921C20.6996 11.8781 20.7 11.8641 20.7 11.85C20.7 11.8499 20.7 11.8498 20.7 11.8498C20.7 11.6089 20.5998 11.3914 20.4388 11.2367L13.451 4.24896Z" fill="currentColor"></path>
+              </svg>
+            </span>
+        </div>
+    </div>
+    <div class="popup-block">
+      <div class="popup-mask"></div>
+      <div class="poopup-content">
+          <div class="popup-content-close"></div>
+          <div class="poopup-content-inner">
+              <div class="article-title"><h2>{{ section.settings.article.title }}</h2></div>
+              <div class="article-content">{{ section.settings.article.content }}</div>
+              <div class="article-link"><a href="{{ section.settings.article.url }}">View More</a></div>
+          </div>
+      </div>
+    </div>
+</section>
+
+<style>
+[data-section-id="{{ section.id }}"] .container {
+    padding-top:{{ section.settings.pc_padding_top }}px;
+	padding-bottom:{{ section.settings.pc_padding_bottom }}px;
+}
+@media screen and (max-width: 767px) {
+    [data-section-id="{{ section.id }}"] .container {
+        padding-top:{{ section.settings.mb_padding_top }}px;
+		padding-bottom:{{ section.settings.mb_padding_bottom }}px;
+    }
+}
+[data-section-id="{{ section.id }}"] img {
+    max-width: 100%;
+    height: auto;
+    display: table;
+}
+[data-section-id="{{ section.id }}"] .title {
+    background:{{ section.settings.bg_color}};
+    border-radius: 10px;
+    font-size: 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding-right: 6.4rem;
+    padding-left: 6.4rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+[data-section-id="{{ section.id }}"] span.svg-arrow {
+    display: flex;
+    background: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(90deg);
+}
+[data-section-id="{{ section.id }}"] .popup-block {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display:none;
+}
+[data-section-id="{{ section.id }}"] .popup-block.open {
+    display:block;
+}
+[data-section-id="{{ section.id }}"] .popup-mask {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    background: #0000005c;
+}
+[data-section-id="{{ section.id }}"] .poopup-content {
+    position: absolute;
+    z-index: 1;
+    background: #fff;
+    width: 60%;
+    max-width: 1000px;
+    max-height: 80vh;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 4rem;
+    border-radius: 20px;
+    overflow-y: auto;
+}
+[data-section-id="{{ section.id }}"] .article-link {
+    text-align: center;
+    margin-top: 5rem;
+}
+.popup-content-close {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: #989898;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.popup-content-close:before {
+    content: '';
+    width: 22px;
+    height: 3px;
+    background: #fff;
+    display: block;
+    transform: rotate(45deg);
+}
+.popup-content-close:after {
+    content: '';
+    width: 22px;
+    height: 3px;
+    background: #fff;
+    display: block;
+    transform: rotate(-45deg);
+    position: absolute;
+}
+@media screen and (max-width: 767px) {
+  [data-section-id="{{ section.id }}"] .title {
+      font-size: 18px;
+      padding-right: 2rem;
+      padding-left: 2rem;
+  }
+  [data-section-id="{{ section.id }}"] .poopup-content {
+      width: 80%;
+      max-height: 70vh;
+      padding: 2rem;
+      border-radius: 10px;
+  }
+  [data-section-id="{{ section.id }}"] .popup-content-close {
+      width: 40px;
+      height: 40px;
+  }
+  .popup-content-close:before {
+      width: 18px;
+      height: 3px;
+  }
+  .popup-content-close:after {
+      width: 18px;
+      height: 3px;
+  }
+}
+
+</style>
+
+<script>
+    window.addEventListener("DOMContentLoaded", function () {
+        $('[data-section-id="{{ section.id }}"] .title').on('click', function(){
+          $('[data-section-id="{{ section.id }}"] .popup-block').addClass('open');
+        });
+        $('[data-section-id="{{ section.id }}"] .popup-mask, [data-section-id="{{ section.id }}"] .popup-content-close').on('click', function(){
+          $('[data-section-id="{{ section.id }}"] .popup-block').removeClass('open');
+        });
+    });                       
+</script>
+
+
+{% schema %}
+    {
+        "name": "Popup Blog",
+        "class":"popup-blog",
+        "settings": [
+                { "type": "color", "id": "bg_color", "label": "Background", "default": "#f7f9f8" },
+                { "type": "article", "id": "article", "label": "Article" },
+                { "type": "text", "id":"title", "label":"Title"},
+          
+                { "type": "header","content":"PC"},
+                { "type": "range", "id": "pc_padding_top", "label": "Top Space", "min": 0, "max": 100, "step": 1, "unit": "px", "default": 0 },
+                { "type": "range", "id": "pc_padding_bottom", "label": "Bottom Space", "min": 0, "max": 100, "step": 1, "unit": "px", "default": 0 },
+                { "type": "header","content":"Mobile"},
+                { "type": "range", "id": "mb_padding_top", "label": "Top Space", "min": 0, "max": 100, "step": 1, "unit": "px", "default": 0 },
+                { "type": "range", "id": "mb_padding_bottom", "label": "Bottom Space", "min": 0, "max": 100, "step": 1, "unit": "px", "default": 0 }
+        ],
+        "presets": [
+            {
+                "name": "Popup Blog",
+                "category":"Custom"
+            }
+        ]
+    }
+{% endschema %}

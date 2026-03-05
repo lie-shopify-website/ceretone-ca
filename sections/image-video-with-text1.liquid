@@ -1,0 +1,102 @@
+
+{% schema %}
+  {
+    "name": "Image video with text1",
+    "settings": [
+        { "type": "text", "id": "custom_cls", "label": "自定义类名" },
+        { "type": "header","content":"标题"},
+        { "type": "liquid", "id": "title", "label": "大标题" },
+        { "type": "liquid", "id": "sub_title", "label": "小标题" },
+
+        { "type": "header","content":"图片和视频(视频优先)"},
+        { "type": "video", "id":"video", "label":"视频"},
+        { "type": "image_picker", "id":"image", "label":"图片"},
+        { "type": "image_picker", "id":"image_mb", "label":"图片(手机端)"},
+        
+    ],
+    "presets": [
+        {
+        "name": "Image video with text1",
+        "category": "Custom"
+        }
+    ]
+  }
+{% endschema %}
+
+<link rel="stylesheet" href="{{ 'image-video-with-text1.css' | asset_url }}" media="all" >
+
+<div class="image-with-text-v1 {{ section.settings.custom_cls }}" data-section-id="{{ section.id }}" style="display:block;">
+    <div class="container">
+        {% if section.settings.title != blank %}
+        <div class="heading-box mobile-show">
+            <h2 class="heading-title h3">{{ section.settings.title }}</h2>
+            {% if section.settings.sub_title != blank %}
+            <div class="sub_title body-large">{{ section.settings.sub_title }}</div>
+            {% endif %}
+        </div>
+        {% endif %}
+
+        <div class="itext-ly">
+            <div class="itext-inner">
+                {% if section.settings.title != blank %}
+                <div class="itext-heading mobile-hidden">
+                    <div class="heading-box">
+                        <h2 class="heading-title h3">{{ section.settings.title }}</h2>
+                        {% if section.settings.sub_title != blank %}
+                        <div class="sub_title body-large">{{ section.settings.sub_title }}</div>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endif %}
+
+                <div class="itext-picture" >
+                    <div class="picture_box">
+                        {% if section.settings.video != blank %}
+                            {%liquid
+                                assign video = section.settings.video
+                                if video.sources[1].url != blank 
+                                    assign video_url = video.sources[1].url
+                                else
+                                    assign video_url = video.sources[0].url
+                                endif
+                            %}
+                            <video playsinline="true" autoplay="autoplay" loop="loop" preload="metadata" muted="muted" controls="controls" class="video-position" poster="{{ video.preview_image | image_url:width:video.preview_image.width }}">
+							    <source data-src="{{ video_url }}" type="video/mp4" />
+                            </video>
+                        {% else %}
+                            <picture>
+                                <source data-srcset="{{ section.settings.image_mb | image_url: width: 767 }}"  media="(max-width: 767px)" />
+                                <source data-srcset="{{ section.settings.image | image_url: width: section.settings.image.width }}" media="(min-width: 768px)" />
+                                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lzsrc="{{ section.settings.image_mb | image_url: width: 767 }}" class="js-lazy" width="auto" height="auto" />
+                            </picture>
+                        {% endif %}
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    ;(function() {
+        const oSection = document.querySelector('[data-section-id="{{ section.id }}"]');
+
+        window.addEventListener('DOMContentLoaded', () => {
+
+            var videos = oSection.querySelectorAll('video.video-position');
+            videos.forEach(function(video) {
+                if(! video) return; 
+
+                let videoSource = video.querySelector('source');
+                if(!videoSource.src){
+                    videoSource.src = videoSource.getAttribute('data-src');
+                    video.load();    /* 生效 */
+                }else{
+                    video.play();    /* 播放 */
+                }
+            });
+        });
+
+    })();
+</script>

@@ -1,0 +1,199 @@
+{% schema %}
+{
+    "name": "Custom Customer Video",
+    "settings": [
+        { "type": "header", "content": "标题" },
+        { "type": "liquid", "id": "title", "label": "标题" },
+
+        { "type": "header", "content": "配置" },
+        { "type": "text", "id": "custom_class", "label": "自定义class" }
+    ],
+    "blocks": [
+        {
+            "type": "video",
+            "name": "Video",
+            "settings": [
+                { "type": "header", "content": "视频" },
+                { "type": "video", "id": "video", "label": "视频" },
+                { "type": "image_picker", "id": "video_image", "label": "视频封面" },
+
+                { "type": "header", "content": "产品" },
+                { "type": "product", "id": "product", "label": "产品" },
+                { "type": "image_picker", "id": "image", "label": "产品图片" },
+                { "type": "text", "id": "title", "label": "产品标题" },
+
+                { "type": "header", "content": "客户" },
+                { "type": "text", "id": "customer_name", "label": "客户名称" },
+                { "type": "text", "id": "verified_text", "label": "认证文本","default":"Verified Customer" }
+            ]
+        }
+    ],
+
+    "presets": [
+        {
+        "name": "Custom Customer Video",
+        "category": "custom"
+        }
+    ]
+}
+{% endschema %}
+
+
+<link rel="stylesheet" href="{{ 'custom-customer-video.css' | asset_url }}" media="all" >
+
+<div class="custom-customer-video" data-section-id="{{ section.id }}">
+    <div class="customer-video-inner safe-container">
+        {% if section.settings.title != blank %}
+            <div class="section-title"><h2>{{ section.settings.title }}</h2></div>
+        {% endif %}
+        <div class="customer-video-swiper">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    {% for block in section.blocks %}
+                        {% if block.settings.product %}
+                        {%  assign cust_product = block.settings.product %}
+                        <div class="swiper-slide">
+                            <div class="item">
+                                {% if block.settings.video != blank and block.settings.image != blank %}
+                                    {% if block.settings.video.sources[1] != blank %}
+                                        {% assign video_src = block.settings.video.sources[1] %}
+                                    {%  else %}
+                                        {% assign video_src = block.settings.video.sources[0] %}
+                                    {% endif %}
+                                    <div class="video-box">
+                                        <div class="video-container">
+                                            <div class="video-image">
+                                                <div class="player-icon videoBtn" data-video-src="{{ video_src.url }}">
+                                                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <rect width="50" height="50" rx="25" fill="#2D2D2D"/>
+                                                        <path d="M37.5959 23.3091C38.5126 23.8384 38.5126 25.1616 37.5959 25.6909L20.0627 35.8137C19.1459 36.343 17.9999 35.6814 17.9999 34.6228L17.9999 14.3772C17.9999 13.3186 19.1459 12.657 20.0627 13.1863L37.5959 23.3091Z" fill="#FFFEFB"/>
+                                                    </svg>
+                                                </div>
+                                                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lzsrc="{{ block.settings.video_image | image_url: width: 800 }}" class="js-lazy" width="auto" height="auto" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endif %}
+
+                                <div class="bottom-content">
+                                    
+                                    <div class="left">
+                                        <div class="customer-name">
+                                            <h3>{{ block.settings.customer_name }}</h3>
+                                        </div>
+                                        <div class="verified-text">
+                                            <span class="sicon">
+                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M10 0C4.47714 0 0 4.47714 0 10C0 15.5229 4.47714 20 10 20C15.5229 20 20 15.5229 20 10C20 4.47714 15.5229 0 10 0ZM15.2992 7.54796L9.3698 13.4771C9.08673 13.7602 8.62776 13.7602 8.34469 13.4771L4.70082 9.83327C4.41776 9.5502 4.41776 9.09122 4.70082 8.80816C4.98388 8.5251 5.44286 8.5251 5.72592 8.80816L8.85735 11.9396L14.2741 6.52286C14.5571 6.2398 15.0161 6.2398 15.2992 6.52286C15.5822 6.80592 15.5822 7.2649 15.2992 7.54796Z" fill="#37BA40"/>
+                                                </svg>
+                                            </span>
+                                            <span>{{ block.settings.verified_text }}</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="product-ctr">
+                                        <div class="product-image">
+                                            <a href="{{ cust_product.url }}"></a>
+                                            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lzsrc="{{ block.settings.image | image_url: width: 767 }}" class="js-lazy" width="auto" height="auto" />
+                                        </div>
+
+                                        <div class="product-title">
+                                            <a href="{{ cust_product.url }}"><span>{{ block.settings.title }}</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                
+                                
+                            </div>
+                            
+                        </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="swiper-custom-navigation {% if section.blocks.size < 4 %}hidden-navi-pc{% endif %}">
+                <div class="custom-button-prev custom-button">
+                    <svg width="50" height="50" style="transform:rotate(-180deg);" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="33.1429" height="27.7143" transform="matrix(-4.37114e-08 -1 -1 4.37114e-08 38.7145 40.7143)" fill="#FFFEFB"/>
+                        <path d="M25.0614 24.9387L24.9387 25.0615C24.9777 25.0168 25.0168 24.9777 25.0614 24.9387Z" fill="white"/>
+                        <path class="bg" d="M25.0001 50.0001C11.1942 50.0001 4.41472e-05 38.8059 4.41472e-05 25.0001C4.41472e-05 11.1942 11.1942 3.05176e-05 25.0001 3.05176e-05C38.8059 3.05176e-05 50.0001 11.1942 50.0001 25.0001C50.0001 38.8059 38.8059 50.0001 25.0001 50.0001ZM31.5737 23.7947L31.451 23.6719L30.2512 22.4722L21.0045 13.2255C20.3126 12.5335 19.1742 12.5335 18.4766 13.2255C17.7847 13.9175 17.7847 15.0559 18.4766 15.7534L27.7289 25.0001L18.4822 34.2523C17.7902 34.9443 17.7902 36.0827 18.4822 36.7802C19.1742 37.4722 20.3126 37.4722 21.0045 36.7746L30.2512 27.528L31.4677 26.3114L31.5681 26.211C31.8639 25.8929 32.0425 25.4632 32.0369 24.9945C32.0369 24.5313 31.8639 24.1128 31.5737 23.7947Z" fill="#FF4F00"/>
+                    </svg>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="custom-button-next custom-button">
+                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="33.1429" height="27.7143" transform="matrix(-4.37114e-08 -1 -1 4.37114e-08 38.7145 40.7143)" fill="#FFFEFB"/>
+                        <path d="M25.0614 24.9387L24.9387 25.0615C24.9777 25.0168 25.0168 24.9777 25.0614 24.9387Z" fill="white"/>
+                        <path class="bg" d="M25.0001 50.0001C11.1942 50.0001 4.41472e-05 38.8059 4.41472e-05 25.0001C4.41472e-05 11.1942 11.1942 3.05176e-05 25.0001 3.05176e-05C38.8059 3.05176e-05 50.0001 11.1942 50.0001 25.0001C50.0001 38.8059 38.8059 50.0001 25.0001 50.0001ZM31.5737 23.7947L31.451 23.6719L30.2512 22.4722L21.0045 13.2255C20.3126 12.5335 19.1742 12.5335 18.4766 13.2255C17.7847 13.9175 17.7847 15.0559 18.4766 15.7534L27.7289 25.0001L18.4822 34.2523C17.7902 34.9443 17.7902 36.0827 18.4822 36.7802C19.1742 37.4722 20.3126 37.4722 21.0045 36.7746L30.2512 27.528L31.4677 26.3114L31.5681 26.211C31.8639 25.8929 32.0425 25.4632 32.0369 24.9945C32.0369 24.5313 31.8639 24.1128 31.5737 23.7947Z" fill="#FF4F00"/>
+                    </svg>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+; (function () {
+    const oSection = document.querySelector('[data-section-id="{{ section.id }}"]');
+
+    function initSwiper(){
+        const mainSwiperEle = oSection.querySelector('.swiper');
+        
+        if(mainSwiperEle) {
+            const mainSwiper = new Swiper(mainSwiperEle, {
+                spaceBetween: 20,
+                slidesPerView: 1,
+                pagination: {
+                    el: oSection.querySelector('.swiper-pagination'),
+                    clickable: true
+                },
+                navigation: {
+                    nextEl: oSection.querySelector('.custom-button-next'),
+                    prevEl: oSection.querySelector('.custom-button-prev'),
+                },
+                breakpoints: {
+                    230: {
+                        slidesPerView: 1,
+                        spaceBetween: 20,
+                    },
+                    768: {
+                        slidesPerView: 3,
+                        spaceBetween: 20,
+                    },
+                    1024: {
+                        slidesPerView: 3,
+                        spaceBetween: 40,
+                    },
+                    1521: {
+                        slidesPerView: 3,
+                        spaceBetween: 55,
+                    },
+                },
+            });
+        }
+    }
+    
+
+    function initVideo() {
+        const videoBtns = oSection.querySelectorAll('.video-container .videoBtn');
+        if(videoBtns) {
+            videoBtns.forEach(videoBtn => {
+                videoBtn.addEventListener('click', () => {
+                    const videoSrc = videoBtn.getAttribute('data-video-src');
+                    if(videoSrc) {
+                        globalPopupVideo(videoSrc);
+                    }
+                });
+            });
+        }
+    }
+
+    window.addEventListener('DOMContentLoaded', function() {
+        initSwiper();
+        initVideo();
+    });
+
+})();
+</script>

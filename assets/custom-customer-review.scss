@@ -1,0 +1,210 @@
+@import "tools";
+
+.custom-customer-review {
+
+    font-family: 'Helvetica';
+    font-weight: 400;
+    background: #FFFEFB;
+    padding-top:vm(40);
+    padding-bottom:vm(30);
+    @include media-min("spc") {
+        padding-top:vmpc(70);
+        padding-bottom:vmpc(70);
+    }
+
+    p {
+        margin: 0;
+    }
+    img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .safe-container {
+        position: relative;
+        height: 100%;
+        padding: 0 vm(20);
+
+        @include media-min("spc") {
+            padding: 0;
+        }
+    }
+
+
+    .section-title {
+        margin-bottom:vm(40);
+
+        @include media-min("spc") {
+            margin-bottom:vmpc(50);
+        }
+        
+        h2 {
+            font-family: 'Helvetica';
+            font-size: vm(32); 
+            line-height: 1;
+            font-weight: 700;
+            text-align: center;
+            margin: 0;
+
+            @include media-min("spc") {
+                font-size: vmpc(56); 
+            }
+        }
+    }
+
+    .review-swiper {
+        position: relative;
+
+        .swiper {
+            @include media-min("spc") {
+                max-width: vmpc(823);
+            }
+        }
+        
+
+        .content {
+            margin-bottom: vm(10);
+
+            @include media-min("spc") {
+                margin-bottom: vmpc(0);
+            }
+
+            .slide-content {
+                font-size: vm(18);
+                line-height: vm(24);
+                min-height: vm(72);
+                color:#524842;
+    
+                @include media-min("spc") {
+                    font-size: vmpc(32);
+                    line-height: vmpc(50);
+                    padding: vmpc(10);
+                    min-height: vmpc(120);
+                }
+            }
+        }
+        .image {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: vm(10);
+
+            @include media-min("spc") {
+                gap: vmpc(10);
+            }
+            
+            .short-line {
+                display: block;
+                width:vm(57);
+                height:vm(1);
+                background-color: #000000;
+
+                @include media-min("spc") {
+                    width:vmpc(83);
+                    height:vmpc(2);
+                }
+            }
+
+            img {
+                max-width: vm(120);
+
+                @include media-min("spc") {
+                    max-width: vmpc(200);
+                }
+            }
+        }
+        
+
+        .swiper-custom-navigation {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: vm(10);
+            margin-top: vm(40);
+
+            @include media-min("spc") {
+                max-width: vmpc(1163);
+                margin: auto;
+                width: 100%;
+                gap: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                justify-content: space-between;
+            }
+
+            .custom-button {
+                width: vm(25);
+                height: vm(25);
+                cursor: pointer;
+
+                @include media-min("spc") {
+                    width: vmpc(50);
+                    height: vmpc(50);
+                }
+
+                svg {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .swiper-pagination {
+                position: static;
+                width: auto;
+                gap: vm(5);
+        
+                @include media-min("spc") {
+                    // bottom: vmpc(54);
+                    // gap: vmpc(10);
+                    display: none;
+                }
+        
+                .swiper-pagination-bullet {
+                    width: vm(6);
+                    height: vm(6);
+                    border-radius: vm(20);
+                    background:#524842;
+                    opacity: 1;
+                    display: block;
+                    margin: 0;
+                    transition: 0.5s ease-in-out;
+        
+                    @include media-min("spc") {
+                        width: vmpc(8);
+                        height: vmpc(8);
+                        border-radius: vmpc(20);
+                    }
+                }
+                .swiper-pagination-bullet.swiper-pagination-bullet-active {
+                    width: vm(30);
+                    background: #FF4F00;
+                    transition: 0.25s ease-in-out;
+        
+                    @include media-min("spc") {
+                        width: vmpc(40);
+                    }
+                }
+            }
+            
+
+            .swiper-button-disabled {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+
+        .custom-button svg path.bg {
+            fill:#969694;
+        }
+        
+        .swiper-horizontal>.swiper-pagination-bullets {
+            margin: 0;
+        }
+
+        
+    }
+
+}

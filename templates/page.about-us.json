@@ -1,0 +1,286 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": "no-indent",
+        "padding_bottom": "m"
+      }
+    },
+    "custom_liquid_rJqmPg": {
+      "type": "custom-liquid",
+      "name": "引用css文件",
+      "settings": {
+        "custom_liquid_text": "",
+        "custom_liquid": "{{ 'custom-page-about-us.css' | asset_url | stylesheet_tag }}"
+      }
+    },
+    "custom_liquid_ep6KxL": {
+      "type": "custom-liquid",
+      "name": "Banner",
+      "settings": {
+        "custom_liquid_text": "",
+        "custom_liquid": "<div class=\"abs-banner\">\n    <div class=\"banner-inner\">\n        <div class=\"image\">\n            <picture>\n                <source srcset=\"https://cdn.shopify.com/s/files/1/0517/0436/5244/files/abs-banner-mb.jpg?v=1765347049\"  media=\"(max-width: 1199px)\" />\n                <source srcset=\"https://cdn.shopify.com/s/files/1/0517/0436/5244/files/abs-banner.jpg?v=1765347049\" media=\"(min-width: 1200px)\" />\n                <img src=\"https://cdn.shopify.com/s/files/1/0517/0436/5244/files/abs-banner-mb.jpg?v=1765347049\" width=\"100%\" height=\"auto\" />\n            </picture>\n        </div>\n\n        <div class=\"content\">\n            <div class=\"title\"><h1>Sound is meant for all</h1></div>\n        </div>\n    </div>\n</div>"
+      }
+    },
+    "custom_liquid_MCFaiC": {
+      "type": "custom-liquid",
+      "name": "Our Mission",
+      "settings": {
+        "custom_liquid_text": "",
+        "custom_liquid": "<div class=\"abs-our-mission\">\n    <div class=\"our-mission-inner\">\n        <div class=\"content\">\n            <div class=\"title\"><h2>Our Mission</h2></div>\n            <div class=\"info\"><p>At Ceretone, we're creating a world where hearing loss is no barrier to communication, connection, and quality of life.</p></div>\n        </div>\n    </div>\n</div>"
+      }
+    },
+    "custom_liquid_gfpCqK": {
+      "type": "custom-liquid",
+      "name": "Our Story",
+      "settings": {
+        "custom_liquid_text": "",
+        "custom_liquid": "<div class=\"abs-our-story\">\n    <div class=\"our-story-inner\">\n        <div class=\"safe-container\">\n            <div class=\"top\">\n                <div class=\"heading\">\n                    <div class=\"heading-title\"><h2>Our Story</h2></div>\n                </div>\n            </div>\n\n            <div class=\"bottom\">\n                <div class=\"image\">\n                    <picture>\n                        <source srcset=\"https://cdn.shopify.com/s/files/1/0517/0436/5244/files/8_177a9241-e6ab-46b5-87e7-469d399eab15.png?v=1765953640\"  media=\"(max-width: 1199px)\" />\n                        <source srcset=\"https://cdn.shopify.com/s/files/1/0517/0436/5244/files/8_177a9241-e6ab-46b5-87e7-469d399eab15.png?v=1765953640\" media=\"(min-width: 1200px)\" />\n                        <img src=\"https://cdn.shopify.com/s/files/1/0517/0436/5244/files/8_177a9241-e6ab-46b5-87e7-469d399eab15.png?v=1765953640\" width=\"100%\" height=\"auto\" />\n                    </picture>\n                </div>\n\n                <div class=\"content\">\n                    <div class=\"p\"><p>“In 2009, an engineer watched his father lose his hearing. Affordable, effective hearing aids simply didn't exist—he couldn't find a solution in time. From that loss came a mission: no one else should face this choice.</p></div>\n                    <div class=\"p\"><p>Founded on that promise, Ceretone set out to deliver top performance at a price everyone can afford. Established in 2020 in the United States, Ceretone is a brand under Audicon Corporation. What began as one family's mission has grown into a global commitment, helping people reconnect with the world around them.</p></div>\n                    <div class=\"p\"><p>Today, our patent‑protected technology serves families everywhere. Because sound is meant for all, we're committed to being accessible to anyone, anywhere.”</p></div>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>"
+      }
+    },
+    "custom_mutli_number_Teeb6b": {
+      "type": "custom-mutli-number",
+      "blocks": {
+        "number_EctJex": {
+          "type": "number",
+          "settings": {
+            "display": "10M+",
+            "title": "Customers worldwide",
+            "info": "as of April 2025"
+          }
+        },
+        "number_A69wCf": {
+          "type": "number",
+          "settings": {
+            "display": "114",
+            "title": "Total active patents",
+            "info": "23 invention patents"
+          }
+        },
+        "number_bxX9cn": {
+          "type": "number",
+          "settings": {
+            "display": "100+",
+            "title": "Countries use our technology",
+            "info": "Pioneer in the hearing aid industry"
+          }
+        },
+        "number_Jt7RcW": {
+          "type": "number",
+          "settings": {
+            "display": "$330K",
+            "title": "Raised through crowdfunding",
+            "info": "Backed by 1,278 early adopters"
+          }
+        }
+      },
+      "block_order": [
+        "number_EctJex",
+        "number_A69wCf",
+        "number_bxX9cn",
+        "number_Jt7RcW"
+      ],
+      "name": "Custom Mutli Number",
+      "settings": {
+        "title": "Our Numbers",
+        "custom_class": ""
+      }
+    },
+    "custom_our_service_XaYr4A1": {
+      "type": "custom-our-service-v2",
+      "blocks": {
+        "item_yNxAmj": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/FDA_2x_416b9da6-661b-4f1d-9df5-d4394af6b568.png",
+            "title": "FDA-Registered, Crystal-Clear Sound",
+            "info": "Isolates voices from background noise so you hear what matters most."
+          }
+        },
+        "item_BGJkFb": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/2x_d44fd5c0-fea0-4582-8abb-7585a822d06a.png",
+            "title": "Professional Quality, Accessible Price",
+            "info": "Proven technology refined over 40 years without the traditional $4,000+ clinic costs."
+          }
+        },
+        "item_MaHdJU": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/2x_4323e407-afb9-4eff-adb6-afab1a3a3f5f.png",
+            "title": "Easy Setup, Ready To Use",
+            "info": "No clinic visits, no complicated setups - just open and start hearing better."
+          }
+        },
+        "item_GVddJq": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/2x_981d4c56-09f6-4b9e-9435-f94efdb8bab4.png",
+            "title": "60-Day Trial, Lifelong Support",
+            "info": "Full money-back guarantee with free shipping both ways, plus 12-month warranty."
+          }
+        }
+      },
+      "block_order": [
+        "item_yNxAmj",
+        "item_BGJkFb",
+        "item_MaHdJU",
+        "item_GVddJq"
+      ],
+      "name": "Custom Our Service V2",
+      "settings": {
+        "title": "Our Advantages",
+        "custom_class": ""
+      }
+    },
+    "custom_our_journey_KXARam": {
+      "type": "custom-our-journey",
+      "blocks": {
+        "card_RaM7RV": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/1pc.png",
+            "item_title": "DEC 2020",
+            "item_info": "Ceretone was founded and launched its first product."
+          }
+        },
+        "card_XWVe4D": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/2_750e02c6-dfbf-49a6-9652-936a3b1101d4.png",
+            "item_title": "APR 2022",
+            "item_info": "The Ceretone team relocated to Los Angeles."
+          }
+        },
+        "card_TwkY9f": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/2pc.png",
+            "item_title": "MAY 2023",
+            "item_info": "Ceretone released Core One, the world’s smallest OTC hearing aid, which went on to win the Red Dot, French Design, and MUSE Design Awards."
+          }
+        },
+        "card_WTfgXQ": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/4_45fe44f4-687f-4cf1-9a8d-261432d662d2.png",
+            "item_title": "SEP 2024",
+            "item_info": "Ceretone officially launched in Walmart stores across the United States."
+          }
+        },
+        "card_mc67pJ": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/5_088454d2-64dd-4ce5-95b3-b37421990534.png",
+            "item_title": "JAN 2025",
+            "item_info": "Winner of Hearing Aids CES 2025."
+          }
+        },
+        "card_kxpFnR": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/6_1439e1d0-3070-44be-b358-788f14732ff2.png",
+            "item_title": "MAR 2025",
+            "item_info": "Became the first‑ever OTC hearing aid brand to launch nationwide in Target."
+          }
+        },
+        "card_Pr8Uep": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/7_c6776ced-fa7e-4fba-933e-9ee9ba605db1.png",
+            "item_title": "JUL 2025",
+            "item_info": "Released the new product Core One Pro."
+          }
+        }
+      },
+      "block_order": [
+        "card_RaM7RV",
+        "card_XWVe4D",
+        "card_TwkY9f",
+        "card_WTfgXQ",
+        "card_mc67pJ",
+        "card_kxpFnR",
+        "card_Pr8Uep"
+      ],
+      "name": "Custom Our Journey",
+      "settings": {
+        "title": "Our Journey",
+        "custom_class": ""
+      }
+    },
+    "custom_best_seller_KxrWR6": {
+      "type": "custom-best-seller",
+      "blocks": {
+        "slide_RgN7dU": {
+          "type": "slide",
+          "settings": {
+            "hot_label": true,
+            "product": "core-one-pro-otc-hearing-aids",
+            "image": "shopify://shop_images/best-seller-01.png",
+            "short_desc": "Most Comfort & Invisible",
+            "short_desc_icon": "shopify://shop_images/icon-001.png",
+            "title": "Core One Pro",
+            "learn_more": "Learn more"
+          }
+        },
+        "slide_pdPCAk": {
+          "type": "slide",
+          "settings": {
+            "hot_label": false,
+            "product": "beacon-otc-hearing-aids",
+            "image": "shopify://shop_images/best-seller-02.png",
+            "short_desc": "Smart & Connected",
+            "short_desc_icon": "shopify://shop_images/icon-002.png",
+            "title": "Beacon",
+            "learn_more": "Learn more"
+          }
+        },
+        "slide_iJLzDt": {
+          "type": "slide",
+          "settings": {
+            "hot_label": false,
+            "product": "torch-otc-hearing-aids",
+            "image": "shopify://shop_images/best-seller-03.png",
+            "short_desc": "Powerful & Reliable",
+            "short_desc_icon": "shopify://shop_images/icon-003.png",
+            "title": "Torch",
+            "learn_more": "Learn more"
+          }
+        }
+      },
+      "block_order": [
+        "slide_RgN7dU",
+        "slide_pdPCAk",
+        "slide_iJLzDt"
+      ],
+      "name": "Custom Best Seller",
+      "settings": {
+        "title": "Meet Our Best Hearing Solutions",
+        "custom_class": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "custom_liquid_rJqmPg",
+    "custom_liquid_ep6KxL",
+    "custom_liquid_MCFaiC",
+    "custom_liquid_gfpCqK",
+    "custom_mutli_number_Teeb6b",
+    "custom_our_service_XaYr4A1",
+    "custom_our_journey_KXARam",
+    "custom_best_seller_KxrWR6"
+  ]
+}

@@ -1,0 +1,491 @@
+<section data-section-id="{{ section.id }}">
+  <div class="container">
+     {%- if section.settings.title != blank or section.settings.sub_title != blank -%}
+        <div class="title-box">
+            {% if section.settings.title != blank %}
+                <div class="heading-title"><h3>{{ section.settings.title }}</h3></div>
+            {% endif %}
+        </div>
+      {% endif %}
+
+      <div class="audio-grid">
+          {% for block in section.blocks %}
+                <div class="audio-container">
+                	<div class="player">
+                		<button class="player-btn" data-status="0" data-currentAudio="audio1"></button>
+                        <div class="audio-title">{{ block.settings.title }}</div>
+                	</div>
+                	
+                    <div class="progress-container" data-progress-container>
+                		<div class="progress-bar" data-progress-bar>
+                			<div class="progressBar-inner">
+                				<div class="progressBar-up" style="clip-path:url(#rail-wave-{{ block.id }}-1)">
+                					<div class="progressBar-up-color" id="progressBar-up-color" style="width:0">
+                					</div>
+                				</div>
+                				<svg class="progressBar-down-svg" data-progress-svg1 width="101.15%" height="44">
+                					<defs>
+                						<clipPath id="rail-wave-{{ block.id }}-1">
+                							<rect x="0%" 	y="32%" width="1.35%" height="36%" rx="0.7%"></rect>
+                							<rect x="2.5%" 	y="2%" width="1.35%" height="98%" rx="0.7%"></rect>
+                							<rect x="5%" 	y="4%" width="1.35%" height="92%" rx="0.7%"></rect>
+                							<rect x="7.5%" 	y="16%" width="1.35%" height="78%" rx="0.7%"></rect>
+                							<rect x="10%" 	y="6%" width="1.35%" height="88%" rx="0.7%"></rect>
+                							<rect x="12.5%" y="6%" width="1.35%" height="88%" rx="0.7%"></rect>
+                							<rect x="15%" 	y="15%" width="1.35%" height="70%" rx="0.7%"></rect>
+                							<rect x="17.5%" y="11%" width="1.35%" height="78%" rx="0.7%"></rect>
+                							<rect x="20%" 	y="20%" width="1.35%" height="60%" rx="0.7%"></rect>
+                							<rect x="22.5%" y="21%" width="1.35%" height="58%" rx="0.7%"></rect>
+                							<rect x="25%" 	y="24%" width="1.35%" height="52%" rx="0.7%"></rect>
+                							<rect x="27.5%" y="9%" width="1.35%" height="82%" rx="0.7%"></rect>
+                							<rect x="30%" 	y="16%" width="1.35%" height="68%" rx="0.7%"></rect>
+                							<rect x="32.5%" y="9%" width="1.35%" height="82%" rx="0.7%"></rect>
+                							<rect x="35%" 	y="21%" width="1.35%" height="58%" rx="0.7%"></rect>
+                							<rect x="37.5%" y="21%" width="1.35%" height="58%" rx="0.7%"></rect>
+                							<rect x="40%" 	y="3%" width="1.35%" height="94%" rx="0.7%"></rect>
+                							<rect x="42.5%" y="7%" width="1.35%" height="86%" rx="0.7%"></rect>
+                							<rect x="45%" 	y="7%" width="1.35%" height="86%" rx="0.7%"></rect>
+                							<rect x="47.5%" y="4%" width="1.35%" height="92%" rx="0.7%"></rect>
+                							<rect x="50%" 	y="3%" width="1.35%" height="94%" rx="0.7%"></rect>
+                							<rect x="52.5%" y="15%" width="1.35%" height="70%" rx="0.7%"></rect>
+                							<rect x="55%" 	y="18%" width="1.35%" height="64%" rx="0.7%"></rect>
+                							<rect x="57.5%" y="15%" width="1.35%" height="70%" rx="0.7%"></rect>
+                							<rect x="60%" 	y="13%" width="1.35%" height="74%" rx="0.7%"></rect>
+                							<rect x="62.5%" y="12%" width="1.35%" height="76%" rx="0.7%"></rect>
+                							<rect x="65%" 	y="17%" width="1.35%" height="66%" rx="0.7%"></rect>
+                							<rect x="67.5%" y="12%" width="1.35%" height="76%" rx="0.7%"></rect>
+                							<rect x="70%" 	y="17%" width="1.35%" height="66%" rx="0.7%"></rect>
+                							<rect x="72.5%" y="15%" width="1.35%" height="70%" rx="0.7%"></rect>
+                							<rect x="75%" 	y="12%" width="1.35%" height="76%" rx="0.7%"></rect>
+                							<rect x="77.5%" y="2%" width="1.35%" height="96%" rx="0.7%"></rect>
+                							<rect x="80%" 	y="9%" width="1.35%" height="82%" rx="0.7%"></rect>
+                							<rect x="82.5%" y="7%" width="1.35%" height="86%" rx="0.7%"></rect>
+                							<rect x="85%" 	y="10%" width="1.35%" height="80%" rx="0.7%"></rect>
+                							<rect x="87.5%" y="19%" width="1.35%" height="62%" rx="0.7%"></rect>
+                							<rect x="90%" 	y="24%" width="1.35%" height="52%" rx="0.7%"></rect>
+                							<rect x="92.5%" y="36%" width="1.35%" height="28%" rx="0.7%"></rect>
+                							<rect x="95%" 	y="37%" width="1.35%" height="26%" rx="0.7%"></rect>
+                							<rect x="97.5%" y="37%" width="1.35%" height="26%" rx="0.7%"></rect>
+                						</clipPath>
+                					</defs>
+                				</svg>
+                				<svg class="progressBar-down-svg" data-progress-svg2 width="101.15%" height="44" style="display:none;">
+                					<defs>
+                						<clipPath id="rail-wave-{{ block.id }}-2">
+                							<rect x="0%" 	y="32%" width="1.35%" height="36%" rx="0.7%"></rect>
+                							<rect x="2.5%" 	y="29%" width="1.35%" height="42%" rx="0.7%"></rect>
+                							<rect x="5%" 	y="9%" width="1.35%" height="82%" rx="0.7%"></rect>
+                							<rect x="7.5%" 	y="15%" width="1.35%" height="70%" rx="0.7%"></rect>
+                							<rect x="10%" 	y="20%" width="1.35%" height="60%" rx="0.7%"></rect>
+                							<rect x="12.5%" y="20%" width="1.35%" height="60%" rx="0.7%"></rect>
+                							<rect x="15%" 	y="15%" width="1.35%" height="70%" rx="0.7%"></rect>
+                							<rect x="17.5%" y="21%" width="1.35%" height="58%" rx="0.7%"></rect>
+                							<rect x="20%" 	y="20%" width="1.35%" height="60%" rx="0.7%"></rect>
+                							<rect x="22.5%" y="21%" width="1.35%" height="58%" rx="0.7%"></rect>
+                							<rect x="25%" 	y="24%" width="1.35%" height="52%" rx="0.7%"></rect>
+                							<rect x="27.5%" y="19%" width="1.35%" height="62%" rx="0.7%"></rect>
+                							<rect x="30%" 	y="16%" width="1.35%" height="68%" rx="0.7%"></rect>
+                							<rect x="32.5%" y="19%" width="1.35%" height="62%" rx="0.7%"></rect>
+                							<rect x="35%" 	y="21%" width="1.35%" height="58%" rx="0.7%"></rect>
+                							<rect x="37.5%" y="21%" width="1.35%" height="58%" rx="0.7%"></rect>
+                							<rect x="40%" 	y="13%" width="1.35%" height="74%" rx="0.7%"></rect>
+                							<rect x="42.5%" y="17%" width="1.35%" height="66%" rx="0.7%"></rect>
+                							<rect x="45%" 	y="10%" width="1.35%" height="80%" rx="0.7%"></rect>
+                							<rect x="47.5%" y="2%" width="1.35%" height="96%" rx="0.7%"></rect>
+                							<rect x="50%" 	y="13%" width="1.35%" height="74%" rx="0.7%"></rect>
+                							<rect x="52.5%" y="15%" width="1.35%" height="70%" rx="0.7%"></rect>
+                							<rect x="55%" 	y="18%" width="1.35%" height="64%" rx="0.7%"></rect>
+                							<rect x="57.5%" y="15%" width="1.35%" height="70%" rx="0.7%"></rect>
+                							<rect x="60%" 	y="13%" width="1.35%" height="74%" rx="0.7%"></rect>
+                							<rect x="62.5%" y="12%" width="1.35%" height="76%" rx="0.7%"></rect>
+                							<rect x="65%" 	y="17%" width="1.35%" height="66%" rx="0.7%"></rect>
+                							<rect x="67.5%" y="12%" width="1.35%" height="76%" rx="0.7%"></rect>
+                							<rect x="70%" 	y="17%" width="1.35%" height="66%" rx="0.7%"></rect>
+                							<rect x="72.5%" y="15%" width="1.35%" height="70%" rx="0.7%"></rect>
+                							<rect x="75%" 	y="12%" width="1.35%" height="76%" rx="0.7%"></rect>
+                							<rect x="77.5%" y="12%" width="1.35%" height="76%" rx="0.7%"></rect>
+                							<rect x="80%" 	y="14%" width="1.35%" height="72%" rx="0.7%"></rect>
+                							<rect x="82.5%" y="17%" width="1.35%" height="66%" rx="0.7%"></rect>
+                							<rect x="85%" 	y="10%" width="1.35%" height="80%" rx="0.7%"></rect>
+                							<rect x="87.5%" y="19%" width="1.35%" height="62%" rx="0.7%"></rect>
+                							<rect x="90%" 	y="24%" width="1.35%" height="52%" rx="0.7%"></rect>
+                							<rect x="92.5%" y="36%" width="1.35%" height="28%" rx="0.7%"></rect>
+                							<rect x="95%" 	y="37%" width="1.35%" height="26%" rx="0.7%"></rect>
+                							<rect x="97.5%" y="37%" width="1.35%" height="26%" rx="0.7%"></rect>
+                						</clipPath>
+                					</defs>
+                				</svg>
+                			</div>
+                		</div>
+                    </div>
+                    
+                    <div class="audio-area" style="display:none;">
+                      <audio class="audio" data-audio1 src="{{ block.settings.audio_before }}"></audio>
+                      <audio class="audio" data-audio2 src="{{ block.settings.audio_after }}"></audio>
+                    </div>
+
+                    <div class="audio-toggle">
+                  		<span class="switch-label">Before</span>
+                        <span class="audio-toggle-btn"></span>
+                        <span class="switch-label">After</span>
+                  	</div>
+                </div>
+          {% endfor %}
+      </div>
+    
+  </div>
+</section>
+
+
+<script>
+window.addEventListener('DOMContentLoaded', function() {   
+        let toggleBtn = $('.audio-toggle-btn');
+        let playerBtn = $('.player-btn');
+        let progressContainer = $('[data-progress-container]');
+
+		/* 播放与暂停 */
+        playerBtn.on('click', function(){
+			let currentAudio = $(this).attr('data-currentAudio');
+			let status = $(this).attr('data-status');
+			let audio1 = $(this).parents('.audio-container').find('[data-audio1]')[0];
+			let audio2 = $(this).parents('.audio-container').find('[data-audio2]')[0];
+			playAudio(audio1, audio2, $(this));
+		});
+		
+		/* 切换音频 */
+        toggleBtn.on('click', function(){
+			if($(this).hasClass('checked')){
+				$(this).removeClass('checked');
+			}else{
+				$(this).addClass('checked');
+			}
+			let audio1 = $(this).parents('.audio-container').find('[data-audio1]')[0];
+			let audio2 = $(this).parents('.audio-container').find('[data-audio2]')[0];
+			let _playerBtn = $(this).parents('.audio-container').find('.player-btn');
+			let dataProgressBar = $(this).parents('.audio-container').find('[data-progress-bar]');
+			toggleAudio(audio1, audio2, _playerBtn, dataProgressBar);
+		});
+		
+		
+		/* 点播音频 */
+        progressContainer.on('click', handleProgressClick);
+        
+
+		function play(audioToPlay, playerBtn){
+			audioToPlay.play();
+			let audio1 = playerBtn.parents('.audio-container').find('[data-audio1]')[0];
+			let audio2 = playerBtn.parents('.audio-container').find('[data-audio2]')[0];
+				
+			var updateProgress = setInterval(function(){
+				let currentAudio = playerBtn.attr('data-currentAudio') == 'audio1' ? audio1 : audio2;
+				
+				let progress = (currentAudio.currentTime / currentAudio.duration) * 100;
+				playerBtn.parents('.audio-container').find('.progressBar-up-color').css('width', progress + '%');
+			}, 100);
+
+            playerBtn.attr('data-status', 1);
+			
+			// 音频结束事件
+			audio1.addEventListener('ended', () => {
+			    audio1.currentTime = 0;
+				playerBtn.parents('.audio-container').find('.progressBar-up-color').css('width', '0%');
+				playerBtn.attr('data-status', 0);
+				clearInterval(updateProgress);
+			});
+			
+			audio2.addEventListener('ended', () => {
+			    audio2.currentTime = 0;
+				playerBtn.parents('.audio-container').find('.progressBar-up-color').css('width', '0%');
+				playerBtn.attr('data-status', 0);
+				clearInterval(updateProgress);
+			});
+		}
+       
+		function playAudio(audio1, audio2, playerBtn) {
+            let audioToPlay = playerBtn.attr('data-currentAudio') == 'audio1' ? audio1 : audio2;
+			
+			if(playerBtn.attr('data-status') == 1){
+				audioToPlay.pause();
+				playerBtn.attr('data-status', 0);
+			}else{
+				play(audioToPlay, playerBtn)
+				playerBtn.attr('data-status', 1);
+			}
+        }
+	   
+        // 切换音频
+        function toggleAudio(audio1, audio2, playerBtn, dataProgressBar) {
+            if (playerBtn.attr('data-currentAudio') == 'audio1') {
+                // 切换到音频2
+				audio1.pause();
+                audio2.currentTime = audio1.currentTime;
+				play(audio2, playerBtn);
+				playerBtn.attr('data-currentAudio', 'audio2');
+				
+				/* 切换进度条 */
+				dataProgressBar.find('.progressBar-up').css('clip-path', 'url(#'+ dataProgressBar.find('[data-progress-svg2] clipPath').attr('id') +')');
+                dataProgressBar.find('[data-progress-svg2]').show();
+                dataProgressBar.find('[data-progress-svg1]').hide();
+            } else {
+                // 切换到音频1
+                audio2.pause();
+                audio1.currentTime = audio2.currentTime;
+				play(audio1, playerBtn);
+				playerBtn.attr('data-currentAudio', 'audio1');
+				
+				
+				/* 切换进度条 */
+				dataProgressBar.find('.progressBar-up').css('clip-path', 'url(#'+ dataProgressBar.find('[data-progress-svg1] clipPath').attr('id') +')');
+                dataProgressBar.find('[data-progress-svg1]').show();
+                dataProgressBar.find('[data-progress-svg2]').hide();
+            }
+        }
+        
+        // 进度条点击跳转
+        function handleProgressClick(e) {
+            const clickPosition = e.clientX - $(this).offset().left;
+            const percentage = Math.min(Math.max(0, clickPosition / $(this).width()), 1);
+
+			let _playerBtn = $(this).parents('.audio-container').find('.player-btn');
+			let audio1 = $(this).parents('.audio-container').find('[data-audio1]')[0];
+			let audio2 = $(this).parents('.audio-container').find('[data-audio2]')[0];
+            let duration = _playerBtn.attr('data-currentAudio') == 'audio1' ? audio1.duration : audio2.duration;
+            let newTime = percentage * duration;
+            
+            let currentAudio = _playerBtn.attr('data-currentAudio') == 'audio1' ? audio1 : audio2;
+            currentAudio.currentTime = newTime;
+
+            // 如果暂停状态，点击后恢复播放
+            if (currentAudio.paused) {
+				play(currentAudio, _playerBtn);
+            }
+        }
+    
+});
+</script>
+
+<style>
+
+[data-section-id="{{ section.id }}"] .container {
+    padding-top:{{ section.settings.pc_padding_top }}px;
+	padding-bottom:{{ section.settings.pc_padding_bottom }}px;
+    background-color:{{ section.settings.bg_color }};
+}
+@media screen and (max-width: 767px) {
+    [data-section-id="{{ section.id }}"] .container {
+        padding-top:{{ section.settings.mb_padding_top }}px;
+		padding-bottom:{{ section.settings.mb_padding_bottom }}px;
+    }
+}
+
+.audio-switch .audio-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 100px;
+}
+.audio-switch .audio-grid .audio-container {
+    flex:0 0 calc(50% - 50px);
+    max-width:calc(50% - 50px);
+}
+.audio-switch .heading-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+
+.audio-switch .player {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 24px;
+    color: #000;
+}
+.audio-switch button.player-btn {
+    background-color: #fe460a;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+    width: 50px;
+    position: relative;
+    flex: 0 0 50px;
+}
+.audio-switch button.player-btn:before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+.audio-switch button.player-btn:after {
+    content: "";
+    display: block;
+    position: absolute;
+    background: transparent;
+    border-color: transparent transparent transparent #fff;
+    border-style: solid;
+    border-width: 12px 0 12px 20px;
+    box-sizing: border-box;
+    height: 14px;
+    left: 18px;
+    top: 14px;
+    transition: all .1s ease;
+    width: 0;
+    will-change: border-width;
+}
+.audio-switch button.player-btn[data-status="1"]:after {
+    border-style: double;
+    border-width: 0 0 0 18px;
+    left: 15px;
+    top: 16px;
+    height: 20px;
+}
+.audio-switch .progress-container {
+    margin: 50px 0;
+}
+.audio-switch .progress-bar {
+    padding: 0 4px 0 5px;
+    touch-action: none;
+}
+.audio-switch .progressBar-inner {
+    position: relative
+}
+.audio-switch .progressBar-up,
+.audio-switch .progressBar-inner {
+    overflow: hidden
+}
+.audio-switch .progressBar-up {
+    background-color: #cacbcb;
+    pointer-events: none;
+    right: 0;
+    z-index: 1
+}
+.audio-switch .progressBar-up,
+.audio-switch .progressBar-up-color {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    top: 0
+}
+.audio-switch .progressBar-up-color {
+    background-color: #000
+}
+.audio-switch .progressBar-up-color {
+    transition: none!important
+}
+.audio-switch .progressBar-down-svg {
+    left: 0;
+    pointer-events: none;
+    position: relative;
+    top: 0;
+    z-index: -1
+}
+
+.audio-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    font-size: 24px;
+    color: #000;
+}
+.audio-switch .audio-toggle-btn {
+    --switch-btn-width: 34px;
+    width: calc(var(--switch-btn-width) * 2 + 8px);
+    height: var(--switch-btn-width);
+    position: relative;
+    border: 1px solid #dfdfdf;
+    background-color: #fdfdfd;
+    box-shadow: #dfdfdf 0 0 0 0 inset;
+    border-radius: calc(var(--switch-btn-width) / 2);
+    background-clip: content-box;
+    display: block;
+    transition: border-color 0.4s, background-color ease 0.4s;
+    cursor: pointer;
+}
+.audio-switch .audio-toggle-btn:before {
+    content: '';
+    width: calc(var(--switch-btn-width) - 2px);
+    height: calc(var(--switch-btn-width) - 2px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4); 
+    transition: left 0.3s;
+}
+.audio-switch .audio-toggle-btn.checked {
+    border-color: #fe460a;
+    box-shadow: #fe460a 0 0 0 16px inset;
+    background-color: #fe460a; 
+}
+.audio-switch .audio-toggle-btn.checked:before {
+    left: calc(var(--switch-btn-width) + 8px);
+}
+
+
+@media screen and (max-width: 767px) {
+    .audio-switch .audio-grid {
+        gap: 50px 0;
+    }
+    .audio-switch .audio-grid .audio-container {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .audio-switch .player {
+        font-size: 18px;
+    }
+    .audio-switch .progress-container {
+        margin: 20px 0;
+    }
+    .audio-toggle {
+        gap: 10px;
+        font-size: 18px;
+    }
+}
+</style>
+
+
+{% schema %}
+
+  {
+  "name": "Audio Switch",
+  "class": "audio-switch",
+  "settings": [
+        { "type": "color", "id": "bg_color", "label": "Background", "default": "#ffffff" },
+    
+        { "type": "header","content":"Heading Title"},
+        { "type": "textarea","id": "title", "label": "Heading Title" },
+    
+        { "type": "header","content":"PC"},
+        { "type": "range", "id": "pc_padding_top", "label": "Top Space", "min": 0, "max": 100, "step": 1, "unit": "px", "default": 0 },
+        { "type": "range", "id": "pc_padding_bottom", "label": "Bottom Space", "min": 0, "max": 100, "step": 1, "unit": "px", "default": 0 },
+        { "type": "header","content":"Mobile"},
+        { "type": "range", "id": "mb_padding_top", "label": "Top Space", "min": 0, "max": 100, "step": 1, "unit": "px", "default": 0 },
+        { "type": "range", "id": "mb_padding_bottom", "label": "Bottom Space", "min": 0, "max": 100, "step": 1, "unit": "px", "default": 0 }
+  ],
+  "blocks": [
+    {
+      "type": "audio",
+      "name": "Audio",
+      "settings": [
+        { "type": "textarea","id": "title", "label": "Title" },
+        { "type": "url", "id": "audio_before", "label": "Before Audio", "info": "音频需要先上传，再把链接复制到这里" },
+        { "type": "url", "id": "audio_after", "label": "After Audio", "info": "音频需要先上传，再把链接复制到这里" },
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "category": "Custom",
+      "name": "Audio Switch",
+    }
+  ]
+}
+{% endschema %}

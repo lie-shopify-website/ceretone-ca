@@ -1,0 +1,176 @@
+<style>
+  [data-section-id="{{ section.id }}"] {
+    background-color: {{ section.settings.bg_color }};
+    padding-top: {{ section.settings.top_one |  append: 'px' }};
+    padding-bottom: {{ section.settings.bottom_one |  append: 'px' }};
+  }
+  .YTOvideo_h2{
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .YTOvideo_span{
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+  }
+  .YTOvideo_box{
+    width: 80%;
+    height: 55rem;
+    margin: 2rem auto;
+  }
+  @media(max-width: 1200px) {
+    .YTOvideo_box{
+    height: 50rem;
+    margin: 2rem auto;
+  }
+  }
+  @media(max-width: 1000px) {
+    .YTOvideo_box{
+    height: 45rem;
+    margin: 2rem auto;
+  }
+  }
+  @media(max-width: 768px) {
+    .YTOvideo_box{
+        width: 100%;
+    height: 20rem;
+    margin: 2rem auto;
+  }
+  [data-section-id="{{ section.id }}"] {
+    padding-top: {{ section.settings.top_one_mic |  append: 'px' }};
+    padding-bottom: {{ section.settings.bottom_one_mic |  append: 'px' }};
+  }
+  }
+</style>
+
+<div data-section-id="{{ section.id }}" class="YTOvideo">
+  <div class="container">
+    <h2 class="YTOvideo_h2 title title--simple">
+      {{ section.settings.title | newline_to_br }}
+    </h2>
+    <div class="YTOvideo_span">
+      <span>{{ section.settings.Copywriting | newline_to_br }}</span>
+    </div>
+    {% for block in section.blocks %}
+      <div class="YTOvideo_box">
+        {%- if block.settings.video_url == blank -%}
+          <iframe
+            width="100%"
+            height="100%"
+            src="//www.youtube.com/embed/_9VUPq3SxOc?rel=0&showinfo=0&vq=720"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        {%- else -%}
+          {%- if block.settings.video_url.type == 'youtube' -%}
+            <iframe
+              width="100%"
+              height="100%"
+              src="//www.youtube.com/embed/{{ block.settings.video_url.id }}?rel=0&showinfo=0&vq=720"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+          {%- endif -%}
+          {%- if block.settings.video_url.type == 'vimeo' -%}
+            <iframe
+              width="100%"
+              height="100%"
+              src="//player.vimeo.com/video/{{ block.settings.video_url.id }}?color={{ block.color_button | remove: "#" }}&byline=0&portrait=0&badge=0"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+          {%- endif -%}
+        {%- endif -%}
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "YouTube视频",
+  "class": "index-section",
+  "settings": [
+    {
+      "type": "range",
+      "id": "top_one",
+      "label": "上边距",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "bottom_one",
+      "label": "下边距",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "top_one_mic",
+      "label": "移动端上边距",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "bottom_one_mic",
+      "label": "移动端下边距",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "default": 20
+    }, {
+      "type": "color",
+      "id": "bg_color",
+      "label": "背景颜色",
+      "default": "#fff"
+    }, {
+      "type": "textarea",
+      "id": "title",
+      "label": "标题"
+    }, {
+      "type": "textarea",
+      "id": "Copywriting",
+      "label": "文案"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "添加视频",
+      "settings": [
+          {
+          "type": "video_url",
+          "id": "video_url",
+          "accept": ["youtube", "vimeo"],
+          "default": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+          "label": "视频链接",
+          "placeholder": "t:sections.video.settings.video_url.placeholder",
+          "info": "t:sections.video.settings.video_url.info"
+       }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "YouTube视频",
+      "blocks": [
+        {
+          "type": "slide"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

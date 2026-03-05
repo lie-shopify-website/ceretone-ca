@@ -1,0 +1,476 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "rich_text_DTKnhz": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_MQDaFf": {
+          "type": "heading",
+          "settings": {
+            "heading": "Ceretone Hearing Aids in Your Local Pharmacies",
+            "heading_size": "medium"
+          }
+        },
+        "text_Aw8t8h": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Check the map below to see locations</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_MQDaFf",
+        "text_Aw8t8h"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "full_width": true,
+        "alignment": "center",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "m",
+        "padding_bottom": "m"
+      }
+    },
+    "image_banner_qPMETM": {
+      "type": "image-banner",
+      "disabled": true,
+      "settings": {
+        "full_width": true,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "opacity_overlay": 0,
+        "icon": "none",
+        "icon_color_scheme": "",
+        "icon_size": "small",
+        "icon_style": "colored",
+        "icon_fill_type": "gradient",
+        "box_shadow": false,
+        "subheading": "",
+        "subheading_style": "subtitle",
+        "heading": "Try Ceretone Hearing Aids",
+        "heading_size": "h2",
+        "text_information": "<p>Check the map below to see locations</p>",
+        "text_align": "center",
+        "text_width": "full",
+        "show_view_all": false,
+        "button_label": "Shop now",
+        "button_style": "primary",
+        "button_link": "",
+        "margin_top": "no-indent",
+        "margin_bottom": "xs"
+      }
+    },
+    "textwithimage_Xi3BKM": {
+      "type": "Textwithimage",
+      "settings": {
+        "color": "#ffffff",
+        "top_one": 60,
+        "bottom_one": 50,
+        "top_one_mic": 30,
+        "bottom_one_mic": 0,
+        "color_text": "#e5e5e5",
+        "color_title": "#000000",
+        "color_copies": "#000000",
+        "height": "block",
+        "heighta": "block",
+        "topimage": "shopify://shop_images/Ken_pharmacy.jpg",
+        "header_top": "Ken Pharmacy",
+        "text_top": "583 E Foothill Blvd, Upland, CA 91786",
+        "position_top": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105712.49769584155!2d-117.79544990273436!3d34.1075489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c336b351be6029%3A0xc8d656e991c1bd3d!2sKen%20Pharmacy!5e0!3m2!1sen!2s!4v1716895735964!5m2!1sen!2s\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+        "text_align_top": "left",
+        "bonimage": "shopify://shop_images/Hendricks_Pharmacy.jpg",
+        "header_bo": "Hendricks Pharmacy",
+        "text_bo": "137 Harvard Ave N, Claremont, CA 91711",
+        "position_bo": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105961.77947041704!2d-117.70728516899355!3d34.087840500925225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c331ea803cfbbb%3A0x15cfed35a06bebc1!2sHendricks%20Pharmacy!5e0!3m2!1sen!2s!4v1717053255540!5m2!1sen!2s\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+        "text_align_bo": "right"
+      }
+    },
+    "textwithimage_6tY6N9": {
+      "type": "Textwithimage",
+      "settings": {
+        "color": "#ffffff",
+        "top_one": 60,
+        "bottom_one": 0,
+        "top_one_mic": 30,
+        "bottom_one_mic": 0,
+        "color_text": "#e5e5e5",
+        "color_title": "#000000",
+        "color_copies": "#000000",
+        "height": "block",
+        "heighta": "block",
+        "topimage": "shopify://shop_images/AmCare_Pharmacy.jpg",
+        "header_top": "AmCare Pharmacy",
+        "text_top": "760 S Washburn Ave STE 01/02, Corona, CA 92882",
+        "position_top": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26500.911598248284!2d-117.59338892120846!3d33.8738387186122!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcc92c26be5287%3A0xc9869a6e206ce319!2sAmCare%20Pharmacy!5e0!3m2!1sen!2s!4v1716896259740!5m2!1sen!2s\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+        "text_align_top": "left",
+        "bonimage": "shopify://shop_images/Fox_Drug_of_Torrence.jpg",
+        "header_bo": "Fox Drug of Torrence",
+        "text_bo": "1327 El Prado Ave, Torrance, CA 90501",
+        "position_bo": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3314.1296278814507!2d-118.31929522382966!3d33.8347675291815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dd4ab0a8b3b64b%3A0xb329c1e3e421fce9!2sFox%20Drug%20of%20Torrance!5e0!3m2!1sen!2s!4v1716895965364!5m2!1sen!2s\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+        "text_align_bo": "right"
+      }
+    },
+    "textwithimage_iH6b6X": {
+      "type": "Textwithimage",
+      "settings": {
+        "color": "#ffffff",
+        "top_one": 60,
+        "bottom_one": 0,
+        "top_one_mic": 30,
+        "bottom_one_mic": 0,
+        "color_text": "#e5e5e5",
+        "color_title": "#000000",
+        "color_copies": "#000000",
+        "height": "block",
+        "heighta": "block",
+        "topimage": "shopify://shop_images/Kovacs-Frey_Pharmacy.jpg",
+        "header_top": "Kovacs-Frey Pharmacy",
+        "text_top": "2860 Artesia Blvd, Redondo Beach, CA 90278",
+        "position_top": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3312.665425507314!2d-118.35975592382849!3d33.87251242719831!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2b4f782d1835f%3A0xa90d7e52d5414a94!2sKovacs-Frey%20Pharmacy%20%26%20Home%20Health%20Care!5e0!3m2!1sen!2s!4v1716895673164!5m2!1sen!2s\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+        "text_align_top": "left",
+        "bonimage": "shopify://shop_images/White_Memorial_Plaza_Pharmacy.jpg",
+        "header_bo": "White Memorial Plaza Pharmacy",
+        "text_bo": "1701 E Cesar E Chavez Ave #109, Los Angeles, CA 90033",
+        "position_bo": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3305.7050733631963!2d-118.21974182382273!3d34.05143571777215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c704b67c5e8f%3A0x53d4ebe37b03008!2sWhite%20Memorial%20Medical%20Plaza%20Pharmacy!5e0!3m2!1sen!2s!4v1716895435878!5m2!1sen!2s\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+        "text_align_bo": "right"
+      }
+    },
+    "textwithimage_RAbEjL": {
+      "type": "Textwithimage",
+      "settings": {
+        "color": "#ffffff",
+        "top_one": 60,
+        "bottom_one": 0,
+        "top_one_mic": 30,
+        "bottom_one_mic": 0,
+        "color_text": "#e5e5e5",
+        "color_title": "#000000",
+        "color_copies": "#000000",
+        "height": "block",
+        "heighta": "block",
+        "topimage": "shopify://shop_images/Arden_Medical_Pharmacy.jpg",
+        "header_top": "Arden Medical Pharmacy",
+        "text_top": "435 Arden Ave #110, Glendale, CA 91203",
+        "position_top": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26412.208978406616!2d-118.2627231!3d34.1584639!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c04f135a905d%3A0xdaa5defc0f0564ab!2sArden%20Medical%20Pharmacy!5e0!3m2!1sen!2s!4v1716895206645!5m2!1sen!2s\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+        "text_align_top": "left",
+        "bonimage": "shopify://shop_images/Doctor_s_Choice_Pharmacy.jpg",
+        "header_bo": "Doctor's Choice Pharmacy",
+        "text_bo": "639 N 13th Ave, Upland, CA 91786",
+        "position_bo": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3303.7526447462305!2d-117.63661252382104!3d34.101476615128185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c336af19c98997%3A0x7d918029768a4067!2sDoctor's%20Choice%20Pharmacy!5e0!3m2!1sen!2s!4v1716895624105!5m2!1sen!2s\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+        "text_align_bo": "right"
+      }
+    },
+    "textwithimage_QfpXwQ": {
+      "type": "Textwithimage",
+      "settings": {
+        "color": "#ffffff",
+        "top_one": 60,
+        "bottom_one": 0,
+        "top_one_mic": 30,
+        "bottom_one_mic": 0,
+        "color_text": "#e5e5e5",
+        "color_title": "#000000",
+        "color_copies": "#000000",
+        "height": "block",
+        "heighta": "block",
+        "topimage": "shopify://shop_images/Homes_Pharmarcy.jpg",
+        "header_top": "Homes Pharmarcy",
+        "text_top": "9713 Base Line Rd, Rancho Cucamonga, CA 91730",
+        "position_top": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3303.015937429022!2d-117.5958267238205!3d34.120341714130724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c336617de4e6bb%3A0xd752594f02e0502a!2sHomes%20Pharmacy!5e0!3m2!1sen!2s!4v1716951924472!5m2!1sen!2s\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+        "text_align_top": "left",
+        "bonimage": "shopify://shop_images/Sierra_Medical_Supplier.jpg",
+        "header_bo": "Sierra Medical Supplier",
+        "text_bo": "8661 Base Line Rd, Rancho Cucamonga, CA 91730",
+        "position_bo": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d211505.19658701844!2d-117.83162585718044!3d34.075443188092166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c336eb1b6bb76f%3A0xc44733b96988fa21!2sSierra%20Pharmacy%20Compounding%20%26%20Medical%20Supplies!5e0!3m2!1sen!2s!4v1716952080374!5m2!1sen!2s\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+        "text_align_bo": "right"
+      }
+    },
+    "textwithimage_jXPXHX": {
+      "type": "Textwithimage",
+      "settings": {
+        "color": "#ffffff",
+        "top_one": 60,
+        "bottom_one": 0,
+        "top_one_mic": 30,
+        "bottom_one_mic": 0,
+        "color_text": "#e5e5e5",
+        "color_title": "#000000",
+        "color_copies": "#000000",
+        "height": "block",
+        "heighta": "block",
+        "topimage": "shopify://shop_images/Mercy_Pharmacy.jpg",
+        "header_top": "Mercy Pharmacy",
+        "text_top": "323 N Prairie Ave Ste 100, Inglewood, CA 90301",
+        "position_top": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d211297.15188931327!2d-118.4069314397372!3d34.158671679537875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2b72755484623%3A0xc8905e0d366a3a0c!2sMercy%20Pharmacy%20Inglewood!5e0!3m2!1sen!2s!4v1716895358806!5m2!1sen!2s\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+        "text_align_top": "left",
+        "bonimage": "shopify://shop_images/GrandView_Pharmacy.jpg",
+        "header_bo": "GrandView Pharmacy",
+        "text_bo": "13768 Roswell Ave #111, Chino, CA 91710",
+        "position_bo": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3307.562418565972!2d-117.72508112382432!3d34.00377172028744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c332ba56561401%3A0x6b7612faf348bb45!2sGrandview%20Pharmacy!5e0!3m2!1sen!2s!4v1716895862261!5m2!1sen!2s\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+        "text_align_bo": "right"
+      }
+    },
+    "textwithimage_3RtRd4": {
+      "type": "Textwithimage",
+      "settings": {
+        "color": "#ffffff",
+        "top_one": 60,
+        "bottom_one": 0,
+        "top_one_mic": 30,
+        "bottom_one_mic": 30,
+        "color_text": "#e5e5e5",
+        "color_title": "#000000",
+        "color_copies": "#000000",
+        "height": "block",
+        "heighta": "none",
+        "topimage": "shopify://shop_images/Live_Well_Pharmacy.jpg",
+        "header_top": "Live Well Pharmacy",
+        "text_top": "15871 Pomona Rincon Rd #110, Chino Hills, CA 91709",
+        "position_top": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3309.0659473789287!2d-117.6935721238255!3d33.96514442232355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dccd2545940911%3A0x63b36ad56a833cd9!2sLive%20Well%20Pharmacy!5e0!3m2!1sen!2s!4v1716952126380!5m2!1sen!2s\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+        "text_align_top": "left",
+        "bonimage": "shopify://shop_images/GrandView_Pharmacy.jpg",
+        "header_bo": "GrandView Pharmacy",
+        "text_bo": "13768 Roswell Ave #111, Chino, CA 91710",
+        "position_bo": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3307.562418565972!2d-117.72508112382432!3d34.00377172028744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c332ba56561401%3A0x6b7612faf348bb45!2sGrandview%20Pharmacy!5e0!3m2!1szh-CN!2s!4v1716895862261!5m2!1szh-CN!2s\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+        "text_align_bo": "right"
+      }
+    },
+    "position_information_fyBc8b": {
+      "type": "Position_information",
+      "disabled": true,
+      "settings": {
+        "bg_color": "#ffffff",
+        "top_one": 0,
+        "bottom_one": 100,
+        "top_one_mic": 0,
+        "bottom_one_mic": 50,
+        "image": "shopify://shop_images/Ken_pharmacy.jpg",
+        "heading": "Ken Pharmacy",
+        "text": "583 E Foothill Blvd, Upland, CA 91786",
+        "position": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105712.49769584155!2d-117.79544990273436!3d34.1075489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c336b351be6029%3A0xc8d656e991c1bd3d!2sKen%20Pharmacy!5e0!3m2!1sen!2s!4v1716895735964!5m2!1sen!2s\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>"
+      }
+    },
+    "position_information_jqpADz": {
+      "type": "Position_information",
+      "disabled": true,
+      "settings": {
+        "bg_color": "#ffffff",
+        "top_one": 0,
+        "bottom_one": 100,
+        "top_one_mic": 0,
+        "bottom_one_mic": 50,
+        "image": "shopify://shop_images/Hendricks_Pharmacy.jpg",
+        "heading": "Hendricks Pharmacy",
+        "text": "137 Harvard Ave N, Claremont, CA 91711",
+        "position": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3303.9950088175447!2d-117.71929122382136!3d34.09526831545651!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c331ea803cfbbb%3A0x15cfed35a06bebc1!2sHendricks%20Pharmacy!5e0!3m2!1sen!2s!4v1716896113325!5m2!1sen!2s\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>"
+      }
+    },
+    "position_information_JtHT7p": {
+      "type": "Position_information",
+      "disabled": true,
+      "settings": {
+        "bg_color": "#ffffff",
+        "top_one": 0,
+        "bottom_one": 100,
+        "top_one_mic": 0,
+        "bottom_one_mic": 50,
+        "image": "shopify://shop_images/AmCare_Pharmacy.jpg",
+        "heading": "AmCare Pharmacy",
+        "text": "760 S Washburn Ave STE 01/02, Corona, CA 92882",
+        "position": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26500.911598248284!2d-117.59338892120846!3d33.8738387186122!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcc92c26be5287%3A0xc9869a6e206ce319!2sAmCare%20Pharmacy!5e0!3m2!1sen!2s!4v1716896259740!5m2!1sen!2s\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>"
+      }
+    },
+    "position_information_WAkNGp": {
+      "type": "Position_information",
+      "disabled": true,
+      "settings": {
+        "bg_color": "#ffffff",
+        "top_one": 0,
+        "bottom_one": 100,
+        "top_one_mic": 0,
+        "bottom_one_mic": 50,
+        "image": "shopify://shop_images/Fox_Drug_of_Torrence.jpg",
+        "heading": "Fox Drug of Torrence",
+        "text": "1327 El Prado Ave, Torrance, CA 90501",
+        "position": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3314.1296278814507!2d-118.31929522382966!3d33.8347675291815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dd4ab0a8b3b64b%3A0xb329c1e3e421fce9!2sFox%20Drug%20of%20Torrance!5e0!3m2!1sen!2s!4v1716895965364!5m2!1sen!2s\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>"
+      }
+    },
+    "position_information_RTTyyi": {
+      "type": "Position_information",
+      "disabled": true,
+      "settings": {
+        "bg_color": "#ffffff",
+        "top_one": 0,
+        "bottom_one": 100,
+        "top_one_mic": 0,
+        "bottom_one_mic": 50,
+        "image": "shopify://shop_images/Kovacs-Frey_Pharmacy.jpg",
+        "heading": "Kovacs-Frey Pharmacy",
+        "text": "2860 Artesia Blvd, Redondo Beach, CA 90278",
+        "position": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3312.665425507314!2d-118.35975592382849!3d33.87251242719831!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2b4f782d1835f%3A0xa90d7e52d5414a94!2sKovacs-Frey%20Pharmacy%20%26%20Home%20Health%20Care!5e0!3m2!1sen!2s!4v1716895673164!5m2!1sen!2s\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>"
+      }
+    },
+    "position_information_Ykxqgx": {
+      "type": "Position_information",
+      "disabled": true,
+      "settings": {
+        "bg_color": "#ffffff",
+        "top_one": 0,
+        "bottom_one": 100,
+        "top_one_mic": 0,
+        "bottom_one_mic": 50,
+        "image": "shopify://shop_images/White_Memorial_Plaza_Pharmacy.jpg",
+        "heading": "White Memorial Plaza Pharmacy",
+        "text": "1701 E Cesar E Chavez Ave #109, Los Angeles, CA 90033",
+        "position": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3305.7050733631963!2d-118.21974182382273!3d34.05143571777215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c704b67c5e8f%3A0x53d4ebe37b03008!2sWhite%20Memorial%20Medical%20Plaza%20Pharmacy!5e0!3m2!1szh-CN!2s!4v1716895435878!5m2!1szh-CN!2s\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>"
+      }
+    },
+    "position_information_BYpa4m": {
+      "type": "Position_information",
+      "disabled": true,
+      "settings": {
+        "bg_color": "#ffffff",
+        "top_one": 0,
+        "bottom_one": 100,
+        "top_one_mic": 0,
+        "bottom_one_mic": 50,
+        "image": "shopify://shop_images/Arden_Medical_Pharmacy.jpg",
+        "heading": "Arden Medical Pharmacy",
+        "text": "435 Arden Ave #110, Glendale, CA 91203",
+        "position": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26412.208978406616!2d-118.2627231!3d34.1584639!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c04f135a905d%3A0xdaa5defc0f0564ab!2sArden%20Medical%20Pharmacy!5e0!3m2!1szh-CN!2s!4v1716895206645!5m2!1szh-CN!2s\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>"
+      }
+    },
+    "position_information_cBJbJK": {
+      "type": "Position_information",
+      "disabled": true,
+      "settings": {
+        "bg_color": "#ffffff",
+        "top_one": 0,
+        "bottom_one": 100,
+        "top_one_mic": 0,
+        "bottom_one_mic": 50,
+        "image": "shopify://shop_images/Doctor_s_Choice_Pharmacy.jpg",
+        "heading": "Doctor's Choice Pharmacy",
+        "text": "639 N 13th Ave, Upland, CA 91786",
+        "position": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3303.7526447462305!2d-117.63661252382104!3d34.101476615128185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c336af19c98997%3A0x7d918029768a4067!2sDoctor's%20Choice%20Pharmacy!5e0!3m2!1szh-CN!2s!4v1716895624105!5m2!1szh-CN!2s\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>"
+      }
+    },
+    "position_information_acyLka": {
+      "type": "Position_information",
+      "disabled": true,
+      "settings": {
+        "bg_color": "#ffffff",
+        "top_one": 0,
+        "bottom_one": 100,
+        "top_one_mic": 0,
+        "bottom_one_mic": 50,
+        "image": "shopify://shop_images/Homes_Pharmarcy.jpg",
+        "heading": "Homes Pharmarcy",
+        "text": "9713 Base Line Rd, Rancho Cucamonga, CA 91730",
+        "position": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3303.015937429022!2d-117.5958267238205!3d34.120341714130724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c336617de4e6bb%3A0xd752594f02e0502a!2sHomes%20Pharmacy!5e0!3m2!1szh-CN!2s!4v1716951924472!5m2!1szh-CN!2s\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>"
+      }
+    },
+    "position_information_dNERm4": {
+      "type": "Position_information",
+      "disabled": true,
+      "settings": {
+        "bg_color": "#ffffff",
+        "top_one": 0,
+        "bottom_one": 100,
+        "top_one_mic": 0,
+        "bottom_one_mic": 50,
+        "image": "shopify://shop_images/Sierra_Medical_Supplier.jpg",
+        "heading": "Sierra Medical Supplier",
+        "text": "8661 Base Line Rd, Rancho Cucamonga, CA 91730",
+        "position": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d211505.19658701844!2d-117.83162585718044!3d34.075443188092166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c336eb1b6bb76f%3A0xc44733b96988fa21!2sSierra%20Pharmacy%20Compounding%20%26%20Medical%20Supplies!5e0!3m2!1szh-CN!2s!4v1716952080374!5m2!1szh-CN!2s\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>"
+      }
+    },
+    "position_information_i6eGxp": {
+      "type": "Position_information",
+      "disabled": true,
+      "settings": {
+        "bg_color": "#ffffff",
+        "top_one": 0,
+        "bottom_one": 100,
+        "top_one_mic": 0,
+        "bottom_one_mic": 50,
+        "image": "shopify://shop_images/Mercy_Pharmacy.jpg",
+        "heading": "Mercy Pharmacy",
+        "text": "323 N Prairie Ave Ste 100, Inglewood, CA 90301",
+        "position": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d211297.15188931327!2d-118.4069314397372!3d34.158671679537875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2b72755484623%3A0xc8905e0d366a3a0c!2sMercy%20Pharmacy%20Inglewood!5e0!3m2!1szh-CN!2s!4v1716895358806!5m2!1szh-CN!2s\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>"
+      }
+    },
+    "position_information_fQB4cD": {
+      "type": "Position_information",
+      "disabled": true,
+      "settings": {
+        "bg_color": "#ffffff",
+        "top_one": 0,
+        "bottom_one": 100,
+        "top_one_mic": 0,
+        "bottom_one_mic": 50,
+        "image": "shopify://shop_images/GrandView_Pharmacy.jpg",
+        "heading": "GrandView Pharmacy",
+        "text": "13768 Roswell Ave #111, Chino, CA 91710",
+        "position": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3307.562418565972!2d-117.72508112382432!3d34.00377172028744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c332ba56561401%3A0x6b7612faf348bb45!2sGrandview%20Pharmacy!5e0!3m2!1szh-CN!2s!4v1716895862261!5m2!1szh-CN!2s\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>"
+      }
+    },
+    "position_information_TAptY6": {
+      "type": "Position_information",
+      "disabled": true,
+      "settings": {
+        "bg_color": "#ffffff",
+        "top_one": 0,
+        "bottom_one": 100,
+        "top_one_mic": 0,
+        "bottom_one_mic": 50,
+        "image": "shopify://shop_images/Live_Well_Pharmacy.jpg",
+        "heading": "Live Well Pharmacy",
+        "text": "15871 Pomona Rincon Rd #110, Chino Hills, CA 91709",
+        "position": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3309.0659473789287!2d-117.6935721238255!3d33.96514442232355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dccd2545940911%3A0x63b36ad56a833cd9!2sLive%20Well%20Pharmacy!5e0!3m2!1szh-CN!2s!4v1716952126380!5m2!1szh-CN!2s\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": "no-indent",
+        "padding_bottom": "m"
+      }
+    }
+  },
+  "order": [
+    "rich_text_DTKnhz",
+    "image_banner_qPMETM",
+    "textwithimage_Xi3BKM",
+    "textwithimage_6tY6N9",
+    "textwithimage_iH6b6X",
+    "textwithimage_RAbEjL",
+    "textwithimage_QfpXwQ",
+    "textwithimage_jXPXHX",
+    "textwithimage_3RtRd4",
+    "position_information_fyBc8b",
+    "position_information_jqpADz",
+    "position_information_JtHT7p",
+    "position_information_WAkNGp",
+    "position_information_RTTyyi",
+    "position_information_Ykxqgx",
+    "position_information_BYpa4m",
+    "position_information_cBJbJK",
+    "position_information_acyLka",
+    "position_information_dNERm4",
+    "position_information_i6eGxp",
+    "position_information_fQB4cD",
+    "position_information_TAptY6",
+    "main"
+  ]
+}

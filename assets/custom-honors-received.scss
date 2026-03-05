@@ -1,0 +1,103 @@
+@import "tools";
+
+.custom-honors-received {
+
+    font-family: 'Helvetica';
+    font-weight: 400;
+    background: #FFFEFB;
+    padding-top:vm(40);
+    padding-bottom:vm(30);
+    @include media-min("spc") {
+        padding-top:vmpc(70);
+        padding-bottom:vmpc(70);
+    }
+
+    p {
+        margin: 0;
+    }
+    img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .safe-container {
+        position: relative;
+        height: 100%;
+        padding: 0 vm(20);
+
+        @include media-min("spc") {
+            padding: 0;
+        }
+    }
+
+
+    .section-title {
+        margin-bottom:vm(40);
+
+        @include media-min("spc") {
+            margin-bottom:vmpc(50);
+        }
+        
+        h2 {
+            font-family: 'Helvetica';
+            font-size: vm(32); 
+            line-height: 1;
+            font-weight: 700;
+            text-align: center;
+            margin: 0;
+
+            @include media-min("spc") {
+                font-size: vmpc(56); 
+            }
+        }
+    }
+
+
+    .marquee-container {
+        width: 100%;
+        overflow: hidden;
+
+        .marquee-row {
+            display: flex;
+            width: max-content;
+            animation: marqueeLeft var(--marquee-time-mb) linear infinite;
+
+            @include media-min("spc") {
+                animation: marqueeLeft var(--marquee-time) linear infinite;
+            }
+
+            .marquee-item {
+                padding: 0 vm(30);
+                white-space: nowrap;
+                transition: transform 0.3s ease;
+
+                @include media-min("spc") {
+                    padding: 0 vmpc(127);
+                }
+
+                img {
+                    max-height: vm(50);
+                    max-width: unset;
+
+                    @include media-min("spc") {
+                        max-width: unset;
+                        max-height: vmpc(90);
+                    }
+                }
+            }
+        }
+    }
+
+    .marquee-container:hover .marquee-row {
+        animation-play-state: paused;
+    }
+    
+    @keyframes marqueeLeft {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+    }
+    
+    
+
+}

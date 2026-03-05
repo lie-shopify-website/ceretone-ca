@@ -1,0 +1,137 @@
+// =====适配=====
+$size-standard-phone: 768px; // 这个尺寸以下为小手机，以上为小电脑
+$size-small-desktop-max: 1520px; // 这个尺寸以下为小电脑，以上为标准电脑
+// 媒体查询适配
+// 参数：
+// $size: 适配尺寸
+// $max: 适配最大尺寸
+// 示例：
+// .box {
+//   background-color: #eee;
+//   @include media('m') { // 小手机
+//       font-size: vm(16);
+//   }
+//   @include media('spc') { // 小电脑
+//       font-size: vmspc(16);
+//   }
+//   @include media('pc') { // 标准电脑
+//       font-size: vmpc(16);
+//   }
+//   @include media(1520, 1920) { // 自定义区间
+//       font-size: vm1920(16);
+//   }
+// }
+@mixin media($size, $max: null) {
+    @if $size == 'm' {
+        @media (max-width: $size-standard-phone) {
+            @content;
+        }
+    } @else if $size == 'spc' { // 小电脑
+        @media (min-width: $size-standard-phone) and (max-width: $size-small-desktop-max) {
+            @content;
+        }
+    } @else if $size == 'pc' { // 标准电脑
+        @media (min-width: #{$size-small-desktop-max + 1}) {
+            @content;
+        }
+    }
+
+    @if type-of($size) == 'number' and $max != null and type-of($max) == 'number' and $max > $size {
+        @media (min-width: #{$size + 'px'}) and (max-width: #{$max + 'px'}) {
+            @content;
+        }
+    }
+}
+@mixin media-min($size) {
+    @if $size == 'spc' {
+        @media (min-width: $size-standard-phone) {
+            @content;
+        }
+    } @else if $size == 'pc' {
+        @media (min-width: #{$size-small-desktop-max + 'px'}) {
+            @content;
+        }
+    }
+
+    @if type-of($size) == 'number' {
+        @media (min-width: #{$size + 'px'}) {
+            @content;
+        }
+    }
+}
+
+// =====尺寸计算=====
+@function vmbase($px, $base: 375) {
+    $vp_base: (100 / $base) * $base;
+    $raw: ($px / $base) * $vp_base;
+    $rounded: round($raw * 100000) / 100000;
+    @return $rounded + vw;
+}
+
+@function vm($px) {
+    @return vmbase($px);
+}
+
+// 小桌面设备
+@function vm1280($px) {
+    @return vmbase($px, 1280);
+}
+@function vmspc($px) {
+    @return vmbase($px, 1280);
+}
+
+// 标准电脑
+@function vd($px) {
+    @return vmbase($px, 1920);
+}
+@function vm1920($px) {
+    @return vmbase($px, 1920);
+}
+@function vmpc($px) {
+    $rounded: vmbase($px, 1920);
+    $maxpx: $px + px;
+    @return min($rounded, $maxpx);
+}
+
+// =====字体=====
+// 标题
+@mixin font-title($weight: 800) {
+    font-stretch: 67%;
+    font-weight: $weight;
+    font-family: 'Brand-ext' !important;
+}
+
+// 内容
+@mixin font-content($weight: 400) {
+    font-stretch: 100%;
+    font-weight: $weight;
+    font-family: 'Brand-ext' !important;
+}
+
+@mixin max-line($lines: 2) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $lines;
+}
+
+
+
+@mixin media-max($target) {
+    @if $target == 'spc' {
+        @media (max-width: 767px) {
+            @content;
+        }
+    }
+
+    @if $target == 'pc' {
+        @media (max-width: 1519px) {
+            @content;
+        }
+    }
+
+    @media (max-width: #{$target + 'px'}) {
+        @content;
+    }
+}

@@ -1,0 +1,1036 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page-case-studies",
+      "blocks": {
+        "d842d823-0bb1-40fc-910f-d84239f73c84": {
+          "type": "person",
+          "settings": {
+            "heading": "Heading",
+            "name": "Person name",
+            "position": "Person position"
+          }
+        },
+        "68f9aeb7-8d3f-4313-8616-7e80c8a80d69": {
+          "type": "rich_text",
+          "settings": {
+            "heading": "Heading",
+            "text": "<h6>Heading</h6><p>Some description</p><h6>Heading</h6><p>Some description</p><h6>Heading</h6><p>Some description</p>"
+          }
+        },
+        "7b143122-f949-49ce-932e-97f051f86ce3": {
+          "type": "rich_text",
+          "settings": {
+            "heading": "Heading",
+            "text": "<h6>Heading</h6>"
+          }
+        },
+        "c96c0b46-3839-42ed-9562-9f1a288f8457": {
+          "type": "rich_text",
+          "settings": {
+            "heading": "Heading",
+            "text": "<h6>Heading</h6>"
+          }
+        },
+        "08e23850-43bf-48b5-8156-70753ac267a2": {
+          "type": "rich_text",
+          "settings": {
+            "heading": "Heading",
+            "text": "<h6>Heading</h6>"
+          }
+        },
+        "5e2bc811-d9c0-4e12-9ded-6aa1fb88d5b5": {
+          "type": "rich_text",
+          "settings": {
+            "heading": "Heading",
+            "text": "<h6>Heading</h6>"
+          }
+        }
+      },
+      "block_order": [
+        "d842d823-0bb1-40fc-910f-d84239f73c84",
+        "68f9aeb7-8d3f-4313-8616-7e80c8a80d69",
+        "7b143122-f949-49ce-932e-97f051f86ce3",
+        "c96c0b46-3839-42ed-9562-9f1a288f8457",
+        "08e23850-43bf-48b5-8156-70753ac267a2",
+        "5e2bc811-d9c0-4e12-9ded-6aa1fb88d5b5"
+      ],
+      "disabled": true,
+      "settings": {
+        "header_layout": "overlay",
+        "header_transparent": false,
+        "color_scheme": "",
+        "image_height": "medium",
+        "opacity_overlay": 0.6,
+        "subheading": "Subheading",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading_size": "h1",
+        "desc": "",
+        "features": "<h2>Feature heading</h2><p>Feature description</p><h2>Feature heading</h2><p>Feature description</p><h2>Feature heading</h2><p>Feature description</p>",
+        "show_form": true,
+        "color_scheme_form": "background-2",
+        "form_heading": "Contact form",
+        "form_text": "Some text for your contact form.",
+        "button_style": "primary",
+        "padding_top": "no-indent",
+        "padding_bottom": "l"
+      }
+    },
+    "logo_top_bar_CYyzez": {
+      "type": "logo-top-bar",
+      "name": "Logo Top Bar",
+      "settings": {
+        "custom_class": "",
+        "section_bg_color": "#011624",
+        "link": "",
+        "image": "shopify://shop_images/Ceretone-logo_White_Orange.png",
+        "max_image_width": 160,
+        "max_image_width_mb": 140
+      }
+    },
+    "custom_liquid_WxVdPR": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid_text": "",
+        "custom_liquid": "<!-- ===== 独立隔离 AARP Banner ===== -->\n<div id=\"aarp-banner-wrapper\">\n  <section class=\"aarp-banner\">\n    <div class=\"aarp-banner__inner\">\n      <h1 class=\"aarp-banner__title\">\n        Hear life more clearly\n      </h1>\n      <h2 class=\"aarp-banner__subtitle\">\n        A trusted and easy to use hearing aid designed for adults 50+\n      </h2>\n    </div>\n  </section>\n</div>\n\n<style>\n/* ===== 外层隔离 Wrapper ===== */\n#aarp-banner-wrapper {\n  all: unset; /* 尝试清除继承的全局样式 */\n  display: block;\n}\n\n/* ===== Banner Section ===== */\n#aarp-banner-wrapper .aarp-banner {\n  width: 100%;\n  background: linear-gradient(180deg, #FFFEFB 0%, #FFF4EC 100%);\n  margin: 0;         /* 清除外部 margin */\n  padding: 20px 0;   /* 上下间距，可根据需要调整 */\n  box-sizing: border-box;\n  text-align: center;\n}\n\n/* ===== 内容容器 ===== */\n#aarp-banner-wrapper .aarp-banner__inner {\n  max-width: 1400px;\n  margin: 0 auto;\n  padding: 0 20px;   /* 左右 padding */\n  box-sizing: border-box;\n}\n\n/* ===== H1 ===== */\n#aarp-banner-wrapper .aarp-banner__title {\n  font-family: Helvetica, Arial, sans-serif;\n  font-size: 30px;\n  line-height: 1.2;\n  font-weight: 700;\n  color: #000000;\n  margin: 0 0 10px 0; /* 避免全局样式影响 */\n}\n\n/* Highlight */\n#aarp-banner-wrapper .aarp-banner__title .highlight {\n  color: #EC1300;\n}\n\n/* ===== H2 ===== */\n#aarp-banner-wrapper .aarp-banner__subtitle {\n  font-family: Helvetica, Arial, sans-serif;\n  font-size: 24px;\n  line-height: 1.4;\n  font-weight: 400;\n  color: #524842;\n  margin: 0; /* 避免被全局样式撑开 */\n}\n\n/* ===== Mobile ===== */\n@media (max-width: 768px) {\n  #aarp-banner-wrapper .aarp-banner__inner {\n    max-width: 335px;\n    padding: 0 10px;\n  }\n\n  #aarp-banner-wrapper .aarp-banner__title {\n    font-size: 24px;\n    margin-bottom: 10px;\n  }\n\n  #aarp-banner-wrapper .aarp-banner__subtitle {\n    font-size: 18px;\n  }\n}\n</style>"
+      }
+    },
+    "featured_product_cVznXz": {
+      "type": "featured-product",
+      "blocks": {
+        "judge_me_reviews_preview_badge_homepage_KrtGLF": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge_homepage/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "product": "core-one-pro-invisible-in-canal-aarp-special"
+          }
+        },
+        "title_ryih8k": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h3"
+          }
+        },
+        "custom_liquid_afMRXT": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"special-low-price\" style=\"background:linear-gradient(135deg, #FFB347, #FFCC33);color:#333;font-weight:bold;padding:10px 20px;border-radius:8px;font-size:1.6rem;display:inline-block;\">Special Low Price</div>"
+          }
+        },
+        "price_F4f8Ny": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker_WTXkJe": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "image"
+          }
+        },
+        "product_featured_info_m3iMi4": {
+          "type": "product_featured_info",
+          "settings": {}
+        },
+        "limited_time_gift_DgdT6E": {
+          "type": "limited_time_gift",
+          "settings": {
+            "heading": "Limited time offer"
+          }
+        },
+        "service_icon_8ANDWG": {
+          "type": "service_icon",
+          "settings": {
+            "text1": "60-Day Risk-Free Trial",
+            "service_icon1": "shopify://shop_images/ser-icon01.png",
+            "text2": "100% Money-Back Guarantee",
+            "service_icon2": "shopify://shop_images/ser-icon02.png",
+            "text3": "Lifetime Support",
+            "service_icon3": "shopify://shop_images/ser-icon03.png"
+          }
+        },
+        "buy_buttons_VUUg8y": {
+          "type": "buy_buttons",
+          "settings": {
+            "color": "#ffffff",
+            "bg_color": "#e7590d",
+            "buy_text": "Buy Now at $299",
+            "show_amazon_btn": false,
+            "amazon_btn_label": "BUY ON AMAZON",
+            "show_dynamic_checkout": false,
+            "show_quantity": false,
+            "show_gift_card_recipient": false
+          }
+        },
+        "payment_enable_yc8Wtj": {
+          "type": "payment_enable",
+          "settings": {
+            "payment_enable": true,
+            "payment_label": ""
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_preview_badge_homepage_KrtGLF",
+        "title_ryih8k",
+        "custom_liquid_afMRXT",
+        "price_F4f8Ny",
+        "variant_picker_WTXkJe",
+        "product_featured_info_m3iMi4",
+        "limited_time_gift_DgdT6E",
+        "service_icon_8ANDWG",
+        "buy_buttons_VUUg8y",
+        "payment_enable_yc8Wtj"
+      ],
+      "custom_css": [
+        ".jdgm-qa-badge {display: none;}",
+        ".price-item--regular {color: #ff4f00;}",
+        ".featured-product {padding: 20px 0 70px 0 !important;}",
+        "@media (max-width: 768px) {.featured-product {padding: 10px 20px 30px 20px !important; }}"
+      ],
+      "name": "t:sections.featured-product.name",
+      "settings": {
+        "enable_new_media_section": true,
+        "subheading": "",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "",
+        "heading_size": "h2",
+        "heading_line": "simple",
+        "line_color": "#1566e0",
+        "word_break": false,
+        "heading_animation": "none",
+        "word_break_an": true,
+        "text": "",
+        "text_align": "left",
+        "product_item": "core-one-pro-invisible-in-canal-aarp-special",
+        "show_details_link": false,
+        "color_scheme": "",
+        "desktop_alignment": "right",
+        "mobile_alignment": "before",
+        "aspect_ratio": "adapt",
+        "image_fit": "cover",
+        "padding_top": "no-indent",
+        "padding_bottom": "no-indent"
+      }
+    },
+    "image_with_text_tzGWUY": {
+      "type": "image-with-text",
+      "custom_css": [
+        ".image-with-text__title {text-align: center; font-size: 30px !important;}",
+        ".image-with-text__inner-heading {text-align: left; font-size: 24px !important; margin: 15px 0 30px !important;}",
+        "@media (max-width: 768px) {.image-with-text__title {font-size: 24px !important; } .image-with-text__inner-heading {font-size: 18px !important; margin: 15px 0 15px !important; } .image-with-text__media {display: none; }}"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "layout": "image_last",
+        "color_scheme": "",
+        "subheading": "",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "Are you experiencing symptoms of hearing loss?",
+        "heading_size": "h3",
+        "heading_line": "simple",
+        "line_color": "#1566e0",
+        "word_break": false,
+        "heading_animation": "none",
+        "word_break_an": false,
+        "text": "",
+        "text_align": "center",
+        "inner_subheading": "",
+        "inner_heading": "Symptoms checklist:",
+        "inner_heading_line": "simple",
+        "inner_line_color": "#1566e0",
+        "inner_word_break": false,
+        "description": "<p>• Trouble hearing conversations at the dinner table<br/>• Difficulty following conversations<br/>• Trouble hearing in noisy places<br/>• Speech sounds muffled or unclear<br/>• Needing higher TV or phone volume</p><p>These are <em><strong>common signs of mild to moderate hearing loss</strong></em>.</p>",
+        "text_align_inner": "top",
+        "image": "shopify://shop_images/lQLPJwQZZ8Qyxu3NAo7NBTCwX_Pm7XUrs6MJWPjtYm6NAA_1328_654.png",
+        "image_link": "",
+        "height": "adapt",
+        "overlay_opacity": 0,
+        "logo_width": 75,
+        "add_text": "",
+        "author_color_scheme": "",
+        "icon_size": "recommended",
+        "box_shadow": false,
+        "icon_style": "colored",
+        "show_button": false,
+        "button_label": "Button label",
+        "button_link": "",
+        "button_style": "primary",
+        "show_button_2": false,
+        "button_label_2": "Button label",
+        "button_link_2": "",
+        "button_style_2": "simple",
+        "padding_top": "no-indent",
+        "padding_bottom": "no-indent",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "multicolumn_fTc7Cx": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_LL4rpn": {
+          "type": "column",
+          "settings": {
+            "icon": "none",
+            "icon_color_scheme": "",
+            "icon_fill_type": "gradient",
+            "heading": "High costs and too many appointments",
+            "text": "Traditional hearing aids can cost $1,000+ once you factor in evaluations, fittings,\nfollow up visits, and device adjustments. OTC hearing aids changed the process by\nmaking hearing support far more affordable and accessible.",
+            "show_button": false,
+            "button_label": "Label",
+            "button_link": "",
+            "button_style": "simple"
+          }
+        },
+        "column_qdTcyt": {
+          "type": "column",
+          "settings": {
+            "icon": "none",
+            "icon_color_scheme": "",
+            "icon_fill_type": "gradient",
+            "heading": "Bulky designs and “hearing aid stigma”",
+            "text": "For years, hearing aids looked big, obvious, and outdated. Today’s OTC technology\nis designed to be modern, discreet, and comfortable so you can feel confident\nwearing them.",
+            "show_button": false,
+            "button_label": "Label",
+            "button_link": "",
+            "button_style": "simple"
+          }
+        },
+        "column_NVzHri": {
+          "type": "column",
+          "settings": {
+            "icon": "none",
+            "icon_color_scheme": "",
+            "icon_fill_type": "gradient",
+            "heading": "Worry that it is “just an amplifier”",
+            "text": "A lot of people fear they will spend money on something that only makes\neverything louder. The right OTC hearing aid should help you hear speech more\nclearly and adapt to real life situations like conversations, TV, and noisy environments.",
+            "show_button": false,
+            "button_label": "Label",
+            "button_link": "",
+            "button_style": "simple"
+          }
+        }
+      },
+      "block_order": [
+        "column_LL4rpn",
+        "column_qdTcyt",
+        "column_NVzHri"
+      ],
+      "custom_css": [
+        ".multicolumn__title {font-size: 30px;}",
+        ".multicolumn__description {font-size: 18px;}",
+        ".multicolumn-card__heading {font-size: 24px;}",
+        ".multicolumn-card__text {font-size: 18px;}",
+        ".multicolumn {padding: 70px 0 !important;}",
+        "@media (max-width: 768px) {.multicolumn {padding: 40px 0 30px 0 !important; } .multicolumn__title {text-align: center; font-size: 24px; } .multicolumn-card__heading {font-size: 18px; } .multicolumn-card__text {font-size: 16px; } .multicolumn__description {font-size: 18px; }}"
+      ],
+      "name": "t:sections.multicolumn.name",
+      "settings": {
+        "section_type": "transparent",
+        "color_scheme": "",
+        "enable_border": false,
+        "border_full": false,
+        "multicolumn_to_show": 3,
+        "gap": "small",
+        "subheading": "",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "Most people wait longer than they need to...",
+        "heading_size": "h3",
+        "heading_line": "simple",
+        "line_color": "#1566e0",
+        "word_break": false,
+        "heading_animation": "none",
+        "word_break_an": false,
+        "text": "Not because they do not care, but because the old hearing aid experience came with real barriers.",
+        "text_align": "left",
+        "icon_size": "recommended",
+        "box_shadow": true,
+        "icon_style": "colored",
+        "image_width": "medium",
+        "image_ratio": "square",
+        "object_fit": "cover",
+        "card_heading_size": "h4",
+        "padding_top": "no-indent",
+        "padding_bottom": "no-indent",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "hero_XGACB6": {
+      "type": "hero",
+      "blocks": {
+        "title_QXYQww": {
+          "type": "title",
+          "settings": {
+            "heading": "The Good News:",
+            "heading_size": "h1",
+            "heading_line": "simple",
+            "line_color": "#1566e0",
+            "word_break": false,
+            "heading_animation": "none",
+            "word_break_an": false
+          }
+        },
+        "description_c8fzX6": {
+          "type": "description",
+          "settings": {
+            "description": "Getting hearing help does not have to be expensive or complicated."
+          }
+        }
+      },
+      "block_order": [
+        "title_QXYQww",
+        "description_c8fzX6"
+      ],
+      "custom_css": [
+        ".hero__title {font-size: 30px;}",
+        ".hero__description {font-size: 18px; margin: 16px 0px 0px !important;}",
+        ".hero__image-inner {max-width: 700px; margin: 0 auto;}",
+        ".hero {padding: 70px 0 !important;}",
+        "@media (max-width: 768px) {.hero {padding: 40px 0 30px 0 !important; } .hero__title {font-size: 24px; }}"
+      ],
+      "name": "t:sections.hero.name",
+      "settings": {
+        "layout": "vertical",
+        "header_overlay": false,
+        "header_transparent": false,
+        "block_type": "subtle",
+        "color_scheme": "",
+        "full_screen": false,
+        "image": "shopify://shop_images/lQLPKH8tZkc-we3NAmvNAyCwLXAgcloMXQwJWfJyjpqgAA_800_619.png",
+        "link": "",
+        "show_video": false,
+        "overlay_opacity": 0,
+        "image_ratio": "adapt",
+        "object_fit": "cover",
+        "desktop_image_position": "after",
+        "mobile_image_position": "after",
+        "mobile_image_overlay": "overlay",
+        "horizontal_alignment": "center",
+        "vertical_alignment": "middle",
+        "padding_top": "no-indent",
+        "padding_bottom": "no-indent"
+      }
+    },
+    "multicolumn_c6Upba": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_E9VUpy": {
+          "type": "column",
+          "settings": {
+            "icon": "none",
+            "icon_color_scheme": "",
+            "icon_fill_type": "gradient",
+            "heading": "Ceretone removes the common barriers to better hearing",
+            "text": "A straightforward OTC solution built for everyday comfort, clarity, and confidence.",
+            "show_button": false,
+            "button_label": "Label",
+            "button_link": "",
+            "button_style": "simple"
+          }
+        },
+        "column_QMeHX3": {
+          "type": "column",
+          "settings": {
+            "icon": "none",
+            "icon_color_scheme": "",
+            "icon_fill_type": "gradient",
+            "heading": "Costs significantly less than traditional hearing aids",
+            "text": "Get hearing support without the high price of clinic visits, fittings, and repeated adjustments. Core One Pro is positioned as an affordable alternative to the traditional path.",
+            "show_button": false,
+            "button_label": "Label",
+            "button_link": "",
+            "button_style": "simple"
+          }
+        },
+        "column_79hUfA": {
+          "type": "column",
+          "settings": {
+            "icon": "none",
+            "icon_color_scheme": "",
+            "icon_fill_type": "gradient",
+            "heading": "Engineered for clearer sound, not just louder volume",
+            "text": "Designed to improve speech clarity and listening comfort so conversations feel\neasier and more natural.",
+            "show_button": false,
+            "button_label": "Label",
+            "button_link": "",
+            "button_style": "simple"
+          }
+        },
+        "column_QfGmU4": {
+          "type": "column",
+          "settings": {
+            "icon": "none",
+            "icon_color_scheme": "",
+            "icon_fill_type": "gradient",
+            "heading": "Modern, discreet design",
+            "text": "Comfortable and low profile so you can wear it confidently at home, at work, or out\nwith friends.",
+            "show_button": false,
+            "button_label": "Label",
+            "button_link": "",
+            "button_style": "simple"
+          }
+        }
+      },
+      "block_order": [
+        "column_E9VUpy",
+        "column_QMeHX3",
+        "column_79hUfA",
+        "column_QfGmU4"
+      ],
+      "custom_css": [
+        ".multicolumn {padding: 70px 0 !important;}",
+        ".multicolumn-list__wrapper {gap: 20px !important;}",
+        ".multicolumn__title {font-size: 30px;}",
+        ".multicolumn__description {text-align: center; font-size: 18px;}",
+        ".multicolumn-card__heading {text-align: left; font-size: 24px;}",
+        ".multicolumn-card__text {text-align: left; font-size: 18px;}",
+        "@media (max-width: 768px) {.multicolumn {padding: 40px 0 30px !important; } .multicolumn__title {text-align: center; font-size: 24px; } .multicolumn-card__heading {font-size: 18px; } .multicolumn-card__text {font-size: 16px; }}"
+      ],
+      "name": "t:sections.multicolumn.name",
+      "settings": {
+        "section_type": "transparent",
+        "color_scheme": "",
+        "enable_border": false,
+        "border_full": false,
+        "multicolumn_to_show": 1,
+        "gap": "small",
+        "subheading": "",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "Finally, hearing help that fits real life",
+        "heading_size": "h2",
+        "heading_line": "simple",
+        "line_color": "#1566e0",
+        "word_break": false,
+        "heading_animation": "none",
+        "word_break_an": false,
+        "text": "Modern hearing support, without the traditional hassle",
+        "text_align": "center",
+        "icon_size": "recommended",
+        "box_shadow": true,
+        "icon_style": "colored",
+        "image_width": "medium",
+        "image_ratio": "square",
+        "object_fit": "cover",
+        "card_heading_size": "h4",
+        "padding_top": "no-indent",
+        "padding_bottom": "no-indent",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "steps_xfJPzr": {
+      "type": "steps",
+      "blocks": {
+        "step_jmXABN": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/lQLPKITKZphcZWXNAZDNBLCwqCNz2QyPEnsJW5XvWVpaAA_1200_400.png",
+            "number": "",
+            "heading": "Nearly Invisible",
+            "text": "Engineered to sit deep within your ear canal, Core One Pro is virtually undetectable to others. Focus on conversations, not on your hearing aid.",
+            "show_button": false,
+            "button_style": "simple",
+            "button_label": "Know More",
+            "button_link": ""
+          }
+        },
+        "step_CzpUQJ": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/lQLPJxAumK7AxfHNAZDNBLCwvq6fSzQkJGkIrdBY3trbAA_1200_400.png",
+            "number": "",
+            "heading": "Custom Fit",
+            "text": "Shaped to match your ear's oval contours and 30° canal curve, Core One Pro sits perfectly in place. The ergonomic design eliminates pressure points, delivering all-day comfort.",
+            "show_button": false,
+            "button_style": "simple",
+            "button_label": "Know More",
+            "button_link": ""
+          }
+        },
+        "step_jXrMey": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/1200-400_3.png",
+            "number": "",
+            "heading": "So Light",
+            "text": "Weighing just 0.035 oz (1 gram) with a secure fit, Core One Pro feels like wearing nothing at all.",
+            "show_button": false,
+            "button_style": "simple",
+            "button_label": "Know More",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "step_jmXABN",
+        "step_CzpUQJ",
+        "step_jXrMey"
+      ],
+      "custom_css": [
+        ".steps {padding: 70px 0px;}",
+        ".steps__title {font-size: 24px;}",
+        ".step__heading {font-size: 24px;}",
+        ".steps__description {font-size: 18px;}",
+        ".step__text {font-size: 18px;}",
+        "@media (max-width: 768px) {.steps {display: none; }}"
+      ],
+      "name": "t:sections.steps.name",
+      "settings": {
+        "layout": "slider",
+        "color_scheme": "scheme-da522d8c-d8ea-43a1-8f89-75b1a671124a",
+        "subheading": "",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "Designed to help you <strong>hear comfortably in everyday situations</strong>, with discreet wear and simple controls.",
+        "heading_size": "h2",
+        "heading_line": "simple",
+        "line_color": "#1566e0",
+        "word_break": false,
+        "heading_animation": "none",
+        "word_break_an": false,
+        "text": "",
+        "text_align": "center",
+        "columns_to_show": 3,
+        "image_ratio": "adapt",
+        "number_size": "recommended",
+        "step_heading_size": "recommended",
+        "text_size": "recommended",
+        "padding_top": "no-indent",
+        "padding_bottom": "no-indent",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "steps_7DVy6M": {
+      "type": "steps",
+      "blocks": {
+        "step_xh9yrP": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/lQLPJx0lV7UadWXNAcLNAZiwG0FfQuYJtbEJW5XvWVpaAQ_408_450.png",
+            "number": "",
+            "heading": "Nearly Invisible",
+            "text": "Engineered to sit deep within your ear canal, Core One Pro is virtually undetectable to others. Focus on conversations, not on your hearing aid.",
+            "show_button": false,
+            "button_style": "simple",
+            "button_label": "Know More",
+            "button_link": ""
+          }
+        },
+        "step_fMdbhD": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/408-450_2.jpg",
+            "number": "",
+            "heading": "Custom Fit",
+            "text": "Shaped to match your ear's oval contours and 30° canal curve, Core One Pro sits perfectly in place. The ergonomic design eliminates pressure points, delivering all-day comfort.",
+            "show_button": false,
+            "button_style": "simple",
+            "button_label": "Know More",
+            "button_link": ""
+          }
+        },
+        "step_dRrcc6": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/408-450.png",
+            "number": "",
+            "heading": "So Light",
+            "text": "Weighing just 0.035 oz (1 gram) with a secure fit, Core One Pro feels like wearing nothing at all.",
+            "show_button": false,
+            "button_style": "simple",
+            "button_label": "Know More",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "step_xh9yrP",
+        "step_fMdbhD",
+        "step_dRrcc6"
+      ],
+      "custom_css": [
+        "@media (max-width: 768px) {.steps__title {font-size: 24px; } .step .step__heading {font-size: 24px; } .step__heading {font-size: 18px; } .steps__description {text-align: left; font-size: 18px; } .step__text {text-align: left; font-size: 16px; } .steps {padding: 40px 0 0px !important; }}",
+        "@media screen and (min-width: 768px) {{display: none; }}"
+      ],
+      "name": "t:sections.steps.name",
+      "settings": {
+        "layout": "collapsible",
+        "color_scheme": "scheme-da522d8c-d8ea-43a1-8f89-75b1a671124a",
+        "subheading": "",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "",
+        "heading_size": "h2",
+        "heading_line": "simple",
+        "line_color": "#1566e0",
+        "word_break": false,
+        "heading_animation": "none",
+        "word_break_an": false,
+        "text": "Designed to help you hear comfortably in everyday situations, with discreet wear and simple controls.",
+        "text_align": "center",
+        "columns_to_show": 3,
+        "image_ratio": "adapt",
+        "number_size": "recommended",
+        "step_heading_size": "recommended",
+        "text_size": "recommended",
+        "padding_top": "s",
+        "padding_bottom": "m",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "four_grid_ihDRCF": {
+      "type": "four-grid",
+      "blocks": {
+        "image_MXHqzk": {
+          "type": "image",
+          "settings": {
+            "image_mb": "shopify://shop_images/4455c6debf0ab3923c0256aa7133d388.png",
+            "title": "Standard"
+          }
+        },
+        "image_znbTGq": {
+          "type": "image",
+          "settings": {
+            "image_mb": "shopify://shop_images/6cf5bdefda6a1b4636642923cc4fb175.png",
+            "title": "Restaurant"
+          }
+        },
+        "image_DcjjT4": {
+          "type": "image",
+          "settings": {
+            "image_mb": "shopify://shop_images/ff06b66630221eae57e8ddd5e1d76f96.png",
+            "title": "Outdoor"
+          }
+        },
+        "image_zEknWn": {
+          "type": "image",
+          "settings": {
+            "image_mb": "shopify://shop_images/b29fc12ad507210c049b982e2e67da25.jpg",
+            "title": "Tinnitus Masking"
+          }
+        }
+      },
+      "block_order": [
+        "image_MXHqzk",
+        "image_znbTGq",
+        "image_DcjjT4",
+        "image_zEknWn"
+      ],
+      "custom_css": [
+        ".title {font-size: 30px;}",
+        ".img-text {font-size: 24px;}",
+        "@media (max-width: 768px) {.title {font-size: 24px; } .img-text {font-size: 18px; }}"
+      ],
+      "name": "Four Grid",
+      "settings": {
+        "background": "#ffffff",
+        "title": "Switch Programs As You Move",
+        "pc_padding_top": 70,
+        "pc_padding_bottom": 70,
+        "mb_padding_top": 40,
+        "mb_padding_bottom": 30
+      }
+    },
+    "image_video_with_text1_zCifBi": {
+      "type": "image-video-with-text1",
+      "custom_css": [
+        ".heading-title {font-size: 30px;}",
+        ".sub_title {font-size: 18px;}",
+        "@media (max-width: 768px) {.heading-title {font-size: 24px; } .sub_title {font-size: 16px; }}"
+      ],
+      "name": "Image video with text1",
+      "settings": {
+        "custom_cls": "",
+        "title": "Catch more of every conversation",
+        "sub_title": "",
+        "video": "shopify://files/videos/AUG06.mp4",
+        "image": "shopify://shop_images/A90_viedo.png",
+        "image_mb": "shopify://shop_images/A90_viedo.png"
+      }
+    },
+    "number_card_4XB4ED": {
+      "type": "number-card",
+      "blocks": {
+        "card_zNXEXj": {
+          "type": "card",
+          "settings": {
+            "arrow": "0",
+            "title": "Excellent voice focus",
+            "info": "Hear voices with significantly stronger clarity."
+          }
+        },
+        "card_LbQMre": {
+          "type": "card",
+          "settings": {
+            "arrow": "0",
+            "title": "Thoughtful design",
+            "info": "Experience exceptional comfort with minimal visibility."
+          }
+        },
+        "card_WfzmLm": {
+          "type": "card",
+          "settings": {
+            "arrow": "0",
+            "title": "Powerful",
+            "info": "Pick up speech effectively from background noise."
+          }
+        },
+        "card_4jVNRn": {
+          "type": "card",
+          "settings": {
+            "arrow": "0",
+            "title": "4 adaptive programs",
+            "info": "Featuring Wind Noise Reduction & Tinnitus Masking."
+          }
+        },
+        "card_DWtiNG": {
+          "type": "card",
+          "settings": {
+            "arrow": "0",
+            "title": "Feedback cancellation",
+            "info": "Nearly zero squeal, even at maximum volume."
+          }
+        }
+      },
+      "block_order": [
+        "card_zNXEXj",
+        "card_LbQMre",
+        "card_WfzmLm",
+        "card_4jVNRn",
+        "card_DWtiNG"
+      ],
+      "custom_css": [
+        ".title {font-size: 30px;}",
+        ".card-title {font-size: 24px;}",
+        ".card-text {font-size: 18px;}",
+        "@media (max-width: 768px) {.title {font-size: 24px; } .card-title {font-size: 18px; } .card-text {font-size: 16px; }}"
+      ],
+      "name": "Number Card",
+      "settings": {
+        "title": "Tiny, but mighty.",
+        "sub_title": ""
+      }
+    },
+    "multicolumn_U3rr3K": {
+      "type": "multicolumn",
+      "custom_css": [
+        ".multicolumn__title {font-size: 30px;}",
+        ".multicolumn__description {font-size: 18px; max-width: 1400px; margin: 0 auto; text-align: center;}",
+        ".container {padding: 70px 0 !important;}",
+        "@media (max-width: 768px) {.container {padding: 40px 0 30px 0 !important; } .multicolumn__title {text-align: center; font-size: 24px; } .multicolumn__description {font-size: 16px; margin: 0; text-align: center; }}"
+      ],
+      "name": "t:sections.multicolumn.name",
+      "settings": {
+        "section_type": "transparent",
+        "color_scheme": "",
+        "enable_border": false,
+        "border_full": false,
+        "multicolumn_to_show": 1,
+        "gap": "large",
+        "subheading": "",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "<strong>Special Pricing $299</strong>",
+        "heading_size": "h2",
+        "heading_line": "simple",
+        "line_color": "#1566e0",
+        "word_break": false,
+        "heading_animation": "none",
+        "word_break_an": false,
+        "text": "Regular price $389. For a limited time, order Core One Pro for $299 and save $90.<br>\nYour purchase includes a 60 day risk free trial with a full refund if returned.",
+        "text_align": "center",
+        "icon_size": "recommended",
+        "box_shadow": true,
+        "icon_style": "colored",
+        "image_width": "medium",
+        "image_ratio": "square",
+        "object_fit": "cover",
+        "card_heading_size": "h4",
+        "padding_top": "no-indent",
+        "padding_bottom": "no-indent",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "testimonials_NAe8XJ": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonials_slide_XFFdXK": {
+          "type": "testimonials_slide",
+          "settings": {
+            "rating": 5,
+            "slide_text": "“These hearing aids from Ceretone seem to be very high quality with many different adjustments and features. The adjustments are also easy to use and understand compared to other OTC hearing aids I have tried in the past. My favorite feature of these is that they are very small and don’t catch wind and vibration from driving compared to other hearing aids I have used in the past.”",
+            "image": "shopify://shop_images/71_CtkPLrwL._SY1000.jpg",
+            "slide_name": "David K.",
+            "slide_position": ""
+          }
+        },
+        "testimonials_slide_nPxAzc": {
+          "type": "testimonials_slide",
+          "settings": {
+            "rating": 5,
+            "slide_text": "“The Ceretone Core One Pro hearing aids are the future of hearing aids. They are incredibly small and fit in your ear canals. The only thing visible is the tiny clear removal thread.”",
+            "image": "shopify://shop_images/61ir70ZlgjL._SY1000.jpg",
+            "slide_name": "Eleanor E.",
+            "slide_position": ""
+          }
+        },
+        "testimonials_slide_MetD6Q": {
+          "type": "testimonials_slide",
+          "settings": {
+            "rating": 5,
+            "slide_text": "“This one was so easy to set up and use, didn’t even need help. I can turn the TV way down now and still hear everything. Super happy I found this—works great and don’t break the bank!”",
+            "image": "shopify://shop_images/1753856237__1753856232420-mvimg_20250724_162004__original.avif",
+            "slide_name": "Carol D.",
+            "slide_position": ""
+          }
+        },
+        "testimonials_slide_RXnyKH": {
+          "type": "testimonials_slide",
+          "settings": {
+            "rating": 5,
+            "slide_text": "“I got this hearing aid set for my dad. He is so impressed with them. The noise canceling and wind noise management work really well. He doesn't get the whistling as much as he has gotten with other aids, and is very rare with these.”",
+            "image": "shopify://shop_images/ZtQOSlGHb33kr5iPKYURaQ.jpg",
+            "slide_name": "Melisaa M.",
+            "slide_position": ""
+          }
+        }
+      },
+      "block_order": [
+        "testimonials_slide_XFFdXK",
+        "testimonials_slide_nPxAzc",
+        "testimonials_slide_MetD6Q",
+        "testimonials_slide_RXnyKH"
+      ],
+      "custom_css": [
+        ".testimonials__item {background-color: #f9f8f6;}",
+        ".testimonials__text {font-size: 18px; text-transform: none;}",
+        ".testimonials {padding: 70px 0 !important;}",
+        "@media (max-width: 768px) {.testimonials {padding: 40px 0 30px 0 !important; } .testimonials__text {font-size: 16px; }}"
+      ],
+      "name": "t:sections.testimonials.name",
+      "settings": {
+        "layout": "image_left_slider",
+        "color_scheme": "scheme-da522d8c-d8ea-43a1-8f89-75b1a671124a",
+        "subheading": "",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "",
+        "heading_size": "h2",
+        "heading_line": "simple",
+        "line_color": "#1566e0",
+        "word_break": false,
+        "heading_animation": "none",
+        "word_break_an": false,
+        "text": "",
+        "text_align": "left",
+        "slide_color_scheme": "scheme-da522d8c-d8ea-43a1-8f89-75b1a671124a",
+        "slide_text_size": "recommended",
+        "enable_navigation": true,
+        "enable_navigation_mobile": false,
+        "navigation_color_scheme": "scheme-da522d8c-d8ea-43a1-8f89-75b1a671124a",
+        "enable_pagination": false,
+        "enable_pagination_mobile": true,
+        "pagination_color_scheme": "scheme-da522d8c-d8ea-43a1-8f89-75b1a671124a",
+        "padding_top": "no-indent",
+        "padding_bottom": "no-indent",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "1770083706801bd8ba": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_homepage_XQirQw": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget_homepage/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "product": "core-one-pro-invisible-in-canal-aarp-special",
+            "review_data": "sample_data",
+            "max_width": 1200
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_homepage_XQirQw"
+      ],
+      "custom_css": [
+        ".jdgm-rev-widg__title {font-size: 30px !important;}",
+        "@media (max-width: 768px) {.jdgm-rev-widg__title {font-size: 24px !important; }}"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "custom_liquid_tejcQm": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "custom_css": [],
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid_text": "",
+        "custom_liquid": "<section class=\"aarp-banner\">\n  <div class=\"aarp-banner__inner\">\n    <h1 class=\"aarp-banner__title\">\n      <span class=\"highlight\">Exclusive AARP</span> Member Offer\n    </h1>\n\n    <h2 class=\"aarp-banner__subtitle\">\n      As an <span class=\"highlight\">AARP member</span>, you qualify for special pricing on Core One Pro hearing aids.\n    </h2>\n  </div>\n</section>\n\n<style>\n/* ===== Full-width banner ===== */\n.aarp-banner {\n  width: 100%;\n  background: linear-gradient(\n    180deg,\n    #FFFEFB 0%,\n    #FFF4EC 100%\n  );\n}\n\n/* ===== Inner container ===== */\n.aarp-banner__inner {\n  max-width: 1400px;\n  margin: 0 auto;\n  padding: 50px 0;\n  text-align: center;\n}\n\n/* ===== Title ===== */\n.aarp-banner__title {\n  font-family: Helvetica, Arial, sans-serif;\n  font-size: 30px;\n  line-height: 1.2;\n  font-weight: 700;\n  color: #000;\n  margin: 0 0 10px;\n}\n\n/* ===== Subtitle ===== */\n.aarp-banner__subtitle {\n  font-family: Helvetica, Arial, sans-serif;\n  font-size: 24px;\n  line-height: 1.4;\n  font-weight: 400;\n  color: #524842;\n  margin: 0;\n}\n\n/* ===== Highlight ===== */\n.aarp-banner .highlight {\n  color: #EC1300;\n  font-weight: 600;\n}\n\n/* ===== Stronger highlight in title only ===== */\n.aarp-banner__title .highlight {\n  font-weight: 700;\n}\n\n/* ===== Mobile only: extra bottom space ===== */\n@media (max-width: 768px) {\n  .aarp-banner__inner {\n    max-width: 335px;\n    padding: 25px 0 90px;\n  }\n\n  .aarp-banner__title {\n    font-size: 24px;\n  }\n\n  .aarp-banner__subtitle {\n    font-size: 18px;\n  }\n}\n</style>"
+      }
+    },
+    "custom_liquid_MjpP7f": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid_text": "hide menu",
+        "custom_liquid": "<style>\nsticky-header.header-wrapper {\n    display: none;\n}\n.section-announcement {\n    display: none;\n}\n.section-footer,\nfooter {\n  display: none;\n}\n</style>"
+      }
+    },
+    "sticky_addtocart_btn_iHTCFR": {
+      "type": "sticky-addtocart-btn",
+      "name": "Sticky Addtocart Btn",
+      "settings": {
+        "custom_product": "core-one-pro-invisible-in-canal-aarp-special",
+        "custom_class": "",
+        "section_bg_color": "#ffffff",
+        "bg_color": "#000000",
+        "color": "#ffffff",
+        "btn_label": "",
+        "btn_max_width": 240,
+        "btn_max_width_mb": 240,
+        "liquid": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "logo_top_bar_CYyzez",
+    "custom_liquid_WxVdPR",
+    "featured_product_cVznXz",
+    "image_with_text_tzGWUY",
+    "multicolumn_fTc7Cx",
+    "hero_XGACB6",
+    "multicolumn_c6Upba",
+    "steps_xfJPzr",
+    "steps_7DVy6M",
+    "four_grid_ihDRCF",
+    "image_video_with_text1_zCifBi",
+    "number_card_4XB4ED",
+    "multicolumn_U3rr3K",
+    "testimonials_NAe8XJ",
+    "1770083706801bd8ba",
+    "custom_liquid_tejcQm",
+    "custom_liquid_MjpP7f",
+    "sticky_addtocart_btn_iHTCFR"
+  ]
+}

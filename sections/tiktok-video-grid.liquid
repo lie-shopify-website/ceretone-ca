@@ -1,0 +1,184 @@
+<section data-section-id="{{ section.id }}">
+  <div class="container">
+     {%- if section.settings.title != blank or section.settings.sub_title != blank -%}
+        <div class="title-box">
+            {% if section.settings.title != blank %}
+                <div class="heading-title"><h3>{{ section.settings.title }}</h3></div>
+            {% endif %}
+            {% if section.settings.sub_title != blank %}
+                <div class="sub-title">{{ section.settings.sub_title }}</div>
+            {% endif %}
+        </div>
+      {% endif %}
+
+      <div class="video-grid">
+        <div class="video-items">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    {% for block in section.blocks %}
+                          <div class="swiper-slide">
+                              <div class="video-layout">
+                                  {% assign poster = block.settings.video_poster | image_url: width: block.settings.video_poster.width, height: block.settings.video_poster.height %}
+                                  {{ block.settings.video | media_tag: autoplay: false, loop: true, poster:poster, controls: true, class: 'video-item' }}
+                              </div>
+                          </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="swiper-btn-box">
+                <div class="swiper-button-prev">
+                  <svg class="icon icon-caret-left" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M10.2492 19.451C10.5811 19.783 11.1193 19.783 11.4512 19.451C11.7832 19.1191 11.7832 18.5809 11.4512 18.2489L5.90252 12.7002L19.8502 12.7002C20.3196 12.7002 20.7002 12.3197 20.7002 11.8502C20.7002 11.3808 20.3196 11.0002 19.8502 11.0002L5.90203 11.0002L11.4512 5.45103C11.7832 5.11908 11.7832 4.58089 11.4512 4.24895C11.1193 3.917 10.5811 3.917 10.2492 4.24895L3.24915 11.2489C3.19991 11.2982 3.15734 11.3528 3.12201 11.4115C3.05011 11.5309 3.00823 11.667 3.00124 11.8078C3.00054 11.8218 3.00019 11.8359 3.00019 11.85C3.00019 11.8501 3.00019 11.8502 3.00019 11.8502C3.00019 12.0911 3.10039 12.3086 3.26138 12.4633L10.2492 19.451Z" fill="currentColor"></path>
+                  </svg>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next">
+                  <svg class="icon icon-caret-right" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M13.451 4.24896C13.1191 3.91701 12.5809 3.91701 12.249 4.24896C11.917 4.5809 11.917 5.1191 12.249 5.45104L17.7977 10.9998L3.85 10.9998C3.38056 10.9998 3 11.3803 3 11.8498C3 12.3192 3.38056 12.6998 3.85 12.6998L17.7982 12.6998L12.249 18.249C11.917 18.5809 11.917 19.1191 12.249 19.451C12.5809 19.783 13.1191 19.783 13.451 19.451L20.451 12.451C20.5003 12.4018 20.5429 12.3471 20.5782 12.2885C20.6501 12.1691 20.692 12.033 20.699 11.8921C20.6996 11.8781 20.7 11.8641 20.7 11.85C20.7 11.8499 20.7 11.8498 20.7 11.8498C20.7 11.6089 20.5998 11.3914 20.4388 11.2367L13.451 4.24896Z" fill="currentColor"></path>
+                  </svg>
+                </div>
+            </div>
+        </div>
+      </div>
+    
+  </div>
+</section>
+
+
+<script>
+window.addEventListener('DOMContentLoaded', function() {   
+    /* list */
+      new Swiper('[data-section-id="{{section.id}}"] .swiper', {
+          centeredSlides: true,
+          spaceBetween: 20,
+          loop: true,
+          pagination: {
+            el: '[data-section-id="{{section.id}}"] .swiper-pagination',
+          },
+          navigation: {
+            nextEl: '[data-section-id="{{section.id}}"] .swiper-button-next',
+            prevEl: '[data-section-id="{{section.id}}"] .swiper-button-prev',
+          },
+          breakpoints: {
+              320: {
+                  slidesPerView: 1.1,
+                  spaceBetween: 10,
+              },
+              768: {
+                  slidesPerView: 1.3,
+              },
+              1080: {
+                  slidesPerView: 1.3,
+              },
+              1440: {
+                  slidesPerView: 1.3,
+              },
+          },
+          on:{
+              slideChange: function () {
+                  window.pauseAllMedia();
+              }
+          }
+      });
+
+    
+});
+</script>
+
+<style>
+
+[data-section-id="{{ section.id }}"] .container {
+    padding-top:{{ section.settings.pc_padding_top }}px;
+	padding-bottom:{{ section.settings.pc_padding_bottom }}px;
+    background-color:{{ section.settings.bg_color }};
+    padding-left: 0;
+    padding-right: 0;
+    max-width: calc(1400px - 2 * 6.4rem);
+}
+@media screen and (max-width: 767px) {
+    [data-section-id="{{ section.id }}"] .container {
+        padding-top:{{ section.settings.mb_padding_top }}px;
+		padding-bottom:{{ section.settings.mb_padding_bottom }}px;
+    }
+}
+.tiktok-video-grid .swiper-button-next,
+.tiktok-video-grid .swiper-button-prev,
+.tiktok-video-grid .swiper-pagination {
+  position: static;
+}
+
+.tiktok-video-grid video.video-item {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+.tiktok-video-grid .heading-title h3 {
+    text-align: center;
+    /* font-size: 38px;
+    font-weight: bold; */
+    margin-top: 0;
+}
+.tiktok-video-grid .swiper-pagination-bullets.swiper-pagination-horizontal {
+  width:auto;
+  margin-left:20px;
+  margin-right:20px;
+}
+.tiktok-video-grid .swiper-btn-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+{% comment %} .swiper:not(.swiper-initialized) .swiper-slide {
+    flex-shrink: 1;
+} {% endcomment %}
+@media screen and (max-width: 767px) {
+    .tiktok-video-grid video.video-item {
+        border-radius: 10px;
+    }
+    .tiktok-video-grid .heading-title h2 {
+        font-size: 30px;
+    }
+}
+</style>
+
+
+{% schema %}
+
+  {
+  "name": "Tiktok Video Grid",
+  "class": "tiktok-video-grid",
+  "settings": [
+        { "type": "color", "id": "bg_color", "label": "Background", "default": "#ffffff" },
+        { "type": "color", "id": "page_color", "label": "分页器颜色", "default": "#000000" },
+    
+        { "type": "header","content":"Heading Title"},
+        { "type": "textarea","id": "title", "label": "Heading Title" },
+        { "type": "textarea","id": "sub_title", "label": "Sub Title" },
+    
+        { "type": "header","content":"PC"},
+        { "type": "range", "id": "pc_padding_top", "label": "Top Space", "min": 0, "max": 100, "step": 1, "unit": "px", "default": 0 },
+        { "type": "range", "id": "pc_padding_bottom", "label": "Bottom Space", "min": 0, "max": 100, "step": 1, "unit": "px", "default": 0 },
+        { "type": "header","content":"Mobile"},
+        { "type": "range", "id": "mb_padding_top", "label": "Top Space", "min": 0, "max": 100, "step": 1, "unit": "px", "default": 0 },
+        { "type": "range", "id": "mb_padding_bottom", "label": "Bottom Space", "min": 0, "max": 100, "step": 1, "unit": "px", "default": 0 }
+  ],
+  "blocks": [
+    {
+      "type": "video",
+      "name": "Video",
+      "settings": [
+        { "type": "video", "id": "video", "label": "Video", "info": "视频以tiktok视频尺寸为主" },
+        { "type": "image_picker", "id": "video_poster", "label": "封面" },
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "category": "Custom",
+      "name": "Tiktok Video Grid",
+    }
+  ]
+}
+{% endschema %}

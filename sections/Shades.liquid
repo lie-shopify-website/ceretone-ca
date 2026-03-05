@@ -1,0 +1,281 @@
+<style>
+  [data-section-id="{{ section.id }}"] {
+    background-color: {{ section.settings.bg_color }};
+    padding-top: {{ section.settings.padding_top | append: 'px' }};
+    padding-bottom: {{ section.settings.padding_bottom | append: 'px' }};
+  }
+  .Shades_flex {
+    height: 50rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  .Shades_box {
+    overflow: hidden;
+    position: relative;
+    background-color: {{ section.settings.box_bg_color }};
+    border-radius: 24px;
+    width: 25%;
+    transition: width 0.7s ease
+    , opacity 0.7s ease;
+    padding: 2rem 2rem 0;
+  }
+  .Shades h2 {
+    text-align: center;
+  }
+  .Shades_box h4 {
+    text-align: left;
+    color: {{ section.settings.box_color }};
+  }
+  .Shades_box p {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.7s ease;
+    color: {{ section.settings.box_color }};
+  }
+  .Shades_box.Shades_box_action {
+    width: 45%;
+  }
+  .Shades_box_action_p {
+    display: block !important;
+    opacity: 1 !important;
+    transition: all 0.7s;
+  }
+  .Shades_box img {
+    width: 100%;
+    position: absolute;
+    left: 0;
+  }
+  .Shades_box_M {
+    display: none;
+  }
+  @media(max-width: 768px) {
+    [data-section-id="{{ section.id }}"] {
+      padding-top: {{ section.settings.padding_top_M | append: 'px' }};
+      padding-bottom: {{ section.settings.padding_bottom_M | append: 'px' }};
+    }
+    .Shades_box {
+      display: none;
+    }
+    .Shades_box_M {
+      display: block;
+      overflow: hidden;
+      background-color: {{ section.settings.box_bg_color }};
+      border-radius: 24px;
+      width: 100%;
+      transition: width 0.7s ease
+      , opacity 0.7s ease;
+      padding: 1rem 1rem 0;
+    }
+    .Shades_box_M h4 {
+      color: {{ section.settings.box_color }};
+    }
+    .Shades_box_M.Shades_box_action {
+      width: 100%;
+    }
+    .Shades_flex {
+      flex-flow: column;
+      height: auto;
+      gap: 2rem;
+    }
+    .Shades_box_M img {
+      width: 70%;
+      margin: 0 auto;
+      display: block;
+    }
+    .Shades_box_M p {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.3s ease-in-out;
+      color: {{ section.settings.box_color }};
+    }
+    .Shades_box_action_p_M {
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+      transition: all 0.3s ease-in-out;
+    }
+      .Shades h2 {
+        width: 90%;
+    margin: 0 auto 2rem;
+  }
+  }
+</style>
+
+<div data-section-id="{{ section.id }}" class="Shades">
+  {% if section.settings.tilie != blank %}
+    <h2>{{ section.settings.tilie }}</h2>
+  {% endif %}
+  <div class="container">
+    <div class="Shades_flex">
+      {% for block in section.blocks %}
+        <div class="Shades_box {% if forloop.first %}Shades_box_action{% endif %}">
+          {% if block.settings.title != blank %}
+            <h4>{{ block.settings.title }}</h4>
+          {% endif %}
+          {% if block.settings.text != blank %}
+            <p class="{% if forloop.first %}Shades_box_action_p{% endif %}">
+              {{ block.settings.text }}
+            </p>
+          {% endif %}
+          {% if block.settings.image != blank %}
+            <img src="{{ block.settings.image | img_url: '680x' }}" alt="">
+          {% endif %}
+        </div>
+        <div class="Shades_box_M">
+          {% if block.settings.title != blank %}
+            <h4>{{ block.settings.title }}</h4>
+          {% endif %}
+          {% if block.settings.text != blank %}
+            <p class="{% if forloop.first %}Shades_box_action_p_M{% endif %}">
+              {{ block.settings.text }}
+            </p>
+          {% endif %}
+          {% if block.settings.image != blank %}
+            <img src="{{ block.settings.image | img_url: '680x' }}" alt="">
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const boxes = document.querySelectorAll(".Shades_box");
+    const paragraphs = document.querySelectorAll(".Shades_box p");
+    boxes.forEach((box) => {
+      box.addEventListener("click", function () {
+        boxes.forEach((b) => b.classList.remove("Shades_box_action"));
+        paragraphs.forEach((p) => p.classList.remove("Shades_box_action_p"));
+        this.classList.add("Shades_box_action");
+        this.querySelector("p").classList.add("Shades_box_action_p");
+      });
+    });
+  });
+  // 获取所有 .Shades_box_M 元素
+  const boxes = document.querySelectorAll('.Shades_box_M');
+
+  window.addEventListener('scroll', function () {
+  boxes.forEach((box) => {
+    const rect = box.getBoundingClientRect(); // 获取元素相对于视口的位置
+    const scrollTop = window.scrollY || document.documentElement.scrollTop; // 当前滚动距离
+    const boxTop = rect.top + scrollTop; // 计算元素到顶部的实际距离
+
+    if (boxTop - scrollTop <= 400) {
+      // 添加类
+      const paragraph = box.querySelector('p');
+      if (paragraph) {
+        paragraph.classList.add('Shades_box_action_p_M');
+      }
+    } else if (boxTop - scrollTop > 400) {
+      // 移除类
+      const paragraph = box.querySelector('p');
+      if (paragraph) {
+        paragraph.classList.remove('Shades_box_action_p_M');
+      }
+    }
+  });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "百叶窗效果",
+  "settings": [
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "上边距",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "下边距",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_top_M",
+      "label": "移动端上边距",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_M",
+      "label": "移动端下边距",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "default": 0
+    }, {
+      "type": "color",
+      "id": "bg_color",
+      "label": "背景颜色",
+      "default": "#fff"
+    }, {
+      "type": "textarea",
+      "id": "tilie",
+      "label": "标题"
+    }, {
+      "type": "color",
+      "id": "box_bg_color",
+      "label": "背景颜色",
+      "default": "#000"
+    }, {
+      "type": "color",
+      "id": "box_color",
+      "label": "字体颜色",
+      "default": "#fff"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "添加盒子",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "图片"
+        }, {
+          "type": "textarea",
+          "id": "title",
+          "label": "标题"
+        }, {
+          "type": "textarea",
+          "id": "text",
+          "label": "文案"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "百叶窗效果",
+      "blocks": [
+        {
+          "type": "slide"
+        }, {
+          "type": "slide"
+        }, {
+          "type": "slide"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

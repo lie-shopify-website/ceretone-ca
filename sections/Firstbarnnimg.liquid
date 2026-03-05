@@ -1,0 +1,713 @@
+<style>
+  [data-section-id="{{ section.id }}"] {
+    background-color: {{ section.settings.bg_color }};
+    padding-top: {{ section.settings.top_one |  append: 'px' }};
+    padding-bottom: {{ section.settings.bottom_one |  append: 'px' }};
+  }
+  .Firstbarnnimg_box {
+    position: relative;
+  }
+  .Firstbarnnimg_box_img {
+    width: 100%;
+  }
+  .Firstbarnnimg_box_img img {
+    width: 100%;
+    height: auto;
+  }
+  [data-section-id="{{ section.id }}"] .Firstbarnnimg_box_body {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 3% 10%;
+    background-color: transparent !important;
+    display: {{ section.settings.text_Alignmentmethod }};
+    justify-content: {{ section.settings.text_alignment }};
+    align-items: {{ section.settings.text_alignment1 }};
+  }
+  [data-section-id="{{ section.id }}"] .Firstbarnnimg_box_flex {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    text-align: {{ section.settings.text_align }};
+  }
+  .Firstbarnnimg_box_img_mic {
+    display: none;
+  }
+  [data-section-id="{{ section.id }}"] .Firstbarnnimg_box_body h1 {
+    margin: 0 0 1.2rem;
+    color: {{ section.settings.color }};
+  }
+  [data-section-id="{{ section.id }}"] .Firstbarnnimg_box_body p {
+    font-size: 1.8rem;
+    margin: 0 0 1.2rem;
+    color: {{ section.settings.color }};
+  }
+  .Firstbarnnimg_box_body_img {
+    display: flex;
+    margin-bottom: 1.2rem;
+  }
+  .Firstbarnnimg_btnimg {
+    width: auto;
+    height: auto;
+    margin-right: 2rem;
+    display: block;
+  }
+  .Firstbarnnimg_box_img_pc {
+    display: block;
+    width: 100%;
+  }
+  .Firstbarnnimg_btn {
+    background: #1566E0;
+    color: #fff;
+    padding: 1rem 3.5rem;
+    border-radius: 2.4rem;
+    font-size: 1.6rem;
+    display: inline-block;
+  }
+  .Firstbarnnimg_btn:hover {
+    background: #fff;
+    color: #1566E0;
+  }
+  .Firstbarnnimg_Discount {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin: 1.5rem 0;
+  }
+  .Firstbarnnimg_box_body .Firstbarnnimg_Discount_information {
+    margin: 0;
+    font-size: 1.6rem;
+    color: {{ section.settings.Discountbg_color }};
+    font-weight: 700;
+  }
+  .Firstbarnnimg_Discount_code {
+    margin-left: 15px;
+    background: {{ section.settings.Discountbg_color }};
+    color: {{ section.settings.Discountzi_color }};
+    padding: 0.5rem 2rem;
+    border-radius: 0.8rem;
+    font-size: 1.6rem;
+  }
+  .Firstbarnnimg_link_box {
+    text-align: center;
+    margin-top: 5rem;
+  }
+  .Firstbarnnimg_link {
+    padding: 1rem 2rem;
+    background: #1566E0;
+    color: #fff;
+    display: inline-block;
+    margin: 0 auto;
+    border-radius: 1.2rem;
+    transition: transform 0.5s ease;
+  }
+  .Firstbarnnimg_link:hover {
+    background: #ffffff;
+    color: #1566E0;
+  }
+  .Firstbarnnimg_box_comment {
+    margin-bottom: 1.2rem;
+  }
+  [data-section-id="{{ section.id }}"] .Firstbarnnimg_box_comment_flex {
+    background-color: {{ section.settings.bg_color_a }};
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border-radius: 2.4rem;
+    margin-bottom: 1.2rem;
+    margin-right: 10%;
+    color: {{ section.settings.color }};
+  }
+  .Firstbarnnimg_box_comment_flex_img {
+    width: 2rem;
+    height: auto;
+    margin-right: 1rem;
+  }
+  .Firstbarnnimg_box_comment_flex_text {
+    margin: 0 !important;
+  }
+  .Firstbarnnimg_box_pc {
+    display: none;
+  }
+  .jdgm-widget.jdgm-widget {
+    display: flex !important;
+    margin-bottom: 1.2rem;
+    text-decoration: none;
+    align-items: center;
+  }
+  @media(max-width: 1400px) {
+    .Firstbarnnimg_btn {
+      background: #1566E0;
+      color: #fff;
+      padding: 1rem 3rem;
+      border-radius: 3rem;
+    }
+    .Firstbarnnimg_box_body p {
+      font-size: 2rem;
+    }
+    .Firstbarnnimg_box_comment_flex {
+      margin-right: 0;
+    }
+    [data-section-id="{{ section.id }}"] .Firstbarnnimg_box_body {
+      padding: 3% 5%;
+    }
+  }
+  @media(max-width: 1290px) {
+    .Firstbarnnimg_btn {
+      background: #1566E0;
+      color: #fff;
+      padding: 0.5rem 3rem;
+      border-radius: 3rem;
+    }
+    [data-section-id="{{ section.id }}"] .Firstbarnnimg_box_body p {
+      font-size: 1.2rem;
+    }
+    .Firstbarnnimg_btnimg {
+      width: 10rem;
+    }
+    .h2 {
+      font-size: 2.4rem;
+    }
+    .Firstbarnnimg_box_none {
+      display: none;
+    }
+  }
+  @media(max-width: 1000px) {
+    .Firstbarnnimg_box_none {
+      display: none;
+    }
+  }
+  @media(max-width: 970px) {
+    [data-section-id="{{ section.id }}"] {
+      padding-top: {{ section.settings.top_one_mic |  append: 'px' }};
+      padding-bottom: {{ section.settings.bottom_one_mic |  append: 'px' }};
+    }
+    .Firstbarnnimg_box_comment {
+      display: none;
+    }
+    .Firstbarnnimg_Discount {
+      justify-content: flex-end;
+      margin: 15px 0;
+
+    }
+    .Firstbarnnimg_box_img_mic {
+      display: block;
+      width: 100%;
+    }
+    .Firstbarnnimg_box_img_pc {
+      display: none;
+    }
+    [data-section-id="{{ section.id }}"] .Firstbarnnimg_box_body {
+      padding: 10% 3%;
+      display: {{ section.settings.text_Alignmentmethod }};
+      justify-content: {{ section.settings.text_alignmentmic }};
+      align-items: {{ section.settings.text_alignment1mic }};
+    }
+    [data-section-id="{{ section.id }}"] .Firstbarnnimg_box_body p {
+      font-size: 1.4rem;
+    }
+    [data-section-id="{{ section.id }}"] .Firstbarnnimg_box_flex {
+      text-align: center;
+      width: {{ section.settings.width_mic |  append: '%' }};
+    }
+    .Firstbarnnimg_box_body_img {
+      margin: 0 auto 1rem;
+    }
+    .Firstbarnnimg_btnimg {
+      width: 15rem;
+      margin: 0;
+    }
+    .Firstbarnnimg_btn {
+      padding: 1rem 2rem;
+      font-size: 1.4rem;
+    }
+    .Firstbarnnimg_box_pc {
+      display: block;
+    }
+    .jdgm-widget.jdgm-widget {
+      flex-flow: column;
+      justify-content: center;
+    }
+    .jdgm-all-reviews-text--style-branded .jdgm-all-reviews-rating {
+      justify-content: center;
+    }
+    .jdgm-all-reviews-text--style-branded .jdgm-all-reviews-text__text {
+      font-size: 14px !important;
+      padding: 0 !important;
+    }
+  }
+</style>
+
+<div
+  data-section-id="{{ section.id }}"
+  class="Firstbarnnimg {% if section.settings.show_pagination %}container{% endif %}"
+>
+  <div class="Firstbarnnimg_box">
+    <div class="Firstbarnnimg_box_img">
+      {% if section.settings.image != blank %}
+        <a href="{{ section.settings.link }}">
+          {{
+            section.settings.image
+            | image_url: width: section.settings.image.width
+            | image_tag:
+              loading: 'lazy',
+              widths: '2200, 2400, 2600, 2800, 3000, 3264, 3400, 3584, 3800, 4000, 4200, 4400, 4600, 4800, 5000, 5200, 5400, 5600',
+              sizes: sizes,
+              class: 'Firstbarnnimg_box_img_pc'
+          }}
+        </a>
+      {% endif %}
+      {% if section.settings.imagemic != blank %}
+        <a href="{{ section.settings.link }}">
+          {{
+            section.settings.imagemic
+            | image_url: width: section.settings.image.width
+            | image_tag:
+              loading: 'lazy',
+              widths: '360, 533, 720, 940, 1066, 1200, 1400, 1600, 1800, 2000, 2200',
+              sizes: sizes,
+              class: 'Firstbarnnimg_box_img_mic'
+          }}
+        </a>
+      {% endif %}
+      {%- if section.settings.video != blank -%}
+        <a href="{{ section.settings.link }}">
+          {{
+            section.settings.video
+            | video_tag:
+              image_size: '1100x',
+              autoplay: true,
+              loop: true,
+              controls: false,
+              muted: true,
+              class: 'Firstbarnnimg_box_img_pc'
+          }}
+        </a>
+        <a href="{{ section.settings.link }}">
+          {{
+            section.settings.videomic
+            | video_tag:
+              image_size: '1100x',
+              autoplay: true,
+              loop: true,
+              controls: false,
+              muted: true,
+              class: 'Firstbarnnimg_box_img_mic'
+          }}
+        </a>
+      {% endif %}
+    </div>
+    <div class="Firstbarnnimg_box_body">
+      <div class="Firstbarnnimg_box_flex">
+        {% if section.settings.slogan != blank %}
+          <p class="Firstbarnnimg_box_none">{{ section.settings.slogan | newline_to_br }}</p>
+        {% endif %}
+        {% if section.settings.heading != blank %}
+          <h1 class="h1">{{ section.settings.heading | newline_to_br }}</h1>
+        {% endif %}
+
+        {% if section.settings.Policy_Information != blank %}
+          <p class="Firstbarnnimg_box_pc">{{ section.settings.Policy_Information | newline_to_br }}</p>
+        {% endif %}
+
+        {% if section.blocks.size > 0 %}
+          <div class="Firstbarnnimg_box_comment">
+            {% for block in section.blocks %}
+              <div class="Firstbarnnimg_box_comment_flex">
+                {{
+                  block.settings.image
+                  | image_url: width: section.settings.image.width
+                  | image_tag:
+                    loading: 'lazy',
+                    widths: '360, 533, 720, 940, 1066, 1200, 1400, 1600, 1800, 2000, 2200, 2400, 2600, 2800, 3000, 3264, 3400, 3584, 3800, 4000, 4200, 4400, 4600, 4800, 5000, 5200, 5400, 5600',
+                    sizes: sizes,
+                    class: 'Firstbarnnimg_box_comment_flex_img'
+                }}
+                {% if block.settings.text != blank %}
+                  <p class="Firstbarnnimg_box_comment_flex_text">{{ block.settings.text | newline_to_br }}</p>
+                {% endif %}
+              </div>
+            {% endfor %}
+          </div>
+        {% endif %}
+
+        {% if section.settings.Discount_information != blank %}
+          <div class="Firstbarnnimg_Discount">
+            <p class="Firstbarnnimg_Discount_information">
+              {{ section.settings.Discount_information | newline_to_br }}
+            </p>
+            <span class="Firstbarnnimg_Discount_code">{{ section.settings.Discount_code }}</span>
+          </div>
+        {% endif %}
+        {% if section.settings.image_btn != blank %}
+          <div class="Firstbarnnimg_box_body_img">
+            {% if section.settings.image_btn != blank %}
+              <a href="{{ section.settings.image_btn_link }}">
+                {{
+                  section.settings.image_btn
+                  | image_url: width: section.settings.image.width
+                  | image_tag:
+                    loading: 'lazy',
+                    widths: '360, 533, 720, 940, 1066, 1200, 1400, 1600, 1800, 2000, 2200, 2400, 2600, 2800, 3000, 3264, 3400, 3584, 3800, 4000, 4200, 4400, 4600, 4800, 5000, 5200, 5400, 5600',
+                    sizes: sizes,
+                    class: 'Firstbarnnimg_btnimg'
+                }}
+              </a>
+            {% endif %}
+            {% if section.settings.image_btn1 != blank %}
+              <a href="{{ section.settings.image_btn_link1 }}">
+                {{
+                  section.settings.image_btn1
+                  | image_url: width: section.settings.image.width
+                  | image_tag:
+                    loading: 'lazy',
+                    widths: '360, 533, 720, 940, 1066, 1200, 1400, 1600, 1800, 2000, 2200, 2400, 2600, 2800, 3000, 3264, 3400, 3584, 3800, 4000, 4200, 4400, 4600, 4800, 5000, 5200, 5400, 5600',
+                    sizes: sizes,
+                    class: 'Firstbarnnimg_btnimg'
+                }}
+              </a>
+            {% endif %}
+          </div>
+        {%- endif -%}
+        {% if section.settings.show_paginationa %}
+          <!-- Start of Judge.me code -->
+          <a class="jdgm-widget jdgm-all-reviews-text" href="https://ceretone.com/pages/test">
+            <span data-score="{{ shop.metafields.judgeme.all_reviews_rating }}" class="jdgm-all-reviews-rating"></span>
+            <span
+              class="jdgm-all-reviews-text__text"
+              data-score="{{ shop.metafields.judgeme.all_reviews_rating }}"
+              data-number-of-reviews="{{ shop.metafields.judgeme.all_reviews_count }}"
+              data-locale="en"
+            >
+              Customers rate us {{ shop.metafields.judgeme.all_reviews_rating | round: 1 }}/5
+            </span>
+          </a>
+        {% endif %}
+
+        {% if section.settings.text != blank %}
+          <p>{{ section.settings.text | newline_to_br }}</p>
+        {% endif %}
+        {% if section.settings.link != blank %}
+          <div>
+            <a
+              href="{{ section.settings.link }}"
+              class="Firstbarnnimg_btn blog__button button button--simple_secondary focus-inset"
+            >
+              <span>{{ section.settings.link_text }}</span>
+            </a>
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+  {% if section.settings.show_view_all %}
+    <div class="Firstbarnnimg_link_box">
+      <a class="Firstbarnnimg_link" href="{{ section.settings.image_btn_link }}">
+        {{ section.settings.title_btn }}
+      </a>
+    </div>
+  {% endif %}
+</div>
+
+{% schema %}
+{
+  "name": "首图",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "背景颜色",
+      "default": "#fff"
+    }, {
+      "type": "color",
+      "id": "bg_color_a",
+      "label": "内容背景颜色",
+      "default": "#fff"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_pagination",
+      "label": "开启全屏显示",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_paginationa",
+      "label": "开启评论显示",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "width_mic",
+      "label": "盒子移动端宽度",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "default": 100
+    }, {
+      "type": "select",
+      "id": "text_Alignmentmethod",
+      "label": "跳转方式",
+      "options": [
+        {
+          "value": "none",
+          "label": "取消文案(点击图片即可跳转)"
+        }, {
+          "value": "flex",
+          "label": "显示文案 点击按钮跳转"
+        }
+      ],
+      "default": "flex"
+    }, {
+      "type": "select",
+      "id": "text_align",
+      "label": "盒子内容对齐方式",
+      "options": [
+        {
+          "value": "left",
+          "label": "左"
+        }, {
+          "value": "center",
+          "label": "中"
+        }, {
+          "value": "right",
+          "label": "右"
+        }
+      ],
+      "default": "left"
+    }, {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "盒子定位",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "左"
+        }, {
+          "value": "center",
+          "label": "中"
+        }, {
+          "value": "flex-end",
+          "label": "右"
+        }
+      ],
+      "default": "center"
+    }, {
+      "type": "select",
+      "id": "text_alignment1",
+      "label": "盒子定位",
+      "options": [
+        {
+          "value": "flex-end",
+          "label": "下"
+        }, {
+          "value": "center",
+          "label": "中"
+        }, {
+          "value": "flex-start",
+          "label": "上"
+        }
+      ],
+      "default": "center"
+    }, {
+      "type": "select",
+      "id": "text_alignmentmic",
+      "label": "移动端盒子定位",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "左"
+        }, {
+          "value": "center",
+          "label": "中"
+        }, {
+          "value": "flex-end",
+          "label": "右"
+        }
+      ],
+      "default": "center"
+    }, {
+      "type": "select",
+      "id": "text_alignment1mic",
+      "label": "移动端盒子定位",
+      "options": [
+        {
+          "value": "flex-end",
+          "label": "下"
+        }, {
+          "value": "center",
+          "label": "中"
+        }, {
+          "value": "flex-start",
+          "label": "上"
+        }
+      ],
+      "default": "center"
+    }, {
+      "type": "range",
+      "id": "top_one",
+      "label": "上边距",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "default": 50
+    }, {
+      "type": "range",
+      "id": "bottom_one",
+      "label": "下边距",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "default": 50
+    }, {
+      "type": "range",
+      "id": "top_one_mic",
+      "label": "移动端上边距",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "default": 20
+    }, {
+      "type": "range",
+      "id": "bottom_one_mic",
+      "label": "移动端下边距",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "default": 20
+    }, {
+      "type": "image_picker",
+      "id": "image",
+      "label": "图片"
+    }, {
+      "type": "image_picker",
+      "id": "imagemic",
+      "label": "移动端图片"
+    }, {
+      "type": "video",
+      "id": "video",
+      "label": "选择视频"
+    }, {
+      "type": "video",
+      "id": "videomic",
+      "label": "选择移动端视频"
+    }, {
+      "type": "text",
+      "id": "slogan",
+      "label": "标语"
+    }, {
+      "type": "text",
+      "id": "heading",
+      "default": "What Our Users Say",
+      "label": "标题"
+    }, {
+      "type": "textarea",
+      "id": "text",
+      "label": "文案"
+    }, {
+      "type": "textarea",
+      "id": "Policy_Information",
+      "label": "移动端政策信息"
+    }, {
+      "type": "color",
+      "id": "color",
+      "label": "字体颜色",
+      "default": "#fff"
+    }, {
+      "type": "textarea",
+      "id": "Discount_information",
+      "label": "折扣信息"
+    }, {
+      "type": "textarea",
+      "id": "Discount_code",
+      "label": "折扣码"
+    }, {
+      "type": "color",
+      "id": "Discountbg_color",
+      "label": "字体/背景颜色",
+      "default": "#F83313"
+    }, {
+      "type": "color",
+      "id": "Discountzi_color",
+      "label": "折扣码字体颜色颜色",
+      "default": "#FFF"
+    }, {
+      "type": "checkbox",
+      "id": "show_view_all",
+      "default": true,
+      "label": "显示图片链接按钮"
+    }, {
+      "type": "text",
+      "id": "title_btn",
+      "default": "Find the Right Hearing Aid for You",
+      "label": "显示图片链接按钮标题"
+    }, {
+      "type": "url",
+      "id": "image_btn_link",
+      "label": "按钮框链接"
+    }, {
+      "type": "image_picker",
+      "id": "image_btn",
+      "label": "图片"
+    }, {
+      "type": "url",
+      "id": "image_btn_link1",
+      "label": "按钮框链接1"
+    }, {
+      "type": "image_picker",
+      "id": "image_btn1",
+      "label": "图片1"
+    }, {
+      "type": "url",
+      "id": "link",
+      "label": "选择链接"
+    }, {
+      "type": "text",
+      "id": "link_text",
+      "label": "链接文本"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "添加评论",
+      "limit": 50,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "图标"
+        }, {
+          "type": "textarea",
+          "id": "text",
+          "label": "评语"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "首图",
+      "blocks": [
+        {
+          "type": "slide"
+        }, {
+          "type": "slide"
+        }, {
+          "type": "slide"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

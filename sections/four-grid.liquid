@@ -1,0 +1,62 @@
+
+
+{% schema %}
+    {
+        "name": "Four Grid",
+        "class":"four-grid",
+        "settings": [
+          { "type": "color", "id": "background", "label": "Background", "default":"#ffffff" },
+          { "type": "textarea", "id":"title", "label":"Title"},
+          
+          { "type": "header","content":"PC"},
+          { "type": "range", "id": "pc_padding_top", "label": "Top Space", "min": 0, "max": 100, "step": 1, "unit": "px", "default": 0 },
+          { "type": "range", "id": "pc_padding_bottom", "label": "Bottom Space", "min": 0, "max": 100, "step": 1, "unit": "px", "default": 0 },
+          { "type": "header","content":"Mobile"},
+          { "type": "range", "id": "mb_padding_top", "label": "Top Space", "min": 0, "max": 100, "step": 1, "unit": "px", "default": 0 },
+          { "type": "range", "id": "mb_padding_bottom", "label": "Bottom Space", "min": 0, "max": 100, "step": 1, "unit": "px", "default": 0 }
+        ],
+        "max_blocks": 4,
+        "blocks": [
+          {
+            "type": "image",
+            "name": "Image",
+            "settings": [
+              { "type": "image_picker", "id": "image", "label": "图片" },
+              { "type": "image_picker", "id": "image_mb", "label": "图片(MB)" },
+              { "type": "textarea", "id":"title", "label":"Title"},
+            ]
+          }
+        ],
+        "presets": [
+            {
+                "name": "Four Grid",
+                "category":"Custom"
+            }
+        ]
+    }
+{% endschema %}
+
+
+{{ 'four-grid.css' | asset_url | stylesheet_tag }}
+
+<section data-section-id="{{ section.id }}">
+    <div class="container">
+        <div class="inner">
+            {% if section.settings.title != blank %}<div class="title h3">{{ section.settings.title | newline_to_br }}</div>{% endif %}
+
+            <div class="four-grid-images">
+              {%- for block in section.blocks -%}
+                <div class="image">
+                    <picture>
+                      <source data-srcset="{{ block.settings.image_mb | image_url: width: 767 }}"  media="(max-width: 767px)" />
+                      <source data-srcset="{{ block.settings.image | image_url: width: block.settings.image.width }}" media="(min-width: 768px)" />
+                      <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lzsrc="{{ block.settings.image_mb | image_url: width: 767 }}" class="js-lazy" width="auto" height="auto" />
+                    </picture>
+
+                    <div class="img-text h6">{{ block.settings.title }}</div>
+                </div>
+              {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,210 @@
+<style>
+  .menu_columns_box {
+    position: relative;
+  }
+  .Metafield_Newproduct {
+    position: absolute;
+    font-weight: 600;
+    top: 1.6rem;
+    left: 1.6rem;
+    z-index: 2;
+    border-radius: 2.4rem;
+    color: #fff;
+    padding: 0.4rem 1rem;
+  }
+  .menu_columns_box a {
+    overflow: hidden;
+    text-decoration: none;
+  }
+  .menu_columns_img {
+    display: block;
+    width: 100%;
+    border-radius: 24px;
+    overflow: hidden;
+  }
+  .menu_columns_h3 {
+    font-size: 1.8rem;
+    margin: 1rem 0;
+  }
+  .Diversified_navigation_price .price-item {
+    font-size: 2rem;
+  }
+  .Diversified_navigation_price .price-item--regular {
+    font-size: 1.8rem;
+  }
+  .Diversified_navigation_price .bold {
+    background: red;
+    padding: 0.5rem;
+    margin-top: 0.3rem;
+    display: inline-block;
+    border-radius: 2.4rem;
+  }
+  .menu_columns_h3 a {
+    text-decoration: none
+  }
+</style>
+
+{% for block in blocks %}
+  {% assign mega_menu_trigger = block.settings.mega_menu_trigger | handle | strip %}
+  {% if link.handle == mega_menu_trigger and block.type == 'mega_menu' %}
+    <div class="header__mega-menu mega-menu mega-menu--columns mega-menu--columns-{{ block.settings.column_to_show }} color-background-1">
+      <div class="mega-menu__columns mega-menu__columns--{{ block.settings.column_to_show }}">
+        {% comment %}
+          {% for i in (1..8) %}
+          {%- assign enable_column_setting = 'enable_column_' | append: i -%}
+          {%- assign link_setting = 'link_' | append: i -%}
+          {%- assign icon_setting = 'icon_' | append: i -%}
+          {%- assign heading_setting = 'heading_' | append: i -%}
+          {%- assign description_setting = 'description_' | append: i -%}
+          {%- assign menu_setting = 'menu_' | append: i -%}
+          {% if block.settings[enable_column_setting] %}
+          <div class="mega-menu__column {% if block.settings[link_setting].url != blank and block.settings.menu_1 == blank %}mega-menu__column--overlay{%- endif -%}">
+          {%- if block.settings[icon_setting] != 'none' -%}
+          <div class="mega-menu__icon mega-menu__icon--{{- block.settings.icon_size }} {% if block.settings.box_shadow %}mega-menu__icon--shadow {% endif %} mega-menu__icon--{{- block.settings.icon_style }} mega-menu__icon--{{- block.settings.icon_fill_type }} color-{{ block.settings.icon_color_scheme }}">
+          <i
+          class="icon icon-pack icon-{{ block.settings[icon_setting] }} {% if block.settings.icon_style == 'colored' and block.settings.icon_fill_type == 'gradient' %} text-gradient {% endif %}"
+          ></i>
+          </div>
+          {%- endif -%}
+          <div class="mega-menu__column-info {% if block.settings[description_setting] == blank %}mega-menu__column-info--only-heading{% endif %}">
+          {%- if block.settings[heading_setting] != blank -%}
+          <div class="mega-menu__column-heading">
+          {{ block.settings[heading_setting] }}
+          </div>
+          {%- endif -%}
+          {%- if block.settings[description_setting] != blank -%}
+          <p class="mega-menu__column-text body-small">
+          {{ block.settings[description_setting] }}
+          </p>
+          {%- endif -%}
+          {%- if block.settings[link_setting].url != blank -%}
+          <a
+          {% if block.settings[link_setting].url != blank %}
+          href="{{ block.settings[link_setting] }}"
+          {% endif %}
+          class="mega-menu__column-link-overlay"
+          {% if block.settings[link_setting].url == blank %}
+          aria-disabled="true"
+          {% endif %}
+          aria-label=""
+          ></a>
+          {%- endif -%}
+          </div>
+          {%- if block.settings[menu_setting] != blank -%}
+          <ul class="mega-menu__column-list list-unstyled" role="list">
+          {%- for link in block.settings[menu_setting].links -%}
+          <li class="mega-menu__column-list-item body-small">
+          <a
+          href="{{ link.url }}"
+          class="mega-menu__column-list-link focus-inset"
+          aria-disabled="true"
+          aria-label="{{ link.title | escape }}"
+          >
+          {{- link.title | escape -}}
+          </a>
+          </li>
+          {% endfor %}
+          </ul>
+          {%- endif -%}
+          </div>
+          {% endif %}
+          {% endfor %}
+        {% endcomment %}
+        {% if section.settings.product_list1 != blank %}
+          {% for product in section.settings.product_list1 %}
+            <div class="menu_columns_box">
+              {% if product.metafields.custom.Newproduct != blank %}
+                <div class="Metafield_Newproduct">{{ product.metafields.custom.Newproduct }}</div>
+              {%- endif -%}
+              {% assign product_image = product.images.first %}
+              {% if product_image %}
+                <a href="{{ product.url }}">
+                  <img
+                    class="menu_columns_img"
+                    src="{{ product_image | img_url: 'medium' }}"
+                    alt="{{ product.title }}"
+                  >
+                </a>
+              {% endif %}
+
+              <a href="{{ product.url }}">
+                <div class="menu_columns_h3">{{ product.title }}</div>
+              </a>
+
+              {% comment %} 价格 {% endcomment %}
+              <div
+                class="Diversified_navigation_price"
+                id="price-{{ section.id }}"
+                {{ block.shopify_attributes }}
+              >
+                {%- render 'price',
+                  product: product,
+                  use_variant: true,
+                  show_badges: true,
+                  price_class: 'price--product'
+                -%}
+                {%- if settings.badge_sale_show -%}
+                  <div class="">
+                    {%- if product.selected_or_first_available_variant.compare_at_price
+                        > product.selected_or_first_available_variant.price
+                      and product.available
+                      and settings.badge_sale_show
+                    -%}
+                      <span class="color-{{ settings.badge_sale_color_scheme }} bold" aria-hidden="true">
+                        {% if settings.badge_sale_type == 'sale' %}
+                          Save
+                        {% else %}
+                          Save
+                          <span>
+                            {{
+                              product.selected_or_first_available_variant.compare_at_price
+                              | minus: product.selected_or_first_available_variant.price
+                              | times: 100
+                              | divided_by: product.selected_or_first_available_variant.compare_at_price
+                            }}
+                            %
+                          </span>
+                        {% endif %}
+                      </span>
+                    {%- endif -%}
+                  </div>
+                {%- endif -%}
+              </div>
+            </div>
+          {% endfor %}
+        {% endif %}
+      </div>
+      {% if block.settings.enable_promo %}
+        <div class="mega-menu__promo">
+          <div class="mega-menu__promo-info">
+            {%- if block.settings.promo_heading != blank -%}
+              <div class="mega-menu__promo-heading">
+                {{ block.settings.promo_heading }}
+              </div>
+            {%- endif -%}
+            {%- if block.settings.promo_description -%}
+              <p class="mega-menu__promo-text body-small">
+                {{ block.settings.promo_description }}
+              </p>
+            {%- endif -%}
+          </div>
+          <a
+            {% if block.settings.promo_link.url != blank %}
+              href="{{ block.settings.promo_link }}"
+            {% endif %}
+            class="mega-menu__column-link button button--{{ block.settings.promo_button_style }} button--arrow focus-inset"
+            {% if block.settings.promo_link.url == blank %}
+              aria-disabled="true"
+            {% endif %}
+            aria-label="{{ block.settings.promo_link_label }}"
+          >
+            <span>
+              {{- block.settings.promo_link_label -}}
+            </span>
+            {% render 'icon-button-arrow' %}
+          </a>
+        </div>
+      {% endif %}
+    </div>
+  {% endif %}
+{% endfor %}

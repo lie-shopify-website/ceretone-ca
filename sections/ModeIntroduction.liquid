@@ -1,0 +1,483 @@
+<style>
+  [data-section-id="{{ section.id }}"] {
+    background-color: {{ section.settings.bg_color }};
+    padding-top: {{ section.settings.top_one |  append: 'rem' }};
+    padding-bottom: {{ section.settings.bottom_one |  append: 'rem' }};
+  }
+  .ModeIntroduction_header {
+    margin: 0 6rem;
+  }
+  [data-section-id="{{ section.id }}"] .ModeIntroduction_header h2 {
+    text-align: {{ section.settings.text_align }};
+    margin: 0 0 2rem;
+  }
+  [data-section-id="{{ section.id }}"] .ModeIntroduction_header h4 {
+    text-align: {{ section.settings.text_align }};
+    margin: 0 0 2rem;
+  }
+  [data-section-id="{{ section.id }}"] .ModeIntroduction_header_box {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: {{ section.settings.flex_direction }};
+  }
+  [data-section-id="{{ section.id }}"] .ModeIntroduction_header_box p {
+    flex: 1;
+    text-align: {{ section.settings.Copywriting_align }};
+    margin: 0 0 2rem;
+    padding: 0 2rem;
+  }
+  [data-section-id="{{ section.id }}"] .ModeIntroduction_box_img_pc {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 1.2rem;
+    {% if section.settings.show_text_box == true %}
+      margin: 0 0 2rem;
+    {% endif %}
+  }
+  [data-section-id="{{ section.id }}"] .ModeIntroduction_box {
+    display: flex;
+    flex-direction: {{ section.settings.flex_direction }};
+  }
+  [data-section-id="{{ section.id }}"] .ModeIntroduction_box_img {
+    flex: 1 1 calc(50% - 1.5rem);
+    box-sizing: border-box;
+    {% if section.settings.show_text_box == false %}
+      margin: 1rem;
+    {% endif %}
+  }
+  .ModeIntroduction_box_text {
+    display: flex;
+    flex: 1 1 calc(50% - 1.5rem);
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    /* 允许子元素换行 */
+    justify-content: space-between;
+  }
+  [data-section-id="{{ section.id }}"] .ModeIntroduction_box_list {
+    {% if section.settings.show_text_box == true %}
+      flex: 1 1 calc({{ section.settings.Content_quantity }}% - 1rem);
+      margin: 5px;
+    {% endif %}
+    {% if section.settings.show_text_box == false %}
+      flex: 1 1 calc({{ section.settings.Content_quantity }}% - 3rem);
+      margin: 1.5rem;
+    {% endif %}
+    box-sizing: border-box;
+    border-radius: 1.2rem;
+    overflow: hidden;
+  }
+  .ModeIntroduction_box_list_iamge_a {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  [data-section-id="{{ section.id }}"] .ModeIntroduction_box_list_text {
+    display: flex;
+    padding: 2rem;
+    align-items: {{ section.settings.flex_align }};
+    {% if section.settings.show_text_box == false %}
+      height: 100%;
+    {% endif %}
+    flex-direction: column;
+    background-color: {{ section.settings.Number_color_box }};
+  }
+  .ModeIntroduction_box_list_text_icon {
+    width: 8rem;
+    height: auto;
+    display: block;
+    margin: 0 0 1rem;
+  }
+  [data-section-id="{{ section.id }}"] .ModeIntroduction_box_list_text h6 {
+    margin: 0 0 1rem;
+    text-align: {{ section.settings.Number_Copywriting_align }};
+    color: {{ section.settings.Number_color_title }};
+  }
+  [data-section-id="{{ section.id }}"] .ModeIntroduction_box_list_text p {
+    margin: 0 0 1rem;
+    text-align: {{ section.settings.Number_Copywriting_align }};
+    color: {{ section.settings.Number_color_text }};
+  }
+  @media(max-width: 768px) {
+    [data-section-id="{{ section.id }}"] {
+      padding-top: {{ section.settings.top_one_mic |  append: 'rem' }};
+      padding-bottom: {{ section.settings.bottom_one_mic |  append: 'rem' }};
+    }
+      .ModeIntroduction_header {
+    margin: 0;
+  }
+    .ModeIntroduction_box_list_text_icon {
+      width: 5rem;
+      height: auto;
+      display: block;
+      margin: 0 0 1rem;
+    }
+    [data-section-id="{{ section.id }}"] .ModeIntroduction_box_list {
+      {% if section.settings.show_text_box == true %}
+        flex: 1 1 calc(50% - 1rem);
+        margin: 0.5rem;
+      {% endif %}
+      {% if section.settings.show_text_box == false %}
+        flex: 1 1 calc(50% - 3rem);
+        margin: 0.5rem;
+      {% endif %}
+    }
+    [data-section-id="{{ section.id }}"] .ModeIntroduction_box_list_text {
+      padding: 1rem;
+    }
+    [data-section-id="{{ section.id }}"] .ModeIntroduction_box {
+      display: block;
+    }
+      [data-section-id="{{ section.id }}"] .ModeIntroduction_box_img {
+    flex: 1 1 calc(50% - 1.5rem);
+    box-sizing: border-box;
+    {% if section.settings.show_text_box == false %}
+      margin: 0rem;
+    {% endif %}
+  }
+  }
+</style>
+
+<div data-section-id="{{ section.id }}" class="ModeIntroduction">
+  <div class="container">
+    <div class="ModeIntroduction_header">
+      {% if section.settings.title != blank %}
+        <h2 class="h2">{{ section.settings.title | newline_to_br }}</h2>
+      {% endif %}
+      {% if section.settings.subtitle != blank %}
+        <h4 class="h4">{{ section.settings.subtitle | newline_to_br }}</h4>
+      {% endif %}
+      <div class="ModeIntroduction_header_box">
+        {% if section.settings.Copywriting != blank %}
+          <p>{{ section.settings.Copywriting | newline_to_br }}</p>
+        {% endif %}
+        {% if section.settings.Copywriting_fu != blank %}
+          <p>{{ section.settings.Copywriting_fu | newline_to_br }}</p>
+        {% endif %}
+      </div>
+    </div>
+    <div class="ModeIntroduction_box">
+      {% if section.settings.image != blank %}
+        <div class="ModeIntroduction_box_img">
+          {{
+            section.settings.image
+            | image_url: width: section.settings.image.width
+            | image_tag:
+              loading: 'lazy',
+              widths: '2200, 2400, 2600, 2800, 3000, 3264, 3400, 3584, 3800, 4000, 4200, 4400, 4600, 4800, 5000, 5200, 5400, 5600',
+              sizes: sizes,
+              class: 'ModeIntroduction_box_img_pc'
+          }}
+        </div>
+      {% endif %}
+      <div class="ModeIntroduction_box_text">
+        {% for block in section.blocks %}
+          <div class="ModeIntroduction_box_list">
+            {% if block.settings.image != blank %}
+              <div class="ModeIntroduction_box_list_iamge">
+                {{
+                  block.settings.image
+                  | image_url: width: block.settings.image.width
+                  | image_tag:
+                    loading: 'lazy',
+                    widths: '2200, 2400, 2600, 2800, 3000, 3264, 3400, 3584, 3800, 4000, 4200, 4400, 4600, 4800, 5000, 5200, 5400, 5600',
+                    sizes: sizes,
+                    class: 'ModeIntroduction_box_list_iamge_a'
+                }}
+              </div>
+            {% endif %}
+            <div class="ModeIntroduction_box_list_text">
+              {% if block.settings.image_icon != blank %}
+                {{
+                  block.settings.image_icon
+                  | image_url: width: block.settings.image_icon.width
+                  | image_tag:
+                    loading: 'lazy',
+                    widths: '2200, 2400, 2600, 2800, 3000, 3264, 3400, 3584, 3800, 4000, 4200, 4400, 4600, 4800, 5000, 5200, 5400, 5600',
+                    sizes: sizes,
+                    class: 'ModeIntroduction_box_list_text_icon'
+                }}
+              {% endif %}
+              {% if block.settings.title != blank %}
+                <h6 class="h6">
+                  {{ block.settings.title | newline_to_br }}
+                </h6>
+              {% endif %}
+              {% if block.settings.text != blank %}
+                <p class="ModeIntroduction_box_list_textP">{{ block.settings.text | newline_to_br }}</p>
+              {% endif %}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% if section.settings.show_text_box == true %}
+  <script>
+    var slides = document.querySelectorAll('.ModeIntroduction_box_list_text');
+    var maxHeight = 0;
+    slides.forEach(function (slide) {
+        var slideHeight = slide.offsetHeight;
+        if (slideHeight > maxHeight) {
+            maxHeight = slideHeight;
+        }
+    });
+    slides.forEach(function (slide) {
+        slide.style.height = maxHeight + 'px';
+    });
+  </script>
+{% endif %}
+
+{% schema %}
+{
+  "name": "模式介绍",
+  "settings": [
+    {
+      "type": "range",
+      "id": "top_one",
+      "label": "上边距",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "rem",
+      "default": 5
+    },
+    {
+      "type": "range",
+      "id": "bottom_one",
+      "label": "下边距",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "rem",
+      "default": 5
+    },
+    {
+      "type": "range",
+      "id": "top_one_mic",
+      "label": "移动端上边距",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "rem",
+      "default": 2
+    },
+    {
+      "type": "range",
+      "id": "bottom_one_mic",
+      "label": "移动端下边距",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "rem",
+      "default": 2
+    }, {
+      "type": "color",
+      "id": "bg_color",
+      "label": "背景颜色",
+      "default": "#fff"
+    }, {
+      "type": "select",
+      "id": "text_align",
+      "label": "文本对齐方式",
+      "options": [
+        {
+          "value": "left",
+          "label": "靠左"
+        }, {
+          "value": "center",
+          "label": "居中"
+        }, {
+          "value": "right",
+          "label": "靠右"
+        }
+      ],
+      "default": "center"
+    }, {
+      "type": "textarea",
+      "id": "title",
+      "label": "标题"
+    }, {
+      "type": "textarea",
+      "id": "subtitle",
+      "label": "副标题"
+    }, {
+      "type": "select",
+      "id": "flex_direction",
+      "label": "主图布局方式",
+      "options": [
+        {
+          "value": "column",
+          "label": "上下排序"
+        }, {
+          "value": "row",
+          "label": "左右排序"
+        }
+      ],
+      "default": "row"
+    }, {
+      "type": "select",
+      "id": "Content_quantity",
+      "label": "内容区一行数量",
+      "options": [
+        {
+          "value": "25",
+          "label": "四个"
+        }, {
+          "value": "50",
+          "label": "两个"
+        }
+      ],
+      "default": "25"
+    }, {
+      "type": "checkbox",
+      "id": "show_text_box",
+      "default": true,
+      "label": "是否启用内容区自动标齐"
+    }, {
+      "type": "select",
+      "id": "Copywriting_align",
+      "label": "文案对齐方式",
+      "options": [
+        {
+          "value": "left",
+          "label": "靠左"
+        }, {
+          "value": "center",
+          "label": "居中"
+        }, {
+          "value": "right",
+          "label": "靠右"
+        }
+      ],
+      "default": "center"
+    }, {
+      "type": "textarea",
+      "id": "Copywriting",
+      "label": "主文案"
+    }, {
+      "type": "textarea",
+      "id": "Copywriting_fu",
+      "label": "副文案"
+    }, {
+      "type": "image_picker",
+      "id": "image",
+      "label": "图片"
+    }, {
+      "type": "image_picker",
+      "id": "imagemobile",
+      "label": "移动端图片"
+    }, {
+      "type": "color",
+      "id": "Number_color_box",
+      "label": "介绍区盒子背景颜色",
+      "default": "#dedede"
+    }, {
+      "type": "color",
+      "id": "Number_color_title",
+      "label": "介绍区标题字体颜色",
+      "default": "#000000"
+    }, {
+      "type": "color",
+      "id": "Number_color_text",
+      "label": "介绍区文案字体颜色",
+      "default": "#cccccc"
+    }, {
+      "type": "select",
+      "id": "Number_Copywriting_align",
+      "label": "介绍区文案对齐方式",
+      "options": [
+        {
+          "value": "left",
+          "label": "靠左"
+        }, {
+          "value": "center",
+          "label": "居中"
+        }, {
+          "value": "right",
+          "label": "靠右"
+        }
+      ],
+      "default": "center"
+    }, {
+      "type": "select",
+      "id": "flex_justify",
+      "label": "介绍区内容对齐方式",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "居上"
+        }, {
+          "value": "center",
+          "label": "居中"
+        }, {
+          "value": "flex-end",
+          "label": "居下"
+        }
+      ],
+      "default": "flex-start"
+    }, {
+      "type": "select",
+      "id": "flex_align",
+      "label": "介绍区内容对齐方式",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "居左"
+        }, {
+          "value": "center",
+          "label": "居中"
+        }, {
+          "value": "flex-end",
+          "label": "居右"
+        }
+      ],
+      "default": "flex-start"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "添加数值",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "图片"
+        }, {
+          "type": "textarea",
+          "id": "title",
+          "label": "标题"
+        }, {
+          "type": "textarea",
+          "id": "text",
+          "label": "文本"
+        }, {
+          "type": "image_picker",
+          "id": "image_icon",
+          "label": "图标"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "模式介绍",
+      "blocks": [
+        {
+          "type": "slide"
+        }, {
+          "type": "slide"
+        }, {
+          "type": "slide"
+        }, {
+          "type": "slide"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,181 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "header",
+  "name": "t:sections.header.settings.header-group.label",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "custom_css": [],
+      "settings": {
+        "height": 45,
+        "height_mobile": 40,
+        "color_scheme": "background-3",
+        "text": "Need help? Call us at <a href=\"tel:+18662834262\" title=\"Ceretone Support\">(866) 283-4262</a>",
+        "btn_link": "",
+        "btn_label": "",
+        "icon": "none",
+        "icon_color_scheme": "",
+        "icon_style": "colored",
+        "icon_fill_type": "gradient",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "header": {
+      "type": "header",
+      "blocks": {
+        "mega_menu_product_list_yptY6T": {
+          "type": "mega_menu_product_list",
+          "settings": {
+            "menu_item": "PRODUCTS",
+            "block_text": "Invisible In Canal",
+            "block_url": "",
+            "block_icon": "shopify://shop_images/menu-hot-icon.png",
+            "product1": "core-one-pro-otc-hearing-aids",
+            "product_image1": "shopify://shop_images/core_one_pro_menu.png",
+            "product_image_mb1": "shopify://shop_images/core_one_pro_mobile.png",
+            "product_tip1": "Hero Product",
+            "product_tip_color1": "#de3030",
+            "product_title1": "Core One Pro",
+            "product2": "core-one-otc-hearing-aids",
+            "product_image2": "shopify://shop_images/core_one_menu.png",
+            "product_image_mb2": "shopify://shop_images/core_one_mobile.png",
+            "product_tip2": "",
+            "product_tip_color2": "#1566e0",
+            "product_title2": "Core One",
+            "product3": "",
+            "product_tip3": "",
+            "product_tip_color3": "#000000",
+            "product_title3": "",
+            "product4": "",
+            "product_tip4": "",
+            "product_tip_color4": "#000000",
+            "product_title4": "",
+            "product5": "",
+            "product_tip5": "",
+            "product_tip_color5": "#000000",
+            "product_title5": "",
+            "product6": "",
+            "product_tip6": "",
+            "product_tip_color6": "#000000",
+            "product_title6": ""
+          }
+        },
+        "mega_menu_product_list_QdUFez": {
+          "type": "mega_menu_product_list",
+          "settings": {
+            "menu_item": "PRODUCTS",
+            "block_text": "In The Ear",
+            "block_url": "",
+            "product1": "torch-otc-hearing-aids",
+            "product_image1": "shopify://shop_images/Torch__menu.png",
+            "product_image_mb1": "shopify://shop_images/Torch_mobile.png",
+            "product_tip1": "Advanced",
+            "product_tip_color1": "#1566e0",
+            "product_title1": "Torch",
+            "product2": "",
+            "product_tip2": "",
+            "product_tip_color2": "#1566e0",
+            "product_title2": "",
+            "product3": "",
+            "product_tip3": "",
+            "product_tip_color3": "#000000",
+            "product_title3": "",
+            "product4": "",
+            "product_tip4": "",
+            "product_tip_color4": "#000000",
+            "product_title4": "",
+            "product5": "",
+            "product_tip5": "",
+            "product_tip_color5": "#000000",
+            "product_title5": "",
+            "product6": "",
+            "product_tip6": "",
+            "product_tip_color6": "#000000",
+            "product_title6": ""
+          }
+        },
+        "mega_menu_product_list_VfQLPC": {
+          "type": "mega_menu_product_list",
+          "settings": {
+            "menu_item": "PRODUCTS",
+            "block_text": "Behind The Ear",
+            "block_url": "",
+            "product1": "beacon-otc-hearing-aids",
+            "product_image1": "shopify://shop_images/Beacon_menu.png",
+            "product_image_mb1": "shopify://shop_images/Beacon_mobile.png",
+            "product_tip1": "Premium",
+            "product_tip_color1": "#1566e0",
+            "product_title1": "Beacon",
+            "product2": "solid-otc-hearing-aids",
+            "product_image2": "shopify://shop_images/Solid_menu.png",
+            "product_image_mb2": "shopify://shop_images/Solid_mobile.png",
+            "product_tip2": "",
+            "product_tip_color2": "#1566e0",
+            "product_title2": "Solid",
+            "product3": "",
+            "product_tip3": "",
+            "product_tip_color3": "#000000",
+            "product_title3": "",
+            "product4": "",
+            "product_tip4": "",
+            "product_tip_color4": "#000000",
+            "product_title4": "",
+            "product5": "",
+            "product_tip5": "",
+            "product_tip_color5": "#000000",
+            "product_title5": "",
+            "product6": "",
+            "product_tip6": "",
+            "product_tip_color6": "#000000",
+            "product_title6": ""
+          }
+        }
+      },
+      "block_order": [
+        "mega_menu_product_list_yptY6T",
+        "mega_menu_product_list_QdUFez",
+        "mega_menu_product_list_VfQLPC"
+      ],
+      "custom_css": [],
+      "settings": {
+        "header_type": "left-logo",
+        "full_width": true,
+        "logo": "shopify://shop_images/logo_2x_4cf0022c-f97e-42e3-b2d2-a9cc5e08798b.png",
+        "logo_width": 90,
+        "menu": "main-menu",
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "enable_social": false,
+        "sticky_header_type": "always",
+        "enable_search": true,
+        "search_color_scheme": "",
+        "enable_box_shadow": true,
+        "image_ratio": "1/1",
+        "image_fit": "contain",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "url1": "shopify://collections/hearing-products",
+        "icon1": "shopify://shop_images/menu-compare-products-icon.png",
+        "text1": "Compare Products",
+        "url2": "shopify://collections/accessories",
+        "icon2": "shopify://shop_images/menu-acc-icon.png",
+        "text2": "Accessories",
+        "url3": "shopify://collections/accessories",
+        "text3": ""
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "header"
+  ]
+}

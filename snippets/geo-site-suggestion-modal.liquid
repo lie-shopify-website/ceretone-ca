@@ -1,0 +1,355 @@
+{% comment %}
+  Geo site suggestion modal: shown to visitors from UK on ceretone.com.
+  Dismissed state is stored in sessionStorage; modal won't show again until browser is closed.
+{% endcomment %}
+<div id="geo-site-suggestion-modal" class="geo-site-suggestion-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="geo-site-suggestion-modal-title">
+  <div class="geo-site-suggestion-modal__overlay" aria-hidden="true"></div>
+  <div class="geo-site-suggestion-modal__box" role="document">
+
+    <button type="button" class="geo-site-suggestion-modal__close link focus-inset" data-geo-modal-close aria-label="{{ 'accessibility.close' | t }}">
+      <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15 1.00001L14 0.000176677L7.49991 6.49999L1.00002 0L0 1.00001L6.49989 7.5L0 14L0.999847 15L7.49991 8.50001L14 15L15 14L8.49993 7.5L15 1.00001Z" fill="#FFFEFB"/>
+      </svg>
+    </button>
+
+    <div class="bg-image">
+      <picture>
+        <source data-srcset="https://cdn.shopify.com/s/files/1/0517/0436/5244/files/popup-bg-mb001.png?v=1770802993" media="(max-width: 989px)" />
+        <source data-srcset="https://cdn.shopify.com/s/files/1/0517/0436/5244/files/popup-bg-001.png?v=1770802993" media="(min-width: 990px)" />
+        <img data-src="https://cdn.shopify.com/s/files/1/0517/0436/5244/files/popup-bg-mb001.png?v=1770802993" width="100%" height="auto" alt="" />
+      </picture>
+    </div>
+
+
+    
+
+    <div class="geo-content">
+
+      <div class="geo-logo">
+        <img data-src="https://cdn.shopify.com/s/files/1/0517/0436/5244/files/Ceretone-logo_White_Orange.png?v=1700726228&width=260" width="100%" height="auto" alt="Ceretone" />
+      </div>
+
+      <h2 id="geo-site-suggestion-modal-title" class="geo-site-suggestion-modal__title">
+        It looks like you're visiting from the UK.
+      </h2>
+      <p class="geo-site-suggestion-modal__text">
+        Visit our UK website for local <span>pricing and delivery.</span>
+      </p>
+      <div class="geo-site-suggestion-modal__actions">
+        <a href="https://ceretone.uk" class="button button--primary geo-site-suggestion-modal__btn geo-site-suggestion-modal__btn--primary">
+          Go to Ceretone UK
+        </a>
+        <button type="button" class="button button--secondary geo-site-suggestion-modal__btn geo-site-suggestion-modal__btn--secondary" data-geo-modal-stay>
+          Stay on US site
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .geo-site-suggestion-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 99999999;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .geo-site-suggestion-modal.is-open {
+    display: flex;
+  }
+  .geo-site-suggestion-modal__overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(var(--color-overlay, 0, 0, 0), 0.5);
+    cursor: default;
+  }
+  .geo-site-suggestion-modal__box {
+    position: relative;
+    background: rgb(var(--color-background));
+    color: rgb(var(--color-foreground));
+    padding: 0;
+    max-width: 100%;
+    width: 100%;
+    height: 100vh;
+  }
+  .geo-site-suggestion-modal__close {
+    position: absolute;
+    top: 33px;
+    right: 24px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: block;
+    z-index: 1;
+  }
+
+  .geo-site-suggestion-modal__box .bg-image {
+      height: 100%;
+  }
+
+  .geo-site-suggestion-modal__box .bg-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .geo-site-suggestion-modal__box .geo-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 100%;
+    padding: 24px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+
+  .geo-site-suggestion-modal__box .geo-logo {
+      max-width: 130px;
+      margin: 0 auto 40px;
+  }
+
+  .geo-site-suggestion-modal__title {
+    margin: 0 0 40px;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 500;
+    color: #fff;
+  }
+  .geo-site-suggestion-modal__text {
+    margin: 0 0 40px;
+    font-size: 20px;
+    line-height: 24px;
+    color: #fff;
+    font-weight: 700;
+  }
+  .geo-site-suggestion-modal__text span {
+    display:block;
+    font-size: 32px;
+    line-height: 34px;
+    font-weight: 700;
+    margin:20px auto 0;
+  }
+
+
+  .geo-site-suggestion-modal__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    flex-direction: column;
+  }
+  .geo-site-suggestion-modal__btn {
+    min-height: 64px;
+    padding: 0;
+    max-width: 280px;
+    width: 100%;
+    background: #fff;
+    color: #2D2D2D;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: unset;
+  }
+  .geo-site-suggestion-modal__btn--secondary {
+    background: #FAD000;
+  }
+  .geo-site-suggestion-modal__btn--secondary:focus {
+      background-color: #fad000b0;
+  }
+  .geo-site-suggestion-modal__btn--secondary:hover {
+    opacity: 0.9;
+  }
+
+
+
+  @media (min-width: 990px) {
+    .geo-site-suggestion-modal__actions {
+        flex-direction: row;
+        gap: 24px;
+        justify-content: center;
+    }
+
+    .geo-site-suggestion-modal__box {
+      max-width: 600px;
+      max-height: 338px;
+      box-shadow: 0px 2px 8px 0px #00000080;
+      border-radius: 10px;
+    }
+
+    .geo-site-suggestion-modal__box .geo-logo {
+        margin: 0px auto 30px;
+    }
+    .geo-site-suggestion-modal__title {
+        margin: 0 0 10px;
+        font-size: 22px;
+        line-height: 28px;
+        font-weight: 400;
+    }
+    .geo-site-suggestion-modal__text {
+        margin: 0 0 30px;
+        font-size: 22px;
+        line-height: 28px;
+        color: #fff;
+        font-weight: 400;
+    }
+    .geo-site-suggestion-modal__text span {
+        display: inline;
+        font-size: unset;
+        line-height: unset;
+        font-weight: unset;
+        margin: unset;
+    }
+
+    .geo-site-suggestion-modal__btn {
+        min-height: 36px;
+        max-width: 204px;
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .geo-site-suggestion-modal__box .bg-image img {
+        border-radius: 10px;
+    }
+
+    .geo-site-suggestion-modal__btn:hover {
+      background: #fff;
+      color: #2D2D2D;
+    }
+    .geo-site-suggestion-modal__btn--secondary:hover {
+      background: #fad000b0;
+      color: #2D2D2D;
+    }
+  }
+
+</style>
+
+<script>
+  (function() {
+    var STORAGE_KEY = 'ceretone_uk_modal_dismissed';
+    var UK_COUNTRY_CODES = ['GB', 'UK'];
+
+    function wasDismissedInSession() {
+      try {
+        return !!sessionStorage.getItem(STORAGE_KEY);
+      } catch (e) {
+        return false;
+      }
+    }
+
+    function setDismissedForSession() {
+      try {
+        sessionStorage.setItem(STORAGE_KEY, '1');
+      } catch (e) {}
+    }
+
+    function shouldShowModal() {
+      return !wasDismissedInSession();
+    }
+
+    function isUKCountry(code) {
+      return code && UK_COUNTRY_CODES.indexOf(code.toUpperCase()) !== -1;
+    }
+
+    var scrollLockScrollY = 0;
+
+    function loadModalImages(container) {
+      if (!container) return;
+      container.querySelectorAll('img[data-src]').forEach(function(img) {
+        var src = img.getAttribute('data-src');
+        if (src) { img.src = src; }
+      });
+      container.querySelectorAll('source[data-srcset]').forEach(function(s) {
+        var srcset = s.getAttribute('data-srcset');
+        if (srcset) { s.srcset = srcset; }
+      });
+    }
+
+    function showModal() {
+      var el = document.getElementById('geo-site-suggestion-modal');
+      if (el) {
+        loadModalImages(el);
+        scrollLockScrollY = window.scrollY || window.pageYOffset;
+        document.documentElement.style.overflow = 'hidden';
+        document.documentElement.style.height = '100%';
+        document.body.style.overflow = 'hidden';
+        document.body.style.position = 'fixed';
+        document.body.style.top = '-' + scrollLockScrollY + 'px';
+        document.body.style.left = '0';
+        document.body.style.right = '0';
+        el.classList.add('is-open');
+        el.setAttribute('aria-hidden', 'false');
+      }
+    }
+
+    function closeModal() {
+      var el = document.getElementById('geo-site-suggestion-modal');
+      if (el) {
+        el.classList.remove('is-open');
+        el.setAttribute('aria-hidden', 'true');
+        document.documentElement.style.overflow = '';
+        document.documentElement.style.height = '';
+        document.body.style.overflow = '';
+        document.body.style.position = '';
+        document.body.style.top = '';
+        document.body.style.left = '';
+        document.body.style.right = '';
+        window.scrollTo(0, scrollLockScrollY);
+      }
+      setDismissedForSession();
+    }
+
+    function init() {
+      if (!shouldShowModal()) return;
+
+      var modal = document.getElementById('geo-site-suggestion-modal');
+      if (!modal) return;
+
+      function handleClose() {
+        closeModal();
+      }
+
+      modal.querySelectorAll('[data-geo-modal-close]').forEach(function(node) {
+        node.addEventListener('click', handleClose);
+      });
+      modal.querySelectorAll('[data-geo-modal-stay]').forEach(function(node) {
+        node.addEventListener('click', handleClose);
+      });
+
+      // 使用 Shopify 自带的 browsing_context_suggestions 接口获取访客国家
+      fetch('/browsing_context_suggestions.json')
+        .then(function(res) { return res.json(); })
+        .then(function(data) {
+
+          {% comment %} // 调试：将接口返回输出到 body 底部（上线前删除）
+          var debugEl = document.createElement('pre');
+          debugEl.id = 'geo-site-suggestion-debug';
+          debugEl.style.cssText = 'position:fixed;bottom:0;left:0;right:0;max-height:200px;overflow:auto;margin:0;padding:12px;font-size:12px;background:#1e1e1e;color:#d4d4d4;z-index:99999;border-top:1px solid #444;';
+          debugEl.textContent = 'browsing_context_suggestions.json:\n' + JSON.stringify(data, null, 2);
+          document.body.appendChild(debugEl); {% endcomment %}
+
+          var countryHandle = data && data.detected_values && data.detected_values.country && data.detected_values.country.handle;
+          if (isUKCountry(countryHandle)) {
+            showModal();
+          }
+        })
+        .catch(function() {});
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+  })();
+</script>

@@ -1,0 +1,114 @@
+{% schema %}
+{
+    "name": "Custom Slideshow",
+    "settings": [
+        { "type": "text", "id": "custom_class", "label": "自定义class" },
+        { "type": "checkbox", "id": "auto_loop", "label": "自动轮播", "default":false },
+        { "type": "range", "id": "auto_loop_speed", "label": "自动轮播速度(秒)", "min": 1, "max": 10, "step": 1, "unit": "s", "default": 5 }
+    ],
+    "blocks": [
+        {
+            "type": "slide",
+            "name": "Slide",
+            "settings": [
+                { "type": "image_picker", "id": "image", "label": "图片" },
+                { "type": "image_picker", "id": "image_mb", "label": "图片(手机端)" },
+                { "type": "liquid", "id": "title", "label": "标题" },
+                { "type": "liquid", "id": "content", "label": "内容" },
+
+                { "type": "header", "content": "按钮" },
+                { "type": "text", "id": "button_label", "label": "按钮文本", "default": "Shop Now" },
+                { "type": "url", "id": "button_link", "label": "按钮链接" }
+            ]
+        }
+    ],
+
+    "presets": [
+        {
+        "name": "Custom Slideshow",
+        "category": "custom"
+        }
+    ]
+}
+{% endschema %}
+
+
+<link rel="stylesheet" href="{{ 'custom-slideshow.css' | asset_url }}" media="all" >
+
+<div class="custom-slideshow" data-section-id="{{ section.id }}">
+    <div class="slideshow-inner">
+        <div class="slideshow-swiper">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    {% for block in section.blocks %}
+                        <div class="swiper-slide">
+                            {% if block.settings.button_link != blank %} <a class="overly-link" href="{{ block.settings.button_link }}"></a> {% endif %}
+                            <div class="image">
+                                {% if block.settings.image != blank %}
+                                    <picture>
+                                        <source data-srcset="{{ block.settings.image_mb | image_url: width: 767 }}"  media="(max-width: 767px)" />
+                                        <source data-srcset="{{ block.settings.image | image_url: width: block.settings.image.width }}" media="(min-width: 768px)" />
+                                        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lzsrc="{{ block.settings.image_mb | image_url: width: 767 }}" class="js-lazy" width="auto" height="auto" />
+                                    </picture>
+                                {% endif %}
+                            </div>
+                            <div class="content">
+                                <div class="safe-container">
+                                    <div class="content-inner">
+                                        {% if block.settings.title != blank %}
+                                            <div class="slideshow-title"><h2>{{ block.settings.title }}</h2></div>
+                                        {% endif %}
+
+                                        {% if block.settings.content != blank %}
+                                            <div class="slideshow-content"><p>{{ block.settings.content }}</p></div>
+                                        {% endif %}
+
+                                        {% if block.settings.button_label != blank and block.settings.button_link != blank %}
+                                            <div class="slideshow-button">
+                                                <a href="{{ block.settings.button_link }}">
+                                                    <span>{{ block.settings.button_label }}</span>
+                                                </a>
+                                            </div>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+; (function () {
+    const oSection = document.querySelector('[data-section-id="{{ section.id }}"]');
+
+    function initSwiper(){
+        const mainSwiperEle = oSection.querySelector('.swiper');
+        
+        if(mainSwiperEle) {
+            const mainSwiper = new Swiper(mainSwiperEle, {
+                spaceBetween: 20,
+                slidesPerView: 1,
+                {% if section.settings.auto_loop %}
+                    autoplay: {
+                        delay: {{ section.settings.auto_loop_speed | times: 1000 }},
+                        disableOnInteraction: false,
+                    },
+                {% endif %}
+                pagination: {
+                    el: mainSwiperEle.querySelector('.swiper-pagination'),
+                    clickable: true
+                }
+            });
+        }
+    }
+    
+    window.addEventListener('DOMContentLoaded', function() {
+        initSwiper();
+    });
+
+})();
+</script>

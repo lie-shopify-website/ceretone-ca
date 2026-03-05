@@ -1,0 +1,647 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "product_comparison_tj9Heg": {
+      "type": "ProductComparison",
+      "blocks": {
+        "slide_MHjgcc": {
+          "type": "slide",
+          "settings": {
+            "identification": "",
+            "product_name": "Shop Core One Pro",
+            "link_text": "Shop Now",
+            "sellingpoint": "SMALLEST",
+            "product_into": "core-one-pro-otc-hearing-aids",
+            "image": "shopify://shop_images/otc.png",
+            "text": "<strong>OTC</strong>\nOver-the-counter",
+            "image_1": "shopify://shop_images/33a46981f02bf62c9c47bcfd2d9d9ec2.png",
+            "text_1": "<strong>Widely application</strong>\nMild to moderate hearing loss",
+            "image_2": "shopify://shop_images/f7a24d3c6d262fc395d245b6a310444f.png",
+            "text_2": "<strong>Nearly invisible</strong>\n<span style=\"font-weight: bold; color: #FF4F00;\">Invisible-in-canal (IIC)</span>",
+            "image_3": "shopify://shop_images/sound_icons.png",
+            "text_3": "<strong>Advanced acoustics</strong>\nNoise reduction and feedback\ncancellation",
+            "text_4": "",
+            "image_5": "shopify://shop_images/de26d8bf8c120599b404eafb0ed3e341.png",
+            "text_5": "<strong>Button control</strong>\n<span style=\"font-weight: bold; color: #FF4F00;\">4 Programs</span>",
+            "image_6": "shopify://shop_images/82130677ba6990549a642f2547d64f77.png",
+            "text_6": "<span style=\"font-weight: bold; color: #FF4F00;\">20 hours </span>\n<span style=\"font-weight: bold; color: #FF4F00;\">80 hours </span>with charging case",
+            "image_7": "shopify://shop_images/rechargeable_icons.png",
+            "text_7": "<strong>Rechargeable</strong>\nBoth hearing aids & case",
+            "image_8": "shopify://shop_images/07e7d50cfc079991c520aed349ba6b7a.png",
+            "text_8": "<span style=\"font-weight: bold; color: #ff4f00;\">IP68</span>\nWater-resistant",
+            "image_9": "shopify://shop_images/5_4573d177-ce78-4826-87a6-551cfbb4cff0.png",
+            "text_9": "<strong>60 days</strong>\nRisk-free trial"
+          }
+        },
+        "slide_ryWgTT": {
+          "type": "slide",
+          "settings": {
+            "identification": "",
+            "product_name": "Shop Beacon",
+            "link_text": "Shop Now",
+            "sellingpoint": "SELF-FITTING",
+            "product_into": "beacon-otc-hearing-aids",
+            "image": "shopify://shop_images/otc.png",
+            "text": "<strong>OTC</strong>\nOver-the-counter",
+            "image_1": "shopify://shop_images/33a46981f02bf62c9c47bcfd2d9d9ec2.png",
+            "text_1": "<strong>Widely application</strong>\nMild to moderate hearing loss",
+            "image_2": "shopify://shop_images/f7a24d3c6d262fc395d245b6a310444f.png",
+            "text_2": "<strong>Virtually invisible</strong>\n <span style=\"font-weight: bold; color: #FF4F00;\">Receiver-in-canal (RIC)</span>",
+            "image_3": "shopify://shop_images/sound_icons.png",
+            "text_3": "<strong>Advanced acoustics</strong>\nNoise reduction and feedback\ncancellation",
+            "image_4": "shopify://shop_images/F.png",
+            "text_4": "<span style=\"font-weight: bold; color:#FF4F00;\">Bluetooth 5.0</span>\nStream phone calls and music",
+            "image_5": "shopify://shop_images/APP.png",
+            "text_5": "<strong>Bluetooth app</strong>\n<span style=\"font-weight: bold; color: #FF4F00;\">4 Programs</span>",
+            "image_6": "shopify://shop_images/82130677ba6990549a642f2547d64f77.png",
+            "text_6": "<span style=\"font-weight: bold; color: #FF4F00;\">15 hours</span>\n<span style=\"font-weight: bold; color: #FF4F00;\">60 hours</span> with charging case",
+            "image_7": "shopify://shop_images/rechargeable_icons.png",
+            "text_7": "<strong>Rechargeable</strong>\nBoth hearing aids & case",
+            "image_8": "shopify://shop_images/07e7d50cfc079991c520aed349ba6b7a.png",
+            "text_8": "<span style=\"font-weight: bold; color:#FF4F00;\">IPX8</span>\nWater-resistant",
+            "image_9": "shopify://shop_images/5_4573d177-ce78-4826-87a6-551cfbb4cff0.png",
+            "text_9": "<strong>60 days</strong>\nRisk-free trial"
+          }
+        },
+        "slide_T3ENCh": {
+          "type": "slide",
+          "settings": {
+            "identification": "",
+            "product_name": "Shop Torch",
+            "link_text": "Shop Now",
+            "sellingpoint": "STYLISH",
+            "product_into": "torch-otc-hearing-aids",
+            "image": "shopify://shop_images/otc.png",
+            "text": "<strong>OTC</strong>\nOver-the-counter",
+            "image_1": "shopify://shop_images/33a46981f02bf62c9c47bcfd2d9d9ec2.png",
+            "text_1": "<strong>Widely application</strong>\nMild to moderate hearing loss",
+            "image_2": "shopify://shop_images/f7a24d3c6d262fc395d245b6a310444f.png",
+            "text_2": "<strong>Small & invisible</strong>\n <span style=\"font-weight: bold; color: #FF4F00;\">In-the-ear(ITE)</span>",
+            "image_3": "shopify://shop_images/sound_icons.png",
+            "text_3": "<strong>Advanced acoustics</strong>\nNoise reduction and feedback\ncancellation",
+            "text_4": "",
+            "image_5": "shopify://shop_images/de26d8bf8c120599b404eafb0ed3e341.png",
+            "text_5": "<strong>MFB control</strong>\n<span style=\"font-weight: bold; color: #FF4F00;\">5 Programs</span>",
+            "image_6": "shopify://shop_images/82130677ba6990549a642f2547d64f77.png",
+            "text_6": "<span style=\"font-weight: bold; color: #FF4F00;\">25 hours</span>\n<span style=\"font-weight: bold; color: #FF4F00;\">100 hours</span> with charging case",
+            "image_7": "shopify://shop_images/rechargeable_icons.png",
+            "text_7": "<strong>Rechargeable</strong>\nBoth hearing aids & case",
+            "image_8": "shopify://shop_images/07e7d50cfc079991c520aed349ba6b7a.png",
+            "text_8": "<strong>IP54</strong>\nWater-resistant",
+            "image_9": "shopify://shop_images/5_4573d177-ce78-4826-87a6-551cfbb4cff0.png",
+            "text_9": "<strong>60 days</strong>\nRisk-free trial"
+          }
+        },
+        "slide_AnqR88": {
+          "type": "slide",
+          "settings": {
+            "identification": "",
+            "product_name": "Shop Solid",
+            "link_text": "Shop Now",
+            "sellingpoint": "AFFORDABLE",
+            "product_into": "solid-otc-hearing-aids",
+            "image": "shopify://shop_images/otc.png",
+            "text": "<strong>OTC</strong>\nOver-the-counter",
+            "image_1": "shopify://shop_images/33a46981f02bf62c9c47bcfd2d9d9ec2.png",
+            "text_1": "<strong>Widely application</strong>\nMild to moderate hearing loss",
+            "image_2": "shopify://shop_images/f7a24d3c6d262fc395d245b6a310444f.png",
+            "text_2": "<strong>Sleek design</strong>\n <span style=\"font-weight: bold; color:#FF4F00;\">Behind-the-ear(BTE)</span>",
+            "image_3": "shopify://shop_images/sound_icons.png",
+            "text_3": "<strong>Advanced acoustics</strong>\nNoise reduction and feedback\ncancellation",
+            "text_4": "",
+            "image_5": "shopify://shop_images/de26d8bf8c120599b404eafb0ed3e341.png",
+            "text_5": "<strong>MFB control</strong>\n<span style=\"font-weight: bold; color: #FF4F00;\">4 Programs</span>",
+            "image_6": "shopify://shop_images/82130677ba6990549a642f2547d64f77.png",
+            "text_6": "<span style=\"font-weight: bold; color: #FF4F00;\">20 hours</span>\nSingle charge via portable case",
+            "image_7": "shopify://shop_images/rechargeable_icons.png",
+            "text_7": "<strong>Rechargeable</strong>\nOnly hearing aids",
+            "text_8": "",
+            "image_9": "shopify://shop_images/5_4573d177-ce78-4826-87a6-551cfbb4cff0.png",
+            "text_9": "<strong>60 days</strong>\nRisk-free trial"
+          }
+        }
+      },
+      "block_order": [
+        "slide_MHjgcc",
+        "slide_ryWgTT",
+        "slide_T3ENCh",
+        "slide_AnqR88"
+      ],
+      "custom_css": [
+        ".ProductComparison_flex_box_product_btn {background: #ff4f00;}",
+        ".ProductComparison_flex_box_product_p {background: #ffa953;}"
+      ],
+      "settings": {
+        "Boxstatus": "block",
+        "top_one": 20,
+        "bottom_one": 50,
+        "top_one_mic": 20,
+        "bottom_one_mic": 10,
+        "text_align": "center",
+        "title": "Find the Right Ceretone Hearing Aid",
+        "header_font_size": 43,
+        "header_font_size_mic": 30,
+        "slogan": "Explore Crystal-Clear Sound: A Comparison of Advanced Hearing Solutions",
+        "slogan_font_size": 24,
+        "slogan_font_size_mic": 16,
+        "slogan_color": "#ffffff",
+        "bg_color": "#ffffff"
+      }
+    },
+    "multicolumn_h9EKh3": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_JRCRVt": {
+          "type": "column",
+          "settings": {
+            "icon": "none",
+            "icon_color_scheme": "background-2",
+            "icon_fill_type": "gradient",
+            "heading": "FDA OTC Compliant",
+            "text": "",
+            "show_button": false,
+            "button_label": "Label",
+            "button_link": "",
+            "button_style": "simple"
+          }
+        },
+        "column_e7gkEe": {
+          "type": "column",
+          "settings": {
+            "icon": "none",
+            "icon_color_scheme": "background-2",
+            "icon_fill_type": "gradient",
+            "heading": "Free Online Test",
+            "text": "",
+            "show_button": false,
+            "button_label": "Label",
+            "button_link": "",
+            "button_style": "simple"
+          }
+        },
+        "column_wWn9Nd": {
+          "type": "column",
+          "settings": {
+            "icon": "none",
+            "icon_color_scheme": "background-2",
+            "icon_fill_type": "gradient",
+            "heading": "Affordable Price",
+            "text": "",
+            "show_button": false,
+            "button_label": "Label",
+            "button_link": "",
+            "button_style": "simple"
+          }
+        },
+        "column_3mVE8n": {
+          "type": "column",
+          "settings": {
+            "icon": "none",
+            "icon_color_scheme": "background-2",
+            "icon_fill_type": "gradient",
+            "heading": "60-Day Risk-Free Trial",
+            "text": "",
+            "show_button": false,
+            "button_label": "Label",
+            "button_link": "",
+            "button_style": "simple"
+          }
+        }
+      },
+      "block_order": [
+        "column_JRCRVt",
+        "column_e7gkEe",
+        "column_wWn9Nd",
+        "column_3mVE8n"
+      ],
+      "disabled": true,
+      "settings": {
+        "section_type": "transparent",
+        "color_scheme": "background-1",
+        "enable_border": false,
+        "border_full": false,
+        "multicolumn_to_show": 4,
+        "gap": "large",
+        "subheading": "",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "Why Choose Ceretone",
+        "heading_size": "h2",
+        "heading_line": "simple",
+        "line_color": "#1566e0",
+        "word_break": false,
+        "heading_animation": "none",
+        "word_break_an": false,
+        "text": "",
+        "text_align": "center",
+        "icon_size": "recommended",
+        "box_shadow": true,
+        "icon_style": "colored",
+        "image_width": "medium",
+        "image_ratio": "square",
+        "object_fit": "cover",
+        "card_heading_size": "h4",
+        "padding_top": "m",
+        "padding_bottom": "m",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "rich_text_g7e6AW": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_Xne64p": {
+          "type": "heading",
+          "settings": {
+            "heading": "No Idea How to Choose Your Hearing Aids?",
+            "heading_size": "medium"
+          }
+        },
+        "text_rgjMJM": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Answer a few questions to find out</p>"
+          }
+        },
+        "button_zphdQQ": {
+          "type": "button",
+          "settings": {
+            "button_label": "Access Your Free Online Test Now",
+            "button_link": "shopify://pages/hearing-tests",
+            "button_style": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Xne64p",
+        "text_rgjMJM",
+        "button_zphdQQ"
+      ],
+      "settings": {
+        "color_scheme": "scheme-da522d8c-d8ea-43a1-8f89-75b1a671124a",
+        "full_width": true,
+        "alignment": "center",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "m",
+        "padding_bottom": "m"
+      }
+    },
+    "tabcarousel_JCpUec": {
+      "type": "Tabcarousel",
+      "blocks": {
+        "slide_aTAX36": {
+          "type": "slide",
+          "settings": {
+            "type": "Hearing Aids",
+            "image": "shopify://shop_images/5_Stars.png",
+            "title": "A pride saver!",
+            "text": "I can't say lifesaver but certainly a pride saver. At 52, I started wondering if I was losing hearing during the lockdown. I tried a couple of online hearing tests, and to my dismay, it seemed true. The thought of wearing old-fashioned hearing aids terrified me. Then I found these earphone-style designs. They've been a great help and saved my pride. Thank you!",
+            "link_text": "",
+            "link": "",
+            "name": "Anonymous"
+          }
+        },
+        "slide_6reBTp": {
+          "type": "slide",
+          "settings": {
+            "type": "Hearing Aids",
+            "image": "shopify://shop_images/5_Stars.png",
+            "title": "I love them so much!",
+            "text": "They do fit nicely. I have small ear canals. I do like that I can control from my android phone. But I would like it if you added the bass and treble to the hearing aids with app.  Very affordable and reasonably priced. This is my third pair of hearing aids trying. So far so good",
+            "link_text": "",
+            "link": "",
+            "name": "Destiny V"
+          }
+        },
+        "slide_4pNdBH": {
+          "type": "slide",
+          "settings": {
+            "type": "Hearing Aids",
+            "image": "shopify://shop_images/5_Stars.png",
+            "title": "Thank you for making my life better!!",
+            "text": "These are my first hearing aids, love them. The app is excellent and the Bluetooth connection works great. I can answer all calls and music via bluetooth. The quality and price are excellent for a similarly priced hearing aid.",
+            "link_text": "",
+            "link": "",
+            "name": "WilliamRok J"
+          }
+        },
+        "slide_phfTHR": {
+          "type": "slide",
+          "settings": {
+            "type": "Hearing Aids",
+            "image": "shopify://shop_images/5_Stars.png",
+            "title": "Core one is very good and amazing.",
+            "text": "The highest quality hearing aids. The quality of the product is very good. Warranty service and customer support are also good. Quite simply, I can say that this is a worthy product. It's very easy to use.",
+            "link_text": "",
+            "link": "",
+            "name": "Dwayne K"
+          }
+        },
+        "slide_wwNdKW": {
+          "type": "slide",
+          "settings": {
+            "type": "Customer Service",
+            "image": "shopify://shop_images/5_Stars.png",
+            "title": "I am extremely grateful to the Ceretone customer service team.",
+            "text": "When I explained that I accidentally threw away my box and the accessories inside, the customer service quickly arranged to send me new accessories. Thank you very much!",
+            "link_text": "",
+            "link": "",
+            "name": "Mack Z"
+          }
+        },
+        "slide_f3UWjc": {
+          "type": "slide",
+          "settings": {
+            "type": "Customer Service",
+            "image": "shopify://shop_images/5_Stars.png",
+            "title": "Good Service!",
+            "text": "Although the hearing aids didn't suit me, the customer service of this company is excellent. The representatives are very professional, and I received a full refund within a week. The brand's hearing aids are still trustworthy.",
+            "link_text": "",
+            "link": "",
+            "name": "Emily C"
+          }
+        },
+        "slide_JDpGz6": {
+          "type": "slide",
+          "settings": {
+            "type": "Customer Service",
+            "image": "shopify://shop_images/5_Stars.png",
+            "title": "The service was really good!",
+            "text": "The delivery was very fast, even faster than expected.",
+            "link_text": "",
+            "link": "",
+            "name": "Raymond J"
+          }
+        },
+        "slide_iMgC9P": {
+          "type": "slide",
+          "settings": {
+            "type": "Customer Service",
+            "image": "shopify://shop_images/5_Stars.png",
+            "title": "Great service",
+            "text": "The customer service representative was great. We discussed several options, but we found that none of them suited my situation. I look forward to improvements in the app, which is my only concern. Everything else about Core One is amazing.",
+            "link_text": "",
+            "link": "",
+            "name": "Claire F"
+          }
+        },
+        "slide_7xXt4R": {
+          "type": "slide",
+          "settings": {
+            "type": "Easy Operation",
+            "image": "shopify://shop_images/5_Stars.png",
+            "title": "Good deal",
+            "text": "They really are small and easy to use.",
+            "link_text": "",
+            "link": "",
+            "name": "George F"
+          }
+        },
+        "slide_kDD7NA": {
+          "type": "slide",
+          "settings": {
+            "type": "Easy Operation",
+            "image": "shopify://shop_images/5_Stars.png",
+            "title": "Very easy to use.",
+            "text": "They are less money than the older style hearing aids , and they control APP much easier!",
+            "link_text": "",
+            "link": "",
+            "name": "Rodget M"
+          }
+        },
+        "slide_UPy3TT": {
+          "type": "slide",
+          "settings": {
+            "type": "Easy Operation",
+            "image": "shopify://shop_images/5_Stars.png",
+            "title": "Easy peasy",
+            "text": "The delivery was very fast, even faster than expected.",
+            "link_text": "",
+            "link": "",
+            "name": "Axel Z"
+          }
+        },
+        "slide_AVUUBe": {
+          "type": "slide",
+          "settings": {
+            "type": "Easy Operation",
+            "image": "shopify://shop_images/5_Stars.png",
+            "title": "Easy to use even for me",
+            "text": "These little doodads are easy to use and I like that the buttons are big on app to make them easy to press.",
+            "link_text": "",
+            "link": "",
+            "name": "James W"
+          }
+        },
+        "slide_bDdRFC": {
+          "type": "slide",
+          "settings": {
+            "type": "Affordable Price",
+            "image": "shopify://shop_images/5_Stars.png",
+            "title": "Its good worth for money.",
+            "text": "They offers the best hearing aid selection and the lowest prices. We can believe affordable hearing aids should be available to everyone.",
+            "link_text": "",
+            "link": "",
+            "name": "Eteequfehey T"
+          }
+        },
+        "slide_Cy4Lcy": {
+          "type": "slide",
+          "settings": {
+            "type": "Affordable Price",
+            "image": "shopify://shop_images/5_Stars.png",
+            "title": "Great hearing aids for the price!",
+            "text": "Your hearing aid works great for me and the price was so good since I am on a limited budget.",
+            "link_text": "",
+            "link": "",
+            "name": "Everett N"
+          }
+        },
+        "slide_LPzVt7": {
+          "type": "slide",
+          "settings": {
+            "type": "Affordable Price",
+            "image": "shopify://shop_images/5_Stars.png",
+            "title": "Wonderful and affordable product!",
+            "text": "I bought their product and wanted to give it a try for my family member. The product actually works well and the price is reasonable. Also, the product was sent in high quality, and it helps my family member's life much easier.",
+            "link_text": "",
+            "link": "",
+            "name": "Joseph E"
+          }
+        },
+        "slide_MMcmAC": {
+          "type": "slide",
+          "settings": {
+            "type": "Affordable Price",
+            "image": "shopify://shop_images/5_Stars.png",
+            "title": "Affordable price.",
+            "text": "I am very satisfied with my purchase.",
+            "link_text": "",
+            "link": "",
+            "name": "Scarlett R"
+          }
+        }
+      },
+      "block_order": [
+        "slide_aTAX36",
+        "slide_6reBTp",
+        "slide_4pNdBH",
+        "slide_phfTHR",
+        "slide_wwNdKW",
+        "slide_f3UWjc",
+        "slide_JDpGz6",
+        "slide_iMgC9P",
+        "slide_7xXt4R",
+        "slide_kDD7NA",
+        "slide_UPy3TT",
+        "slide_AVUUBe",
+        "slide_bDdRFC",
+        "slide_Cy4Lcy",
+        "slide_LPzVt7",
+        "slide_MMcmAC"
+      ],
+      "custom_css": [
+        ".current {background-color: #ffa953; border-radius: 8px;}"
+      ],
+      "settings": {
+        "top_one": 50,
+        "bottom_one": 50,
+        "top_one_mic": 20,
+        "bottom_one_mic": 20,
+        "title_text": "Let Customers Speak for Us",
+        "text": "Filter reviews by topic:",
+        "bg_color": "#ffffff",
+        "text_color": "#e6e8e9",
+        "size_color": "#011624",
+        "type": "Hearing Aids|Customer Service|Easy Operation|Affordable Price"
+      }
+    },
+    "collapsible_content_UkLRTy": {
+      "type": "collapsible-content",
+      "blocks": {
+        "accordion_npYTD6": {
+          "type": "accordion",
+          "settings": {
+            "question": "Who are Ceretone OTC hearing aids designed for?",
+            "answer": "<p>Ceretone OTC hearing aids are designed for individuals experiencing mild to moderate hearing loss seeking affordable and accessible solutions. Our <a href=\"/pages/hearing-tests\" title=\"Hearing test\">free online hearing tests</a> assist in determining your suitability for our products.</p>",
+            "opened": true
+          }
+        },
+        "accordion_43NeV8": {
+          "type": "accordion",
+          "settings": {
+            "question": "How will I know if hearing aids will work for me?",
+            "answer": "<p>Ceretone hearing aids are meticulously calibrated to cater to individuals experiencing mild to moderate hearing impairments. The optimal approach to determine their efficacy for you is to experience them firsthand within the familiarity of your home, thanks to our 60-day risk-free trial period. We stand behind our product with a satisfaction guarantee, ensuring your contentment.</p>",
+            "opened": false
+          }
+        },
+        "accordion_4RKHeG": {
+          "type": "accordion",
+          "settings": {
+            "question": "What is OTC hearig aids?",
+            "answer": "<p>OTC (Over-the-Counter) hearing aids are devices designed for individuals with mild to moderate hearing loss that can be purchased directly without a prescription. They offer a more accessible and affordable option compared to traditional hearing aids.</p>",
+            "opened": false
+          }
+        },
+        "accordion_wTJHmJ": {
+          "type": "accordion",
+          "settings": {
+            "question": "How do hearing aids work?",
+            "answer": "<p>Hearing aids amplify sounds to make them more audible for individuals with hearing loss. They consist of microphones, amplifiers, and speakers that process and amplify sound waves to improve hearing ability.</p>",
+            "opened": false
+          }
+        },
+        "accordion_eGxXjV": {
+          "type": "accordion",
+          "settings": {
+            "question": "How long will shipping take?",
+            "answer": "<p>Enjoy free shipping on all orders within the United States, with no additional charges. Your order will be dispatched within 2 business days and is expected to arrive within 3-5 days. Please note that actual delivery times may vary based on location and courier speed.</p>",
+            "opened": false
+          }
+        }
+      },
+      "block_order": [
+        "accordion_npYTD6",
+        "accordion_43NeV8",
+        "accordion_4RKHeG",
+        "accordion_wTJHmJ",
+        "accordion_eGxXjV"
+      ],
+      "settings": {
+        "layout": "border",
+        "color_scheme": "background-1",
+        "enable_border": false,
+        "border_full": false,
+        "subheading": "",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "FAQs",
+        "heading_size": "h2",
+        "heading_line": "simple",
+        "line_color": "#1566e0",
+        "word_break": false,
+        "heading_animation": "none",
+        "word_break_an": false,
+        "text": "",
+        "text_align": "center",
+        "row_color_scheme": "",
+        "padding_top": "no-indent",
+        "padding_bottom": "no-indent",
+        "margin_top": "no-indent",
+        "margin_bottom": "m"
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "",
+        "image_ratio": "16/9",
+        "show_collection_description": true,
+        "show_collection_image": true,
+        "margin_top": "no-indent",
+        "margin_bottom": "s"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "disabled": true,
+      "settings": {
+        "products_per_page": 12,
+        "columns": 3,
+        "image_ratio": "1/1",
+        "image_fit": "cover",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_desc": false,
+        "enable_filtering": true,
+        "filter_type": "vertical",
+        "enable_sorting": true,
+        "image_filter_ratio": "5/4",
+        "image_filter_fit": "cover",
+        "image_filter_columns": 2,
+        "columns_mobile": "1",
+        "padding_top": "no-indent",
+        "padding_bottom": "l"
+      }
+    }
+  },
+  "order": [
+    "product_comparison_tj9Heg",
+    "multicolumn_h9EKh3",
+    "rich_text_g7e6AW",
+    "tabcarousel_JCpUec",
+    "collapsible_content_UkLRTy",
+    "banner",
+    "product-grid"
+  ]
+}

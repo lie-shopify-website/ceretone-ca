@@ -1,0 +1,225 @@
+<style>
+  [data-section-id="{{ section.id }}"] {
+    background-color: {{ section.settings.bg_color }};
+    padding-top: {{ section.settings.padding_top | append: 'px' }};
+    padding-bottom: {{ section.settings.padding_bottom | append: 'px' }};
+  }
+  .Introductionimgtext_flex {
+    display: flex;
+  }
+  [data-section-id="{{ section.id }}"] .Introductionimgtext_flex_text {
+    flex: 1;
+    display: flex;
+    padding: 1.5rem;
+    flex-flow: column;
+    align-items: {{ section.settings.flex_align }};
+    justify-content: {{ section.settings.flex_justify }};
+    order: {{ section.settings.flex_order }};
+  }
+  .Introductionimgtext_flex_text h4 {
+    margin: 0 0 2rem;
+  }
+  [data-section-id="{{ section.id }}"] .Introductionimgtext_flex_text p {
+    margin: 0 0 2rem;
+    text-align: {{ section.settings.text_align }};
+  }
+  .Introductionimgtext_flex_img {
+    flex: 1;
+    order: 1;
+    border-radius: 1.2rem;
+    overflow: hidden;
+  }
+  .Introductionimgtext_flex_img img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  @media(max-width: 768px) {
+    [data-section-id="{{ section.id }}"] {
+      padding-top: {{ section.settings.padding_top_M | append: 'px' }};
+      padding-bottom: {{ section.settings.padding_bottom_M | append: 'px' }};
+    }
+    .Introductionimgtext_flex {
+      display: block;
+    }
+    .Introductionimgtext_flex_text h4 {
+      margin: 0 0 1rem;
+      text-align: center;
+    }
+    [data-section-id="{{ section.id }}"] .Introductionimgtext_flex_text p {
+      margin: 0 0 1rem;
+      text-align: center;
+    }
+    [data-section-id="{{ section.id }}"] .Introductionimgtext_flex_text {
+      padding: 1rem 0.5rem;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+</style>
+
+<div data-section-id="{{ section.id }}" class="Introductionimgtext">
+  <div class="container">
+    <div class="Introductionimgtext_flex">
+      <div class="Introductionimgtext_flex_text">
+        {% if section.settings.title != blank %}
+          <h4 class="h4">{{ section.settings.title | newline_to_br }}</h4>
+        {% endif %}
+        {% if section.settings.Copywriting != blank %}
+          <p>{{ section.settings.Copywriting | newline_to_br }}</p>
+        {% endif %}
+      </div>
+      <div class="Introductionimgtext_flex_img">
+        {% if section.settings.image != blank %}
+          {{
+            section.settings.image
+            | image_url: width: section.settings.image.width
+            | image_tag:
+              loading: 'lazy',
+              widths: '2200, 2400, 2600, 2800, 3000, 3264, 3400, 3584, 3800, 4000, 4200, 4400, 4600, 4800, 5000, 5200, 5400, 5600',
+              sizes: sizes
+          }}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "图文介绍",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "select",
+      "id": "flex_order",
+      "label": "盒子布局选择",
+      "options": [
+        {
+          "value": "2",
+          "label": "图片优先"
+        }, {
+          "value": "1",
+          "label": "文本优先"
+        }
+      ],
+      "default": "1"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "上边距",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "下边距",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_top_M",
+      "label": "移动端上边距",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_M",
+      "label": "移动端下边距",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "default": 0
+    }, {
+      "type": "color",
+      "id": "bg_color",
+      "label": "背景颜色",
+      "default": "#fff"
+    }, {
+      "type": "select",
+      "id": "flex_justify",
+      "label": "文案盒子布局选择",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "居上"
+        }, {
+          "value": "center",
+          "label": "居中"
+        }, {
+          "value": "flex-end",
+          "label": "居下"
+        }
+      ],
+      "default": "flex-start"
+    }, {
+      "type": "select",
+      "id": "flex_align",
+      "label": "文案盒子布局选择",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "居左"
+        }, {
+          "value": "center",
+          "label": "居中"
+        }, {
+          "value": "flex-end",
+          "label": "居右"
+        }
+      ],
+      "default": "flex-start"
+    }, {
+      "type": "select",
+      "id": "text_align",
+      "label": "文案对齐方式",
+      "options": [
+        {
+          "value": "left",
+          "label": "居左"
+        }, {
+          "value": "center",
+          "label": "居中"
+        }, {
+          "value": "right",
+          "label": "居右"
+        }
+      ],
+      "default": "left"
+    }, {
+      "type": "image_picker",
+      "id": "image",
+      "label": "图片"
+    }, {
+      "type": "textarea",
+      "id": "title",
+      "label": "标题"
+    }, {
+      "type": "textarea",
+      "id": "Copywriting",
+      "label": "文案"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "图文介绍"
+    }
+  ]
+}
+{% endschema %}

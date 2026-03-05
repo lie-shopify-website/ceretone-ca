@@ -1,0 +1,912 @@
+<style>
+      [data-section-id="{{ section.id }}"] {
+        background-color: {{ section.settings.bg_color }};
+        padding-top: {{ section.settings.top_one |  append: 'px' }};
+        padding-bottom: {{ section.settings.bottom_one |  append: 'px' }};
+      }
+      [data-section-id="{{ section.id }}"] .ProductComparison_h2 {
+        text-align: {{ section.settings.text_align }};
+        font-size: {{ section.settings.header_font_size |  append: 'px' }};
+      }
+      [data-section-id="{{ section.id }}"] .ProductComparison_p
+      {
+        text-align: {{ section.settings.text_align }};
+        font-size: {{ section.settings.slogan_font_size |  append: 'px' }};
+      }
+      .ProductComparison_box{
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        width: 100%;
+      }
+      .ProductComparison_flex{
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        width: 100%;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+      }
+      .ProductComparison_flex_box{
+        flex: 0 0 calc(25% - 10px);
+        margin: 5px;
+        box-sizing: border-box;
+        text-align: center;
+      }
+      .ProductComparison_flex_box_authentication{
+        width: 100%;
+        margin: 2rem 0;
+      }
+      .ProductComparison_flex_box_authentication_iamge{
+        width: 45%;
+        margin: 0 auto;
+        display: block;
+        height: auto;
+      }
+      .ProductComparison_flex_box_product{
+        background-color: #f4f4f4;
+        text-align: center;
+      }
+      .ProductComparison_flex_box_product_iamge{
+        width: 70%;
+        margin: 0 auto 2rem;
+        display: block;
+        height: auto;
+      }
+      .ProductComparison_flex_box_product_p{
+        margin: 0 auto 3rem;
+        text-align: center;
+        width: auto;
+        padding: 1rem 1rem;
+        font-size: 2rem;
+        font-weight: 600;
+        background-color: #1566E0;
+        color: #fff;
+      }
+      .ProductComparison_flex_box_product_h4{
+        margin: 0 0 2rem 0;
+      }
+      .ProductComparison_flex_box_product_price{
+        margin: 0 0 2rem 0;
+        display: flex;
+        justify-content: center;
+      }
+      .ProductComparison_flex_box_product_btn{
+        background: #1566E0;
+        color: #fff;
+        padding: 10px 35px;
+        border-radius: 30px;
+        font-size: 20px;
+        margin: 0 0 2rem 0;
+      }
+      .ProductComparison_flex_box_product_btn:hover{
+        background: #fff;
+        color: #1566E0;
+      }
+      .ProductComparison_top_btn{
+        font-size: 1.6rem;
+        margin: 0 1rem;
+         color: #1566E0;
+        text-decoration: underline;
+      }
+      .ProductComparison_top_btn:hover{
+        background: #fff;
+        color: #1566E0;
+      }
+      .ProductComparison_flex_box_information_box{
+        /* border: 1px solid rgb(208 208 208 / 45%); */
+        background-color: #f4f4f4;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+      .ProductComparison_flex_box_information_box p{
+        font-size: 1.6rem;
+        font-weight: 400;
+        margin: 0 2rem;
+        text-align: center;
+      }
+      .ProductComparison_flex_box_information_box_iamge{
+        width: 3.5rem;
+        display: block;
+        height: auto;
+        margin: 0 auto 1rem;
+      }
+      .ProductComparison_top_btnbox{
+        width: 45%;
+        text-align: center;
+      }
+      .ProductComparison_top{
+        position: fixed;
+        z-index: 11;
+        background: transparent;
+        width: 100%;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        box-shadow: 0 0 20px #000;
+        top: 0;
+        padding: 1rem 0;
+        transition: opacity 0.3s ease-in-out;
+        visibility: visible;
+        pointer-events: auto;
+        display: {{ section.settings.Boxstatus }};
+      }
+      .ProductComparison_top_box{
+        align-items: center;
+        justify-content: space-between;
+        display: flex;
+        margin: 0 auto;
+      }
+      .ProductComparison_top_left p{
+        margin: 0;
+        color: {{ section.settings.slogan_color }};
+        font-size: {{ section.settings.slogan_font_size |  append: 'px' }};
+      }
+      .ProductComparison_top_btnbox p{
+        font-size: 2.4rem;
+      font-weight: 700;
+      margin: 0.5rem 0;
+      }
+      .ProductComparison_top_box_identification{
+        background: red;
+        color: #fff;
+        padding: 1rem;
+        border-radius: 10px;
+      }
+      .ProductComparison_box_btn{
+        display: none;
+      }
+      @media(max-width: 980px){
+        .ProductComparison_box_btn{
+          display: flex;
+          justify-content: flex-end;
+        }
+        .nav-button{
+          font-size: 3rem;
+          padding: 0.5rem 1.5rem;
+          font-weight: 700;
+          border: 0;
+          border-radius: 1.2rem;
+          margin: 1rem;
+        }
+      }
+      @media(max-width: 768px){
+        [data-section-id="{{ section.id }}"] .ProductComparison_h2 {
+          font-size: {{ section.settings.header_font_size_mic |  append: 'px' }};
+        }
+        [data-section-id="{{ section.id }}"] .ProductComparison_p{
+          font-size: {{ section.settings.slogan_font_size_mic |  append: 'px' }};
+        }
+        .ProductComparison_top_box_identification{
+          display: inline-block;
+          margin: 5px 0;
+        }
+        .ProductComparison_top{
+          display: none;
+        }
+        .ProductComparison_flex {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      overflow-x: auto; /* 添加横向滚动 */
+      scroll-behavior: smooth; /* 平滑滚动 */
+  }
+        .ProductComparison_flex_box {
+          flex: 0 0 calc(50% - 1.5rem);
+          margin: 0.1rem;
+        }
+        .ProductComparison_top_btnbox{
+          width: 49%;
+        }
+        .ProductComparison_top_btn{
+          padding: 0.8rem 1.5rem;
+          font-size: 1.4rem;
+        }
+        .ProductComparison_flex_box_product_p {
+          margin: 0;
+          font-size: 1.4rem;
+          padding: 1rem;
+        }
+        .ProductComparison_flex_box_product_iamge{
+          width: 100%;
+          margin: 0 auto 1rem;
+        }
+        .ProductComparison_flex_box_product_h4 {
+            margin: 0 .05rem 1rem;
+            font-size: 1.8rem;
+        }
+        .price--on-sale .price__sale{
+          justify-content: center;
+          font-size: 1.4rem;
+          margin: 0 5px;
+        }
+        .ProductComparison_flex_box_product_btn {
+          background: #1566E0;
+          color: #fff;
+          padding: 0.8rem 1.5rem;
+          border-radius: 30px;
+          font-size: 1.6rem;
+          margin: 0 0 2rem 0;
+        }
+        .ProductComparison_flex_box_information_box p{
+          margin: 0;
+        }
+      }
+</style>
+
+<div data-section-id="{{ section.id }}" class="ProductComparison">
+  <div class="ProductComparison_top" style="opacity: 0;">
+    <div class="ProductComparison_top_box container">
+      {% for block in section.blocks %}
+        <div class="ProductComparison_top_btnbox">
+          <a
+            href="{{ block.settings.product_into.url }}"
+            class="ProductComparison_top_btn"
+          >
+            <span>{{ block.settings.product_name }}</span>
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="container">
+    {% if section.settings.title != blank %}
+      <h2 class="ProductComparison_h2">{{ section.settings.title | newline_to_br }}</h2>
+    {% endif %}
+    {% if section.settings.slogan != blank %}
+      <p class="ProductComparison_p">{{ section.settings.slogan | newline_to_br }}</p>
+    {% endif %}
+    <div class="ProductComparison_box">
+      <div class="ProductComparison_box_btn">
+        <button class="nav-button" id="left-button">‹</button>
+        <button class="nav-button" id="right-button">›</button>
+      </div>
+      <div class="ProductComparison_flex">
+        {% for block in section.blocks %}
+          <div class="ProductComparison_flex_box">
+            {% comment %} 认证图片 {% endcomment %}
+            {% if block.settings.authentication != blank %}
+              <div class="ProductComparison_flex_box_authentication">
+                {{
+                  block.settings.authentication
+                  | image_url: width: section.settings.image.width
+                  | image_tag:
+                    loading: 'lazy',
+                    widths: '360, 533, 720, 940, 1066, 1200, 1400, 1600, 1800, 2000, 2200, 2400, 2600, 2800, 3000, 3264, 3400, 3584, 3800, 4000, 4200, 4400, 4600, 4800, 5000, 5200, 5400, 5600',
+                    sizes: sizes,
+                    class: 'ProductComparison_flex_box_authentication_iamge'
+                }}
+              </div>
+            {% endif %}
+            {% comment %} 产品信息 {% endcomment %}
+            <div class="ProductComparison_flex_box_product">
+              {% if block.settings.sellingpoint != blank %}
+                <p class="ProductComparison_flex_box_product_p">{{ block.settings.sellingpoint }}</p>
+              {% endif %}
+              {% comment %} 产品图片 {% endcomment %}
+              {% assign product_image = block.settings.product_into.images.first %}
+              {% if product_image %}
+                <a style="position: relative;" href="{{ block.settings.product_into.url }}">
+                  {{
+                    block.settings.product_into.featured_media
+                    | image_url: width: block.settings.product_into.featured_media.width
+                    | image_tag:
+                      loading: 'lazy',
+                      class: 'motion-reduce media--first',
+                      widths: '360, 535, 720, 940, 1066, 1200, 1400, 1600, 1800, 2000, 2200, 2400, 2600',
+                      sizes: sizes,
+                      style: style,
+                      class: 'ProductComparison_flex_box_product_iamge'
+                  }}
+                </a>
+              {% endif %}
+              {% comment %} 产品标题 {% endcomment %}
+              <h4 class="ProductComparison_flex_box_product_h4">
+                {{ block.settings.identification }}
+              </h4>
+              {% comment %} 产品价格 {% endcomment %}
+              <div
+                class="ProductComparison_flex_box_product_price"
+                id="price-{{ section.id }}"
+                {{ block.shopify_attributes }}
+              >
+                {%- render 'price',
+                  product: block.settings.product_into,
+                  use_variant: true,
+                  show_badges: true,
+                  price_class: 'price--product'
+                -%}
+                {%- if block.settings.product_into.badge_sale_show -%}
+                  <div class="">
+                    {%- if block.settings.product_into.selected_or_first_available_variant.compare_at_price
+                        > block.settings.product_into.selected_or_first_available_variant.price
+                      and block.settings.product_into.available
+                      and settings.badge_sale_show
+                    -%}
+                      <span
+                        class="color-{{ settings.badge_sale_color_scheme }} bold"
+                        aria-hidden="true"
+                      >
+                        {% if settings.badge_sale_type == 'sale' %}
+                          Save
+                        {% else %}
+                          Save
+                          <span>
+                            {{
+                              block.settings.product_into.selected_or_first_available_variant.compare_at_price
+                              | minus: block.settings.product_into.selected_or_first_available_variant.price
+                              | times: 100
+                              | divided_by: block.settings.product_into.selected_or_first_available_variant.compare_at_price
+                            }}
+                            %
+                          </span>
+                        {% endif %}
+                      </span>
+                    {%- endif -%}
+                  </div>
+                {%- endif -%}
+              </div>
+
+              {% comment %} 按钮 {% endcomment %}
+              <a
+                href="{{ block.settings.product_into.url }}"
+                class="ProductComparison_flex_box_product_btn blog__button button button--simple_secondary button--arrow focus-inset"
+              >
+                <span>{{ block.settings.link_text }}</span>
+                <svg class="icon icon-button-arrow" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M7.30644 5.5C6.89223 5.5 6.55644 5.83579 6.55644 6.25C6.55644 6.66421 6.89223 7 7.30644 7L12.5669 7L5.5976 13.9693C5.30471 14.2622 5.30471 14.7371 5.5976 15.0299C5.89049 15.3228 6.36537 15.3228 6.65826 15.0299L13.6275 8.06069V13.3211C13.6275 13.7353 13.9633 14.0711 14.3775 14.0711C14.7917 14.0711 15.1275 13.7353 15.1275 13.3211V6.25C15.1275 6.14102 15.1043 6.03747 15.0625 5.94404C15.034 5.88021 14.9961 5.81955 14.9489 5.76414C14.8817 5.68521 14.7985 5.62038 14.7042 5.5747C14.6055 5.52684 14.4946 5.5 14.3775 5.5H7.30644Z" fill="currentColor"></path>
+                </svg>
+              </a>
+            </div>
+            {% comment %} 信息展现 {% endcomment %}
+            <div class="ProductComparison_flex_box_information">
+              {% if block.settings.text != blank %}
+                <div class="ProductComparison_flex_box_information_box">
+                  {% if block.settings.image != blank %}
+                    {{
+                      block.settings.image
+                      | image_url: width: section.settings.image.width
+                      | image_tag:
+                        loading: 'lazy',
+                        widths: '360, 533, 720, 940, 1066, 1200, 1400, 1600, 1800, 2000, 2200, 2400, 2600, 2800, 3000, 3264, 3400, 3584, 3800, 4000, 4200, 4400, 4600, 4800, 5000, 5200, 5400, 5600',
+                        sizes: sizes,
+                        class: 'ProductComparison_flex_box_information_box_iamge'
+                    }}
+                  {% endif %}
+                  <p>{{ block.settings.text | newline_to_br }}</p>
+                </div>
+              {% else %}
+                <div class="ProductComparison_flex_box_information_box">——</div>
+              {% endif %}
+              {% if block.settings.text_1 != blank %}
+                <div class="ProductComparison_flex_box_information_box">
+                  {% if block.settings.image_1 != blank %}
+                    {{
+                      block.settings.image_1
+                      | image_url: width: section.settings.image.width
+                      | image_tag:
+                        loading: 'lazy',
+                        widths: '360, 533, 720, 940, 1066, 1200, 1400, 1600, 1800, 2000, 2200, 2400, 2600, 2800, 3000, 3264, 3400, 3584, 3800, 4000, 4200, 4400, 4600, 4800, 5000, 5200, 5400, 5600',
+                        sizes: sizes,
+                        class: 'ProductComparison_flex_box_information_box_iamge'
+                    }}
+                  {% endif %}
+                  <p>{{ block.settings.text_1 | newline_to_br }}</p>
+                </div>
+              {% else %}
+                <div class="ProductComparison_flex_box_information_box">——</div>
+              {% endif %}
+              {% if block.settings.text_2 != blank %}
+                <div class="ProductComparison_flex_box_information_box">
+                  {% if block.settings.image_2 != blank %}
+                    {{
+                      block.settings.image_2
+                      | image_url: width: section.settings.image.width
+                      | image_tag:
+                        loading: 'lazy',
+                        widths: '360, 533, 720, 940, 1066, 1200, 1400, 1600, 1800, 2000, 2200, 2400, 2600, 2800, 3000, 3264, 3400, 3584, 3800, 4000, 4200, 4400, 4600, 4800, 5000, 5200, 5400, 5600',
+                        sizes: sizes,
+                        class: 'ProductComparison_flex_box_information_box_iamge'
+                    }}
+                  {% endif %}
+                  <p>{{ block.settings.text_2 | newline_to_br }}</p>
+                </div>
+              {% else %}
+                <div class="ProductComparison_flex_box_information_box">——</div>
+              {% endif %}
+              {% if block.settings.text_3 != blank %}
+                <div class="ProductComparison_flex_box_information_box">
+                  {% if block.settings.image_3 != blank %}
+                    {{
+                      block.settings.image_3
+                      | image_url: width: section.settings.image.width
+                      | image_tag:
+                        loading: 'lazy',
+                        widths: '360, 533, 720, 940, 1066, 1200, 1400, 1600, 1800, 2000, 2200, 2400, 2600, 2800, 3000, 3264, 3400, 3584, 3800, 4000, 4200, 4400, 4600, 4800, 5000, 5200, 5400, 5600',
+                        sizes: sizes,
+                        class: 'ProductComparison_flex_box_information_box_iamge'
+                    }}
+                  {% endif %}
+                  <p>{{ block.settings.text_3 | newline_to_br }}</p>
+                </div>
+              {% else %}
+                <div class="ProductComparison_flex_box_information_box">——</div>
+              {% endif %}
+              {% if block.settings.text_4 != blank %}
+                <div class="ProductComparison_flex_box_information_box">
+                  {% if block.settings.image_4 != blank %}
+                    {{
+                      block.settings.image_4
+                      | image_url: width: section.settings.image.width
+                      | image_tag:
+                        loading: 'lazy',
+                        widths: '360, 533, 720, 940, 1066, 1200, 1400, 1600, 1800, 2000, 2200, 2400, 2600, 2800, 3000, 3264, 3400, 3584, 3800, 4000, 4200, 4400, 4600, 4800, 5000, 5200, 5400, 5600',
+                        sizes: sizes,
+                        class: 'ProductComparison_flex_box_information_box_iamge'
+                    }}
+                  {% endif %}
+                  <p>{{ block.settings.text_4 | newline_to_br }}</p>
+                </div>
+              {% else %}
+                <div class="ProductComparison_flex_box_information_box">——</div>
+              {% endif %}
+              {% if block.settings.text_5 != blank %}
+                <div class="ProductComparison_flex_box_information_box">
+                  {% if block.settings.image_5 != blank %}
+                    {{
+                      block.settings.image_5
+                      | image_url: width: section.settings.image.width
+                      | image_tag:
+                        loading: 'lazy',
+                        widths: '360, 533, 720, 940, 1066, 1200, 1400, 1600, 1800, 2000, 2200, 2400, 2600, 2800, 3000, 3264, 3400, 3584, 3800, 4000, 4200, 4400, 4600, 4800, 5000, 5200, 5400, 5600',
+                        sizes: sizes,
+                        class: 'ProductComparison_flex_box_information_box_iamge'
+                    }}
+                  {% endif %}
+                  <p>{{ block.settings.text_5 | newline_to_br }}</p>
+                </div>
+              {% else %}
+                <div class="ProductComparison_flex_box_information_box">——</div>
+              {% endif %}
+              {% if block.settings.text_6 != blank %}
+                <div class="ProductComparison_flex_box_information_box">
+                  {% if block.settings.image_6 != blank %}
+                    {{
+                      block.settings.image_6
+                      | image_url: width: section.settings.image.width
+                      | image_tag:
+                        loading: 'lazy',
+                        widths: '360, 533, 720, 940, 1066, 1200, 1400, 1600, 1800, 2000, 2200, 2400, 2600, 2800, 3000, 3264, 3400, 3584, 3800, 4000, 4200, 4400, 4600, 4800, 5000, 5200, 5400, 5600',
+                        sizes: sizes,
+                        class: 'ProductComparison_flex_box_information_box_iamge'
+                    }}
+                  {% endif %}
+                  <p>{{ block.settings.text_6 | newline_to_br }}</p>
+                </div>
+              {% else %}
+                <div class="ProductComparison_flex_box_information_box">——</div>
+              {% endif %}
+              {% if block.settings.text_7 != blank %}
+                <div class="ProductComparison_flex_box_information_box">
+                  {% if block.settings.image_7 != blank %}
+                    {{
+                      block.settings.image_7
+                      | image_url: width: section.settings.image.width
+                      | image_tag:
+                        loading: 'lazy',
+                        widths: '360, 533, 720, 940, 1066, 1200, 1400, 1600, 1800, 2000, 2200, 2400, 2600, 2800, 3000, 3264, 3400, 3584, 3800, 4000, 4200, 4400, 4600, 4800, 5000, 5200, 5400, 5600',
+                        sizes: sizes,
+                        class: 'ProductComparison_flex_box_information_box_iamge'
+                    }}
+                  {% endif %}
+                  <p>{{ block.settings.text_7 | newline_to_br }}</p>
+                </div>
+              {% else %}
+                <div class="ProductComparison_flex_box_information_box">——</div>
+              {% endif %}
+              {% if block.settings.text_8 != blank %}
+                <div class="ProductComparison_flex_box_information_box">
+                  {% if block.settings.image_8 != blank %}
+                    {{
+                      block.settings.image_8
+                      | image_url: width: section.settings.image.width
+                      | image_tag:
+                        loading: 'lazy',
+                        widths: '360, 533, 720, 940, 1066, 1200, 1400, 1600, 1800, 2000, 2200, 2400, 2600, 2800, 3000, 3264, 3400, 3584, 3800, 4000, 4200, 4400, 4600, 4800, 5000, 5200, 5400, 5600',
+                        sizes: sizes,
+                        class: 'ProductComparison_flex_box_information_box_iamge'
+                    }}
+                  {% endif %}
+                  <p>{{ block.settings.text_8 | newline_to_br }}</p>
+                </div>
+              {% else %}
+                <div class="ProductComparison_flex_box_information_box">——</div>
+              {% endif %}
+              {% if block.settings.text_9 != blank %}
+                <div class="ProductComparison_flex_box_information_box">
+                  {% if block.settings.image_9 != blank %}
+                    {{
+                      block.settings.image_9
+                      | image_url: width: section.settings.image.width
+                      | image_tag:
+                        loading: 'lazy',
+                        widths: '360, 533, 720, 940, 1066, 1200, 1400, 1600, 1800, 2000, 2200, 2400, 2600, 2800, 3000, 3264, 3400, 3584, 3800, 4000, 4200, 4400, 4600, 4800, 5000, 5200, 5400, 5600',
+                        sizes: sizes,
+                        class: 'ProductComparison_flex_box_information_box_iamge'
+                    }}
+                  {% endif %}
+                  <p>{{ block.settings.text_9 | newline_to_br }}</p>
+                </div>
+              {% else %}
+                <div class="ProductComparison_flex_box_information_box">——</div>
+              {% endif %}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+      var slides = document.querySelectorAll('.ProductComparison_flex_box_information_box');
+      var maxHeight = 0;
+      slides.forEach(function (slide) {
+          var slideHeight = slide.offsetHeight;
+          if (slideHeight > maxHeight) {
+              maxHeight = slideHeight;
+          }
+      });
+      slides.forEach(function (slide) {
+          slide.style.height = maxHeight + 'px';
+      });
+      var slides_one = document.querySelectorAll('.ProductComparison_flex_box_information_box');
+      var maxHeight = 0;
+      slides_one.forEach(function (slide) {
+          var slideHeight = slide.offsetHeight;
+          if (slideHeight > maxHeight) {
+              maxHeight = slideHeight;
+          }
+      });
+      slides_one.forEach(function (slide) {
+          slide.style.height = maxHeight + 'px';
+      });
+      var slides_two = document.querySelectorAll('.ProductComparison_flex_box_product');
+      var maxHeight = 0;
+      slides_two.forEach(function (slide) {
+          var slideHeight = slide.offsetHeight;
+          if (slideHeight > maxHeight) {
+              maxHeight = slideHeight;
+          }
+      });
+      slides_two.forEach(function (slide) {
+          slide.style.height = maxHeight + 'px';
+      });
+      document.getElementById('left-button').onclick = function() {
+      scrollLeft();
+  };
+
+  document.getElementById('right-button').onclick = function() {
+      scrollRight();
+  };
+
+  function scrollLeft() {
+      const scrollWrapper = document.querySelector('.ProductComparison_flex');
+      scrollWrapper.scrollBy({
+          left: -100,  // 向左滚动100px
+          behavior: 'smooth'  // 平滑滚动
+      });
+  }
+
+  function scrollRight() {
+      const scrollWrapper = document.querySelector('.ProductComparison_flex');
+      scrollWrapper.scrollBy({
+          left: 100,  // 向右滚动100px
+          behavior: 'smooth'  // 平滑滚动
+      });
+  }
+
+  window.addEventListener('scroll', function() {
+      var productComparison = document.querySelector('.ProductComparison');
+      var productComparisonTop = document.querySelector('.ProductComparison_top');
+
+      // 获取 ProductComparison 的 bounding rectangle
+      var rect = productComparison.getBoundingClientRect();
+
+      // 检查 ProductComparison 的顶部是否到达视口顶部
+      if (rect.top <= 0 && rect.bottom > 0) {
+          productComparisonTop.style.opacity = '1';
+      } else {
+          productComparisonTop.style.opacity = '0';
+      }
+  });
+</script>
+
+{% schema %}
+{
+  "name": "产品对比",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "select",
+      "id": "Boxstatus",
+      "label": "顶部盒子状态",
+      "options": [
+        {
+          "value": "block",
+          "label": "显示"
+        }, {
+          "value": "none",
+          "label": "隐藏"
+        }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "range",
+      "id": "top_one",
+      "label": "上边距",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "bottom_one",
+      "label": "下边距",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "top_one_mic",
+      "label": "移动端上边距",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "bottom_one_mic",
+      "label": "移动端下边距",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "default": 20
+    },{
+      "type": "select",
+      "id": "text_align",
+      "label": "标题对齐方式",
+      "options": [
+        {
+          "value": "left",
+          "label": "居左"
+        }, {
+          "value": "center",
+          "label": "居中"
+        }, {
+          "value": "right",
+          "label": "居右"
+        }
+      ],
+      "default": "center"
+    }, {
+      "type": "textarea",
+      "id": "title",
+      "label": "标题"
+    }, {
+      "type": "range",
+      "id": "header_font_size",
+      "label": "标题字体大小",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 45
+    }, {
+      "type": "range",
+      "id": "header_font_size_mic",
+      "label": "移动端标题字体大小",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 30
+    },{
+      "type": "textarea",
+      "id": "slogan",
+      "label": "标语"
+    }, {
+      "type": "range",
+      "id": "slogan_font_size",
+      "label": "标语字体大小",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 24
+    }, {
+      "type": "range",
+      "id": "slogan_font_size_mic",
+      "label": "移动端标语字体大小",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    }, {
+      "type": "color",
+      "id": "slogan_color",
+      "label": "标语字体颜色",
+      "default": "#fff"
+    }, {
+      "type": "color",
+      "id": "bg_color",
+      "label": "背景颜色",
+      "default": "#fff"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "添加产品参数",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "identification",
+          "label": "产品名称"
+        },
+        {
+          "type": "textarea",
+          "id": "product_name",
+          "label": "产品滚动按钮"
+        },
+        {
+          "type": "textarea",
+          "id": "link_text",
+          "label": "按钮文本"
+        },
+        {
+          "type": "image_picker",
+          "id": "authentication",
+          "label": "认证图标"
+        },
+        {
+          "type": "textarea",
+          "id": "sellingpoint",
+          "label": "卖点"
+        },
+        {
+          "type": "product",
+          "id": "product_into",
+          "label": "选择产品"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "图标"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "文本"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_1",
+          "label": "图标1"
+        },
+        {
+          "type": "textarea",
+          "id": "text_1",
+          "label": "文本1"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_2",
+          "label": "图标2"
+        },
+        {
+          "type": "textarea",
+          "id": "text_2",
+          "label": "文本2"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_3",
+          "label": "图标3"
+        },
+        {
+          "type": "textarea",
+          "id": "text_3",
+          "label": "文本3"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_4",
+          "label": "图标4"
+        },
+        {
+          "type": "textarea",
+          "id": "text_4",
+          "label": "文本4"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_5",
+          "label": "图标5"
+        },
+        {
+          "type": "textarea",
+          "id": "text_5",
+          "label": "文本5"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_6",
+          "label": "图标6"
+        },
+        {
+          "type": "textarea",
+          "id": "text_6",
+          "label": "文本6"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_7",
+          "label": "图标7"
+        },
+        {
+          "type": "textarea",
+          "id": "text_7",
+          "label": "文本7"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_8",
+          "label": "图标8"
+        },
+        {
+          "type": "textarea",
+          "id": "text_8",
+          "label": "文本8"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_9",
+          "label": "图标9"
+        },
+        {
+          "type": "textarea",
+          "id": "text_9",
+          "label": "文本9"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "产品对比",
+      "blocks": [
+        {
+          "type": "slide"
+        }, {
+          "type": "slide"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

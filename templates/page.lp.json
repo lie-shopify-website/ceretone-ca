@@ -1,0 +1,317 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "logo_list_XnfqTE": {
+      "type": "logo-list",
+      "blocks": {
+        "logo_zbxzzQ": {
+          "type": "logo",
+          "settings": {
+            "image_1": "shopify://shop_images/Logo_1_3_6885a8ae-a3b5-4b0c-b26b-3133996f8d57.png",
+            "image_width": 140
+          }
+        }
+      },
+      "block_order": [
+        "logo_zbxzzQ"
+      ],
+      "name": "t:sections.logo-list.name",
+      "settings": {
+        "layout": "static",
+        "color_scheme": "background-2",
+        "enable_border": false,
+        "border_full": false,
+        "subheading": "",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "",
+        "heading_size": "h3",
+        "heading_line": "simple",
+        "line_color": "#1566e0",
+        "word_break": false,
+        "heading_animation": "none",
+        "word_break_an": true,
+        "text": "",
+        "horizontal_alignment": "left",
+        "vertical_alignment": "top",
+        "speed_slider_1": 4000,
+        "speed_slider_2": 6000,
+        "padding_top": "m",
+        "padding_bottom": "m",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "blocks": {
+        "sidebar_image_aFxhbE": {
+          "type": "sidebar_image",
+          "settings": {
+            "image": "shopify://shop_images/DSC05215_661f60b2-d256-45b2-9c7e-be7b25859238.jpg",
+            "text": "Finally Improve\nYour Hearing",
+            "text_color": "#4aa3e9",
+            "btn_label": "GET 70% OFF\nNebroo NOW!",
+            "btn_link": "shopify://policies/privacy-policy",
+            "btn_color": "#333333",
+            "btn_bg_color": "#ffbf00"
+          }
+        },
+        "sidebar_reviews_CTd6Hn": {
+          "type": "sidebar_reviews",
+          "settings": {
+            "heading": "Customer Reviews",
+            "image1": "shopify://shop_images/20250908-105732.jpg",
+            "description1": "I just love these, I can hear crystal clear. My confidence has been restored.",
+            "name1": "Amanda Miller",
+            "text1": "Sioux, SD",
+            "image2": "shopify://shop_images/20250908-105732.jpg",
+            "description2": "I just love these, I can hear crystal clear. My confidence has been restored.",
+            "name2": "Amanda Miller",
+            "text2": "Sioux, SD",
+            "image3": "shopify://shop_images/20250908-105732.jpg",
+            "description3": "I just love these, I can hear crystal clear. My confidence has been restored.",
+            "name3": "Amanda Miller",
+            "text3": "Sioux, SD",
+            "image4": "shopify://shop_images/20250908-105732.jpg",
+            "description4": "I just love these, I can hear crystal clear. My confidence has been restored.",
+            "name4": "Amanda Miller",
+            "text4": "Sioux, SD",
+            "image5": "shopify://shop_images/20250908-105732.jpg",
+            "description5": "I just love these, I can hear crystal clear. My confidence has been restored.",
+            "name5": "Amanda Miller",
+            "text5": "Sioux, SD"
+          }
+        }
+      },
+      "block_order": [
+        "sidebar_image_aFxhbE",
+        "sidebar_reviews_CTd6Hn"
+      ],
+      "settings": {
+        "padding_top": "no-indent",
+        "padding_bottom": "m"
+      }
+    },
+    "custom_liquid_PyaeYi": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid_text": "",
+        "custom_liquid": "<script src=\"https://fast.wistia.com/player.js\" async></script><script src=\"https://fast.wistia.com/embed/yiqtzmhe57.js\" async type=\"module\"></script><style>wistia-player[media-id='yiqtzmhe57']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/yiqtzmhe57/swatch'); display: block; filter: blur(5px); padding-top:55.94%; }</style> <wistia-player media-id=\"yiqtzmhe57\" aspect=\"1.7877094972067038\"></wistia-player>"
+      }
+    },
+    "custom_liquid_CwnDtn": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid_text": "隐藏导航",
+        "custom_liquid": "<style>\nsticky-header.header-wrapper {\n    display: none;\n}\n.section-announcement {\n    display: none;\n}\n.section-footer,\nfooter {\n  display: none;\n}\n</style>"
+      }
+    },
+    "sticky_btn_CTLN84": {
+      "type": "sticky-btn",
+      "name": "Sticky Btn",
+      "settings": {
+        "custom_class": "",
+        "section_bg_color": "rgba(0,0,0,0)",
+        "bg_color": "#28a745",
+        "color": "#ffffff",
+        "btn_label": "Apply Discount & Check Availability",
+        "btn_link": "shopify://products/core-one-pro-otc-hearing-aids",
+        "btn_max_width": 330,
+        "btn_max_width_mb": 240
+      }
+    },
+    "multicolumn_UENeaj": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_RnBr6y": {
+          "type": "column",
+          "settings": {
+            "icon": "none",
+            "icon_color_scheme": "",
+            "icon_fill_type": "gradient",
+            "heading": "",
+            "text": "",
+            "show_button": true,
+            "button_label": "Privacy Policy",
+            "button_link": "shopify://policies/privacy-policy",
+            "button_style": "simple"
+          }
+        },
+        "column_4jhajw": {
+          "type": "column",
+          "settings": {
+            "icon": "none",
+            "icon_color_scheme": "",
+            "icon_fill_type": "gradient",
+            "heading": "",
+            "text": "",
+            "show_button": true,
+            "button_label": "Contact Us",
+            "button_link": "shopify://pages/contact-us",
+            "button_style": "simple"
+          }
+        },
+        "column_dJ4AYV": {
+          "type": "column",
+          "settings": {
+            "icon": "none",
+            "icon_color_scheme": "",
+            "icon_fill_type": "gradient",
+            "heading": "",
+            "text": "",
+            "show_button": true,
+            "button_label": "Terms & Conditions",
+            "button_link": "shopify://policies/terms-of-service",
+            "button_style": "simple"
+          }
+        },
+        "column_DqFMXR": {
+          "type": "column",
+          "settings": {
+            "icon": "none",
+            "icon_color_scheme": "",
+            "icon_fill_type": "gradient",
+            "heading": "",
+            "text": "",
+            "show_button": true,
+            "button_label": "Become an Affiliate",
+            "button_link": "shopify://pages/affiliate-program",
+            "button_style": "simple"
+          }
+        }
+      },
+      "block_order": [
+        "column_RnBr6y",
+        "column_4jhajw",
+        "column_dJ4AYV",
+        "column_DqFMXR"
+      ],
+      "custom_css": [
+        "@media (max-width: 600px) {.multicolumn-list__wrapper {grid-template-columns: repeat(2, 1fr) !important; }}"
+      ],
+      "name": "t:sections.multicolumn.name",
+      "settings": {
+        "section_type": "transparent",
+        "color_scheme": "",
+        "enable_border": false,
+        "border_full": false,
+        "multicolumn_to_show": 4,
+        "gap": "large",
+        "subheading": "",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "",
+        "heading_size": "h2",
+        "heading_line": "simple",
+        "line_color": "#1566e0",
+        "word_break": false,
+        "heading_animation": "none",
+        "word_break_an": false,
+        "text": "",
+        "text_align": "left",
+        "icon_size": "recommended",
+        "box_shadow": true,
+        "icon_style": "colored",
+        "image_width": "medium",
+        "image_ratio": "square",
+        "object_fit": "cover",
+        "card_heading_size": "h4",
+        "padding_top": "xs",
+        "padding_bottom": "m",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "logo_list_RnNciC": {
+      "type": "logo-list",
+      "blocks": {
+        "logo_NTiB9g": {
+          "type": "logo",
+          "settings": {
+            "image_1": "shopify://shop_images/public.webp",
+            "image_width": 140
+          }
+        }
+      },
+      "block_order": [
+        "logo_NTiB9g"
+      ],
+      "custom_css": [],
+      "name": "t:sections.logo-list.name",
+      "settings": {
+        "layout": "static",
+        "color_scheme": "background-1",
+        "enable_border": true,
+        "border_full": false,
+        "subheading": "",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "",
+        "heading_size": "h3",
+        "heading_line": "simple",
+        "line_color": "#1566e0",
+        "word_break": false,
+        "heading_animation": "none",
+        "word_break_an": true,
+        "text": "",
+        "horizontal_alignment": "center",
+        "vertical_alignment": "middle",
+        "speed_slider_1": 4000,
+        "speed_slider_2": 6000,
+        "padding_top": "no-indent",
+        "padding_bottom": "xs",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "rich_text_kRhkNW": {
+      "type": "rich-text",
+      "blocks": {
+        "text_kcTtNX": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>HEALTH DISCLAIMER:</strong> Ceretone hearing aids are not intended to diagnose, treat, cure, or prevent any medical condition or disease. The information provided on this website is for general informational purposes only and should not be considered medical advice. It is not a substitute for consultation with a qualified healthcare professional. If you have concerns about your hearing health, we strongly recommend consulting your physician or audiologist.</p><p><strong>ADVERTISEMENT NOTICE:</strong> This website is an advertisement and not an actual news article, blog, or consumer protection update.</p><p><strong>MARKETING DISCLOSURE:</strong> This website operates as a marketing platform. The site owner may have a monetary connection to the products and services featured and may receive compensation when users take qualifying actions. This compensation does not affect the information or opinions provided.</p><p><strong>ADVERTISING DISCLOSURE:</strong> This website and the products & services mentioned are part of an advertising marketplace. Any photographs of persons shown on this site are models and not actual customers. The role of this site is to connect consumers with product information and comparison opportunities.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_kcTtNX"
+      ],
+      "custom_css": [
+        ".rich-text__blocks {background-color: #e6f2ff !important; border-radius: 6px !important; box-sizing: border-box;}",
+        ".rich-text__text {max-width: 120%;}"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "alignment": "center",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "m",
+        "padding_bottom": "xl"
+      }
+    }
+  },
+  "order": [
+    "logo_list_XnfqTE",
+    "main",
+    "custom_liquid_PyaeYi",
+    "custom_liquid_CwnDtn",
+    "sticky_btn_CTLN84",
+    "multicolumn_UENeaj",
+    "logo_list_RnNciC",
+    "rich_text_kRhkNW"
+  ]
+}

@@ -1,0 +1,63 @@
+
+{% schema %}
+    {
+        "name": "Logo Top Bar",
+        "settings": [
+            { "type": "text", "id": "custom_class", "label": "自定义class" },
+            { "type": "color", "id": "section_bg_color", "label": "模块背景", "default": "#fff" },
+            { "type": "url", "id": "link", "label": "图片链接" },
+            { "type": "image_picker", "id": "image", "label": "图片"},
+            { "type": "range", "id": "max_image_width", "label": "图片大小", "min": 5, "max": 500, "step": 5, "unit": "px", "default": 300 },
+            { "type": "range", "id": "max_image_width_mb", "label": "图片大小(手机端)", "min": 5, "max": 500, "step": 5, "unit": "px", "default": 200 },
+        ],
+        "presets": [
+            {
+                "name": "Logo Top Bar",
+                "category": "Custom"
+            }
+        ]
+    }
+{% endschema %}
+
+<style>
+[data-section-id="{{ section.id }}"] {
+    --section_bg_color:{{ section.settings.section_bg_color }};
+    --max_image_width:{{ section.settings.max_image_width }}px;
+    --max_image_width_mb:{{ section.settings.max_image_width_mb }}px;
+    min-height:70px;
+    padding:10px 0;
+    background:var(--section_bg_color);
+    display: flex;
+}
+[data-section-id="{{ section.id }}"] .container {
+    display: flex;
+    align-items: center;
+}
+[data-section-id="{{ section.id }}"] .logo-image {
+    max-width:var(--max_image_width);
+}
+[data-section-id="{{ section.id }}"] picture {
+    display: flex;
+}
+@media screen and (max-width: 767px) {
+    [data-section-id="{{ section.id }}"] {
+        min-height:60px;
+    }
+    [data-section-id="{{ section.id }}"] .logo-image {
+        max-width:var(--max_image_width_mb);
+    }
+}
+</style>
+
+<div class="logo-top-bar {{ section.settings.custom_class }}" data-section-id="{{ section.id }}">
+    <div class="container">
+    {% if section.settings.link != blank %}<a href="{{ section.settings.link }}">{% endif %}
+    <picture>
+        <source srcset="{{ section.settings.image | image_url: width: section.settings.max_image_width_mb }}"  media="(max-width: 1023px)" />
+        <source srcset="{{ section.settings.image | image_url: width: section.settings.max_image_width }}" media="(min-width: 1024px)" />
+        <img src="{{ section.settings.image | image_url: width: section.settings.max_image_width_mb }}" width="100%" height="auto" class="logo-image" />
+    </picture>
+    {% if section.settings.link != blank %}</a>{% endif %}
+    </div>
+</div>
+

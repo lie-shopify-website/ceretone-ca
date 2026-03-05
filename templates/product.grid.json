@@ -1,0 +1,1782 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "judge_me_reviews_preview_badge_xGfRmW": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
+        "short_info_7n8hQi": {
+          "type": "short_info",
+          "disabled": true,
+          "settings": {
+            "text": "<span style=\"font-weight: bold; color: \t#1566E0; font-size: 100%;\">\n The Most Compact And Powerful OTC Hearing Aid\n</span>"
+          }
+        },
+        "tags": {
+          "type": "tags",
+          "disabled": true,
+          "settings": {
+            "color": "#e7590d",
+            "bg_color": "#fef0e5"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h3"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "product_featured_info_idAPRj": {
+          "type": "product_featured_info",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "disabled": true,
+          "settings": {
+            "description": "Engineered for all-day comfort, near-invisible wear, and crystal-clear sound—right where life happens."
+          }
+        },
+        "gift_box_jeBHPq": {
+          "type": "Gift_Box",
+          "disabled": true,
+          "settings": {
+            "gift_item_checked": "2",
+            "heading": "Black Friday Offer",
+            "siez_color": "#000000",
+            "bg_color": "#000000"
+          }
+        },
+        "limited_time_gift_jeBHPq": {
+          "type": "limited_time_gift",
+          "settings": {
+            "heading": "Limited-Time Gift"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "disabled": true,
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "custom_liquid_jnDkip": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"coupon-bar\">\n  10% Off Code: HEARBETTER\n</div>\n\n<style>\n.coupon-bar {\n  display: block;\n  color: red;\n  font-size: 20px;\n  font-weight: bold;\n  background: transparent;\n  border: none;\n  border-radius: 0;\n}\n@media screen and (max-width: 768px){\n  .coupon-bar {\n    font-size: 14px;\n    text-align:center;\n  }\n}\n</style>"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "color": "#ffffff",
+            "bg_color": "#e7590d",
+            "buy_text": "Buy Now",
+            "show_amazon_btn": true,
+            "amazon_btn_label": "BUY ON AMAZON",
+            "show_dynamic_checkout": false,
+            "show_quantity": false,
+            "show_gift_card_recipient": false
+          }
+        },
+        "service_icon_Rt3ANF": {
+          "type": "service_icon",
+          "settings": {
+            "text1": "60-Day Risk-Free Trial",
+            "service_icon1": "shopify://shop_images/ser-icon01.png",
+            "text2": "100% Money-Back Guarantee",
+            "service_icon2": "shopify://shop_images/ser-icon02.png",
+            "text3": "Lifetime Support",
+            "service_icon3": "shopify://shop_images/ser-icon03.png"
+          }
+        },
+        "text_with_icon_MibE3M": {
+          "type": "text_with_icon",
+          "disabled": true,
+          "settings": {
+            "show_text_with_icon_1": true,
+            "icon_1": "check-4",
+            "text_1": "60-Day Risk-Free Trial",
+            "show_text_with_icon_2": true,
+            "icon_2": "check-4",
+            "text_2": "100% Money-Back Guarantee",
+            "show_text_with_icon_3": true,
+            "icon_3": "check-4",
+            "text_3": "Free Shipping & Return",
+            "show_text_with_icon_4": true,
+            "icon_4": "check-4",
+            "text_4": "Lifetime Support",
+            "box_shadow": false,
+            "icon_style": "contrast",
+            "icon_fill_type": "solid"
+          }
+        },
+        "custom_liquid_ke6QEp": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<div style=\"font-weight: bold; font-size: 14px; color: #d32f2f; display: flex; align-items: center;\">\n  <span style=\"margin-right: 6px;\">⏰</span>\n  Hurry! Only a few left — Deal ends soon!\n</div>"
+          }
+        },
+        "payment_enable_RzX7CJ": {
+          "type": "payment_enable",
+          "settings": {
+            "payment_enable": true,
+            "payment_label": ""
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_preview_badge_xGfRmW",
+        "short_info_7n8hQi",
+        "tags",
+        "title",
+        "price",
+        "product_featured_info_idAPRj",
+        "description",
+        "gift_box_jeBHPq",
+        "limited_time_gift_jeBHPq",
+        "variant_picker",
+        "custom_liquid_jnDkip",
+        "buy_buttons",
+        "service_icon_Rt3ANF",
+        "text_with_icon_MibE3M",
+        "custom_liquid_ke6QEp",
+        "payment_enable_RzX7CJ"
+      ],
+      "settings": {
+        "render_css_file": "",
+        "show_addtocart_btn": true,
+        "enable_new_media_section": false,
+        "desktop_alignment": "right",
+        "mobile_alignment": "before",
+        "gallery_type": "slider_previews",
+        "aspect_ratio": "1/1",
+        "image_fit": "cover",
+        "image_fit_modal": "contain",
+        "padding_bottom": "no-indent"
+      }
+    },
+    "hero_zDkc3M": {
+      "type": "hero",
+      "blocks": {
+        "subtitle_zjLd4U": {
+          "type": "subtitle",
+          "settings": {
+            "subheading": "THE NEXT GEN IS HERE",
+            "subheading_style": "subtitle",
+            "subheading_icon": "star"
+          }
+        },
+        "title_zkr4aK": {
+          "type": "title",
+          "settings": {
+            "heading": "Everything Upgraded. Price Stays.",
+            "heading_size": "h1",
+            "heading_line": "simple",
+            "line_color": "#1566e0",
+            "word_break": false,
+            "heading_animation": "none",
+            "word_break_an": false
+          }
+        },
+        "description_t6tK4N": {
+          "type": "description",
+          "settings": {
+            "description": "Introducing <a href=\"https://ceretone.com/products/core-one-pro-otc-hearing-aids\" style=\"text-decoration: underline;\">Core One Pro</a>, forged through 783 days of refinement after the original Core One's release."
+          }
+        },
+        "buttons_Ex9rat": {
+          "type": "buttons",
+          "settings": {
+            "show_button_1": true,
+            "button_label_1": "SHOP CORE ONE PRO",
+            "button_link_1": "shopify://products/core-one-pro-otc-hearing-aids",
+            "button_style_1": "primary",
+            "show_button_2": false,
+            "button_label_2": "Label",
+            "button_link_2": "",
+            "button_style_2": "simple"
+          }
+        }
+      },
+      "block_order": [
+        "subtitle_zjLd4U",
+        "title_zkr4aK",
+        "description_t6tK4N",
+        "buttons_Ex9rat"
+      ],
+      "custom_css": [
+        "@media screen and (max-width: 768px) {{display: none; }}"
+      ],
+      "name": "PC-A90引流海报",
+      "settings": {
+        "layout": "overlay",
+        "header_overlay": false,
+        "header_transparent": false,
+        "block_type": "subtle",
+        "color_scheme": "scheme-da522d8c-d8ea-43a1-8f89-75b1a671124a",
+        "full_screen": false,
+        "image": "shopify://shop_images/1920-640_07a611df-631b-4fd6-a543-ab96eea2fa4b.jpg",
+        "link": "shopify://products/core-one-pro-otc-hearing-aids",
+        "show_video": false,
+        "overlay_opacity": 0,
+        "image_ratio": "adapt",
+        "object_fit": "cover",
+        "desktop_image_position": "after",
+        "mobile_image_position": "after",
+        "mobile_image_overlay": "overlay",
+        "horizontal_alignment": "left",
+        "vertical_alignment": "middle",
+        "padding_top": "no-indent",
+        "padding_bottom": "xs"
+      }
+    },
+    "hero_arNPPa": {
+      "type": "hero",
+      "blocks": {
+        "subtitle_7KnJDN": {
+          "type": "subtitle",
+          "settings": {
+            "subheading": "THE NEXT GEN IS HERE",
+            "subheading_style": "subtitle",
+            "subheading_icon": "star"
+          }
+        },
+        "title_V4DKcx": {
+          "type": "title",
+          "settings": {
+            "heading": "Everything Upgraded. Price Stays.",
+            "heading_size": "h1",
+            "heading_line": "simple",
+            "line_color": "#1566e0",
+            "word_break": false,
+            "heading_animation": "none",
+            "word_break_an": false
+          }
+        },
+        "description_BxQKxD": {
+          "type": "description",
+          "settings": {
+            "description": "Introducing <a href=\"https://ceretone.com/products/core-one-pro-otc-hearing-aids\" style=\"text-decoration: underline;\">Core One Pro</a>, forged through 783 days of refinement after the original Core One's release."
+          }
+        },
+        "buttons_864BAe": {
+          "type": "buttons",
+          "settings": {
+            "show_button_1": true,
+            "button_label_1": "SHOP CORE ONE PRO",
+            "button_link_1": "shopify://products/core-one-pro-otc-hearing-aids",
+            "button_style_1": "primary",
+            "show_button_2": false,
+            "button_label_2": "Label",
+            "button_link_2": "",
+            "button_style_2": "simple"
+          }
+        }
+      },
+      "block_order": [
+        "subtitle_7KnJDN",
+        "title_V4DKcx",
+        "description_BxQKxD",
+        "buttons_864BAe"
+      ],
+      "custom_css": [
+        "@media screen and (min-width: 768px) {{display: none; }}",
+        "h2 {font-size: 32px;}",
+        "@media only screen and (max-width: 600px) {h2 {font-size: 20px; }}",
+        ".icon-star {color: #ff4f00;}",
+        ".button {background-color: #ff4f00;}"
+      ],
+      "name": "MB-A90引流海报",
+      "settings": {
+        "layout": "vertical",
+        "header_overlay": false,
+        "header_transparent": false,
+        "block_type": "subtle",
+        "color_scheme": "scheme-da522d8c-d8ea-43a1-8f89-75b1a671124a",
+        "full_screen": false,
+        "image": "shopify://shop_images/1200-628_f22c4953-fafa-4f4b-b5ee-a1131c271247.jpg",
+        "link": "shopify://products/core-one-pro-otc-hearing-aids",
+        "show_video": false,
+        "overlay_opacity": 0,
+        "image_ratio": "adapt",
+        "object_fit": "contain",
+        "desktop_image_position": "after",
+        "mobile_image_position": "before",
+        "mobile_image_overlay": "before",
+        "horizontal_alignment": "center",
+        "vertical_alignment": "middle",
+        "padding_top": "no-indent",
+        "padding_bottom": "s"
+      }
+    },
+    "service_terms_PrrYEF": {
+      "type": "ServiceTerms",
+      "blocks": {
+        "slide_FdBfF7": {
+          "type": "slide",
+          "settings": {
+            "title": "60-Day Risk-Free Trial",
+            "icon": "trophy",
+            "icon_color": "contrast",
+            "icon_fill_type": "solid"
+          }
+        },
+        "slide_rYCQEq": {
+          "type": "slide",
+          "settings": {
+            "title": "100% Money-Back Guarantee",
+            "icon": "shield",
+            "icon_color": "contrast",
+            "icon_fill_type": "solid"
+          }
+        },
+        "slide_FEzw7w": {
+          "type": "slide",
+          "settings": {
+            "title": "Free Shipping & Return",
+            "icon": "delivery-box",
+            "icon_color": "contrast",
+            "icon_fill_type": "solid"
+          }
+        },
+        "slide_6z6cwV": {
+          "type": "slide",
+          "settings": {
+            "title": "Lifetime Customer Service",
+            "icon": "user-3",
+            "icon_color": "contrast",
+            "icon_fill_type": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "slide_FdBfF7",
+        "slide_rYCQEq",
+        "slide_FEzw7w",
+        "slide_6z6cwV"
+      ],
+      "disabled": true,
+      "settings": {
+        "top_one": 50,
+        "bottom_one": 50,
+        "top_one_mic": 0,
+        "bottom_one_mic": 0,
+        "bg_color": "#ffffff",
+        "title": "",
+        "Copywriting": ""
+      }
+    },
+    "6284d95d-0127-47a7-b977-2a630c6f9383": {
+      "type": "numbers",
+      "blocks": {
+        "template--15231063359549__6284d95d-0127-47a7-b977-2a630c6f9383-column-1": {
+          "type": "column",
+          "settings": {
+            "number": "Top2",
+            "heading": "Brand",
+            "description": "",
+            "icon": "confetti",
+            "icon_color": "subtle",
+            "icon_fill_type": "gradient",
+            "show_button": false,
+            "button_label": "Label",
+            "button_link": ""
+          }
+        },
+        "template--15231063359549__6284d95d-0127-47a7-b977-2a630c6f9383-column-2": {
+          "type": "column",
+          "settings": {
+            "number": "1278",
+            "heading": "Backers",
+            "description": "",
+            "icon": "user-5",
+            "icon_color": "subtle",
+            "icon_fill_type": "solid",
+            "show_button": false,
+            "button_label": "Label",
+            "button_link": ""
+          }
+        },
+        "template--15231063359549__6284d95d-0127-47a7-b977-2a630c6f9383-column-3": {
+          "type": "column",
+          "settings": {
+            "number": "$331,337",
+            "heading": "Raised",
+            "description": "",
+            "icon": "wallet",
+            "icon_color": "subtle",
+            "icon_fill_type": "solid",
+            "show_button": false,
+            "button_label": "Label",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--15231063359549__6284d95d-0127-47a7-b977-2a630c6f9383-column-1",
+        "template--15231063359549__6284d95d-0127-47a7-b977-2a630c6f9383-column-2",
+        "template--15231063359549__6284d95d-0127-47a7-b977-2a630c6f9383-column-3"
+      ],
+      "custom_css": [
+        "h2 {font-size: 32px;}",
+        ".numbers-card__number {color: #ff4f00;}",
+        "@media only screen and (max-width: 600px) {h2 {font-size: 25px; }}"
+      ],
+      "settings": {
+        "layout": "columns",
+        "block_type": "subtle",
+        "columns_to_row": 3,
+        "color_scheme": "scheme-da522d8c-d8ea-43a1-8f89-75b1a671124a",
+        "enable_border": false,
+        "border_full": false,
+        "subheading": "",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "Indiegogo Star Creative Project",
+        "heading_line": "simple",
+        "line_color": "#1566e0",
+        "word_break": false,
+        "text": "",
+        "text_align": "center",
+        "number_size": "recommended",
+        "icon_size": "recommended",
+        "card_heading_size": "recommended",
+        "number_size_first": "normal",
+        "icon_size_first": "normal",
+        "card_heading_size_first": "h4",
+        "padding_top": "xs",
+        "padding_bottom": "xs"
+      }
+    },
+    "2ab0f1fd-0dfa-4eb6-8241-11f7a36713d5": {
+      "type": "slideshow",
+      "blocks": {
+        "template--15335004602429__2ab0f1fd-0dfa-4eb6-8241-11f7a36713d5-slide-1": {
+          "type": "slide",
+          "settings": {
+            "color_scheme": "",
+            "icon": "none",
+            "image": "shopify://shop_images/5_9dd9962f-b572-4eb5-a3bd-c5098608a02d.png",
+            "overlay_opacity": 0,
+            "show_video": false,
+            "loop_video": true,
+            "heading": "Compact and Lightweight",
+            "heading_size": "recommended",
+            "description": "Core One leads the era of lightweight hearing aids, weighing less than 0.04 oz (0.96 grams).",
+            "tab_heading": "＜ 0.04 oz",
+            "show_button": false,
+            "button_style": "simple_link",
+            "button_label": "Shop Now",
+            "button_link": ""
+          }
+        },
+        "a0c26b6e-3984-4355-b33d-915e9716defa": {
+          "type": "slide",
+          "settings": {
+            "color_scheme": "",
+            "icon": "none",
+            "image": "shopify://shop_images/1_76bae7bd-8283-4f51-a4d0-afe0881ab0e5.png",
+            "overlay_opacity": 0,
+            "show_video": false,
+            "loop_video": true,
+            "heading": "Tiny Yet Powerful",
+            "heading_size": "recommended",
+            "description": "The body of the Core One measures only 0.58 inches, allowing it to fit completely within the ear canal and eliminate discomfort.",
+            "tab_heading": "0.58 in",
+            "show_button": false,
+            "button_style": "simple_link",
+            "button_label": "Shop Now",
+            "button_link": ""
+          }
+        },
+        "81e2f690-109a-4232-8481-07451b1d681f": {
+          "type": "slide",
+          "settings": {
+            "color_scheme": "",
+            "icon": "none",
+            "image": "shopify://shop_images/1200-900_3050ab86-4da9-4a09-9ae5-628888aa6cf7.png",
+            "overlay_opacity": 0,
+            "show_video": false,
+            "loop_video": true,
+            "heading": "Invisible-In-Canal",
+            "heading_size": "recommended",
+            "description": "Almost invisible in the ear, Core One reduces social discomfort with its discreet, inconspicuous design.",
+            "tab_heading": "IIC design",
+            "show_button": false,
+            "button_style": "simple_link",
+            "button_label": "Shop Now",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--15335004602429__2ab0f1fd-0dfa-4eb6-8241-11f7a36713d5-slide-1",
+        "a0c26b6e-3984-4355-b33d-915e9716defa",
+        "81e2f690-109a-4232-8481-07451b1d681f"
+      ],
+      "custom_css": [
+        "h2 {font-size: 32px;}",
+        "@media only screen and (max-width: 600px) {h2 {font-size: 25px; }}"
+      ],
+      "settings": {
+        "layout": "simple",
+        "full_width": false,
+        "color_scheme": "",
+        "enable_border": false,
+        "border_full": false,
+        "subheading": "Our market research reveals that 72% of users feel self-conscious, while 68% experience discomfort due to the size, weight, or fit of their devices.",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "Introducing Our Smallest  Hearing Aids",
+        "heading_size": "h2",
+        "heading_line": "simple",
+        "line_color": "#1566e0",
+        "word_break": false,
+        "text": "Core One: The Next Evolution in Hearing Aid Technology",
+        "heading_animation": "none",
+        "word_break_an": false,
+        "text_align": "center",
+        "height": "4/3",
+        "text_align_content": "top-left",
+        "enable_autoplay": true,
+        "enable_parallax": true,
+        "enable_pagination": true,
+        "pagination_type": "bullets",
+        "pagination_color_scheme": "background-1",
+        "pagination_width": "medium",
+        "enable_navigation": false,
+        "navigation_color_scheme": "",
+        "slide_duration": 3,
+        "icon_size": "recommended",
+        "icon_style": "contrast",
+        "icon_fill_type": "solid",
+        "show_tab_icon": true,
+        "padding_top": "xs",
+        "padding_bottom": "no-indent",
+        "margin_top": "xs",
+        "margin_bottom": "m"
+      }
+    },
+    "sellinpromotion_drk8N7": {
+      "type": "Sellinpromotion",
+      "custom_css": [
+        "h2 {font-size: 32px;}",
+        "@media only screen and (max-width: 600px) {h2 {font-size: 25px; }}"
+      ],
+      "settings": {
+        "top_one": 4,
+        "bottom_one": 0,
+        "top_one_mic": 0,
+        "bottom_one_mic": 0,
+        "bg_color": "#ffffff",
+        "text_align": "center",
+        "title": "Hear What You Are Meant to Hear",
+        "subtitle": "",
+        "flex_direction": "column",
+        "Copywriting_align": "center",
+        "Copywriting": "",
+        "Copywriting_fu": "Cutting-Edge Tech for Crystal-Clear Hearing",
+        "video": "shopify://files/videos/合成 2(1).mp4",
+        "videomic": "shopify://files/videos/合成 2(1).mp4",
+        "video_w": 100,
+        "video_w_mic": 100,
+        "Number_color_box": "#dedede",
+        "Number_color": "#1566e0",
+        "linktext": "",
+        "link": ""
+      }
+    },
+    "multicolumn_apJkjE": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_DkjKYK": {
+          "type": "column",
+          "settings": {
+            "icon": "none",
+            "icon_color_scheme": "",
+            "icon_fill_type": "gradient",
+            "heading": "Maximum Sound Gain",
+            "text": "The Core One features a <span style=\"color:#FFA953;\"><strong>high maximum gain</strong></span>, effectively addressing <span style=\"color:#FFA953;\"><strong>mild to moderate hearing loss</strong></span> and helping you reconnect with sounds you may have thought were lost.",
+            "show_button": false,
+            "button_label": "Label",
+            "button_link": "",
+            "button_style": "simple"
+          }
+        },
+        "column_RxV4aa": {
+          "type": "column",
+          "settings": {
+            "icon": "none",
+            "icon_color_scheme": "",
+            "icon_fill_type": "gradient",
+            "heading": "Superior Sound Quality",
+            "text": "With <span style=\"color:#FFA953;\"><strong>advanced algorithms</strong></span>, Core One delivers exceptional <span style=\"color:#FFA953;\"><strong>dynamic noise reduction</strong></span> with minimal latency, ensuring a natural and immersive listening experience in any environment.",
+            "show_button": false,
+            "button_label": "Label",
+            "button_link": "",
+            "button_style": "simple"
+          }
+        },
+        "column_3g7bzn": {
+          "type": "column",
+          "settings": {
+            "icon": "none",
+            "icon_color_scheme": "",
+            "icon_fill_type": "gradient",
+            "heading": "Precision Sound Processing",
+            "text": "With <span style=\"color:#FFA953;\"><strong>16 channels</strong></span>, Core One utilizes <span style=\"color:#FFA953;\"><strong>Wide Dynamic Range Compression</strong></span> to enhance clarity, speech intelligibility, and effective noise management.",
+            "show_button": false,
+            "button_label": "Label",
+            "button_link": "",
+            "button_style": "simple"
+          }
+        }
+      },
+      "block_order": [
+        "column_DkjKYK",
+        "column_RxV4aa",
+        "column_3g7bzn"
+      ],
+      "custom_css": [
+        "h2 {font-size: 32px;}",
+        "@media only screen and (max-width: 600px) {h2 {font-size: 25px; }}"
+      ],
+      "settings": {
+        "section_type": "separators",
+        "color_scheme": "background-1",
+        "enable_border": false,
+        "border_full": false,
+        "multicolumn_to_show": 3,
+        "gap": "small",
+        "subheading": "",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "",
+        "heading_size": "h2",
+        "heading_line": "simple",
+        "line_color": "#1566e0",
+        "word_break": false,
+        "heading_animation": "none",
+        "word_break_an": false,
+        "text": "",
+        "text_align": "left",
+        "icon_size": "recommended",
+        "box_shadow": true,
+        "icon_style": "colored",
+        "image_width": "medium",
+        "image_ratio": "square",
+        "object_fit": "cover",
+        "card_heading_size": "h4",
+        "padding_top": "xs",
+        "padding_bottom": "xs",
+        "margin_top": "no-indent",
+        "margin_bottom": "xs"
+      }
+    },
+    "image_with_text_znYbUc": {
+      "type": "image-with-text",
+      "blocks": {
+        "column_y4FkFF": {
+          "type": "column",
+          "settings": {
+            "icon": "none",
+            "icon_fill_type": "solid",
+            "heading": "Noise Cancellation",
+            "text": "Featuring digital chips, Core One ensures consistent clarity and stable sound quality by automatically reducing noise. Say goodbye to unnecessary distractions and focus on conversations and important sounds."
+          }
+        },
+        "column_jp6ANq": {
+          "type": "column",
+          "settings": {
+            "icon": "none",
+            "icon_fill_type": "solid",
+            "heading": "Adaptive Feedback Cancelling",
+            "text": "Core One's adaptive feedback cancelling technology identifies and eliminates whistling (feedback frequencies) before they reach your ear. This means you can hug loved ones or wear a hat without experiencing annoying squealing."
+          }
+        },
+        "column_3zbYUU": {
+          "type": "column",
+          "settings": {
+            "icon": "none",
+            "icon_fill_type": "solid",
+            "heading": "Wide Dynamic Range Compression (WRDC)",
+            "text": "With WRDC, Core One ensures true-to-life sound quality by maintaining a balance between soft and loud sounds. Its advanced 16-channel digital chipset enhances voice clarity and adapts seamlessly to different environments, providing effortless conversations."
+          }
+        },
+        "column_MiUmm7": {
+          "type": "column",
+          "settings": {
+            "icon": "none",
+            "icon_fill_type": "solid",
+            "heading": "Delayed Auto Turn On",
+            "text": "Core One features a unique 15-second automatic delay at startup, effectively reducing initial whistling for a smoother experience. Enjoy comfortable and clear sound with Core One, optimizing your communication and overall hearing experience."
+          }
+        }
+      },
+      "block_order": [
+        "column_y4FkFF",
+        "column_jp6ANq",
+        "column_3zbYUU",
+        "column_MiUmm7"
+      ],
+      "disabled": true,
+      "settings": {
+        "layout": "image_last",
+        "color_scheme": "",
+        "subheading": "Experience True-to-Life Sound",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "Hear What You Are Meant to Hear",
+        "heading_size": "h2",
+        "heading_line": "simple",
+        "line_color": "#1566e0",
+        "word_break": false,
+        "heading_animation": "none",
+        "word_break_an": false,
+        "text": "",
+        "text_align": "center",
+        "inner_subheading": "",
+        "inner_heading": "Crystal Clear Sound Quality",
+        "inner_heading_line": "simple",
+        "inner_line_color": "#1566e0",
+        "inner_word_break": false,
+        "description": "",
+        "text_align_inner": "top",
+        "image": "shopify://shop_images/Invisible-in-canal_Core_One.webp",
+        "image_link": "",
+        "height": "adapt",
+        "overlay_opacity": 0,
+        "logo_width": 75,
+        "add_text": "",
+        "author_color_scheme": "",
+        "icon_size": "recommended",
+        "box_shadow": false,
+        "icon_style": "colored",
+        "show_button": false,
+        "button_label": "Button label",
+        "button_link": "",
+        "button_style": "primary",
+        "show_button_2": false,
+        "button_label_2": "Button label",
+        "button_link_2": "",
+        "button_style_2": "simple",
+        "padding_top": "no-indent",
+        "padding_bottom": "no-indent",
+        "margin_top": "no-indent",
+        "margin_bottom": "m"
+      }
+    },
+    "7dba930a-4503-4b98-ad20-1d9ec5fe1eac": {
+      "type": "slideshow",
+      "blocks": {
+        "template--15231063359549__7dba930a-4503-4b98-ad20-1d9ec5fe1eac-slide-1": {
+          "type": "slide",
+          "settings": {
+            "color_scheme": "background-1",
+            "icon": "none",
+            "image": "shopify://shop_images/core_one_app_controlled_volume_adjust.webp",
+            "overlay_opacity": 0,
+            "show_video": false,
+            "loop_video": true,
+            "heading": "Standard",
+            "heading_size": "recommended",
+            "description": "Experience clear audio in everyday situations with this program, providing optimal sound quality.",
+            "tab_heading": "Heading",
+            "show_button": false,
+            "button_style": "simple_link",
+            "button_label": "Shop Now",
+            "button_link": ""
+          }
+        },
+        "4d16fcc0-0c2c-484f-aadf-871346b6c1be": {
+          "type": "slide",
+          "settings": {
+            "color_scheme": "background-1",
+            "icon": "none",
+            "image": "shopify://shop_images/ceretone-core-one-restaurant-mode.webp",
+            "overlay_opacity": 0,
+            "show_video": false,
+            "loop_video": true,
+            "heading": "Restaurant",
+            "heading_size": "recommended",
+            "description": "Activate this program with just one tap to enhance clarity in noisy environments for a more enjoyable dining experience.",
+            "tab_heading": "Heading",
+            "show_button": false,
+            "button_style": "simple_link",
+            "button_label": "Shop Now",
+            "button_link": ""
+          }
+        },
+        "6a5ba059-6a47-4a80-926a-8063142862dd": {
+          "type": "slide",
+          "settings": {
+            "color_scheme": "background-1",
+            "icon": "none",
+            "image": "shopify://shop_images/Standard_Mode_of_Core_One.webp",
+            "overlay_opacity": 0,
+            "show_video": false,
+            "loop_video": true,
+            "heading": "Volume Adjustment",
+            "heading_size": "recommended",
+            "description": "Easily adjust the volume to your preference using the Ceretone app.",
+            "tab_heading": "Heading",
+            "show_button": false,
+            "button_style": "simple_link",
+            "button_label": "Shop Now",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--15231063359549__7dba930a-4503-4b98-ad20-1d9ec5fe1eac-slide-1",
+        "4d16fcc0-0c2c-484f-aadf-871346b6c1be",
+        "6a5ba059-6a47-4a80-926a-8063142862dd"
+      ],
+      "custom_css": [
+        "h2 {font-size: 32px;}",
+        "@media only screen and (max-width: 600px) {h2 {font-size: 25px; }}"
+      ],
+      "settings": {
+        "layout": "simple",
+        "full_width": true,
+        "color_scheme": "background-2",
+        "enable_border": false,
+        "border_full": false,
+        "subheading": "Simple Control, No More Button Searching!",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "Easy Control with the Ceretone App",
+        "heading_size": "h2",
+        "heading_line": "simple",
+        "line_color": "#1566e0",
+        "word_break": true,
+        "text": "Compatible with both iOS and Android devices",
+        "heading_animation": "none",
+        "word_break_an": false,
+        "text_align": "center",
+        "height": "16/9",
+        "text_align_content": "top-left",
+        "enable_autoplay": true,
+        "enable_parallax": false,
+        "enable_pagination": true,
+        "pagination_type": "bullets",
+        "pagination_color_scheme": "background-1",
+        "pagination_width": "medium",
+        "enable_navigation": true,
+        "navigation_color_scheme": "",
+        "slide_duration": 3,
+        "icon_size": "recommended",
+        "icon_style": "contrast",
+        "icon_fill_type": "solid",
+        "show_tab_icon": true,
+        "padding_top": "xs",
+        "padding_bottom": "xs",
+        "margin_top": "xs",
+        "margin_bottom": "xs"
+      }
+    },
+    "multicolumn_9FNBME": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_FfN4tK": {
+          "type": "column",
+          "settings": {
+            "icon": "none",
+            "icon_color_scheme": "",
+            "icon_fill_type": "gradient",
+            "heading": "2 Hours",
+            "text": "A quick 2-hour charge fully powers Core One.",
+            "show_button": false,
+            "button_label": "Label",
+            "button_link": "",
+            "button_style": "simple"
+          }
+        },
+        "column_9T6Wqd": {
+          "type": "column",
+          "settings": {
+            "icon": "none",
+            "icon_color_scheme": "",
+            "icon_fill_type": "gradient",
+            "heading": "13 Hours",
+            "text": "Enjoy 13 hours of use from a single charge.",
+            "show_button": false,
+            "button_label": "Label",
+            "button_link": "",
+            "button_style": "simple"
+          }
+        },
+        "column_za9eU9": {
+          "type": "column",
+          "settings": {
+            "icon": "none",
+            "icon_color_scheme": "",
+            "icon_fill_type": "gradient",
+            "heading": "6 Times",
+            "text": "The charging case powers your Core One up to 6 times before needing a recharge.",
+            "show_button": false,
+            "button_label": "Label",
+            "button_link": "",
+            "button_style": "simple"
+          }
+        }
+      },
+      "block_order": [
+        "column_FfN4tK",
+        "column_9T6Wqd",
+        "column_za9eU9"
+      ],
+      "settings": {
+        "section_type": "transparent",
+        "color_scheme": "",
+        "enable_border": false,
+        "border_full": false,
+        "multicolumn_to_show": 3,
+        "gap": "large",
+        "subheading": "",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "Power Saving, Long-Lasting Battery",
+        "heading_size": "h3",
+        "heading_line": "simple",
+        "line_color": "#1566e0",
+        "word_break": false,
+        "heading_animation": "none",
+        "word_break_an": false,
+        "text": "Enjoy up to 78 hours of continuous use with Core One, easily charged on the go using the included rechargeable case via wall outlets or USB ports.",
+        "text_align": "center",
+        "icon_size": "recommended",
+        "box_shadow": true,
+        "icon_style": "colored",
+        "image_width": "medium",
+        "image_ratio": "square",
+        "object_fit": "cover",
+        "card_heading_size": "h4",
+        "padding_top": "xs",
+        "padding_bottom": "xs",
+        "margin_top": "xs",
+        "margin_bottom": "xs"
+      }
+    },
+    "numbers_b7Hgp7": {
+      "type": "numbers",
+      "blocks": {
+        "column_djCWwG": {
+          "type": "column",
+          "settings": {
+            "number": "78",
+            "heading": "Hours",
+            "description": "Core One provides up to 78 hours of continuous use.",
+            "icon": "battery-1",
+            "icon_color": "contrast",
+            "icon_fill_type": "gradient",
+            "show_button": false,
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "column_BLdXG4": {
+          "type": "column",
+          "settings": {
+            "number": "2",
+            "heading": "Hours",
+            "description": "A quick 2-hour charge fully powers Core One.",
+            "icon": "none",
+            "icon_color": "subtle",
+            "icon_fill_type": "solid",
+            "show_button": false,
+            "button_label": "Label",
+            "button_link": ""
+          }
+        },
+        "column_UBztUa": {
+          "type": "column",
+          "settings": {
+            "number": "13",
+            "heading": "Hours",
+            "description": "Enjoy 13 hours of use from a single charge.",
+            "icon": "none",
+            "icon_color": "subtle",
+            "icon_fill_type": "solid",
+            "show_button": false,
+            "button_label": "Label",
+            "button_link": ""
+          }
+        },
+        "column_KmU3Jy": {
+          "type": "column",
+          "settings": {
+            "number": "6",
+            "heading": "Times",
+            "description": "The charging case powers up your Core One 6 times before requiring a recharge.",
+            "icon": "none",
+            "icon_color": "contrast",
+            "icon_fill_type": "solid",
+            "show_button": false,
+            "button_label": "Label",
+            "button_link": ""
+          }
+        },
+        "column_j6apCG": {
+          "type": "column",
+          "settings": {
+            "number": "Magnetic + USB-C",
+            "heading": "Heading",
+            "description": "Keep your Core One hearing aids charged on-the-go. The rechargeable case connects to wall outlets or USB ports for convenient charging.",
+            "icon": "none",
+            "icon_color": "contrast",
+            "icon_fill_type": "solid",
+            "show_button": false,
+            "button_label": "Label",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_djCWwG",
+        "column_BLdXG4",
+        "column_UBztUa",
+        "column_KmU3Jy",
+        "column_j6apCG"
+      ],
+      "disabled": true,
+      "settings": {
+        "layout": "grid",
+        "block_type": "plain",
+        "columns_to_row": 4,
+        "color_scheme": "background-1",
+        "enable_border": false,
+        "border_full": false,
+        "subheading": "",
+        "subheading_style": "subtitle subtitle--secondary",
+        "subheading_icon": "none",
+        "heading": "<strong>Power Saving, Long Life Batterty</strong>",
+        "heading_line": "simple",
+        "line_color": "#1566e0",
+        "word_break": false,
+        "text": "",
+        "text_align": "center",
+        "number_size": "recommended",
+        "icon_size": "recommended",
+        "card_heading_size": "recommended",
+        "number_size_first": "large",
+        "icon_size_first": "extra-large",
+        "card_heading_size_first": "h4",
+        "padding_top": "no-indent",
+        "padding_bottom": "m"
+      }
+    },
+    "rich_text_kA9mBa": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_mTrBJR": {
+          "type": "heading",
+          "settings": {
+            "heading": "IP66 Waterproof Rating",
+            "heading_size": "medium"
+          }
+        },
+        "text_VgKirL": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Not afraid of the challenges of rain and dust</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_mTrBJR",
+        "text_VgKirL"
+      ],
+      "disabled": true,
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "color_scheme": "",
+        "full_width": true,
+        "alignment": "center",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "m",
+        "padding_bottom": "m"
+      }
+    },
+    "banner_grid_tVGcht": {
+      "type": "banner-grid",
+      "blocks": {
+        "card_AJJYAm": {
+          "type": "card",
+          "settings": {
+            "color_scheme": "background-1",
+            "image": "shopify://shop_images/1500-1500_4cae9094-0212-4739-aee6-de1cd9c522fa.png",
+            "overlay_opacity": 0,
+            "icon": "none",
+            "icon_size": "recommended",
+            "logo_width": 135,
+            "heading": "Different Sizes of Eartips",
+            "heading_size": "h6",
+            "show_button": false,
+            "button_style": "simple_link",
+            "button_label": "Shop Now",
+            "button_link": "",
+            "full_link": false
+          }
+        },
+        "card_9q8kUx": {
+          "type": "card",
+          "settings": {
+            "color_scheme": "background-3",
+            "image": "shopify://shop_images/1500-1500_e0077476-beb9-48eb-bff6-4a916c178e37.png",
+            "overlay_opacity": 0,
+            "icon": "none",
+            "icon_size": "recommended",
+            "logo_width": 135,
+            "heading": "Glasses-Friendly",
+            "heading_size": "h6",
+            "show_button": false,
+            "button_style": "simple_link",
+            "button_label": "Shop Now",
+            "button_link": "",
+            "full_link": false
+          }
+        },
+        "card_xV386e": {
+          "type": "card",
+          "settings": {
+            "color_scheme": "background-1",
+            "image": "shopify://shop_images/portable_case.png",
+            "overlay_opacity": 0,
+            "icon": "none",
+            "icon_size": "recommended",
+            "logo_width": 135,
+            "heading": "Portable Charging Case",
+            "heading_size": "h6",
+            "show_button": false,
+            "button_style": "simple_link",
+            "button_label": "Shop Now",
+            "button_link": "",
+            "full_link": false
+          }
+        },
+        "card_jqpJpU": {
+          "type": "card",
+          "settings": {
+            "color_scheme": "background-1",
+            "image": "shopify://shop_images/2_913bd51e-82f4-447f-8798-113502ba270c.png",
+            "overlay_opacity": 0,
+            "icon": "none",
+            "icon_size": "recommended",
+            "logo_width": 135,
+            "heading": "Color-Coded Eartips",
+            "heading_size": "h6",
+            "show_button": false,
+            "button_style": "simple_link",
+            "button_label": "Shop Now",
+            "button_link": "",
+            "full_link": false
+          }
+        }
+      },
+      "block_order": [
+        "card_AJJYAm",
+        "card_9q8kUx",
+        "card_xV386e",
+        "card_jqpJpU"
+      ],
+      "custom_css": [
+        "h2 {font-size: 32px;}",
+        "@media only screen and (max-width: 600px) {h2 {font-size: 25px; }}"
+      ],
+      "settings": {
+        "layout": "columns",
+        "columns": 4,
+        "color_scheme": "background-1",
+        "enable_border": false,
+        "border_full": false,
+        "subheading": "",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "Comfortable Wear for All-Day Use",
+        "heading_size": "h2",
+        "heading_line": "simple",
+        "line_color": "#000000",
+        "word_break": false,
+        "heading_animation": "none",
+        "word_break_an": false,
+        "text": "",
+        "text_align": "center",
+        "gap": "4",
+        "border_radius": true,
+        "text_align_content": "top-left",
+        "icon_style": "contrast",
+        "icon_fill_type": "gradient",
+        "padding_top": "xs",
+        "padding_bottom": "xs",
+        "margin_top": "xs",
+        "margin_bottom": "xs"
+      }
+    },
+    "case_studies_HYJerm": {
+      "type": "case-studies",
+      "blocks": {
+        "case_slide_W4dN4B": {
+          "type": "case_slide",
+          "settings": {
+            "image": "shopify://shop_images/best_otc_hearing_aids_core_one.webp",
+            "overlay_opacity": 0,
+            "heading": "Your Active Lifestyle",
+            "text": "Whether you’re jogging through the park or strolling downtown, Core One adapts to every environment. Stay present and engaged with sound tailored to match your pace and surroundings.",
+            "quote": "",
+            "quote_size": "h4",
+            "author_name": "",
+            "author_position": "",
+            "show_button": false,
+            "button_style": "simple",
+            "button_label": "Link label",
+            "button_link": "",
+            "logo_width": 130
+          }
+        },
+        "case_slide_VaPbf8": {
+          "type": "case_slide",
+          "settings": {
+            "image": "shopify://shop_images/best_invisible_hearing_aids_core_one.webp",
+            "overlay_opacity": 0,
+            "heading": "Outdoor Adventures",
+            "text": "From serene hikes to vibrant cityscapes, Core One enriches every outdoor experience. Hear the world in detail—the crunch of leaves, distant birdsong, or a friend’s voice calling—bringing you closer to nature and loved ones.",
+            "quote": "",
+            "quote_size": "h4",
+            "author_name": "",
+            "author_position": "",
+            "show_button": false,
+            "button_style": "simple",
+            "button_label": "Link label",
+            "button_link": "",
+            "logo_width": 130
+          }
+        },
+        "case_slide_raPRWK": {
+          "type": "case_slide",
+          "settings": {
+            "image": "shopify://shop_images/Core_One_small_hearing_aids.webp",
+            "overlay_opacity": 0,
+            "heading": "Meaningful Conversations",
+            "text": "Imagine sitting across from a friend, fully immersed in every word and laugh. Core One sharpens voices, giving you the confidence to connect deeply without straining to hear.",
+            "quote": "",
+            "quote_size": "h4",
+            "author_name": "",
+            "author_position": "",
+            "show_button": false,
+            "button_style": "simple",
+            "button_label": "Link label",
+            "button_link": "",
+            "logo_width": 130
+          }
+        },
+        "case_slide_jUMHVd": {
+          "type": "case_slide",
+          "settings": {
+            "image": "shopify://shop_images/Core_One_fda_hearing_aids_over_the_counter.webp",
+            "overlay_opacity": 0,
+            "heading": "Noisy Environments",
+            "text": "Picture yourself in a bustling café or a crowded gathering. Core One filters out background noise, making voices clear and conversations easy, so you stay connected even in the busiest places.",
+            "quote": "",
+            "quote_size": "h4",
+            "author_name": "",
+            "author_position": "",
+            "show_button": false,
+            "button_style": "simple",
+            "button_label": "Link label",
+            "button_link": "",
+            "logo_width": 130
+          }
+        },
+        "case_slide_fTiwDz": {
+          "type": "case_slide",
+          "settings": {
+            "image": "shopify://shop_images/best_over_the_counter_hearing_aids_for_tinnitus.webp",
+            "overlay_opacity": 0,
+            "heading": "Watching TV",
+            "text": "Rediscover the joy of TV nights with loved ones. Core One enhances dialogue clarity, letting you follow every storyline without having to turn up the volume. Now, everyone can enjoy a comfortable listening level.",
+            "quote": "",
+            "quote_size": "h4",
+            "author_name": "",
+            "author_position": "",
+            "show_button": false,
+            "button_style": "simple",
+            "button_label": "Link label",
+            "button_link": "",
+            "logo_width": 130
+          }
+        },
+        "case_slide_PymVYL": {
+          "type": "case_slide",
+          "settings": {
+            "image": "shopify://shop_images/core_one_fda_otc_hearing_aids.webp",
+            "overlay_opacity": 0,
+            "heading": "Traveling Made Easy",
+            "text": "Glide through airports and explore new places without missing a sound. With Core One’s rechargeable battery, you’re free from battery worries, enjoying clear hearing from takeoff to landing.",
+            "quote": "",
+            "quote_size": "h4",
+            "author_name": "",
+            "author_position": "",
+            "show_button": false,
+            "button_style": "simple",
+            "button_label": "Link label",
+            "button_link": "",
+            "logo_width": 130
+          }
+        }
+      },
+      "block_order": [
+        "case_slide_W4dN4B",
+        "case_slide_VaPbf8",
+        "case_slide_raPRWK",
+        "case_slide_jUMHVd",
+        "case_slide_fTiwDz",
+        "case_slide_PymVYL"
+      ],
+      "custom_css": [
+        "h2 {font-size: 32px;}",
+        ".case-studies__column-heading {color: #ffa953;}",
+        "@media only screen and (max-width: 600px) {h2 {font-size: 25px; }}"
+      ],
+      "settings": {
+        "layout": "tabs_bottom",
+        "color_scheme": "background-1",
+        "subheading": "Anywhere, Anytime: Hear the Sound, Feel the Happiness",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "The Core One Is Perfect for…",
+        "heading_size": "h2",
+        "heading_line": "simple",
+        "line_color": "#1566e0",
+        "word_break": false,
+        "heading_animation": "none",
+        "word_break_an": false,
+        "text": "",
+        "text_align": "center",
+        "image_ratio": "square",
+        "slide_color_scheme": "",
+        "tabs_color_scheme": "background-2",
+        "enable_navigation": true,
+        "navigation_color_scheme": "",
+        "padding_top": "xs",
+        "padding_bottom": "xs",
+        "margin_top": "xs",
+        "margin_bottom": "xs"
+      }
+    },
+    "table_properties_9yxYhN": {
+      "type": "table_properties",
+      "blocks": {
+        "slide_VAQTQn": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/4_99d1e5f7-4621-432c-95e7-9fc5181eda9e.png",
+            "title": "Core One",
+            "content": "<span style=\"color: #FF4F00;\">$349</span> |✔️ | ✔️ | ✔️|<span style=\"color:#FF4F00;\">2 Hours</span>  | <span style=\"color: #FF4F00;\">Up to 13 hours</span> | <span style=\"color: #FF4F00;\">Up to 78 hours</span> | <span style=\"color: #FF4F00;\">Up to 6 recharges</span> | USB-C",
+            "url": ""
+          }
+        },
+        "slide_m4XCzQ": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/2_16a09df5-c106-486d-b654-ac473e0103c6.png",
+            "title": "N-brand",
+            "content": "$397  | ❌ | ❌ | ❌ | 2 Hours | Up to 12 hours | Up to 24 hours | Up to 2 recharges",
+            "url": ""
+          }
+        },
+        "slide_qqqGHX": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/1_e0da5bb8-5a90-4af4-a1c9-16a4266c0a83.png",
+            "title": "E-brand",
+            "content": "$1,950 | ✔️ |✔️ | ❌ | 4 Hours |Up to 16 hours | Up to 38 hours | Up to 2 recharges",
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_VAQTQn",
+        "slide_m4XCzQ",
+        "slide_qqqGHX"
+      ],
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_mic": 0,
+        "padding_bottom_mic": 0,
+        "section_title": "Why Choose Core One",
+        "header_pc": 34,
+        "header_mic": 18,
+        "attribute_title": "Price,App Control,Auto Turn On/Off,Delayed Turn On,Charging Time,Battery Life (Single Charge),Battery Life (Rechargeable),Recharge Cycles",
+        "hedaer_color": "#000000",
+        "name_color": "#ff4f00",
+        "parameter_color": "#000000",
+        "parameter_weight": 500,
+        "details_color": "#505050",
+        "Presentation": "black"
+      }
+    },
+    "image_with_text_zV8jrP": {
+      "type": "image-with-text",
+      "blocks": {
+        "column_RtECNt": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "icon": "none",
+            "icon_fill_type": "solid",
+            "heading": "Call Us",
+            "text": "1-866-283-4262"
+          }
+        },
+        "column_T8p7GD": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "icon": "none",
+            "icon_fill_type": "solid",
+            "heading": "Email Us",
+            "text": "service@ceretone.com"
+          }
+        },
+        "column_9akq9X": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "icon": "none",
+            "icon_fill_type": "solid",
+            "heading": "User Manual",
+            "text": "We're here to support"
+          }
+        },
+        "column_VicRpw": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "icon": "none",
+            "icon_fill_type": "solid",
+            "heading": "How-to Videos",
+            "text": "We're here to guide"
+          }
+        }
+      },
+      "block_order": [
+        "column_RtECNt",
+        "column_T8p7GD",
+        "column_9akq9X",
+        "column_VicRpw"
+      ],
+      "custom_css": [
+        "h2 {font-size: 32px;}",
+        "@media only screen and (max-width: 600px) {h2 {font-size: 25px; }}"
+      ],
+      "settings": {
+        "layout": "image_last",
+        "color_scheme": "",
+        "subheading": "",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "What You Get",
+        "heading_size": "h3",
+        "heading_line": "simple",
+        "line_color": "#1566e0",
+        "word_break": false,
+        "heading_animation": "none",
+        "word_break_an": false,
+        "text": "",
+        "text_align": "center",
+        "inner_subheading": "",
+        "inner_heading": "",
+        "inner_heading_line": "simple",
+        "inner_line_color": "#1566e0",
+        "inner_word_break": false,
+        "description": "<ul><li>1 Pair FDA-Registered Hearing Aids with Large Closed Ear Tips (Pre-installed)</li><li>Portable Charging Case</li><li>3 Pairs of Closed Ear Tips (M, S, XS)</li><li>3 Pairs of Open Ear Tips (L, M, S)</li><li>USB-C Charging Cable</li><li>Cleaning Tool</li><li>User Manual</li><li>User Experience</li><li>Quick-Start Guide</li></ul>",
+        "text_align_inner": "center",
+        "image": "shopify://shop_images/coreone_1901689c-1be7-4e5b-9dec-af075f879d74.png",
+        "image_link": "",
+        "height": "adapt",
+        "overlay_opacity": 0,
+        "logo_width": 75,
+        "add_text": "",
+        "author_color_scheme": "",
+        "icon_size": "recommended",
+        "box_shadow": false,
+        "icon_style": "colored",
+        "show_button": false,
+        "button_label": "App Guide",
+        "button_link": "shopify://pages/app-guide",
+        "button_style": "simple",
+        "show_button_2": false,
+        "button_label_2": "Warranty Details",
+        "button_link_2": "shopify://pages/warranty",
+        "button_style_2": "simple",
+        "padding_top": "xs",
+        "padding_bottom": "xs",
+        "margin_top": "xs",
+        "margin_bottom": "xs"
+      }
+    },
+    "rich_text_WBBAMC": {
+      "type": "rich-text",
+      "blocks": {
+        "subheading_Pi6TRP": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Core One is Ideal for Those with Mild to Moderate Hearing Loss"
+          }
+        },
+        "heading_jB8KwG": {
+          "type": "heading",
+          "settings": {
+            "heading": "Not Sure?",
+            "heading_size": "medium"
+          }
+        },
+        "button_ADdYHT": {
+          "type": "button",
+          "settings": {
+            "button_label": "Test Now",
+            "button_link": "shopify://pages/hearing-tests",
+            "button_style": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_Pi6TRP",
+        "heading_jB8KwG",
+        "button_ADdYHT"
+      ],
+      "custom_css": [
+        ".button {background: #ff4f00;}"
+      ],
+      "settings": {
+        "color_scheme": "background-2",
+        "full_width": true,
+        "alignment": "center",
+        "margin_top": "xs",
+        "margin_bottom": "xs",
+        "padding_top": "xs",
+        "padding_bottom": "xs"
+      }
+    },
+    "rich_text_N9WLaJ": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_EpxhmM": {
+          "type": "heading",
+          "settings": {
+            "heading": "Why Core One is Right For You",
+            "heading_size": "medium"
+          }
+        }
+      },
+      "block_order": [
+        "heading_EpxhmM"
+      ],
+      "custom_css": [
+        "h2 {font-size: 32px;}",
+        "@media only screen and (max-width: 600px) {h2 {font-size: 25px; }}"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "full_width": true,
+        "alignment": "center",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "no-indent",
+        "padding_bottom": "no-indent"
+      }
+    },
+    "yt_ovideo_3jjNcp": {
+      "type": "YTOvideo",
+      "blocks": {
+        "slide_RQj9kU": {
+          "type": "slide",
+          "settings": {
+            "video_url": "https://youtu.be/Jm04NwQjZLA?si=-T36HBdiAZhWk0u5"
+          }
+        }
+      },
+      "block_order": [
+        "slide_RQj9kU"
+      ],
+      "settings": {
+        "top_one": 0,
+        "bottom_one": 50,
+        "top_one_mic": 0,
+        "bottom_one_mic": 20,
+        "bg_color": "#ffffff",
+        "title": "",
+        "Copywriting": ""
+      }
+    },
+    "1716789454317b181f": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_CXAyyU": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_CXAyyU"
+      ],
+      "custom_css": [
+        "h2 {font-size: 32.5px;}",
+        "@media (max-width: 768px) {h2 {font-size: 25px; }}"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "collapsible_content_6dMNK6": {
+      "type": "collapsible-content",
+      "blocks": {
+        "accordion_gE4RKh": {
+          "type": "accordion",
+          "settings": {
+            "question": "What Makes Core One Unique Among Hearing Aids?",
+            "answer": "<p>Core One stands out as an FDA-registered over-the-counter (OTC) hearing aid, delivering a groundbreaking combination of accessibility, reliability, and effectiveness. Its FDA registration ensures adherence to strict quality and safety standards, giving users peace of mind along with superior hearing enhancement.</p>",
+            "opened": true
+          }
+        },
+        "accordion_Y9bikM": {
+          "type": "accordion",
+          "settings": {
+            "question": "Is Core One Suitable for Everyone with Hearing Loss?",
+            "answer": "<p><br/>While Core One is designed for mild to moderate hearing loss, we understand that individual hearing needs vary. To ensure the best fit for your specific requirements, we offer a <a href=\"/pages/hearing-test\" title=\"Hearing Test\">free online hearing test</a>.</p>",
+            "opened": false
+          }
+        },
+        "accordion_qt9Xzy": {
+          "type": "accordion",
+          "settings": {
+            "question": "How Are Core One’s Prices So Low?",
+            "answer": "<p>At Core One, we believe everyone deserves access to affordable hearing solutions. Our commitment to affordability is rooted in the conviction that no one should miss out on the joy of clear hearing due to financial constraints. By leveraging innovative production methods and cutting-edge technology, we keep costs low without compromising quality. It’s our way of making rich, clear sound accessible to all.</p>",
+            "opened": false
+          }
+        },
+        "accordion_aiHchD": {
+          "type": "accordion",
+          "settings": {
+            "question": "What Kind of Support Can I Expect When I Buy the Ceretone Core One?",
+            "answer": "<p>When you purchase the Ceretone Core One, you’ll receive comprehensive support, including a 60-day risk-free trial, ongoing assistance, a 12-month warranty, and free shipping. We’re committed to providing a seamless shopping experience and ensuring your satisfaction every step of the way.</p>",
+            "opened": false
+          }
+        },
+        "accordion_RPWFLx": {
+          "type": "accordion",
+          "settings": {
+            "question": "How Can I Download the Ceretone App?",
+            "answer": "<p><br/>You can download the Ceretone app from the Apple App Store or Google Play Store by searching for \"Ceretone\" and following the installation instructions. Alternatively, visit our website to access the <a href=\"/pages/app-guide\" title=\"App guide\">App Guide</a>.</p>",
+            "opened": false
+          }
+        }
+      },
+      "block_order": [
+        "accordion_gE4RKh",
+        "accordion_Y9bikM",
+        "accordion_qt9Xzy",
+        "accordion_aiHchD",
+        "accordion_RPWFLx"
+      ],
+      "custom_css": [
+        "h2 {font-size: 32px;}",
+        "@media only screen and (max-width: 600px) {h2 {font-size: 25px; }}"
+      ],
+      "settings": {
+        "layout": "background",
+        "color_scheme": "",
+        "enable_border": false,
+        "border_full": false,
+        "subheading": "",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "FAQs",
+        "heading_size": "h2",
+        "heading_line": "simple",
+        "line_color": "#1566e0",
+        "word_break": false,
+        "heading_animation": "none",
+        "word_break_an": false,
+        "text": "",
+        "text_align": "center",
+        "row_color_scheme": "",
+        "padding_top": "xs",
+        "padding_bottom": "xs",
+        "margin_top": "xs",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "background-1",
+        "subheading": "Subheading",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "You May Also Like",
+        "heading_size": "h2",
+        "text": "Some description",
+        "products_limit": 6,
+        "image_ratio": "5/4",
+        "image_fit": "cover",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_desc": true,
+        "padding_top": "l",
+        "padding_bottom": "l"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "hero_zDkc3M",
+    "hero_arNPPa",
+    "service_terms_PrrYEF",
+    "6284d95d-0127-47a7-b977-2a630c6f9383",
+    "2ab0f1fd-0dfa-4eb6-8241-11f7a36713d5",
+    "sellinpromotion_drk8N7",
+    "multicolumn_apJkjE",
+    "image_with_text_znYbUc",
+    "7dba930a-4503-4b98-ad20-1d9ec5fe1eac",
+    "multicolumn_9FNBME",
+    "numbers_b7Hgp7",
+    "rich_text_kA9mBa",
+    "banner_grid_tVGcht",
+    "case_studies_HYJerm",
+    "table_properties_9yxYhN",
+    "image_with_text_zV8jrP",
+    "rich_text_WBBAMC",
+    "rich_text_N9WLaJ",
+    "yt_ovideo_3jjNcp",
+    "1716789454317b181f",
+    "collapsible_content_6dMNK6",
+    "product-recommendations"
+  ]
+}

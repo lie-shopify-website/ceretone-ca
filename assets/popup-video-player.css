@@ -1,0 +1,69 @@
+.popup-video-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.85);
+	z-index: 2147483647; /* 最高z-index值 */
+	display: none;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+
+.popup-video-overlay.active {
+	opacity: 1;
+}
+
+.popup-video-overlay .popup-video-player {
+	width: 98%;
+	max-width: 90vh;
+	background: #000;
+	border-radius: 8px;
+	overflow: hidden;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+	transform: scale(0.9);
+	transition: transform 0.3s ease;
+}
+
+.popup-video-overlay.active .popup-video-player {
+	transform: scale(1);
+}
+
+.popup-video-overlay .popup-video-player video {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+.popup-video-overlay .popup-video-close {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	background: rgba(255, 255, 255, 0.2);
+	color: white;
+	border: none;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	font-size: 24px;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all 0.3s ease;
+	backdrop-filter: blur(5px);
+	z-index: 2147483647;
+}
+
+.popup-video-overlay .popup-video-close:hover {
+	background: rgba(255, 255, 255, 0.3);
+	transform: rotate(90deg);
+}
+
+body.no-scroll {
+	overflow: hidden;
+}

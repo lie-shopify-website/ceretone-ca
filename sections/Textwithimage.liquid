@@ -1,0 +1,455 @@
+<style>
+  [data-section-id="{{ section.id }}"] {
+    background-color: {{ section.settings.color }};
+    padding-bottom: {{ section.settings.bottom_one |  append: 'px' }};
+  }
+  .imagearr {
+    width: 100%;
+    display: block;
+  }
+  [data-section-id="{{ section.id }}"] .Textwithimage_box {
+    position: relative;
+    height: 50rem;
+    margin: 0 auto;
+    max-width: 120rem;
+    overflow: hidden;
+    margin-top: {{ section.settings.top_one |  append: 'px' }};
+  }
+
+  [data-section-id="{{ section.id }}"] .Textwithimage_top_img {
+    position: absolute;
+    right: 0;
+    top: 10%;
+    width: 50%;
+    height: 75%;
+    transform: translateX(100%);
+    transition: transform 0.8s ease;
+    background-color: {{ section.settings.color_text }};
+    z-index: 2;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .Textwithimage_top_imga {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 52%;
+    transform: translateX(-100%);
+    transition: transform 0.8s ease;
+  }
+
+  [data-section-id="{{ section.id }}"] .Textwithimage_bo_img {
+    position: absolute;
+    left: 0;
+    top: 10%;
+    width: 50%;
+    height: 75%;
+    transform: translateX(-100%);
+    transition: transform 0.8s ease;
+    background-color: {{ section.settings.color_text }};
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .Textwithimage_bo_imga {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 52%;
+    transform: translateX(100%);
+    transition: transform 0.8s ease;
+  }
+  .Textwithimage_element {
+    flex: 0;
+  }
+  .Textwithimage_element_position {
+    flex: 1;
+  }
+  [data-section-id="{{ section.id }}"] .Textwithimage_element h2 {
+    margin: 0 0 1.5rem;
+    font-weight: 700;
+    font-size: 3.5rem;
+    color: {{ section.settings.color_title }};
+  }
+  [data-section-id="{{ section.id }}"] .Textwithimage_element_box {
+    margin: 0 0 1.5rem;
+    font-size: 1.8rem;
+    color: {{ section.settings.color_copies }};
+  }
+  .Textwithimage_element_position iframe {
+    width: 100%;
+    height: 100%;
+  }
+  .Textwithimage_box.active .Textwithimage_top_img,
+  .Textwithimage_box.active .Textwithimage_top_imga,
+  .Textwithimage_box.active .Textwithimage_bo_img,
+  .Textwithimage_box.active .Textwithimage_bo_imga {
+    transform: translateX(0);
+  }
+  .Textwithimage_mic {
+    display: none;
+  }
+  .Position_information_flex_WT_img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  @media (max-width: 1200px) {
+    [data-section-id="{{ section.id }}"] .Textwithimage_box {
+      width: 98%;
+    }
+  }
+  @media (max-width: 980px) {
+    .Textwithimage {
+      display: none;
+    }
+    .Textwithimage_mic {
+      display: block;
+    }
+    [data-section-id="{{ section.id }}"] {
+      width: 96%;
+      margin: 0 auto;
+      background-color: {{ section.settings.color }};
+      padding-bottom: {{ section.settings.bottom_one_mic |  append: 'px' }};
+    }
+    [data-section-id="{{ section.id }}"] .Textwithimage_box {
+      width: 98%;
+    }
+    [data-section-id="{{ section.id }}"] .Textwithimage_mic_box {
+      margin-top: {{ section.settings.top_one_mic |  append: 'px' }};
+    }
+    [data-section-id="{{ section.id }}"] .Textwithimage_mic_text {
+      background-color: {{ section.settings.color_text }};
+      padding: 1rem;
+    }
+    [data-section-id="{{ section.id }}"] .Textwithimage_mic_text h2 {
+      margin: 0 0 1.5rem;
+      font-weight: 700;
+      color: {{ section.settings.color_title }};
+      font-size: 2.6rem;
+      text-align: center;
+    }
+    [data-section-id="{{ section.id }}"] .Textwithimage_element_box {
+      margin: 0 0 1.5rem;
+      font-size: 1.6rem;
+      text-align: center;
+      color: {{ section.settings.color_copies }};
+    }
+    .Textwithimage_element_position iframe {
+      width: 100%;
+      height: 30rem;
+    }
+  }
+</style>
+<div data-section-id="{{ section.id }}" class="Textwithimage">
+  <div class="Textwithimage_box" style="display:{{ section.settings.height }}">
+    <div class="Textwithimage_top_img">
+      <div class="Textwithimage_element" style="text-align: {{ section.settings.text_align_top }};">
+        {% if section.settings.header_top != blank %}
+          <h2>{{ section.settings.header_top | newline_to_br }}</h2>
+        {% endif %}
+        {% if section.settings.text_top != blank %}
+          <div class="Textwithimage_element_box">{{ section.settings.text_top | newline_to_br }}</div>
+        {% endif %}
+      </div>
+      {% if section.settings.position_top != blank %}
+        <div class="Textwithimage_element_position">
+          {{ section.settings.position_top }}
+        </div>
+      {% endif %}
+    </div>
+    <div class="Textwithimage_top_imga Textwithimage_imghover">
+      {% if section.settings.topimage != blank %}
+        {{
+          section.settings.topimage
+          | image_url: width: section.settings.topimage.width
+          | image_tag:
+            widths: '360, 533, 720, 940, 1066, 1200, 1400, 1600, 1800, 2000, 2200, 2400, 2600, 2800, 3000, 3264, 3400, 3584, 3800, 4000, 4200, 4400, 4600, 4800, 5000, 5200, 5400, 5600',
+            sizes: sizes,
+            class: 'Position_information_flex_WT_img'
+        }}
+      {% endif %}
+    </div>
+  </div>
+  <div class="Textwithimage_box" style="display:{{ section.settings.heighta }}">
+    <div class="Textwithimage_bo_img">
+      <div class="Textwithimage_element" style="text-align: {{ section.settings.text_align_bo }};">
+        {% if section.settings.header_bo != blank %}
+          <h2>{{ section.settings.header_bo | newline_to_br }}</h2>
+        {% endif %}
+        {% if section.settings.text_bo != blank %}
+          <div class="Textwithimage_element_box">{{ section.settings.text_bo | newline_to_br }}</div>
+        {% endif %}
+      </div>
+      {% if section.settings.position_bo != blank %}
+        <div class="Textwithimage_element_position">
+          {{ section.settings.position_bo }}
+        </div>
+      {% endif %}
+    </div>
+    <div class="Textwithimage_bo_imga Textwithimage_imghover">
+      {% if section.settings.bonimage != blank %}
+        {{
+          section.settings.bonimage
+          | image_url: width: section.settings.bonimage.width
+          | image_tag:
+            widths: '360, 533, 720, 940, 1066, 1200, 1400, 1600, 1800, 2000, 2200, 2400, 2600, 2800, 3000, 3264, 3400, 3584, 3800, 4000, 4200, 4400, 4600, 4800, 5000, 5200, 5400, 5600',
+            sizes: sizes,
+            class: 'Position_information_flex_WT_img'
+        }}
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+<div data-section-id="{{ section.id }}" class="Textwithimage_mic">
+  <div class="Textwithimage_mic_box" style="display:{{ section.settings.height }}">
+    <div class="Textwithimage_mic_img">
+      {% if section.settings.topimage != blank %}
+        {{
+          section.settings.topimage
+          | image_url: width: section.settings.topimage.width
+          | image_tag:
+            widths: '360, 533, 720, 940, 1066, 1200, 1400, 1600, 1800, 2000, 2200, 2400, 2600, 2800, 3000, 3264, 3400, 3584, 3800, 4000, 4200, 4400, 4600, 4800, 5000, 5200, 5400, 5600',
+            sizes: sizes,
+            class: 'Position_information_flex_WT_img'
+        }}
+      {% endif %}
+      <div class="Textwithimage_mic_text">
+        {% if section.settings.header_top != blank %}
+          <h2>{{ section.settings.header_top | newline_to_br }}</h2>
+        {% endif %}
+        {% if section.settings.text_top != blank %}
+          <div class="Textwithimage_element_box">{{ section.settings.text_top | newline_to_br }}</div>
+        {% endif %}
+        {% if section.settings.position_top != blank %}
+          <div class="Textwithimage_element_position">
+            {{ section.settings.position_top }}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  <div class="Textwithimage_mic_box" style="display:{{ section.settings.heighta }}">
+    <div class="Textwithimage_mic_img">
+      {% if section.settings.bonimage != blank %}
+        {{
+          section.settings.bonimage
+          | image_url: width: section.settings.bonimage.width
+          | image_tag:
+            widths: '360, 533, 720, 940, 1066, 1200, 1400, 1600, 1800, 2000, 2200, 2400, 2600, 2800, 3000, 3264, 3400, 3584, 3800, 4000, 4200, 4400, 4600, 4800, 5000, 5200, 5400, 5600',
+            sizes: sizes,
+            class: 'Position_information_flex_WT_img'
+        }}
+      {% endif %}
+      <div class="Textwithimage_mic_text">
+        {% if section.settings.header_bo != blank %}
+          <h2>{{ section.settings.header_bo | newline_to_br }}</h2>
+        {% endif %}
+        {% if section.settings.text_bo != blank %}
+          <div class="Textwithimage_element_box">{{ section.settings.text_bo | newline_to_br }}</div>
+        {% endif %}
+        {% if section.settings.position_bo != blank %}
+          <div class="Textwithimage_element_position">
+            {{ section.settings.position_bo }}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  window.addEventListener('DOMContentLoaded', function() {
+    var boxes = document.querySelectorAll('.Textwithimage_box');
+    function animateBoxes() {
+      boxes.forEach(function(box) {
+        var boxTop = box.getBoundingClientRect().top;
+        var windowHeight = window.innerHeight;
+        var boxHeight = box.offsetHeight;
+
+        if (boxTop < windowHeight - boxHeight / 2) {
+          box.classList.add('active');
+        } else {
+          box.classList.remove('active');
+        }
+      });
+    }
+    animateBoxes();
+    window.addEventListener('scroll', function() {
+      animateBoxes();
+    });
+  });
+</script>
+{% schema %}
+{
+  "name": "文本带图片",
+  "class": "section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "color",
+      "label": "背景颜色选择",
+      "default": "#fff"
+    },
+    {
+      "type": "range",
+      "id": "top_one",
+      "label": "上边距",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "bottom_one",
+      "label": "下边距",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "top_one_mic",
+      "label": "移动端上边距",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "default": 20
+    }, {
+      "type": "range",
+      "id": "bottom_one_mic",
+      "label": "移动端下边距",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "default": 20
+    }, {
+      "type": "color",
+      "id": "color_text",
+      "label": "盒子背景颜色",
+      "default": "#111"
+    }, {
+      "type": "color",
+      "id": "color_title",
+      "label": "标题字体颜色",
+      "default": "#FFF"
+    }, {
+      "type": "color",
+      "id": "color_copies",
+      "label": "文本字体颜色",
+      "default": "#FFF"
+    }, {
+      "type": "select",
+      "id": "height",
+      "options": [
+        {
+          "value": "block",
+          "label": "显示第一模块"
+        }, {
+          "value": "none",
+          "label": "隐藏第一模块"
+        }
+      ],
+      "default": "block",
+      "label": "开启或关闭第一模块"
+    }, {
+      "type": "select",
+      "id": "heighta",
+      "options": [
+        {
+          "value": "block",
+          "label": "显示第一模块"
+        }, {
+          "value": "none",
+          "label": "隐藏第一模块"
+        }
+      ],
+      "default": "block",
+      "label": "开启或关闭第一模块"
+    }, {
+      "type": "image_picker",
+      "id": "topimage",
+      "label": "上图片"
+    }, {
+      "type": "textarea",
+      "id": "header_top",
+      "label": "上标题"
+    }, {
+      "type": "textarea",
+      "id": "text_top",
+      "label": "上文案"
+    }, {
+      "type": "textarea",
+      "id": "position_top",
+      "label": "上地理位置"
+    }, {
+      "type": "select",
+      "id": "text_align_top",
+      "label": "上盒子内容对齐方式",
+      "options": [
+        {
+          "value": "left",
+          "label": "居左"
+        }, {
+          "value": "center",
+          "label": "居中"
+        }, {
+          "value": "right",
+          "label": "居右"
+        }
+      ],
+      "default": "left"
+    }, {
+      "type": "image_picker",
+      "id": "bonimage",
+      "label": "下图片"
+    }, {
+      "type": "textarea",
+      "id": "header_bo",
+      "label": "下标题"
+    }, {
+      "type": "textarea",
+      "id": "text_bo",
+      "label": "下文案"
+    }, {
+      "type": "textarea",
+      "id": "position_bo",
+      "label": "上地理位置"
+    }, {
+      "type": "select",
+      "id": "text_align_bo",
+      "label": "下盒子内容对齐方式",
+      "options": [
+        {
+          "value": "left",
+          "label": "居左"
+        }, {
+          "value": "center",
+          "label": "居中"
+        }, {
+          "value": "right",
+          "label": "居右"
+        }
+      ],
+      "default": "right"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "文本带图片"
+    }
+  ]
+}
+{% endschema %}

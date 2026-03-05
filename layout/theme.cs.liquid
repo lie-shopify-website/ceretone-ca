@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {{ content_for_header }}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page_title }}</title>
+    {{ 'base.css' | asset_url | stylesheet_tag }}
+  </head>
+  <body>
+    {{ content_for_layout }}
+  </body>
+</html>

@@ -1,0 +1,404 @@
+<style>
+  [data-section-id="{{ section.id }}"] {
+    background-color: {{ section.settings.bg_color }};
+    padding-top: {{ section.settings.top_one | append: 'rem' }};
+    padding-bottom: {{ section.settings.bottom_one | append: 'rem' }};
+  }
+  [data-section-id="{{ section.id }}"] .Tabimagevideo_header h2 {
+    text-align: {{ section.settings.text_align }};
+    margin: 0 0 2rem;
+  }
+  [data-section-id="{{ section.id }}"] .Tabimagevideo_header h4 {
+    text-align: {{ section.settings.text_align }};
+    margin: 0 0 2rem;
+  }
+  [data-section-id="{{ section.id }}"] .Tabimagevideo_header {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: {{ section.settings.flex_direction }};
+  }
+  [data-section-id="{{ section.id }}"] .Tabimagevideo_header p {
+    flex: 1;
+    text-align: {{ section.settings.Copywriting_align }};
+    margin: 0 0 2rem;
+    padding: 0 2rem;
+  }
+  .tabs {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid #ddd;
+    position: relative;
+  }
+
+  .tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    border-bottom: none;
+    margin-right: 5px;
+    transition: background-color 0.3s;
+    position: relative;
+  }
+
+
+  .tab.active {
+    background-color: #fff;
+  }
+
+  .tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    background: #007bff;
+    animation: slide-in 0.5s ease-out;
+  }
+
+  @keyframes slide-in {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  .tabcontainer_box {
+    border-radius: 1.2rem;
+    overflow: hidden;
+    position: relative;
+  }
+  .tabcontainer_bobox {
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  .itemTabimagevideo {
+    display: none;
+  }
+  .tab-content {
+    display: none;
+    padding: 10px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.7);
+  }
+  .tab-content.active {
+    display: block;
+  }
+  .Tabimagevideo_pc {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .Tabimagevideo_mic {
+    display: none;
+  }
+  @media(max-width: 768px) {
+    [data-section-id="{{ section.id }}"] {
+      padding-top: {{ section.settings.top_one_mic | append: 'rem' }};
+      padding-bottom: {{ section.settings.bottom_one_mic | append: 'rem' }};
+    }
+    .Tabimagevideo_pc {
+      display: none;
+    }
+    .Tabimagevideo_mic {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    .tab {
+      padding: 0.5rem;
+    }
+    .tab.active::after {
+      height: 2px;
+    }
+  }
+</style>
+
+<div data-section-id="{{ section.id }}" class="Tabimagevideo">
+  <div class="container">
+    <div class="Tabimagevideo_header">
+      {% if section.settings.title != blank %}
+        <h2 class="h2">{{ section.settings.title | newline_to_br }}</h2>
+      {% endif %}
+      {% if section.settings.subtitle != blank %}
+        <h4 class="h4">{{ section.settings.subtitle | newline_to_br }}</h4>
+      {% endif %}
+      <div class="Tabimagevideo_header_box">
+        {% if section.settings.Copywriting != blank %}
+          <p>{{ section.settings.Copywriting | newline_to_br }}</p>
+        {% endif %}
+        {% if section.settings.Copywriting_fu != blank %}
+          <p>{{ section.settings.Copywriting_fu | newline_to_br }}</p>
+        {% endif %}
+      </div>
+    </div>
+    <div class="tab-container">
+      <div class="">
+        <ul class="tabs">
+          {%- for block in section.blocks -%}
+            <li class="tab {% if forloop.first %}active{% endif %}">
+              {{ block.settings.header }}
+            </li>
+          {%- endfor -%}
+        </ul>
+      </div>
+      <div class="tabcontainer_box">
+        <div class="tabcontainer_bobox">
+          {%- for block in section.blocks -%}
+            <div class="tab-content {% if forloop.first %}active{% endif %}">
+              {{ block.settings.text }}
+            </div>
+          {%- endfor -%}
+        </div>
+        {%- for block in section.blocks -%}
+          <div
+            class="itemTabimagevideo"
+            {% if forloop.first %}
+              style="display: block;"
+            {% endif %}
+          >
+            {%- if block.settings.image != blank -%}
+              {{
+                block.settings.image
+                | image_url: width: section.settings.image.width
+                | image_tag:
+                  loading: 'lazy',
+                  widths: '2200, 2400, 2600, 2800, 3000, 3264, 3400, 3584, 3800, 4000, 4200, 4400, 4600, 4800, 5000, 5200, 5400, 5600',
+                  sizes: sizes,
+                  class: 'Tabimagevideo_pc'
+              }}
+            {%- endif -%}
+            {%- if block.settings.imagemic != blank -%}
+              {{
+                block.settings.imagemic
+                | image_url: width: section.settings.imagemic.width
+                | image_tag:
+                  loading: 'lazy',
+                  widths: '2200, 2400, 2600, 2800, 3000, 3264, 3400, 3584, 3800, 4000, 4200, 4400, 4600, 4800, 5000, 5200, 5400, 5600',
+                  sizes: sizes,
+                  class: 'Tabimagevideo_mic'
+              }}
+            {%- endif -%}
+            {%- if block.settings.video != blank -%}
+              {{
+                block.settings.video
+                | video_tag:
+                  image_size: '1100x',
+                  autoplay: true,
+                  loop: true,
+                  controls: false,
+                  muted: true,
+                  class: 'Tabimagevideo_pc'
+              }}
+              {{
+                block.settings.videomic
+                | video_tag:
+                  image_size: '1100x',
+                  autoplay: true,
+                  loop: true,
+                  controls: false,
+                  muted: true,
+                  class: 'Tabimagevideo_mic'
+              }}
+            {% endif %}
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const tabs = document.querySelectorAll('.tab');
+    const tabContents = document.querySelectorAll('.tab-content');
+    const images = document.querySelectorAll('.itemTabimagevideo');
+
+    tabs.forEach((tab, index) => {
+      tab.addEventListener('click', function () {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        tabContents.forEach(content => content.classList.remove('active'));
+        images.forEach(image => image.style.display = 'none');
+
+        tabContents[index].classList.add('active');
+        images[index].style.display = 'block';
+      });
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "tab图片视频1",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "range",
+      "id": "top_one",
+      "label": "上边距",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "rem",
+      "default": 5
+    },
+    {
+      "type": "range",
+      "id": "bottom_one",
+      "label": "下边距",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "rem",
+      "default": 5
+    },
+    {
+      "type": "range",
+      "id": "top_one_mic",
+      "label": "移动端上边距",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "rem",
+      "default": 2
+    },
+    {
+      "type": "range",
+      "id": "bottom_one_mic",
+      "label": "移动端下边距",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "rem",
+      "default": 2
+    }, {
+      "type": "color",
+      "id": "bg_color",
+      "label": "背景颜色",
+      "default": "#fff"
+    }, {
+      "type": "select",
+      "id": "text_align",
+      "label": "文本对齐方式",
+      "options": [
+        {
+          "value": "left",
+          "label": "靠左"
+        }, {
+          "value": "center",
+          "label": "居中"
+        }, {
+          "value": "right",
+          "label": "靠右"
+        }
+      ],
+      "default": "center"
+    }, {
+      "type": "textarea",
+      "id": "title",
+      "label": "标题"
+    }, {
+      "type": "textarea",
+      "id": "subtitle",
+      "label": "副标题"
+    }, {
+      "type": "select",
+      "id": "flex_direction",
+      "label": "文案布局方式",
+      "options": [
+        {
+          "value": "column",
+          "label": "上下排序"
+        }, {
+          "value": "row",
+          "label": "左右排序"
+        }
+      ],
+      "default": "row"
+    }, {
+      "type": "select",
+      "id": "Copywriting_align",
+      "label": "文案对齐方式",
+      "options": [
+        {
+          "value": "left",
+          "label": "靠左"
+        }, {
+          "value": "center",
+          "label": "居中"
+        }, {
+          "value": "right",
+          "label": "靠右"
+        }
+      ],
+      "default": "center"
+    }, {
+      "type": "textarea",
+      "id": "Copywriting",
+      "label": "主文案"
+    }, {
+      "type": "textarea",
+      "id": "Copywriting_fu",
+      "label": "副文案"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "tab栏",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "图片"
+        },
+        {
+          "type": "image_picker",
+          "id": "imagemic",
+          "label": "移动端图片"
+        },
+        {
+          "type": "video",
+          "id": "video",
+          "label": "选择视频"
+        },
+        {
+          "type": "video",
+          "id": "videomic",
+          "label": "选择移动端视频"
+        }, {
+          "type": "text",
+          "id": "header",
+          "default": "Quick Start & Overview",
+          "label": "tab标题"
+        }, {
+          "type": "richtext",
+          "id": "text",
+          "default": "<p>This page gives a quick overview</p>",
+          "label": "文案"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "tab图片视频1",
+      "blocks": [
+        {
+          "type": "slide"
+        }, {
+          "type": "slide"
+        }, {
+          "type": "slide"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

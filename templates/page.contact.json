@@ -1,0 +1,305 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": "no-indent",
+        "padding_bottom": "m"
+      }
+    },
+    "rich_text_BiWzhq": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_Rtk8KF": {
+          "type": "heading",
+          "settings": {
+            "heading": "We're Here to Listen and Assist",
+            "heading_size": "medium"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Rtk8KF"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "full_width": true,
+        "alignment": "center",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "m",
+        "padding_bottom": "m"
+      }
+    },
+    "multicolumn_9mAdrW": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_3CyQMi": {
+          "type": "column",
+          "settings": {
+            "icon": "phone-4",
+            "icon_color_scheme": "scheme-da522d8c-d8ea-43a1-8f89-75b1a671124a",
+            "icon_fill_type": "solid",
+            "heading": "Call",
+            "text": "Monday - Friday, 12am - 5pm PST<br>\n(866) 283-4262",
+            "show_button": false,
+            "button_label": "Label",
+            "button_link": "",
+            "button_style": "simple"
+          }
+        },
+        "column_UDefMy": {
+          "type": "column",
+          "settings": {
+            "icon": "chats",
+            "icon_color_scheme": "scheme-da522d8c-d8ea-43a1-8f89-75b1a671124a",
+            "icon_fill_type": "solid",
+            "heading": "Email",
+            "text": "",
+            "show_button": true,
+            "button_label": "support@ceretone.com",
+            "button_link": "mailto:support@ceretone.com",
+            "button_style": "simple_secondary"
+          }
+        },
+        "column_R79xWb": {
+          "type": "column",
+          "settings": {
+            "icon": "flag",
+            "icon_color_scheme": "scheme-da522d8c-d8ea-43a1-8f89-75b1a671124a",
+            "icon_fill_type": "solid",
+            "heading": "Address",
+            "text": "3602 Inland Empire Blvd<br>Suite A200<br>Ontario, CA 91764<br>USA",
+            "show_button": false,
+            "button_label": "Label",
+            "button_link": "",
+            "button_style": "simple"
+          }
+        }
+      },
+      "block_order": [
+        "column_3CyQMi",
+        "column_UDefMy",
+        "column_R79xWb"
+      ],
+      "settings": {
+        "section_type": "transparent",
+        "color_scheme": "scheme-da522d8c-d8ea-43a1-8f89-75b1a671124a",
+        "enable_border": false,
+        "border_full": false,
+        "multicolumn_to_show": 3,
+        "gap": "large",
+        "subheading": "",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "",
+        "heading_size": "h2",
+        "heading_line": "simple",
+        "line_color": "#1566e0",
+        "word_break": false,
+        "heading_animation": "none",
+        "word_break_an": false,
+        "text": "",
+        "text_align": "left",
+        "icon_size": "recommended",
+        "box_shadow": true,
+        "icon_style": "colored",
+        "image_width": "medium",
+        "image_ratio": "square",
+        "object_fit": "cover",
+        "card_heading_size": "h4",
+        "padding_top": "m",
+        "padding_bottom": "m",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "numbers_AMPWC7": {
+      "type": "numbers",
+      "blocks": {
+        "column_UkpNAU": {
+          "type": "column",
+          "settings": {
+            "number": "1000",
+            "heading": "Heading",
+            "description": "Some description",
+            "icon": "bag-2",
+            "icon_color": "contrast",
+            "icon_fill_type": "solid",
+            "show_button": true,
+            "button_label": "Label",
+            "button_link": ""
+          }
+        },
+        "column_f6gUPH": {
+          "type": "column",
+          "settings": {
+            "number": "1000",
+            "heading": "Heading",
+            "description": "Some description",
+            "icon": "none",
+            "icon_color": "contrast",
+            "icon_fill_type": "solid",
+            "show_button": true,
+            "button_label": "Label",
+            "button_link": ""
+          }
+        },
+        "column_FMpTVY": {
+          "type": "column",
+          "settings": {
+            "number": "1000",
+            "heading": "Heading",
+            "description": "Some description",
+            "icon": "none",
+            "icon_color": "contrast",
+            "icon_fill_type": "solid",
+            "show_button": true,
+            "button_label": "Label",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_UkpNAU",
+        "column_f6gUPH",
+        "column_FMpTVY"
+      ],
+      "disabled": true,
+      "settings": {
+        "layout": "columns",
+        "block_type": "plain",
+        "columns_to_row": 3,
+        "color_scheme": "",
+        "enable_border": false,
+        "border_full": false,
+        "subheading": "Subheading",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "Heading",
+        "heading_line": "simple",
+        "line_color": "#1566e0",
+        "word_break": false,
+        "text": "Some description",
+        "text_align": "left",
+        "number_size": "recommended",
+        "icon_size": "recommended",
+        "card_heading_size": "recommended",
+        "number_size_first": "large",
+        "icon_size_first": "extra-large",
+        "card_heading_size_first": "h4",
+        "padding_top": "m",
+        "padding_bottom": "m"
+      }
+    },
+    "form": {
+      "type": "contact-form",
+      "custom_css": [
+        ".button{background-color: #FF4F00}"
+      ],
+      "settings": {
+        "position": "center",
+        "color_scheme": "scheme-da522d8c-d8ea-43a1-8f89-75b1a671124a",
+        "header_overlay": false,
+        "header_transparent": false,
+        "subheading": "",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "",
+        "heading_size": "h2",
+        "heading_line": "simple",
+        "line_color": "#1566e0",
+        "word_break": false,
+        "heading_animation": "none",
+        "word_break_an": false,
+        "text": "",
+        "text_align": "center",
+        "heading_form": "",
+        "heading_form_size": "h5",
+        "text_form": "",
+        "additional_text": "",
+        "button_style": "primary",
+        "overlay_opacity": 0.5,
+        "padding_top": "m",
+        "padding_bottom": "m",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "custom_liquid_DaRP6w": {
+      "type": "custom-liquid",
+      "custom_css": [
+        "iframe {max-width: 100%;}"
+      ],
+      "settings": {
+        "custom_liquid_text": "",
+        "custom_liquid": "<iframe width=\"1920\" height=\"578\" style=\"border:0;overflow:hidden;\" src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3304.9655283502575!2d-117.57554712453621!3d34.07039791677195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c3359f883fffff%3A0x1ed0c2adaa2857e2!2s3602%20Inland%20Empire%20Blvd%20%23%20A200%2C%20Ontario%2C%20CA%2091764!5e0!3m2!1sen!2sus!4v1691372085815!5m2!1sen!2sus\"></iframe>"
+      }
+    },
+    "collapsible_image_x7EcFN": {
+      "type": "collapsible-image",
+      "blocks": {
+        "accordion_W8BUiq": {
+          "type": "accordion",
+          "settings": {
+            "image": "shopify://shop_images/fa-image-01.png",
+            "question": "Some title",
+            "answer": "<p>Some description</p>",
+            "opened": true
+          }
+        },
+        "accordion_XnNb9Y": {
+          "type": "accordion",
+          "settings": {
+            "question": "Some title",
+            "answer": "<p>Some description</p>",
+            "opened": false
+          }
+        },
+        "accordion_xVkwhT": {
+          "type": "accordion",
+          "settings": {
+            "image": "shopify://shop_images/fa-image-01.png",
+            "question": "Some title",
+            "answer": "<p>Some description</p>",
+            "opened": false
+          }
+        }
+      },
+      "block_order": [
+        "accordion_W8BUiq",
+        "accordion_XnNb9Y",
+        "accordion_xVkwhT"
+      ],
+      "disabled": true,
+      "name": "Collapsible Image",
+      "settings": {
+        "title": "\"Unfelt\" Isn't Magic — <span>It's Smart Design</span>",
+        "big_image": "shopify://shop_images/fa-bimage-01.png",
+        "pc_padding_top": 100,
+        "pc_padding_bottom": 100,
+        "mb_padding_top": 50,
+        "mb_padding_bottom": 50
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_BiWzhq",
+    "multicolumn_9mAdrW",
+    "numbers_AMPWC7",
+    "form",
+    "custom_liquid_DaRP6w",
+    "collapsible_image_x7EcFN"
+  ]
+}

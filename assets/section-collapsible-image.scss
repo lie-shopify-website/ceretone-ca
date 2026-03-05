@@ -1,0 +1,179 @@
+@import "tools";
+
+.collapsible-content-section.collapsible-image {
+    padding-top: vm(40);
+    padding-bottom: vm(30);
+    background-color: #F6F1EA;
+
+    @include media-min('spc') {
+        padding-top: vmpc(70);
+        padding-bottom: vmpc(70);
+    }
+
+    .container {
+        @include media('spc') {
+            padding-left: vmspc(20) !important;
+            padding-right: vmspc(20) !important;
+        }
+        @include media('pc') {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+    }
+
+    img {
+        max-width:100%;
+        height:auto;
+        border-radius: 15px;
+    }
+
+
+    .collapsible-content__title.h3 {
+        color: #000000;
+        font-size: vm(32);
+        line-height: vm(34);
+        margin-bottom: vm(35);
+        font-weight: 700;
+        text-align: center;
+
+        @include media-min('spc') {
+            font-size: vmpc(56);
+            line-height: vmpc(58);
+            margin-bottom: vmpc(60);
+        }
+    }
+
+
+    .collapsible-content__layout.has-image {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: vm(35);
+        flex-wrap: wrap;
+
+        @include media-min('spc') {
+            gap: vmpc(40);
+            flex-direction: row;
+        }
+    }
+    .collapsible-content__layout.has-image .collapsible-content__items {
+        flex: 0 0 100%;
+        max-width: 100%;
+
+        @include media-min('spc') {
+            flex:0 0 calc(50% - vmpc(20));
+            max-width:calc(50% - vmpc(20));
+        }
+        
+    }
+    .collapsible-content__layout.has-image .big-image {
+        flex: 0 0 100%;
+        max-width: 100%;
+
+        @include media-min('spc') {
+            flex:0 0 calc(50% - vmpc(20));
+            max-width:calc(50% - vmpc(20));
+        }
+    }
+    .collapsible-content__answer-inner {
+        max-width: 100%;
+        word-break: break-word;
+    }
+
+    .collapsible-content__question.h6 {
+        color: #2D2D2D;
+        font-size: vm(20);
+        line-height: vm(24);
+        font-weight: 700;
+
+        @include media-min('spc') {
+            font-size: vmpc(32);
+            line-height: vmpc(38);
+        }
+    }
+
+    .collapsible-content__item {
+        padding: 0 0 vm(20) 0;
+        margin-bottom: vm(20);
+        position: relative;
+
+        @include media-min('spc') {
+            padding: 0 0 vmpc(30) 0;
+            margin-bottom: vmpc(30);
+        }
+    }
+    .collapsible-content__item:last-child {
+        padding:0;
+        margin-bottom: 0;
+    }
+    .collapsible-content__toggle {
+        padding: 0;
+    }
+
+    .collapsible-content__item:after {
+        content: '';
+        height: 1px;
+        width: 100%;
+        background: #00000080;
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+    .collapsible-content__item:last-child:after {
+        display:none;
+    }
+    .collapsible-content__answer {
+        padding: vm(20) 0 0;
+
+        @include media-min('spc') {
+            padding: vmpc(30) 0 0;
+        }
+
+        .image {
+            margin-bottom: vm(20);
+
+            @include media-min('spc') {
+                margin-bottom: vmpc(30);
+            }
+        }
+    }
+
+    .collapsible-content__icon {
+        width: vm(25);
+        height: vm(25);
+        background-color: #FFFEFB;
+
+        @include media-min('spc') {
+            width: vmpc(35);
+            height: vmpc(35);
+        }
+    }
+
+    .collapsible-content__item.active .collapsible-content__icon svg {
+        transform: rotate(-90deg) !important;
+    }
+    .collapsible-content__icon svg {
+        width: vm(16);
+        height: vm(11);
+
+        @include media-min('spc') {
+            width: vmpc(22);
+            height: vmpc(16);
+        }
+    }
+    .collapsible-content__title.h3 span {
+        display: inline-flex;
+        background: #ffbea2;
+        padding: 0 7px;
+    }
+    .collapsible-content__answer-inner>* {
+        color: #2D2D2D;
+        font-size: vm(18);
+        line-height: vm(22);
+
+        @include media-min('spc') {
+            font-size: vmpc(22);
+            line-height: vmpc(28);
+        }
+    }
+}
