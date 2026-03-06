@@ -333,6 +333,7 @@
         "video_iA7cjC": {
           "type": "video",
           "settings": {
+            "video_image": "shopify://shop_images/3pc_2x_ff1c3de5-8e3f-4a19-bd28-fffd712a8ceb.png",
             "product": "core-one-pro-invisible-in-canal",
             "image": "shopify://shop_images/best-seller-01.png",
             "title": "Core One Pro",
@@ -343,6 +344,7 @@
         "video_tUgWBe": {
           "type": "video",
           "settings": {
+            "video_image": "shopify://shop_images/2pc_2x_eaadc9e6-8b6f-4c6e-9f7d-36b8f4faf68b.png",
             "product": "torch-otc-hearing-aids",
             "image": "shopify://shop_images/best-seller-03.png",
             "title": "Torch",
