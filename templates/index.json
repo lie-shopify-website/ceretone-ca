@@ -258,6 +258,7 @@
         "bg_mb": "shopify://shop_images/key-features-bg-mb.jpg",
         "title": "Hear More Clearly with Industry-Leading Audio Technology",
         "short_desc": "Your hearing quality comes down to two parts: the chip that processes the sound and the speaker that plays it.",
+        "image": "shopify://shop_images/pc_2x_ef09b942-b3ce-491a-a71c-3d20dd2f9d00.png",
         "key_title1": "Intricon® Chipset",
         "key_info1_1": "40+ Years of Hearing Innovation",
         "key_info1_2": "Prescription-grade sound, now available over the counter.",
@@ -281,6 +282,7 @@
         "item_BGJkFb": {
           "type": "item",
           "settings": {
+            "image": "shopify://shop_images/2x_d44fd5c0-fea0-4582-8abb-7585a822d06a.png",
             "title": "Professional Quality, Accessible Price",
             "info": "Proven technology refined over 40 years without the traditional $4,000+ clinic costs."
           }
