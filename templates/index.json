@@ -322,7 +322,9 @@
         "video_TADRXV": {
           "type": "video",
           "settings": {
-            "product": "core-one-pro-otc-hearing-aids",
+            "video_image": "shopify://shop_images/pc_2x_1.png",
+            "product": "core-one-pro-invisible-in-canal",
+            "image": "shopify://shop_images/best-seller-01.png",
             "title": "Core One Pro",
             "customer_name": "Dr. Bill K",
             "verified_text": "Verified Customer"
@@ -331,7 +333,8 @@
         "video_iA7cjC": {
           "type": "video",
           "settings": {
-            "product": "core-one-pro-otc-hearing-aids",
+            "product": "core-one-pro-invisible-in-canal",
+            "image": "shopify://shop_images/best-seller-01.png",
             "title": "Core One Pro",
             "customer_name": "911 Studios",
             "verified_text": "Verified Reviewer"
@@ -341,6 +344,7 @@
           "type": "video",
           "settings": {
             "product": "torch-otc-hearing-aids",
+            "image": "shopify://shop_images/best-seller-03.png",
             "title": "Torch",
             "customer_name": "Shelley",
             "verified_text": "Verified Customer"
