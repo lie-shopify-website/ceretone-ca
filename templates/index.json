@@ -21,8 +21,8 @@
         "slide_Rq3yac": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/nexus_20240910_11.webp",
-            "image_mb": "shopify://shop_images/nexus_20240910_24.webp",
+            "image": "shopify://shop_images/banner_1_2x_2.png",
+            "image_mb": "shopify://shop_images/banner_1_2d11a759-572d-48ee-a190-48bc99776582.png",
             "title": "",
             "content": "",
             "button_label": "",
@@ -95,8 +95,9 @@
           "settings": {
             "hot_label": true,
             "product": "core-one-pro-invisible-in-canal",
-            "image": "shopify://shop_images/1_3a6d6c90-f084-442e-bb85-411617745f3c.jpg",
+            "image": "shopify://shop_images/best-seller-01.png",
             "short_desc": "Most Comfort & Invisible",
+            "short_desc_icon": "shopify://shop_images/icon-001.png",
             "title": "Core One Pro",
             "learn_more": "Learn more"
           }
@@ -106,7 +107,9 @@
           "settings": {
             "hot_label": false,
             "product": "beacon-behind-ear",
+            "image": "shopify://shop_images/best-seller-02.png",
             "short_desc": "Smart & Connected",
+            "short_desc_icon": "shopify://shop_images/icon-002.png",
             "title": "Beacon",
             "learn_more": "Learn more"
           }
@@ -116,7 +119,9 @@
           "settings": {
             "hot_label": false,
             "product": "torch-otc-hearing-aids",
+            "image": "shopify://shop_images/best-seller-03.png",
             "short_desc": "Powerful & Reliable",
+            "short_desc_icon": "shopify://shop_images/icon-003.png",
             "title": "Torch",
             "learn_more": "Learn more"
           }
