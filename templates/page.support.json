@@ -100,6 +100,7 @@
         "slide_Y6wrfj": {
           "type": "slide",
           "settings": {
+            "image": "shopify://shop_images/beacon1.jpg",
             "ProductName": "Beacon",
             "link": "shopify://products/beacon-otc-hearing-aids",
             "ProductName_text": "Explore Beacon",
@@ -120,6 +121,7 @@
         "slide_FGBeAV": {
           "type": "slide",
           "settings": {
+            "image": "shopify://shop_images/Fusion1.webp",
             "ProductName": "Fusion",
             "link": "shopify://products/fusion-otc-hearing-aids",
             "ProductName_text": "Explore Fusion",
@@ -140,6 +142,7 @@
         "slide_x7i9NY": {
           "type": "slide",
           "settings": {
+            "image": "shopify://shop_images/Nexus1_62c2cc26-ff1e-4e08-8058-6eb48a70a586.webp",
             "ProductName": "Nexus",
             "link": "shopify://products/nexus-otc-hearing-aids",
             "ProductName_text": "Explore Nexus",
@@ -160,6 +163,7 @@
         "slide_BAcUMV": {
           "type": "slide",
           "settings": {
+            "image": "shopify://shop_images/torch1_1.webp",
             "ProductName": "Torch",
             "link": "shopify://products/torch-otc-hearing-aids",
             "ProductName_text": "Explore Torch",
@@ -200,6 +204,7 @@
         },
         "slide_rj8y6t": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "ProductName": "Style",
             "link": "shopify://products/style-otc-hearing-aids",
@@ -220,6 +225,7 @@
         },
         "slide_TwBHmF": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "ProductName": "Essential",
             "link": "shopify://products/essential",
