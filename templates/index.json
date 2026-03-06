@@ -70,6 +70,7 @@
         "item_GVddJq": {
           "type": "item",
           "settings": {
+            "image": "shopify://shop_images/1_2x_faa54478-906c-45b6-b1ee-484528cc0608.png",
             "title": "Reliable",
             "info": "FDA registered. Proven tech."
           }
@@ -205,31 +206,41 @@
       "blocks": {
         "slide_pXJ34H1": {
           "type": "slide",
-          "settings": {}
-        },
-        "slide_bAHaQA": {
-          "type": "slide",
-          "settings": {}
-        },
-        "slide_LxBCc9": {
-          "type": "slide",
-          "settings": {}
+          "settings": {
+            "image": "shopify://shop_images/honors-received-pc01.png"
+          }
         },
         "slide_Ek8AWw": {
           "type": "slide",
-          "settings": {}
+          "settings": {
+            "image": "shopify://shop_images/honors-received-2.png"
+          }
         },
         "slide_CPW8c7": {
           "type": "slide",
-          "settings": {}
+          "settings": {
+            "image": "shopify://shop_images/honors-received-3.png"
+          }
+        },
+        "slide_bAHaQA": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/honors-received-pc04.png"
+          }
+        },
+        "slide_LxBCc9": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/lQLPJwLR_MAmx1vMtM0BErCWJBeRaKlepgkBaNszTdYA_274_180.png"
+          }
         }
       },
       "block_order": [
         "slide_pXJ34H1",
-        "slide_bAHaQA",
-        "slide_LxBCc9",
         "slide_Ek8AWw",
-        "slide_CPW8c7"
+        "slide_CPW8c7",
+        "slide_bAHaQA",
+        "slide_LxBCc9"
       ],
       "name": "Custom Honors Received",
       "settings": {
@@ -244,6 +255,7 @@
       "name": "Custom Key Features",
       "settings": {
         "bg": "shopify://shop_images/key-features-bg.webp",
+        "bg_mb": "shopify://shop_images/key-features-bg-mb.jpg",
         "title": "Hear More Clearly with Industry-Leading Audio Technology",
         "short_desc": "Your hearing quality comes down to two parts: the chip that processes the sound and the speaker that plays it.",
         "key_title1": "Intricon® Chipset",
