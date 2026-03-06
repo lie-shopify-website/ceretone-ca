@@ -144,36 +144,42 @@
         "slide_pRtNVT": {
           "type": "slide",
           "settings": {
+            "image": "shopify://shop_images/review-01.png",
             "content": "Compact, powerful and barely noticeable."
           }
         },
         "slide_7nNcxR": {
           "type": "slide",
           "settings": {
+            "image": "shopify://shop_images/wir.png",
             "content": "Affordable. Very Small And Lightweight. Compact Case, \nFeaturing Volume-Level LEDs."
           }
         },
         "slide_6C8NxB": {
           "type": "slide",
           "settings": {
+            "image": "shopify://shop_images/HR-Logo_2x_b4234700-53a1-4f38-abd7-9b3329e51637.png",
             "content": "Ceretone’s Core One, possibly the world’s smallest over-the-counter (OTC) hearing aid."
           }
         },
         "slide_RqAKRW": {
           "type": "slide",
           "settings": {
+            "image": "shopify://shop_images/gadgeteer_2x_50c29227-117d-486b-857d-3b14798bef22.png",
             "content": "Cretetone does an exceptional job of combining tiny, comfortable, over-the-counter hearing aids at a price far less than prescription models."
           }
         },
         "slide_wnVU98": {
           "type": "slide",
           "settings": {
+            "image": "shopify://shop_images/new_atlas_2x_26126100-9363-4c38-84cf-b92349e85287.png",
             "content": "They are touted as “virtually invisible,” and I would agree with that."
           }
         },
         "slide_Yc3nVB": {
           "type": "slide",
           "settings": {
+            "image": "shopify://shop_images/Fort_worth_star_PC_2x_483b7a74-2670-4c19-b5de-a3647aad0104.png",
             "content": "The Core One Pros are prescription-free and could help restore clarity, confidence and connection in everyday life."
           }
         }
