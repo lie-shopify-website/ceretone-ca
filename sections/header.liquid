@@ -133,6 +133,76 @@
 	</header>
 </{% if section.settings.enable_sticky_header %}sticky-header{% else %}div{% endif %}>
 
+
+{% comment %} 语言选择器 {% endcomment %}
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Desktop language selector functionality
+    const headerLanguageButton = document.querySelector('header .disclosure__button');
+    const headerLanguageList = document.getElementById('language-list');
+    
+    if (headerLanguageButton && headerLanguageList) {
+      // Toggle language dropdown
+      headerLanguageButton.addEventListener('click', function(event) {
+        event.preventDefault();
+        const expanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', !expanded);
+        
+        if (expanded) {
+          headerLanguageList.style.display = 'none';
+          headerLanguageList.setAttribute('hidden', 'true');
+        } else {
+          headerLanguageList.style.display = 'block';
+          headerLanguageList.setAttribute('hidden', 'false');
+        }
+      });
+      
+      // Close dropdown when clicking outside
+      document.addEventListener('click', function(event) {
+        if (!event.target.closest('header .language-selector') && headerLanguageList.style.display === 'block') {
+          headerLanguageButton.setAttribute('aria-expanded', 'false');
+          headerLanguageList.style.display = 'none';
+          headerLanguageList.setAttribute('hidden', 'true');
+        }
+      });
+    }
+    
+    // Mobile language selector functionality
+    const mobileLanguageButton = document.querySelector('.mobile-language-selector .disclosure__button');
+    const mobileLanguageList = document.getElementById('mobile-language-list');
+    
+    if (mobileLanguageButton && mobileLanguageList) {
+      // Toggle language dropdown
+      mobileLanguageButton.addEventListener('click', function(event) {
+        event.preventDefault();
+        const expanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', !expanded);
+        
+        if (expanded) {
+          mobileLanguageList.style.display = 'none';
+          mobileLanguageList.setAttribute('hidden', 'true');
+        } else {
+          mobileLanguageList.style.display = 'block';
+          mobileLanguageList.setAttribute('hidden', 'false');
+        }
+      });
+    }
+    
+    // Handle language selection for all language links
+    const languageLinks = document.querySelectorAll('.disclosure__link');
+    languageLinks.forEach(link => {
+      link.addEventListener('click', function(event) {
+        event.preventDefault();
+        const form = this.closest('form');
+        const input = form.querySelector('input[name="locale_code"]');
+        input.value = this.getAttribute('data-value');
+        form.submit();
+      });
+    });
+  });
+</script>
+
+
 {% javascript %}
 	class StickyHeader extends HTMLElement {
 	constructor() {
