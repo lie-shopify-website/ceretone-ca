@@ -102,6 +102,34 @@
 		{% elsif section.settings.header_type == 'center-logo' %}
 			{% render 'header-center-logo' %}
 		{% endif %}
+
+		{% if section.settings.show_language_selector %}
+            <div class="language-selector">
+              <div class="language-selector-container">
+                {% form 'localization' %}
+                  <div class="disclosure">
+                    <button type="button" class="disclosure__button localization-form__select" aria-expanded="false" aria-controls="language-list">
+                      <span>{{ localization.language.endonym_name }}</span>
+                    </button>
+                    <ul id="language-list" class="disclosure__list" style="display: none;" hidden="true">
+                      {% for language in localization.available_languages %}
+                        <li class="disclosure__item {% if language.iso_code == localization.language.iso_code %}disclosure__item--current{% endif %}">
+                          <a class="disclosure__link" href="#" 
+                             {% if language.iso_code == localization.language.iso_code %}aria-current="true"{% endif %}
+                             data-value="{{ language.iso_code }}"
+                             lang="{{ language.iso_code }}">
+                            {{ language.endonym_name }}
+                          </a>
+                        </li>
+                      {% endfor %}
+                    </ul>
+                    <input type="hidden" name="locale_code" value="{{ localization.language.iso_code }}">
+                  </div>
+                {% endform %}
+              </div>
+            </div>
+		{% endif %}
+
 	</header>
 </{% if section.settings.enable_sticky_header %}sticky-header{% else %}div{% endif %}>
 
@@ -467,6 +495,18 @@
 			"id": "show_vendor",
 			"default": false,
 			"label": "t:sections.all.card.show_vendor.label"
+			},
+
+			{
+				"type": "header",
+				"content": "Language Selector"
+			},
+			{
+				"type": "checkbox",
+				"id": "show_language_selector",
+				"label": "Show language selector",
+				"default": true,
+				"info": "To use this feature, you must first add languages in your store settings."
 			},
 
 			{ "type": "header", "content": "Additional Link" },
