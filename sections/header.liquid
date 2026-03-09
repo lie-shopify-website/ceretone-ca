@@ -104,7 +104,7 @@
   .disclosure__button {
     background: transparent;
     border: none;
-    color: {{ section.settings.header_text_color }};
+    color: var(--nav-dark-color);
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -120,7 +120,8 @@
     margin-left: 5px;
     border-left: 4px solid transparent;
     border-right: 4px solid transparent;
-    border-top: 4px solid {{ section.settings.header_text_color }};
+    border-top: 4px solid transparent;
+	border-top-color: var(--nav-dark-color);
   }
   
   .disclosure__list {
@@ -168,16 +169,16 @@
   /* Mobile language selector */
   .mobile-language-selector {
     margin-top: 20px;
-    padding: 0 20px;
+    padding: 0 15px;
   }
   
   .mobile-language-selector .disclosure__button {
-    color: {{ section.settings.header_text_color }};
+    color: var(--nav-dark-color);
     font-size: 16px;
     padding: 10px 0;
     width: 100%;
     text-align: left;
-    border-top: 1px solid #eee;
+	margin-top: 40px;
   }
   
   .mobile-language-selector .disclosure__list {
@@ -191,7 +192,7 @@
   
   .mobile-language-selector .disclosure__link {
     padding: 8px 0;
-    color: {{ section.settings.header_text_color }};
+    color: var(--nav-dark-color);
   }
   
   /* Hide header language selector on mobile */
@@ -254,56 +255,61 @@
 {% comment %} 语言选择器 {% endcomment %}
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    // Desktop language selector functionality
-    const headerLanguageButton = document.querySelector('header .disclosure__button');
+    // Desktop: 必须用 .language-selector 限定，否则会匹配到第一个按钮（可能是移动端）
+    const headerLanguageButton = document.querySelector('header .language-selector .disclosure__button');
     const headerLanguageList = document.getElementById('language-list');
-    
+    const mobileLanguageButton = document.querySelector('.mobile-language-selector .disclosure__button');
+    const mobileLanguageList = document.getElementById('mobile-language-list');
+
     if (headerLanguageButton && headerLanguageList) {
-      // Toggle language dropdown
       headerLanguageButton.addEventListener('click', function(event) {
         event.preventDefault();
+        event.stopPropagation();
         const expanded = this.getAttribute('aria-expanded') === 'true';
         this.setAttribute('aria-expanded', !expanded);
-        
         if (expanded) {
           headerLanguageList.style.display = 'none';
-          headerLanguageList.setAttribute('hidden', 'true');
         } else {
           headerLanguageList.style.display = 'block';
-          headerLanguageList.setAttribute('hidden', 'false');
-        }
-      });
-      
-      // Close dropdown when clicking outside
-      document.addEventListener('click', function(event) {
-        if (!event.target.closest('header .language-selector') && headerLanguageList.style.display === 'block') {
-          headerLanguageButton.setAttribute('aria-expanded', 'false');
-          headerLanguageList.style.display = 'none';
-          headerLanguageList.setAttribute('hidden', 'true');
         }
       });
     }
-    
-    // Mobile language selector functionality
-    const mobileLanguageButton = document.querySelector('.mobile-language-selector .disclosure__button');
-    const mobileLanguageList = document.getElementById('mobile-language-list');
-    
+
     if (mobileLanguageButton && mobileLanguageList) {
-      // Toggle language dropdown
+      const mobileLanguageWrap = mobileLanguageButton.closest('.mobile-language-selector');
       mobileLanguageButton.addEventListener('click', function(event) {
         event.preventDefault();
-        const expanded = this.getAttribute('aria-expanded') === 'true';
-        this.setAttribute('aria-expanded', !expanded);
-        
-        if (expanded) {
+        event.stopPropagation();
+        if (mobileLanguageWrap.classList.contains('open')) {
+          mobileLanguageWrap.classList.remove('open');
           mobileLanguageList.style.display = 'none';
           mobileLanguageList.setAttribute('hidden', 'true');
         } else {
+          mobileLanguageWrap.classList.add('open');
           mobileLanguageList.style.display = 'block';
           mobileLanguageList.setAttribute('hidden', 'false');
         }
       });
     }
+
+    // 点击外部时关闭两个下拉（只注册一次）
+    document.addEventListener('click', function(event) {
+      var insideAny = event.target.closest('header .language-selector') || event.target.closest('header .mobile-language-selector');
+      if (insideAny) return;
+      if (headerLanguageList && headerLanguageList.style.display === 'block') {
+        if (headerLanguageButton) headerLanguageButton.setAttribute('aria-expanded', 'false');
+        headerLanguageList.style.display = 'none';
+        headerLanguageList.setAttribute('hidden', 'true');
+      }
+      var mobileWrap = document.querySelector('.mobile-language-selector.open');
+      if (mobileWrap) {
+        mobileWrap.classList.remove('open');
+        var mobileList = document.getElementById('mobile-language-list');
+        if (mobileList) {
+          mobileList.style.display = 'none';
+        }
+      }
+    });
     
     // Handle language selection for all language links
     const languageLinks = document.querySelectorAll('.disclosure__link');
