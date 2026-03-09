@@ -12,10 +12,6 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "judge_me_reviews_preview_badge_xGfRmW": {
-          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
-        },
         "short_info_7n8hQi": {
           "type": "short_info",
           "disabled": true,
@@ -77,15 +73,9 @@
         },
         "custom_liquid_jnDkip": {
           "type": "custom_liquid",
-          "settings": {
-            "custom_liquid": "<!-- Coupon Tip Near CTA -->\n<div class=\"coupon-bar\">\n  10% Off Code: HEARBETTER\n</div>\n\n<style>\n.coupon-bar {\n  display: inline-block;              /* 根据文字宽度自适应 */\n  color: #ff4c3b;                     /* 文字高亮 */\n  font-size: 20px;\n  font-weight: bold;\n  padding: 4px 10px;\n  margin-bottom: 8px;\n  background: transparent;            /* 透明背景，避免按钮感 */\n  border: none;                       /* 去掉边框 */\n  border-radius: 0;                   /* 无圆角 */\n/* 移动端自适应 */\n@media screen and (max-width: 768px){\n  .coupon-bar {\n    font-size: 17px;\n    padding: 3px 8px;\n  }\n}\n</style>"
-          }
-        },
-        "custom_liquid_ke6QEp": {
-          "type": "custom_liquid",
           "disabled": true,
           "settings": {
-            "custom_liquid": "<div class=\"coupon-bar\">\n  10% Off Code: HEARBETTER\n</div>\n\n<style>\n.coupon-bar {\n  display: block;\n  color: red;\n  font-size: 20px;\n  font-weight: bold;\n  background: transparent;\n  border: none;\n  border-radius: 0;\n}\n@media screen and (max-width: 768px){\n  .coupon-bar {\n    font-size: 14px;\n    text-align:center;\n  }\n}\n</style>"
+            "custom_liquid": "<!-- Coupon Tip Near CTA -->\n<div class=\"coupon-bar\">\n  Auto $90 Off – Grab Yours Today!\n</div>\n\n<style>\n.coupon-bar {\n  display: inline-block;              /* 根据文字宽度自适应 */\n  color: #ff4c3b;                     /* 文字高亮 */\n  font-size: 20px;\n  font-weight: bold;\n  padding: 4px 10px;\n  margin-bottom: 8px;\n  background: transparent;            /* 透明背景，避免按钮感 */\n  border: none;                       /* 去掉边框 */\n  border-radius: 0;                   /* 无圆角 */\n/* 移动端自适应 */\n@media screen and (max-width: 768px){\n  .coupon-bar {\n    font-size: 17px;\n    padding: 3px 8px;\n  }\n}\n</style>"
           }
         },
         "buy_buttons": {
@@ -93,7 +83,7 @@
           "settings": {
             "color": "#ffffff",
             "bg_color": "#e7590d",
-            "buy_text": "Buy Now",
+            "buy_text": "",
             "show_amazon_btn": false,
             "amazon_btn_label": "BUY ON AMAZON",
             "show_dynamic_checkout": false,
@@ -133,6 +123,13 @@
             "icon_fill_type": "solid"
           }
         },
+        "custom_liquid_ke6QEp": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<div style=\"font-weight: bold; font-size: 14px; color: #d32f2f; display: flex; align-items: center;\">\n  <span style=\"margin-right: 6px;\">⏰</span>\n  Hurry! Only a few left — Deal ends soon!\n</div>"
+          }
+        },
         "payment_enable_RzX7CJ": {
           "type": "payment_enable",
           "settings": {
@@ -142,7 +139,6 @@
         }
       },
       "block_order": [
-        "judge_me_reviews_preview_badge_xGfRmW",
         "short_info_7n8hQi",
         "tags",
         "title",
@@ -153,10 +149,10 @@
         "limited_time_gift_jeBHPq",
         "variant_picker",
         "custom_liquid_jnDkip",
-        "custom_liquid_ke6QEp",
         "buy_buttons",
         "service_icon_Rt3ANF",
         "text_with_icon_MibE3M",
+        "custom_liquid_ke6QEp",
         "payment_enable_RzX7CJ"
       ],
       "settings": {
@@ -172,249 +168,66 @@
         "padding_bottom": "no-indent"
       }
     },
-    "video_fzeedL": {
-      "type": "video",
-      "custom_css": [
-        "@media screen and (min-width: 1024px) {.video-section__play-button {transform: scale(1.5); transform-origin: center; } .video-section {width: 90%; max-width: 1000px; margin: 0 auto; }}"
-      ],
-      "name": "t:sections.video.presets.name",
-      "settings": {
-        "color_scheme": "",
-        "full_width": false,
-        "height": "16/9",
-        "video_fit": "contain",
-        "subheading": "",
-        "subheading_style": "subtitle",
-        "subheading_icon": "none",
-        "heading": "Solid: Make a Difference",
-        "heading_size": "h3",
-        "cover_image": "shopify://shop_images/FAQ_page_header_hero.jpg",
-        "opacity_overlay": 0.1,
-        "video": "shopify://files/videos/7月10日(1).mp4",
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-        "video_autoplay": false,
-        "video_loop": false,
-        "video_muted": false,
-        "video_controls": true,
-        "description": "",
-        "margin_top": "no-indent",
-        "margin_bottom": "no-indent"
-      }
-    },
-    "image_with_text_WbUmtD": {
-      "type": "image-with-text",
-      "custom_css": [
-        "h2 {font-size: 30px;}",
-        "@media (max-width: 768px) {h2 {font-size: 22px; }}"
-      ],
-      "settings": {
-        "layout": "text_last",
-        "color_scheme": "",
-        "subheading": "",
-        "subheading_style": "subtitle",
-        "subheading_icon": "none",
-        "heading": "",
-        "heading_size": "h3",
-        "heading_line": "simple",
-        "line_color": "#ff4f00",
-        "word_break": false,
-        "heading_animation": "none",
-        "word_break_an": false,
-        "text": "",
-        "text_align": "center",
-        "inner_subheading": "",
-        "inner_heading": "You’re <span style=\"text-decoration:underline\">One Step Away</span> From Effortless Hearing",
-        "inner_heading_line": "rounded",
-        "inner_line_color": "#ff4f00",
-        "inner_word_break": false,
-        "description": "<p>No doctors. No hidden fees. Just clear sound. If you're dealing with mild to moderate hearing loss, Solid offers:</p><p>🔹 <strong>Redefined clarity</strong> — hear the world with ease.<br/>🔹 <strong>No expensive treatments</strong> — affordable and accessible.<br/>🔹 <strong>No complicated adjustments</strong> — just one simple device.<br/>🔹 <strong>Effortless listening</strong> — immediate improvement in sound quality.</p>",
-        "text_align_inner": "center",
-        "image": "shopify://shop_images/2400-1256-solid.png",
-        "image_link": "",
-        "height": "adapt",
-        "overlay_opacity": 0,
-        "logo_width": 75,
-        "add_text": "",
-        "author_color_scheme": "",
-        "icon_size": "recommended",
-        "box_shadow": false,
-        "icon_style": "colored",
-        "show_button": false,
-        "button_label": "Button label",
-        "button_link": "",
-        "button_style": "primary",
-        "show_button_2": false,
-        "button_label_2": "Button label",
-        "button_link_2": "",
-        "button_style_2": "simple",
-        "padding_top": "xs",
-        "padding_bottom": "xs",
-        "margin_top": "no-indent",
-        "margin_bottom": "no-indent"
-      }
-    },
-    "multicolumn_fXaiXe": {
-      "type": "multicolumn",
+    "6284d95d-0127-47a7-b977-2a630c6f9383": {
+      "type": "numbers",
       "blocks": {
-        "column_JECiAJ": {
+        "template--15231063359549__6284d95d-0127-47a7-b977-2a630c6f9383-column-1": {
           "type": "column",
           "settings": {
-            "icon": "none",
-            "icon_color_scheme": "",
+            "number": "20 hrs",
+            "heading": "per single charge",
+            "description": "",
+            "icon": "battery-3",
+            "icon_color": "subtle",
             "icon_fill_type": "gradient",
-            "heading": "Instant Effect",
-            "text": "Smart chip auto-optimizes speech and surrounding sounds for clear conversations, music, and TV.",
             "show_button": false,
             "button_label": "Label",
-            "button_link": "",
-            "button_style": "simple"
+            "button_link": ""
           }
         },
-        "column_zaetMc": {
+        "template--15231063359549__6284d95d-0127-47a7-b977-2a630c6f9383-column-2": {
           "type": "column",
           "settings": {
-            "icon": "none",
-            "icon_color_scheme": "",
-            "icon_fill_type": "gradient",
-            "heading": "No Hassle",
-            "text": "No constant tuning required. Large buttons + intuitive switching, all at your fingertips.",
+            "number": "100 hrs",
+            "heading": "total using with charging case",
+            "description": "",
+            "icon": "battery-1",
+            "icon_color": "subtle",
+            "icon_fill_type": "solid",
             "show_button": false,
             "button_label": "Label",
-            "button_link": "",
-            "button_style": "simple"
-          }
-        },
-        "column_x8E7xR": {
-          "type": "column",
-          "settings": {
-            "icon": "none",
-            "icon_color_scheme": "",
-            "icon_fill_type": "gradient",
-            "heading": "Versatile Listening",
-            "text": "Take control with 6 volume adjustments and 4 different sound settings.",
-            "show_button": false,
-            "button_label": "Label",
-            "button_link": "",
-            "button_style": "simple"
+            "button_link": ""
           }
         }
       },
       "block_order": [
-        "column_JECiAJ",
-        "column_zaetMc",
-        "column_x8E7xR"
-      ],
-      "custom_css": [
-        ".multicolumn-card {display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; margin: 0 auto;}",
-        ".multicolumn-card__heading {text-align: center; margin: 0 auto;}"
+        "template--15231063359549__6284d95d-0127-47a7-b977-2a630c6f9383-column-1",
+        "template--15231063359549__6284d95d-0127-47a7-b977-2a630c6f9383-column-2"
       ],
       "settings": {
-        "section_type": "transparent",
+        "layout": "columns",
+        "block_type": "subtle",
+        "columns_to_row": 2,
         "color_scheme": "",
         "enable_border": false,
         "border_full": false,
-        "multicolumn_to_show": 3,
-        "gap": "medium",
         "subheading": "",
         "subheading_style": "subtitle",
         "subheading_icon": "none",
-        "heading": "Why Solid?",
-        "heading_size": "h3",
+        "heading": "On-the-Go Recharging",
         "heading_line": "simple",
         "line_color": "#1566e0",
         "word_break": false,
-        "heading_animation": "none",
-        "word_break_an": false,
-        "text": "From the moment you put it on, life is back in focus.",
+        "text": "Conveniently power up your hearing aids anytime, anywhere with a portable charging case that delivers up to 3 full charges.",
         "text_align": "center",
+        "number_size": "recommended",
         "icon_size": "recommended",
-        "box_shadow": true,
-        "icon_style": "colored",
-        "image_width": "medium",
-        "image_ratio": "square",
-        "object_fit": "cover",
-        "card_heading_size": "h4",
-        "padding_top": "xs",
-        "padding_bottom": "xs",
-        "margin_top": "no-indent",
-        "margin_bottom": "no-indent"
-      }
-    },
-    "image_banner_Gcraq3": {
-      "type": "image-banner",
-      "settings": {
-        "full_width": false,
-        "color_scheme": "",
-        "image": "shopify://shop_images/d241af7b725a7be7dfa05e97923f5035.jpg",
-        "image_ratio": "adapt",
-        "opacity_overlay": 0,
-        "icon": "none",
-        "icon_color_scheme": "",
-        "icon_size": "large",
-        "icon_style": "colored",
-        "icon_fill_type": "gradient",
-        "box_shadow": false,
-        "subheading": "",
-        "subheading_style": "subtitle",
-        "heading": "",
-        "heading_size": "h2",
-        "text_information": "",
-        "text_align": "left",
-        "text_width": "small",
-        "show_view_all": false,
-        "button_label": "Shop now",
-        "button_style": "primary",
-        "button_link": "",
-        "margin_top": "no-indent",
-        "margin_bottom": "xs"
-      }
-    },
-    "image_with_text_hy4nF7": {
-      "type": "image-with-text",
-      "settings": {
-        "layout": "image_last",
-        "color_scheme": "",
-        "subheading": "",
-        "subheading_style": "subtitle",
-        "subheading_icon": "none",
-        "heading": "Stop the Noise, Hear What Matters",
-        "heading_size": "h3",
-        "heading_line": "simple",
-        "line_color": "#1566e0",
-        "word_break": false,
-        "heading_animation": "none",
-        "word_break_an": false,
-        "text": "",
-        "text_align": "center",
-        "inner_subheading": "",
-        "inner_heading": "",
-        "inner_heading_line": "simple",
-        "inner_line_color": "#1566e0",
-        "inner_word_break": false,
-        "description": "<p>✔️ Block unwanted noise and focus on what matters with adjustable settings.</p><p>✔️ Enjoy a clearer, more peaceful listening experience with less distraction.</p>",
-        "text_align_inner": "center",
-        "image": "shopify://shop_images/Solid.jpg",
-        "image_link": "",
-        "height": "adapt",
-        "overlay_opacity": 0,
-        "logo_width": 75,
-        "add_text": "",
-        "author_color_scheme": "",
-        "icon_size": "recommended",
-        "box_shadow": false,
-        "icon_style": "colored",
-        "show_button": false,
-        "button_label": "Button label",
-        "button_link": "",
-        "button_style": "primary",
-        "show_button_2": false,
-        "button_label_2": "Button label",
-        "button_link_2": "",
-        "button_style_2": "simple",
-        "padding_top": "xs",
-        "padding_bottom": "xs",
-        "margin_top": "no-indent",
-        "margin_bottom": "no-indent"
+        "card_heading_size": "recommended",
+        "number_size_first": "normal",
+        "icon_size_first": "extra-large",
+        "card_heading_size_first": "h4",
+        "padding_top": "l",
+        "padding_bottom": "l"
       }
     },
     "576dad4a-7ffe-4bdd-9a60-a4572834977d": {
@@ -426,50 +239,78 @@
             "icon": "none",
             "icon_color_scheme": "",
             "icon_fill_type": "gradient",
-            "heading": "Noise Filtering",
-            "text": "Layered Noise Reduction™ blocks unwanted sounds so you can focus on what matters.",
+            "heading": "Crystal-Clear Sound",
+            "text": "Advanced noise reduction ensures every conversation and note comes through with pristine clarity.",
             "show_button": false,
             "button_label": "Label",
             "button_link": "",
             "button_style": "simple"
           }
         },
-        "template--15231063359549__576dad4a-7ffe-4bdd-9a60-a4572834977d-column-2": {
+        "column_yMKLYB": {
           "type": "column",
           "settings": {
             "icon": "none",
             "icon_color_scheme": "",
             "icon_fill_type": "gradient",
-            "heading": "Ten-Layer Precision",
-            "text": "Targets specific frequencies for crisp, focused audio.",
+            "heading": "Discreet & Comfortable",
+            "text": "Low-profile earbud design blends in naturally, helping eliminate the stigma of traditional hearing aids.",
             "show_button": false,
             "button_label": "Label",
             "button_link": "",
             "button_style": "simple"
           }
         },
-        "template--15231063359549__576dad4a-7ffe-4bdd-9a60-a4572834977d-column-3": {
+        "column_PewVxj": {
           "type": "column",
           "settings": {
             "icon": "none",
             "icon_color_scheme": "",
             "icon_fill_type": "gradient",
-            "heading": "Personalized Control",
-            "text": "Noise reduction automatically adapts with each program for optimal clarity.",
+            "heading": "Adaptive Feedback Cancellation",
+            "text": "Say goodbye to whistling and distortion for a more natural listening experience.",
             "show_button": false,
             "button_label": "Label",
             "button_link": "",
             "button_style": "simple"
           }
         },
-        "column_VkxmMa": {
+        "column_HayANj": {
           "type": "column",
           "settings": {
             "icon": "none",
-            "icon_color_scheme": "background-1",
+            "icon_color_scheme": "",
             "icon_fill_type": "gradient",
-            "heading": "Clear & Calm",
-            "text": "Soft squelch tames wind noise so only important sounds come through.",
+            "heading": "Fast Charging Technology",
+            "text": "Recharge quickly and get back to hearing without long waits.",
+            "show_button": false,
+            "button_label": "Label",
+            "button_link": "",
+            "button_style": "simple"
+          }
+        },
+        "column_BD97tV": {
+          "type": "column",
+          "settings": {
+            "icon": "none",
+            "icon_color_scheme": "",
+            "icon_fill_type": "gradient",
+            "heading": "Easy Volume Control",
+            "text": "Fine-tune your sound with simple, intuitive adjustments.",
+            "show_button": false,
+            "button_label": "Label",
+            "button_link": "",
+            "button_style": "simple"
+          }
+        },
+        "column_UhUNpQ": {
+          "type": "column",
+          "settings": {
+            "icon": "none",
+            "icon_color_scheme": "",
+            "icon_fill_type": "gradient",
+            "heading": "4 Preset Hearing Programs",
+            "text": "Switch effortlessly between Standard, Restaurant, Outdoor, and Music settings for the best clarity in any setting.",
             "show_button": false,
             "button_label": "Label",
             "button_link": "",
@@ -479,17 +320,409 @@
       },
       "block_order": [
         "template--15231063359549__576dad4a-7ffe-4bdd-9a60-a4572834977d-column-1",
-        "template--15231063359549__576dad4a-7ffe-4bdd-9a60-a4572834977d-column-2",
-        "template--15231063359549__576dad4a-7ffe-4bdd-9a60-a4572834977d-column-3",
-        "column_VkxmMa"
+        "column_yMKLYB",
+        "column_PewVxj",
+        "column_HayANj",
+        "column_BD97tV",
+        "column_UhUNpQ"
       ],
       "settings": {
         "section_type": "transparent",
-        "color_scheme": "background-1",
+        "color_scheme": "background-2",
         "enable_border": false,
         "border_full": false,
-        "multicolumn_to_show": 4,
+        "multicolumn_to_show": 3,
         "gap": "small",
+        "subheading": "",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "Clear Sound, Discreet Design",
+        "heading_size": "h2",
+        "heading_line": "simple",
+        "line_color": "#1566e0",
+        "word_break": false,
+        "heading_animation": "none",
+        "word_break_an": false,
+        "text": "Experience life with enhanced clarity and comfort. The Essential CE-A39HT delivers crystal-clear sound in a sleek, easy-to-use design.",
+        "text_align": "center",
+        "icon_size": "recommended",
+        "box_shadow": true,
+        "icon_style": "colored",
+        "image_width": "full-width",
+        "image_ratio": "square",
+        "object_fit": "cover",
+        "card_heading_size": "h4",
+        "padding_top": "l",
+        "padding_bottom": "l",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "popular_products_kPAHWz": {
+      "type": "popular-products",
+      "custom_css": [
+        ".title {font-size: 32.5px; text-align: center;}",
+        "@media (max-width: 768px) {.title {font-size: 25px; }}"
+      ],
+      "name": "t:sections.popular-products.presets.name",
+      "settings": {
+        "color_scheme": "",
+        "enable_border": false,
+        "border_full": false,
+        "subheading": "",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "you may also like",
+        "heading_size": "h3",
+        "heading_line": "simple",
+        "line_color": "#1566e0",
+        "word_break": false,
+        "heading_animation": "none",
+        "word_break_an": false,
+        "text": "",
+        "product_list": [
+          "core-one-pro-otc-hearing-aids",
+          "torch-otc-hearing-aids",
+          "solid-otc-hearing-aids"
+        ],
+        "products_to_show": 3,
+        "image_ratio": "5/4",
+        "image_fit": "contain",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_desc": false,
+        "columns_mobile": "1",
+        "button_show": false,
+        "button_label": "Button label",
+        "button_style": "primary",
+        "button_link": "",
+        "padding_top": "xs",
+        "padding_bottom": "xs",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "f229d1fc08faf1342454": {
+      "type": "apps",
+      "blocks": {
+        "a07078ac-0520-4d86-be37-76b60969d9e4": {
+          "type": "shopify://apps/yotpo-product-reviews/blocks/reviews/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "disabled": true,
+          "settings": {
+            "product": "{{product}}"
+          }
+        }
+      },
+      "block_order": [
+        "a07078ac-0520-4d86-be37-76b60969d9e4"
+      ],
+      "custom_css": [
+        "h2 {font-size: 32.5px;}",
+        "@media (max-width: 768px) {h2 {font-size: 25px; }}"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "7dba930a-4503-4b98-ad20-1d9ec5fe1eac": {
+      "type": "slideshow",
+      "blocks": {
+        "template--15231063359549__7dba930a-4503-4b98-ad20-1d9ec5fe1eac-slide-1": {
+          "type": "slide",
+          "settings": {
+            "color_scheme": "",
+            "icon": "hand-1",
+            "overlay_opacity": 0.5,
+            "show_video": false,
+            "loop_video": true,
+            "heading": "Some heading",
+            "heading_size": "recommended",
+            "description": "Some description",
+            "tab_heading": "Heading",
+            "show_button": false,
+            "button_style": "simple_link",
+            "button_label": "Shop Now",
+            "button_link": ""
+          }
+        },
+        "template--15231063359549__7dba930a-4503-4b98-ad20-1d9ec5fe1eac-slide-2": {
+          "type": "slide",
+          "settings": {
+            "color_scheme": "",
+            "icon": "hand-1",
+            "overlay_opacity": 0.5,
+            "show_video": false,
+            "loop_video": true,
+            "heading": "Some heading",
+            "heading_size": "recommended",
+            "description": "Some description",
+            "tab_heading": "Heading",
+            "show_button": false,
+            "button_style": "simple_link",
+            "button_label": "Shop Now",
+            "button_link": ""
+          }
+        },
+        "e10a3889-6b72-412f-b63e-916db4f6e454": {
+          "type": "slide",
+          "settings": {
+            "color_scheme": "background-3",
+            "icon": "hand-1",
+            "overlay_opacity": 0.5,
+            "show_video": false,
+            "loop_video": true,
+            "heading": "Some heading",
+            "heading_size": "recommended",
+            "description": "Some description",
+            "tab_heading": "Heading",
+            "show_button": false,
+            "button_style": "simple_link",
+            "button_label": "Shop Now",
+            "button_link": ""
+          }
+        },
+        "c9f7795a-04ce-4374-ad7f-fc5c728ea550": {
+          "type": "slide",
+          "settings": {
+            "color_scheme": "background-3",
+            "icon": "hand-1",
+            "overlay_opacity": 0.5,
+            "show_video": false,
+            "loop_video": true,
+            "heading": "Some heading",
+            "heading_size": "recommended",
+            "description": "Some description",
+            "tab_heading": "Heading",
+            "show_button": true,
+            "button_style": "simple_link",
+            "button_label": "Shop Now",
+            "button_link": ""
+          }
+        },
+        "59511d0c-e715-46ed-90ab-348bd93c7173": {
+          "type": "slide",
+          "settings": {
+            "color_scheme": "background-3",
+            "icon": "none",
+            "overlay_opacity": 0.5,
+            "show_video": false,
+            "loop_video": true,
+            "heading": "Some heading",
+            "heading_size": "recommended",
+            "description": "Some description",
+            "tab_heading": "Heading",
+            "show_button": false,
+            "button_style": "simple_link",
+            "button_label": "Shop Now",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--15231063359549__7dba930a-4503-4b98-ad20-1d9ec5fe1eac-slide-1",
+        "template--15231063359549__7dba930a-4503-4b98-ad20-1d9ec5fe1eac-slide-2",
+        "e10a3889-6b72-412f-b63e-916db4f6e454",
+        "c9f7795a-04ce-4374-ad7f-fc5c728ea550",
+        "59511d0c-e715-46ed-90ab-348bd93c7173"
+      ],
+      "disabled": true,
+      "settings": {
+        "layout": "overlay",
+        "full_width": true,
+        "color_scheme": "",
+        "enable_border": false,
+        "border_full": false,
+        "subheading": "",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "",
+        "heading_size": "h2",
+        "heading_line": "simple",
+        "line_color": "#1566e0",
+        "word_break": false,
+        "text": "",
+        "heading_animation": "none",
+        "word_break_an": false,
+        "text_align": "left",
+        "height": "16/9",
+        "text_align_content": "top-left",
+        "enable_autoplay": true,
+        "enable_parallax": false,
+        "enable_pagination": true,
+        "pagination_type": "tabs_full",
+        "pagination_color_scheme": "",
+        "pagination_width": "medium",
+        "enable_navigation": false,
+        "navigation_color_scheme": "",
+        "slide_duration": 5,
+        "icon_size": "recommended",
+        "icon_style": "contrast",
+        "icon_fill_type": "solid",
+        "show_tab_icon": true,
+        "padding_top": "no-indent",
+        "padding_bottom": "no-indent",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "ac1a2f01-d017-4134-85c1-3684b4c5051f": {
+      "type": "testimonials",
+      "blocks": {
+        "template--15231063359549__ac1a2f01-d017-4134-85c1-3684b4c5051f-testimonials_slide-1": {
+          "type": "testimonials_slide",
+          "settings": {
+            "rating": 5,
+            "slide_text": "“Description feedback from your buyers”",
+            "slide_name": "Buyer's name",
+            "slide_position": "Buyer's position"
+          }
+        },
+        "template--15231063359549__ac1a2f01-d017-4134-85c1-3684b4c5051f-testimonials_slide-2": {
+          "type": "testimonials_slide",
+          "settings": {
+            "rating": 5,
+            "slide_text": "“Description feedback from your buyers”",
+            "slide_name": "Buyer's name",
+            "slide_position": "Buyer's position"
+          }
+        },
+        "template--15231063359549__ac1a2f01-d017-4134-85c1-3684b4c5051f-testimonials_slide-3": {
+          "type": "testimonials_slide",
+          "settings": {
+            "rating": 5,
+            "slide_text": "“Description feedback from your buyers”",
+            "slide_name": "Buyer's name",
+            "slide_position": "Buyer's position"
+          }
+        },
+        "887974fb-937c-46ae-8d54-9dba0c0b48b2": {
+          "type": "testimonials_slide",
+          "settings": {
+            "rating": 5,
+            "slide_text": "“Description feedback from your buyers”",
+            "slide_name": "Buyer's name",
+            "slide_position": "Buyer's position"
+          }
+        },
+        "07c8811f-d815-422f-8f3d-d6b90426e835": {
+          "type": "testimonials_slide",
+          "settings": {
+            "rating": 5,
+            "slide_text": "“Description feedback from your buyers”",
+            "slide_name": "Buyer's name",
+            "slide_position": "Buyer's position"
+          }
+        },
+        "68513685-e8f6-4acf-a0e6-c6c1724139f4": {
+          "type": "testimonials_slide",
+          "settings": {
+            "rating": 5,
+            "slide_text": "“Description feedback from your buyers”",
+            "slide_name": "Buyer's name",
+            "slide_position": "Buyer's position"
+          }
+        },
+        "5e9d20cc-9b95-4b79-bdbd-8efaa194fc14": {
+          "type": "testimonials_slide",
+          "settings": {
+            "rating": 5,
+            "slide_text": "“Description feedback from your buyers”",
+            "slide_name": "Buyer's name",
+            "slide_position": "Buyer's position"
+          }
+        },
+        "d9f8c622-a112-4b23-93eb-77239bb89b9a": {
+          "type": "testimonials_slide",
+          "settings": {
+            "rating": 5,
+            "slide_text": "“Description feedback from your buyers”",
+            "slide_name": "Buyer's name",
+            "slide_position": "Buyer's position"
+          }
+        },
+        "d34ce9a3-1ef1-4944-9b59-ff9130314b5c": {
+          "type": "testimonials_slide",
+          "settings": {
+            "rating": 5,
+            "slide_text": "“Description feedback from your buyers”",
+            "slide_name": "Buyer's name",
+            "slide_position": "Buyer's position"
+          }
+        }
+      },
+      "block_order": [
+        "template--15231063359549__ac1a2f01-d017-4134-85c1-3684b4c5051f-testimonials_slide-1",
+        "template--15231063359549__ac1a2f01-d017-4134-85c1-3684b4c5051f-testimonials_slide-2",
+        "template--15231063359549__ac1a2f01-d017-4134-85c1-3684b4c5051f-testimonials_slide-3",
+        "887974fb-937c-46ae-8d54-9dba0c0b48b2",
+        "07c8811f-d815-422f-8f3d-d6b90426e835",
+        "68513685-e8f6-4acf-a0e6-c6c1724139f4",
+        "5e9d20cc-9b95-4b79-bdbd-8efaa194fc14",
+        "d9f8c622-a112-4b23-93eb-77239bb89b9a",
+        "d34ce9a3-1ef1-4944-9b59-ff9130314b5c"
+      ],
+      "disabled": true,
+      "settings": {
+        "layout": "marquee",
+        "color_scheme": "",
+        "subheading": "",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "",
+        "heading_size": "h2",
+        "heading_line": "simple",
+        "line_color": "#1566e0",
+        "word_break": false,
+        "heading_animation": "none",
+        "word_break_an": false,
+        "text": "",
+        "text_align": "left",
+        "slide_color_scheme": "",
+        "slide_text_size": "recommended",
+        "enable_navigation": true,
+        "enable_navigation_mobile": false,
+        "navigation_color_scheme": "",
+        "enable_pagination": false,
+        "enable_pagination_mobile": true,
+        "pagination_color_scheme": "",
+        "padding_top": "l",
+        "padding_bottom": "l",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "1c56f2e1-2448-426b-b16d-913a45f3f050": {
+      "type": "multirow",
+      "blocks": {
+        "template--15231063359549__1c56f2e1-2448-426b-b16d-913a45f3f050-column-1": {
+          "type": "column",
+          "settings": {
+            "icon": "lightning-bolt-1",
+            "icon_color_scheme": "",
+            "icon_fill_type": "gradient",
+            "show_video": false,
+            "autoplay_video": true,
+            "muted_video": true,
+            "loop_video": true,
+            "heading": "Heading",
+            "heading_line": "simple",
+            "line_color": "#1566e0",
+            "word_break": false,
+            "text": "Description",
+            "show_button": true,
+            "button_label": "Label",
+            "button_link": "",
+            "button_style": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "template--15231063359549__1c56f2e1-2448-426b-b16d-913a45f3f050-column-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "section_type": "transparent",
+        "color_scheme": "background-2",
         "subheading": "",
         "subheading_style": "subtitle",
         "subheading_icon": "none",
@@ -505,169 +738,13 @@
         "icon_size": "recommended",
         "box_shadow": true,
         "icon_style": "colored",
-        "image_width": "full-width",
-        "image_ratio": "square",
+        "image_alignment": "right",
+        "image_width": "large",
+        "image_ratio": "landscape",
         "object_fit": "cover",
-        "card_heading_size": "h4",
-        "padding_top": "no-indent",
-        "padding_bottom": "xs",
-        "margin_top": "no-indent",
-        "margin_bottom": "no-indent"
-      }
-    },
-    "image_with_text_GMyQhD": {
-      "type": "image-with-text",
-      "custom_css": [
-        "h2 {font-size: 30px;}",
-        "@media (max-width: 768px) {h2 {font-size: 22px; }}"
-      ],
-      "settings": {
-        "layout": "text_last",
-        "color_scheme": "",
-        "subheading": "",
-        "subheading_style": "subtitle",
-        "subheading_icon": "none",
-        "heading": "",
-        "heading_size": "h3",
-        "heading_line": "simple",
-        "line_color": "#1566e0",
-        "word_break": false,
-        "heading_animation": "none",
-        "word_break_an": false,
-        "text": "",
-        "text_align": "center",
-        "inner_subheading": "",
-        "inner_heading": "Stay Powered All Day",
-        "inner_heading_line": "simple",
-        "inner_line_color": "#1566e0",
-        "inner_word_break": false,
-        "description": "<p>Solid keeps you powered all day with fast charging, low battery alerts, and a portable charging case—seamless use anytime.</p><p>⚡ <strong>Up to 20 hours</strong> of battery life on a single charge.<br/>⚡ Fully charges in just <strong>2.5 hours</strong>.<br/>⚡ <strong>Portable charging case</strong> for storing and charging your hearing aids (requires a charging cable for power).</p>",
-        "text_align_inner": "center",
-        "image": "shopify://shop_images/07c99b19cfb869cf58c155c299a62d92.jpg",
-        "image_link": "",
-        "height": "adapt",
-        "overlay_opacity": 0,
-        "logo_width": 75,
-        "add_text": "",
-        "author_color_scheme": "",
-        "icon_size": "recommended",
-        "box_shadow": false,
-        "icon_style": "colored",
-        "show_button": false,
-        "button_label": "Button label",
-        "button_link": "",
-        "button_style": "primary",
-        "show_button_2": false,
-        "button_label_2": "Button label",
-        "button_link_2": "",
-        "button_style_2": "simple",
-        "padding_top": "xs",
-        "padding_bottom": "xs",
-        "margin_top": "no-indent",
-        "margin_bottom": "no-indent"
-      }
-    },
-    "image_with_text_VMHV7V": {
-      "type": "image-with-text",
-      "custom_css": [
-        "h2 {font-size: 30px;}",
-        "@media (max-width: 768px) {h2 {font-size: 22px; }}"
-      ],
-      "settings": {
-        "layout": "image_last",
-        "color_scheme": "",
-        "subheading": "",
-        "subheading_style": "subtitle",
-        "subheading_icon": "none",
-        "heading": "",
-        "heading_size": "h3",
-        "heading_line": "simple",
-        "line_color": "#1566e0",
-        "word_break": false,
-        "heading_animation": "none",
-        "word_break_an": false,
-        "text": "",
-        "text_align": "center",
-        "inner_subheading": "",
-        "inner_heading": "Nearly Invisible, <span style=\"text-decoration:underline\">Unnoticed</span>",
-        "inner_heading_line": "rounded",
-        "inner_line_color": "#ff4f00",
-        "inner_word_break": false,
-        "description": "<p><strong>Ultra-discreet in-ear design:</strong> At only 1.31 inches tall, invisible when worn.<br/><strong>6 silicone ear tips:</strong> S, M, and L included for a perfect fit.<br/><strong>Medical-grade, skin-friendly material:</strong> Comfortable all day long, even for sensitive skin.</p>",
-        "text_align_inner": "center",
-        "image": "shopify://shop_images/72bbb630a16fae421e1d44fb5d825b4e.png",
-        "image_link": "",
-        "height": "adapt",
-        "overlay_opacity": 0,
-        "logo_width": 75,
-        "add_text": "",
-        "author_color_scheme": "",
-        "icon_size": "recommended",
-        "box_shadow": false,
-        "icon_style": "colored",
-        "show_button": false,
-        "button_label": "Button label",
-        "button_link": "",
-        "button_style": "primary",
-        "show_button_2": false,
-        "button_label_2": "Button label",
-        "button_link_2": "",
-        "button_style_2": "simple",
-        "padding_top": "xs",
-        "padding_bottom": "xs",
-        "margin_top": "no-indent",
-        "margin_bottom": "no-indent"
-      }
-    },
-    "image_with_text_cVFkER": {
-      "type": "image-with-text",
-      "disabled": true,
-      "custom_css": [
-        "h2 {font-size: 30px;}",
-        "@media (max-width: 768px) {h2 {font-size: 22px; }}"
-      ],
-      "settings": {
-        "layout": "text_last",
-        "color_scheme": "",
-        "subheading": "",
-        "subheading_style": "subtitle",
-        "subheading_icon": "none",
-        "heading": "",
-        "heading_size": "h3",
-        "heading_line": "simple",
-        "line_color": "#1566e0",
-        "word_break": false,
-        "heading_animation": "none",
-        "word_break_an": false,
-        "text": "",
-        "text_align": "center",
-        "inner_subheading": "",
-        "inner_heading": "Easy Volume & Mode Control",
-        "inner_heading_line": "simple",
-        "inner_line_color": "#1566e0",
-        "inner_word_break": false,
-        "description": "<p>With Solid's larger, easy-to-use physical buttons, adjusting the volume or changing settings has never been easier. Say goodbye to frustrating tiny buttons and enjoy seamless, effortless control at your fingertips.</p>",
-        "text_align_inner": "center",
-        "image": "shopify://shop_images/hearing_aids_2b7935c5-2825-48ed-952b-8fbc77eee14e.jpg",
-        "image_link": "",
-        "height": "adapt",
-        "overlay_opacity": 0,
-        "logo_width": 75,
-        "add_text": "",
-        "author_color_scheme": "",
-        "icon_size": "recommended",
-        "box_shadow": false,
-        "icon_style": "colored",
-        "show_button": false,
-        "button_label": "Button label",
-        "button_link": "",
-        "button_style": "primary",
-        "show_button_2": false,
-        "button_label_2": "Button label",
-        "button_link_2": "",
-        "button_style_2": "simple",
-        "padding_top": "xs",
-        "padding_bottom": "xs",
+        "card_heading_size": "h5",
+        "padding_top": "l",
+        "padding_bottom": "l",
         "margin_top": "no-indent",
         "margin_bottom": "no-indent"
       }
@@ -692,487 +769,17 @@
         "padding_top": "l",
         "padding_bottom": "l"
       }
-    },
-    "steps_DPGyUy": {
-      "type": "steps",
-      "blocks": {
-        "step_HMW9Db": {
-          "type": "step",
-          "settings": {
-            "image": "shopify://shop_images/1_c0c37278-7df4-4163-bba2-b017867740e9.jpg",
-            "number": "Normal",
-            "heading": "Everyday Clarity",
-            "text": "You’re chatting with a friend in a busy café, yet your conversation remains clear, with background noise filtered out.",
-            "show_button": false,
-            "button_style": "simple",
-            "button_label": "Know More",
-            "button_link": ""
-          }
-        },
-        "step_Ee4U6x": {
-          "type": "step",
-          "settings": {
-            "image": "shopify://shop_images/Restaurant_Mode.jpg",
-            "number": "Restaurant",
-            "heading": "Dine with Ease",
-            "text": "At a crowded restaurant, you hear the waiter’s voice clearly while the surrounding chatter fades away.",
-            "show_button": false,
-            "button_style": "simple",
-            "button_label": "Know More",
-            "button_link": ""
-          }
-        },
-        "step_ye3Ctp": {
-          "type": "step",
-          "settings": {
-            "image": "shopify://shop_images/3_2a740cb3-d72b-40b2-ad67-072a40e954ac.jpg",
-            "number": "Outdoor",
-            "heading": "Nature’s Clarity",
-            "text": "Walking outside, you enjoy the rustling of trees and distant sounds, while staying aware of your surroundings.",
-            "show_button": false,
-            "button_style": "simple",
-            "button_label": "Know More",
-            "button_link": ""
-          }
-        },
-        "step_fjf3GD": {
-          "type": "step",
-          "settings": {
-            "image": "shopify://shop_images/4_112123d2-e2eb-4ec5-afa1-8595bc88b8f7.png",
-            "number": "Music",
-            "heading": "Music Immersion",
-            "text": "You’re listening to music at home, and every note is crystal clear, as if you were at a live concert.",
-            "show_button": false,
-            "button_style": "simple",
-            "button_label": "Know More",
-            "button_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "step_HMW9Db",
-        "step_Ee4U6x",
-        "step_ye3Ctp",
-        "step_fjf3GD"
-      ],
-      "custom_css": [],
-      "settings": {
-        "layout": "columns",
-        "color_scheme": "scheme-da522d8c-d8ea-43a1-8f89-75b1a671124a",
-        "subheading": "",
-        "subheading_style": "subtitle",
-        "subheading_icon": "none",
-        "heading": "Hear Clearly Everywhere You Go",
-        "heading_size": "h3",
-        "heading_line": "simple",
-        "line_color": "#1566e0",
-        "word_break": false,
-        "heading_animation": "none",
-        "word_break_an": false,
-        "text": "Our smart chip filters distractions like restaurant noise, wind, and TV, focusing on key voices.",
-        "text_align": "center",
-        "columns_to_show": 4,
-        "image_ratio": "landscape",
-        "number_size": "recommended",
-        "step_heading_size": "recommended",
-        "text_size": "recommended",
-        "padding_top": "xs",
-        "padding_bottom": "xs",
-        "margin_top": "no-indent",
-        "margin_bottom": "no-indent"
-      }
-    },
-    "multicolumn_xRkmgF": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_fgwmjz": {
-          "type": "column",
-          "settings": {
-            "icon": "none",
-            "icon_color_scheme": "",
-            "icon_fill_type": "gradient",
-            "image": "shopify://shop_images/5_ea14e38b-a854-4921-bae1-678dee393989.png",
-            "heading": "TV Time Comfort",
-            "text": "Watching TV with your grandchild, the volume stays just right—clear but not too loud—making it comfortable for you both.",
-            "show_button": false,
-            "button_label": "Label",
-            "button_link": "",
-            "button_style": "simple"
-          }
-        },
-        "column_acEWmh": {
-          "type": "column",
-          "settings": {
-            "icon": "none",
-            "icon_color_scheme": "",
-            "icon_fill_type": "gradient",
-            "image": "shopify://shop_images/6_536f9f8b-8c94-49c1-92a2-659f2c15e482.png",
-            "heading": "Heartfelt Conversations",
-            "text": "You and a friend sit on a park bench, sharing stories, with every word heard clearly in the peaceful setting.",
-            "show_button": false,
-            "button_label": "Label",
-            "button_link": "",
-            "button_style": "simple"
-          }
-        }
-      },
-      "block_order": [
-        "column_fgwmjz",
-        "column_acEWmh"
-      ],
-      "custom_css": [
-        ".multicolumn-card {display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; margin: 0 auto;}",
-        ".multicolumn-card__heading {text-align: center; margin: 0 auto;}"
-      ],
-      "settings": {
-        "section_type": "transparent",
-        "color_scheme": "",
-        "enable_border": false,
-        "border_full": false,
-        "multicolumn_to_show": 2,
-        "gap": "medium",
-        "subheading": "",
-        "subheading_style": "subtitle",
-        "subheading_icon": "none",
-        "heading": "",
-        "heading_size": "h3",
-        "heading_line": "simple",
-        "line_color": "#1566e0",
-        "word_break": false,
-        "heading_animation": "none",
-        "word_break_an": false,
-        "text": "",
-        "text_align": "center",
-        "icon_size": "recommended",
-        "box_shadow": true,
-        "icon_style": "colored",
-        "image_width": "full-width",
-        "image_ratio": "landscape",
-        "object_fit": "cover",
-        "card_heading_size": "h4",
-        "padding_top": "xs",
-        "padding_bottom": "xs",
-        "margin_top": "no-indent",
-        "margin_bottom": "no-indent"
-      }
-    },
-    "slideshow_ERbxXU": {
-      "type": "slideshow",
-      "settings": {
-        "layout": "overlay",
-        "full_width": false,
-        "color_scheme": "background-2",
-        "enable_border": false,
-        "border_full": false,
-        "subheading": "",
-        "subheading_style": "subtitle",
-        "subheading_icon": "none",
-        "heading": "<span style=\"text-decoration:underline\">60-Day</span> Money-Back Guarantee",
-        "heading_size": "h3",
-        "heading_line": "rounded",
-        "line_color": "#ff4f00",
-        "word_break": true,
-        "text": "Experience Ceretone Hearing Aids risk-free for 60 days. If you're not completely satisfied, return them for a full refund with no return shipping fees—guaranteed.<br>\nOur dedicated customer support team is available during business hours to provide seamless assistance, ensuring your experience is effortless and stress-free.",
-        "heading_animation": "none",
-        "word_break_an": false,
-        "text_align": "center",
-        "height": "16/9",
-        "text_align_content": "bottom-left",
-        "enable_autoplay": true,
-        "enable_parallax": false,
-        "enable_pagination": true,
-        "pagination_type": "bullets",
-        "pagination_color_scheme": "",
-        "pagination_width": "medium",
-        "enable_navigation": false,
-        "navigation_color_scheme": "",
-        "slide_duration": 5,
-        "icon_size": "recommended",
-        "icon_style": "contrast",
-        "icon_fill_type": "solid",
-        "show_tab_icon": true,
-        "padding_top": "xs",
-        "padding_bottom": "no-indent",
-        "margin_top": "no-indent",
-        "margin_bottom": "no-indent"
-      }
-    },
-    "image_with_text_WHe7M3": {
-      "type": "image-with-text",
-      "settings": {
-        "layout": "text_last",
-        "color_scheme": "",
-        "subheading": "",
-        "subheading_style": "subtitle",
-        "subheading_icon": "none",
-        "heading": "Premium tech doesn’t need a premium price",
-        "heading_size": "h3",
-        "heading_line": "simple",
-        "line_color": "#1566e0",
-        "word_break": false,
-        "heading_animation": "none",
-        "word_break_an": false,
-        "text": "How are Solid hearing aids so much cheaper?",
-        "text_align": "center",
-        "inner_subheading": "",
-        "inner_heading": "",
-        "inner_heading_line": "simple",
-        "inner_line_color": "#1566e0",
-        "inner_word_break": false,
-        "description": "<p>✅ <strong>Direct-to-consumer sales</strong>: No middlemen, no markups.<br/>✅ <strong>No location markup</strong>: We skip the high costs of physical clinics.<br/>✅ <strong>No commission fees</strong>: Every penny goes into product development, not third-party cuts.<br/>✅ <strong>Simplified services</strong>: Smart self-check tools and video guides replace expensive in-person adjustments.</p><p>We focus on offering high-quality hearing aids at an affordable price, so you can hear the world without the hassle.</p>",
-        "text_align_inner": "center",
-        "image": "shopify://shop_images/comparison.jpg",
-        "image_link": "",
-        "height": "adapt",
-        "overlay_opacity": 0,
-        "logo_width": 75,
-        "add_text": "",
-        "author_color_scheme": "",
-        "icon_size": "recommended",
-        "box_shadow": false,
-        "icon_style": "colored",
-        "show_button": false,
-        "button_label": "Button label",
-        "button_link": "",
-        "button_style": "primary",
-        "show_button_2": false,
-        "button_label_2": "Button label",
-        "button_link_2": "",
-        "button_style_2": "simple",
-        "padding_top": "xs",
-        "padding_bottom": "xs",
-        "margin_top": "no-indent",
-        "margin_bottom": "no-indent"
-      }
-    },
-    "image_with_text_LCAC7e": {
-      "type": "image-with-text",
-      "settings": {
-        "layout": "image_last",
-        "color_scheme": "",
-        "subheading": "",
-        "subheading_style": "subtitle",
-        "subheading_icon": "none",
-        "heading": "Big Buttons, No More Struggles",
-        "heading_size": "h3",
-        "heading_line": "simple",
-        "line_color": "#1566e0",
-        "word_break": false,
-        "heading_animation": "none",
-        "word_break_an": false,
-        "text": "Grandpa says it’s the easiest hearing aid he’s ever used.",
-        "text_align": "center",
-        "inner_subheading": "",
-        "inner_heading": "",
-        "inner_heading_line": "simple",
-        "inner_line_color": "#1566e0",
-        "inner_word_break": false,
-        "description": "<p>Why do traditional small buttons drive people crazy?</p><p>😞 Hard to find when the button is tiny.<br/>😞 No tactile feedback, leading to mistakes.<br/>😞 Complex menus that require constant learning.</p><p><strong>Solid’s solution:</strong></p><p>🙂 <strong>40% larger</strong> buttons for easy access.<br/>🙂<strong> Tactile texture</strong> for error-free use.<br/>🙂 <strong>One-minute learning curve</strong>: short press for volume, long press (3 seconds) to switch programs.</p>",
-        "text_align_inner": "center",
-        "image": "shopify://shop_images/de26d8bf8c120599b404eafb0ed3e341_85995c2f-c3ac-40a5-91cb-a4ec6e02dc02.png",
-        "image_link": "",
-        "height": "adapt",
-        "overlay_opacity": 0,
-        "logo_width": 75,
-        "add_text": "",
-        "author_color_scheme": "",
-        "icon_size": "recommended",
-        "box_shadow": false,
-        "icon_style": "colored",
-        "show_button": false,
-        "button_label": "Button label",
-        "button_link": "",
-        "button_style": "primary",
-        "show_button_2": false,
-        "button_label_2": "Button label",
-        "button_link_2": "",
-        "button_style_2": "simple",
-        "padding_top": "xs",
-        "padding_bottom": "xs",
-        "margin_top": "no-indent",
-        "margin_bottom": "no-indent"
-      }
-    },
-    "image_with_text_fCLeta": {
-      "type": "image-with-text",
-      "settings": {
-        "layout": "text_last",
-        "color_scheme": "",
-        "subheading": "",
-        "subheading_style": "subtitle",
-        "subheading_icon": "none",
-        "heading": "Hearing Made Easy: Here’s What You Get",
-        "heading_size": "h3",
-        "heading_line": "simple",
-        "line_color": "#1566e0",
-        "word_break": false,
-        "heading_animation": "none",
-        "word_break_an": false,
-        "text": "",
-        "text_align": "center",
-        "inner_subheading": "",
-        "inner_heading": "",
-        "inner_heading_line": "simple",
-        "inner_line_color": "#1566e0",
-        "inner_word_break": false,
-        "description": "<ul><li>FDA-registered Solid hearing aids (2 pcs)</li><li>Portable Charging Case</li><li>3 Pairs of Eartips (S, M ,L)</li><li>USB-C Charging Cable</li><li>Cleaning Tool</li><li>User Manual</li><li>User Experience</li><li>Quick-Start Guide</li><li><strong>FREE Shipping & Return</strong></li><li><strong>FREE Lifetime Support</strong></li><li><strong>60-Day Risk-Free Trial</strong></li><li><strong>100% Money-Back Guarantee</strong></li><li><strong>12-Month Warranty</strong></li></ul>",
-        "text_align_inner": "center",
-        "image": "shopify://shop_images/b04a70ae01f04036e17b97cf0b12c47c.jpg",
-        "image_link": "",
-        "height": "adapt",
-        "overlay_opacity": 0,
-        "logo_width": 75,
-        "add_text": "",
-        "author_color_scheme": "",
-        "icon_size": "recommended",
-        "box_shadow": false,
-        "icon_style": "colored",
-        "show_button": false,
-        "button_label": "Button label",
-        "button_link": "",
-        "button_style": "primary",
-        "show_button_2": false,
-        "button_label_2": "Button label",
-        "button_link_2": "",
-        "button_style_2": "simple",
-        "padding_top": "xs",
-        "padding_bottom": "s",
-        "margin_top": "no-indent",
-        "margin_bottom": "no-indent"
-      }
-    },
-    "17400134726127a5c5": {
-      "type": "apps",
-      "blocks": {
-        "judge_me_reviews_review_widget_zixTcN": {
-          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-            "review_data": "sample_data",
-            "max_width": 1200,
-            "show_shop_reviews": false,
-            "empty_state": "empty_widget"
-          }
-        }
-      },
-      "block_order": [
-        "judge_me_reviews_review_widget_zixTcN"
-      ],
-      "custom_css": [
-        "h2 {font-size: 32.5px;}",
-        "@media (max-width: 768px) {h2 {font-size: 25px; }}"
-      ],
-      "settings": {
-        "include_margins": true
-      }
-    },
-    "collapsible_content_L7C9i7": {
-      "type": "collapsible-content",
-      "blocks": {
-        "accordion_rq9UeK": {
-          "type": "accordion",
-          "settings": {
-            "question": "Is Solid a hearing aid or a sound amplifier?",
-            "answer": "<p>Solid is an <strong>FDA-registered OTC (Over-the-Counter) hearing aid </strong>designed for mild to moderate hearing loss. Unlike basic amplifiers, it uses <strong>smart noise reduction</strong>, <strong>scene-specific sound processing</strong>, and <strong>medical-grade amplification </strong>to enhance clarity, not just volume.</p>",
-            "opened": true
-          }
-        },
-        "accordion_MxtPUb": {
-          "type": "accordion",
-          "settings": {
-            "question": "What’s the actual battery life?",
-            "answer": "<ul><li><strong>Single Charge</strong>: <strong>2.5 hours to fully charge</strong>, providing <strong>up to 20 hours</strong> of use.</li><li><strong>Charging Case</strong>: The case is used only for storing and charging the hearing aids via a charging cable; it does not function as a power bank and cannot charge the hearing aids independently.</li></ul><p><em><strong>Note</strong></em><em>: Actual battery life may vary based on volume settings and mode selection.</em></p>",
-            "opened": false
-          }
-        },
-        "accordion_iH96hA": {
-          "type": "accordion",
-          "settings": {
-            "question": "How do I adjust volume or switch programs?",
-            "answer": "<p><strong>Easy tactile controls</strong>:</p><ul><li><strong>Volume</strong>: Use the switch to adjust the volume up or down.</li><li><strong>Programs</strong>: Hold the switch for 3 seconds to cycle through <strong>Normal, Restaurant, Outdoor, and Music.</strong></li><li>With the <strong>beep</strong> indicating volume or mode changes. No apps or complex menus are required!</li></ul>",
-            "opened": false
-          }
-        },
-        "accordion_ACDykh": {
-          "type": "accordion",
-          "settings": {
-            "question": "Will Solid fit my ears comfortably?",
-            "answer": "<ul><li><strong>Ear Tips</strong>: Comes with three sizes: <strong>S</strong>, <strong>M</strong>, and <strong>L</strong> (soft silicone).</li><li><strong>Lightweight Design</strong>: Each earpiece weighs only <strong>3 g</strong> (＜0.01 lb) for all-day comfort.</li><li><strong>60-Day Risk-Free Trial</strong>: Try it worry-free. Return it if you’re not satisfied and without any extra fees.</li></ul>",
-            "opened": false
-          }
-        },
-        "accordion_bRjLYW": {
-          "type": "accordion",
-          "settings": {
-            "question": "How does noise reduction work?",
-            "answer": "<p>Solid’s <strong>Smart Acoustic Chip</strong> automatically:</p><ul><li>Reduces background noise (e.g., wind, chatter).</li><li>Enhances speech and music clarity.</li><li>Adapts to environments (e.g., <strong>Restaurant Mode</strong> cuts 50% of ambient noise).</li></ul>",
-            "opened": false
-          }
-        },
-        "accordion_tV9Hmp": {
-          "type": "accordion",
-          "settings": {
-            "question": "Can I connect Solid to my phone or TV via Bluetooth?",
-            "answer": "<p>Solid focuses on <strong>direct sound enhancement </strong>for simplicity and affordability. It does <strong>not </strong>support Bluetooth—ideal for users prioritizing ease of use over wireless features.</p><p><em><strong>Tip</strong></em><em>: If Bluetooth functionality is important to you, consider </em><a href=\"/products/beacon-otc-hearing-aids\" title=\"Beacon OTC Hearing Aids\"><em><strong>Beacon</strong></em></a><em>, which offers wireless connectivity.</em></p>",
-            "opened": false
-          }
-        }
-      },
-      "block_order": [
-        "accordion_rq9UeK",
-        "accordion_MxtPUb",
-        "accordion_iH96hA",
-        "accordion_ACDykh",
-        "accordion_bRjLYW",
-        "accordion_tV9Hmp"
-      ],
-      "custom_css": [
-        ".collapsible-content__content {max-width: 150%;}",
-        "@media (max-width: 768px) {.collapsible-content__content {max-width: 100%; }}"
-      ],
-      "settings": {
-        "layout": "border",
-        "color_scheme": "background-2",
-        "enable_border": false,
-        "border_full": false,
-        "subheading": "",
-        "subheading_style": "subtitle",
-        "subheading_icon": "none",
-        "heading": "Need more info? <span style=\"text-decoration:underline\">Find it here</span>",
-        "heading_size": "h3",
-        "heading_line": "rounded",
-        "line_color": "#ff4f00",
-        "word_break": false,
-        "heading_animation": "none",
-        "word_break_an": false,
-        "text": "",
-        "text_align": "center",
-        "row_color_scheme": "",
-        "padding_top": "s",
-        "padding_bottom": "m",
-        "margin_top": "no-indent",
-        "margin_bottom": "no-indent"
-      }
     }
   },
   "order": [
     "main",
-    "video_fzeedL",
-    "image_with_text_WbUmtD",
-    "multicolumn_fXaiXe",
-    "image_banner_Gcraq3",
-    "image_with_text_hy4nF7",
+    "6284d95d-0127-47a7-b977-2a630c6f9383",
     "576dad4a-7ffe-4bdd-9a60-a4572834977d",
-    "image_with_text_GMyQhD",
-    "image_with_text_VMHV7V",
-    "image_with_text_cVFkER",
-    "product-recommendations",
-    "steps_DPGyUy",
-    "multicolumn_xRkmgF",
-    "slideshow_ERbxXU",
-    "image_with_text_WHe7M3",
-    "image_with_text_LCAC7e",
-    "image_with_text_fCLeta",
-    "17400134726127a5c5",
-    "collapsible_content_L7C9i7"
+    "popular_products_kPAHWz",
+    "f229d1fc08faf1342454",
+    "7dba930a-4503-4b98-ad20-1d9ec5fe1eac",
+    "ac1a2f01-d017-4134-85c1-3684b4c5051f",
+    "1c56f2e1-2448-426b-b16d-913a45f3f050",
+    "product-recommendations"
   ]
 }
