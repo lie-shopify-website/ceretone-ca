@@ -9,12 +9,1481 @@
  */
 {
   "sections": {
+    "logo_top_bar_4JYM8h": {
+      "type": "logo-top-bar",
+      "name": "Logo Top Bar",
+      "settings": {
+        "custom_class": "",
+        "section_bg_color": "#011624",
+        "link": "https://ceretone.com",
+        "image": "shopify://shop_images/Ceretone-logo_White_Orange.png",
+        "max_image_width": 160,
+        "max_image_width_mb": 140
+      }
+    },
+    "custom_liquid_GGtqCg": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid_text": "隐藏导航",
+        "custom_liquid": "<style>\nsticky-header.header-wrapper {\n    display: none;\n}\n.section-announcement {\n    display: none;\n}\n</style>"
+      }
+    },
     "main": {
       "type": "main-page",
-      "settings": {}
+      "disabled": true,
+      "settings": {
+        "padding_top": "no-indent",
+        "padding_bottom": "m"
+      }
+    },
+    "custom_liquid_HiQcqK": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid_text": "",
+        "custom_liquid": "{% comment %} 走马灯内容定义 {% endcomment %}\n{% assign announcements = \"60-DAY MONEY BACK GUARANTEE, FREE U.S. SHIPPING, 1-YEAR WARRANTY\" | split: \", \" %}\n{% assign repeat_count = 10 %} {% comment %} 增加重复次数确保无缝循环 {% endcomment %}\n\n<style>\n  /* 走马灯容器 - 根据您的需求调整颜色 */\n  .announcement-bar-marquee {\n    background-color: #ffffff; /* 白色背景 */\n    color: #2E3F56; /* 指定的字体颜色 */\n    padding: 12px 0;\n    overflow: hidden;\n    position: relative;\n    width: 100%;\n    font-family: inherit;\n  }\n\n  /* 滚动内容包装 */\n  .marquee-inner {\n    display: flex;\n    width: max-content;\n    animation: marquee-scroll 60s linear infinite; /* 大幅减慢速度 */\n  }\n\n  /* 每条公告的样式 */\n  .marquee-item {\n    white-space: nowrap;\n    padding: 0 40px; /* 增加间距使内容更清晰 */\n    font-weight: 600;\n    font-size: 14px;\n  }\n\n  /* 在项目之间添加分隔符 */\n  .marquee-item:not(:last-child)::after {\n    content: \"•\";\n    position: absolute;\n    margin-left: 40px;\n    color: #ccc;\n  }\n\n  /* 滚动动画 - 调整速度至更合适 */\n  @keyframes marquee-scroll {\n    0% { transform: translateX(0); }\n    100% { transform: translateX(-50%); } /* 调整为50%确保完美循环 */\n  }\n\n  /* 可选：两侧渐变遮罩 - 调整为与白色背景匹配 */\n  .announcement-bar-marquee:before,\n  .announcement-bar-marquee:after {\n    content: '';\n    position: absolute;\n    top: 0;\n    height: 100%;\n    width: 60px;\n    z-index: 2;\n    pointer-events: none;\n  }\n  .announcement-bar-marquee:before {\n    left: 0;\n    background: linear-gradient(to right, #fff, transparent);\n  }\n  .announcement-bar-marquee:after {\n    right: 0;\n    background: linear-gradient(to left, #fff, transparent);\n  }\n</style>\n\n{% comment %} 走马灯HTML结构 {% endcomment %}\n<div class=\"announcement-bar-marquee\">\n  <div class=\"marquee-inner\">\n    {% for i in (1..repeat_count) %}\n      {% for item in announcements %}\n        <span class=\"marquee-item\">{{ item }}</span>\n      {% endfor %}\n    {% endfor %}\n  </div>\n</div>"
+      }
+    },
+    "hero_XxJWkk": {
+      "type": "hero",
+      "blocks": {
+        "subtitle_jfYDyp": {
+          "type": "subtitle",
+          "settings": {
+            "subheading": "★★★★★  10M+ customers worldwide",
+            "subheading_style": "subtitle",
+            "subheading_icon": "none"
+          }
+        },
+        "title_fiiCbW": {
+          "type": "title",
+          "settings": {
+            "heading": "<em>Forbes Health </em>Exclusive Offer",
+            "heading_size": "h3",
+            "heading_line": "background",
+            "line_color": "rgba(0,0,0,0)",
+            "word_break": false,
+            "heading_animation": "rolling",
+            "word_break_an": false
+          }
+        },
+        "description_FVwXxj": {
+          "type": "description",
+          "settings": {
+            "description": "A Trusted and Risk-Free Solution to Better Hearing"
+          }
+        },
+        "buttons_q7xnTB": {
+          "type": "buttons",
+          "settings": {
+            "show_button_1": true,
+            "button_label_1": "Try Now",
+            "button_link_1": "https://ceretone.com/pages/forbes-offer#a90-purchase",
+            "button_style_1": "primary",
+            "show_button_2": false,
+            "button_label_2": "Label",
+            "button_link_2": "",
+            "button_style_2": "simple"
+          }
+        }
+      },
+      "block_order": [
+        "subtitle_jfYDyp",
+        "title_fiiCbW",
+        "description_FVwXxj",
+        "buttons_q7xnTB"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "@media screen and (max-width: 768px) {{display: none; }}",
+        ".hero__subtitle {font-size: 26px;}",
+        ".hero__title {font-size: 62px; max-width: 600px;}",
+        ".hero__description {font-size: 26px;}",
+        ".button {font-size: 26px;}"
+      ],
+      "name": "PC Hero",
+      "settings": {
+        "layout": "overlay",
+        "header_overlay": false,
+        "header_transparent": false,
+        "block_type": "plain",
+        "color_scheme": "background-1",
+        "full_screen": true,
+        "image": "shopify://shop_images/1920-640_3fca49d1-484b-47b1-9c94-5970557e402f.jpg",
+        "link": "https://ceretone.com/pages/forbes-offer#a90-purchase",
+        "show_video": false,
+        "overlay_opacity": 0,
+        "image_ratio": "adapt",
+        "object_fit": "cover",
+        "desktop_image_position": "after",
+        "mobile_image_position": "after",
+        "mobile_image_overlay": "overlay",
+        "horizontal_alignment": "left",
+        "vertical_alignment": "middle",
+        "padding_top": "no-indent",
+        "padding_bottom": "m"
+      }
+    },
+    "hero_VcYMD6": {
+      "type": "hero",
+      "blocks": {
+        "subtitle_TxfQdy": {
+          "type": "subtitle",
+          "settings": {
+            "subheading": "★★★★★  10M+ customers worldwide",
+            "subheading_style": "subtitle",
+            "subheading_icon": "none"
+          }
+        },
+        "title_FMnGr3": {
+          "type": "title",
+          "settings": {
+            "heading": "<em>Forbes Health</em> Exclusive Offer",
+            "heading_size": "h1",
+            "heading_line": "background",
+            "line_color": "rgba(0,0,0,0)",
+            "word_break": false,
+            "heading_animation": "rolling",
+            "word_break_an": false
+          }
+        },
+        "description_6WdQyr": {
+          "type": "description",
+          "settings": {
+            "description": "A Trusted and Risk-Free Solution to Better Hearing"
+          }
+        },
+        "buttons_RJ9NCC": {
+          "type": "buttons",
+          "settings": {
+            "show_button_1": true,
+            "button_label_1": "Try Now",
+            "button_link_1": "https://ceretone.com/pages/forbes-offer#a90-purchase",
+            "button_style_1": "primary",
+            "show_button_2": false,
+            "button_label_2": "Label",
+            "button_link_2": "",
+            "button_style_2": "simple"
+          }
+        }
+      },
+      "block_order": [
+        "subtitle_TxfQdy",
+        "title_FMnGr3",
+        "description_6WdQyr",
+        "buttons_RJ9NCC"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "@media screen and (min-width: 768px) {{display: none; }}",
+        ".hero__subtitle {font-size: 14px;}",
+        ".hero__title {font-size: 30px;}",
+        ".hero__description {font-size: 16px;}",
+        ".button {font-size: 20px;}"
+      ],
+      "name": "MB Hero",
+      "settings": {
+        "layout": "overlay",
+        "header_overlay": false,
+        "header_transparent": false,
+        "block_type": "plain",
+        "color_scheme": "background-1",
+        "full_screen": true,
+        "image": "shopify://shop_images/11_1.png",
+        "link": "https://ceretone.com/pages/forbes-offer#a90-purchase",
+        "show_video": false,
+        "overlay_opacity": 0,
+        "image_ratio": "adapt",
+        "object_fit": "cover",
+        "desktop_image_position": "after",
+        "mobile_image_position": "after",
+        "mobile_image_overlay": "overlay",
+        "horizontal_alignment": "left",
+        "vertical_alignment": "top",
+        "padding_top": "no-indent",
+        "padding_bottom": "m"
+      }
+    },
+    "case_studies_JpiL3a": {
+      "type": "case-studies",
+      "blocks": {
+        "case_slide_766RcR": {
+          "type": "case_slide",
+          "settings": {
+            "image": "shopify://shop_images/Adnan_Shennib.jpg",
+            "overlay_opacity": 0,
+            "heading": "Adnan Shennib",
+            "text": "Silicon Valley Entrepreneur, Inventor of the Lyric®, the world's smallest 100% invisible hearing aid and holder of 100 patents in hearing technology.",
+            "quote": "\"The Core One Pro is a significant development packing lots of advanced features into a tiny super affordable hearing aid. That is truly amazing.\"",
+            "quote_size": "h4",
+            "author_name": "",
+            "author_position": "",
+            "show_button": false,
+            "button_style": "simple",
+            "button_label": "Link label",
+            "button_link": "",
+            "logo_width": 130
+          }
+        },
+        "case_slide_zrn6qF": {
+          "type": "case_slide",
+          "settings": {
+            "image": "shopify://shop_images/5_0c2ac938-fa60-4dff-820d-8608f5e5be3d.png",
+            "overlay_opacity": 0,
+            "heading": "WIRED",
+            "text": "For 8M+ Influential Leaders",
+            "quote": "\"Affordable. Very small and lightweight. Compact case, featuring volume-level LEDs. Anti-tinnitus mode may help some.\"",
+            "quote_size": "h4",
+            "author_name": "",
+            "author_position": "",
+            "show_button": false,
+            "button_style": "simple",
+            "button_label": "Link label",
+            "button_link": "",
+            "logo_width": 130
+          }
+        },
+        "case_slide_hkkrD9": {
+          "type": "case_slide",
+          "settings": {
+            "image": "shopify://shop_images/7_16_1_1.png",
+            "overlay_opacity": 0,
+            "heading": "911Studios",
+            "text": "1-mil sub YouTuber",
+            "quote": "\"The ergonomic design and the set of tips make it really easy to put in, and they're very comfortable.\"",
+            "quote_size": "h4",
+            "author_name": "",
+            "author_position": "",
+            "show_button": false,
+            "button_style": "simple",
+            "button_label": "Link label",
+            "button_link": "",
+            "logo_width": 130
+          }
+        },
+        "case_slide_YrT868": {
+          "type": "case_slide",
+          "settings": {
+            "image": "shopify://shop_images/DIxfR23Tw2T6lRBRFERKyQ.jpg",
+            "overlay_opacity": 0,
+            "heading": "Mary",
+            "text": "Experienced Hearing Aid User",
+            "quote": "\"After being misled by a $4,500 ‘top-tier' device and then scammed by a cheap online amplifier, I finally understand what true clarity means with Core One Pro\"",
+            "quote_size": "h4",
+            "author_name": "",
+            "author_position": "",
+            "show_button": false,
+            "button_style": "simple",
+            "button_label": "Link label",
+            "button_link": "",
+            "logo_width": 130
+          }
+        }
+      },
+      "block_order": [
+        "case_slide_766RcR",
+        "case_slide_zrn6qF",
+        "case_slide_hkkrD9",
+        "case_slide_YrT868"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".case-studies__column-heading {font-size: 26px;}",
+        ".case-studies__column-text {font-size: 20px;}",
+        ".case-studies__quote {font-size: 20px;}",
+        "@media (max-width: 768px) {.case-studies__column-heading {font-size: 20px; } .case-studies__column-text {font-size: 16px; } .case-studies__quote {font-size: 16px; }}",
+        ".case-studies__slide-image--square {aspect-ratio: 4 / 3; width: 100%; height: auto; object-fit: cover;}"
+      ],
+      "name": "背书",
+      "settings": {
+        "layout": "tabs_bottom",
+        "color_scheme": "",
+        "subheading": "",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "",
+        "heading_size": "h3",
+        "heading_line": "simple",
+        "line_color": "#1566e0",
+        "word_break": false,
+        "heading_animation": "none",
+        "word_break_an": false,
+        "text": "",
+        "text_align": "center",
+        "image_ratio": "square",
+        "slide_color_scheme": "",
+        "tabs_color_scheme": "",
+        "enable_navigation": true,
+        "navigation_color_scheme": "",
+        "padding_top": "xs",
+        "padding_bottom": "xs",
+        "margin_top": "xs",
+        "margin_bottom": "xs"
+      }
+    },
+    "anchorpoint_WVDz6E": {
+      "type": "Anchorpoint",
+      "disabled": true,
+      "name": "锚点跳转 🐰🐰",
+      "settings": {
+        "anchor": "a90-purchase",
+        "color": "#000000"
+      }
+    },
+    "featured_product_PhM8Ff": {
+      "type": "featured-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h3"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "image"
+          }
+        },
+        "product_featured_info_idAPRj": {
+          "type": "product_featured_info",
+          "settings": {}
+        },
+        "limited_time_gift_jeBHPq": {
+          "type": "limited_time_gift",
+          "settings": {
+            "heading": "Limited-Time Gift"
+          }
+        },
+        "custom_liquid_jnDkip": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"coupon-bar\">\n  Auto $90 Off – Grab Yours Today!\n</div>\n\n<style>\n.coupon-bar {\n  display: block;\n  color: red;\n  font-size: 20px;\n  font-weight: bold;\n  background: transparent;\n  border: none;\n  border-radius: 0;\n}\n@media screen and (max-width: 768px){\n  .coupon-bar {\n    font-size: 14px;\n    text-align:center;\n  }\n}\n</style>"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "color": "#ffffff",
+            "bg_color": "#e7590d",
+            "buy_text": "Buy now at $299",
+            "show_amazon_btn": false,
+            "amazon_btn_label": "BUY ON AMAZON",
+            "show_dynamic_checkout": false,
+            "show_quantity": false,
+            "show_gift_card_recipient": true
+          }
+        },
+        "service_icon_Rt3ANF": {
+          "type": "service_icon",
+          "settings": {
+            "text1": "60-Day Risk-Free Trial",
+            "service_icon1": "shopify://shop_images/ser-icon01.png",
+            "text2": "100% Money-Back Guarantee",
+            "service_icon2": "shopify://shop_images/ser-icon02.png",
+            "text3": "Lifetime Support",
+            "service_icon3": "shopify://shop_images/ser-icon03.png"
+          }
+        },
+        "text_with_icon_MibE3M": {
+          "type": "text_with_icon",
+          "disabled": true,
+          "settings": {
+            "show_text_with_icon_1": true,
+            "icon_1": "check-4",
+            "text_1": "60-Day Risk-Free Trial",
+            "show_text_with_icon_2": true,
+            "icon_2": "check-4",
+            "text_2": "100% Money-Back Guarantee",
+            "show_text_with_icon_3": true,
+            "icon_3": "check-4",
+            "text_3": "Free Shipping & Return",
+            "show_text_with_icon_4": true,
+            "icon_4": "check-4",
+            "text_4": "Lifetime Support",
+            "box_shadow": false,
+            "icon_style": "contrast",
+            "icon_fill_type": "solid"
+          }
+        },
+        "custom_liquid_ke6QEp": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<div style=\"font-weight: bold; font-size: 14px; color: #d32f2f; display: flex; align-items: center;\">\n  <span style=\"margin-right: 6px;\">⏰</span>\n  Hurry! Only a few left — Deal ends soon!\n</div>"
+          }
+        },
+        "payment_enable_RzX7CJ": {
+          "type": "payment_enable",
+          "settings": {
+            "payment_enable": true,
+            "payment_label": ""
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "variant_picker",
+        "product_featured_info_idAPRj",
+        "limited_time_gift_jeBHPq",
+        "custom_liquid_jnDkip",
+        "buy_buttons",
+        "service_icon_Rt3ANF",
+        "text_with_icon_MibE3M",
+        "custom_liquid_ke6QEp",
+        "payment_enable_RzX7CJ"
+      ],
+      "custom_css": [
+        ".price-at {display: none;}"
+      ],
+      "name": "A90购买",
+      "settings": {
+        "enable_new_media_section": true,
+        "subheading": "",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "",
+        "heading_size": "h2",
+        "heading_line": "simple",
+        "line_color": "#1566e0",
+        "word_break": false,
+        "heading_animation": "none",
+        "word_break_an": false,
+        "text": "",
+        "text_align": "left",
+        "product_item": "forbes-offer-core-one-pro-in-ear-canal",
+        "show_details_link": false,
+        "color_scheme": "",
+        "desktop_alignment": "right",
+        "mobile_alignment": "before",
+        "aspect_ratio": "adapt",
+        "image_fit": "contain",
+        "padding_top": "m",
+        "padding_bottom": "m"
+      }
+    },
+    "custom_liquid_3FnU98": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid_text": "",
+        "custom_liquid": "<div style=\"text-align:center; padding:24px 48px; background:linear-gradient(180deg, #fff8f5 0%, #ffefe6 100%); border-radius:12px;\"> <h2 style=\"font-size:28px; font-weight:800; color:#122029; margin:0; font-family:Arial, Helvetica, sans-serif;\"> Forbes Health <span style=\"color:#FF4F00;\">Exclusive Offer</span> </h2> <p style=\"font-size:16px; color:#444; margin-top:12px; font-family:Arial, Helvetica, sans-serif;\"> A Trusted and Risk-Free Solution to Better Hearing </p> </div>"
+      }
+    },
+    "case_studies_LGhMqV": {
+      "type": "case-studies",
+      "blocks": {
+        "case_slide_NBUhFU": {
+          "type": "case_slide",
+          "settings": {
+            "image": "shopify://shop_images/hearing-tracker-logo-2-400x200-1.png",
+            "overlay_opacity": 0,
+            "heading": "",
+            "text": "",
+            "quote": "“Some quote”",
+            "quote_size": "recommended",
+            "author_name": "",
+            "author_position": "",
+            "show_button": false,
+            "button_style": "simple",
+            "button_label": "Link label",
+            "button_link": "",
+            "logo_width": 130
+          }
+        },
+        "case_slide_ErVMME": {
+          "type": "case_slide",
+          "settings": {
+            "image": "shopify://shop_images/home-benzinga-logo.png",
+            "overlay_opacity": 0,
+            "heading": "",
+            "text": "",
+            "quote": "“Some quote”",
+            "quote_size": "recommended",
+            "author_name": "",
+            "author_position": "",
+            "show_button": false,
+            "button_style": "simple",
+            "button_label": "Link label",
+            "button_link": "",
+            "logo_width": 130
+          }
+        },
+        "case_slide_fCzJ3D": {
+          "type": "case_slide",
+          "settings": {
+            "image": "shopify://shop_images/home-wired-logo.png",
+            "overlay_opacity": 0,
+            "heading": "",
+            "text": "",
+            "quote": "“Just because it's small doesn't mean it'sn't powerful.\"",
+            "quote_size": "recommended",
+            "author_name": "",
+            "author_position": "",
+            "show_button": false,
+            "button_style": "simple",
+            "button_label": "Link label",
+            "button_link": "",
+            "logo_width": 130
+          }
+        }
+      },
+      "block_order": [
+        "case_slide_NBUhFU",
+        "case_slide_ErVMME",
+        "case_slide_fCzJ3D"
+      ],
+      "disabled": true,
+      "name": "t:sections.case-studies.name",
+      "settings": {
+        "layout": "tabs_bottom",
+        "color_scheme": "",
+        "subheading": "",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "",
+        "heading_size": "h2",
+        "heading_line": "simple",
+        "line_color": "#1566e0",
+        "word_break": false,
+        "heading_animation": "none",
+        "word_break_an": false,
+        "text": "",
+        "text_align": "left",
+        "image_ratio": "landscape",
+        "slide_color_scheme": "background-2",
+        "tabs_color_scheme": "",
+        "enable_navigation": false,
+        "navigation_color_scheme": "background-1",
+        "padding_top": "xs",
+        "padding_bottom": "m",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "custom_liquid_Dhwxfp": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "custom_css": [],
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid_text": "",
+        "custom_liquid": "<style>\n.testimonial-card {\n  display: grid !important;\n  grid-template-columns: 80px 1fr !important;\n  align-items: start !important;\n  background-color: #e6f2ff !important;\n  border-left: 6px solid #1566E0 !important;\n  border-radius: 12px !important;\n  padding: 20px !important;\n  margin: 24px auto !important; /* 水平居中 */\n  width: 68% !important; /* PC端宽度 */\n  font-family: 'Helvetica Neue', Arial, sans-serif !important;\n  color: #333333 !important;\n  line-height: 1.6 !important;\n  font-size: 16px !important;\n  gap: 16px !important;\n}\n\n@media (max-width: 600px) {\n  .testimonial-card {\n    width: 90% !important; /* 移动端宽度 */\n  }\n}\n\n.testimonial-avatar {\n  width: 80px !important;\n  height: 80px !important;\n  border-radius: 50% !important;\n  object-fit: cover !important;\n  display: block !important;\n}\n\n.testimonial-info {\n  display: flex !important;\n  flex-direction: column !important;\n  gap: 8px !important;\n}\n\n.testimonial-name {\n  font-weight: bold !important;\n  color: #1566E0 !important;\n  margin: 0 !important;\n}\n\n.testimonial-bio {\n  font-size: 14px !important;\n  color: #555555 !important;\n  margin: 0 !important;\n}\n\n.testimonial-text {\n  font-size: 16px !important;\n  font-style: italic !important;\n  line-height: 1.6 !important;\n  background-color: #f9fbff !important;\n  border-radius: 8px !important;\n  padding: 16px !important;\n  color: #222222 !important;\n  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;\n  margin-top: 16px !important;\n  max-width: calc(100% + 80px + 16px) !important;\n  margin-left: -96px !important;\n}\n</style>\n\n<div class=\"testimonial-card\">\n  <img src=\"https://cdn.shopify.com/s/files/1/0517/0436/5244/files/Adnan_Shennib.jpg?v=1757554981\" alt=\"Engineer Adnan Shennib\" class=\"testimonial-avatar\">\n  <div>\n    <div class=\"testimonial-info\">\n      <p class=\"testimonial-name\">Adnan Shennib, Silicon Valley Entrepreneur</p>\n      <p class=\"testimonial-bio\">Inventor of the Lyric®, the world's smallest 100% invisible hearing aid and holder of 100 patents in hearing technology.</p>\n    </div>\n    <div class=\"testimonial-text\">\n      <strong>\"The Core One Pro is a significant development packing lots of advanced features into a tiny super affordable hearing aid. That is truly amazing.\"</strong>\n    </div>\n  </div>\n</div>"
+      }
+    },
+    "steps_wwQyVX": {
+      "type": "steps",
+      "blocks": {
+        "step_L7kKKm": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/lQDPJxU_iUXdozHNA4TNAzCwwiKoXxCgS1oIrc84avpyAA_816_900.jpg",
+            "number": "",
+            "heading": "Invisible",
+            "text": "Engineered to sit deep within your ear canal, Core One Pro is virtually undetectable to others. Focus on conversations, not on your hearing aid.",
+            "show_button": false,
+            "button_style": "simple",
+            "button_label": "Know More",
+            "button_link": ""
+          }
+        },
+        "step_dyVe7N": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/408-450_2.jpg",
+            "number": "",
+            "heading": "Custom Fit",
+            "text": "Shaped to match your ear's oval contours and 30° canal curve, Core One Pro sits perfectly in place. The ergonomic design eliminates pressure points, delivering all-day comfort.",
+            "show_button": false,
+            "button_style": "simple",
+            "button_label": "Know More",
+            "button_link": ""
+          }
+        },
+        "step_j6VfmV": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/408-450.png",
+            "number": "",
+            "heading": "So Light",
+            "text": "Weighing just 0.035 oz (1 gram) with a secure fit, Core One Pro feels like wearing nothing at all.",
+            "show_button": false,
+            "button_style": "simple",
+            "button_label": "Know More",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "step_L7kKKm",
+        "step_dyVe7N",
+        "step_j6VfmV"
+      ],
+      "custom_css": [
+        "@media screen and (min-width: 768px) {{display: none; }}",
+        ".steps__title {font-size: 22px;}",
+        ".step__heading {font-size: 20px;}",
+        ".step__text {font-size: 18px;}"
+      ],
+      "name": "MB-卖点invisible",
+      "settings": {
+        "layout": "collapsible",
+        "color_scheme": "scheme-da522d8c-d8ea-43a1-8f89-75b1a671124a",
+        "subheading": "",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "Discreet And Comfortable",
+        "heading_size": "h3",
+        "heading_line": "simple",
+        "line_color": "#1566e0",
+        "word_break": false,
+        "heading_animation": "none",
+        "word_break_an": false,
+        "text": "",
+        "text_align": "center",
+        "columns_to_show": 3,
+        "image_ratio": "adapt",
+        "number_size": "recommended",
+        "step_heading_size": "recommended",
+        "text_size": "recommended",
+        "padding_top": "xs",
+        "padding_bottom": "xs",
+        "margin_top": "xs",
+        "margin_bottom": "xs"
+      }
+    },
+    "steps_8jhgB7": {
+      "type": "steps",
+      "blocks": {
+        "step_DM7THF": {
+          "type": "step",
+          "settings": {
+            "number": "",
+            "heading": "Invisible",
+            "text": "Engineered to sit deep within your ear canal, Core One Pro is virtually undetectable to others. Focus on conversations, not on your hearing aid.",
+            "show_button": false,
+            "button_style": "simple",
+            "button_label": "Know More",
+            "button_link": ""
+          }
+        },
+        "step_dWwV9y": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/lQLPJxAumK7AxfHNAZDNBLCwvq6fSzQkJGkIrdBY3trbAA_1200_400.png",
+            "number": "",
+            "heading": "Custom Fit",
+            "text": "Shaped to match your ear's oval contours and 30° canal curve, Core One Pro sits perfectly in place. The ergonomic design eliminates pressure points, delivering all-day comfort.",
+            "show_button": false,
+            "button_style": "simple",
+            "button_label": "Know More",
+            "button_link": ""
+          }
+        },
+        "step_xaQCBY": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/1200-400_3.png",
+            "number": "",
+            "heading": "So Light",
+            "text": "Weighing just 0.035 oz (1 gram) with a secure fit, Core One Pro feels like wearing nothing at all.",
+            "show_button": false,
+            "button_style": "simple",
+            "button_label": "Know More",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "step_DM7THF",
+        "step_dWwV9y",
+        "step_xaQCBY"
+      ],
+      "custom_css": [
+        "@media screen and (max-width: 768px) {{display: none; }}",
+        ".steps__title {font-size: 30px;}",
+        ".step__heading {font-size: 26px;}",
+        ".step__text {font-size: 20px;}"
+      ],
+      "name": "PC-卖点invisible",
+      "settings": {
+        "layout": "slider",
+        "color_scheme": "scheme-da522d8c-d8ea-43a1-8f89-75b1a671124a",
+        "subheading": "",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "Discreet And Comfortable",
+        "heading_size": "h3",
+        "heading_line": "simple",
+        "line_color": "#1566e0",
+        "word_break": false,
+        "heading_animation": "none",
+        "word_break_an": false,
+        "text": "",
+        "text_align": "center",
+        "columns_to_show": 3,
+        "image_ratio": "adapt",
+        "number_size": "recommended",
+        "step_heading_size": "recommended",
+        "text_size": "body-large",
+        "padding_top": "xs",
+        "padding_bottom": "xs",
+        "margin_top": "xs",
+        "margin_bottom": "xs"
+      }
+    },
+    "explosion_picture_trXdUf": {
+      "type": "explosion-picture",
+      "custom_css": [
+        ".title {font-size: 30px;}",
+        ".cont-heading {font-size: 26px;}",
+        ".cont-info {font-size: 20px; color: #555555;}",
+        "@media (max-width: 768px) {.title {font-size: 22px; } .cont-heading {font-size: 20px; } .cont-info {font-size: 16px; color: #555555; }}"
+      ],
+      "name": "卖点Sound",
+      "settings": {
+        "title": "Hear prescription sound for less than $400",
+        "image": "shopify://shop_images/explosion-picture2.png",
+        "image_mb": "shopify://shop_images/explosion-picture1.png",
+        "title1": "Intricon® Chipset",
+        "sub_title1": "",
+        "info1": "🇺🇸 40+ Years of Hearing Innovation<br>\nPrescription-grade sound, now available over the counter.",
+        "title2": "Knowles® Hi-Fi Speaker",
+        "sub_title2": "",
+        "info2": "🇺🇸 70+ Years of Audio Innovation<br>\nEngineered for human voice clarity."
+      }
+    },
+    "image_with_text_hcWKBB": {
+      "type": "image-with-text",
+      "blocks": {
+        "column_iwGw63": {
+          "type": "column",
+          "settings": {
+            "icon": "battery-1",
+            "icon_fill_type": "solid",
+            "heading": "20 Hours",
+            "text": "Per Single Charge"
+          }
+        },
+        "column_K9RaU4": {
+          "type": "column",
+          "settings": {
+            "icon": "battery-2",
+            "icon_fill_type": "solid",
+            "heading": "80 Hours",
+            "text": "With Rechargeable Case"
+          }
+        }
+      },
+      "block_order": [
+        "column_iwGw63",
+        "column_K9RaU4"
+      ],
+      "custom_css": [
+        "h2 {font-size: 30px;}",
+        ".image-with-text__column-title {font-size: 26px;}",
+        ".image-with-text__column-text {font-size: 20px; color: #555555;}",
+        ".image-with-text__columns {display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;}",
+        ".image-with-text__column {width: 100%;}",
+        "@media (max-width: 768px) {h2 {font-size: 22px; } .image-with-text__column-title {font-size: 20px; } .image-with-text__column-text {font-size: 16px; color: #555555; }}"
+      ],
+      "name": "卖点Battery",
+      "settings": {
+        "layout": "image_last",
+        "color_scheme": "scheme-da522d8c-d8ea-43a1-8f89-75b1a671124a",
+        "subheading": "",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "",
+        "heading_size": "h2",
+        "heading_line": "simple",
+        "line_color": "#1566e0",
+        "word_break": false,
+        "heading_animation": "none",
+        "word_break_an": false,
+        "text": "",
+        "text_align": "left",
+        "inner_subheading": "",
+        "inner_heading": "Stay Powered Without Breaks",
+        "inner_heading_line": "simple",
+        "inner_line_color": "#1566e0",
+        "inner_word_break": false,
+        "description": "",
+        "text_align_inner": "top",
+        "image": "shopify://shop_images/image-with-text2.png",
+        "image_link": "",
+        "height": "landscape",
+        "overlay_opacity": 0,
+        "logo_width": 75,
+        "add_text": "",
+        "author_color_scheme": "",
+        "icon_size": "recommended",
+        "box_shadow": false,
+        "icon_style": "colored",
+        "show_button": false,
+        "button_label": "Button label",
+        "button_link": "",
+        "button_style": "primary",
+        "show_button_2": false,
+        "button_label_2": "Button label",
+        "button_link_2": "",
+        "button_style_2": "simple",
+        "padding_top": "xs",
+        "padding_bottom": "xs",
+        "margin_top": "xs",
+        "margin_bottom": "xs"
+      }
+    },
+    "image_with_text_7ymEVr": {
+      "type": "image-with-text",
+      "blocks": {
+        "column_JhEpt4": {
+          "type": "column",
+          "settings": {
+            "icon": "water-3",
+            "icon_fill_type": "solid",
+            "heading": "IP68",
+            "text": "Rain, sweat, and dust won’t stop it ever."
+          }
+        },
+        "column_dePMbM": {
+          "type": "column",
+          "settings": {
+            "icon": "check-4",
+            "icon_fill_type": "solid",
+            "heading": "everyday ease",
+            "text": "Everything on the display screen - volume, programs, all visible. No app, no hassle."
+          }
+        }
+      },
+      "block_order": [
+        "column_JhEpt4",
+        "column_dePMbM"
+      ],
+      "custom_css": [
+        "h2 {font-size: 30px;}",
+        ".image-with-text__column-title {font-size: 26px;}",
+        ".image-with-text__column-text {font-size: 20px; color: #555555;}",
+        ".image-with-text__columns {display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;}",
+        ".image-with-text__column {width: 100%;}",
+        "@media (max-width: 768px) {h2 {font-size: 22px; } .image-with-text__column-title {font-size: 20px; } .image-with-text__column-text {font-size: 16px; color: #555555; }}"
+      ],
+      "name": "卖点Waterproof",
+      "settings": {
+        "layout": "text_last",
+        "color_scheme": "scheme-da522d8c-d8ea-43a1-8f89-75b1a671124a",
+        "subheading": "",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "",
+        "heading_size": "h2",
+        "heading_line": "simple",
+        "line_color": "#1566e0",
+        "word_break": false,
+        "heading_animation": "none",
+        "word_break_an": false,
+        "text": "",
+        "text_align": "left",
+        "inner_subheading": "",
+        "inner_heading": "Handle Life, Rain or Shine",
+        "inner_heading_line": "simple",
+        "inner_line_color": "#1566e0",
+        "inner_word_break": false,
+        "description": "",
+        "text_align_inner": "top",
+        "image": "shopify://shop_images/2x_726203d1-da97-4e72-8ab0-da72a03c581d.png",
+        "image_link": "",
+        "height": "landscape",
+        "overlay_opacity": 0,
+        "logo_width": 75,
+        "add_text": "",
+        "author_color_scheme": "",
+        "icon_size": "recommended",
+        "box_shadow": false,
+        "icon_style": "colored",
+        "show_button": false,
+        "button_label": "Button label",
+        "button_link": "",
+        "button_style": "primary",
+        "show_button_2": false,
+        "button_label_2": "Button label",
+        "button_link_2": "",
+        "button_style_2": "simple",
+        "padding_top": "xs",
+        "padding_bottom": "xs",
+        "margin_top": "xs",
+        "margin_bottom": "xs"
+      }
+    },
+    "four_grid_V8tqTn": {
+      "type": "four-grid",
+      "blocks": {
+        "image_WnBXnX": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/four-pc-img4.png",
+            "image_mb": "shopify://shop_images/4455c6debf0ab3923c0256aa7133d388.png",
+            "title": "Standard"
+          }
+        },
+        "image_APtgzV": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/four-pc-img3.png",
+            "image_mb": "shopify://shop_images/6cf5bdefda6a1b4636642923cc4fb175.png",
+            "title": "Restaurant"
+          }
+        },
+        "image_QepYxY": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/four-pc-img2.png",
+            "image_mb": "shopify://shop_images/ff06b66630221eae57e8ddd5e1d76f96.png",
+            "title": "Outdoor"
+          }
+        },
+        "image_NHhQ6R": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/four-pc-img1.png",
+            "image_mb": "shopify://shop_images/b29fc12ad507210c049b982e2e67da25.jpg",
+            "title": "Tinnitus Masking"
+          }
+        }
+      },
+      "block_order": [
+        "image_WnBXnX",
+        "image_APtgzV",
+        "image_QepYxY",
+        "image_NHhQ6R"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".container {display: none;}",
+        "@media (max-width: 768px) {.container {display: block; } .title {font-size: 22px; } .img-text {font-size: 20px; }}"
+      ],
+      "name": "卖点programs",
+      "settings": {
+        "background": "#ffffff",
+        "title": "Switch Programs As You Move",
+        "pc_padding_top": 0,
+        "pc_padding_bottom": 50,
+        "mb_padding_top": 0,
+        "mb_padding_bottom": 50
+      }
+    },
+    "banner_grid_FyiEYz": {
+      "type": "banner-grid",
+      "blocks": {
+        "card_3h83gR": {
+          "type": "card",
+          "settings": {
+            "color_scheme": "background-1",
+            "image": "shopify://shop_images/4455c6debf0ab3923c0256aa7133d388.png",
+            "overlay_opacity": 0,
+            "icon": "none",
+            "icon_size": "recommended",
+            "logo_width": 135,
+            "heading": "Standard",
+            "heading_size": "recommended",
+            "show_button": false,
+            "button_style": "simple_link",
+            "button_label": "Shop Now",
+            "button_link": "",
+            "full_link": true
+          }
+        },
+        "card_CTiU7L": {
+          "type": "card",
+          "settings": {
+            "color_scheme": "background-1",
+            "image": "shopify://shop_images/6cf5bdefda6a1b4636642923cc4fb175.png",
+            "overlay_opacity": 0,
+            "icon": "none",
+            "icon_size": "recommended",
+            "logo_width": 135,
+            "heading": "Restaurant",
+            "heading_size": "recommended",
+            "show_button": false,
+            "button_style": "simple_link",
+            "button_label": "Shop Now",
+            "button_link": "",
+            "full_link": true
+          }
+        },
+        "card_bnMjmz": {
+          "type": "card",
+          "settings": {
+            "color_scheme": "background-1",
+            "image": "shopify://shop_images/ff06b66630221eae57e8ddd5e1d76f96.png",
+            "overlay_opacity": 0,
+            "icon": "none",
+            "icon_size": "recommended",
+            "logo_width": 135,
+            "heading": "Outdoor",
+            "heading_size": "recommended",
+            "show_button": false,
+            "button_style": "simple_link",
+            "button_label": "Shop Now",
+            "button_link": "",
+            "full_link": true
+          }
+        },
+        "card_9MyfKb": {
+          "type": "card",
+          "settings": {
+            "color_scheme": "background-1",
+            "image": "shopify://shop_images/b29fc12ad507210c049b982e2e67da25.jpg",
+            "overlay_opacity": 0,
+            "icon": "none",
+            "icon_size": "recommended",
+            "logo_width": 135,
+            "heading": "Tinnitus Masking",
+            "heading_size": "recommended",
+            "show_button": false,
+            "button_style": "simple_link",
+            "button_label": "Shop Now",
+            "button_link": "",
+            "full_link": true
+          }
+        }
+      },
+      "block_order": [
+        "card_3h83gR",
+        "card_CTiU7L",
+        "card_bnMjmz",
+        "card_9MyfKb"
+      ],
+      "custom_css": [
+        ".banner-grid__grid {display: grid; grid-template-columns: repeat(2, 1fr);}",
+        ".banner-grid__title-content {display: inline-block; background-color: rgba(255, 255, 255, 0.5); border-radius: 8px; padding: 5px 10px; font-size: 26px;}",
+        "@media (max-width: 768px) {.banner-grid {display: none; }}"
+      ],
+      "name": "t:sections.banner-grid.name",
+      "settings": {
+        "layout": "columns",
+        "columns": 4,
+        "color_scheme": "",
+        "enable_border": false,
+        "border_full": false,
+        "subheading": "",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "Switch Programs As You Move",
+        "heading_size": "h3",
+        "heading_line": "simple",
+        "line_color": "#1566e0",
+        "word_break": false,
+        "heading_animation": "none",
+        "word_break_an": false,
+        "text": "",
+        "text_align": "center",
+        "gap": "24",
+        "border_radius": true,
+        "text_align_content": "bottom-left",
+        "icon_style": "contrast",
+        "icon_fill_type": "gradient",
+        "padding_top": "xs",
+        "padding_bottom": "xs",
+        "margin_top": "xs",
+        "margin_bottom": "xs"
+      }
+    },
+    "image_video_with_text_4KBdMt": {
+      "type": "image-video-with-text",
+      "blocks": {
+        "heading_NPbnRP": {
+          "type": "heading",
+          "settings": {
+            "heading": "Hear better, live better"
+          }
+        },
+        "text_JMerbK": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Bring the beautiful moments of life back to you！</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_NPbnRP",
+        "text_JMerbK"
+      ],
+      "custom_css": [
+        ".itext-context_heading {font-size: 30px;}",
+        ".itext-context_text {font-size: 20px;}",
+        "@media (max-width: 768px) {.itext-context_heading {font-size: 22px; } .itext-context_text {font-size: 16px; }}"
+      ],
+      "name": "产品视频",
+      "settings": {
+        "custom_cls": "video",
+        "background": "#ffffff",
+        "background_mb": "#ffffff",
+        "section_layout": "textimage",
+        "mobile_section_layout": true,
+        "title": "",
+        "sub_title": "Hear better, live better",
+        "image_percent": 100,
+        "pc_padding_top": 48,
+        "pc_padding_bottom": 48,
+        "mb_padding_top": 24,
+        "mb_padding_bottom": 24
+      }
+    },
+    "multicolumn_NHiCT3": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_GnwiPn": {
+          "type": "column",
+          "settings": {
+            "icon": "none",
+            "icon_color_scheme": "",
+            "icon_fill_type": "gradient",
+            "image": "shopify://shop_images/icons8-money-circulation-96.png",
+            "heading": "60-day money-back guarantee",
+            "text": "Not happy in 60 days? Return it for a full refund — we’ll pay for shipping both ways.",
+            "show_button": false,
+            "button_label": "Label",
+            "button_link": "",
+            "button_style": "simple"
+          }
+        },
+        "column_JHyihq": {
+          "type": "column",
+          "settings": {
+            "icon": "none",
+            "icon_color_scheme": "",
+            "icon_fill_type": "gradient",
+            "image": "shopify://shop_images/icons8-fast-delivery-96_1.png",
+            "heading": "Fast & Free Shipping",
+            "text": "No waiting, no extra cost. Your hearing aids ship free, straight to your door.",
+            "show_button": false,
+            "button_label": "Label",
+            "button_link": "",
+            "button_style": "simple"
+          }
+        },
+        "column_QkALHt": {
+          "type": "column",
+          "settings": {
+            "icon": "none",
+            "icon_color_scheme": "",
+            "icon_fill_type": "gradient",
+            "image": "shopify://shop_images/icons8-headset-96.png",
+            "heading": "Lifetime Expert Support",
+            "text": "Real people who care — our hearing experts are just a call, text, or email away.",
+            "show_button": false,
+            "button_label": "Label",
+            "button_link": "",
+            "button_style": "simple"
+          }
+        },
+        "column_qy4nDy": {
+          "type": "column",
+          "settings": {
+            "icon": "none",
+            "icon_color_scheme": "",
+            "icon_fill_type": "gradient",
+            "image": "shopify://shop_images/icons8-best-seller-96.png",
+            "heading": "Crystal-Clear Sound",
+            "text": "Hear voices and conversations shine, thanks to our cutting-edge technology.",
+            "show_button": false,
+            "button_label": "Label",
+            "button_link": "",
+            "button_style": "simple"
+          }
+        },
+        "column_Ez4w7j": {
+          "type": "column",
+          "settings": {
+            "icon": "none",
+            "icon_color_scheme": "",
+            "icon_fill_type": "gradient",
+            "image": "shopify://shop_images/icons8-quality-96.png",
+            "heading": "Clinic-Grade Quality",
+            "text": "Premium, doctor-designed performance — without the $5,000 clinic price tag.",
+            "show_button": false,
+            "button_label": "Label",
+            "button_link": "",
+            "button_style": "simple"
+          }
+        },
+        "column_qFUJMM": {
+          "type": "column",
+          "settings": {
+            "icon": "none",
+            "icon_color_scheme": "",
+            "icon_fill_type": "gradient",
+            "image": "shopify://shop_images/icons8-america-96.png",
+            "heading": "USA-Based",
+            "text": "Thoughtfully designed and delivered with care. Ceretone is your trusted partner, headquartered in LA.",
+            "show_button": false,
+            "button_label": "Label",
+            "button_link": "",
+            "button_style": "simple"
+          }
+        }
+      },
+      "block_order": [
+        "column_GnwiPn",
+        "column_JHyihq",
+        "column_QkALHt",
+        "column_qy4nDy",
+        "column_Ez4w7j",
+        "column_qFUJMM"
+      ],
+      "custom_css": [
+        "@media (max-width: 768px) {.multicolumn-card__text {display: none; } .multicolumn-list__wrapper {grid-template-columns: repeat(2, 1fr) !important; } .multicolumn__title {font-size: 22px; } .multicolumn-card__heading {font-size: 20px; }}",
+        ".multicolumn__title {font-size: 30px;}",
+        ".multicolumn-card__heading {font-size: 26px;}",
+        ".multicolumn-card__text {font-size: 20px;}"
+      ],
+      "name": "保障",
+      "settings": {
+        "custom_class": "",
+        "section_type": "solid",
+        "color_scheme": "background-1",
+        "enable_border": false,
+        "border_full": false,
+        "multicolumn_to_show": 3,
+        "gap": "medium",
+        "subheading": "",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "Hear Better, Risk-Free.",
+        "heading_size": "h3",
+        "heading_line": "simple",
+        "line_color": "#1566e0",
+        "word_break": false,
+        "heading_animation": "none",
+        "word_break_an": false,
+        "text": "",
+        "text_align": "center",
+        "icon_size": "recommended",
+        "box_shadow": true,
+        "icon_style": "colored",
+        "image_width": "small",
+        "image_ratio": "square",
+        "object_fit": "contain",
+        "card_heading_size": "h5",
+        "padding_top": "xs",
+        "padding_bottom": "xs",
+        "margin_top": "xs",
+        "margin_bottom": "xs"
+      }
+    },
+    "testimonials_creGnX": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonials_slide_FVUjcY": {
+          "type": "testimonials_slide",
+          "settings": {
+            "rating": 5,
+            "slide_text": "\"I love these little hearing aids. You truly cannot beat the sound quality for the price. I'm very happy. \"",
+            "image": "shopify://shop_images/1753856237__1753856232420-mvimg_20250724_162004__original.avif",
+            "slide_name": "Karoline G.",
+            "slide_position": ""
+          }
+        },
+        "testimonials_slide_jKVUYL": {
+          "type": "testimonials_slide",
+          "settings": {
+            "rating": 5,
+            "slide_text": "\"My family used to complain that I had the TV volume too high! Not anymore.\"",
+            "image": "shopify://shop_images/2_27f04a17-801d-400b-af25-fbe2d523f088.jpg",
+            "slide_name": "Tracey",
+            "slide_position": ""
+          }
+        },
+        "testimonials_slide_f7T8ze": {
+          "type": "testimonials_slide",
+          "settings": {
+            "rating": 5,
+            "slide_text": "\"Super happy I found this—works great and don’t break the bank!\"",
+            "image": "shopify://shop_images/1753856213__1753856017309-mvimg_20250724_162050__original.avif",
+            "slide_name": "Joanne",
+            "slide_position": ""
+          }
+        }
+      },
+      "block_order": [
+        "testimonials_slide_FVUjcY",
+        "testimonials_slide_jKVUYL",
+        "testimonials_slide_f7T8ze"
+      ],
+      "custom_css": [
+        ".testimonials__text {font-size: 22px;}",
+        ".testimonials__author-name {font-size: 20px;}",
+        "@media (max-width: 768px) {.testimonials__text {font-size: 17px; } .testimonials__author-name {font-size: 16px; }}"
+      ],
+      "name": "用户评论",
+      "settings": {
+        "layout": "image_left_slider",
+        "color_scheme": "background-1",
+        "subheading": "",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "",
+        "heading_size": "h2",
+        "heading_line": "simple",
+        "line_color": "#1566e0",
+        "word_break": false,
+        "heading_animation": "none",
+        "word_break_an": false,
+        "text": "",
+        "text_align": "left",
+        "slide_color_scheme": "scheme-da522d8c-d8ea-43a1-8f89-75b1a671124a",
+        "slide_text_size": "recommended",
+        "enable_navigation": true,
+        "enable_navigation_mobile": false,
+        "navigation_color_scheme": "background-1",
+        "enable_pagination": false,
+        "enable_pagination_mobile": true,
+        "pagination_color_scheme": "background-1",
+        "padding_top": "xs",
+        "padding_bottom": "xs",
+        "margin_top": "xs",
+        "margin_bottom": "xs"
+      }
+    },
+    "collapsible_content_EmbqTy": {
+      "type": "collapsible-content",
+      "blocks": {
+        "accordion_9wgkaR": {
+          "type": "accordion",
+          "settings": {
+            "question": "Will Ceretone work for me?",
+            "answer": "<p>Our hearing devices work for the majority of people who try them. However, if they don’t work for you, that’s why we offer <strong>a 60-day money-back guarantee </strong>– so there’s no risk in giving them a try.</p>",
+            "opened": false
+          }
+        },
+        "accordion_36raMq": {
+          "type": "accordion",
+          "settings": {
+            "question": "Are your hearing aids FDA-registered?",
+            "answer": "<p>Yes, our OTC hearing aids are <strong>FDA-registered</strong> and meet U.S. regulations for safety and effectiveness.</p>",
+            "opened": false
+          }
+        },
+        "accordion_aAwGVY": {
+          "type": "accordion",
+          "settings": {
+            "question": "Is this product suitable for all types of hearing loss?",
+            "answer": "<p>Our OTC hearing aids are designed for <strong>mild to moderate hearing loss</strong>. For severe or profound cases, we recommend consulting an audiologist.</p>",
+            "opened": false
+          }
+        },
+        "accordion_LNqmbW": {
+          "type": "accordion",
+          "settings": {
+            "question": "Do I need a prescription?",
+            "answer": "<p><strong>No prescription is required</strong>. You can order directly and start using your device right away.</p>",
+            "opened": false
+          }
+        }
+      },
+      "block_order": [
+        "accordion_9wgkaR",
+        "accordion_36raMq",
+        "accordion_aAwGVY",
+        "accordion_LNqmbW"
+      ],
+      "custom_css": [
+        ".collapsible-content__title {font-size: 30px;}",
+        ".collapsible-content__question {font-size: 22px;}",
+        ".collapsible-content__answer {font-size: 20px; color: #555555;}",
+        ".collapsible-content__answer-inner {max-width: 100%;}",
+        "@media (max-width: 768px) {.collapsible-content__title {font-size: 24px; } .collapsible-content__question {font-size: 17px; } .collapsible-content__answer {font-size: 16px; color: #555555; }}"
+      ],
+      "name": "QA",
+      "settings": {
+        "layout": "background",
+        "color_scheme": "background-2",
+        "enable_border": false,
+        "border_full": false,
+        "subheading": "",
+        "subheading_style": "subtitle",
+        "subheading_icon": "none",
+        "heading": "Frequently asked questions",
+        "heading_size": "h2",
+        "heading_line": "simple",
+        "line_color": "#1566e0",
+        "word_break": false,
+        "heading_animation": "none",
+        "word_break_an": false,
+        "text": "",
+        "text_align": "center",
+        "row_color_scheme": "background-1",
+        "padding_top": "xs",
+        "padding_bottom": "m",
+        "margin_top": "xs",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "sticky_btn_jTWLHQ": {
+      "type": "sticky-btn",
+      "disabled": true,
+      "name": "购买按钮",
+      "settings": {
+        "custom_class": "",
+        "section_bg_color": "#e6e8e9",
+        "bg_color": "#1566e0",
+        "color": "#ffffff",
+        "btn_label": "<strong>Get better hearing now</strong>",
+        "btn_link": "https://ceretone.com/pages/forbes-offer#a90-purchase",
+        "btn_max_width": 240,
+        "btn_max_width_mb": 240,
+        "liquid": "<style>\n.sticky-btn {display:none;}\n</style>\n<script>\n  // 页面加载完成后执行（确保 DOM 元素已渲染）\n  document.addEventListener('DOMContentLoaded', function() {\n    // 获取目标元素\n    const featuredProduct = document.querySelector('.featured-product');\n    const stickyBtn = document.querySelector('.sticky-btn');\n\n    // 若页面没有 .featured-product 模块，直接终止逻辑\n    if (!featuredProduct || !stickyBtn) return;\n\n    // 核心函数：判断是否滚动到模块底部，并控制按钮\n    function checkScrollToModuleBottom() {\n      // 计算模块底部到页面顶部的距离（模块顶部距离 + 模块高度）\n      const moduleBottom = featuredProduct.getBoundingClientRect().top + window.pageYOffset + featuredProduct.offsetHeight;\n      // 计算当前页面滚动的总距离（文档滚动距离 + 窗口可视高度）\n      const scrollBottom = window.scrollY + window.innerHeight;\n\t \n\n      // 当滚动到模块底部（允许 100px 误差，提升用户体验）\n      if (scrollBottom >= moduleBottom + 20) {\n        stickyBtn.style.display = 'block';\n      } else {\n        stickyBtn.style.display = 'none';\n      }\n    }\n    // 监听滚动事件：实时判断是否滚动到模块底部\n    window.addEventListener('scroll', checkScrollToModuleBottom);\n\n    // 监听窗口大小变化：适配不同屏幕尺寸（如手机旋转后）\n    window.addEventListener('resize', checkScrollToModuleBottom);\n\n    // 页面加载完成后，首次执行一次（处理初始滚动位置）\n    checkScrollToModuleBottom();\n  });\n</script>"
+      }
+    },
+    "sticky_addtocart_btn_K4Gg4A": {
+      "type": "sticky-addtocart-btn",
+      "name": "Sticky Addtocart Btn",
+      "settings": {
+        "custom_product": "forbes-offer-core-one-pro-in-ear-canal",
+        "custom_class": "",
+        "section_bg_color": "rgba(0,0,0,0)",
+        "bg_color": "#ff4f00",
+        "color": "#ffffff",
+        "btn_label": "<strong>BUY NOW</strong>",
+        "btn_max_width": 240,
+        "btn_max_width_mb": 240,
+        "liquid": "<style>\n.sticky-btn {display:none;}\n</style>\n<script>\n  // 页面加载完成后执行（确保 DOM 元素已渲染）\n  document.addEventListener('DOMContentLoaded', function() {\n    // 获取目标元素\n    const featuredProduct = document.querySelector('.featured-product');\n    const stickyBtn = document.querySelector('.sticky-btn');\n\n    // 若页面没有 .featured-product 模块，直接终止逻辑\n    if (!featuredProduct || !stickyBtn) return;\n\n    // 核心函数：判断是否滚动到模块底部，并控制按钮\n    function checkScrollToModuleBottom() {\n      // 计算模块底部到页面顶部的距离（模块顶部距离 + 模块高度）\n      const moduleBottom = featuredProduct.getBoundingClientRect().top + window.pageYOffset + featuredProduct.offsetHeight;\n      // 计算当前页面滚动的总距离（文档滚动距离 + 窗口可视高度）\n      const scrollBottom = window.scrollY + window.innerHeight;\n\t \n\n      // 当滚动到模块底部（允许 100px 误差，提升用户体验）\n      if (scrollBottom >= moduleBottom + 20) {\n        stickyBtn.style.display = 'block';\n      } else {\n        stickyBtn.style.display = 'none';\n      }\n    }\n    // 监听滚动事件：实时判断是否滚动到模块底部\n    window.addEventListener('scroll', checkScrollToModuleBottom);\n\n    // 监听窗口大小变化：适配不同屏幕尺寸（如手机旋转后）\n    window.addEventListener('resize', checkScrollToModuleBottom);\n\n    // 页面加载完成后，首次执行一次（处理初始滚动位置）\n    checkScrollToModuleBottom();\n  });\n</script>"
+      }
     }
   },
   "order": [
-    "main"
+    "logo_top_bar_4JYM8h",
+    "custom_liquid_GGtqCg",
+    "main",
+    "custom_liquid_HiQcqK",
+    "hero_XxJWkk",
+    "hero_VcYMD6",
+    "case_studies_JpiL3a",
+    "anchorpoint_WVDz6E",
+    "featured_product_PhM8Ff",
+    "custom_liquid_3FnU98",
+    "case_studies_LGhMqV",
+    "custom_liquid_Dhwxfp",
+    "steps_wwQyVX",
+    "steps_8jhgB7",
+    "explosion_picture_trXdUf",
+    "image_with_text_hcWKBB",
+    "image_with_text_7ymEVr",
+    "four_grid_V8tqTn",
+    "banner_grid_FyiEYz",
+    "image_video_with_text_4KBdMt",
+    "multicolumn_NHiCT3",
+    "testimonials_creGnX",
+    "collapsible_content_EmbqTy",
+    "sticky_btn_jTWLHQ",
+    "sticky_addtocart_btn_K4Gg4A"
   ]
 }
