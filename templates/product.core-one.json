@@ -638,6 +638,7 @@
         "item_LD7mKJ": {
           "type": "item",
           "settings": {
+            "image": "shopify://shop_images/2x_76f9c179-940b-4238-bd76-bea3d60ef931.png",
             "text1": "x1 Pair",
             "text2": "Core One Pro with S Ear Tips (Pre-installed)"
           }
@@ -645,6 +646,7 @@
         "item_MP7iMp": {
           "type": "item",
           "settings": {
+            "image": "shopify://shop_images/2x_1_b0c23c76-d223-423f-96c8-826fc9817893.png",
             "text1": "x1",
             "text2": "Portable Charging Case"
           }
@@ -652,6 +654,7 @@
         "item_TVdUHy": {
           "type": "item",
           "settings": {
+            "image": "shopify://shop_images/2x_8bbe4981-5f30-42a1-b27e-4670b4267e39.png",
             "text1": "x3 Pairs",
             "text2": "Ear Tips (L, M, XS)"
           }
@@ -659,6 +662,7 @@
         "item_QjJQQa": {
           "type": "item",
           "settings": {
+            "image": "shopify://shop_images/2x_5870733d-1795-4fac-85b4-217716a64cc6.png",
             "text1": "x1",
             "text2": "USB-C Charging Cable"
           }
@@ -666,6 +670,7 @@
         "item_eCfFTt": {
           "type": "item",
           "settings": {
+            "image": "shopify://shop_images/2x_7c7fe250-bdd6-44f5-88e1-bbee900d4cb8.png",
             "text1": "x1",
             "text2": "Cleaning Tool"
           }
@@ -673,6 +678,7 @@
         "item_cQBWRV": {
           "type": "item",
           "settings": {
+            "image": "shopify://shop_images/2x_9371f98b-6b40-43c7-bd65-f0b10b32f775.png",
             "text1": "x1",
             "text2": "User Manual"
           }
@@ -680,6 +686,7 @@
         "item_Rn4AUt": {
           "type": "item",
           "settings": {
+            "image": "shopify://shop_images/User_Experience_2x_64ba14f4-97fa-4fbf-9712-2acc8719ba77.png",
             "text1": "x1",
             "text2": "User Experience"
           }
@@ -687,6 +694,7 @@
         "item_qDNaUF": {
           "type": "item",
           "settings": {
+            "image": "shopify://shop_images/QSG2x.png",
             "text1": "x1",
             "text2": "Quick-Start Guide"
           }
