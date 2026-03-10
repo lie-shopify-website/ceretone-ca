@@ -166,11 +166,13 @@
         "show_secondary_image": true,
         "show_vendor": false,
         "show_language_selector": true,
-        "url1": "shopify://collections/hearing-products",
+        "url1": "shopify://collections/hearing-aids",
+        "icon1": "shopify://shop_images/menu-compare-products-icon.png",
         "text1": "Compare Products",
-        "url2": "shopify://collections/accessories",
+        "url2": "shopify://collections/hearing-aids",
+        "icon2": "shopify://shop_images/menu-acc-icon.png",
         "text2": "Accessories",
-        "url3": "shopify://collections/accessories",
+        "url3": "shopify://collections",
         "text3": ""
       }
     }
