@@ -88,11 +88,8 @@
           "type": "service_icon",
           "settings": {
             "text1": "60-Day Risk-Free Trial",
-            "service_icon1": "shopify://shop_images/ser-icon01.png",
             "text2": "100% Money-Back Guarantee",
-            "service_icon2": "shopify://shop_images/ser-icon02.png",
-            "text3": "Lifetime Support",
-            "service_icon3": "shopify://shop_images/ser-icon03.png"
+            "text3": "Lifetime Support"
           }
         },
         "text_with_icon_MibE3M": {
@@ -166,8 +163,6 @@
         "slide_HFVBHn": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/6fc11d48ab756c2024e67cd82915c6ec.png",
-            "image_mb": "shopify://shop_images/Frame_858.png",
             "title": "",
             "content": "",
             "button_label": "",
@@ -201,7 +196,7 @@
         "custom_cls": "",
         "title": "Never Miss a<br class=\"mbbr\"> Word Again",
         "sub_title": "So you don’t have to ask “what?”",
-        "image": "shopify://shop_images/A90_viedo.png"
+        "video": "shopify://files/videos/AUG06.mp4"
       }
     },
     "number_card_VmhDtM": {
@@ -268,8 +263,6 @@
       "name": "音质",
       "settings": {
         "title": "Hear $2,000 sound for less than $400",
-        "image": "shopify://shop_images/explosion-picture2.png",
-        "image_mb": "shopify://shop_images/explosion-picture1.png",
         "title1": "Intricon® Chipset",
         "sub_title1": "40+ Years of Hearing Innovation",
         "info1": "Prescription-grade sound, now available over the counter.",
@@ -284,7 +277,6 @@
         "accordion_6Xb3tV": {
           "type": "accordion",
           "settings": {
-            "image": "shopify://shop_images/Rectangle_60.png",
             "question": "Disappears Inside Your Ear Canal",
             "answer": "Engineered to sit deep within your ear canal, Core One Pro is virtually undetectable to others. Focus on conversations, not on your hearing aid.",
             "opened": true
@@ -293,7 +285,6 @@
         "accordion_nbT7eH": {
           "type": "accordion",
           "settings": {
-            "image": "shopify://shop_images/1_e78c4d6b-0e37-4e7f-9453-f39d45aa8da4.jpg",
             "question": "Custom Fit, Ultimate Comfort",
             "answer": "Shaped to match your ear's oval contours and 30° canal curve, Core One Pro sits perfectly in place. The ergonomic design eliminates pressure points, delivering all-day comfort.",
             "opened": false
@@ -302,7 +293,6 @@
         "accordion_EiThGM": {
           "type": "accordion",
           "settings": {
-            "image": "shopify://shop_images/a90_in_hand.png",
             "question": "So Light, You'll Barely Feel It.",
             "answer": "Weighing just 0.035 oz (1 gram) with a secure fit, Core One Pro feels like wearing nothing at all.",
             "opened": false
@@ -318,7 +308,6 @@
       "name": "舒适度",
       "settings": {
         "title": "Discreet And Comfortable",
-        "big_image": "shopify://shop_images/2x_d421bde9-d3d9-4068-b58e-202c1f0347d1.png",
         "pc_padding_top": 48,
         "pc_padding_bottom": 48,
         "mb_padding_top": 24,
@@ -375,7 +364,6 @@
         "inner_word_break": false,
         "description": "",
         "text_align_inner": "center",
-        "image": "shopify://shop_images/image-with-text2.png",
         "image_link": "",
         "height": "adapt",
         "overlay_opacity": 0,
@@ -449,7 +437,6 @@
         "inner_word_break": false,
         "description": "",
         "text_align_inner": "center",
-        "image": "shopify://shop_images/image-with-text1.png",
         "image_link": "",
         "height": "landscape",
         "overlay_opacity": 0,
@@ -479,28 +466,24 @@
         "image_nw9eDG": {
           "type": "image",
           "settings": {
-            "image_mb": "shopify://shop_images/4455c6debf0ab3923c0256aa7133d388.png",
             "title": "Standard"
           }
         },
         "image_hzyCQ8": {
           "type": "image",
           "settings": {
-            "image_mb": "shopify://shop_images/6cf5bdefda6a1b4636642923cc4fb175.png",
             "title": "Restaurant"
           }
         },
         "image_b4hink": {
           "type": "image",
           "settings": {
-            "image_mb": "shopify://shop_images/ff06b66630221eae57e8ddd5e1d76f96.png",
             "title": "Outdoor"
           }
         },
         "image_tHEHpn": {
           "type": "image",
           "settings": {
-            "image_mb": "shopify://shop_images/b29fc12ad507210c049b982e2e67da25.jpg",
             "title": "Tinnitus Masking"
           }
         }
@@ -529,7 +512,6 @@
           "type": "card",
           "settings": {
             "color_scheme": "background-1",
-            "image": "shopify://shop_images/4455c6debf0ab3923c0256aa7133d388.png",
             "overlay_opacity": 0,
             "icon": "none",
             "icon_size": "recommended",
@@ -547,7 +529,6 @@
           "type": "card",
           "settings": {
             "color_scheme": "background-1",
-            "image": "shopify://shop_images/6cf5bdefda6a1b4636642923cc4fb175.png",
             "overlay_opacity": 0,
             "icon": "none",
             "icon_size": "recommended",
@@ -565,7 +546,6 @@
           "type": "card",
           "settings": {
             "color_scheme": "background-1",
-            "image": "shopify://shop_images/ff06b66630221eae57e8ddd5e1d76f96.png",
             "overlay_opacity": 0,
             "icon": "none",
             "icon_size": "recommended",
@@ -583,7 +563,6 @@
           "type": "card",
           "settings": {
             "color_scheme": "background-1",
-            "image": "shopify://shop_images/b29fc12ad507210c049b982e2e67da25.jpg",
             "overlay_opacity": 0,
             "icon": "none",
             "icon_size": "recommended",
@@ -646,7 +625,6 @@
         "item_LD7mKJ": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/2x_76f9c179-940b-4238-bd76-bea3d60ef931.png",
             "text1": "x1 Pair",
             "text2": "Core One Pro with S Ear Tips (Pre-installed)"
           }
@@ -654,7 +632,6 @@
         "item_MP7iMp": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/2x_1_b0c23c76-d223-423f-96c8-826fc9817893.png",
             "text1": "x1",
             "text2": "Portable Charging Case"
           }
@@ -662,7 +639,6 @@
         "item_TVdUHy": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/2x_8bbe4981-5f30-42a1-b27e-4670b4267e39.png",
             "text1": "x3 Pairs",
             "text2": "Ear Tips (L, M, XS)"
           }
@@ -670,7 +646,6 @@
         "item_QjJQQa": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/2x_5870733d-1795-4fac-85b4-217716a64cc6.png",
             "text1": "x1",
             "text2": "USB-C Charging Cable"
           }
@@ -678,7 +653,6 @@
         "item_eCfFTt": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/2x_7c7fe250-bdd6-44f5-88e1-bbee900d4cb8.png",
             "text1": "x1",
             "text2": "Cleaning Tool"
           }
@@ -686,7 +660,6 @@
         "item_cQBWRV": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/2x_9371f98b-6b40-43c7-bd65-f0b10b32f775.png",
             "text1": "x1",
             "text2": "User Manual"
           }
@@ -694,7 +667,6 @@
         "item_Rn4AUt": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/User_Experience_2x_64ba14f4-97fa-4fbf-9712-2acc8719ba77.png",
             "text1": "x1",
             "text2": "User Experience"
           }
@@ -702,7 +674,6 @@
         "item_qDNaUF": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/QSG2x.png",
             "text1": "x1",
             "text2": "Quick-Start Guide"
           }
@@ -760,7 +731,6 @@
         "inner_word_break": false,
         "description": "<ul><li>1 Pair FDA-Registered Hearing Aids with Small Ear Tips (Pre-installed)</li><li>Portable Charging Case</li><li>3 Pairs of Ear Tips (L, M, XS)</li><li>USB-C Charging Cable</li><li>Cleaning Tool</li><li>User Manual</li><li>User Experience</li><li>Quick-Start Guide</li><li><strong>18-Month Warranty (12mo Standard+ 6mo Free Limited Launch Offer) </strong></li><li><strong>AC/DC Adapter (Free Limited Launch Offer)</strong></li></ul>",
         "text_align_inner": "top",
-        "image": "shopify://shop_images/sp250719_133517.jpg",
         "image_link": "",
         "height": "adapt",
         "overlay_opacity": 0,
@@ -793,7 +763,6 @@
             "icon": "none",
             "icon_color_scheme": "",
             "icon_fill_type": "gradient",
-            "image": "shopify://shop_images/icons8-quality-96.png",
             "heading": "Hear Better in 5 Minutes",
             "text": "No appointments or setups. Ceretone aids work right away for clearer talks.",
             "show_button": false,
@@ -808,7 +777,6 @@
             "icon": "none",
             "icon_color_scheme": "",
             "icon_fill_type": "gradient",
-            "image": "shopify://shop_images/icons8-fast-delivery-96_1.png",
             "heading": "Free & Fast to Your Door",
             "text": "Fast and free delivery from the US warehouse. Ships next day.",
             "show_button": false,
@@ -823,7 +791,6 @@
             "icon": "none",
             "icon_color_scheme": "",
             "icon_fill_type": "gradient",
-            "image": "shopify://shop_images/icons8-headset-96.png",
             "heading": "Lifetime Expert Support",
             "text": "You’re never alone. Experts help you all the way, with a special 18-month warranty.",
             "show_button": false,
@@ -838,7 +805,6 @@
             "icon": "none",
             "icon_color_scheme": "",
             "icon_fill_type": "gradient",
-            "image": "shopify://shop_images/icons8-money-circulation-96.png",
             "heading": "60-Day Money-Back Guarantee",
             "text": "Not happy in 60 days? Return it for a full refund — we’ll pay return shipping.",
             "show_button": false,
@@ -901,7 +867,6 @@
         "item_yNxAmj": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/FDA_2x_416b9da6-661b-4f1d-9df5-d4394af6b568.png",
             "title": "FDA-Registered, Crystal-Clear Sound",
             "info": "Isolates voices from background noise so you hear what matters most."
           }
@@ -917,7 +882,6 @@
         "item_MaHdJU": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/2x_4323e407-afb9-4eff-adb6-afab1a3a3f5f.png",
             "title": "Easy Setup, Ready To Use",
             "info": "No clinic visits, no complicated setups - just open and start hearing better."
           }
@@ -925,7 +889,6 @@
         "item_GVddJq": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/2x_981d4c56-09f6-4b9e-9435-f94efdb8bab4.png",
             "title": "60-Day Trial, Lifelong Support",
             "info": "Full money-back guarantee with free shipping both ways, plus 12-month warranty."
           }
