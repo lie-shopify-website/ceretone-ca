@@ -196,7 +196,8 @@
         "custom_cls": "",
         "title": "Never Miss a<br class=\"mbbr\"> Word Again",
         "sub_title": "So you don’t have to ask “what?”",
-        "video": "shopify://files/videos/AUG06.mp4"
+        "video": "shopify://files/videos/AUG06.mp4",
+        "image": "shopify://shop_images/A90_viedo.png"
       }
     },
     "number_card_VmhDtM": {
@@ -263,6 +264,8 @@
       "name": "音质",
       "settings": {
         "title": "Hear $2,000 sound for less than $400",
+        "image": "shopify://shop_images/explosion-picture2.png",
+        "image_mb": "shopify://shop_images/explosion-picture1.png",
         "title1": "Intricon® Chipset",
         "sub_title1": "40+ Years of Hearing Innovation",
         "info1": "Prescription-grade sound, now available over the counter.",
@@ -277,6 +280,7 @@
         "accordion_6Xb3tV": {
           "type": "accordion",
           "settings": {
+            "image": "shopify://shop_images/Rectangle_60.png",
             "question": "Disappears Inside Your Ear Canal",
             "answer": "Engineered to sit deep within your ear canal, Core One Pro is virtually undetectable to others. Focus on conversations, not on your hearing aid.",
             "opened": true
@@ -285,6 +289,7 @@
         "accordion_nbT7eH": {
           "type": "accordion",
           "settings": {
+            "image": "shopify://shop_images/1_e78c4d6b-0e37-4e7f-9453-f39d45aa8da4.jpg",
             "question": "Custom Fit, Ultimate Comfort",
             "answer": "Shaped to match your ear's oval contours and 30° canal curve, Core One Pro sits perfectly in place. The ergonomic design eliminates pressure points, delivering all-day comfort.",
             "opened": false
@@ -293,6 +298,7 @@
         "accordion_EiThGM": {
           "type": "accordion",
           "settings": {
+            "image": "shopify://shop_images/a90_in_hand.png",
             "question": "So Light, You'll Barely Feel It.",
             "answer": "Weighing just 0.035 oz (1 gram) with a secure fit, Core One Pro feels like wearing nothing at all.",
             "opened": false
@@ -308,6 +314,7 @@
       "name": "舒适度",
       "settings": {
         "title": "Discreet And Comfortable",
+        "big_image": "shopify://shop_images/2x_d421bde9-d3d9-4068-b58e-202c1f0347d1.png",
         "pc_padding_top": 48,
         "pc_padding_bottom": 48,
         "mb_padding_top": 24,
@@ -364,6 +371,7 @@
         "inner_word_break": false,
         "description": "",
         "text_align_inner": "center",
+        "image": "shopify://shop_images/image-with-text2.png",
         "image_link": "",
         "height": "adapt",
         "overlay_opacity": 0,
@@ -437,6 +445,7 @@
         "inner_word_break": false,
         "description": "",
         "text_align_inner": "center",
+        "image": "shopify://shop_images/image-with-text1.png",
         "image_link": "",
         "height": "landscape",
         "overlay_opacity": 0,
@@ -466,24 +475,28 @@
         "image_nw9eDG": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/4455c6debf0ab3923c0256aa7133d388.png",
             "title": "Standard"
           }
         },
         "image_hzyCQ8": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/6cf5bdefda6a1b4636642923cc4fb175.png",
             "title": "Restaurant"
           }
         },
         "image_b4hink": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/ff06b66630221eae57e8ddd5e1d76f96.png",
             "title": "Outdoor"
           }
         },
         "image_tHEHpn": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/b29fc12ad507210c049b982e2e67da25.jpg",
             "title": "Tinnitus Masking"
           }
         }
