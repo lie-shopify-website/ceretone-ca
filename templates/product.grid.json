@@ -94,11 +94,8 @@
           "type": "service_icon",
           "settings": {
             "text1": "60-Day Risk-Free Trial",
-            "service_icon1": "shopify://shop_images/ser-icon01.png",
             "text2": "100% Money-Back Guarantee",
-            "service_icon2": "shopify://shop_images/ser-icon02.png",
-            "text3": "Lifetime Support",
-            "service_icon3": "shopify://shop_images/ser-icon03.png"
+            "text3": "Lifetime Support"
           }
         },
         "text_with_icon_MibE3M": {
@@ -216,6 +213,7 @@
         "description_t6tK4N",
         "buttons_Ex9rat"
       ],
+      "disabled": true,
       "custom_css": [
         "@media screen and (max-width: 768px) {{display: none; }}"
       ],
@@ -227,7 +225,6 @@
         "block_type": "subtle",
         "color_scheme": "scheme-da522d8c-d8ea-43a1-8f89-75b1a671124a",
         "full_screen": false,
-        "image": "shopify://shop_images/1920-640_07a611df-631b-4fd6-a543-ab96eea2fa4b.jpg",
         "link": "shopify://products/core-one-pro-otc-hearing-aids",
         "show_video": false,
         "overlay_opacity": 0,
@@ -291,6 +288,7 @@
         "description_BxQKxD",
         "buttons_864BAe"
       ],
+      "disabled": true,
       "custom_css": [
         "@media screen and (min-width: 768px) {{display: none; }}",
         "h2 {font-size: 32px;}",
@@ -306,7 +304,6 @@
         "block_type": "subtle",
         "color_scheme": "scheme-da522d8c-d8ea-43a1-8f89-75b1a671124a",
         "full_screen": false,
-        "image": "shopify://shop_images/1200-628_f22c4953-fafa-4f4b-b5ee-a1131c271247.jpg",
         "link": "shopify://products/core-one-pro-otc-hearing-aids",
         "show_video": false,
         "overlay_opacity": 0,
@@ -468,7 +465,6 @@
           "settings": {
             "color_scheme": "",
             "icon": "none",
-            "image": "shopify://shop_images/5_9dd9962f-b572-4eb5-a3bd-c5098608a02d.png",
             "overlay_opacity": 0,
             "show_video": false,
             "loop_video": true,
@@ -487,7 +483,6 @@
           "settings": {
             "color_scheme": "",
             "icon": "none",
-            "image": "shopify://shop_images/1_76bae7bd-8283-4f51-a4d0-afe0881ab0e5.png",
             "overlay_opacity": 0,
             "show_video": false,
             "loop_video": true,
@@ -506,7 +501,6 @@
           "settings": {
             "color_scheme": "",
             "icon": "none",
-            "image": "shopify://shop_images/1200-900_3050ab86-4da9-4a09-9ae5-628888aa6cf7.png",
             "overlay_opacity": 0,
             "show_video": false,
             "loop_video": true,
@@ -652,6 +646,7 @@
         "@media only screen and (max-width: 600px) {h2 {font-size: 25px; }}"
       ],
       "settings": {
+        "custom_class": "",
         "section_type": "separators",
         "color_scheme": "background-1",
         "enable_border": false,
@@ -752,7 +747,6 @@
         "inner_word_break": false,
         "description": "",
         "text_align_inner": "top",
-        "image": "shopify://shop_images/Invisible-in-canal_Core_One.webp",
         "image_link": "",
         "height": "adapt",
         "overlay_opacity": 0,
@@ -784,7 +778,6 @@
           "settings": {
             "color_scheme": "background-1",
             "icon": "none",
-            "image": "shopify://shop_images/core_one_app_controlled_volume_adjust.webp",
             "overlay_opacity": 0,
             "show_video": false,
             "loop_video": true,
@@ -803,7 +796,6 @@
           "settings": {
             "color_scheme": "background-1",
             "icon": "none",
-            "image": "shopify://shop_images/ceretone-core-one-restaurant-mode.webp",
             "overlay_opacity": 0,
             "show_video": false,
             "loop_video": true,
@@ -822,7 +814,6 @@
           "settings": {
             "color_scheme": "background-1",
             "icon": "none",
-            "image": "shopify://shop_images/Standard_Mode_of_Core_One.webp",
             "overlay_opacity": 0,
             "show_video": false,
             "loop_video": true,
@@ -937,6 +928,7 @@
         "column_za9eU9"
       ],
       "settings": {
+        "custom_class": "",
         "section_type": "transparent",
         "color_scheme": "",
         "enable_border": false,
@@ -1116,7 +1108,6 @@
           "type": "card",
           "settings": {
             "color_scheme": "background-1",
-            "image": "shopify://shop_images/1500-1500_4cae9094-0212-4739-aee6-de1cd9c522fa.png",
             "overlay_opacity": 0,
             "icon": "none",
             "icon_size": "recommended",
@@ -1134,7 +1125,6 @@
           "type": "card",
           "settings": {
             "color_scheme": "background-3",
-            "image": "shopify://shop_images/1500-1500_e0077476-beb9-48eb-bff6-4a916c178e37.png",
             "overlay_opacity": 0,
             "icon": "none",
             "icon_size": "recommended",
@@ -1152,7 +1142,6 @@
           "type": "card",
           "settings": {
             "color_scheme": "background-1",
-            "image": "shopify://shop_images/portable_case.png",
             "overlay_opacity": 0,
             "icon": "none",
             "icon_size": "recommended",
@@ -1170,7 +1159,6 @@
           "type": "card",
           "settings": {
             "color_scheme": "background-1",
-            "image": "shopify://shop_images/2_913bd51e-82f4-447f-8798-113502ba270c.png",
             "overlay_opacity": 0,
             "icon": "none",
             "icon_size": "recommended",
@@ -1230,7 +1218,6 @@
         "case_slide_W4dN4B": {
           "type": "case_slide",
           "settings": {
-            "image": "shopify://shop_images/best_otc_hearing_aids_core_one.webp",
             "overlay_opacity": 0,
             "heading": "Your Active Lifestyle",
             "text": "Whether you’re jogging through the park or strolling downtown, Core One adapts to every environment. Stay present and engaged with sound tailored to match your pace and surroundings.",
@@ -1248,7 +1235,6 @@
         "case_slide_VaPbf8": {
           "type": "case_slide",
           "settings": {
-            "image": "shopify://shop_images/best_invisible_hearing_aids_core_one.webp",
             "overlay_opacity": 0,
             "heading": "Outdoor Adventures",
             "text": "From serene hikes to vibrant cityscapes, Core One enriches every outdoor experience. Hear the world in detail—the crunch of leaves, distant birdsong, or a friend’s voice calling—bringing you closer to nature and loved ones.",
@@ -1266,7 +1252,6 @@
         "case_slide_raPRWK": {
           "type": "case_slide",
           "settings": {
-            "image": "shopify://shop_images/Core_One_small_hearing_aids.webp",
             "overlay_opacity": 0,
             "heading": "Meaningful Conversations",
             "text": "Imagine sitting across from a friend, fully immersed in every word and laugh. Core One sharpens voices, giving you the confidence to connect deeply without straining to hear.",
@@ -1284,7 +1269,6 @@
         "case_slide_jUMHVd": {
           "type": "case_slide",
           "settings": {
-            "image": "shopify://shop_images/Core_One_fda_hearing_aids_over_the_counter.webp",
             "overlay_opacity": 0,
             "heading": "Noisy Environments",
             "text": "Picture yourself in a bustling café or a crowded gathering. Core One filters out background noise, making voices clear and conversations easy, so you stay connected even in the busiest places.",
@@ -1302,7 +1286,6 @@
         "case_slide_fTiwDz": {
           "type": "case_slide",
           "settings": {
-            "image": "shopify://shop_images/best_over_the_counter_hearing_aids_for_tinnitus.webp",
             "overlay_opacity": 0,
             "heading": "Watching TV",
             "text": "Rediscover the joy of TV nights with loved ones. Core One enhances dialogue clarity, letting you follow every storyline without having to turn up the volume. Now, everyone can enjoy a comfortable listening level.",
@@ -1320,7 +1303,6 @@
         "case_slide_PymVYL": {
           "type": "case_slide",
           "settings": {
-            "image": "shopify://shop_images/core_one_fda_otc_hearing_aids.webp",
             "overlay_opacity": 0,
             "heading": "Traveling Made Easy",
             "text": "Glide through airports and explore new places without missing a sound. With Core One’s rechargeable battery, you’re free from battery worries, enjoying clear hearing from takeoff to landing.",
@@ -1381,7 +1363,6 @@
         "slide_VAQTQn": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/4_99d1e5f7-4621-432c-95e7-9fc5181eda9e.png",
             "title": "Core One",
             "content": "<span style=\"color: #FF4F00;\">$349</span> |✔️ | ✔️ | ✔️|<span style=\"color:#FF4F00;\">2 Hours</span>  | <span style=\"color: #FF4F00;\">Up to 13 hours</span> | <span style=\"color: #FF4F00;\">Up to 78 hours</span> | <span style=\"color: #FF4F00;\">Up to 6 recharges</span> | USB-C",
             "url": ""
@@ -1390,7 +1371,6 @@
         "slide_m4XCzQ": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/2_16a09df5-c106-486d-b654-ac473e0103c6.png",
             "title": "N-brand",
             "content": "$397  | ❌ | ❌ | ❌ | 2 Hours | Up to 12 hours | Up to 24 hours | Up to 2 recharges",
             "url": ""
@@ -1399,7 +1379,6 @@
         "slide_qqqGHX": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/1_e0da5bb8-5a90-4af4-a1c9-16a4266c0a83.png",
             "title": "E-brand",
             "content": "$1,950 | ✔️ |✔️ | ❌ | 4 Hours |Up to 16 hours | Up to 38 hours | Up to 2 recharges",
             "url": ""
@@ -1504,7 +1483,6 @@
         "inner_word_break": false,
         "description": "<ul><li>1 Pair FDA-Registered Hearing Aids with Large Closed Ear Tips (Pre-installed)</li><li>Portable Charging Case</li><li>3 Pairs of Closed Ear Tips (M, S, XS)</li><li>3 Pairs of Open Ear Tips (L, M, S)</li><li>USB-C Charging Cable</li><li>Cleaning Tool</li><li>User Manual</li><li>User Experience</li><li>Quick-Start Guide</li></ul>",
         "text_align_inner": "center",
-        "image": "shopify://shop_images/coreone_1901689c-1be7-4e5b-9dec-af075f879d74.png",
         "image_link": "",
         "height": "adapt",
         "overlay_opacity": 0,
