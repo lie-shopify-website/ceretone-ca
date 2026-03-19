@@ -35,6 +35,8 @@
         "bottom_one": 0,
         "top_one_mic": 0,
         "bottom_one_mic": 0,
+        "image": "shopify://shop_images/Customer-Support-Banner.jpg",
+        "imagemic": "shopify://shop_images/Customer-Support-Banner.jpg",
         "slogan": "",
         "heading": "Ceretone Support Center",
         "text": "",
