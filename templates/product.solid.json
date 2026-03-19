@@ -107,11 +107,8 @@
           "type": "service_icon",
           "settings": {
             "text1": "60-Day Risk-Free Trial",
-            "service_icon1": "shopify://shop_images/ser-icon01.png",
             "text2": "100% Money-Back Guarantee",
-            "service_icon2": "shopify://shop_images/ser-icon02.png",
-            "text3": "Lifetime Support",
-            "service_icon3": "shopify://shop_images/ser-icon03.png"
+            "text3": "Lifetime Support"
           }
         },
         "text_with_icon_MibE3M": {
@@ -192,6 +189,7 @@
         "heading_size": "h3",
         "cover_image": "shopify://shop_images/FAQ_page_header_hero.jpg",
         "opacity_overlay": 0.1,
+        "video": "shopify://files/videos/6d34524af2cc4888bc8f912ed0fd8d7c.mp4",
         "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
         "video_autoplay": false,
         "video_loop": false,
@@ -230,7 +228,7 @@
         "inner_word_break": false,
         "description": "<p>No doctors. No hidden fees. Just clear sound. If you're dealing with mild to moderate hearing loss, Solid offers:</p><p>🔹 <strong>Redefined clarity</strong> — hear the world with ease.<br/>🔹 <strong>No expensive treatments</strong> — affordable and accessible.<br/>🔹 <strong>No complicated adjustments</strong> — just one simple device.<br/>🔹 <strong>Effortless listening</strong> — immediate improvement in sound quality.</p>",
         "text_align_inner": "center",
-        "image": "shopify://shop_images/2400-1256-solid.png",
+        "image": "shopify://shop_images/2400-1256-solid_1.png",
         "image_link": "",
         "height": "adapt",
         "overlay_opacity": 0,
@@ -651,7 +649,6 @@
         "inner_word_break": false,
         "description": "<p>With Solid's larger, easy-to-use physical buttons, adjusting the volume or changing settings has never been easier. Say goodbye to frustrating tiny buttons and enjoy seamless, effortless control at your fingertips.</p>",
         "text_align_inner": "center",
-        "image": "shopify://shop_images/hearing_aids_2b7935c5-2825-48ed-952b-8fbc77eee14e.jpg",
         "image_link": "",
         "height": "adapt",
         "overlay_opacity": 0,
@@ -925,7 +922,6 @@
         "inner_word_break": false,
         "description": "<p>✅ <strong>Direct-to-consumer sales</strong>: No middlemen, no markups.<br/>✅ <strong>No location markup</strong>: We skip the high costs of physical clinics.<br/>✅ <strong>No commission fees</strong>: Every penny goes into product development, not third-party cuts.<br/>✅ <strong>Simplified services</strong>: Smart self-check tools and video guides replace expensive in-person adjustments.</p><p>We focus on offering high-quality hearing aids at an affordable price, so you can hear the world without the hassle.</p>",
         "text_align_inner": "center",
-        "image": "shopify://shop_images/comparison.jpg",
         "image_link": "",
         "height": "adapt",
         "overlay_opacity": 0,
@@ -973,7 +969,6 @@
         "inner_word_break": false,
         "description": "<p>Why do traditional small buttons drive people crazy?</p><p>😞 Hard to find when the button is tiny.<br/>😞 No tactile feedback, leading to mistakes.<br/>😞 Complex menus that require constant learning.</p><p><strong>Solid’s solution:</strong></p><p>🙂 <strong>40% larger</strong> buttons for easy access.<br/>🙂<strong> Tactile texture</strong> for error-free use.<br/>🙂 <strong>One-minute learning curve</strong>: short press for volume, long press (3 seconds) to switch programs.</p>",
         "text_align_inner": "center",
-        "image": "shopify://shop_images/de26d8bf8c120599b404eafb0ed3e341_85995c2f-c3ac-40a5-91cb-a4ec6e02dc02.png",
         "image_link": "",
         "height": "adapt",
         "overlay_opacity": 0,
@@ -1021,7 +1016,6 @@
         "inner_word_break": false,
         "description": "<ul><li>FDA-registered Solid hearing aids (2 pcs)</li><li>Portable Charging Case</li><li>3 Pairs of Eartips (S, M ,L)</li><li>USB-C Charging Cable</li><li>Cleaning Tool</li><li>User Manual</li><li>User Experience</li><li>Quick-Start Guide</li><li><strong>FREE Shipping & Return</strong></li><li><strong>FREE Lifetime Support</strong></li><li><strong>60-Day Risk-Free Trial</strong></li><li><strong>100% Money-Back Guarantee</strong></li><li><strong>12-Month Warranty</strong></li></ul>",
         "text_align_inner": "center",
-        "image": "shopify://shop_images/b04a70ae01f04036e17b97cf0b12c47c.jpg",
         "image_link": "",
         "height": "adapt",
         "overlay_opacity": 0,
