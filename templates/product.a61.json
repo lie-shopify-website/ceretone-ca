@@ -443,7 +443,7 @@
         "slide_Kbnied": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/1_c0c37278-7df4-4163-bba2-b017867740e9.jpg",
+            "image": "shopify://shop_images/A61_20240716_22.png",
             "title": "Standard",
             "text": "Ideal for everyday listening"
           }
@@ -459,7 +459,7 @@
         "slide_tUWn7G": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/3_2a740cb3-d72b-40b2-ad67-072a40e954ac.jpg",
+            "image": "shopify://shop_images/A61_20240716_20.png",
             "title": "Outdoor",
             "text": "Optimizes hearing in outdoor settings with varying background noise"
           }
@@ -467,7 +467,7 @@
         "slide_FDwmRq": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/4_112123d2-e2eb-4ec5-afa1-8595bc88b8f7.png",
+            "image": "shopify://shop_images/A61_20240716_23.png",
             "title": "Music",
             "text": "Delivers enhanced sound quality for enjoying music"
           }
@@ -517,6 +517,8 @@
         "Copywriting_align": "left",
         "Copywriting": "The Fusion hearing aid's IP54 rating ensures reliable protection against dust and water, providing uninterrupted hearing enhancement.",
         "Copywriting_fu": "",
+        "image": "shopify://shop_images/web_ca9310ae-a4ad-4a79-a9bc-ff22370cc7d9.png",
+        "imagemobile": "shopify://shop_images/f65afdd4c5d2d7e0d663ff035af46e23.png",
         "video_w": 100,
         "video_w_mic": 100,
         "Number_color_box": "#dedede",
@@ -531,6 +533,8 @@
         "slide_adiAtV": {
           "type": "slide",
           "settings": {
+            "image": "shopify://shop_images/A61_20240716_29.png",
+            "imagemic": "shopify://shop_images/A61_20240721_06.png",
             "header": "Outdoor Activities",
             "text": "<p>Enhance outdoor sounds with Fusion, capturing birdsong and wind clearly.</p>"
           }
@@ -538,6 +542,8 @@
         "slide_bdwVqb": {
           "type": "slide",
           "settings": {
+            "image": "shopify://shop_images/A61_20240716_30.png",
+            "imagemic": "shopify://shop_images/A61_20240721_05.png",
             "header": "Family Gatherings",
             "text": "<p>Ensure seamless participation in family conversations with clear, detailed sound quality.</p>"
           }
@@ -545,6 +551,8 @@
         "slide_TjfPMy": {
           "type": "slide",
           "settings": {
+            "image": "shopify://shop_images/A61_20240716_31.png",
+            "imagemic": "shopify://shop_images/A61_20240721_04.png",
             "header": "TV Watching",
             "text": "<p>Optimize TV sound for clear dialogue and rich audio—without needing to increase the volume.</p>"
           }
@@ -628,28 +636,32 @@
           "type": "slide",
           "settings": {
             "title": "1. Multi-Function Button",
-            "text": "Easily switch between hearing programs and adjust volume levels"
+            "text": "Easily switch between hearing programs and adjust volume levels",
+            "image_icon": "shopify://shop_images/A61_20240716_27.png"
           }
         },
         "slide_MDjeH7": {
           "type": "slide",
           "settings": {
             "title": "2. Microphone",
-            "text": "Captures sound for optimal hearing aid performance"
+            "text": "Captures sound for optimal hearing aid performance",
+            "image_icon": "shopify://shop_images/A61_20240716_25.png"
           }
         },
         "slide_n8HgPh": {
           "type": "slide",
           "settings": {
             "title": "3. Charging Contacts",
-            "text": "Enables easy charging of your hearing aids"
+            "text": "Enables easy charging of your hearing aids",
+            "image_icon": "shopify://shop_images/A61_20240716_26.png"
           }
         },
         "slide_zFXHdE": {
           "type": "slide",
           "settings": {
             "title": "4. Eartips",
-            "text": "Soft silicone domes ensure comfortable and secure placement in the ear canal"
+            "text": "Soft silicone domes ensure comfortable and secure placement in the ear canal",
+            "image_icon": "shopify://shop_images/A61_20240716_28.png"
           }
         }
       },
@@ -674,6 +686,7 @@
         "Copywriting_align": "center",
         "Copywriting": "",
         "Copywriting_fu": "",
+        "image": "shopify://shop_images/13_2x_b91897bc-b1cd-4e0f-bd2b-e6ef4a4534ac.png",
         "Number_color_box": "#f6f2f2",
         "Number_color_title": "#000000",
         "Number_color_text": "#9f9f9f",
