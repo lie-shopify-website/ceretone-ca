@@ -1784,6 +1784,11 @@ window.addEventListener('DOMContentLoaded', function() {
               </div>
                 
 
+            {%- when 'urgency_block' -%}
+              <div class="product__block urgency_block">
+                {% render "urgency-block", block: block %}
+              </div>
+              
 
           {%- endcase -%}
         {%- endfor -%}
@@ -4589,6 +4594,16 @@ data-description="{{ product.description | escape }}">
         { "type": "image_picker", "id": "service_icon3", "label": "图标" }
       ]
     },
+
+    {
+      "type": "urgency_block",
+      "name": "紧急限购提醒",
+      "limit": 1,
+      "settings": [
+        { "type": "text", "id": "text", "label": "文本", "default":"Sale: Live For 24 Hrs" }
+      ]
+    },
+
     {
       "type": "collapsible",
       "name": "Collapsible Tab",
