@@ -396,6 +396,8 @@
         "Copywriting_align": "center",
         "Copywriting": "Accurate audio even in challenging listening environments.",
         "Copywriting_fu": "",
+        "image": "shopify://shop_images/nexus_20240910_05.png",
+        "imagemobile": "shopify://shop_images/nexus_20240910_19.png",
         "video_w": 100,
         "video_w_mic": 100,
         "Number_color_box": "#dedede",
@@ -410,6 +412,7 @@
         "slide_Kbnied": {
           "type": "slide",
           "settings": {
+            "image": "shopify://shop_images/A61_20240716_22.png",
             "title": "Normal",
             "text": "Everyday listening with balanced sound for all environments."
           }
@@ -483,6 +486,8 @@
         "Copywriting_align": "center",
         "Copywriting": "Designed for durability and minimal replacement needs with zinc-air batteries.",
         "Copywriting_fu": "",
+        "image": "shopify://shop_images/nexus_20240910_08.png",
+        "imagemobile": "shopify://shop_images/nexus_20240910_21.png",
         "video_w": 100,
         "video_w_mic": 100,
         "Number_color_box": "#dedede",
@@ -497,6 +502,8 @@
         "slide_adiAtV": {
           "type": "slide",
           "settings": {
+            "image": "shopify://shop_images/nexus_20240910_09.png",
+            "imagemic": "shopify://shop_images/nexus_20240910_22.png",
             "header": "Week 1: Patience is Key",
             "text": "<p>Begin by wearing your hearing aids for 1-2 hours daily. Focus on listening and familiarizing yourself with various sounds at home.</p>"
           }
@@ -504,6 +511,8 @@
         "slide_bdwVqb": {
           "type": "slide",
           "settings": {
+            "image": "shopify://shop_images/nexus_20240910_10.png",
+            "imagemic": "shopify://shop_images/nexus_20240910_23.png",
             "header": "Week 2: Practice Listening",
             "text": "<p>Gradually increase wear time to 3-4 hours. Visit quiet public places, interact with others, and observe how sounds are amplified.</p>"
           }
@@ -511,6 +520,8 @@
         "slide_TjfPMy": {
           "type": "slide",
           "settings": {
+            "image": "shopify://shop_images/nexus_20240910_11.png",
+            "imagemic": "shopify://shop_images/nexus_20240910_24.png",
             "header": "Week 3: Practice Makes Perfect",
             "text": "<p>Aim for 4-5 hours of wear daily. Challenge yourself in noisy environments and practice distinguishing sounds during conversations.</p>"
           }
@@ -518,6 +529,8 @@
         "slide_VnkhKx": {
           "type": "slide",
           "settings": {
+            "image": "shopify://shop_images/nexus_20240910_12.png",
+            "imagemic": "shopify://shop_images/nexus_20240910_25.png",
             "header": "Week 4: Live it Up!",
             "text": "<p>After consistent practice, wear your hearing aids for 6+ hours a day. Enjoy enhanced hearing, but remember to take occasional breaks.</p>"
           }
@@ -619,6 +632,7 @@
         "inner_word_break": false,
         "description": "",
         "text_align_inner": "top",
+        "image": "shopify://shop_images/36.png",
         "image_link": "",
         "height": "adapt",
         "overlay_opacity": 0,
@@ -963,6 +977,7 @@
         "slide_rx6BDX",
         "slide_im6gRz"
       ],
+      "disabled": true,
       "settings": {
         "top_one": 5,
         "bottom_one": 5,
