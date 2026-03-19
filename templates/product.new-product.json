@@ -93,11 +93,8 @@
           "type": "service_icon",
           "settings": {
             "text1": "60-Day Risk-Free Trial",
-            "service_icon1": "shopify://shop_images/ser-icon01.png",
             "text2": "100% Money-Back Guarantee",
-            "service_icon2": "shopify://shop_images/ser-icon02.png",
-            "text3": "Lifetime Support",
-            "service_icon3": "shopify://shop_images/ser-icon03.png"
+            "text3": "Lifetime Support"
           }
         },
         "text_with_icon_MibE3M": {
@@ -172,28 +169,24 @@
         "item_emtbkz": {
           "type": "item",
           "settings": {
-            "icon": "shopify://shop_images/FDA_2x_fea2e52a-c473-42ab-9e24-f322e954de38.png",
             "text": "FDA & OTC Certified"
           }
         },
         "item_dNKkcx": {
           "type": "item",
           "settings": {
-            "icon": "shopify://shop_images/service-icon1.png",
             "text": "60-Day Free Trail"
           }
         },
         "item_V6pMem": {
           "type": "item",
           "settings": {
-            "icon": "shopify://shop_images/service-icon4.png",
             "text": "Free US Ship/Return"
           }
         },
         "item_gN6Yag": {
           "type": "item",
           "settings": {
-            "icon": "shopify://shop_images/service-icon2.png",
             "text": "Local Call Center"
           }
         }
@@ -274,6 +267,7 @@
         "heading_size": "h3",
         "cover_image": "shopify://shop_images/1440-706.png",
         "opacity_overlay": 0.3,
+        "video": "shopify://files/videos/49b3fce8449647f987002444900c4619.mp4",
         "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
         "video_autoplay": false,
         "video_loop": false,
@@ -291,10 +285,8 @@
       "settings": {
         "title": "The Power of a Hearing Aid Lies in Its Advanced Technology",
         "info": "",
-        "icon1": "shopify://shop_images/icon2.png",
         "icon_title1": "Intricon® Chipset",
         "icon_info1": "· Built by a US micromedical pioneer since 1977<br>\n· Prescription-grade sound, now available Over the Counter<br>\n· Used in millions of prescription devices<br>",
-        "icon2": "shopify://shop_images/icon1.png",
         "icon_title2": "Knowles® Speakers",
         "icon_info2": "· Global leader in hearing technology<br>\n· Used in millions of prescription devices<br>\n· Delivers richness and clarity of the human voice<br>",
         "pc_padding_top": 50,
@@ -375,7 +367,6 @@
         "accordion_mtCNrU": {
           "type": "accordion",
           "settings": {
-            "image": "shopify://shop_images/tic-img2.png",
             "question": "Naturally Curved for You",
             "answer": "Its precise 143° bend mirrors your ear canal, delivering a secure, seamless fit that feels custom-made.",
             "opened": true
@@ -384,7 +375,6 @@
         "accordion_6DNaxd": {
           "type": "accordion",
           "settings": {
-            "image": "shopify://shop_images/tic-img1.png",
             "question": "Zero Pressure, All-Day Comfort",
             "answer": "The gently tapered tip eases in comfortably, eliminating pressure for lasting, barely-there wear you can forget you're wearing.",
             "opened": false
@@ -393,7 +383,6 @@
         "accordion_DWcfNP": {
           "type": "accordion",
           "settings": {
-            "image": "shopify://shop_images/tic-img4.png",
             "question": "Snug Fit for Every Unique Ear",
             "answer": "Four sizes of soft silicone tips conform perfectly to your ear shape, ensuring stable, all-day comfort tailored just for you.",
             "opened": false
@@ -408,7 +397,6 @@
       "name": "Collapsible Image",
       "settings": {
         "title": "Revolutionary Comfort — Perfected with Data from 1,000+ Ears",
-        "big_image": "shopify://shop_images/tic-left1.png",
         "pc_padding_top": 100,
         "pc_padding_bottom": 100,
         "mb_padding_top": 50,
@@ -421,12 +409,8 @@
       "name": "Text Image Custom 1",
       "settings": {
         "title": "Revolutionary Comfort — Perfected with Data from 1,000+ Ears",
-        "left_image": "shopify://shop_images/tic-left1.png",
-        "right_image_1": "shopify://shop_images/tic-img2.png",
         "right_image_text_1": "The 143.2° bend follows the natural curve of your ear canal, making it feel more like a part of you.",
-        "right_image_2": "shopify://shop_images/tic-img1.png",
         "right_image_text_2": "The tapered tip gradually adapts to your ear canal, reducing internal pressure for lasting comfort.",
-        "right_image_3": "shopify://shop_images/tic-img4.png",
         "right_image_text_3": "Soft silicone tips in three sizes ensure a perfect fit for all-day comfort.",
         "pc_padding_top": 50,
         "pc_padding_bottom": 50,
@@ -438,20 +422,14 @@
       "type": "text-image-custom2",
       "name": "Text Image Custom 2",
       "settings": {
-        "left_image1": "shopify://shop_images/itc-02.png",
         "title1": "Drop It. Charge It. Keep Hearing",
-        "icon1_img1": "shopify://shop_images/itc-icon2.png",
         "icon1_title1": "Up to 100 hours",
         "icon1_info1": "of total power with the charging case",
-        "icon1_img2": "shopify://shop_images/itc-icon1.png",
         "icon1_title2": "Up to 25 hours",
         "icon1_info2": "on a single full charge",
-        "left_image2": "shopify://shop_images/itc-01.png",
         "title2": "Smart Sound, Simple Controls",
-        "icon2_img1": "shopify://shop_images/itc-icon3.png",
         "icon2_title1": "1s press",
         "icon2_info1": "6 volume levels",
-        "icon2_img2": "shopify://shop_images/itc-icon4.png",
         "icon2_title2": "3s hold",
         "icon2_info2": "5 preset programs",
         "pc_padding_top": 50,
@@ -466,7 +444,6 @@
         "step_meJFhr": {
           "type": "step",
           "settings": {
-            "image": "shopify://shop_images/1200-628_1.jpg",
             "number": "1",
             "heading": "Normal",
             "text": "",
@@ -479,7 +456,6 @@
         "step_4dt4pm": {
           "type": "step",
           "settings": {
-            "image": "shopify://shop_images/1200-628_2.jpg",
             "number": "2",
             "heading": "Restaurant",
             "text": "",
@@ -492,7 +468,6 @@
         "step_8XaTHV": {
           "type": "step",
           "settings": {
-            "image": "shopify://shop_images/1200-628_3.jpg",
             "number": "3",
             "heading": "Outdoor",
             "text": "",
@@ -505,7 +480,6 @@
         "step_4aaPm6": {
           "type": "step",
           "settings": {
-            "image": "shopify://shop_images/music_mode.jpg",
             "number": "4",
             "heading": "Music",
             "text": "",
@@ -518,7 +492,6 @@
         "step_8fbc8p": {
           "type": "step",
           "settings": {
-            "image": "shopify://shop_images/1200-628_5.jpg",
             "number": "5",
             "heading": "Tinnitus Masking",
             "text": "",
@@ -569,7 +542,6 @@
         "item_nCXMzJ": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/Normal.jpg",
             "title": "Normal Mode",
             "text": ""
           }
@@ -577,7 +549,6 @@
         "item_yV3xpJ": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/Restaurant.jpg",
             "title": "Restaurant Mode",
             "text": ""
           }
@@ -585,7 +556,6 @@
         "item_xViqzR": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/Outdoor.jpg",
             "title": "Outdoor Mode",
             "text": ""
           }
@@ -593,7 +563,6 @@
         "item_YcpGxh": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/Music.jpg",
             "title": "Music Mode",
             "text": ""
           }
@@ -601,7 +570,6 @@
         "item_MhN4xF": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/Tinnitus-Masking.jpg",
             "title": "Tinnitus Masking",
             "text": ""
           }
@@ -629,63 +597,43 @@
       "blocks": {
         "video_wPUgJx": {
           "type": "video",
-          "settings": {
-            "video_poster": "shopify://shop_images/7_16_1_1.png"
-          }
+          "settings": {}
         },
         "video_EHqmJJ": {
           "type": "video",
-          "settings": {
-            "video_poster": "shopify://shop_images/8_b05a09c8-bb4d-4899-bc30-bc66d30d658f.png"
-          }
+          "settings": {}
         },
         "video_gbNHjJ": {
           "type": "video",
-          "settings": {
-            "video_poster": "shopify://shop_images/7_35ac9712-0df4-4557-aff6-691858c56faf.png"
-          }
+          "settings": {}
         },
         "video_bYXJz6": {
           "type": "video",
-          "settings": {
-            "video_poster": "shopify://shop_images/2_44c4572a-c657-42ba-8c0f-bfec3d554db0.png"
-          }
+          "settings": {}
         },
         "video_NdcUNi": {
           "type": "video",
-          "settings": {
-            "video_poster": "shopify://shop_images/4_8b889c18-154c-4bb2-88da-f6cc358601a4.png"
-          }
+          "settings": {}
         },
         "video_appT7K": {
           "type": "video",
-          "settings": {
-            "video_poster": "shopify://shop_images/6_1ba8c3d8-f0eb-467e-acdb-4b82bacd2202.png"
-          }
+          "settings": {}
         },
         "video_PWCVdX": {
           "type": "video",
-          "settings": {
-            "video_poster": "shopify://shop_images/3_21acf3db-cad8-4dfd-8db6-bfb13ac5aea1.png"
-          }
+          "settings": {}
         },
         "video_eJHKjP": {
           "type": "video",
-          "settings": {
-            "video_poster": "shopify://shop_images/1_dbc9e0d6-b2c7-4ddd-8f9e-677f9317f717.png"
-          }
+          "settings": {}
         },
         "video_eQdd8n": {
           "type": "video",
-          "settings": {
-            "video_poster": "shopify://shop_images/7_8_2.png"
-          }
+          "settings": {}
         },
         "video_ACVyVh": {
           "type": "video",
-          "settings": {
-            "video_poster": "shopify://shop_images/5_5d69786c-4c92-4906-bc01-49a1fd4f96cc.png"
-          }
+          "settings": {}
         }
       },
       "block_order": [
