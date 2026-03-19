@@ -719,6 +719,7 @@
         "inner_word_break": false,
         "description": "",
         "text_align_inner": "top",
+        "image": "shopify://shop_images/61.jpg",
         "image_link": "",
         "height": "adapt",
         "overlay_opacity": 0,
@@ -1126,6 +1127,7 @@
         "slide_rx6BDX",
         "slide_im6gRz"
       ],
+      "disabled": true,
       "settings": {
         "top_one": 5,
         "bottom_one": 5,
