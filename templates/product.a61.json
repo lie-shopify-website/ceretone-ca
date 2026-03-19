@@ -427,6 +427,8 @@
         "Copywriting_align": "center",
         "Copywriting": "",
         "Copywriting_fu": "",
+        "image": "shopify://shop_images/web.png",
+        "imagemobile": "shopify://shop_images/a495e6e44828099afc6e0d15b6017fbe.png",
         "video_w": 100,
         "video_w_mic": 100,
         "Number_color_box": "#dedede",
@@ -441,6 +443,7 @@
         "slide_Kbnied": {
           "type": "slide",
           "settings": {
+            "image": "shopify://shop_images/1_c0c37278-7df4-4163-bba2-b017867740e9.jpg",
             "title": "Standard",
             "text": "Ideal for everyday listening"
           }
@@ -448,7 +451,7 @@
         "slide_B7nEzK": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/Restaurant_Mode.jpg",
+            "image": "shopify://shop_images/Restaurant_Mode_9a84ed5c-b5bd-47a4-871a-a59c77a0dfea.jpg",
             "title": "Restaurant",
             "text": "Enhances speech clarity in noisy dining environments"
           }
@@ -456,6 +459,7 @@
         "slide_tUWn7G": {
           "type": "slide",
           "settings": {
+            "image": "shopify://shop_images/3_2a740cb3-d72b-40b2-ad67-072a40e954ac.jpg",
             "title": "Outdoor",
             "text": "Optimizes hearing in outdoor settings with varying background noise"
           }
@@ -463,6 +467,7 @@
         "slide_FDwmRq": {
           "type": "slide",
           "settings": {
+            "image": "shopify://shop_images/4_112123d2-e2eb-4ec5-afa1-8595bc88b8f7.png",
             "title": "Music",
             "text": "Delivers enhanced sound quality for enjoying music"
           }
