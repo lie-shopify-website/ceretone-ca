@@ -367,6 +367,7 @@
         "accordion_mtCNrU": {
           "type": "accordion",
           "settings": {
+            "image": "shopify://shop_images/tic-img2.png",
             "question": "Naturally Curved for You",
             "answer": "Its precise 143° bend mirrors your ear canal, delivering a secure, seamless fit that feels custom-made.",
             "opened": true
@@ -375,6 +376,7 @@
         "accordion_6DNaxd": {
           "type": "accordion",
           "settings": {
+            "image": "shopify://shop_images/tic-img1.png",
             "question": "Zero Pressure, All-Day Comfort",
             "answer": "The gently tapered tip eases in comfortably, eliminating pressure for lasting, barely-there wear you can forget you're wearing.",
             "opened": false
@@ -383,6 +385,7 @@
         "accordion_DWcfNP": {
           "type": "accordion",
           "settings": {
+            "image": "shopify://shop_images/tic-img4.png",
             "question": "Snug Fit for Every Unique Ear",
             "answer": "Four sizes of soft silicone tips conform perfectly to your ear shape, ensuring stable, all-day comfort tailored just for you.",
             "opened": false
@@ -397,6 +400,7 @@
       "name": "Collapsible Image",
       "settings": {
         "title": "Revolutionary Comfort — Perfected with Data from 1,000+ Ears",
+        "big_image": "shopify://shop_images/tic-left1.png",
         "pc_padding_top": 100,
         "pc_padding_bottom": 100,
         "mb_padding_top": 50,
@@ -422,14 +426,20 @@
       "type": "text-image-custom2",
       "name": "Text Image Custom 2",
       "settings": {
+        "left_image1": "shopify://shop_images/itc-02.png",
         "title1": "Drop It. Charge It. Keep Hearing",
+        "icon1_img1": "shopify://shop_images/itc-icon2.png",
         "icon1_title1": "Up to 100 hours",
         "icon1_info1": "of total power with the charging case",
+        "icon1_img2": "shopify://shop_images/itc-icon1.png",
         "icon1_title2": "Up to 25 hours",
         "icon1_info2": "on a single full charge",
+        "left_image2": "shopify://shop_images/itc-01.png",
         "title2": "Smart Sound, Simple Controls",
+        "icon2_img1": "shopify://shop_images/itc-icon3.png",
         "icon2_title1": "1s press",
         "icon2_info1": "6 volume levels",
+        "icon2_img2": "shopify://shop_images/itc-icon4.png",
         "icon2_title2": "3s hold",
         "icon2_info2": "5 preset programs",
         "pc_padding_top": 50,
@@ -444,6 +454,7 @@
         "step_meJFhr": {
           "type": "step",
           "settings": {
+            "image": "shopify://shop_images/1200-628_1.jpg",
             "number": "1",
             "heading": "Normal",
             "text": "",
@@ -456,6 +467,7 @@
         "step_4dt4pm": {
           "type": "step",
           "settings": {
+            "image": "shopify://shop_images/1200-628_2.jpg",
             "number": "2",
             "heading": "Restaurant",
             "text": "",
@@ -468,6 +480,7 @@
         "step_8XaTHV": {
           "type": "step",
           "settings": {
+            "image": "shopify://shop_images/1200-628_3.jpg",
             "number": "3",
             "heading": "Outdoor",
             "text": "",
@@ -480,6 +493,7 @@
         "step_4aaPm6": {
           "type": "step",
           "settings": {
+            "image": "shopify://shop_images/music_mode.jpg",
             "number": "4",
             "heading": "Music",
             "text": "",
@@ -492,6 +506,7 @@
         "step_8fbc8p": {
           "type": "step",
           "settings": {
+            "image": "shopify://shop_images/1200-628_5.jpg",
             "number": "5",
             "heading": "Tinnitus Masking",
             "text": "",
