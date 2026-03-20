@@ -405,6 +405,15 @@ header-nav img {
     
 
 }
+
+
+@media(min-width: 1152px) and (max-width: 1320px){
+    header-nav .top-level-title {
+        font-size: 14px;
+    }
+}
+
+
 header-nav .mm-item__menu a.menu-child-menu-title .illy {
     position: relative;
     display: flex;
