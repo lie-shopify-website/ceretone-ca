@@ -12,10 +12,7 @@
     "main": {
       "type": "main-page",
       "disabled": true,
-      "settings": {
-        "padding_top": "no-indent",
-        "padding_bottom": "m"
-      }
+      "settings": {}
     },
     "user_guide_6YAnce": {
       "type": "UserGuide",
@@ -25,7 +22,17 @@
           "settings": {
             "video_url": "https://youtu.be/CTdZxInbJ1s?si=OXfGtLQ6pRu_INdR",
             "text": "How to Charge Your Fusion",
-            "Seconds": ""
+            "video_url_fr": "https://youtu.be/nllUxTEyDKA",
+            "text_fr": "Fusion Activation&Désactivation des appareils auditifs",
+            "Seconds": "",
+            "text_color": "#000000",
+            "text_bold": true,
+            "text_uppercase": false,
+            "seconds_color": "#606468",
+            "text_color_mobile": "#000000",
+            "text_bold_mobile": true,
+            "text_uppercase_mobile": false,
+            "seconds_color_mobile": "#606468"
           }
         },
         "slide_qjajy6": {
@@ -33,7 +40,17 @@
           "settings": {
             "video_url": "https://youtu.be/FLTizgwzsRM?si=BX8PbZE4BTfDyhHn",
             "text": "How to Turn Your Fusion On/Off",
-            "Seconds": ""
+            "video_url_fr": "https://youtu.be/HMbfpZKqnhY",
+            "text_fr": "Fusion Ajustement du volume",
+            "Seconds": "",
+            "text_color": "#000000",
+            "text_bold": true,
+            "text_uppercase": false,
+            "seconds_color": "#606468",
+            "text_color_mobile": "#000000",
+            "text_bold_mobile": true,
+            "text_uppercase_mobile": false,
+            "seconds_color_mobile": "#606468"
           }
         },
         "slide_bkifjr": {
@@ -41,7 +58,17 @@
           "settings": {
             "video_url": "https://youtu.be/4hhvXR_xWO8?si=HyoNgcXlmnzL-hD-",
             "text": "How to Replace the Eartips on Your Fusion",
-            "Seconds": ""
+            "video_url_fr": "https://youtu.be/cMtY1SYlS2A",
+            "text_fr": "Fusion Porter correctement vos appareils auditifs",
+            "Seconds": "",
+            "text_color": "#000000",
+            "text_bold": true,
+            "text_uppercase": false,
+            "seconds_color": "#606468",
+            "text_color_mobile": "#000000",
+            "text_bold_mobile": true,
+            "text_uppercase_mobile": false,
+            "seconds_color_mobile": "#606468"
           }
         },
         "slide_WcmfXY": {
@@ -49,7 +76,17 @@
           "settings": {
             "video_url": "https://youtu.be/K3OClkvlGSA?si=DQUI_JYVTTmhYVQI",
             "text": "How to Wear Your Fusion Correctly",
-            "Seconds": ""
+            "video_url_fr": "https://youtu.be/WT6WfDPopMQ",
+            "text_fr": "Fusion Comment recharger vos appareils auditifs",
+            "Seconds": "",
+            "text_color": "#000000",
+            "text_bold": true,
+            "text_uppercase": false,
+            "seconds_color": "#606468",
+            "text_color_mobile": "#000000",
+            "text_bold_mobile": true,
+            "text_uppercase_mobile": false,
+            "seconds_color_mobile": "#606468"
           }
         },
         "slide_Y9WWXx": {
@@ -57,7 +94,17 @@
           "settings": {
             "video_url": "https://youtu.be/0X8eiK0Hxz0?si=yj__4XugQfT6L9mu",
             "text": "How to Adjust the Volume on Your Fusion",
-            "Seconds": ""
+            "video_url_fr": "https://youtu.be/DWbaC9GqnpM",
+            "text_fr": "Fusion Remplacer les embouts",
+            "Seconds": "",
+            "text_color": "#000000",
+            "text_bold": true,
+            "text_uppercase": false,
+            "seconds_color": "#606468",
+            "text_color_mobile": "#000000",
+            "text_bold_mobile": true,
+            "text_uppercase_mobile": false,
+            "seconds_color_mobile": "#606468"
           }
         },
         "slide_GfAhhF": {
@@ -65,7 +112,17 @@
           "settings": {
             "video_url": "https://youtu.be/xoo717ToL8k?si=7lDWWBMkfvqqr1rb",
             "text": "How to Switch Hearing Programs on Your Fusion",
-            "Seconds": ""
+            "video_url_fr": "https://youtu.be/0bQvBLaNdH0",
+            "text_fr": "Fusion Nettoyer vos appareils auditifs",
+            "Seconds": "",
+            "text_color": "#000000",
+            "text_bold": true,
+            "text_uppercase": false,
+            "seconds_color": "#606468",
+            "text_color_mobile": "#000000",
+            "text_bold_mobile": true,
+            "text_uppercase_mobile": false,
+            "seconds_color_mobile": "#606468"
           }
         },
         "slide_pwJmEY": {
@@ -73,7 +130,17 @@
           "settings": {
             "video_url": "https://youtu.be/MJKdnN_RXPs?si=i72hjeB0TLPKnJxW",
             "text": "How to Clean Your Fusion",
-            "Seconds": ""
+            "video_url_fr": "https://youtu.be/8uhWD9pZ_Ho",
+            "text_fr": "Fusion Changer de programme auditif",
+            "Seconds": "",
+            "text_color": "#000000",
+            "text_bold": true,
+            "text_uppercase": false,
+            "seconds_color": "#606468",
+            "text_color_mobile": "#000000",
+            "text_bold_mobile": true,
+            "text_uppercase_mobile": false,
+            "seconds_color_mobile": "#606468"
           }
         }
       },
@@ -94,7 +161,23 @@
         "bottom_one_mic": 30,
         "heading": "How-to Videos",
         "zi_color": "#000000",
-        "text": "Learn with our clear step by step process for Fusion"
+        "text": "Learn with our clear step by step process for Fusion",
+        "video_title_size": 18,
+        "video_title_color": "#000000",
+        "video_title_bold": true,
+        "video_title_uppercase": false,
+        "video_title_size_mobile": 16,
+        "video_title_color_mobile": "#000000",
+        "video_title_bold_mobile": true,
+        "video_title_uppercase_mobile": false,
+        "text_color": "#606468",
+        "text_size": 16,
+        "text_bold": false,
+        "text_uppercase": false,
+        "text_color_mobile": "#606468",
+        "text_size_mobile": 14,
+        "text_bold_mobile": false,
+        "text_uppercase_mobile": false
       }
     },
     "rich_text_4iLArg": {
@@ -104,13 +187,18 @@
           "type": "heading",
           "settings": {
             "heading": "Register Your Warranty",
-            "heading_size": "medium"
+            "heading_size": 16,
+            "heading_color": "#000000",
+            "heading_bold": true,
+            "heading_uppercase": false,
+            "heading_h1": false
           }
         },
         "text_N84WUJ": {
           "type": "text",
           "settings": {
-            "text": "<p>Register your <strong>12-month warranty </strong>here for comprehensive support</p>"
+            "text": "<p>Register your <strong>12-month warranty </strong>here for comprehensive support</p>",
+            "text_size": 100
           }
         },
         "button_BPWey6": {
@@ -118,7 +206,7 @@
           "settings": {
             "button_label": "Start Registration",
             "button_link": "shopify://pages/product-registration",
-            "button_style": "primary"
+            "button_style": "btn btn--secondary"
           }
         }
       },
@@ -128,13 +216,11 @@
         "button_BPWey6"
       ],
       "settings": {
-        "color_scheme": "",
+        "text_alignment": "center",
+        "full_width_content": false,
         "full_width": true,
-        "alignment": "center",
-        "margin_top": "no-indent",
-        "margin_bottom": "no-indent",
-        "padding_top": "m",
-        "padding_bottom": "m"
+        "color_scheme": "",
+        "boundary_effect": ""
       }
     },
     "tabimagevideo1_inb8T9": {
@@ -143,37 +229,61 @@
         "slide_VNt4UN": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/nexus_20240910_09.png",
-            "imagemic": "shopify://shop_images/nexus_20240910_22.png",
+            "image": "shopify://shop_images/nexus_20240910_09.webp",
+            "imagemic": "shopify://shop_images/nexus_20240910_22.webp",
             "header": "Week 1: Patience is Key",
-            "text": "<p>Begin by wearing your hearing aids for 1-2 hours daily. Focus on listening and familiarizing yourself with various sounds at home.</p>"
+            "text": "<p>Begin by wearing your hearing aids for 1-2 hours daily. Focus on listening and familiarizing yourself with various sounds at home.</p>",
+            "header_color": "#000000",
+            "header_bold": false,
+            "header_uppercase": false,
+            "header_color_mobile": "#000000",
+            "header_bold_mobile": false,
+            "header_uppercase_mobile": false
           }
         },
         "slide_FjCaD4": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/nexus_20240910_10.png",
-            "imagemic": "shopify://shop_images/nexus_20240910_23.png",
+            "image": "shopify://shop_images/nexus_20240910_10.webp",
+            "imagemic": "shopify://shop_images/nexus_20240910_23.webp",
             "header": "Week 2: Practice Listening",
-            "text": "<p>Gradually increase wear time to 3-4 hours. Visit quiet public places, interact with others, and observe how sounds are amplified.</p>"
+            "text": "<p>Gradually increase wear time to 3-4 hours. Visit quiet public places, interact with others, and observe how sounds are amplified.</p>",
+            "header_color": "#000000",
+            "header_bold": false,
+            "header_uppercase": false,
+            "header_color_mobile": "#000000",
+            "header_bold_mobile": false,
+            "header_uppercase_mobile": false
           }
         },
         "slide_xNj33d": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/nexus_20240910_11.png",
-            "imagemic": "shopify://shop_images/nexus_20240910_24.png",
+            "image": "shopify://shop_images/nexus_20240910_11.webp",
+            "imagemic": "shopify://shop_images/nexus_20240910_24.webp",
             "header": "Week 3: Practice Makes Perfect",
-            "text": "<p>Aim for 4-5 hours of wear daily. Challenge yourself in noisy environments and practice distinguishing sounds during conversations.</p>"
+            "text": "<p>Aim for 4-5 hours of wear daily. Challenge yourself in noisy environments and practice distinguishing sounds during conversations.</p>",
+            "header_color": "#000000",
+            "header_bold": false,
+            "header_uppercase": false,
+            "header_color_mobile": "#000000",
+            "header_bold_mobile": false,
+            "header_uppercase_mobile": false
           }
         },
         "slide_Et79Q4": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/nexus_20240910_12.png",
-            "imagemic": "shopify://shop_images/nexus_20240910_25.png",
+            "image": "shopify://shop_images/nexus_20240910_12.webp",
+            "imagemic": "shopify://shop_images/nexus_20240910_25.webp",
             "header": "Week 4: Live it Up!",
-            "text": "<p>After consistent practice, wear your hearing aids for 6+ hours a day. Enjoy enhanced hearing but remember to take occasional breaks.</p>"
+            "text": "<p>After consistent practice, wear your hearing aids for 6+ hours a day. Enjoy enhanced hearing but remember to take occasional breaks.</p>",
+            "header_color": "#000000",
+            "header_bold": false,
+            "header_uppercase": false,
+            "header_color_mobile": "#000000",
+            "header_bold_mobile": false,
+            "header_uppercase_mobile": false
           }
         }
       },
@@ -195,7 +305,21 @@
         "flex_direction": "column",
         "Copywriting_align": "center",
         "Copywriting": "",
-        "Copywriting_fu": ""
+        "Copywriting_fu": "",
+        "title_color": "#000000",
+        "title_bold": true,
+        "title_uppercase": false,
+        "subtitle_color": "#606468",
+        "subtitle_bold": false,
+        "subtitle_uppercase": false,
+        "text_color": "#606468",
+        "title_color_mobile": "#000000",
+        "title_bold_mobile": true,
+        "title_uppercase_mobile": false,
+        "subtitle_color_mobile": "#606468",
+        "subtitle_bold_mobile": false,
+        "subtitle_uppercase_mobile": false,
+        "text_color_mobile": "#606468"
       }
     }
   },

@@ -17,31 +17,13 @@
     "user_guide_6YAnce": {
       "type": "UserGuide",
       "blocks": {
-        "slide_VWbw6R": {
+        "slide_zWU3R4": {
           "type": "slide",
           "settings": {
-            "video_url": "https://www.youtube.com/watch?v=_H5NHtdxFLY",
-            "text": "How to Activate and Turn On Your Beacon",
-            "video_url_fr": "https://youtu.be/Kbk1RfEAh0Q",
-            "text_fr": "Beacon Mise en marchearrêt des appareils auditifs",
-            "Seconds": "",
-            "text_color": "#000000",
-            "text_bold": true,
-            "text_uppercase": false,
-            "seconds_color": "#606468",
-            "text_color_mobile": "#000000",
-            "text_bold_mobile": true,
-            "text_uppercase_mobile": false,
-            "seconds_color_mobile": "#606468"
-          }
-        },
-        "slide_Y9WWXx": {
-          "type": "slide",
-          "settings": {
-            "video_url": "https://youtu.be/yfPVcULiP7s?si=kDZ4YWp_DDKtysWB",
-            "text": "How to Replace the Eartips on Your Beacon",
-            "video_url_fr": "https://youtu.be/CrlbD0THXCI",
-            "text_fr": "Beacon Volume  Augmentation et réduction",
+            "video_url": "https://youtu.be/k2qDah3aNzU",
+            "text": "How to Turn Core One Pro On & Off",
+            "video_url_fr": "https://youtu.be/fj3CHaKmPh4",
+            "text_fr": "Core One Pro | Aides auditives Marche&Arrêt",
             "Seconds": "",
             "text_color": "#000000",
             "text_bold": true,
@@ -56,46 +38,10 @@
         "slide_DReJXe": {
           "type": "slide",
           "settings": {
-            "video_url": "https://youtu.be/-PrA9s-u4U4?si=rpl4P0EUiUseWmZb",
-            "text": "How to Wear Your Beacon Correctly",
-            "video_url_fr": "https://youtu.be/vK9u3ZuLx6I",
-            "text_fr": "Beacon Porter correctement les appareils auditifs",
-            "Seconds": "",
-            "text_color": "#000000",
-            "text_bold": true,
-            "text_uppercase": false,
-            "seconds_color": "#606468",
-            "text_color_mobile": "#000000",
-            "text_bold_mobile": true,
-            "text_uppercase_mobile": false,
-            "seconds_color_mobile": "#606468"
-          }
-        },
-        "slide_GfAhhF": {
-          "type": "slide",
-          "settings": {
-            "video_url": "https://youtu.be/MS54psnORcw",
-            "text": "How to Adjust the Volume on Your Beacon",
-            "video_url_fr": "https://youtu.be/Sd-83_yM_Mc",
-            "text_fr": "Beacon Quand recharger l’appareil",
-            "Seconds": "",
-            "text_color": "#000000",
-            "text_bold": true,
-            "text_uppercase": false,
-            "seconds_color": "#606468",
-            "text_color_mobile": "#000000",
-            "text_bold_mobile": true,
-            "text_uppercase_mobile": false,
-            "seconds_color_mobile": "#606468"
-          }
-        },
-        "slide_qjajy6": {
-          "type": "slide",
-          "settings": {
-            "video_url": "https://youtu.be/y0C3ntN4iks",
-            "text": "How to Switch Hearing Programs on Your Beacon",
-            "video_url_fr": "https://youtu.be/Nl1oISvfl5w",
-            "text_fr": "Beacon Remplacer les embouts",
+            "video_url": "https://youtu.be/HmX8_BQEwOc",
+            "text": "How to Wear Core One Pro",
+            "video_url_fr": "https://youtu.be/J1QRRxfqSSY",
+            "text_fr": "Core One Pro | Augmenter & Diminuer le volume",
             "Seconds": "",
             "text_color": "#000000",
             "text_bold": true,
@@ -110,10 +56,10 @@
         "slide_UTKUQp": {
           "type": "slide",
           "settings": {
-            "video_url": "https://youtu.be/oiJO9bo2RZU",
-            "text": "When Should You Charge Your Beacon",
-            "video_url_fr": "https://youtu.be/cotDc5CkdFA",
-            "text_fr": "Beacon Nettoyer vos appareils auditifs",
+            "video_url": "https://youtu.be/lozZuK7Kclg",
+            "text": "How to Replace the Eartips for Core One Pro",
+            "video_url_fr": "https://youtu.be/lgvFcx3vjNw",
+            "text_fr": "Core One Pro | Porter correctement les aides auditives",
             "Seconds": "",
             "text_color": "#000000",
             "text_bold": true,
@@ -125,13 +71,13 @@
             "seconds_color_mobile": "#606468"
           }
         },
-        "slide_Tw8W9B": {
+        "slide_Y9WWXx": {
           "type": "slide",
           "settings": {
-            "video_url": "https://www.youtube.com/watch?v=Taeqxlv8JGY",
-            "text": "How to Connect Your Beacon to Ceretone Hearing App",
-            "video_url_fr": "https://youtu.be/qvM5TlpZSf0",
-            "text_fr": "Beacon Changer de programme auditif",
+            "video_url": "https://youtu.be/XV7drevMrnc",
+            "text": "How to Charge Core One Pro",
+            "video_url_fr": "https://youtu.be/fko97VQqXh0",
+            "text_fr": "Core One Pro | Comment recharger l’appareil",
             "Seconds": "",
             "text_color": "#000000",
             "text_bold": true,
@@ -143,13 +89,13 @@
             "seconds_color_mobile": "#606468"
           }
         },
-        "slide_L8yXnU": {
+        "slide_GfAhhF": {
           "type": "slide",
           "settings": {
-            "video_url": "https://www.youtube.com/watch?v=hPqLGh5PqNc",
-            "text": "How to Adjust Your Beacon Hearing Aids via App",
-            "video_url_fr": "https://youtu.be/Jytkzh8hJqA",
-            "text_fr": "Beacon Application Ceretone Hearing – Test auditif",
+            "video_url": "https://youtu.be/hV8Nt6Caa6w",
+            "text": "How to Use the Core One Pro Charging Case Screen",
+            "video_url_fr": "https://youtu.be/9uUAN64OYfc",
+            "text_fr": "Core One Pro | Remplacez les embouts auriculaires",
             "Seconds": "",
             "text_color": "#000000",
             "text_bold": true,
@@ -161,13 +107,13 @@
             "seconds_color_mobile": "#606468"
           }
         },
-        "slide_nAbrac": {
+        "slide_qjajy6": {
           "type": "slide",
           "settings": {
-            "video_url": "https://www.youtube.com/watch?v=hBJtWDJy5EI",
-            "text": "How to Use the Ceretone Hearing App for Hearing Tests and Fine-Tuning",
-            "video_url_fr": "https://youtu.be/2fZyF4DYMkc",
-            "text_fr": "Beacon Application Ceretone Hearing – Comment ajuster",
+            "video_url": "https://youtu.be/qiJVDpDI_18",
+            "text": "How to Switch Hearing Programs on Core One Pro",
+            "video_url_fr": "https://youtu.be/zA74LOsMCKk",
+            "text_fr": "Core One Pro | Nettoyer vos aides auditives",
             "Seconds": "",
             "text_color": "#000000",
             "text_bold": true,
@@ -179,13 +125,31 @@
             "seconds_color_mobile": "#606468"
           }
         },
-        "slide_fkh3dT": {
+        "slide_VWbw6R": {
           "type": "slide",
           "settings": {
-            "video_url": "https://youtu.be/0oX_hkF2Tyw?si=Y4M5_wdhhROLY7rq",
-            "text": "How to Clean Your Beacon",
-            "video_url_fr": "https://youtu.be/xu3qy3nBtjo",
-            "text_fr": "Application Ceretone Hearing – Comment connecter",
+            "video_url": "https://youtu.be/rS6ursMbcwQ",
+            "text": "How to Adjust Volume for Core One Pro",
+            "video_url_fr": "https://youtu.be/AjMk6qVG5Ls",
+            "text_fr": "Core One Pro | Changement de programme auditif",
+            "Seconds": "",
+            "text_color": "#000000",
+            "text_bold": true,
+            "text_uppercase": false,
+            "seconds_color": "#606468",
+            "text_color_mobile": "#000000",
+            "text_bold_mobile": true,
+            "text_uppercase_mobile": false,
+            "seconds_color_mobile": "#606468"
+          }
+        },
+        "slide_hnCgYp": {
+          "type": "slide",
+          "settings": {
+            "video_url": "https://youtu.be/ZchV1pQhgtM",
+            "text": "How to Clean Core One Pro",
+            "video_url_fr": "https://youtu.be/8g23ZNJOMkI",
+            "text_fr": "Core One Pro | Écran de l’étui de chargement",
             "Seconds": "",
             "text_color": "#000000",
             "text_bold": true,
@@ -199,16 +163,14 @@
         }
       },
       "block_order": [
-        "slide_VWbw6R",
-        "slide_Y9WWXx",
+        "slide_zWU3R4",
         "slide_DReJXe",
+        "slide_UTKUQp",
+        "slide_Y9WWXx",
         "slide_GfAhhF",
         "slide_qjajy6",
-        "slide_UTKUQp",
-        "slide_Tw8W9B",
-        "slide_L8yXnU",
-        "slide_nAbrac",
-        "slide_fkh3dT"
+        "slide_VWbw6R",
+        "slide_hnCgYp"
       ],
       "settings": {
         "color": "#f5f5f5",
@@ -218,10 +180,10 @@
         "bottom_one_mic": 30,
         "heading": "How-to Videos",
         "zi_color": "#000000",
-        "text": "Learn with our clear step by step process for Beacon",
-        "video_title_size": 16,
+        "text": "Learn with our clear step by step process for Core One Pro",
+        "video_title_size": 18,
         "video_title_color": "#000000",
-        "video_title_bold": false,
+        "video_title_bold": true,
         "video_title_uppercase": false,
         "video_title_size_mobile": 16,
         "video_title_color_mobile": "#000000",
@@ -237,28 +199,28 @@
         "text_uppercase_mobile": false
       }
     },
-    "rich_text_igm8Nw": {
+    "rich_text_cKQFAR": {
       "type": "rich-text",
       "blocks": {
-        "heading_7g7T8g": {
+        "heading_8MXcxU": {
           "type": "heading",
           "settings": {
             "heading": "Register Your Warranty",
-            "heading_size": 32,
+            "heading_size": 16,
             "heading_color": "#000000",
             "heading_bold": true,
             "heading_uppercase": false,
             "heading_h1": false
           }
         },
-        "text_bcrAqq": {
+        "text_ExmeJj": {
           "type": "text",
           "settings": {
             "text": "<p>Register your <strong>12-month warranty </strong>here for comprehensive support</p>",
             "text_size": 100
           }
         },
-        "button_caME7d": {
+        "button_etXJrn": {
           "type": "button",
           "settings": {
             "button_label": "Start Registration",
@@ -268,9 +230,9 @@
         }
       },
       "block_order": [
-        "heading_7g7T8g",
-        "text_bcrAqq",
-        "button_caME7d"
+        "heading_8MXcxU",
+        "text_ExmeJj",
+        "button_etXJrn"
       ],
       "settings": {
         "text_alignment": "center",
@@ -280,15 +242,15 @@
         "boundary_effect": ""
       }
     },
-    "tabimagevideo1_AyDxXE": {
+    "tabimagevideo1_XeN79j": {
       "type": "Tabimagevideo1",
       "blocks": {
-        "slide_Q67bXB": {
+        "slide_PJLVX3": {
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/nexus_20240910_09.webp",
             "imagemic": "shopify://shop_images/nexus_20240910_22.webp",
-            "header": "Week 1: Patience is Key",
+            "header": "Week 1: Patience",
             "text": "<p>Begin by wearing your hearing aids for 1-2 hours daily. Focus on listening and familiarizing yourself with various sounds at home.</p>",
             "header_color": "#000000",
             "header_bold": false,
@@ -298,12 +260,12 @@
             "header_uppercase_mobile": false
           }
         },
-        "slide_VJTyQh": {
+        "slide_GMpHNT": {
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/nexus_20240910_10.webp",
             "imagemic": "shopify://shop_images/nexus_20240910_23.webp",
-            "header": "Week 2: Practice Listening",
+            "header": "Week 2: Practice",
             "text": "<p>Gradually increase wear time to 3-4 hours. Visit quiet public places, interact with others, and observe how sounds are amplified.</p>",
             "header_color": "#000000",
             "header_bold": false,
@@ -313,12 +275,12 @@
             "header_uppercase_mobile": false
           }
         },
-        "slide_xr3dzt": {
+        "slide_VfD83c": {
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/nexus_20240910_11.webp",
             "imagemic": "shopify://shop_images/nexus_20240910_24.webp",
-            "header": "Week 3: Practice Makes Perfect",
+            "header": "Week 3: Practice",
             "text": "<p>Aim for 4-5 hours of wear daily. Challenge yourself in noisy environments and practice distinguishing sounds during conversations.</p>",
             "header_color": "#000000",
             "header_bold": false,
@@ -328,12 +290,12 @@
             "header_uppercase_mobile": false
           }
         },
-        "slide_PK3D9w": {
+        "slide_wDm3RE": {
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/nexus_20240910_12.webp",
             "imagemic": "shopify://shop_images/nexus_20240910_25.webp",
-            "header": "Week 4: Live it Up!",
+            "header": "Week 4: Live",
             "text": "<p>After consistent practice, wear your hearing aids for 6+ hours a day. Enjoy enhanced hearing but remember to take occasional breaks.</p>",
             "header_color": "#000000",
             "header_bold": false,
@@ -345,10 +307,10 @@
         }
       },
       "block_order": [
-        "slide_Q67bXB",
-        "slide_VJTyQh",
-        "slide_xr3dzt",
-        "slide_PK3D9w"
+        "slide_PJLVX3",
+        "slide_GMpHNT",
+        "slide_VfD83c",
+        "slide_wDm3RE"
       ],
       "settings": {
         "top_one": 5,
@@ -383,7 +345,7 @@
   "order": [
     "main",
     "user_guide_6YAnce",
-    "rich_text_igm8Nw",
-    "tabimagevideo1_AyDxXE"
+    "rich_text_cKQFAR",
+    "tabimagevideo1_XeN79j"
   ]
 }
