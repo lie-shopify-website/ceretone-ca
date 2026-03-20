@@ -35,6 +35,7 @@
         "title_TmF4Li",
         "description_CQdL9T"
       ],
+      "disabled": true,
       "settings": {
         "layout": "horizontal",
         "header_overlay": false,
@@ -42,7 +43,6 @@
         "block_type": "subtle",
         "color_scheme": "",
         "full_screen": false,
-        "image": "shopify://shop_images/App-guide_Banner.jpg",
         "link": "",
         "show_video": false,
         "overlay_opacity": 0,
@@ -59,6 +59,7 @@
     },
     "image_with_text_x78Ffa": {
       "type": "image-with-text",
+      "disabled": true,
       "settings": {
         "layout": "image_last",
         "color_scheme": "scheme-da522d8c-d8ea-43a1-8f89-75b1a671124a",
@@ -81,7 +82,6 @@
         "inner_word_break": false,
         "description": "<p><a href=\"/pages/core-one-web-app\" title=\"Core One Web App\">Web App</a></p>",
         "text_align_inner": "center",
-        "image": "shopify://shop_images/6_3f7aae0e-b913-49da-8180-164fb31c83a7.jpg",
         "image_link": "",
         "height": "adapt",
         "overlay_opacity": 0,
@@ -191,7 +191,9 @@
         "column_B4rWHN",
         "column_jjYHTz"
       ],
+      "disabled": true,
       "settings": {
+        "custom_class": "",
         "section_type": "transparent",
         "color_scheme": "",
         "enable_border": false,
@@ -261,7 +263,9 @@
         "column_XemiiW",
         "column_MBtWRK"
       ],
+      "disabled": true,
       "settings": {
+        "custom_class": "",
         "section_type": "transparent",
         "color_scheme": "",
         "enable_border": false,
@@ -360,7 +364,9 @@
         "column_bDcNGG",
         "column_w9VXLR"
       ],
+      "disabled": true,
       "settings": {
+        "custom_class": "",
         "section_type": "transparent",
         "color_scheme": "",
         "enable_border": false,
@@ -430,7 +436,9 @@
         "column_jCPeQx",
         "column_3ajqPz"
       ],
+      "disabled": true,
       "settings": {
+        "custom_class": "",
         "section_type": "transparent",
         "color_scheme": "",
         "enable_border": false,
@@ -528,7 +536,9 @@
         "column_GKppMJ",
         "column_BkGcG4"
       ],
+      "disabled": true,
       "settings": {
+        "custom_class": "",
         "section_type": "transparent",
         "color_scheme": "",
         "enable_border": false,
@@ -598,7 +608,9 @@
         "column_9xhCcP",
         "column_PFTbcR"
       ],
+      "disabled": true,
       "settings": {
+        "custom_class": "",
         "section_type": "transparent",
         "color_scheme": "",
         "enable_border": false,
@@ -732,6 +744,7 @@
         "column_fXCeCN"
       ],
       "settings": {
+        "custom_class": "",
         "section_type": "transparent",
         "color_scheme": "",
         "enable_border": false,
@@ -831,6 +844,7 @@
         "column_QW8LRJ"
       ],
       "settings": {
+        "custom_class": "",
         "section_type": "transparent",
         "color_scheme": "",
         "enable_border": false,
@@ -901,6 +915,7 @@
         "column_xcH7iN"
       ],
       "settings": {
+        "custom_class": "",
         "section_type": "transparent",
         "color_scheme": "",
         "enable_border": false,
@@ -985,6 +1000,7 @@
         "column_hapKXL"
       ],
       "settings": {
+        "custom_class": "",
         "section_type": "transparent",
         "color_scheme": "",
         "enable_border": false,
@@ -1087,6 +1103,7 @@
         "column_GYthxX"
       ],
       "settings": {
+        "custom_class": "",
         "section_type": "transparent",
         "color_scheme": "",
         "enable_border": false,
@@ -1201,6 +1218,7 @@
         "column_d8gV4n"
       ],
       "settings": {
+        "custom_class": "",
         "section_type": "transparent",
         "color_scheme": "",
         "enable_border": false,
@@ -1285,6 +1303,7 @@
         "column_VGQYm9"
       ],
       "settings": {
+        "custom_class": "",
         "section_type": "transparent",
         "color_scheme": "",
         "enable_border": false,
@@ -1384,6 +1403,7 @@
         "column_rjC8Ut"
       ],
       "settings": {
+        "custom_class": "",
         "section_type": "transparent",
         "color_scheme": "",
         "enable_border": false,
@@ -1468,6 +1488,7 @@
         "column_6F3Jm3"
       ],
       "settings": {
+        "custom_class": "",
         "section_type": "transparent",
         "color_scheme": "",
         "enable_border": false,
