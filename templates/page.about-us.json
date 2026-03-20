@@ -103,7 +103,6 @@
         "item_yNxAmj": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/FDA_2x_416b9da6-661b-4f1d-9df5-d4394af6b568.png",
             "title": "FDA-Registered, Crystal-Clear Sound",
             "info": "Isolates voices from background noise so you hear what matters most."
           }
@@ -119,7 +118,6 @@
         "item_MaHdJU": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/2x_4323e407-afb9-4eff-adb6-afab1a3a3f5f.png",
             "title": "Easy Setup, Ready To Use",
             "info": "No clinic visits, no complicated setups - just open and start hearing better."
           }
@@ -127,7 +125,6 @@
         "item_GVddJq": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/2x_981d4c56-09f6-4b9e-9435-f94efdb8bab4.png",
             "title": "60-Day Trial, Lifelong Support",
             "info": "Full money-back guarantee with free shipping both ways, plus 12-month warranty."
           }
