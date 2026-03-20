@@ -32,7 +32,7 @@
             "text_color_mobile": "#000000",
             "text_bold_mobile": true,
             "text_uppercase_mobile": false,
-            "seconds_color_mobile": "#606468"
+            "seconds_color_mobile": "#606468" 
           }
         },
         "slide_Y9WWXx": {
@@ -244,11 +244,7 @@
           "type": "heading",
           "settings": {
             "heading": "Register Your Warranty",
-            "heading_size": 32,
-            "heading_color": "#000000",
-            "heading_bold": true,
-            "heading_uppercase": false,
-            "heading_h1": false
+            "heading_size": "medium",
           }
         },
         "text_bcrAqq": {

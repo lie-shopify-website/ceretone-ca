@@ -110,8 +110,7 @@
           "type": "heading",
           "settings": {
             "heading": "Register Your Warranty",
-            "heading_size": 16,
-            "heading_h1": false
+            "heading_size": "medium",
           }
         },
         "text_ExmeJj": {
