@@ -51,7 +51,7 @@
             "icon_color_scheme": "scheme-da522d8c-d8ea-43a1-8f89-75b1a671124a",
             "icon_fill_type": "solid",
             "heading": "Call",
-            "text": "Monday - Friday, 12am - 5pm PST<br>\n(866) 283-4262",
+            "text": "Monday - Friday, 12am - 5pm PST<br>\n(888) 825-8087",
             "show_button": false,
             "button_label": "Label",
             "button_link": "",
@@ -67,7 +67,7 @@
             "heading": "Email",
             "text": "",
             "show_button": true,
-            "button_label": "support@ceretone.com",
+            "button_label": "support@ceretone.ca",
             "button_link": "mailto:support@ceretone.com",
             "button_style": "simple_secondary"
           }
@@ -79,7 +79,7 @@
             "icon_color_scheme": "scheme-da522d8c-d8ea-43a1-8f89-75b1a671124a",
             "icon_fill_type": "solid",
             "heading": "Address",
-            "text": "3602 Inland Empire Blvd<br>Suite A200<br>Ontario, CA 91764<br>USA",
+            "text": "",
             "show_button": false,
             "button_label": "Label",
             "button_link": "",
@@ -93,6 +93,7 @@
         "column_R79xWb"
       ],
       "settings": {
+        "custom_class": "",
         "section_type": "transparent",
         "color_scheme": "scheme-da522d8c-d8ea-43a1-8f89-75b1a671124a",
         "enable_border": false,
@@ -205,7 +206,7 @@
     "form": {
       "type": "contact-form",
       "custom_css": [
-        ".button{background-color: #FF4F00}"
+        ".button {background-color: #ff4f00;}"
       ],
       "settings": {
         "position": "center",
@@ -238,6 +239,7 @@
     },
     "custom_liquid_DaRP6w": {
       "type": "custom-liquid",
+      "disabled": true,
       "custom_css": [
         "iframe {max-width: 100%;}"
       ],
@@ -252,7 +254,6 @@
         "accordion_W8BUiq": {
           "type": "accordion",
           "settings": {
-            "image": "shopify://shop_images/fa-image-01.png",
             "question": "Some title",
             "answer": "<p>Some description</p>",
             "opened": true
@@ -269,7 +270,6 @@
         "accordion_xVkwhT": {
           "type": "accordion",
           "settings": {
-            "image": "shopify://shop_images/fa-image-01.png",
             "question": "Some title",
             "answer": "<p>Some description</p>",
             "opened": false
@@ -285,7 +285,6 @@
       "name": "Collapsible Image",
       "settings": {
         "title": "\"Unfelt\" Isn't Magic — <span>It's Smart Design</span>",
-        "big_image": "shopify://shop_images/fa-bimage-01.png",
         "pc_padding_top": 100,
         "pc_padding_bottom": 100,
         "mb_padding_top": 50,
