@@ -110,14 +110,13 @@
           "type": "heading",
           "settings": {
             "heading": "Register Your Warranty",
-            "heading_size": "medium",
+            "heading_size": "medium"
           }
         },
         "text_ExmeJj": {
           "type": "text",
           "settings": {
-            "text": "<p>Register your <strong>12-month warranty </strong>here for comprehensive support</p>",
-            "text_size": 100
+            "text": "<p>Register your <strong>12-month warranty </strong>here for comprehensive support</p>"
           }
         },
         "button_etXJrn": {
@@ -135,11 +134,8 @@
         "button_etXJrn"
       ],
       "settings": {
-        "text_alignment": "center",
-        "full_width_content": false,
-        "full_width": true,
         "color_scheme": "",
-        "boundary_effect": ""
+        "full_width": true
       }
     },
     "tabimagevideo1_XeN79j": {

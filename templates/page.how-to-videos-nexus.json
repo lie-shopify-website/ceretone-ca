@@ -187,14 +187,13 @@
           "type": "heading",
           "settings": {
             "heading": "Register Your Warranty",
-            "heading_size": "medium",
+            "heading_size": "medium"
           }
         },
         "text_bxUig3": {
           "type": "text",
           "settings": {
-            "text": "<p>Register your <strong>12-month warranty </strong>here for comprehensive support</p>",
-            "text_size": 100
+            "text": "<p>Register your <strong>12-month warranty </strong>here for comprehensive support</p>"
           }
         },
         "button_k3c9iD": {
@@ -212,11 +211,8 @@
         "button_k3c9iD"
       ],
       "settings": {
-        "text_alignment": "center",
-        "full_width_content": false,
-        "full_width": true,
         "color_scheme": "background-1",
-        "boundary_effect": ""
+        "full_width": true
       }
     },
     "tabimagevideo1_9yzYFn": {
@@ -228,13 +224,7 @@
             "image": "shopify://shop_images/nexus_20240910_09.webp",
             "imagemic": "shopify://shop_images/nexus_20240910_22.webp",
             "header": "Week 1: Patience is Key",
-            "text": "<p>Begin by wearing your hearing aids for 1-2 hours daily. Focus on listening and familiarizing yourself with various sounds at home.</p>",
-            "header_color": "#000000",
-            "header_bold": false,
-            "header_uppercase": false,
-            "header_color_mobile": "#000000",
-            "header_bold_mobile": false,
-            "header_uppercase_mobile": false
+            "text": "<p>Begin by wearing your hearing aids for 1-2 hours daily. Focus on listening and familiarizing yourself with various sounds at home.</p>"
           }
         },
         "slide_CEPNPq": {
@@ -243,13 +233,7 @@
             "image": "shopify://shop_images/nexus_20240910_10.webp",
             "imagemic": "shopify://shop_images/nexus_20240910_23.webp",
             "header": "Week 2: Practice Listening",
-            "text": "<p>Gradually increase wear time to 3-4 hours. Visit quiet public places, interact with others, and observe how sounds are amplified.</p>",
-            "header_color": "#000000",
-            "header_bold": false,
-            "header_uppercase": false,
-            "header_color_mobile": "#000000",
-            "header_bold_mobile": false,
-            "header_uppercase_mobile": false
+            "text": "<p>Gradually increase wear time to 3-4 hours. Visit quiet public places, interact with others, and observe how sounds are amplified.</p>"
           }
         },
         "slide_wHThzL": {
@@ -258,13 +242,7 @@
             "image": "shopify://shop_images/nexus_20240910_11.webp",
             "imagemic": "shopify://shop_images/nexus_20240910_24.webp",
             "header": "Week 3: Practice Makes Perfect",
-            "text": "<p>Aim for 4-5 hours of wear daily. Challenge yourself in noisy environments and practice distinguishing sounds during conversations.</p>",
-            "header_color": "#000000",
-            "header_bold": false,
-            "header_uppercase": false,
-            "header_color_mobile": "#000000",
-            "header_bold_mobile": false,
-            "header_uppercase_mobile": false
+            "text": "<p>Aim for 4-5 hours of wear daily. Challenge yourself in noisy environments and practice distinguishing sounds during conversations.</p>"
           }
         },
         "slide_bXETFg": {
@@ -273,13 +251,7 @@
             "image": "shopify://shop_images/nexus_20240910_12.webp",
             "imagemic": "shopify://shop_images/nexus_20240910_25.webp",
             "header": "Week 4: Live it Up!",
-            "text": "<p>After consistent practice, wear your hearing aids for 6+ hours a day. Enjoy enhanced hearing but remember to take occasional breaks.</p>",
-            "header_color": "#000000",
-            "header_bold": false,
-            "header_uppercase": false,
-            "header_color_mobile": "#000000",
-            "header_bold_mobile": false,
-            "header_uppercase_mobile": false
+            "text": "<p>After consistent practice, wear your hearing aids for 6+ hours a day. Enjoy enhanced hearing but remember to take occasional breaks.</p>"
           }
         }
       },
@@ -301,21 +273,7 @@
         "flex_direction": "column",
         "Copywriting_align": "center",
         "Copywriting": "",
-        "Copywriting_fu": "",
-        "title_color": "#000000",
-        "title_bold": true,
-        "title_uppercase": false,
-        "subtitle_color": "#606468",
-        "subtitle_bold": false,
-        "subtitle_uppercase": false,
-        "text_color": "#606468",
-        "title_color_mobile": "#000000",
-        "title_bold_mobile": true,
-        "title_uppercase_mobile": false,
-        "subtitle_color_mobile": "#606468",
-        "subtitle_bold_mobile": false,
-        "subtitle_uppercase_mobile": false,
-        "text_color_mobile": "#606468"
+        "Copywriting_fu": ""
       }
     }
   },
