@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
-{
+ {
   "sections": {
     "main": {
       "type": "main-product",
@@ -94,14 +94,21 @@
             "icon_fill_type": "solid"
           }
         },
+        "amazon_btn_e9QbJM": {
+          "type": "amazon_btn",
+          "settings": {
+            "color": "#ffffff",
+            "bg_color": "#398b54",
+            "amazon_btn_label": "BUY ON AMAZON"
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
+          "disabled": true,
           "settings": {
             "color": "#ffffff",
             "bg_color": "#e7590d",
             "buy_text": "",
-            "show_amazon_btn": true,
-            "amazon_btn_label": "Limited <span style=\"color: red; font-weight: bold; font-size: 2em;\">$78</span> Deal on Amazon",
             "show_dynamic_checkout": false,
             "show_quantity": false,
             "show_gift_card_recipient": false
@@ -130,6 +137,7 @@
         "gift_box_CNVe4t",
         "variant_picker",
         "text_with_icon_FH9Xhb",
+        "amazon_btn_e9QbJM",
         "buy_buttons",
         "payment_enable_hdUDUf",
         "description_PyMDJy"

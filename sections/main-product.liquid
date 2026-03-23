@@ -1050,7 +1050,7 @@ window.addEventListener('DOMContentLoaded', function() {
                     {%- endif -%}
 
                     <div class="product-form__buttons a123">
-                      <div class="product-form__buttons-row {% if block.settings.show_amazon_btn and product.metafields.custom.custom_amazon_link != blank %}two-btn{% endif %}">
+                      <div class="product-form__buttons-row">
                         {% if block.settings.show_quantity %}
                           <div
                             class="product-form__input product-form__quantity no-js-hidden"
@@ -1143,10 +1143,6 @@ window.addEventListener('DOMContentLoaded', function() {
                             </span>
                           {%- endif -%}
                         </button>
-
-                        {% if block.settings.show_amazon_btn and product.metafields.custom.custom_amazon_link != blank %}
-                            <a href="{{ product.metafields.custom.custom_amazon_link }}" class="button amazon_btn button--tertiary"><span>{{ block.settings.amazon_btn_label }}</span></a>
-                        {% endif %}
                         
                       </div>
 
@@ -1159,6 +1155,15 @@ window.addEventListener('DOMContentLoaded', function() {
                   {%- endform -%}
                 </product-form>
               </div>
+
+            {%- when 'amazon_btn' -%}
+              {%- if product.metafields.custom.custom_amazon_link != blank -%}
+                <div class="product__block amazon_btn_block">
+                  <a href="{{ product.metafields.custom.custom_amazon_link }}" style="background-color: {{ block.settings.bg_color }}; color: {{ block.settings.color }};" class="button amazon_btn button--tertiary">
+                    <span>{{ block.settings.amazon_btn_label }}</span>
+                  </a>
+                </div>
+              {%- endif -%}
 
             {%- when 'payment_enable' -%}
               {%- if block.settings.payment_enable -%}
@@ -3045,22 +3050,6 @@ data-description="{{ product.description | escape }}">
           "label": "BuyNow Text",
           "info": "购买按钮文本"
         },
-        
-
-        {
-          "type": "checkbox",
-          "id": "show_amazon_btn",
-          "default": false,
-          "label": "Show Amazon Btn",
-          "info": "显示Amazon按钮，如果 custom_amazon_link 元字段没有值，也不会显示"
-        },
-        {
-          "type": "text",
-          "id": "amazon_btn_label",
-          "default": "BUY ON AMAZON",
-          "label": "Amazon Btn",
-          "info": "Amazon按钮"
-        },
         {
           "type": "checkbox",
           "id": "show_dynamic_checkout",
@@ -3083,6 +3072,25 @@ data-description="{{ product.description | escape }}">
         }
       ]
     },
+
+    {
+      "type": "amazon_btn",
+      "name": "Amazon链接按钮",
+      "limit": 1,
+      "settings": [
+        { "type": "color", "id": "color", "label": "字体颜色", "default": "#fff" },
+        { "type": "color", "id": "bg_color", "label": "背景颜色", "default": "#e7590d" },
+        { "type": "paragraph", "content": "Amazon按钮链接在产品元字段custom_amazon_link里填写. 要填写完整的链接，才能正常显示" },
+        {
+          "type": "textarea",
+          "id": "amazon_btn_label",
+          "default": "BUY ON AMAZON",
+          "label": "Amazon Btn",
+          "info": "Amazon按钮文本，支持HTML标签"
+        },
+      ]
+    },
+
     {
       "type": "text_with_icon",
       "name": "t:sections.main-product.blocks.text_with_icon.name",

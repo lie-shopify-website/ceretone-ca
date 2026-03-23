@@ -2324,7 +2324,8 @@ a.button.amazon_btn {
     background-color: #ff9900;
     position: relative;
     flex-grow: 1;
-    width: auto;
+    width: 100%;
     min-height: 4.8rem;
     transition: var(--duration-default);
+    border-radius: 40px;
 }
