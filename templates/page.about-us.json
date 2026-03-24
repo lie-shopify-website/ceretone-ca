@@ -227,7 +227,7 @@
           "type": "slide",
           "settings": {
             "hot_label": true,
-            "product": "core-one-pro-otc-hearing-aids",
+            "product": "core-one-pro-invisible-in-canal",
             "image": "shopify://shop_images/best-seller-01.png",
             "short_desc": "Most Comfort & Invisible",
             "short_desc_icon": "shopify://shop_images/icon-001.png",
@@ -239,7 +239,7 @@
           "type": "slide",
           "settings": {
             "hot_label": false,
-            "product": "beacon-otc-hearing-aids",
+            "product": "beacon-behind-ear",
             "image": "shopify://shop_images/best-seller-02.png",
             "short_desc": "Smart & Connected",
             "short_desc_icon": "shopify://shop_images/icon-002.png",
