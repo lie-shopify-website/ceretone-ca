@@ -65,7 +65,13 @@
                                       {% if nav_item_matches %}
                                           <div class="item {% if first_inx %}active{% endif %}">
                                               {% if block.settings.block_url != blank %}<a href="{{ block.settings.block_url }}">{% endif %}
-                                                  <span class="th-title">{{ block.settings.block_text }}</span>
+                                                  <span class="th-title">
+                                                    {% if localization.language.iso_code == 'fr' and block.settings.block_text_fr != blank %}
+                                                      {{ block.settings.block_text_fr }}
+                                                    {% else %}
+                                                      {{ block.settings.block_text }}
+                                                    {% endif %}
+                                                  </span>
                                                   {% if block.settings.block_icon != blank %}<div class="block-icon"><img src="{{ block.settings.block_icon | image_url:width:50 }}" width="50" height="50" /></div>{% endif %}
                                               {% if block.settings.block_url != blank %}</a>{% endif %}
                                           </div>

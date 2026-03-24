@@ -11,6 +11,7 @@
     {% capture product_image_mb %}product_image_mb{{ i }}{% endcapture %}
     {% capture product_title %}product_title{{ i }}{% endcapture %}
     {% capture product_tip %}product_tip{{ i }}{% endcapture %}
+    {% capture product_tip_fr %}product_tip{{ i }}_fr{% endcapture %}
     {% capture product_tip_color %}product_tip_color{{ i }}{% endcapture %}
     
     {% if block.settings[product_handle] != blank %}
@@ -35,8 +36,22 @@
                     {% endif %}
                 </div>
                 <div class="pro-info">
-                    {% if block.settings[product_tip] != black %}<div class="product-tip" style="color:{{ block.settings[product_tip_color] }};">{{ block.settings[product_tip] }}</div>{% endif %}
-                    <div class="product-title">{{ block.settings[product_title] }}</div>
+                    {% if block.settings[product_tip] != black %}
+                        <div class="product-tip" style="color:{{ block.settings[product_tip_color] }};">
+                            {% if localization.language.iso_code == 'fr' and block.settings[product_tip_fr] != blank %}
+                                {{ block.settings[product_tip_fr] }}
+                            {% else %}
+                                {{ block.settings[product_tip] }}
+                            {% endif %}
+                        </div>
+                    {% endif %}
+                    <div class="product-title">
+                        {% if localization.language.iso_code == 'fr' and block.settings[product_title_fr] != blank %}
+                            {{ block.settings[product_title_fr] }}
+                        {% else %}
+                            {{ block.settings[product_title] }}
+                        {% endif %}
+                    </div>
                     <div class="product-price-box">
                         <div class="p-price">{{ block.settings[product_handle].price | money }}</div>
                         {% if block.settings[product_handle].price < block.settings[product_handle].compare_at_price %}
