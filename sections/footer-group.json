@@ -26,7 +26,7 @@
           "type": "link_list",
           "settings": {
             "heading": "Support",
-            "menu": "service",
+            "menu": "customer-care",
             "default_open": false
           }
         },
@@ -34,7 +34,7 @@
           "type": "link_list",
           "settings": {
             "heading": "About",
-            "menu": "company",
+            "menu": "",
             "default_open": false
           }
         },
