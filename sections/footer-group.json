@@ -34,7 +34,7 @@
           "type": "link_list",
           "settings": {
             "heading": "About",
-            "menu": "",
+            "menu": "about",
             "default_open": false
           }
         },
