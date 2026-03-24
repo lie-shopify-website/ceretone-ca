@@ -35,7 +35,7 @@
         "mega_menu_product_list_yptY6T": {
           "type": "mega_menu_product_list",
           "settings": {
-            "menu_item": "PRODUCTS",
+            "menu_item": "PRODUCTS, Produits",
             "block_text": "Invisible In Canal",
             "block_url": "shopify://products/core-one-pro-invisible-in-canal",
             "block_icon": "shopify://shop_images/menu-hot-icon.png",
@@ -70,7 +70,7 @@
         "mega_menu_product_list_QdUFez": {
           "type": "mega_menu_product_list",
           "settings": {
-            "menu_item": "PRODUCTS",
+            "menu_item": "PRODUCTS, Produits",
             "block_text": "In The Ear",
             "block_url": "",
             "product1": "torch-otc-hearing-aids",
@@ -106,7 +106,7 @@
         "mega_menu_product_list_VfQLPC": {
           "type": "mega_menu_product_list",
           "settings": {
-            "menu_item": "PRODUCTS",
+            "menu_item": "PRODUCTS, Produits",
             "block_text": "Behind The Ear",
             "block_url": "",
             "product1": "beacon-behind-ear",

@@ -2,22 +2,31 @@
     <div class="top-menu menu-level-1">
       {%- for link in section.settings.menu.links -%}
           
-          {% comment %} 判断是否为Mage菜单 {% endcomment %}
+          {% comment %} 判断是否为Mage菜单：menu_item 支持逗号分隔多个名称（各语言一级菜单标题），任一匹配即可 {% endcomment %}
           {% liquid
               assign link_title_downcase = link.title | downcase
               assign mega_menu = false
               assign mega_menu_item_icon = false
   
               for block in section.blocks
-              assign menu_item_downcase = block.settings.menu_item | strip | downcase
-              if menu_item_downcase == link_title_downcase
+                assign nav_item_matches = false
+                if block.settings.menu_item != blank
+                  assign menu_aliases = block.settings.menu_item | split: ','
+                  for alias in menu_aliases
+                    assign ak = alias | strip | downcase
+                    if ak != blank and ak == link_title_downcase
+                      assign nav_item_matches = true
+                      break
+                    endif
+                  endfor
+                endif
+                if nav_item_matches
                   assign mega_menu = true
-  
                   if block.settings.menu_item_icon != blank
-                      assign mega_menu_item_icon = block.settings.menu_item_icon
+                    assign mega_menu_item_icon = block.settings.menu_item_icon
                   endif
                   break
-              endif
+                endif
               endfor
           %}
         
@@ -40,8 +49,20 @@
                               <div class="tab-header">
                                   {% assign first_inx = true %}
                                   {% for block in section.blocks %}
-                                      {% assign menu_item_downcase = block.settings.menu_item | strip | downcase %}
-                                      {% if menu_item_downcase == link_title_downcase %}
+                                      {% liquid
+                                        assign nav_item_matches = false
+                                        if block.settings.menu_item != blank
+                                          assign menu_aliases = block.settings.menu_item | split: ','
+                                          for alias in menu_aliases
+                                            assign ak = alias | strip | downcase
+                                            if ak != blank and ak == link_title_downcase
+                                              assign nav_item_matches = true
+                                              break
+                                            endif
+                                          endfor
+                                        endif
+                                      %}
+                                      {% if nav_item_matches %}
                                           <div class="item {% if first_inx %}active{% endif %}">
                                               {% if block.settings.block_url != blank %}<a href="{{ block.settings.block_url }}">{% endif %}
                                                   <span class="th-title">{{ block.settings.block_text }}</span>
@@ -90,8 +111,20 @@
                                       {% comment %} 
                                           按需加载：只对第一版本的图片事先加载，其他的图片在鼠标经过一级分类时，才加载。手机端则是点击一级分类时加载。
                                       {% endcomment %}
-                                      {% assign menu_item_downcase = block.settings.menu_item | strip | downcase %}
-                                      {% if menu_item_downcase == link_title_downcase %}
+                                      {% liquid
+                                        assign nav_item_matches = false
+                                        if block.settings.menu_item != blank
+                                          assign menu_aliases = block.settings.menu_item | split: ','
+                                          for alias in menu_aliases
+                                            assign ak = alias | strip | downcase
+                                            if ak != blank and ak == link_title_downcase
+                                              assign nav_item_matches = true
+                                              break
+                                            endif
+                                          endfor
+                                        endif
+                                      %}
+                                      {% if nav_item_matches %}
                                           {% case block.type %}
                                               {% when 'mega_menu_product_list' %}
                                                   {%  render 'header-menu-product-list', block:block, first_inx:first_inx %}
