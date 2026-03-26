@@ -83,8 +83,6 @@
             "color": "#ffffff",
             "bg_color": "#e7590d",
             "buy_text": "Buy Now At $509.99",
-            "show_amazon_btn": false,
-            "amazon_btn_label": "BUY ON AMAZON",
             "show_dynamic_checkout": false,
             "show_quantity": false,
             "show_gift_card_recipient": false
@@ -722,7 +720,7 @@
           "type": "card",
           "settings": {
             "color_scheme": "",
-            "image": "shopify://shop_images/normal_mode.webp",
+            "image": "shopify://shop_images/3.png",
             "overlay_opacity": 0,
             "icon": "none",
             "icon_size": "recommended",
@@ -740,7 +738,7 @@
           "type": "card",
           "settings": {
             "color_scheme": "",
-            "image": "shopify://shop_images/Restaurant_mode.webp",
+            "image": "shopify://shop_images/1.png",
             "overlay_opacity": 0,
             "icon": "none",
             "icon_size": "recommended",
@@ -758,7 +756,7 @@
           "type": "card",
           "settings": {
             "color_scheme": "",
-            "image": "shopify://shop_images/Outdoor_mode.webp",
+            "image": "shopify://shop_images/2.png",
             "overlay_opacity": 0,
             "icon": "none",
             "icon_size": "recommended",
@@ -776,7 +774,7 @@
           "type": "card",
           "settings": {
             "color_scheme": "",
-            "image": "shopify://shop_images/music_mode.webp",
+            "image": "shopify://shop_images/4.png",
             "overlay_opacity": 0,
             "icon": "none",
             "icon_size": "recommended",
